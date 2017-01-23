@@ -48,7 +48,7 @@ Public Class Login
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
         If sqlread Is Nothing Then
-            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือน")
+            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือนddsadas")
         ElseIf sqlread.Read Then
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
 
