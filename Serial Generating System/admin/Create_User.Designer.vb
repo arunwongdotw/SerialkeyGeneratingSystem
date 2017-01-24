@@ -22,15 +22,21 @@ Partial Class Create_User
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode43 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode44 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode43, TreeNode44})
-        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode46})
-        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode48})
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode22, TreeNode23})
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode25})
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode27})
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmbUserType = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -52,12 +58,6 @@ Partial Class Create_User
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,27 +65,27 @@ Partial Class Create_User
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode43.Name = "Node0"
-        TreeNode43.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode44.Name = "Node1"
-        TreeNode44.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode45.Name = "Node6"
-        TreeNode45.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode46.Name = "Node0"
-        TreeNode46.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode47.Name = "Node7"
-        TreeNode47.Text = "การตรวจสอบ"
-        TreeNode48.Name = "Node5"
-        TreeNode48.Text = "เปลี่ยน password"
-        TreeNode49.Name = "Node8"
-        TreeNode49.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode45, TreeNode47, TreeNode49})
+        TreeNode22.Name = "Node0"
+        TreeNode22.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode23.Name = "Node1"
+        TreeNode23.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode24.Name = "Node6"
+        TreeNode24.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode25.Name = "Node0"
+        TreeNode25.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode26.Name = "Node7"
+        TreeNode26.Text = "การตรวจสอบ"
+        TreeNode27.Name = "Node5"
+        TreeNode27.Text = "เปลี่ยน password"
+        TreeNode28.Name = "Node8"
+        TreeNode28.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode24, TreeNode26, TreeNode28})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ComboBox4)
+        Me.Panel1.Controls.Add(Me.cmbUserType)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.CheckBox3)
         Me.Panel1.Controls.Add(Me.CheckBox2)
@@ -117,6 +117,63 @@ Partial Class Create_User
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 3
+        '
+        'cmbUserType
+        '
+        Me.cmbUserType.FormattingEnabled = True
+        Me.cmbUserType.Items.AddRange(New Object() {"User", "Administrator"})
+        Me.cmbUserType.Location = New System.Drawing.Point(352, 347)
+        Me.cmbUserType.Name = "cmbUserType"
+        Me.cmbUserType.Size = New System.Drawing.Size(195, 21)
+        Me.cmbUserType.TabIndex = 72
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(252, 351)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(93, 13)
+        Me.Label11.TabIndex = 71
+        Me.Label11.Text = "ประเภทบัญชีผู้ใช้ :"
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(736, 300)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(39, 17)
+        Me.CheckBox3.TabIndex = 70
+        Me.CheckBox3.Text = "ลบ"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(797, 300)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(53, 17)
+        Me.CheckBox2.TabIndex = 69
+        Me.CheckBox2.Text = "แก้ไข"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(668, 299)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(48, 17)
+        Me.CheckBox1.TabIndex = 68
+        Me.CheckBox1.Text = "สร้าง"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(586, 300)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(75, 13)
+        Me.Label12.TabIndex = 67
+        Me.Label12.Text = "สิทธิ์บัญชีผู้ใช้ :"
         '
         'txtPhoneNumber
         '
@@ -171,20 +228,22 @@ Partial Class Create_User
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(554, 101)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(151, 13)
+        Me.Label8.Size = New System.Drawing.Size(154, 13)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "*ภาษาอังกฤษหรือตัวเลขเท่านั้น"
+        Me.Label8.Text = "* ภาษาอังกฤษหรือตัวเลขเท่านั้น"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(554, 53)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(151, 13)
+        Me.Label7.Size = New System.Drawing.Size(154, 13)
         Me.Label7.TabIndex = 16
-        Me.Label7.Text = "*ภาษาอังกฤษหรือตัวเลขเท่านั้น"
+        Me.Label7.Text = "* ภาษาอังกฤษหรือตัวเลขเท่านั้น"
         '
         'txtPosition
         '
@@ -291,63 +350,6 @@ Partial Class Create_User
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "บัญชีผู้ใช้งาน :"
         '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"User", "Administrator"})
-        Me.ComboBox4.Location = New System.Drawing.Point(352, 347)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(195, 21)
-        Me.ComboBox4.TabIndex = 72
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(252, 351)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(93, 13)
-        Me.Label11.TabIndex = 71
-        Me.Label11.Text = "ประเภทบัญชีผู้ใช้ :"
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(736, 300)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(39, 17)
-        Me.CheckBox3.TabIndex = 70
-        Me.CheckBox3.Text = "ลบ"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(797, 300)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(53, 17)
-        Me.CheckBox2.TabIndex = 69
-        Me.CheckBox2.Text = "แก้ไข"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(668, 299)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(48, 17)
-        Me.CheckBox1.TabIndex = 68
-        Me.CheckBox1.Text = "สร้าง"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(586, 300)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 13)
-        Me.Label12.TabIndex = 67
-        Me.Label12.Text = "สิทธิ์บัญชีผู้ใช้ :"
-        '
         'Create_User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -384,7 +386,7 @@ Partial Class Create_User
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbUserType As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
