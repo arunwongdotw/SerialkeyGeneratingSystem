@@ -31,8 +31,19 @@ Public Class ConnectDB
         Catch ex As Exception
             Return False
         End Try
-
         Return True
+    End Function
+
+    Public Function queryForAdapter(ByVal query As String) As SqlDataAdapter
+        objConn = New SqlConnection(strCon)
+        objConn.Open()
+        Dim dataadapter As SqlDataAdapter
+        Try
+            dataadapter = New SqlDataAdapter(query, objConn)
+        Catch ex As Exception
+            Return Nothing
+        End Try
+        Return dataadapter
     End Function
 
     Public Sub close()
