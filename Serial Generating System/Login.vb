@@ -45,11 +45,16 @@ Public Class Login
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
+
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
-        If sqlread Is Nothing Then
-            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือนddsadas")
-        ElseIf sqlread.Read Then
+        If txtUsername.ForeColor = Color.Gray Or txtPassword.ForeColor = Color.Gray Then
+            MessageBox.Show("กรุณากรอกบัญชีผู้ใช้หรือรหัสผ่าน", "แจ้งเตือน")
+        ElseIf sqlread Is Nothing Then
+            Console.Write("คิวรี่ผิด")
+        ElseIf Not sqlread.Read Then
+            MessageBox.Show("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือน")
+        Else
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
             If type.Equals("admin") Then
                 Dim frm As New Create_User
@@ -60,7 +65,6 @@ Public Class Login
                 frm.Show()
                 Me.Hide()
             End If
-
         End If
 
     End Sub
