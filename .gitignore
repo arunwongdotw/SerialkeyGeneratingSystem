@@ -154,8 +154,3 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-
-ConnectDB.vb
-/ConnectDB.vb
-*/ConnectDB.vb
-Serial Generating System/ConnectDB.vb
