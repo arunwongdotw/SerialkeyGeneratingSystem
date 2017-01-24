@@ -38,11 +38,11 @@ Public Class Serach_user
             .Columns(4).HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns(5).HeaderCell.Value = "รหัสผ่าน"
             .Columns(6).HeaderCell.Value = "ชนิดผู้ใช้"
-
+            .Columns(7).Visible = False
+            .Columns(8).Visible = False
+            .Columns(9).Visible = False
         End With
-        DataGridView1.Columns(7).Visible = False
-        DataGridView1.Columns(8).Visible = False
-        DataGridView1.Columns(9).Visible = False
+
 
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทการสร้าง"
