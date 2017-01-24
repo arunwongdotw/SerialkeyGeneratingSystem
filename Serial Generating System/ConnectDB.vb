@@ -22,6 +22,19 @@ Public Class ConnectDB
         Return readSQl
     End Function
 
+    Public Function save(ByVal strQuery As String)
+        objConn = New SqlConnection(strCon)
+        objConn.Open()
+        objCmd = New SqlCommand(strQuery, objConn)
+        Try
+            objCmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Return True
+    End Function
+
     Public Sub close()
         objConn.Close()
     End Sub
