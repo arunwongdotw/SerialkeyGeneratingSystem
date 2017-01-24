@@ -51,7 +51,6 @@ Public Class Login
             MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือนddsadas")
         ElseIf sqlread.Read Then
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
-
             If type.Equals("admin") Then
                 Dim frm As New Create_User
                 frm.Show()
@@ -66,7 +65,16 @@ Public Class Login
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
+        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
+            txtUsername.Clear()
+            txtUsername.ForeColor = Color.Black
+        End If
+    End Sub
+    Private Sub txtPass_tab(sender As Object, e As EventArgs) Handles txtPassword.KeyUp
+        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
+            txtPassword.Clear()
+            txtPassword.ForeColor = Color.Black
+        End If
     End Sub
 End Class
