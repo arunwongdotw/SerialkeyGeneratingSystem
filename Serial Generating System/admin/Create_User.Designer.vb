@@ -33,7 +33,7 @@ Partial Class Create_User
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.cbbUserType = New System.Windows.Forms.ComboBox()
+        Me.cmbUserType = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
@@ -89,7 +89,7 @@ Partial Class Create_User
         '
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.cbbUserType)
+        Me.Panel1.Controls.Add(Me.cmbUserType)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.chbPerDelete)
         Me.Panel1.Controls.Add(Me.chbPerEdit)
@@ -142,14 +142,14 @@ Partial Class Create_User
         Me.Label13.TabIndex = 73
         Me.Label13.Text = "*"
         '
-        'cbbUserType
+        'cmbUserType
         '
-        Me.cbbUserType.FormattingEnabled = True
-        Me.cbbUserType.Items.AddRange(New Object() {"User", "Administrator"})
-        Me.cbbUserType.Location = New System.Drawing.Point(352, 347)
-        Me.cbbUserType.Name = "cbbUserType"
-        Me.cbbUserType.Size = New System.Drawing.Size(195, 21)
-        Me.cbbUserType.TabIndex = 12
+        Me.cmbUserType.FormattingEnabled = True
+        Me.cmbUserType.Items.AddRange(New Object() {"User", "Administrator"})
+        Me.cmbUserType.Location = New System.Drawing.Point(352, 347)
+        Me.cmbUserType.Name = "cmbUserType"
+        Me.cmbUserType.Size = New System.Drawing.Size(195, 21)
+        Me.cmbUserType.TabIndex = 12
         '
         'Label11
         '
@@ -410,7 +410,7 @@ Partial Class Create_User
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents cbbUserType As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbUserType As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents chbPerDelete As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerEdit As System.Windows.Forms.CheckBox
