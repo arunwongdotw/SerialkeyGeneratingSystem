@@ -7,7 +7,7 @@ Public Class Serach_user
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
 
         dgvSearchUser.Visible = True
 
@@ -109,7 +109,7 @@ Public Class Serach_user
         dgvSearchUser.Visible = False
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         dgvSearchUser.Columns.Clear()
         dgvSearchUser.DataSource = Nothing
 

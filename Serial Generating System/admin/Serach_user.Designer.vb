@@ -31,22 +31,22 @@ Partial Class Serach_user
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.bntSearch = New System.Windows.Forms.Button()
+        Me.TxtTell = New System.Windows.Forms.TextBox()
+        Me.lblTell = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtBoxType = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.lblPosition = New System.Windows.Forms.Label()
         Me.txtBoxLastname = New System.Windows.Forms.TextBox()
         Me.txtBoxFirstname = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblLastname = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.txtBoxEmpId = New System.Windows.Forms.TextBox()
         Me.txtboxUsername = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblIdEmp = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
@@ -56,22 +56,22 @@ Partial Class Serach_user
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.bntSearch)
+        Me.Panel1.Controls.Add(Me.TxtTell)
+        Me.Panel1.Controls.Add(Me.lblTell)
+        Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.txtBoxType)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.lblEmail)
+        Me.Panel1.Controls.Add(Me.lblPosition)
         Me.Panel1.Controls.Add(Me.txtBoxLastname)
         Me.Panel1.Controls.Add(Me.txtBoxFirstname)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.lblLastname)
+        Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Controls.Add(Me.txtBoxEmpId)
         Me.Panel1.Controls.Add(Me.txtboxUsername)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.lblIdEmp)
+        Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.dgvSearchUser)
         Me.Panel1.Controls.Add(Me.TreeView1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -88,46 +88,46 @@ Partial Class Serach_user
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnClear
         '
-        Me.Button2.Location = New System.Drawing.Point(554, 153)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "เคลียร์"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnClear.Location = New System.Drawing.Point(554, 153)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 33
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
-        'Button1
+        'bntSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(462, 153)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "ค้นหา"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.bntSearch.Location = New System.Drawing.Point(462, 153)
+        Me.bntSearch.Name = "bntSearch"
+        Me.bntSearch.Size = New System.Drawing.Size(75, 23)
+        Me.bntSearch.TabIndex = 32
+        Me.bntSearch.Text = "ค้นหา"
+        Me.bntSearch.UseVisualStyleBackColor = True
         '
-        'TextBox7
+        'TxtTell
         '
-        Me.TextBox7.Location = New System.Drawing.Point(332, 108)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox7.TabIndex = 31
+        Me.TxtTell.Location = New System.Drawing.Point(332, 108)
+        Me.TxtTell.Name = "TxtTell"
+        Me.TxtTell.Size = New System.Drawing.Size(167, 20)
+        Me.TxtTell.TabIndex = 31
         '
-        'Label3
+        'lblTell
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(248, 111)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 13)
-        Me.Label3.TabIndex = 30
-        Me.Label3.Text = "เบอร์โทรศัพท์ :"
+        Me.lblTell.AutoSize = True
+        Me.lblTell.Location = New System.Drawing.Point(248, 111)
+        Me.lblTell.Name = "lblTell"
+        Me.lblTell.Size = New System.Drawing.Size(78, 13)
+        Me.lblTell.TabIndex = 30
+        Me.lblTell.Text = "เบอร์โทรศัพท์ :"
         '
-        'TextBox5
+        'txtEmail
         '
-        Me.TextBox5.Location = New System.Drawing.Point(635, 85)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox5.TabIndex = 29
+        Me.txtEmail.Location = New System.Drawing.Point(635, 85)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(167, 20)
+        Me.txtEmail.TabIndex = 29
         '
         'txtBoxType
         '
@@ -136,23 +136,23 @@ Partial Class Serach_user
         Me.txtBoxType.Size = New System.Drawing.Size(167, 20)
         Me.txtBoxType.TabIndex = 28
         '
-        'Label7
+        'lblEmail
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(592, 88)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
-        Me.Label7.TabIndex = 27
-        Me.Label7.Text = "อีเมล :"
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Location = New System.Drawing.Point(592, 88)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(37, 13)
+        Me.lblEmail.TabIndex = 27
+        Me.lblEmail.Text = "อีเมล :"
         '
-        'Label8
+        'lblPosition
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(273, 85)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(53, 13)
-        Me.Label8.TabIndex = 26
-        Me.Label8.Text = "ตำแหน่ง :"
+        Me.lblPosition.AutoSize = True
+        Me.lblPosition.Location = New System.Drawing.Point(273, 85)
+        Me.lblPosition.Name = "lblPosition"
+        Me.lblPosition.Size = New System.Drawing.Size(53, 13)
+        Me.lblPosition.TabIndex = 26
+        Me.lblPosition.Text = "ตำแหน่ง :"
         '
         'txtBoxLastname
         '
@@ -168,23 +168,23 @@ Partial Class Serach_user
         Me.txtBoxFirstname.Size = New System.Drawing.Size(167, 20)
         Me.txtBoxFirstname.TabIndex = 24
         '
-        'Label5
+        'lblLastname
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(577, 59)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 13)
-        Me.Label5.TabIndex = 23
-        Me.Label5.Text = "นามสกุล :"
+        Me.lblLastname.AutoSize = True
+        Me.lblLastname.Location = New System.Drawing.Point(577, 59)
+        Me.lblLastname.Name = "lblLastname"
+        Me.lblLastname.Size = New System.Drawing.Size(52, 13)
+        Me.lblLastname.TabIndex = 23
+        Me.lblLastname.Text = "นามสกุล :"
         '
-        'Label6
+        'lblName
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(300, 59)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = "ชื่อ :"
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(300, 59)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(26, 13)
+        Me.lblName.TabIndex = 22
+        Me.lblName.Text = "ชื่อ :"
         '
         'txtBoxEmpId
         '
@@ -200,23 +200,23 @@ Partial Class Serach_user
         Me.txtboxUsername.Size = New System.Drawing.Size(167, 20)
         Me.txtboxUsername.TabIndex = 14
         '
-        'Label2
+        'lblIdEmp
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(556, 33)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 13)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "รหัสพนักงาน :"
+        Me.lblIdEmp.AutoSize = True
+        Me.lblIdEmp.Location = New System.Drawing.Point(556, 33)
+        Me.lblIdEmp.Name = "lblIdEmp"
+        Me.lblIdEmp.Size = New System.Drawing.Size(73, 13)
+        Me.lblIdEmp.TabIndex = 13
+        Me.lblIdEmp.Text = "รหัสพนักงาน :"
         '
-        'Label1
+        'lblUsername
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(267, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "ชื่อผู้ใช้"
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(267, 33)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(40, 13)
+        Me.lblUsername.TabIndex = 12
+        Me.lblUsername.Text = "ชื่อผู้ใช้"
         '
         'dgvSearchUser
         '
@@ -265,21 +265,21 @@ Partial Class Serach_user
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents txtBoxEmpId As System.Windows.Forms.TextBox
     Friend WithEvents txtboxUsername As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblIdEmp As System.Windows.Forms.Label
+    Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents dgvSearchUser As System.Windows.Forms.DataGridView
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TxtTell As System.Windows.Forms.TextBox
+    Friend WithEvents lblTell As System.Windows.Forms.Label
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxType As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents lblEmail As System.Windows.Forms.Label
+    Friend WithEvents lblPosition As System.Windows.Forms.Label
     Friend WithEvents txtBoxLastname As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxFirstname As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents lblLastname As System.Windows.Forms.Label
+    Friend WithEvents lblName As System.Windows.Forms.Label
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents bntSearch As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
