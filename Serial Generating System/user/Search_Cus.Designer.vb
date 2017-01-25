@@ -22,48 +22,47 @@ Partial Class Search_Cus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้าง serial key")
-        Dim TreeNode34 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหา serial key")
-        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการ serialkey", New System.Windows.Forms.TreeNode() {TreeNode33, TreeNode34})
-        Dim TreeNode36 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode37 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode38 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode36, TreeNode37})
-        Dim TreeNode39 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode40 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode39})
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้าง serial key")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหา serial key")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการ serialkey", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.txtPostalCode = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txtLane = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtProvince = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtRoad = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.txtSubDistrict = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtHouseNo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtCorp_s_name = New System.Windows.Forms.TextBox()
+        Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvSearchCus = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -78,16 +77,17 @@ Partial Class Search_Cus
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox13
+        'txtPhone
         '
-        Me.TextBox13.Location = New System.Drawing.Point(588, 171)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox13.TabIndex = 57
+        Me.txtPhone.Location = New System.Drawing.Point(588, 171)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(167, 20)
+        Me.txtPhone.TabIndex = 57
         '
         'Label13
         '
@@ -98,12 +98,12 @@ Partial Class Search_Cus
         Me.Label13.TabIndex = 56
         Me.Label13.Text = "โทรศัพท์ :"
         '
-        'TextBox14
+        'txtEmail
         '
-        Me.TextBox14.Location = New System.Drawing.Point(287, 171)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox14.TabIndex = 55
+        Me.txtEmail.Location = New System.Drawing.Point(287, 171)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(195, 20)
+        Me.txtEmail.TabIndex = 55
         '
         'Label14
         '
@@ -114,12 +114,12 @@ Partial Class Search_Cus
         Me.Label14.TabIndex = 54
         Me.Label14.Text = "อีเมล :"
         '
-        'TextBox12
+        'txtPostalCode
         '
-        Me.TextBox12.Location = New System.Drawing.Point(588, 145)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox12.TabIndex = 53
+        Me.txtPostalCode.Location = New System.Drawing.Point(588, 145)
+        Me.txtPostalCode.Name = "txtPostalCode"
+        Me.txtPostalCode.Size = New System.Drawing.Size(167, 20)
+        Me.txtPostalCode.TabIndex = 53
         '
         'Label12
         '
@@ -130,12 +130,12 @@ Partial Class Search_Cus
         Me.Label12.TabIndex = 52
         Me.Label12.Text = "รหัสไปรษณีย์ :"
         '
-        'TextBox11
+        'txtDistrict
         '
-        Me.TextBox11.Location = New System.Drawing.Point(588, 119)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox11.TabIndex = 51
+        Me.txtDistrict.Location = New System.Drawing.Point(588, 119)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(195, 20)
+        Me.txtDistrict.TabIndex = 51
         '
         'Label11
         '
@@ -146,12 +146,12 @@ Partial Class Search_Cus
         Me.Label11.TabIndex = 50
         Me.Label11.Text = "อำเภอ/เขต :"
         '
-        'TextBox10
+        'txtLane
         '
-        Me.TextBox10.Location = New System.Drawing.Point(786, 93)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox10.TabIndex = 49
+        Me.txtLane.Location = New System.Drawing.Point(786, 93)
+        Me.txtLane.Name = "txtLane"
+        Me.txtLane.Size = New System.Drawing.Size(186, 20)
+        Me.txtLane.TabIndex = 49
         '
         'Label8
         '
@@ -162,12 +162,12 @@ Partial Class Search_Cus
         Me.Label8.TabIndex = 48
         Me.Label8.Text = "ซอย :"
         '
-        'TextBox9
+        'txtCorpGroup
         '
-        Me.TextBox9.Location = New System.Drawing.Point(588, 41)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox9.TabIndex = 47
+        Me.txtCorpGroup.Location = New System.Drawing.Point(588, 41)
+        Me.txtCorpGroup.Name = "txtCorpGroup"
+        Me.txtCorpGroup.Size = New System.Drawing.Size(195, 20)
+        Me.txtCorpGroup.TabIndex = 47
         '
         'Label7
         '
@@ -178,12 +178,12 @@ Partial Class Search_Cus
         Me.Label7.TabIndex = 46
         Me.Label7.Text = "กลุ่มบริษัท :"
         '
-        'TextBox7
+        'txtProvince
         '
-        Me.TextBox7.Location = New System.Drawing.Point(287, 145)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox7.TabIndex = 45
+        Me.txtProvince.Location = New System.Drawing.Point(287, 145)
+        Me.txtProvince.Name = "txtProvince"
+        Me.txtProvince.Size = New System.Drawing.Size(195, 20)
+        Me.txtProvince.TabIndex = 45
         '
         'Label9
         '
@@ -194,12 +194,12 @@ Partial Class Search_Cus
         Me.Label9.TabIndex = 44
         Me.Label9.Text = "จังหวัด :"
         '
-        'TextBox8
+        'txtRoad
         '
-        Me.TextBox8.Location = New System.Drawing.Point(507, 93)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox8.TabIndex = 43
+        Me.txtRoad.Location = New System.Drawing.Point(507, 93)
+        Me.txtRoad.Name = "txtRoad"
+        Me.txtRoad.Size = New System.Drawing.Size(195, 20)
+        Me.txtRoad.TabIndex = 43
         '
         'Label10
         '
@@ -210,21 +210,21 @@ Partial Class Search_Cus
         Me.Label10.TabIndex = 42
         Me.Label10.Text = "ถนน :"
         '
-        'Button2
+        'btnClear
         '
-        Me.Button2.Location = New System.Drawing.Point(564, 197)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 41
-        Me.Button2.Text = "เคลียร์"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnClear.Location = New System.Drawing.Point(564, 197)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 41
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtSubDistrict
         '
-        Me.TextBox6.Location = New System.Drawing.Point(287, 119)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox6.TabIndex = 38
+        Me.txtSubDistrict.Location = New System.Drawing.Point(287, 119)
+        Me.txtSubDistrict.Name = "txtSubDistrict"
+        Me.txtSubDistrict.Size = New System.Drawing.Size(195, 20)
+        Me.txtSubDistrict.TabIndex = 38
         '
         'Label6
         '
@@ -235,12 +235,12 @@ Partial Class Search_Cus
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "ตำบล/แขวง :"
         '
-        'TextBox5
+        'txtLastname
         '
-        Me.TextBox5.Location = New System.Drawing.Point(588, 67)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox5.TabIndex = 36
+        Me.txtLastname.Location = New System.Drawing.Point(588, 67)
+        Me.txtLastname.Name = "txtLastname"
+        Me.txtLastname.Size = New System.Drawing.Size(195, 20)
+        Me.txtLastname.TabIndex = 36
         '
         'Label5
         '
@@ -251,12 +251,12 @@ Partial Class Search_Cus
         Me.Label5.TabIndex = 35
         Me.Label5.Text = "นามสกุล :"
         '
-        'TextBox4
+        'txtHouseNo
         '
-        Me.TextBox4.Location = New System.Drawing.Point(287, 93)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(143, 20)
-        Me.TextBox4.TabIndex = 34
+        Me.txtHouseNo.Location = New System.Drawing.Point(287, 93)
+        Me.txtHouseNo.Name = "txtHouseNo"
+        Me.txtHouseNo.Size = New System.Drawing.Size(143, 20)
+        Me.txtHouseNo.TabIndex = 34
         '
         'Label4
         '
@@ -267,12 +267,12 @@ Partial Class Search_Cus
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "เลขที่ :"
         '
-        'TextBox3
+        'txtFirstName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(287, 67)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox3.TabIndex = 32
+        Me.txtFirstName.Location = New System.Drawing.Point(287, 67)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(195, 20)
+        Me.txtFirstName.TabIndex = 32
         '
         'Label3
         '
@@ -283,28 +283,28 @@ Partial Class Search_Cus
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "ชื่อจริง :"
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(472, 197)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "ค้นหา"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(472, 197)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 30
+        Me.btnSearch.Text = "ค้นหา"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtCorp_s_name
         '
-        Me.TextBox2.Location = New System.Drawing.Point(287, 41)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox2.TabIndex = 29
+        Me.txtCorp_s_name.Location = New System.Drawing.Point(287, 41)
+        Me.txtCorp_s_name.Name = "txtCorp_s_name"
+        Me.txtCorp_s_name.Size = New System.Drawing.Size(195, 20)
+        Me.txtCorp_s_name.TabIndex = 29
         '
-        'TextBox1
+        'txtCorpName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(287, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(562, 20)
-        Me.TextBox1.TabIndex = 28
+        Me.txtCorpName.Location = New System.Drawing.Point(287, 15)
+        Me.txtCorpName.Name = "txtCorpName"
+        Me.txtCorpName.Size = New System.Drawing.Size(562, 20)
+        Me.txtCorpName.TabIndex = 28
         '
         'Label2
         '
@@ -328,58 +328,58 @@ Partial Class Search_Cus
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode33.Name = "Node0"
-        TreeNode33.Text = "สร้าง serial key"
-        TreeNode34.Name = "Node1"
-        TreeNode34.Text = "ค้นหา serial key"
-        TreeNode35.Name = "Node6"
-        TreeNode35.Text = "จัดการ serialkey"
-        TreeNode36.Name = "Node4"
-        TreeNode36.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode37.Name = "Node3"
-        TreeNode37.Text = "ค้นหาลูกค้า"
-        TreeNode38.Name = "Node7"
-        TreeNode38.Text = "จัดการลูกค้า"
-        TreeNode39.Name = "Node5"
-        TreeNode39.Text = "เปลี่ยน password"
-        TreeNode40.Name = "Node8"
-        TreeNode40.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode35, TreeNode38, TreeNode40})
+        TreeNode1.Name = "Node0"
+        TreeNode1.Text = "สร้าง serial key"
+        TreeNode2.Name = "Node1"
+        TreeNode2.Text = "ค้นหา serial key"
+        TreeNode3.Name = "Node6"
+        TreeNode3.Text = "จัดการ serialkey"
+        TreeNode4.Name = "Node4"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "Node3"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "Node7"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "Node5"
+        TreeNode7.Text = "เปลี่ยน password"
+        TreeNode8.Name = "Node8"
+        TreeNode8.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.dgvSearchCus)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.TextBox13)
+        Me.Panel1.Controls.Add(Me.txtPhone)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.TextBox14)
+        Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.TextBox12)
+        Me.Panel1.Controls.Add(Me.txtPostalCode)
         Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.TextBox11)
+        Me.Panel1.Controls.Add(Me.txtDistrict)
         Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.TextBox10)
+        Me.Panel1.Controls.Add(Me.txtLane)
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.TextBox9)
+        Me.Panel1.Controls.Add(Me.txtCorpGroup)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.txtProvince)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.TextBox8)
+        Me.Panel1.Controls.Add(Me.txtRoad)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.TextBox6)
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.txtSubDistrict)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.txtLastname)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.txtHouseNo)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtFirstName)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.btnSearch)
+        Me.Panel1.Controls.Add(Me.txtCorp_s_name)
+        Me.Panel1.Controls.Add(Me.txtCorpName)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TreeView1)
@@ -388,23 +388,14 @@ Partial Class Search_Cus
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 3
         '
-        'Button3
+        'dgvSearchCus
         '
-        Me.Button3.Location = New System.Drawing.Point(41, 421)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 23)
-        Me.Button3.TabIndex = 22
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        Me.DataGridView1.Location = New System.Drawing.Point(199, 226)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(807, 231)
-        Me.DataGridView1.TabIndex = 58
+        Me.dgvSearchCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSearchCus.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
+        Me.dgvSearchCus.Location = New System.Drawing.Point(199, 226)
+        Me.dgvSearchCus.Name = "dgvSearchCus"
+        Me.dgvSearchCus.Size = New System.Drawing.Size(807, 231)
+        Me.dgvSearchCus.TabIndex = 58
         '
         'Column1
         '
@@ -483,6 +474,15 @@ Partial Class Search_Cus
         Me.Column14.HeaderText = "โทรศัพท์"
         Me.Column14.Name = "Column14"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(41, 421)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(96, 23)
+        Me.Button3.TabIndex = 22
+        Me.Button3.Text = "ออกจากระบบ"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Search_Cus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -493,44 +493,44 @@ Partial Class Search_Cus
         Me.Text = "ค้นหาข้อมูลลูกค้า"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents txtLane As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCorpGroup As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents txtProvince As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents txtRoad As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents txtSubDistrict As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastname As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtHouseNo As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents txtCorp_s_name As System.Windows.Forms.TextBox
+    Friend WithEvents txtCorpName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvSearchCus As System.Windows.Forms.DataGridView
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn

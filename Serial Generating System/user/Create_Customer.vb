@@ -30,6 +30,8 @@ Public Class Create_Customer
             MsgBox("การเพิ่มข้อมูลล้มเหลว")
         Else
             MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            Me.clear()
+
         End If
         con.close()
 
@@ -188,5 +190,44 @@ Public Class Create_Customer
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub clear()
+        txtCorpName.Clear()
+        txtCorp_s_Name.Clear()
+        txtCorpGroup.Clear()
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtHouseNo.Clear()
+        txtRoad.Clear()
+        txtLane.Clear()
+        txtSubdistrict.Clear()
+        txtDistrict.Clear()
+        txtProvince.Clear()
+        txtPostalCode.Clear()
+        txtEmail.Clear()
+        txtPhone.Clear()
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        
+        Me.clear()
+
+
+        '  [corpname]()
+        ',[corp_s_name]
+        ',[corpgroup]
+        ',[firstname]
+        ',[lastname]
+        ',[house_no]
+        ',[road]
+        ',[lane]
+        ',[subdistrict]
+        ',[district]
+        ',[province]
+        ',[postalcode]
+        ',[email]
+        ',[phone]
+
     End Sub
 End Class

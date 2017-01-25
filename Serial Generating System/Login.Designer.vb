@@ -35,7 +35,7 @@ Partial Class Login
         Me.btnLogin.Location = New System.Drawing.Point(140, 145)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogin.TabIndex = 3
+        Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
@@ -44,7 +44,7 @@ Partial Class Login
         Me.Button2.Location = New System.Drawing.Point(221, 145)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
+        Me.Button2.TabIndex = 1
         Me.Button2.Text = "close"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -71,7 +71,7 @@ Partial Class Login
         Me.txtUsername.Location = New System.Drawing.Point(119, 59)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(199, 20)
-        Me.txtUsername.TabIndex = 1
+        Me.txtUsername.TabIndex = 4
         '
         'txtPassword
         '
@@ -79,7 +79,7 @@ Partial Class Login
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(199, 20)
-        Me.txtPassword.TabIndex = 2
+        Me.txtPassword.TabIndex = 5
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Login
@@ -94,6 +94,7 @@ Partial Class Login
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnLogin)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เข้าสู่ระบบ"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -1,11 +1,31 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Data
 
 Public Class Login
     Private username = "Username"
     Private password = "************"
     Private con As New ConnectDB
 
+    Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+
+    End Sub
+
+ 
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.Visible = False
+        Dim s = New SplashScreen1
+        s.Show()
+        System.Threading.Thread.Sleep(1000)
+        s.Close()
+
+        Me.Visible = True
+        
+
+
+
         Me.txtUsername.TextAlign = HorizontalAlignment.Center
         txtUsername.ForeColor = Color.Gray
         txtUsername.Text = username
@@ -13,44 +33,72 @@ Public Class Login
         txtPassword.ForeColor = Color.Gray
         txtPassword.Text = password
         btnLogin.Select()
+
     End Sub
 
-    Private Sub checkTextEmpty(ByVal txt As TextBox, ByVal faceText As String)
-        If Not txt.ForeColor = Color.Black Or txt.Text = String.Empty Then
-            txt.ForeColor = Color.Gray
-            txt.Text = faceText
+    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.LoadData()
         End If
     End Sub
 
     Private Sub TextBox1_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
-        checkTextEmpty(txtUsername, username)
+        If Not txtUsername.ForeColor = Color.Black Or txtUsername.Text = String.Empty Then
+            txtUsername.ForeColor = Color.Gray
+            txtUsername.Text = username
+        End If
+    End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.LoadData()
+        End If
     End Sub
 
     Private Sub TextBox2_empty(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
-        checkTextEmpty(txtPassword, password)
+        If Not txtPassword.ForeColor = Color.Black Or txtPassword.Text = String.Empty Then
+            txtPassword.ForeColor = Color.Gray
+            txtPassword.Text = password
+        End If
     End Sub
 
     Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
-        checkTextChange(txtUsername, username)
+        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
+            txtUsername.Clear()
+            txtUsername.ForeColor = Color.Black
+        End If
     End Sub
 
     Private Sub TextBox2_Click(sender As Object, e As EventArgs) Handles txtPassword.Click
-        checkTextChange(txtPassword, password)
+        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
+            txtPassword.Clear()
+            txtPassword.ForeColor = Color.Black
+        End If
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
-
-
+    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
+        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
+            txtUsername.Clear()
+            txtUsername.ForeColor = Color.Black
+        End If
+    End Sub
+    Private Sub txtPass_tab(sender As Object, e As EventArgs) Handles txtPassword.KeyUp
+        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
+            txtPassword.Clear()
+            txtPassword.ForeColor = Color.Black
+        End If
+    End Sub
+    Private Sub LoadData()
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
-        If txtUsername.ForeColor = Color.Gray Or txtPassword.ForeColor = Color.Gray Then
-            MessageBox.Show("กรุณากรอกบัญชีผู้ใช้หรือรหัสผ่าน", "แจ้งเตือน")
-        ElseIf sqlread Is Nothing Then
-            Console.Write("คิวรี่ผิด")
+        If sqlread Is Nothing Then
+            MsgBox("query ผิด")
         ElseIf Not sqlread.Read Then
-            MessageBox.Show("บัญชีผู้ใช้หรือรหัสผ่านผิด", "แจ้งเตือน")
+            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด")
+
         Else
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
+
             If type.Equals("admin") Then
                 Dim frm As New Create_User
                 frm.Show()
@@ -61,20 +109,24 @@ Public Class Login
                 Me.Hide()
             End If
         End If
+        con.close()
+    End Sub
+
+    Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
+        LoadData()
 
     End Sub
 
-    Private Sub checkTextChange(ByVal txt As TextBox, ByVal faceText As String)
-        If txt.Text = faceText And txt.ForeColor = Color.Gray Then
-            txt.Clear()
-            txt.ForeColor = Color.Black
-        End If
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
     End Sub
 
-    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
-        checkTextChange(txtUsername, username)
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Application.Exit()
+
     End Sub
-    Private Sub txtPass_tab(sender As Object, e As EventArgs) Handles txtPassword.KeyUp
-        checkTextChange(txtPassword, password)
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
     End Sub
 End Class
