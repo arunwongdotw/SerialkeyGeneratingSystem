@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class Serach_user
     Private con As New ConnectDB
@@ -8,30 +9,30 @@ Public Class Serach_user
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        DataGridView1.Visible = True
+        dgvSearchUser.Visible = True
 
         Dim strQuery = "select * from SGS.dbo.Employee where emp_id  IS NOT NULL"
         If Not txtboxUsername.Text = String.Empty Then
-            strQuery &= " and username like '%" & txtboxUsername.Text.Replace("'", "") & "%'"
+            strQuery &= " and username like '%" & txtboxUsername.Text & "%'"
         End If
         If Not txtBoxEmpId.Text = String.Empty Then
-            strQuery &= " and emp_id like '%" & txtBoxEmpId.Text.Replace("'", "") & "%'"
+            strQuery &= " and emp_id like '%" & txtBoxEmpId.Text & "%'"
         End If
         If Not txtBoxFirstname.Text = String.Empty Then
-            strQuery &= " and firstname like '%" & txtBoxFirstname.Text.Replace("'", "") & "%'"
+            strQuery &= " and firstname like '%" & txtBoxFirstname.Text & "%'"
         End If
         If Not txtBoxLastname.Text = String.Empty Then
-            strQuery &= " and lastname like '%" & txtBoxLastname.Text.Replace("'", "") & "%'"
+            strQuery &= " and lastname like '%" & txtBoxLastname.Text & "%'"
         End If
-        
+
         Dim adapter As SqlDataAdapter = con.queryForAdapter(strQuery)
         con.close()
         Dim table As New DataTable
         adapter.Fill(table)
-        DataGridView1.Columns.Clear()
-        DataGridView1.DataSource = table
+        dgvSearchUser.Columns.Clear()
+        dgvSearchUser.DataSource = table
 
-        With DataGridView1
+        With dgvSearchUser
             .RowHeadersVisible = False
             .Columns(0).HeaderCell.Value = "ลำดับ"
             .Columns(1).HeaderCell.Value = "รหัสพนักงาน"
@@ -48,47 +49,82 @@ Public Class Serach_user
 
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทการสร้าง"
+        checkboxCreate.Name = "chbCreate"
         checkboxCreate.ReadOnly = True
+        dgvSearchUser.Columns.Add(checkboxCreate)
 
-        DataGridView1.Columns.Add(checkboxCreate)
 
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
         checkboxEdit.HeaderText = "สิทการแก้ไข"
+        checkboxEdit.Name = "chbEdit"
         checkboxEdit.ReadOnly = True
-        DataGridView1.Columns.Add(checkboxEdit)
+        dgvSearchUser.Columns.Add(checkboxEdit)
 
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
+        checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทการลบ"
         checkboxDelete.ReadOnly = True
-        DataGridView1.Columns.Add(checkboxDelete)
+        dgvSearchUser.Columns.Add(checkboxDelete)
 
-        For i As Integer = 0 To DataGridView1.Rows.Count - 2
-            If IsDBNull(DataGridView1.Rows(i).Cells("per_create").Value) OrElse DataGridView1.Rows(i).Cells("per_create").Value = 0 Then
-                DataGridView1.Rows(i).Cells(10).Value = False
-            ElseIf DataGridView1.Rows(i).Cells("per_create").Value = 1 Then
-                DataGridView1.Rows(i).Cells(10).Value = True
+        Dim btnEdit As New DataGridViewButtonColumn()
+        dgvSearchUser.Columns.Add(btnEdit)
+        btnEdit.HeaderText = ""
+        btnEdit.Text = "แก้ไข"
+        btnEdit.Name = "btn"
+        btnEdit.Width = 50
+        btnEdit.UseColumnTextForButtonValue = True
+        dgvSearchUser.Item(1, 2).Style.BackColor = Color.LightGreen
+
+        Dim btnDelete As New DataGridViewButtonColumn()
+        dgvSearchUser.Columns.Add(btnDelete)
+        btnDelete.HeaderText = ""
+        btnDelete.Text = "ลบ"
+        btnDelete.Name = "btn"
+        btnDelete.Width = 50
+        btnDelete.UseColumnTextForButtonValue = True
+
+
+
+        For i As Integer = 0 To dgvSearchUser.Rows.Count - 2
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_create").Value) OrElse dgvSearchUser.Rows(i).Cells("per_create").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbCreate").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_create").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbCreate").Value = True
             End If
-            If IsDBNull(DataGridView1.Rows(i).Cells("per_edit").Value) OrElse DataGridView1.Rows(i).Cells("per_edit").Value = 0 Then
-                DataGridView1.Rows(i).Cells(11).Value = False
-            ElseIf DataGridView1.Rows(i).Cells("per_edit").Value = 1 Then
-                DataGridView1.Rows(i).Cells(11).Value = True
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_edit").Value) OrElse dgvSearchUser.Rows(i).Cells("per_edit").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbEdit").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_edit").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbEdit").Value = True
             End If
-            If IsDBNull(DataGridView1.Rows(i).Cells("per_delete").Value) OrElse DataGridView1.Rows(i).Cells("per_delete").Value = 0 Then
-                DataGridView1.Rows(i).Cells(12).Value = False
-            ElseIf DataGridView1.Rows(i).Cells("per_delete").Value = 1 Then
-                DataGridView1.Rows(i).Cells(12).Value = True
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_delete").Value) OrElse dgvSearchUser.Rows(i).Cells("per_delete").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbDelete").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
             End If
         Next
 
     End Sub
 
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DataGridView1.Visible = False
+        dgvSearchUser.Visible = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        DataGridView1.Columns.Clear()
-        DataGridView1.DataSource = Nothing
+        dgvSearchUser.Columns.Clear()
+        dgvSearchUser.DataSource = Nothing
 
+    End Sub
+
+
+
+    Private Sub checkTextSingle(ByVal textBox As TextBox)
+        If New Regex("'").Match(txtboxUsername.Text).Success Then
+            MessageBox.Show("ไม่สามารถกรอก ( ' ) ได้ กรุณากรอกข้อมูลใหม่")
+            textBox.Text = textBox.Text.Replace("'", "")
+        End If
+    End Sub
+
+    Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtboxUsername.TextChanged
+        checkTextSingle(txtboxUsername)
     End Sub
 End Class

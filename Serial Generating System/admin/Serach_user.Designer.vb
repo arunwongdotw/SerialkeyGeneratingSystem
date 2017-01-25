@@ -30,6 +30,7 @@ Partial Class Serach_user
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -46,11 +47,10 @@ Partial Class Serach_user
         Me.txtboxUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -72,12 +72,21 @@ Partial Class Serach_user
         Me.Panel1.Controls.Add(Me.txtboxUsername)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.dgvSearchUser)
         Me.Panel1.Controls.Add(Me.TreeView1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 5
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(46, 422)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(108, 23)
+        Me.Button3.TabIndex = 34
+        Me.Button3.Text = "ออกจากระบบ"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -209,13 +218,13 @@ Partial Class Serach_user
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "ชื่อผู้ใช้"
         '
-        'DataGridView1
+        'dgvSearchUser
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(208, 194)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(774, 251)
-        Me.DataGridView1.TabIndex = 11
+        Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSearchUser.Location = New System.Drawing.Point(208, 194)
+        Me.dgvSearchUser.Name = "dgvSearchUser"
+        Me.dgvSearchUser.Size = New System.Drawing.Size(774, 251)
+        Me.dgvSearchUser.TabIndex = 11
         '
         'TreeView1
         '
@@ -239,15 +248,6 @@ Partial Class Serach_user
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(46, 422)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(108, 23)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Serach_user
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,7 +258,7 @@ Partial Class Serach_user
         Me.Text = "ค้นหาบัญชีผู้ใช้"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,7 +267,7 @@ Partial Class Serach_user
     Friend WithEvents txtboxUsername As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvSearchUser As System.Windows.Forms.DataGridView
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
