@@ -22,14 +22,14 @@ Partial Class Search_Cus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้าง serial key")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหา serial key")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการ serialkey", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้าง serial key")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหา serial key")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการ serialkey", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10})
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode15})
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -328,23 +328,23 @@ Partial Class Search_Cus
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "สร้าง serial key"
-        TreeNode2.Name = "Node1"
-        TreeNode2.Text = "ค้นหา serial key"
-        TreeNode3.Name = "Node6"
-        TreeNode3.Text = "จัดการ serialkey"
-        TreeNode4.Name = "Node4"
-        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode5.Name = "Node3"
-        TreeNode5.Text = "ค้นหาลูกค้า"
-        TreeNode6.Name = "Node7"
-        TreeNode6.Text = "จัดการลูกค้า"
-        TreeNode7.Name = "Node5"
-        TreeNode7.Text = "เปลี่ยน password"
-        TreeNode8.Name = "Node8"
-        TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        TreeNode9.Name = "Node0"
+        TreeNode9.Text = "สร้าง serial key"
+        TreeNode10.Name = "Node1"
+        TreeNode10.Text = "ค้นหา serial key"
+        TreeNode11.Name = "Node6"
+        TreeNode11.Text = "จัดการ serialkey"
+        TreeNode12.Name = "Node4"
+        TreeNode12.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode13.Name = "Node3"
+        TreeNode13.Text = "ค้นหาลูกค้า"
+        TreeNode14.Name = "Node7"
+        TreeNode14.Text = "จัดการลูกค้า"
+        TreeNode15.Name = "Node5"
+        TreeNode15.Text = "เปลี่ยน password"
+        TreeNode16.Name = "Node8"
+        TreeNode16.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode11, TreeNode14, TreeNode16})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
