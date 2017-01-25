@@ -9,7 +9,7 @@ Public Class Create_User
         Dim perCreate As String
         Dim perDelete As String
         Dim perEdit As String
-        If cmbUserType.Text = "User" Then
+        If cmbUserType.Text = "ผู้ใช้งานทั่วไป" Then
             userType = "user"
         Else
             userType = "admin"
@@ -30,13 +30,15 @@ Public Class Create_User
             perEdit = 0
         End If
         Dim strSQL As String
-        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, user_type, per_create, per_edit, per_delete) "
+        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, phonenumber, email, user_type, per_create, per_edit, per_delete) "
         strSQL &= "values ('" & txtEmpID.Text & "',"
         strSQL &= "'" & txtUsername.Text & "',"
         strSQL &= "'" & txtPassword.Text & "',"
         strSQL &= "'" & txtFirstName.Text & "',"
         strSQL &= "'" & txtLastName.Text & "',"
         strSQL &= "'" & txtPosition.Text & "',"
+        strSQL &= "'" & txtPhoneNumber.Text & "',"
+        strSQL &= "'" & txtEmail.Text & "',"
         strSQL &= "'" & userType & "',"
         strSQL &= "'" & perCreate & "',"
         strSQL &= "'" & perEdit & "',"
@@ -53,17 +55,27 @@ Public Class Create_User
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
         Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
-        Dim RegexCheck As New Regex(CharAndNumberRegex)
-        If Not RegexCheck.IsMatch(txtUsername.Text) Then
+        Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+        Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
+        Dim EmailRegexCheck As New Regex(EmailRegex)
+        If Not CharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
             MsgBox("กรุณากรอกบัญชีผู้ใช้งานเฉพาะตัวอักษรและตัวเลขเท่านั้น")
-        ElseIf Not RegexCheck.IsMatch(txtPassword.Text) Then
+        ElseIf Not CharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
             MsgBox("กรุณากรอกรหัสผ่านเฉพาะตัวอักษรและตัวเลขเท่านั้น")
+        ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
         ElseIf txtUsername.Text = "" Then
-            MsgBox("กรุณากรอกบัญชีผู้ใช้งาน")
+            MsgBox("กรุณากรอกชื่อผู้ใช้")
         ElseIf txtPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่าน")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
+        ElseIf txtFirstName.Text = "" Then
+            MsgBox("กรุณากรอกชื่อ")
+        ElseIf txtLastName.Text = "" Then
+            MsgBox("กรุณากรอกนามสกุล")
+        ElseIf txtPosition.Text = "" Then
+            MsgBox("กรุณากรอกตำแหน่ง")
         ElseIf cmbUserType.Text = "" Then
             MsgBox("กรุณาเลือกประเภทบัญชีผู้ใช้")
         Else
