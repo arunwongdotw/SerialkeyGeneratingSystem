@@ -31,6 +31,8 @@ Partial Class Create_User
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.cbbUserType = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
@@ -58,8 +60,6 @@ Partial Class Create_User
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -122,6 +122,26 @@ Partial Class Create_User
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 3
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(553, 351)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(11, 13)
+        Me.Label17.TabIndex = 77
+        Me.Label17.Text = "*"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(553, 153)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(11, 13)
+        Me.Label13.TabIndex = 73
+        Me.Label13.Text = "*"
+        '
         'cbbUserType
         '
         Me.cbbUserType.FormattingEnabled = True
@@ -129,7 +149,7 @@ Partial Class Create_User
         Me.cbbUserType.Location = New System.Drawing.Point(352, 347)
         Me.cbbUserType.Name = "cbbUserType"
         Me.cbbUserType.Size = New System.Drawing.Size(195, 21)
-        Me.cbbUserType.TabIndex = 72
+        Me.cbbUserType.TabIndex = 12
         '
         'Label11
         '
@@ -146,7 +166,7 @@ Partial Class Create_User
         Me.chbPerDelete.Location = New System.Drawing.Point(736, 300)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(39, 17)
-        Me.chbPerDelete.TabIndex = 70
+        Me.chbPerDelete.TabIndex = 10
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = True
         '
@@ -156,7 +176,7 @@ Partial Class Create_User
         Me.chbPerEdit.Location = New System.Drawing.Point(797, 300)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(53, 17)
-        Me.chbPerEdit.TabIndex = 69
+        Me.chbPerEdit.TabIndex = 11
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = True
         '
@@ -166,7 +186,7 @@ Partial Class Create_User
         Me.chbPerCreate.Location = New System.Drawing.Point(668, 299)
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(48, 17)
-        Me.chbPerCreate.TabIndex = 68
+        Me.chbPerCreate.TabIndex = 9
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = True
         '
@@ -184,7 +204,7 @@ Partial Class Create_User
         Me.txtPhoneNumber.Location = New System.Drawing.Point(352, 300)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(195, 20)
-        Me.txtPhoneNumber.TabIndex = 25
+        Me.txtPhoneNumber.TabIndex = 8
         '
         'Label9
         '
@@ -200,7 +220,7 @@ Partial Class Create_User
         Me.txtEmail.Location = New System.Drawing.Point(668, 249)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(195, 20)
-        Me.txtEmail.TabIndex = 23
+        Me.txtEmail.TabIndex = 7
         '
         'Label10
         '
@@ -216,7 +236,7 @@ Partial Class Create_User
         Me.Button3.Location = New System.Drawing.Point(45, 419)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(96, 23)
-        Me.Button3.TabIndex = 21
+        Me.Button3.TabIndex = 15
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -225,7 +245,7 @@ Partial Class Create_User
         Me.Button2.Location = New System.Drawing.Point(601, 404)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 18
+        Me.Button2.TabIndex = 14
         Me.Button2.Text = "เคลียร์"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -254,7 +274,7 @@ Partial Class Create_User
         Me.txtPosition.Location = New System.Drawing.Point(352, 249)
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(195, 20)
-        Me.txtPosition.TabIndex = 15
+        Me.txtPosition.TabIndex = 6
         '
         'Label6
         '
@@ -270,7 +290,7 @@ Partial Class Create_User
         Me.txtLastName.Location = New System.Drawing.Point(668, 200)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(195, 20)
-        Me.txtLastName.TabIndex = 13
+        Me.txtLastName.TabIndex = 5
         '
         'Label5
         '
@@ -286,7 +306,7 @@ Partial Class Create_User
         Me.txtFirstName.Location = New System.Drawing.Point(352, 200)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(195, 20)
-        Me.txtFirstName.TabIndex = 11
+        Me.txtFirstName.TabIndex = 4
         '
         'Label4
         '
@@ -302,7 +322,7 @@ Partial Class Create_User
         Me.txtEmpID.Location = New System.Drawing.Point(352, 150)
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(195, 20)
-        Me.txtEmpID.TabIndex = 9
+        Me.txtEmpID.TabIndex = 3
         '
         'Label3
         '
@@ -318,7 +338,7 @@ Partial Class Create_User
         Me.btnAdd.Location = New System.Drawing.Point(509, 404)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 7
+        Me.btnAdd.TabIndex = 13
         Me.btnAdd.Text = "สร้าง"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -327,14 +347,14 @@ Partial Class Create_User
         Me.txtPassword.Location = New System.Drawing.Point(352, 97)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(195, 20)
-        Me.txtPassword.TabIndex = 6
+        Me.txtPassword.TabIndex = 2
         '
         'txtUsername
         '
         Me.txtUsername.Location = New System.Drawing.Point(352, 49)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(195, 20)
-        Me.txtUsername.TabIndex = 5
+        Me.txtUsername.TabIndex = 1
         '
         'Label2
         '
@@ -353,26 +373,6 @@ Partial Class Create_User
         Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "บัญชีผู้ใช้งาน :"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(553, 153)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(11, 13)
-        Me.Label13.TabIndex = 73
-        Me.Label13.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(553, 351)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(11, 13)
-        Me.Label17.TabIndex = 77
-        Me.Label17.Text = "*"
         '
         'Create_User
         '

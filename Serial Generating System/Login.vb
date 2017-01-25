@@ -15,32 +15,27 @@ Public Class Login
         btnLogin.Select()
     End Sub
 
-    Private Sub TextBox1_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
-        If Not txtUsername.ForeColor = Color.Black Or txtUsername.Text = String.Empty Then
-            txtUsername.ForeColor = Color.Gray
-            txtUsername.Text = username
+    Private Sub checkTextEmpty(ByVal txt As TextBox, ByVal faceText As String)
+        If Not txt.ForeColor = Color.Black Or txt.Text = String.Empty Then
+            txt.ForeColor = Color.Gray
+            txt.Text = faceText
         End If
+    End Sub
+
+    Private Sub TextBox1_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
+        checkTextEmpty(txtUsername, username)
     End Sub
 
     Private Sub TextBox2_empty(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
-        If Not txtPassword.ForeColor = Color.Black Or txtPassword.Text = String.Empty Then
-            txtPassword.ForeColor = Color.Gray
-            txtPassword.Text = password
-        End If
+        checkTextEmpty(txtPassword, password)
     End Sub
 
     Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
-        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
-            txtUsername.Clear()
-            txtUsername.ForeColor = Color.Black
-        End If
+        checkTextChange(txtUsername, username)
     End Sub
 
     Private Sub TextBox2_Click(sender As Object, e As EventArgs) Handles txtPassword.Click
-        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
-            txtPassword.Clear()
-            txtPassword.ForeColor = Color.Black
-        End If
+        checkTextChange(txtPassword, password)
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -69,16 +64,17 @@ Public Class Login
 
     End Sub
 
-    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
-        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
-            txtUsername.Clear()
-            txtUsername.ForeColor = Color.Black
+    Private Sub checkTextChange(ByVal txt As TextBox, ByVal faceText As String)
+        If txt.Text = faceText And txt.ForeColor = Color.Gray Then
+            txt.Clear()
+            txt.ForeColor = Color.Black
         End If
     End Sub
+
+    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
+        checkTextChange(txtUsername, username)
+    End Sub
     Private Sub txtPass_tab(sender As Object, e As EventArgs) Handles txtPassword.KeyUp
-        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
-            txtPassword.Clear()
-            txtPassword.ForeColor = Color.Black
-        End If
+        checkTextChange(txtPassword, password)
     End Sub
 End Class
