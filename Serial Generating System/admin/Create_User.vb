@@ -36,7 +36,7 @@ Public Class Create_User
         strSQL &= "'" & txtPassword.Text & "',"
         strSQL &= "'" & txtFirstName.Text & "',"
         strSQL &= "'" & txtLastName.Text & "',"
-        strSQL &= "'" & txtUsername.Text & "',"
+        'strSQL &= "'" & txtUsername.Text & "',"
         strSQL &= "'" & txtPosition.Text & "',"
         strSQL &= "'" & userType & "',"
         strSQL &= "'" & perCreate & "',"
