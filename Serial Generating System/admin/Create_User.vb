@@ -9,7 +9,7 @@ Public Class Create_User
         Dim perCreate As String
         Dim perDelete As String
         Dim perEdit As String
-        If cbbUserType.Text = "User" Then
+        If cmbUserType.Text = "User" Then
             userType = "user"
         Else
             userType = "admin"
@@ -64,7 +64,7 @@ Public Class Create_User
             MsgBox("กรุณากรอกรหัสผ่าน")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
-        ElseIf cbbUserType.Text = "" Then
+        ElseIf cmbUserType.Text = "" Then
             MsgBox("กรุณาเลือกประเภทบัญชีผู้ใช้")
         Else
             isCorrect = True
@@ -84,7 +84,7 @@ Public Class Create_User
         End If
     End Sub
 
-    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbbUserType.SelectedIndexChanged
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
 
     End Sub
 
@@ -97,6 +97,10 @@ Public Class Create_User
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+
+    End Sub
+
+    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
 
     End Sub
 End Class
