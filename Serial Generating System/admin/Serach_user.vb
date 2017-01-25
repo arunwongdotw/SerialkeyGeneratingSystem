@@ -7,7 +7,9 @@ Public Class Serach_user
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         DataGridView1.Visible = True
+
         Dim strQuery = "select * from SGS.dbo.Employee where emp_id  IS NOT NULL"
         If Not txtboxUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtboxUsername.Text.Replace("'", "") & "%'"
@@ -47,6 +49,7 @@ Public Class Serach_user
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทการสร้าง"
         checkboxCreate.ReadOnly = True
+
         DataGridView1.Columns.Add(checkboxCreate)
 
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
@@ -59,6 +62,23 @@ Public Class Serach_user
         checkboxDelete.ReadOnly = True
         DataGridView1.Columns.Add(checkboxDelete)
 
+        For i As Integer = 0 To DataGridView1.Rows.Count - 2
+            If IsDBNull(DataGridView1.Rows(i).Cells("per_create").Value) OrElse DataGridView1.Rows(i).Cells("per_create").Value = 0 Then
+                DataGridView1.Rows(i).Cells(10).Value = False
+            ElseIf DataGridView1.Rows(i).Cells("per_create").Value = 1 Then
+                DataGridView1.Rows(i).Cells(10).Value = True
+            End If
+            If IsDBNull(DataGridView1.Rows(i).Cells("per_edit").Value) OrElse DataGridView1.Rows(i).Cells("per_edit").Value = 0 Then
+                DataGridView1.Rows(i).Cells(11).Value = False
+            ElseIf DataGridView1.Rows(i).Cells("per_edit").Value = 1 Then
+                DataGridView1.Rows(i).Cells(11).Value = True
+            End If
+            If IsDBNull(DataGridView1.Rows(i).Cells("per_delete").Value) OrElse DataGridView1.Rows(i).Cells("per_delete").Value = 0 Then
+                DataGridView1.Rows(i).Cells(12).Value = False
+            ElseIf DataGridView1.Rows(i).Cells("per_delete").Value = 1 Then
+                DataGridView1.Rows(i).Cells(12).Value = True
+            End If
+        Next
 
     End Sub
 
