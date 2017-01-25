@@ -11,7 +11,7 @@ Public Class Serach_user
 
         dgvSearchUser.Visible = True
 
-        Dim strQuery = "select * from SGS.dbo.Employee where emp_id  IS NOT NULL"
+        Dim strQuery = "select id,emp_id,firstname,lastname,username,password,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id  IS NOT NULL"
         If Not txtboxUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtboxUsername.Text & "%'"
         End If

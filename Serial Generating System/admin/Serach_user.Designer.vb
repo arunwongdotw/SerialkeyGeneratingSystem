@@ -103,7 +103,7 @@ Partial Class Serach_user
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
-        Me.Button1.Text = "สร้าง"
+        Me.Button1.Text = "ค้นหา"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox7
