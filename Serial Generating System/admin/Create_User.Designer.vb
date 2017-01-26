@@ -22,13 +22,13 @@ Partial Class Create_User
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode9})
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode11})
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode13})
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -44,7 +44,7 @@ Partial Class Create_User
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
@@ -60,6 +60,9 @@ Partial Class Create_User
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,26 +70,29 @@ Partial Class Create_User
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode2.Name = "Node1"
-        TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode3.Name = "Node6"
-        TreeNode3.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode4.Name = "Node0"
-        TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode5.Name = "Node7"
-        TreeNode5.Text = "การตรวจสอบ"
-        TreeNode6.Name = "Node5"
-        TreeNode6.Text = "เปลี่ยน password"
-        TreeNode7.Name = "Node8"
-        TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        TreeNode8.Name = "Node0"
+        TreeNode8.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode9.Name = "Node1"
+        TreeNode9.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode10.Name = "Node6"
+        TreeNode10.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode11.Name = "Node0"
+        TreeNode11.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode12.Name = "Node7"
+        TreeNode12.Text = "การตรวจสอบ"
+        TreeNode13.Name = "Node5"
+        TreeNode13.Text = "เปลี่ยน password"
+        TreeNode14.Name = "Node8"
+        TreeNode14.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode12, TreeNode14})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.cmbUserType)
@@ -100,7 +106,7 @@ Partial Class Create_User
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.txtPosition)
@@ -145,7 +151,7 @@ Partial Class Create_User
         'cmbUserType
         '
         Me.cmbUserType.FormattingEnabled = True
-        Me.cmbUserType.Items.AddRange(New Object() {"User", "Administrator"})
+        Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
         Me.cmbUserType.Location = New System.Drawing.Point(352, 347)
         Me.cmbUserType.Name = "cmbUserType"
         Me.cmbUserType.Size = New System.Drawing.Size(195, 21)
@@ -163,7 +169,7 @@ Partial Class Create_User
         'chbPerDelete
         '
         Me.chbPerDelete.AutoSize = True
-        Me.chbPerDelete.Location = New System.Drawing.Point(736, 300)
+        Me.chbPerDelete.Location = New System.Drawing.Point(741, 303)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(39, 17)
         Me.chbPerDelete.TabIndex = 10
@@ -173,7 +179,7 @@ Partial Class Create_User
         'chbPerEdit
         '
         Me.chbPerEdit.AutoSize = True
-        Me.chbPerEdit.Location = New System.Drawing.Point(797, 300)
+        Me.chbPerEdit.Location = New System.Drawing.Point(810, 303)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(53, 17)
         Me.chbPerEdit.TabIndex = 11
@@ -183,7 +189,7 @@ Partial Class Create_User
         'chbPerCreate
         '
         Me.chbPerCreate.AutoSize = True
-        Me.chbPerCreate.Location = New System.Drawing.Point(668, 299)
+        Me.chbPerCreate.Location = New System.Drawing.Point(668, 303)
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(48, 17)
         Me.chbPerCreate.TabIndex = 9
@@ -193,7 +199,7 @@ Partial Class Create_User
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(586, 300)
+        Me.Label12.Location = New System.Drawing.Point(587, 303)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(75, 13)
         Me.Label12.TabIndex = 67
@@ -209,7 +215,7 @@ Partial Class Create_User
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(267, 303)
+        Me.Label9.Location = New System.Drawing.Point(268, 303)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(78, 13)
         Me.Label9.TabIndex = 24
@@ -225,7 +231,7 @@ Partial Class Create_User
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(624, 252)
+        Me.Label10.Location = New System.Drawing.Point(625, 252)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(37, 13)
         Me.Label10.TabIndex = 22
@@ -240,14 +246,14 @@ Partial Class Create_User
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnClear
         '
-        Me.Button2.Location = New System.Drawing.Point(601, 404)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "เคลียร์"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnClear.Location = New System.Drawing.Point(601, 404)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 14
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -257,7 +263,7 @@ Partial Class Create_User
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(154, 13)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "* ภาษาอังกฤษหรือตัวเลขเท่านั้น"
+        Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
         'Label7
         '
@@ -267,7 +273,7 @@ Partial Class Create_User
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(154, 13)
         Me.Label7.TabIndex = 16
-        Me.Label7.Text = "* ภาษาอังกฤษหรือตัวเลขเท่านั้น"
+        Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
         'txtPosition
         '
@@ -279,7 +285,7 @@ Partial Class Create_User
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(292, 252)
+        Me.Label6.Location = New System.Drawing.Point(293, 252)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 13)
         Me.Label6.TabIndex = 14
@@ -295,7 +301,7 @@ Partial Class Create_User
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(609, 203)
+        Me.Label5.Location = New System.Drawing.Point(610, 203)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 13)
         Me.Label5.TabIndex = 12
@@ -311,7 +317,7 @@ Partial Class Create_User
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(319, 203)
+        Me.Label4.Location = New System.Drawing.Point(320, 203)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(26, 13)
         Me.Label4.TabIndex = 10
@@ -327,7 +333,7 @@ Partial Class Create_User
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(272, 153)
+        Me.Label3.Location = New System.Drawing.Point(273, 153)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 13)
         Me.Label3.TabIndex = 8
@@ -359,7 +365,7 @@ Partial Class Create_User
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(293, 100)
+        Me.Label2.Location = New System.Drawing.Point(294, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 2
@@ -368,11 +374,41 @@ Partial Class Create_User
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(271, 52)
+        Me.Label1.Location = New System.Drawing.Point(297, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "บัญชีผู้ใช้งาน :"
+        Me.Label1.Text = "ชื่อผู้ใช้ : "
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(553, 200)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(11, 13)
+        Me.Label14.TabIndex = 78
+        Me.Label14.Text = "*"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(553, 252)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(11, 13)
+        Me.Label15.TabIndex = 79
+        Me.Label15.Text = "*"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(869, 203)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(11, 13)
+        Me.Label16.TabIndex = 80
+        Me.Label16.Text = "*"
         '
         'Create_User
         '
@@ -404,7 +440,7 @@ Partial Class Create_User
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
@@ -418,4 +454,7 @@ Partial Class Create_User
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
 End Class
