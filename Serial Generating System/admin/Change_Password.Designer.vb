@@ -30,6 +30,9 @@ Partial Class Change_Password
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,9 +42,6 @@ Partial Class Change_Password
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,6 +63,36 @@ Partial Class Change_Password
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(562, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(11, 13)
+        Me.Label5.TabIndex = 73
+        Me.Label5.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(562, 87)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(11, 13)
+        Me.Label4.TabIndex = 72
+        Me.Label4.Text = "*"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(562, 137)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(11, 13)
+        Me.Label15.TabIndex = 71
+        Me.Label15.Text = "*"
         '
         'Button3
         '
@@ -134,53 +164,23 @@ Partial Class Change_Password
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
+        TreeNode1.Name = "ndCreateUserAccout"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode2.Name = "Node1"
+        TreeNode2.Name = "ndFindUserAccount"
         TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode3.Name = "Node6"
+        TreeNode3.Name = "ndManageUserAccount"
         TreeNode3.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode4.Name = "Node0"
+        TreeNode4.Name = "ndCheckConnectingUser"
         TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode5.Name = "Node7"
+        TreeNode5.Name = "ndCheck"
         TreeNode5.Text = "การตรวจสอบ"
-        TreeNode6.Name = "Node5"
+        TreeNode6.Name = "ndAdminResetPassword"
         TreeNode6.Text = "เปลี่ยน password"
-        TreeNode7.Name = "Node8"
+        TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(562, 137)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(11, 13)
-        Me.Label15.TabIndex = 71
-        Me.Label15.Text = "*"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(562, 87)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(11, 13)
-        Me.Label4.TabIndex = 72
-        Me.Label4.Text = "*"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(562, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(11, 13)
-        Me.Label5.TabIndex = 73
-        Me.Label5.Text = "*"
         '
         'Change_Password
         '
