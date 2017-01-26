@@ -3,13 +3,11 @@ Imports System.Text.RegularExpressions
 
 Public Class Serach_user
     Private con As New ConnectDB
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
+    
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
 
-        dgvSearchUser.Visible = True
+
 
         Dim strQuery = "select id,emp_id,username,password,firstname,lastname,position,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id  IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
@@ -25,13 +23,13 @@ Public Class Serach_user
             strQuery &= " and lastname like '%" & txtLastname.Text & "%'"
         End If
         If Not txtPosition.Text = String.Empty Then
-            strQuery &= " and lastname like '%" & txtPosition.Text & "%'"
+            strQuery &= " and position like '%" & txtPosition.Text & "%'"
         End If
         If Not txtPhoneNo.Text = String.Empty Then
-            strQuery &= " and lastname like '%" & txtPhoneNo.Text & "%'"
+            strQuery &= " and phonenumber like '%" & txtPhoneNo.Text & "%'"
         End If
         If Not txtEmail.Text = String.Empty Then
-            strQuery &= " and lastname like '%" & txtEmail.Text & "%'"
+            strQuery &= " and email like '%" & txtEmail.Text & "%'"
         End If
         Dim adapter As SqlDataAdapter = con.queryForAdapter(strQuery)
         con.close()
@@ -76,7 +74,10 @@ Public Class Serach_user
         dgvSearchUser.Columns("ลำดับ").ReadOnly = True
         For i = 0 To dgvSearchUser.Rows.Count - 2
             dgvSearchUser.Rows(i).Cells("ลำดับ").Value = i + 1
+
         Next
+
+        randerColorRow()
 
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทการสร้าง"
@@ -114,15 +115,25 @@ Public Class Serach_user
         btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
 
-        dgvSearchUser.Rows(0).DefaultCellStyle.BackColor = Color.AliceBlue
+
 
         setPermissionCheckBox()
 
 
     End Sub
 
+    Private Sub randerColorRow()
+        For i = 0 To dgvSearchUser.Rows.Count - 2
+            If i Mod 2 = 0 Then
+                dgvSearchUser.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
+    End Sub
+
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgvSearchUser.Visible = False
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -142,6 +153,9 @@ Public Class Serach_user
 
     Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         checkTextSingle(txtUsername)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
     End Sub
 
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
@@ -180,10 +194,52 @@ Public Class Serach_user
 
     Private Sub dataGridView1_ColumnHeaderMouseClick(ByVal sender As Object, _
     ByVal e As DataGridViewCellMouseEventArgs) Handles dgvSearchUser.ColumnHeaderMouseClick
+        randerColorRow()
         setPermissionCheckBox()
     End Sub
 
 
 
 
+    Private Sub txtEmployeeId_TextChanged(sender As Object, e As EventArgs) Handles txtEmployeeId.TextChanged
+        checkTextSingle(txtEmployeeId)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
+
+    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
+        checkTextSingle(txtFirstname)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
+
+    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
+        checkTextSingle(txtLastname)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
+
+    Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
+        checkTextSingle(txtPosition)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        checkTextSingle(txtEmail)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
+
+    Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNo.TextChanged
+        checkTextSingle(txtPhoneNo)
+        Dim a As New Object
+        Dim es As New EventArgs
+        Button1_Click(a, es)
+    End Sub
 End Class

@@ -22,13 +22,13 @@ Partial Class Serach_user
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
+        Dim TreeNode85 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode86 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode87 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode85, TreeNode86})
+        Dim TreeNode88 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode89 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode88})
+        Dim TreeNode90 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode91 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode90})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bntExit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -109,6 +109,7 @@ Partial Class Serach_user
         'txtPhoneNo
         '
         Me.txtPhoneNo.Location = New System.Drawing.Point(332, 108)
+        Me.txtPhoneNo.MaxLength = 100
         Me.txtPhoneNo.Name = "txtPhoneNo"
         Me.txtPhoneNo.Size = New System.Drawing.Size(167, 20)
         Me.txtPhoneNo.TabIndex = 31
@@ -125,6 +126,7 @@ Partial Class Serach_user
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(635, 85)
+        Me.txtEmail.MaxLength = 100
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(167, 20)
         Me.txtEmail.TabIndex = 29
@@ -132,6 +134,7 @@ Partial Class Serach_user
         'txtPosition
         '
         Me.txtPosition.Location = New System.Drawing.Point(332, 82)
+        Me.txtPosition.MaxLength = 100
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(167, 20)
         Me.txtPosition.TabIndex = 28
@@ -157,6 +160,7 @@ Partial Class Serach_user
         'txtLastname
         '
         Me.txtLastname.Location = New System.Drawing.Point(635, 56)
+        Me.txtLastname.MaxLength = 100
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.Size = New System.Drawing.Size(167, 20)
         Me.txtLastname.TabIndex = 25
@@ -164,6 +168,7 @@ Partial Class Serach_user
         'txtFirstname
         '
         Me.txtFirstname.Location = New System.Drawing.Point(332, 56)
+        Me.txtFirstname.MaxLength = 100
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.Size = New System.Drawing.Size(167, 20)
         Me.txtFirstname.TabIndex = 24
@@ -189,6 +194,7 @@ Partial Class Serach_user
         'txtEmployeeId
         '
         Me.txtEmployeeId.Location = New System.Drawing.Point(635, 30)
+        Me.txtEmployeeId.MaxLength = 50
         Me.txtEmployeeId.Name = "txtEmployeeId"
         Me.txtEmployeeId.Size = New System.Drawing.Size(167, 20)
         Me.txtEmployeeId.TabIndex = 15
@@ -196,6 +202,7 @@ Partial Class Serach_user
         'txtUsername
         '
         Me.txtUsername.Location = New System.Drawing.Point(332, 30)
+        Me.txtUsername.MaxLength = 100
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(167, 20)
         Me.txtUsername.TabIndex = 14
@@ -230,21 +237,21 @@ Partial Class Serach_user
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "ndCreateUserAccount"
-        TreeNode1.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode2.Name = "ndFindUserAccount"
-        TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode3.Name = "ndManageUserAccount"
-        TreeNode3.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode4.Name = "ndCheckConnectingUser"
-        TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode5.Name = "ndCheck"
-        TreeNode5.Text = "การตรวจสอบ"
-        TreeNode6.Name = "ndAdminResetPassword"
-        TreeNode6.Text = "เปลี่ยน password"
-        TreeNode7.Name = "ndAdminInfo"
-        TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        TreeNode85.Name = "ndCreateUserAccount"
+        TreeNode85.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode86.Name = "ndFindUserAccount"
+        TreeNode86.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode87.Name = "ndManageUserAccount"
+        TreeNode87.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode88.Name = "ndCheckConnectingUser"
+        TreeNode88.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode89.Name = "ndCheck"
+        TreeNode89.Text = "การตรวจสอบ"
+        TreeNode90.Name = "ndAdminResetPassword"
+        TreeNode90.Text = "เปลี่ยน password"
+        TreeNode91.Name = "ndAdminInfo"
+        TreeNode91.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode87, TreeNode89, TreeNode91})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
