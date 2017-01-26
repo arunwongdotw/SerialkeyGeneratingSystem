@@ -22,29 +22,29 @@ Partial Class Serach_user
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode9})
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode11})
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode13})
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.bntExit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.bntSearch = New System.Windows.Forms.Button()
-        Me.TxtTell = New System.Windows.Forms.TextBox()
-        Me.lblTell = New System.Windows.Forms.Label()
+        Me.txtPhoneNo = New System.Windows.Forms.TextBox()
+        Me.lblPhoneNo = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtBoxType = New System.Windows.Forms.TextBox()
+        Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPosition = New System.Windows.Forms.Label()
-        Me.txtBoxLastname = New System.Windows.Forms.TextBox()
-        Me.txtBoxFirstname = New System.Windows.Forms.TextBox()
+        Me.txtLastname = New System.Windows.Forms.TextBox()
+        Me.txtFirstname = New System.Windows.Forms.TextBox()
         Me.lblLastname = New System.Windows.Forms.Label()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.txtBoxEmpId = New System.Windows.Forms.TextBox()
-        Me.txtboxUsername = New System.Windows.Forms.TextBox()
+        Me.lblFirstname = New System.Windows.Forms.Label()
+        Me.txtEmployeeId = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblIdEmp = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
@@ -55,21 +55,21 @@ Partial Class Serach_user
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.bntExit)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.bntSearch)
-        Me.Panel1.Controls.Add(Me.TxtTell)
-        Me.Panel1.Controls.Add(Me.lblTell)
+        Me.Panel1.Controls.Add(Me.txtPhoneNo)
+        Me.Panel1.Controls.Add(Me.lblPhoneNo)
         Me.Panel1.Controls.Add(Me.txtEmail)
-        Me.Panel1.Controls.Add(Me.txtBoxType)
+        Me.Panel1.Controls.Add(Me.txtPosition)
         Me.Panel1.Controls.Add(Me.lblEmail)
         Me.Panel1.Controls.Add(Me.lblPosition)
-        Me.Panel1.Controls.Add(Me.txtBoxLastname)
-        Me.Panel1.Controls.Add(Me.txtBoxFirstname)
+        Me.Panel1.Controls.Add(Me.txtLastname)
+        Me.Panel1.Controls.Add(Me.txtFirstname)
         Me.Panel1.Controls.Add(Me.lblLastname)
-        Me.Panel1.Controls.Add(Me.lblName)
-        Me.Panel1.Controls.Add(Me.txtBoxEmpId)
-        Me.Panel1.Controls.Add(Me.txtboxUsername)
+        Me.Panel1.Controls.Add(Me.lblFirstname)
+        Me.Panel1.Controls.Add(Me.txtEmployeeId)
+        Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.lblIdEmp)
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.dgvSearchUser)
@@ -79,14 +79,14 @@ Partial Class Serach_user
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
         Me.Panel1.TabIndex = 5
         '
-        'Button3
+        'bntExit
         '
-        Me.Button3.Location = New System.Drawing.Point(46, 422)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(108, 23)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.bntExit.Location = New System.Drawing.Point(46, 422)
+        Me.bntExit.Name = "bntExit"
+        Me.bntExit.Size = New System.Drawing.Size(108, 23)
+        Me.bntExit.TabIndex = 34
+        Me.bntExit.Text = "ออกจากระบบ"
+        Me.bntExit.UseVisualStyleBackColor = True
         '
         'btnClear
         '
@@ -106,21 +106,21 @@ Partial Class Serach_user
         Me.bntSearch.Text = "ค้นหา"
         Me.bntSearch.UseVisualStyleBackColor = True
         '
-        'TxtTell
+        'txtPhoneNo
         '
-        Me.TxtTell.Location = New System.Drawing.Point(332, 108)
-        Me.TxtTell.Name = "TxtTell"
-        Me.TxtTell.Size = New System.Drawing.Size(167, 20)
-        Me.TxtTell.TabIndex = 31
+        Me.txtPhoneNo.Location = New System.Drawing.Point(332, 108)
+        Me.txtPhoneNo.Name = "txtPhoneNo"
+        Me.txtPhoneNo.Size = New System.Drawing.Size(167, 20)
+        Me.txtPhoneNo.TabIndex = 31
         '
-        'lblTell
+        'lblPhoneNo
         '
-        Me.lblTell.AutoSize = True
-        Me.lblTell.Location = New System.Drawing.Point(248, 111)
-        Me.lblTell.Name = "lblTell"
-        Me.lblTell.Size = New System.Drawing.Size(78, 13)
-        Me.lblTell.TabIndex = 30
-        Me.lblTell.Text = "เบอร์โทรศัพท์ :"
+        Me.lblPhoneNo.AutoSize = True
+        Me.lblPhoneNo.Location = New System.Drawing.Point(248, 111)
+        Me.lblPhoneNo.Name = "lblPhoneNo"
+        Me.lblPhoneNo.Size = New System.Drawing.Size(78, 13)
+        Me.lblPhoneNo.TabIndex = 30
+        Me.lblPhoneNo.Text = "เบอร์โทรศัพท์ :"
         '
         'txtEmail
         '
@@ -129,12 +129,12 @@ Partial Class Serach_user
         Me.txtEmail.Size = New System.Drawing.Size(167, 20)
         Me.txtEmail.TabIndex = 29
         '
-        'txtBoxType
+        'txtPosition
         '
-        Me.txtBoxType.Location = New System.Drawing.Point(332, 82)
-        Me.txtBoxType.Name = "txtBoxType"
-        Me.txtBoxType.Size = New System.Drawing.Size(167, 20)
-        Me.txtBoxType.TabIndex = 28
+        Me.txtPosition.Location = New System.Drawing.Point(332, 82)
+        Me.txtPosition.Name = "txtPosition"
+        Me.txtPosition.Size = New System.Drawing.Size(167, 20)
+        Me.txtPosition.TabIndex = 28
         '
         'lblEmail
         '
@@ -154,19 +154,19 @@ Partial Class Serach_user
         Me.lblPosition.TabIndex = 26
         Me.lblPosition.Text = "ตำแหน่ง :"
         '
-        'txtBoxLastname
+        'txtLastname
         '
-        Me.txtBoxLastname.Location = New System.Drawing.Point(635, 56)
-        Me.txtBoxLastname.Name = "txtBoxLastname"
-        Me.txtBoxLastname.Size = New System.Drawing.Size(167, 20)
-        Me.txtBoxLastname.TabIndex = 25
+        Me.txtLastname.Location = New System.Drawing.Point(635, 56)
+        Me.txtLastname.Name = "txtLastname"
+        Me.txtLastname.Size = New System.Drawing.Size(167, 20)
+        Me.txtLastname.TabIndex = 25
         '
-        'txtBoxFirstname
+        'txtFirstname
         '
-        Me.txtBoxFirstname.Location = New System.Drawing.Point(332, 56)
-        Me.txtBoxFirstname.Name = "txtBoxFirstname"
-        Me.txtBoxFirstname.Size = New System.Drawing.Size(167, 20)
-        Me.txtBoxFirstname.TabIndex = 24
+        Me.txtFirstname.Location = New System.Drawing.Point(332, 56)
+        Me.txtFirstname.Name = "txtFirstname"
+        Me.txtFirstname.Size = New System.Drawing.Size(167, 20)
+        Me.txtFirstname.TabIndex = 24
         '
         'lblLastname
         '
@@ -177,28 +177,28 @@ Partial Class Serach_user
         Me.lblLastname.TabIndex = 23
         Me.lblLastname.Text = "นามสกุล :"
         '
-        'lblName
+        'lblFirstname
         '
-        Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(300, 59)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(26, 13)
-        Me.lblName.TabIndex = 22
-        Me.lblName.Text = "ชื่อ :"
+        Me.lblFirstname.AutoSize = True
+        Me.lblFirstname.Location = New System.Drawing.Point(300, 59)
+        Me.lblFirstname.Name = "lblFirstname"
+        Me.lblFirstname.Size = New System.Drawing.Size(26, 13)
+        Me.lblFirstname.TabIndex = 22
+        Me.lblFirstname.Text = "ชื่อ :"
         '
-        'txtBoxEmpId
+        'txtEmployeeId
         '
-        Me.txtBoxEmpId.Location = New System.Drawing.Point(635, 30)
-        Me.txtBoxEmpId.Name = "txtBoxEmpId"
-        Me.txtBoxEmpId.Size = New System.Drawing.Size(167, 20)
-        Me.txtBoxEmpId.TabIndex = 15
+        Me.txtEmployeeId.Location = New System.Drawing.Point(635, 30)
+        Me.txtEmployeeId.Name = "txtEmployeeId"
+        Me.txtEmployeeId.Size = New System.Drawing.Size(167, 20)
+        Me.txtEmployeeId.TabIndex = 15
         '
-        'txtboxUsername
+        'txtUsername
         '
-        Me.txtboxUsername.Location = New System.Drawing.Point(332, 30)
-        Me.txtboxUsername.Name = "txtboxUsername"
-        Me.txtboxUsername.Size = New System.Drawing.Size(167, 20)
-        Me.txtboxUsername.TabIndex = 14
+        Me.txtUsername.Location = New System.Drawing.Point(332, 30)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(167, 20)
+        Me.txtUsername.TabIndex = 14
         '
         'lblIdEmp
         '
@@ -230,21 +230,21 @@ Partial Class Serach_user
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode2.Name = "Node1"
-        TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode3.Name = "Node6"
-        TreeNode3.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode4.Name = "Node0"
-        TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode5.Name = "Node7"
-        TreeNode5.Text = "การตรวจสอบ"
-        TreeNode6.Name = "Node5"
-        TreeNode6.Text = "เปลี่ยน password"
-        TreeNode7.Name = "Node8"
-        TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        TreeNode8.Name = "ndCreateUserAccount"
+        TreeNode8.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode9.Name = "ndFindUserAccount"
+        TreeNode9.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode10.Name = "ndManageUserAccount"
+        TreeNode10.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode11.Name = "ndCheckConnectingUser"
+        TreeNode11.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode12.Name = "ndCheck"
+        TreeNode12.Text = "การตรวจสอบ"
+        TreeNode13.Name = "ndAdminResetPassword"
+        TreeNode13.Text = "เปลี่ยน password"
+        TreeNode14.Name = "ndAdminInfo"
+        TreeNode14.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode12, TreeNode14})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
@@ -263,23 +263,23 @@ Partial Class Serach_user
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents txtBoxEmpId As System.Windows.Forms.TextBox
-    Friend WithEvents txtboxUsername As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmployeeId As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents lblIdEmp As System.Windows.Forms.Label
     Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents dgvSearchUser As System.Windows.Forms.DataGridView
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
-    Friend WithEvents TxtTell As System.Windows.Forms.TextBox
-    Friend WithEvents lblTell As System.Windows.Forms.Label
+    Friend WithEvents txtPhoneNo As System.Windows.Forms.TextBox
+    Friend WithEvents lblPhoneNo As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
-    Friend WithEvents txtBoxType As System.Windows.Forms.TextBox
+    Friend WithEvents txtPosition As System.Windows.Forms.TextBox
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents lblPosition As System.Windows.Forms.Label
-    Friend WithEvents txtBoxLastname As System.Windows.Forms.TextBox
-    Friend WithEvents txtBoxFirstname As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastname As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirstname As System.Windows.Forms.TextBox
     Friend WithEvents lblLastname As System.Windows.Forms.Label
-    Friend WithEvents lblName As System.Windows.Forms.Label
+    Friend WithEvents lblFirstname As System.Windows.Forms.Label
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents bntSearch As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents bntExit As System.Windows.Forms.Button
 End Class
