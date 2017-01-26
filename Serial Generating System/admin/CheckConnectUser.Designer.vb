@@ -22,13 +22,13 @@ Partial Class CheckConnectUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode9})
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode11})
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode13})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,13 +38,13 @@ Partial Class CheckConnectUser
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.seq = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -133,28 +133,6 @@ Partial Class CheckConnectUser
         Me.DataGridView1.Size = New System.Drawing.Size(774, 222)
         Me.DataGridView1.TabIndex = 11
         '
-        'TreeView1
-        '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
-        TreeNode8.Name = "Node0"
-        TreeNode8.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode9.Name = "Node1"
-        TreeNode9.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode10.Name = "Node6"
-        TreeNode10.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode11.Name = "Node0"
-        TreeNode11.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode12.Name = "Node7"
-        TreeNode12.Text = "การตรวจสอบ"
-        TreeNode13.Name = "Node5"
-        TreeNode13.Text = "เปลี่ยน password"
-        TreeNode14.Name = "Node8"
-        TreeNode14.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode12, TreeNode14})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
-        '
         'seq
         '
         Me.seq.HeaderText = "ลำดับที่"
@@ -192,6 +170,28 @@ Partial Class CheckConnectUser
         Me.del.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.del.Width = 30
+        '
+        'TreeView1
+        '
+        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
+        Me.TreeView1.Name = "TreeView1"
+        TreeNode1.Name = "ndCreateUserAccount"
+        TreeNode1.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode2.Name = "ndFindUserAccount"
+        TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode3.Name = "ndManageUserAccount"
+        TreeNode3.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode4.Name = "ndCheckConnectingUser"
+        TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode5.Name = "ndCheck"
+        TreeNode5.Text = "การตรวจสอบ"
+        TreeNode6.Name = "ndAdminResetPassword"
+        TreeNode6.Text = "เปลี่ยน password"
+        TreeNode7.Name = "ndAdminInfo"
+        TreeNode7.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
+        Me.TreeView1.TabIndex = 0
         '
         'CheckConnectUser
         '
