@@ -40,26 +40,43 @@ Public Class Serach_user
         adapter.Fill(table)
         dgvSearchUser.Columns.Clear()
         dgvSearchUser.DataSource = table
-        table.Columns.Add("ลำดับ")
-        dgvSearchUser.Columns("ลำดับ").DisplayIndex = 0
+       
 
         With dgvSearchUser
+
             .RowHeadersVisible = False
-            .Columns(0).Visible = False
-            .Columns(1).HeaderCell.Value = "รหัสพนักงาน"
-            .Columns(2).HeaderCell.Value = "ชื่อ"
-            .Columns(3).HeaderCell.Value = "นามสกุล"
-            .Columns(4).HeaderCell.Value = "ชื่อผู้ใช้"
-            .Columns(5).HeaderCell.Value = "รหัสผ่าน"
-            .Columns(6).HeaderCell.Value = "ตำแหน่ง"
-            .Columns(7).HeaderCell.Value = "หมายเลขโทรศัพท์"
-            .Columns(8).HeaderCell.Value = "อีเมลย์"
-            .Columns(9).HeaderCell.Value = "ประเภทผู้ใช้"
-            .Columns(10).Visible = False
-            .Columns(11).Visible = False
-            .Columns(12).Visible = False
+            .Columns("id").Visible = False
+            .Columns("per_create").Visible = False
+            .Columns("per_edit").Visible = False
+            .Columns("per_delete").Visible = False
+            .Columns("emp_id").HeaderCell.Value = "รหัสพนักงาน"
+            .Columns("firstname").HeaderCell.Value = "ชื่อ"
+            .Columns("lastname").HeaderCell.Value = "นามสกุล"
+            .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
+            .Columns("password").HeaderCell.Value = "รหัสผ่าน"
+            .Columns("position").HeaderCell.Value = "ตำแหน่ง"
+            .Columns("phonenumber").HeaderCell.Value = "หมายเลขโทรศัพท์"
+            .Columns("email").HeaderCell.Value = "อีเมลย์"
+            .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
+            .Columns("emp_id").ReadOnly = True
+            .Columns("firstname").ReadOnly = True
+            .Columns("lastname").ReadOnly = True
+            .Columns("username").ReadOnly = True
+            .Columns("password").ReadOnly = True
+            .Columns("position").ReadOnly = True
+            .Columns("phonenumber").ReadOnly = True
+            .Columns("email").ReadOnly = True
+            .Columns("user_type").ReadOnly = True
 
         End With
+
+        ' set rows number
+        table.Columns.Add("ลำดับ")
+        dgvSearchUser.Columns("ลำดับ").DisplayIndex = 0
+        dgvSearchUser.Columns("ลำดับ").ReadOnly = True
+        For i = 0 To dgvSearchUser.Rows.Count - 2
+            dgvSearchUser.Rows(i).Cells("ลำดับ").Value = i + 1
+        Next
 
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทการสร้าง"
@@ -84,7 +101,7 @@ Public Class Serach_user
         dgvSearchUser.Columns.Add(btnEdit)
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
-        btnEdit.Name = "btn"
+        btnEdit.Name = "btnEdit"
         btnEdit.Width = 50
         btnEdit.UseColumnTextForButtonValue = True
 
@@ -93,27 +110,14 @@ Public Class Serach_user
         dgvSearchUser.Columns.Add(btnDelete)
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
-        btnDelete.Name = "btn"
+        btnDelete.Name = "btnDelete"
         btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
 
-        For i As Integer = 0 To dgvSearchUser.Rows.Count - 2
-            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_create").Value) OrElse dgvSearchUser.Rows(i).Cells("per_create").Value = 0 Then
-                dgvSearchUser.Rows(i).Cells("chbCreate").Value = False
-            ElseIf dgvSearchUser.Rows(i).Cells("per_create").Value = 1 Then
-                dgvSearchUser.Rows(i).Cells("chbCreate").Value = True
-            End If
-            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_edit").Value) OrElse dgvSearchUser.Rows(i).Cells("per_edit").Value = 0 Then
-                dgvSearchUser.Rows(i).Cells("chbEdit").Value = False
-            ElseIf dgvSearchUser.Rows(i).Cells("per_edit").Value = 1 Then
-                dgvSearchUser.Rows(i).Cells("chbEdit").Value = True
-            End If
-            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_delete").Value) OrElse dgvSearchUser.Rows(i).Cells("per_delete").Value = 0 Then
-                dgvSearchUser.Rows(i).Cells("chbDelete").Value = False
-            ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
-                dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
-            End If
-        Next
+        dgvSearchUser.Rows(0).DefaultCellStyle.BackColor = Color.AliceBlue
+
+        setPermissionCheckBox()
+
 
     End Sub
 
@@ -141,21 +145,45 @@ Public Class Serach_user
     End Sub
 
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
-        Dim strQuery As String = "delete from SGS.dbo.Employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
-        
-        Dim isDelete As Boolean = con.save(strQuery)
-        If isDelete Then
-            MessageBox.Show("ลบข้อมูลสำเร็จ")
-        Else
-            MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
-        End If
+        Dim strQuery As String
+        Dim isDelete As Boolean
+        If e.ColumnIndex = dgvSearchUser.Columns("btnDelete").Index Then
+            strQuery = "delete from SGS.dbo.Employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
+            isDelete = con.save(strQuery)
+            If isDelete Then
+                MessageBox.Show("ลบข้อมูลสำเร็จ")
+            Else
+                MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+            End If
+        End If 
     End Sub
 
-    Private Sub DataGridView1_RowPrePaint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewRowPrePaintEventArgs) Handles dgvSearchUser.RowPrePaint
-        If e.RowIndex >= 0 Then
-            dgvSearchUser.Rows(e.RowIndex).Cells("ลำดับ").Value = e.RowIndex + 1
-        End If
+    Private Sub setPermissionCheckBox()
+        For i As Integer = 0 To dgvSearchUser.Rows.Count - 2
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_create").Value) OrElse dgvSearchUser.Rows(i).Cells("per_create").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbCreate").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_create").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbCreate").Value = True
+            End If
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_edit").Value) OrElse dgvSearchUser.Rows(i).Cells("per_edit").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbEdit").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_edit").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbEdit").Value = True
+            End If
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_delete").Value) OrElse dgvSearchUser.Rows(i).Cells("per_delete").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbDelete").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
+            End If
+        Next
     End Sub
 
-   
+    Private Sub dataGridView1_ColumnHeaderMouseClick(ByVal sender As Object, _
+    ByVal e As DataGridViewCellMouseEventArgs) Handles dgvSearchUser.ColumnHeaderMouseClick
+        setPermissionCheckBox()
+    End Sub
+
+
+
+
 End Class
