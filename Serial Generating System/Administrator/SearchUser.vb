@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-Public Class Serach_user
+Public Class SearchUser
     Private con As New ConnectDB
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
