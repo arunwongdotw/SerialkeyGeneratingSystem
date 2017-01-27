@@ -210,7 +210,6 @@ Public Class SearchUser
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
-                        MsgBox(tn.Name)
                         CreateUser.Show()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
