@@ -88,6 +88,12 @@
     <Compile Include="admin\Create_User.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="admin\Edit_User.Designer.vb">
+      <DependentUpon>Edit_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Edit_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\main admin.Designer.vb">
       <DependentUpon>main admin.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\Create_User.resx">
       <DependentUpon>Create_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Edit_User.resx">
+      <DependentUpon>Edit_User.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\Serach_user.resx">
       <DependentUpon>Serach_user.vb</DependentUpon>
