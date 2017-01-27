@@ -138,7 +138,7 @@ Public Class SearchUser
             End If
         End If
         If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
-            Dim formEditUser As New Edit_User(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
+            Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
             formEditUser.Show()
             Me.Hide()
         End If
