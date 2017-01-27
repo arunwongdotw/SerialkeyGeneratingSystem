@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
-Public Class Serach_user
+Public Class Search_user
     Private con As New ConnectDB
-    
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
 
@@ -38,7 +38,7 @@ Public Class Serach_user
         adapter.Fill(table)
         dgvSearchUser.Columns.Clear()
         dgvSearchUser.DataSource = table
-       
+
 
         With dgvSearchUser
 
@@ -169,7 +169,7 @@ Public Class Serach_user
             Else
                 MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
             End If
-        End If 
+        End If
     End Sub
 
     Private Sub setPermissionCheckBox()

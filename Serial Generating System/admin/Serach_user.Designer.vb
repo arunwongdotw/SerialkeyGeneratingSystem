@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Serach_user
+Partial Class Search_user
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,13 +22,13 @@ Partial Class Serach_user
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode85 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
-        Dim TreeNode86 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
-        Dim TreeNode87 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode85, TreeNode86})
-        Dim TreeNode88 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
-        Dim TreeNode89 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode88})
-        Dim TreeNode90 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
-        Dim TreeNode91 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode90})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างบัญชีผู้ใช้")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาบัญชีผู้ใช้")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bntExit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -237,31 +237,31 @@ Partial Class Serach_user
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode85.Name = "ndCreateUserAccount"
-        TreeNode85.Text = "สร้างบัญชีผู้ใช้"
-        TreeNode86.Name = "ndFindUserAccount"
-        TreeNode86.Text = "ค้นหาบัญชีผู้ใช้"
-        TreeNode87.Name = "ndManageUserAccount"
-        TreeNode87.Text = "จัดการบัญชีผู้ใช้"
-        TreeNode88.Name = "ndCheckConnectingUser"
-        TreeNode88.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
-        TreeNode89.Name = "ndCheck"
-        TreeNode89.Text = "การตรวจสอบ"
-        TreeNode90.Name = "ndAdminResetPassword"
-        TreeNode90.Text = "เปลี่ยน password"
-        TreeNode91.Name = "ndAdminInfo"
-        TreeNode91.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode87, TreeNode89, TreeNode91})
+        TreeNode1.Name = "ndCreateUserAccount"
+        TreeNode1.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode2.Name = "ndFindUserAccount"
+        TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
+        TreeNode3.Name = "ndManageUserAccount"
+        TreeNode3.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode4.Name = "ndCheckConnectingUser"
+        TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
+        TreeNode5.Name = "ndCheck"
+        TreeNode5.Text = "การตรวจสอบ"
+        TreeNode6.Name = "ndAdminResetPassword"
+        TreeNode6.Text = "เปลี่ยน password"
+        TreeNode7.Name = "ndAdminInfo"
+        TreeNode7.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
-        'Serach_user
+        'Search_user
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Serach_user"
+        Me.Name = "Search_user"
         Me.Text = "ค้นหาบัญชีผู้ใช้"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
