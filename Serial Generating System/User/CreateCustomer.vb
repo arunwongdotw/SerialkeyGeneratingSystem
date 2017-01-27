@@ -100,7 +100,7 @@ Public Class CreateCustomer
 
     Private Sub Create_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtCorpName.Select()
-        TreeView1.ExpandAll()
+        tvUserMenu.ExpandAll()
 
     End Sub
 
@@ -158,10 +158,6 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
-
-    End Sub
-
-    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
 
     End Sub
 
@@ -229,5 +225,29 @@ Public Class CreateCustomer
         ',[email]
         ',[phone]
 
+    End Sub
+
+    Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
+        Try
+            Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
+            If Not (tvUserMenu.SelectedNode Is Nothing) Then
+                Select Case tn.Name
+                    Case "ndCreateSerialkey"
+                        CreateSerial.Show()
+                        Me.Hide()
+                    Case "ndFindSerialkey"
+                        SearchSerial.Show()
+                        Me.Hide()
+                    Case "ndFindCustomer"
+                        SearchCustomer.Show()
+                        Me.Hide()
+                    Case "ndUserResetPassword"
+                        ChangePasswordUser.Show()
+                        Me.Hide()
+                End Select
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

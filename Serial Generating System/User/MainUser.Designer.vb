@@ -30,16 +30,16 @@ Partial Class main
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TreeView1
+        'tvUserMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
         TreeNode2.Name = "ndFindSerialkey"
@@ -56,14 +56,14 @@ Partial Class main
         TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.TabIndex = 0
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -90,7 +90,7 @@ Partial Class main
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
 End Class

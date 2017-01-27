@@ -60,7 +60,7 @@ Partial Class SearchCustomer
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.lblCorp_s_name = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvSearchCus = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -324,10 +324,10 @@ Partial Class SearchCustomer
         Me.lblCorpName.TabIndex = 26
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
-        'TreeView1
+        'tvUserMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
         TreeNode2.Name = "ndFindSerialkey"
@@ -344,9 +344,9 @@ Partial Class SearchCustomer
         TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.TabIndex = 0
         '
         'Panel1
         '
@@ -382,7 +382,7 @@ Partial Class SearchCustomer
         Me.Panel1.Controls.Add(Me.txtCorpName)
         Me.Panel1.Controls.Add(Me.lblCorp_s_name)
         Me.Panel1.Controls.Add(Me.lblCorpName)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -527,7 +527,7 @@ Partial Class SearchCustomer
     Friend WithEvents txtCorpName As System.Windows.Forms.TextBox
     Friend WithEvents lblCorp_s_name As System.Windows.Forms.Label
     Friend WithEvents lblCorpName As System.Windows.Forms.Label
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents dgvSearchCus As System.Windows.Forms.DataGridView

@@ -74,7 +74,7 @@ Partial Class CreateSerial
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.lblInfoCustomer = New System.Windows.Forms.Label()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -196,7 +196,7 @@ Partial Class CreateSerial
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.lblInfoCustomer)
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -512,10 +512,10 @@ Partial Class CreateSerial
         Me.lblInfoCustomer.TabIndex = 67
         Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า"
         '
-        'TreeView1
+        'tvUserMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
         TreeNode2.Name = "ndFindSerialkey"
@@ -532,9 +532,9 @@ Partial Class CreateSerial
         TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.TabIndex = 0
         '
         'CreateSerial
         '
@@ -567,7 +567,7 @@ Partial Class CreateSerial
     Friend WithEvents txtBrandSoftware As System.Windows.Forms.TextBox
     Friend WithEvents lblBrandSoftware As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents cmbYear As System.Windows.Forms.ComboBox
     Friend WithEvents cmbMonth As System.Windows.Forms.ComboBox
     Friend WithEvents cmbDay As System.Windows.Forms.ComboBox
