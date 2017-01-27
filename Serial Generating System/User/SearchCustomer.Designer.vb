@@ -22,13 +22,13 @@ Partial Class SearchCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้าง serial key")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหา serial key")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการ serialkey", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblhone = New System.Windows.Forms.Label()
@@ -329,11 +329,11 @@ Partial Class SearchCustomer
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
         TreeNode1.Name = "ndCreateSerialkey"
-        TreeNode1.Text = "สร้าง serial key"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
         TreeNode2.Name = "ndFindSerialkey"
-        TreeNode2.Text = "ค้นหา serial key"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
         TreeNode3.Name = "ndSerialkeyManagement"
-        TreeNode3.Text = "จัดการ serialkey"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
         TreeNode4.Name = "ndAddCustomer"
         TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
         TreeNode5.Name = "ndFindCustomer"
@@ -341,7 +341,7 @@ Partial Class SearchCustomer
         TreeNode6.Name = "ndCustomerManage"
         TreeNode6.Text = "จัดการลูกค้า"
         TreeNode7.Name = "ndUserResetPassword"
-        TreeNode7.Text = "เปลี่ยน password"
+        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
@@ -483,13 +483,13 @@ Partial Class SearchCustomer
         Me.btnLogout.Text = "ออกจากระบบ"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
-        'Search_Cus
+        'SearchCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Search_Cus"
+        Me.Name = "SearchCustomer"
         Me.Text = "ค้นหาข้อมูลลูกค้า"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -22,22 +22,22 @@ Partial Class ChangePasswordUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10})
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode15})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
+        Me.txtNewPasswordConfirm = New System.Windows.Forms.TextBox()
         Me.lblConfirmPassword = New System.Windows.Forms.Label()
-        Me.btnEditPassword = New System.Windows.Forms.Button()
+        Me.btnChangePassword = New System.Windows.Forms.Button()
         Me.txtNewPassword = New System.Windows.Forms.TextBox()
         Me.txtOldPassword = New System.Windows.Forms.TextBox()
         Me.lblNewPassword = New System.Windows.Forms.Label()
@@ -52,9 +52,9 @@ Partial Class ChangePasswordUser
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.btnExit)
-        Me.Panel1.Controls.Add(Me.txtConfirmPassword)
+        Me.Panel1.Controls.Add(Me.txtNewPasswordConfirm)
         Me.Panel1.Controls.Add(Me.lblConfirmPassword)
-        Me.Panel1.Controls.Add(Me.btnEditPassword)
+        Me.Panel1.Controls.Add(Me.btnChangePassword)
         Me.Panel1.Controls.Add(Me.txtNewPassword)
         Me.Panel1.Controls.Add(Me.txtOldPassword)
         Me.Panel1.Controls.Add(Me.lblNewPassword)
@@ -104,30 +104,30 @@ Partial Class ChangePasswordUser
         Me.btnExit.Text = "ออกจากระบบ"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'txtConfirmPassword
+        'txtNewPasswordConfirm
         '
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(370, 151)
-        Me.txtConfirmPassword.Name = "txtConfirmPassword"
-        Me.txtConfirmPassword.Size = New System.Drawing.Size(195, 20)
-        Me.txtConfirmPassword.TabIndex = 16
+        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(370, 151)
+        Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
+        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(195, 20)
+        Me.txtNewPasswordConfirm.TabIndex = 16
         '
         'lblConfirmPassword
         '
         Me.lblConfirmPassword.AutoSize = True
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(250, 154)
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(262, 154)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(114, 13)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(102, 13)
         Me.lblConfirmPassword.TabIndex = 15
-        Me.lblConfirmPassword.Text = "ยืนยัน password ใหม่ :"
+        Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
-        'btnEditPassword
+        'btnChangePassword
         '
-        Me.btnEditPassword.Location = New System.Drawing.Point(410, 203)
-        Me.btnEditPassword.Name = "btnEditPassword"
-        Me.btnEditPassword.Size = New System.Drawing.Size(119, 23)
-        Me.btnEditPassword.TabIndex = 14
-        Me.btnEditPassword.Text = "แก้ไข password"
-        Me.btnEditPassword.UseVisualStyleBackColor = True
+        Me.btnChangePassword.Location = New System.Drawing.Point(410, 203)
+        Me.btnChangePassword.Name = "btnChangePassword"
+        Me.btnChangePassword.Size = New System.Drawing.Size(119, 23)
+        Me.btnChangePassword.TabIndex = 14
+        Me.btnChangePassword.Text = "แก้ไขรหัสผ่าน"
+        Me.btnChangePassword.UseVisualStyleBackColor = True
         '
         'txtNewPassword
         '
@@ -146,53 +146,53 @@ Partial Class ChangePasswordUser
         'lblNewPassword
         '
         Me.lblNewPassword.AutoSize = True
-        Me.lblNewPassword.Location = New System.Drawing.Point(283, 104)
+        Me.lblNewPassword.Location = New System.Drawing.Point(292, 104)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(81, 13)
+        Me.lblNewPassword.Size = New System.Drawing.Size(72, 13)
         Me.lblNewPassword.TabIndex = 11
-        Me.lblNewPassword.Text = "password ใหม่ :"
+        Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
         'lblOldPassword
         '
         Me.lblOldPassword.AutoSize = True
-        Me.lblOldPassword.Location = New System.Drawing.Point(286, 56)
+        Me.lblOldPassword.Location = New System.Drawing.Point(295, 56)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(78, 13)
+        Me.lblOldPassword.Size = New System.Drawing.Size(69, 13)
         Me.lblOldPassword.TabIndex = 10
-        Me.lblOldPassword.Text = "password เก่า :"
+        Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
         'TreeView1
         '
         Me.TreeView1.Location = New System.Drawing.Point(3, 3)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "ndCreateSerialkey"
-        TreeNode1.Text = "สร้างซีเรียลคีย์"
-        TreeNode2.Name = "ndFindSerialkey"
-        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode3.Name = "ndSerialkeyManagement"
-        TreeNode3.Text = "จัดการซีเรียลคีย์"
-        TreeNode4.Name = "ndAddCustomer"
-        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode5.Name = "ndFindCustomer"
-        TreeNode5.Text = "ค้นหาลูกค้า"
-        TreeNode6.Name = "ndCustomerManage"
-        TreeNode6.Text = "จัดการลูกค้า"
-        TreeNode7.Name = "ndUserResetPassword"
-        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode8.Name = "ndUserInfo"
-        TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        TreeNode9.Name = "ndCreateSerialkey"
+        TreeNode9.Text = "สร้างซีเรียลคีย์"
+        TreeNode10.Name = "ndFindSerialkey"
+        TreeNode10.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode11.Name = "ndSerialkeyManagement"
+        TreeNode11.Text = "จัดการซีเรียลคีย์"
+        TreeNode12.Name = "ndAddCustomer"
+        TreeNode12.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode13.Name = "ndFindCustomer"
+        TreeNode13.Text = "ค้นหาลูกค้า"
+        TreeNode14.Name = "ndCustomerManage"
+        TreeNode14.Text = "จัดการลูกค้า"
+        TreeNode15.Name = "ndUserResetPassword"
+        TreeNode15.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode16.Name = "ndUserInfo"
+        TreeNode16.Text = "ข้อมูลส่วนตัว"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode11, TreeNode14, TreeNode16})
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
-        'Change_Password_user
+        'ChangePasswordUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Change_Password_user"
-        Me.Text = "เปลี่ยน password"
+        Me.Name = "ChangePasswordUser"
+        Me.Text = "เปลี่ยนรหัสผ่าน"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -200,9 +200,9 @@ Partial Class ChangePasswordUser
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
-    Friend WithEvents txtConfirmPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtNewPasswordConfirm As System.Windows.Forms.TextBox
     Friend WithEvents lblConfirmPassword As System.Windows.Forms.Label
-    Friend WithEvents btnEditPassword As System.Windows.Forms.Button
+    Friend WithEvents btnChangePassword As System.Windows.Forms.Button
     Friend WithEvents txtNewPassword As System.Windows.Forms.TextBox
     Friend WithEvents txtOldPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblNewPassword As System.Windows.Forms.Label

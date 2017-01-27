@@ -34,11 +34,11 @@ Partial Class ChangePassword
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtNewPasswordConfirm = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnChangePassword = New System.Windows.Forms.Button()
+        Me.txtNewPassword = New System.Windows.Forms.TextBox()
+        Me.txtOldPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
@@ -51,11 +51,11 @@ Partial Class ChangePassword
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtNewPasswordConfirm)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.btnChangePassword)
+        Me.Panel1.Controls.Add(Me.txtNewPassword)
+        Me.Panel1.Controls.Add(Me.txtOldPassword)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
@@ -103,62 +103,62 @@ Partial Class ChangePassword
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtNewPasswordConfirm
         '
-        Me.TextBox3.Location = New System.Drawing.Point(361, 137)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(361, 137)
+        Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
+        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(195, 20)
+        Me.txtNewPasswordConfirm.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(241, 140)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 13)
+        Me.Label3.Size = New System.Drawing.Size(102, 13)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "ยืนยัน password ใหม่ :"
+        Me.Label3.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
-        'Button1
+        'btnChangePassword
         '
-        Me.Button1.Location = New System.Drawing.Point(401, 189)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(119, 23)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "เปลี่ยน password"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnChangePassword.Location = New System.Drawing.Point(401, 189)
+        Me.btnChangePassword.Name = "btnChangePassword"
+        Me.btnChangePassword.Size = New System.Drawing.Size(119, 23)
+        Me.btnChangePassword.TabIndex = 7
+        Me.btnChangePassword.Text = "เปลี่ยนรหัสผ่าน"
+        Me.btnChangePassword.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtNewPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(361, 87)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox2.TabIndex = 6
+        Me.txtNewPassword.Location = New System.Drawing.Point(361, 87)
+        Me.txtNewPassword.Name = "txtNewPassword"
+        Me.txtNewPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtNewPassword.TabIndex = 6
         '
-        'TextBox1
+        'txtOldPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(361, 39)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(195, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.txtOldPassword.Location = New System.Drawing.Point(361, 39)
+        Me.txtOldPassword.Name = "txtOldPassword"
+        Me.txtOldPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtOldPassword.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(274, 90)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 13)
+        Me.Label2.Size = New System.Drawing.Size(72, 13)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "password ใหม่ :"
+        Me.Label2.Text = "รหัสผ่านใหม่ :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(277, 42)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "password เก่า :"
+        Me.Label1.Text = "รหัสผ่านเก่า :"
         '
         'tvAdminMenu
         '
@@ -189,20 +189,20 @@ Partial Class ChangePassword
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "ChangePassword"
-        Me.Text = "เปลี่ยน Password"
+        Me.Text = "เปลี่ยนรหัสผ่าน"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnChangePassword As System.Windows.Forms.Button
+    Friend WithEvents txtNewPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtOldPassword As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtNewPasswordConfirm As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
