@@ -70,40 +70,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\Change_Password.Designer.vb">
-      <DependentUpon>Change_Password.vb</DependentUpon>
+    <Compile Include="Administrator\ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\Change_Password.vb">
+    <Compile Include="Administrator\ChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\CheckConnectUser.Designer.vb">
+    <Compile Include="Administrator\CheckConnectUser.Designer.vb">
       <DependentUpon>CheckConnectUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\CheckConnectUser.vb">
+    <Compile Include="Administrator\CheckConnectUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\Create_User.Designer.vb">
-      <DependentUpon>Create_User.vb</DependentUpon>
+    <Compile Include="Administrator\CreateUser.Designer.vb">
+      <DependentUpon>CreateUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\Create_User.vb">
+    <Compile Include="Administrator\CreateUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\Edit_User.Designer.vb">
-      <DependentUpon>Edit_User.vb</DependentUpon>
+    <Compile Include="Administrator\MainAdmin.Designer.vb">
+      <DependentUpon>MainAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\Edit_User.vb">
+    <Compile Include="Administrator\MainAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\main admin.Designer.vb">
-      <DependentUpon>main admin.vb</DependentUpon>
+    <Compile Include="Administrator\SearchUser.Designer.vb">
+      <DependentUpon>SearchUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\main admin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="admin\Serach_user.Designer.vb">
-      <DependentUpon>Serach_user.vb</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Serach_user.vb">
+    <Compile Include="Administrator\SearchUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConnectDB.vb" />
@@ -173,26 +167,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="admin\Change_Password.resx">
-      <DependentUpon>Change_Password.vb</DependentUpon>
+    <EmbeddedResource Include="Administrator\ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\CheckConnectUser.resx">
+    <EmbeddedResource Include="Administrator\CheckConnectUser.resx">
       <DependentUpon>CheckConnectUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\Create_User.resx">
-      <DependentUpon>Create_User.vb</DependentUpon>
+    <EmbeddedResource Include="Administrator\CreateUser.resx">
+      <DependentUpon>CreateUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\Edit_User.resx">
-      <DependentUpon>Edit_User.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="admin\Serach_user.resx">
-      <DependentUpon>Serach_user.vb</DependentUpon>
+    <EmbeddedResource Include="Administrator\SearchUser.resx">
+      <DependentUpon>SearchUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\main admin.resx">
-      <DependentUpon>main admin.vb</DependentUpon>
+    <EmbeddedResource Include="Administrator\MainAdmin.resx">
+      <DependentUpon>MainAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
