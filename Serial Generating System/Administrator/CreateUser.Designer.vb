@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Create_User
+Partial Class CreateUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -29,7 +29,7 @@ Partial Class Create_User
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -66,10 +66,10 @@ Partial Class Create_User
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TreeView1
+        'tvAdminMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvAdminMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
         TreeNode2.Name = "ndFindUserAccount"
@@ -84,9 +84,9 @@ Partial Class Create_User
         TreeNode6.Text = "เปลี่ยน password"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        Me.tvAdminMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvAdminMenu.TabIndex = 0
         '
         'Panel1
         '
@@ -122,7 +122,7 @@ Partial Class Create_User
         Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -180,6 +180,7 @@ Partial Class Create_User
         '
         'cmbUserType
         '
+        Me.cmbUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbUserType.FormattingEnabled = True
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
         Me.cmbUserType.Location = New System.Drawing.Point(352, 347)
@@ -423,7 +424,7 @@ Partial Class Create_User
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox

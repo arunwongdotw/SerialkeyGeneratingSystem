@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 Imports System.Data
-Public Class Create_User
+Public Class CreateUser
     Private con As New ConnectDB
 
     Private Sub add()
@@ -56,14 +56,18 @@ Public Class Create_User
         Dim isCorrect As Boolean = False
         Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+        Dim PhonenumberRegex As String = "^[0][0-9]+[0-9]"
         Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
         Dim EmailRegexCheck As New Regex(EmailRegex)
+        Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
         If Not CharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
-            MsgBox("กรุณากรอกบัญชีผู้ใช้งานเฉพาะตัวอักษรและตัวเลขเท่านั้น")
+            MsgBox("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
         ElseIf Not CharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
             MsgBox("กรุณากรอกรหัสผ่านเฉพาะตัวอักษรและตัวเลขเท่านั้น")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhoneNumber.Text) Then
+            MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         ElseIf txtUsername.Text = "" Then
             MsgBox("กรุณากรอกชื่อผู้ใช้")
         ElseIf txtPassword.Text = "" Then
@@ -112,7 +116,24 @@ Public Class Create_User
 
     End Sub
 
-    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+    Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
+        Try
+            Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
+            If Not (tvAdminMenu.SelectedNode Is Nothing) Then
+                Select Case tn.Name
+                    Case "ndFindUserAccount"
+                        SearchUser.Show()
+                        Me.Hide()
+                    Case "ndCheckConnectingUser"
+                        CheckConnectUser.Show()
+                        Me.Hide()
+                    Case "ndAdminResetPassword"
+                        ChangePassword.Show()
+                        Me.Hide()
+                End Select
+            End If
+        Catch ex As Exception
 
+        End Try
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Search_user
+Partial Class SearchUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -48,7 +48,7 @@ Partial Class Search_user
         Me.lblIdEmp = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,7 +73,7 @@ Partial Class Search_user
         Me.Panel1.Controls.Add(Me.lblIdEmp)
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.dgvSearchUser)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -233,10 +233,10 @@ Partial Class Search_user
         Me.dgvSearchUser.Size = New System.Drawing.Size(774, 251)
         Me.dgvSearchUser.TabIndex = 11
         '
-        'TreeView1
+        'tvAdminMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvAdminMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
         TreeNode2.Name = "ndFindUserAccount"
@@ -251,17 +251,17 @@ Partial Class Search_user
         TreeNode6.Text = "เปลี่ยน password"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        Me.tvAdminMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvAdminMenu.TabIndex = 0
         '
-        'Search_user
+        'SearchUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Search_user"
+        Me.Name = "SearchUser"
         Me.Text = "ค้นหาบัญชีผู้ใช้"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -275,7 +275,7 @@ Partial Class Search_user
     Friend WithEvents lblIdEmp As System.Windows.Forms.Label
     Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents dgvSearchUser As System.Windows.Forms.DataGridView
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents txtPhoneNo As System.Windows.Forms.TextBox
     Friend WithEvents lblPhoneNo As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox

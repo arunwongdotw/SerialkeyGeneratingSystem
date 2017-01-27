@@ -44,7 +44,7 @@ Partial Class CheckConnectUser
         Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,7 +59,7 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.TreeView1)
+        Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1009, 460)
@@ -171,10 +171,10 @@ Partial Class CheckConnectUser
         Me.del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.del.Width = 30
         '
-        'TreeView1
+        'tvAdminMenu
         '
-        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-        Me.TreeView1.Name = "TreeView1"
+        Me.tvAdminMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
         TreeNode2.Name = "ndFindUserAccount"
@@ -189,9 +189,9 @@ Partial Class CheckConnectUser
         TreeNode6.Text = "เปลี่ยน password"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
-        Me.TreeView1.Size = New System.Drawing.Size(190, 454)
-        Me.TreeView1.TabIndex = 0
+        Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
+        Me.tvAdminMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvAdminMenu.TabIndex = 0
         '
         'CheckConnectUser
         '
@@ -208,7 +208,7 @@ Partial Class CheckConnectUser
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

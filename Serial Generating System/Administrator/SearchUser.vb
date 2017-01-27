@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
-Public Class Search_user
+Public Class SearchUser
     Private con As New ConnectDB
 
 
@@ -241,5 +241,26 @@ Public Class Search_user
         Dim a As New Object
         Dim es As New EventArgs
         Button1_Click(a, es)
+    End Sub
+
+    Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
+        Try
+            Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
+            If Not (tvAdminMenu.SelectedNode Is Nothing) Then
+                Select Case tn.Name
+                    Case "ndCreateUserAccout"
+                        CreateUser.Show()
+                        Me.Hide()
+                    Case "ndCheckConnectingUser"
+                        CheckConnectUser.Show()
+                        Me.Hide()
+                    Case "ndAdminResetPassword"
+                        ChangePassword.Show()
+                        Me.Hide()
+                End Select
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

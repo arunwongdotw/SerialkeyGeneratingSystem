@@ -100,7 +100,7 @@ Public Class Login
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
 
             If type.Equals("admin") Then
-                Dim frm As New Create_User
+                Dim frm As New CreateUser
                 frm.Show()
                 Me.Hide()
             ElseIf type.Equals("user") Then
