@@ -248,7 +248,8 @@ Public Class SearchUser
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
-                    Case "ndCreateUserAccout"
+                    Case "ndCreateUserAccount"
+                        MsgBox(tn.Name)
                         CreateUser.Show()
                         Me.Hide()
                     Case "ndCheckConnectingUser"

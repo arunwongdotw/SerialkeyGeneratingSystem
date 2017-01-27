@@ -5,7 +5,7 @@
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
-                    Case "ndCreateUserAccout"
+                    Case "ndCreateUserAccount"
                         CreateUser.Show()
                         Me.Hide()
                     Case "ndFindUserAccount"
