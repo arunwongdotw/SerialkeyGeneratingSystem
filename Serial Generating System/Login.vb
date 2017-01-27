@@ -16,7 +16,7 @@ Public Class Login
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.Visible = False
-        Dim s = New SplashScreen1
+        Dim s = New WelcomeScreen
         s.Show()
         System.Threading.Thread.Sleep(1000)
         s.Close()
@@ -104,7 +104,7 @@ Public Class Login
                 frm.Show()
                 Me.Hide()
             ElseIf type.Equals("user") Then
-                Dim frm As New Create_Customer
+                Dim frm As New CreateCustomer
                 frm.Show()
                 Me.Hide()
             End If

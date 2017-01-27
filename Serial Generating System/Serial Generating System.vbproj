@@ -114,34 +114,34 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <Compile Include="WelcomeScreen.Designer.vb">
+      <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen1.vb">
+    <Compile Include="WelcomeScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\Change_Password_user.Designer.vb">
-      <DependentUpon>Change_Password_user.vb</DependentUpon>
+    <Compile Include="User\ChangePasswordUser.Designer.vb">
+      <DependentUpon>ChangePasswordUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\Change_Password_user.vb">
+    <Compile Include="User\ChangePasswordUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\Create_Customer.Designer.vb">
-      <DependentUpon>Create_Customer.vb</DependentUpon>
+    <Compile Include="User\CreateCustomer.Designer.vb">
+      <DependentUpon>CreateCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\Create_Customer.vb">
+    <Compile Include="User\CreateCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\Create_Serial.Designer.vb">
-      <DependentUpon>Create_Serial.vb</DependentUpon>
+    <Compile Include="User\CreateSerial.Designer.vb">
+      <DependentUpon>CreateSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\Create_Serial.vb">
+    <Compile Include="User\CreateSerial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\main user.Designer.vb">
-      <DependentUpon>main user.vb</DependentUpon>
+    <Compile Include="User\MainUser.Designer.vb">
+      <DependentUpon>MainUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\main user.vb">
+    <Compile Include="User\MainUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -159,16 +159,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="user\Search_Cus.Designer.vb">
-      <DependentUpon>Search_Cus.vb</DependentUpon>
+    <Compile Include="User\SearchCustomer.Designer.vb">
+      <DependentUpon>SearchCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\Search_Cus.vb">
+    <Compile Include="User\SearchCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\Search_Serial.Designer.vb">
-      <DependentUpon>Search_Serial.vb</DependentUpon>
+    <Compile Include="User\SearchSerial.Designer.vb">
+      <DependentUpon>SearchSerial.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\Search_Serial.vb">
+    <Compile Include="User\SearchSerial.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -194,20 +194,20 @@
     <EmbeddedResource Include="Administrator\MainAdmin.resx">
       <DependentUpon>MainAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <EmbeddedResource Include="WelcomeScreen.resx">
+      <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\Change_Password_user.resx">
-      <DependentUpon>Change_Password_user.vb</DependentUpon>
+    <EmbeddedResource Include="User\ChangePasswordUser.resx">
+      <DependentUpon>ChangePasswordUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\Create_Customer.resx">
-      <DependentUpon>Create_Customer.vb</DependentUpon>
+    <EmbeddedResource Include="User\CreateCustomer.resx">
+      <DependentUpon>CreateCustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\Create_Serial.resx">
-      <DependentUpon>Create_Serial.vb</DependentUpon>
+    <EmbeddedResource Include="User\CreateSerial.resx">
+      <DependentUpon>CreateSerial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\main user.resx">
-      <DependentUpon>main user.vb</DependentUpon>
+    <EmbeddedResource Include="User\MainUser.resx">
+      <DependentUpon>MainUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -215,11 +215,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\Search_Cus.resx">
-      <DependentUpon>Search_Cus.vb</DependentUpon>
+    <EmbeddedResource Include="User\SearchCustomer.resx">
+      <DependentUpon>SearchCustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\Search_Serial.resx">
-      <DependentUpon>Search_Serial.vb</DependentUpon>
+    <EmbeddedResource Include="User\SearchSerial.resx">
+      <DependentUpon>SearchSerial.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

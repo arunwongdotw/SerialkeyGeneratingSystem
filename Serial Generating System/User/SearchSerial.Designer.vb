@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Search_Serial
+Partial Class SearchSerial
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -438,13 +438,13 @@ Partial Class Search_Serial
         Me.TreeView1.Size = New System.Drawing.Size(190, 454)
         Me.TreeView1.TabIndex = 0
         '
-        'Search_Serial
+        'SearchSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Search_Serial"
+        Me.Name = "SearchSerial"
         Me.Text = "ค้นหาซีเรียลคีย์"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

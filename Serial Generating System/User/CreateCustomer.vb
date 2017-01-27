@@ -1,13 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class Create_Customer
+Public Class CreateCustomer
     Private con As New ConnectDB
 
     Private Sub add()
 
         Dim strSQL As String
-        
+
         strSQL = "insert into customer (corpname,corp_s_name,corpgroup,firstname,lastname,house_no,road,lane,subdistrict,district,province"
         strSQL &= ",postalcode,email,phone) "
         strSQL &= "values ('" & Trim(txtCorpName.Text) & "',"
@@ -121,7 +121,7 @@ Public Class Create_Customer
     End Sub
 
     Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged
-        
+
     End Sub
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
@@ -174,7 +174,7 @@ Public Class Create_Customer
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-              e.Handled = False
+                e.Handled = False
             Case Else
                 e.Handled = True
                 MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
@@ -210,7 +210,7 @@ Public Class Create_Customer
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        
+
         Me.clear()
 
 

@@ -27,7 +27,7 @@ Partial Class Form1
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -68,7 +68,7 @@ Partial Class Form1
         TreeNode5.Name = "ndCheck"
         TreeNode5.Text = "การตรวจสอบ"
         TreeNode6.Name = "ndAdminResetPassword"
-        TreeNode6.Text = "เปลี่ยน password"
+        TreeNode6.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})

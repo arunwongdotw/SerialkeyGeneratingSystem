@@ -1,4 +1,4 @@
-﻿Public Class Create_Serial
+﻿Public Class CreateSerial
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 

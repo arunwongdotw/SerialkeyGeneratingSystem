@@ -27,7 +27,7 @@ Partial Class CreateUser
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการบัญชีผู้ใช้", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ตรวจสอบจำนวนผู้ใช้งานระบบ")
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยน password")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -81,7 +81,7 @@ Partial Class CreateUser
         TreeNode5.Name = "ndCheck"
         TreeNode5.Text = "การตรวจสอบ"
         TreeNode6.Name = "ndAdminResetPassword"
-        TreeNode6.Text = "เปลี่ยน password"
+        TreeNode6.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
@@ -411,13 +411,13 @@ Partial Class CreateUser
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ : "
         '
-        'Create_User
+        'CreateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 484)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Create_User"
+        Me.Name = "CreateUser"
         Me.Text = "สร้างบัญชีผู้ใช้"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class Search_Cus
+Public Class SearchCustomer
     Private con As New ConnectDB
 
     'Protected objCmd As New SqlCommand
