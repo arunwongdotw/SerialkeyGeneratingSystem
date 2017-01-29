@@ -141,6 +141,7 @@ Partial Class Login
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

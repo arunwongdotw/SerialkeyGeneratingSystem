@@ -29,33 +29,44 @@ Partial Class Form1
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1009, 460)
+        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 2
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(46, 419)
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(65, 642)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 23)
+        Me.Button3.Size = New System.Drawing.Size(129, 41)
         Me.Button3.TabIndex = 21
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'tvAdminMenu
         '
-        Me.tvAdminMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvAdminMenu.BackColor = System.Drawing.Color.LightBlue
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tvAdminMenu.Font = New System.Drawing.Font("ThaiSans Neue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.ForeColor = System.Drawing.Color.Black
+        Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
@@ -72,17 +83,35 @@ Partial Class Form1
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
-        Me.tvAdminMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvAdminMenu.ShowLines = False
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 663)
         Me.tvAdminMenu.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LightSlateGray
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(1346, 66)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "ผู้ดูแลระบบ"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1033, 484)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Serial Key Generating System"
+        Me.Text = "ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -90,4 +119,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

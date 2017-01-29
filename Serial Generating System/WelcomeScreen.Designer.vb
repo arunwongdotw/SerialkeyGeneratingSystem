@@ -30,7 +30,7 @@ Partial Class WelcomeScreen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgWelcomePage
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(751, 422)
+        Me.ClientSize = New System.Drawing.Size(742, 411)
         Me.ControlBox = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
