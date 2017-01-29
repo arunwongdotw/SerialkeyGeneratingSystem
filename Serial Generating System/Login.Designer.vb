@@ -32,94 +32,101 @@ Partial Class Login
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogin.BackColor = System.Drawing.Color.Teal
         Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.btnLogin.FlatAppearance.BorderSize = 0
         Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Lucida Sans Unicode", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnLogin.Location = New System.Drawing.Point(165, 294)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(61, 278)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(107, 35)
+        Me.btnLogin.Size = New System.Drawing.Size(154, 43)
         Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "เข้าสู่ระบบ"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Lucida Sans Unicode", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(280, 294)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.Location = New System.Drawing.Point(252, 278)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(107, 35)
+        Me.Button2.Size = New System.Drawing.Size(154, 43)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "ปิดการใช้งาน"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'txtUsername
         '
-        Me.txtUsername.BackColor = System.Drawing.Color.SeaShell
+        Me.txtUsername.BackColor = System.Drawing.Color.White
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsername.Font = New System.Drawing.Font("Lucida Sans Unicode", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(151, 153)
+        Me.txtUsername.Location = New System.Drawing.Point(149, 187)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(326, 33)
+        Me.txtUsername.Size = New System.Drawing.Size(257, 33)
         Me.txtUsername.TabIndex = 4
         Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPassword
         '
-        Me.txtPassword.BackColor = System.Drawing.Color.SeaShell
+        Me.txtPassword.BackColor = System.Drawing.Color.White
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Lucida Sans Unicode", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(151, 202)
+        Me.txtPassword.Location = New System.Drawing.Point(149, 221)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(326, 33)
+        Me.txtPassword.Size = New System.Drawing.Size(257, 33)
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnLoginUsername
         '
-        Me.btnLoginUsername.BackColor = System.Drawing.Color.Lavender
+        Me.btnLoginUsername.BackColor = System.Drawing.Color.SeaShell
         Me.btnLoginUsername.FlatAppearance.BorderSize = 0
         Me.btnLoginUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLoginUsername.Font = New System.Drawing.Font("Lucida Sans Unicode", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoginUsername.Location = New System.Drawing.Point(57, 153)
+        Me.btnLoginUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLoginUsername.Location = New System.Drawing.Point(61, 187)
         Me.btnLoginUsername.Name = "btnLoginUsername"
-        Me.btnLoginUsername.Size = New System.Drawing.Size(99, 33)
+        Me.btnLoginUsername.Size = New System.Drawing.Size(93, 33)
         Me.btnLoginUsername.TabIndex = 6
-        Me.btnLoginUsername.Text = "ชื่อผู้ใช้"
+        Me.btnLoginUsername.Text = "ชื่อผู้ใช้ |"
+        Me.btnLoginUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLoginUsername.UseVisualStyleBackColor = False
         '
         'btnLoginPassword
         '
-        Me.btnLoginPassword.BackColor = System.Drawing.Color.Lavender
+        Me.btnLoginPassword.BackColor = System.Drawing.Color.SeaShell
         Me.btnLoginPassword.FlatAppearance.BorderSize = 0
         Me.btnLoginPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLoginPassword.Font = New System.Drawing.Font("Lucida Sans Unicode", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoginPassword.Location = New System.Drawing.Point(57, 202)
+        Me.btnLoginPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLoginPassword.Location = New System.Drawing.Point(61, 221)
         Me.btnLoginPassword.Name = "btnLoginPassword"
-        Me.btnLoginPassword.Size = New System.Drawing.Size(99, 33)
+        Me.btnLoginPassword.Size = New System.Drawing.Size(93, 33)
         Me.btnLoginPassword.TabIndex = 7
-        Me.btnLoginPassword.Text = "รหัสผ่าน"
+        Me.btnLoginPassword.Text = "รหัสผ่าน |"
+        Me.btnLoginPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLoginPassword.UseVisualStyleBackColor = False
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgBlurColor
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(538, 366)
+        Me.ClientSize = New System.Drawing.Size(466, 395)
         Me.Controls.Add(Me.btnLoginPassword)
         Me.Controls.Add(Me.btnLoginUsername)
         Me.Controls.Add(Me.txtPassword)

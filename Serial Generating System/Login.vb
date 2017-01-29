@@ -94,7 +94,7 @@ Public Class Login
         If sqlread Is Nothing Then
             MsgBox("query ผิด")
         ElseIf Not sqlread.Read Then
-            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านผิด")
+            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
 
         Else
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
@@ -129,6 +129,7 @@ Public Class Login
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
 
     End Sub
+
 
 
 End Class
