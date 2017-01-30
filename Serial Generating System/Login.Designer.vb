@@ -127,7 +127,7 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(470, 382)
+        Me.ClientSize = New System.Drawing.Size(468, 428)
         Me.Controls.Add(Me.btnLoginPassword)
         Me.Controls.Add(Me.btnLoginUsername)
         Me.Controls.Add(Me.txtPassword)
