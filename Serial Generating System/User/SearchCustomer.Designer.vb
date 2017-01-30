@@ -30,6 +30,7 @@ Partial Class SearchCustomer
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchCustomer))
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblhone = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -78,255 +79,308 @@ Partial Class SearchCustomer
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(588, 171)
+        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPhone.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(490, 274)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(167, 20)
+        Me.txtPhone.Size = New System.Drawing.Size(330, 33)
         Me.txtPhone.TabIndex = 57
         '
         'lblhone
         '
         Me.lblhone.AutoSize = True
-        Me.lblhone.Location = New System.Drawing.Point(528, 174)
+        Me.lblhone.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhone.Location = New System.Drawing.Point(421, 277)
         Me.lblhone.Name = "lblhone"
-        Me.lblhone.Size = New System.Drawing.Size(54, 13)
+        Me.lblhone.Size = New System.Drawing.Size(63, 24)
         Me.lblhone.TabIndex = 56
         Me.lblhone.Text = "โทรศัพท์ :"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(287, 171)
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(490, 313)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(195, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(330, 33)
         Me.txtEmail.TabIndex = 55
         '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(242, 174)
+        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(437, 316)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(37, 13)
+        Me.lblEmail.Size = New System.Drawing.Size(47, 24)
         Me.lblEmail.TabIndex = 54
         Me.lblEmail.Text = "อีเมล :"
         '
         'txtPostalCode
         '
-        Me.txtPostalCode.Location = New System.Drawing.Point(588, 145)
+        Me.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPostalCode.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPostalCode.Location = New System.Drawing.Point(926, 313)
         Me.txtPostalCode.Name = "txtPostalCode"
-        Me.txtPostalCode.Size = New System.Drawing.Size(167, 20)
+        Me.txtPostalCode.Size = New System.Drawing.Size(330, 33)
         Me.txtPostalCode.TabIndex = 53
         '
         'lblPostalCode
         '
         Me.lblPostalCode.AutoSize = True
-        Me.lblPostalCode.Location = New System.Drawing.Point(507, 148)
+        Me.lblPostalCode.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPostalCode.Location = New System.Drawing.Point(831, 316)
         Me.lblPostalCode.Name = "lblPostalCode"
-        Me.lblPostalCode.Size = New System.Drawing.Size(75, 13)
+        Me.lblPostalCode.Size = New System.Drawing.Size(89, 24)
         Me.lblPostalCode.TabIndex = 52
         Me.lblPostalCode.Text = "รหัสไปรษณีย์ :"
         '
         'txtDistrict
         '
-        Me.txtDistrict.Location = New System.Drawing.Point(588, 119)
+        Me.txtDistrict.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDistrict.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDistrict.Location = New System.Drawing.Point(926, 235)
         Me.txtDistrict.Name = "txtDistrict"
-        Me.txtDistrict.Size = New System.Drawing.Size(195, 20)
+        Me.txtDistrict.Size = New System.Drawing.Size(330, 33)
         Me.txtDistrict.TabIndex = 51
         '
         'lblDistrict
         '
         Me.lblDistrict.AutoSize = True
-        Me.lblDistrict.Location = New System.Drawing.Point(517, 122)
+        Me.lblDistrict.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDistrict.Location = New System.Drawing.Point(841, 238)
         Me.lblDistrict.Name = "lblDistrict"
-        Me.lblDistrict.Size = New System.Drawing.Size(65, 13)
+        Me.lblDistrict.Size = New System.Drawing.Size(79, 24)
         Me.lblDistrict.TabIndex = 50
         Me.lblDistrict.Text = "อำเภอ/เขต :"
         '
         'txtLane
         '
-        Me.txtLane.Location = New System.Drawing.Point(786, 93)
+        Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLane.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLane.Location = New System.Drawing.Point(926, 159)
         Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(186, 20)
+        Me.txtLane.Size = New System.Drawing.Size(330, 33)
         Me.txtLane.TabIndex = 49
         '
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(743, 96)
+        Me.lblLane.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLane.Location = New System.Drawing.Point(876, 162)
         Me.lblLane.Name = "lblLane"
-        Me.lblLane.Size = New System.Drawing.Size(33, 13)
+        Me.lblLane.Size = New System.Drawing.Size(44, 24)
         Me.lblLane.TabIndex = 48
         Me.lblLane.Text = "ซอย :"
         '
         'txtCorpGroup
         '
-        Me.txtCorpGroup.Location = New System.Drawing.Point(588, 41)
+        Me.txtCorpGroup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpGroup.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorpGroup.Location = New System.Drawing.Point(490, 158)
         Me.txtCorpGroup.Name = "txtCorpGroup"
-        Me.txtCorpGroup.Size = New System.Drawing.Size(195, 20)
+        Me.txtCorpGroup.Size = New System.Drawing.Size(330, 33)
         Me.txtCorpGroup.TabIndex = 47
         '
         'lblCorpGroup
         '
         Me.lblCorpGroup.AutoSize = True
-        Me.lblCorpGroup.Location = New System.Drawing.Point(521, 44)
+        Me.lblCorpGroup.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorpGroup.Location = New System.Drawing.Point(410, 161)
         Me.lblCorpGroup.Name = "lblCorpGroup"
-        Me.lblCorpGroup.Size = New System.Drawing.Size(61, 13)
+        Me.lblCorpGroup.Size = New System.Drawing.Size(74, 24)
         Me.lblCorpGroup.TabIndex = 46
         Me.lblCorpGroup.Text = "กลุ่มบริษัท :"
         '
         'txtProvince
         '
-        Me.txtProvince.Location = New System.Drawing.Point(287, 145)
+        Me.txtProvince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtProvince.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProvince.Location = New System.Drawing.Point(926, 274)
         Me.txtProvince.Name = "txtProvince"
-        Me.txtProvince.Size = New System.Drawing.Size(195, 20)
+        Me.txtProvince.Size = New System.Drawing.Size(330, 33)
         Me.txtProvince.TabIndex = 45
         '
         'lblProvince
         '
         Me.lblProvince.AutoSize = True
-        Me.lblProvince.Location = New System.Drawing.Point(237, 148)
+        Me.lblProvince.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProvince.Location = New System.Drawing.Point(860, 277)
         Me.lblProvince.Name = "lblProvince"
-        Me.lblProvince.Size = New System.Drawing.Size(44, 13)
+        Me.lblProvince.Size = New System.Drawing.Size(60, 24)
         Me.lblProvince.TabIndex = 44
         Me.lblProvince.Text = "จังหวัด :"
         '
         'txtRoad
         '
-        Me.txtRoad.Location = New System.Drawing.Point(507, 93)
+        Me.txtRoad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRoad.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRoad.Location = New System.Drawing.Point(926, 118)
         Me.txtRoad.Name = "txtRoad"
-        Me.txtRoad.Size = New System.Drawing.Size(195, 20)
+        Me.txtRoad.Size = New System.Drawing.Size(330, 33)
         Me.txtRoad.TabIndex = 43
         '
         'lblRoad
         '
         Me.lblRoad.AutoSize = True
-        Me.lblRoad.Location = New System.Drawing.Point(464, 96)
+        Me.lblRoad.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRoad.Location = New System.Drawing.Point(877, 121)
         Me.lblRoad.Name = "lblRoad"
-        Me.lblRoad.Size = New System.Drawing.Size(36, 13)
+        Me.lblRoad.Size = New System.Drawing.Size(43, 24)
         Me.lblRoad.TabIndex = 42
         Me.lblRoad.Text = "ถนน :"
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(564, 197)
+        Me.btnClear.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(1127, 367)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 41
         Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'txtSubDistrict
         '
-        Me.txtSubDistrict.Location = New System.Drawing.Point(287, 119)
+        Me.txtSubDistrict.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSubDistrict.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSubDistrict.Location = New System.Drawing.Point(926, 196)
         Me.txtSubDistrict.Name = "txtSubDistrict"
-        Me.txtSubDistrict.Size = New System.Drawing.Size(195, 20)
+        Me.txtSubDistrict.Size = New System.Drawing.Size(330, 33)
         Me.txtSubDistrict.TabIndex = 38
         '
         'lblSubDistrict
         '
         Me.lblSubDistrict.AutoSize = True
-        Me.lblSubDistrict.Location = New System.Drawing.Point(213, 122)
+        Me.lblSubDistrict.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubDistrict.Location = New System.Drawing.Point(837, 199)
         Me.lblSubDistrict.Name = "lblSubDistrict"
-        Me.lblSubDistrict.Size = New System.Drawing.Size(68, 13)
+        Me.lblSubDistrict.Size = New System.Drawing.Size(85, 24)
         Me.lblSubDistrict.TabIndex = 37
         Me.lblSubDistrict.Text = "ตำบล/แขวง :"
         '
         'txtLastname
         '
-        Me.txtLastname.Location = New System.Drawing.Point(588, 67)
+        Me.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLastname.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastname.Location = New System.Drawing.Point(490, 235)
         Me.txtLastname.Name = "txtLastname"
-        Me.txtLastname.Size = New System.Drawing.Size(195, 20)
+        Me.txtLastname.Size = New System.Drawing.Size(330, 33)
         Me.txtLastname.TabIndex = 36
         '
         'lblLastname
         '
         Me.lblLastname.AutoSize = True
-        Me.lblLastname.Location = New System.Drawing.Point(530, 70)
+        Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastname.Location = New System.Drawing.Point(418, 238)
         Me.lblLastname.Name = "lblLastname"
-        Me.lblLastname.Size = New System.Drawing.Size(52, 13)
+        Me.lblLastname.Size = New System.Drawing.Size(66, 24)
         Me.lblLastname.TabIndex = 35
         Me.lblLastname.Text = "นามสกุล :"
         '
         'txtHouseNo
         '
-        Me.txtHouseNo.Location = New System.Drawing.Point(287, 93)
+        Me.txtHouseNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtHouseNo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHouseNo.Location = New System.Drawing.Point(926, 79)
         Me.txtHouseNo.Name = "txtHouseNo"
-        Me.txtHouseNo.Size = New System.Drawing.Size(143, 20)
+        Me.txtHouseNo.Size = New System.Drawing.Size(329, 33)
         Me.txtHouseNo.TabIndex = 34
         '
         'lblHouseNo
         '
         Me.lblHouseNo.AutoSize = True
-        Me.lblHouseNo.Location = New System.Drawing.Point(242, 96)
+        Me.lblHouseNo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHouseNo.Location = New System.Drawing.Point(874, 82)
         Me.lblHouseNo.Name = "lblHouseNo"
-        Me.lblHouseNo.Size = New System.Drawing.Size(37, 13)
+        Me.lblHouseNo.Size = New System.Drawing.Size(45, 24)
         Me.lblHouseNo.TabIndex = 33
         Me.lblHouseNo.Text = "เลขที่ :"
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(287, 67)
+        Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstName.Location = New System.Drawing.Point(490, 196)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(195, 20)
+        Me.txtFirstName.Size = New System.Drawing.Size(330, 33)
         Me.txtFirstName.TabIndex = 32
         '
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(238, 70)
+        Me.lblFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstName.Location = New System.Drawing.Point(426, 199)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(43, 13)
+        Me.lblFirstName.Size = New System.Drawing.Size(58, 24)
         Me.lblFirstName.TabIndex = 31
         Me.lblFirstName.Text = "ชื่อจริง :"
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(472, 197)
+        Me.btnSearch.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(968, 367)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.Size = New System.Drawing.Size(129, 41)
         Me.btnSearch.TabIndex = 30
         Me.btnSearch.Text = "ค้นหา"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtCorp_s_name
         '
-        Me.txtCorp_s_name.Location = New System.Drawing.Point(287, 41)
+        Me.txtCorp_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorp_s_name.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorp_s_name.Location = New System.Drawing.Point(490, 118)
         Me.txtCorp_s_name.Name = "txtCorp_s_name"
-        Me.txtCorp_s_name.Size = New System.Drawing.Size(195, 20)
+        Me.txtCorp_s_name.Size = New System.Drawing.Size(330, 33)
         Me.txtCorp_s_name.TabIndex = 29
         '
         'txtCorpName
         '
-        Me.txtCorpName.Location = New System.Drawing.Point(287, 15)
+        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpName.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorpName.Location = New System.Drawing.Point(490, 79)
         Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(562, 20)
+        Me.txtCorpName.Size = New System.Drawing.Size(330, 33)
         Me.txtCorpName.TabIndex = 28
         '
         'lblCorp_s_name
         '
         Me.lblCorp_s_name.AutoSize = True
-        Me.lblCorp_s_name.Location = New System.Drawing.Point(214, 44)
+        Me.lblCorp_s_name.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorp_s_name.Location = New System.Drawing.Point(402, 121)
         Me.lblCorp_s_name.Name = "lblCorp_s_name"
-        Me.lblCorp_s_name.Size = New System.Drawing.Size(67, 13)
+        Me.lblCorp_s_name.Size = New System.Drawing.Size(84, 24)
         Me.lblCorp_s_name.TabIndex = 27
         Me.lblCorp_s_name.Text = "ชื่อย่อบริษัท :"
         '
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(225, 18)
+        Me.lblCorpName.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorpName.Location = New System.Drawing.Point(419, 82)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(54, 13)
+        Me.lblCorpName.Size = New System.Drawing.Size(67, 24)
         Me.lblCorpName.TabIndex = 26
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
         'tvUserMenu
         '
-        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
@@ -345,11 +399,14 @@ Partial Class SearchCustomer
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.ShowLines = False
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.dgvSearchCus)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.txtPhone)
@@ -383,18 +440,20 @@ Partial Class SearchCustomer
         Me.Panel1.Controls.Add(Me.lblCorp_s_name)
         Me.Panel1.Controls.Add(Me.lblCorpName)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1009, 460)
+        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
         'dgvSearchCus
         '
+        Me.dgvSearchCus.BackgroundColor = System.Drawing.SystemColors.ScrollBar
+        Me.dgvSearchCus.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchCus.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        Me.dgvSearchCus.Location = New System.Drawing.Point(199, 226)
+        Me.dgvSearchCus.Location = New System.Drawing.Point(255, 425)
         Me.dgvSearchCus.Name = "dgvSearchCus"
-        Me.dgvSearchCus.Size = New System.Drawing.Size(807, 231)
+        Me.dgvSearchCus.Size = New System.Drawing.Size(1094, 303)
         Me.dgvSearchCus.TabIndex = 58
         '
         'Column1
@@ -476,19 +535,39 @@ Partial Class SearchCustomer
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(41, 421)
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(63, 643)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(96, 23)
+        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
         Me.btnLogout.TabIndex = 22
         Me.btnLogout.Text = "ออกจากระบบ"
         Me.btnLogout.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(1349, 64)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "ชื่อผู้ใช้ 1"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'SearchCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1033, 484)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SearchCustomer"
         Me.Text = "ค้นหาข้อมูลลูกค้า"
         Me.Panel1.ResumeLayout(False)
@@ -545,4 +624,5 @@ Partial Class SearchCustomer
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

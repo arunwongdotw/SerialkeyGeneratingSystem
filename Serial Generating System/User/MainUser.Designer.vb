@@ -79,7 +79,7 @@ Partial Class main
         '
         'tvUserMenu
         '
-        Me.tvUserMenu.BackColor = System.Drawing.Color.Goldenrod
+        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"

@@ -30,6 +30,7 @@ Partial Class ChangePasswordUser
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePasswordUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,11 +44,14 @@ Partial Class ChangePasswordUser
         Me.lblNewPassword = New System.Windows.Forms.Label()
         Me.lblOldPassword = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label15)
@@ -60,110 +64,131 @@ Partial Class ChangePasswordUser
         Me.Panel1.Controls.Add(Me.lblNewPassword)
         Me.Panel1.Controls.Add(Me.lblOldPassword)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1009, 460)
+        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(571, 151)
+        Me.Label5.Location = New System.Drawing.Point(1023, 294)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(11, 13)
+        Me.Label5.Size = New System.Drawing.Size(18, 27)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(571, 101)
+        Me.Label4.Location = New System.Drawing.Point(1023, 236)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(11, 13)
+        Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(571, 53)
+        Me.Label15.Location = New System.Drawing.Point(1023, 174)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(11, 13)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(49, 417)
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Location = New System.Drawing.Point(63, 643)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(96, 23)
+        Me.btnExit.Size = New System.Drawing.Size(129, 41)
         Me.btnExit.TabIndex = 21
         Me.btnExit.Text = "ออกจากระบบ"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'txtNewPasswordConfirm
         '
-        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(370, 151)
+        Me.txtNewPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNewPasswordConfirm.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(638, 291)
         Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
-        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(195, 20)
+        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(365, 36)
         Me.txtNewPasswordConfirm.TabIndex = 16
         '
         'lblConfirmPassword
         '
         Me.lblConfirmPassword.AutoSize = True
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(262, 154)
+        Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(492, 294)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(102, 13)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
         'btnChangePassword
         '
-        Me.btnChangePassword.Location = New System.Drawing.Point(410, 203)
+        Me.btnChangePassword.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnChangePassword.FlatAppearance.BorderSize = 0
+        Me.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnChangePassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnChangePassword.Location = New System.Drawing.Point(874, 396)
         Me.btnChangePassword.Name = "btnChangePassword"
-        Me.btnChangePassword.Size = New System.Drawing.Size(119, 23)
+        Me.btnChangePassword.Size = New System.Drawing.Size(129, 41)
         Me.btnChangePassword.TabIndex = 14
         Me.btnChangePassword.Text = "แก้ไขรหัสผ่าน"
-        Me.btnChangePassword.UseVisualStyleBackColor = True
+        Me.btnChangePassword.UseVisualStyleBackColor = False
         '
         'txtNewPassword
         '
-        Me.txtNewPassword.Location = New System.Drawing.Point(370, 101)
+        Me.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNewPassword.Location = New System.Drawing.Point(638, 233)
         Me.txtNewPassword.Name = "txtNewPassword"
-        Me.txtNewPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtNewPassword.Size = New System.Drawing.Size(365, 36)
         Me.txtNewPassword.TabIndex = 13
         '
         'txtOldPassword
         '
-        Me.txtOldPassword.Location = New System.Drawing.Point(370, 53)
+        Me.txtOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOldPassword.Location = New System.Drawing.Point(638, 171)
         Me.txtOldPassword.Name = "txtOldPassword"
-        Me.txtOldPassword.Size = New System.Drawing.Size(195, 20)
+        Me.txtOldPassword.Size = New System.Drawing.Size(365, 36)
         Me.txtOldPassword.TabIndex = 12
         '
         'lblNewPassword
         '
         Me.lblNewPassword.AutoSize = True
-        Me.lblNewPassword.Location = New System.Drawing.Point(292, 104)
+        Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNewPassword.Location = New System.Drawing.Point(528, 236)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(72, 13)
+        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
         'lblOldPassword
         '
         Me.lblOldPassword.AutoSize = True
-        Me.lblOldPassword.Location = New System.Drawing.Point(295, 56)
+        Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOldPassword.Location = New System.Drawing.Point(530, 174)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(69, 13)
+        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
         'tvUserMenu
         '
-        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
@@ -182,15 +207,32 @@ Partial Class ChangePasswordUser
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.ShowLines = False
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button1.Image = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(1349, 65)
+        Me.Button1.TabIndex = 74
+        Me.Button1.Text = "ชื่อผู้ใช้ 1"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'ChangePasswordUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1033, 484)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ChangePasswordUser"
         Me.Text = "เปลี่ยนรหัสผ่าน"
         Me.Panel1.ResumeLayout(False)
@@ -211,4 +253,5 @@ Partial Class ChangePasswordUser
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

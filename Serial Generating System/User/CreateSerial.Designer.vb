@@ -30,6 +30,7 @@ Partial Class CreateSerial
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateSerial))
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.txtAmountUser = New System.Windows.Forms.TextBox()
         Me.lblAmountUser = New System.Windows.Forms.Label()
@@ -75,6 +76,7 @@ Partial Class CreateSerial
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -82,137 +84,151 @@ Partial Class CreateSerial
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(41, 420)
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(96, 23)
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 22
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'txtAmountUser
         '
-        Me.txtAmountUser.Location = New System.Drawing.Point(511, 53)
+        Me.txtAmountUser.Location = New System.Drawing.Point(741, 66)
         Me.txtAmountUser.Name = "txtAmountUser"
-        Me.txtAmountUser.Size = New System.Drawing.Size(195, 20)
+        Me.txtAmountUser.Size = New System.Drawing.Size(329, 36)
         Me.txtAmountUser.TabIndex = 47
         '
         'lblAmountUser
         '
         Me.lblAmountUser.AutoSize = True
-        Me.lblAmountUser.Location = New System.Drawing.Point(373, 56)
+        Me.lblAmountUser.Location = New System.Drawing.Point(557, 69)
         Me.lblAmountUser.Name = "lblAmountUser"
-        Me.lblAmountUser.Size = New System.Drawing.Size(132, 13)
+        Me.lblAmountUser.Size = New System.Drawing.Size(179, 27)
         Me.lblAmountUser.TabIndex = 46
         Me.lblAmountUser.Text = "จำนวนผู้ใช้งานซอฟต์แวร์ :"
         '
         'lblLanguage
         '
         Me.lblLanguage.AutoSize = True
-        Me.lblLanguage.Location = New System.Drawing.Point(471, 123)
+        Me.lblLanguage.Location = New System.Drawing.Point(679, 174)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(32, 13)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 42
-        Me.lblLanguage.Text = "ภาษา"
+        Me.lblLanguage.Text = "ภาษา :"
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(393, 191)
+        Me.btnClear.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(562, 329)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 41
         Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'txtOption
         '
-        Me.txtOption.Location = New System.Drawing.Point(511, 86)
+        Me.txtOption.Location = New System.Drawing.Point(741, 120)
         Me.txtOption.Name = "txtOption"
-        Me.txtOption.Size = New System.Drawing.Size(195, 20)
+        Me.txtOption.Size = New System.Drawing.Size(329, 36)
         Me.txtOption.TabIndex = 36
         '
         'lblOption
         '
         Me.lblOption.AutoSize = True
-        Me.lblOption.Location = New System.Drawing.Point(410, 89)
+        Me.lblOption.Location = New System.Drawing.Point(604, 123)
         Me.lblOption.Name = "lblOption"
-        Me.lblOption.Size = New System.Drawing.Size(95, 13)
+        Me.lblOption.Size = New System.Drawing.Size(132, 27)
         Me.lblOption.TabIndex = 35
         Me.lblOption.Text = "ออปชันซอฟต์แวร์ :"
         '
         'lblExpireDate
         '
         Me.lblExpireDate.AutoSize = True
-        Me.lblExpireDate.Location = New System.Drawing.Point(68, 121)
+        Me.lblExpireDate.Location = New System.Drawing.Point(113, 225)
         Me.lblExpireDate.Name = "lblExpireDate"
-        Me.lblExpireDate.Size = New System.Drawing.Size(66, 13)
+        Me.lblExpireDate.Size = New System.Drawing.Size(94, 27)
         Me.lblExpireDate.TabIndex = 33
         Me.lblExpireDate.Text = "วันหมดอายุ :"
         '
         'txtSoftwareName
         '
-        Me.txtSoftwareName.Location = New System.Drawing.Point(140, 86)
+        Me.txtSoftwareName.Location = New System.Drawing.Point(214, 171)
         Me.txtSoftwareName.Name = "txtSoftwareName"
-        Me.txtSoftwareName.Size = New System.Drawing.Size(195, 20)
+        Me.txtSoftwareName.Size = New System.Drawing.Size(329, 36)
         Me.txtSoftwareName.TabIndex = 32
         '
         'lblSoftwareName
         '
         Me.lblSoftwareName.AutoSize = True
-        Me.lblSoftwareName.Location = New System.Drawing.Point(60, 89)
+        Me.lblSoftwareName.Location = New System.Drawing.Point(104, 174)
         Me.lblSoftwareName.Name = "lblSoftwareName"
-        Me.lblSoftwareName.Size = New System.Drawing.Size(74, 13)
+        Me.lblSoftwareName.Size = New System.Drawing.Size(105, 27)
         Me.lblSoftwareName.TabIndex = 31
         Me.lblSoftwareName.Text = "ชื่อซอฟต์แวร์ :"
         '
         'btnCreate
         '
-        Me.btnCreate.Location = New System.Drawing.Point(301, 191)
+        Me.btnCreate.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnCreate.FlatAppearance.BorderSize = 0
+        Me.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCreate.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCreate.Location = New System.Drawing.Point(414, 329)
         Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(75, 23)
+        Me.btnCreate.Size = New System.Drawing.Size(129, 41)
         Me.btnCreate.TabIndex = 30
         Me.btnCreate.Text = "สร้าง"
-        Me.btnCreate.UseVisualStyleBackColor = True
+        Me.btnCreate.UseVisualStyleBackColor = False
         '
         'txtBrandSoftware
         '
-        Me.txtBrandSoftware.Location = New System.Drawing.Point(140, 53)
+        Me.txtBrandSoftware.Location = New System.Drawing.Point(214, 120)
         Me.txtBrandSoftware.Name = "txtBrandSoftware"
-        Me.txtBrandSoftware.Size = New System.Drawing.Size(195, 20)
+        Me.txtBrandSoftware.Size = New System.Drawing.Size(329, 36)
         Me.txtBrandSoftware.TabIndex = 29
         '
         'lblBrandSoftware
         '
         Me.lblBrandSoftware.AutoSize = True
-        Me.lblBrandSoftware.Location = New System.Drawing.Point(37, 56)
+        Me.lblBrandSoftware.Location = New System.Drawing.Point(79, 123)
         Me.lblBrandSoftware.Name = "lblBrandSoftware"
-        Me.lblBrandSoftware.Size = New System.Drawing.Size(97, 13)
+        Me.lblBrandSoftware.Size = New System.Drawing.Size(130, 27)
         Me.lblBrandSoftware.TabIndex = 27
         Me.lblBrandSoftware.Text = "แบรนด์ซอฟต์แวร์ :"
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.lblSerialKey)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.lblInfoCustomer)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1009, 460)
+        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
         'lblSerialKey
         '
         Me.lblSerialKey.AutoSize = True
-        Me.lblSerialKey.Location = New System.Drawing.Point(196, 202)
+        Me.lblSerialKey.BackColor = System.Drawing.Color.Transparent
+        Me.lblSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSerialKey.Location = New System.Drawing.Point(19, 14)
         Me.lblSerialKey.Name = "lblSerialKey"
-        Me.lblSerialKey.Size = New System.Drawing.Size(52, 13)
+        Me.lblSerialKey.Size = New System.Drawing.Size(125, 34)
         Me.lblSerialKey.TabIndex = 72
-        Me.lblSerialKey.Text = "ซีเรียลคีย์"
+        Me.lblSerialKey.Text = "ซีเรียลคีย์ >>"
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel3.Controls.Add(Me.lblSerialKey)
         Me.Panel3.Controls.Add(Me.lblOptionLanguage)
         Me.Panel3.Controls.Add(Me.Label20)
         Me.Panel3.Controls.Add(Me.Label19)
@@ -243,18 +259,19 @@ Partial Class CreateSerial
         Me.Panel3.Controls.Add(Me.btnCreate)
         Me.Panel3.Controls.Add(Me.txtBrandSoftware)
         Me.Panel3.Controls.Add(Me.lblBrandSoftware)
-        Me.Panel3.Location = New System.Drawing.Point(199, 218)
+        Me.Panel3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel3.Location = New System.Drawing.Point(255, 333)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(807, 239)
+        Me.Panel3.Size = New System.Drawing.Size(1094, 395)
         Me.Panel3.TabIndex = 71
         '
         'lblOptionLanguage
         '
         Me.lblOptionLanguage.AutoSize = True
         Me.lblOptionLanguage.ForeColor = System.Drawing.Color.Red
-        Me.lblOptionLanguage.Location = New System.Drawing.Point(625, 123)
+        Me.lblOptionLanguage.Location = New System.Drawing.Point(737, 210)
         Me.lblOptionLanguage.Name = "lblOptionLanguage"
-        Me.lblOptionLanguage.Size = New System.Drawing.Size(116, 13)
+        Me.lblOptionLanguage.Size = New System.Drawing.Size(166, 27)
         Me.lblOptionLanguage.TabIndex = 76
         Me.lblOptionLanguage.Text = "*เลือกอย่างน้อย 1 ภาษา"
         '
@@ -262,9 +279,9 @@ Partial Class CreateSerial
         '
         Me.Label20.AutoSize = True
         Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(709, 86)
+        Me.Label20.Location = New System.Drawing.Point(1073, 123)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(11, 13)
+        Me.Label20.Size = New System.Drawing.Size(18, 27)
         Me.Label20.TabIndex = 75
         Me.Label20.Text = "*"
         '
@@ -272,9 +289,9 @@ Partial Class CreateSerial
         '
         Me.Label19.AutoSize = True
         Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(709, 53)
+        Me.Label19.Location = New System.Drawing.Point(1073, 69)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
+        Me.Label19.Size = New System.Drawing.Size(18, 27)
         Me.Label19.TabIndex = 74
         Me.Label19.Text = "*"
         '
@@ -282,9 +299,9 @@ Partial Class CreateSerial
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(208, 154)
+        Me.Label18.Location = New System.Drawing.Point(282, 277)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(11, 13)
+        Me.Label18.Size = New System.Drawing.Size(18, 27)
         Me.Label18.TabIndex = 73
         Me.Label18.Text = "*"
         '
@@ -292,9 +309,9 @@ Partial Class CreateSerial
         '
         Me.Label17.AutoSize = True
         Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(342, 118)
+        Me.Label17.Location = New System.Drawing.Point(473, 225)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(11, 13)
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 72
         Me.Label17.Text = "*"
         '
@@ -302,9 +319,9 @@ Partial Class CreateSerial
         '
         Me.Label16.AutoSize = True
         Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(341, 86)
+        Me.Label16.Location = New System.Drawing.Point(549, 174)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
+        Me.Label16.Size = New System.Drawing.Size(18, 27)
         Me.Label16.TabIndex = 71
         Me.Label16.Text = "*"
         '
@@ -312,25 +329,25 @@ Partial Class CreateSerial
         '
         Me.Label15.AutoSize = True
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(341, 53)
+        Me.Label15.Location = New System.Drawing.Point(549, 123)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(11, 13)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 70
         Me.Label15.Text = "*"
         '
         'txtContractNumber
         '
-        Me.txtContractNumber.Location = New System.Drawing.Point(101, 14)
+        Me.txtContractNumber.Location = New System.Drawing.Point(214, 66)
         Me.txtContractNumber.Name = "txtContractNumber"
-        Me.txtContractNumber.Size = New System.Drawing.Size(195, 20)
+        Me.txtContractNumber.Size = New System.Drawing.Size(329, 36)
         Me.txtContractNumber.TabIndex = 68
         '
         'lblContractNumber
         '
         Me.lblContractNumber.AutoSize = True
-        Me.lblContractNumber.Location = New System.Drawing.Point(10, 17)
+        Me.lblContractNumber.Location = New System.Drawing.Point(85, 69)
         Me.lblContractNumber.Name = "lblContractNumber"
-        Me.lblContractNumber.Size = New System.Drawing.Size(85, 13)
+        Me.lblContractNumber.Size = New System.Drawing.Size(124, 27)
         Me.lblContractNumber.TabIndex = 67
         Me.lblContractNumber.Text = "หมายเลขสัญญา :"
         '
@@ -338,27 +355,27 @@ Partial Class CreateSerial
         '
         Me.cmbVersion.FormattingEnabled = True
         Me.cmbVersion.Items.AddRange(New Object() {"วัน"})
-        Me.cmbVersion.Location = New System.Drawing.Point(140, 154)
+        Me.cmbVersion.Location = New System.Drawing.Point(214, 274)
         Me.cmbVersion.Name = "cmbVersion"
-        Me.cmbVersion.Size = New System.Drawing.Size(62, 21)
+        Me.cmbVersion.Size = New System.Drawing.Size(62, 35)
         Me.cmbVersion.TabIndex = 66
         Me.cmbVersion.Text = "Demo"
         '
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.Location = New System.Drawing.Point(83, 157)
+        Me.lblVersion.Location = New System.Drawing.Point(138, 277)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(51, 13)
+        Me.lblVersion.Size = New System.Drawing.Size(69, 27)
         Me.lblVersion.TabIndex = 65
         Me.lblVersion.Text = "เวอร์ชัน :"
         '
         'chbJapan
         '
         Me.chbJapan.AutoSize = True
-        Me.chbJapan.Location = New System.Drawing.Point(579, 145)
+        Me.chbJapan.Location = New System.Drawing.Point(982, 176)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(50, 17)
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
         Me.chbJapan.TabIndex = 64
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -366,9 +383,9 @@ Partial Class CreateSerial
         'chbChinese
         '
         Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(579, 123)
+        Me.chbChinese.Location = New System.Drawing.Point(905, 176)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(40, 17)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 63
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -376,9 +393,9 @@ Partial Class CreateSerial
         'chbEnglish
         '
         Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(511, 145)
+        Me.chbEnglish.Location = New System.Drawing.Point(742, 176)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(59, 17)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 62
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -386,9 +403,9 @@ Partial Class CreateSerial
         'chbThia
         '
         Me.chbThia.AutoSize = True
-        Me.chbThia.Location = New System.Drawing.Point(511, 122)
+        Me.chbThia.Location = New System.Drawing.Point(825, 176)
         Me.chbThia.Name = "chbThia"
-        Me.chbThia.Size = New System.Drawing.Size(46, 17)
+        Me.chbThia.Size = New System.Drawing.Size(53, 31)
         Me.chbThia.TabIndex = 61
         Me.chbThia.Text = "ไทย"
         Me.chbThia.UseVisualStyleBackColor = True
@@ -397,9 +414,9 @@ Partial Class CreateSerial
         '
         Me.cmbYear.FormattingEnabled = True
         Me.cmbYear.Items.AddRange(New Object() {"วัน"})
-        Me.cmbYear.Location = New System.Drawing.Point(269, 118)
+        Me.cmbYear.Location = New System.Drawing.Point(388, 222)
         Me.cmbYear.Name = "cmbYear"
-        Me.cmbYear.Size = New System.Drawing.Size(66, 21)
+        Me.cmbYear.Size = New System.Drawing.Size(79, 35)
         Me.cmbYear.TabIndex = 60
         Me.cmbYear.Text = "ปี พ.ศ."
         '
@@ -407,114 +424,129 @@ Partial Class CreateSerial
         '
         Me.cmbMonth.FormattingEnabled = True
         Me.cmbMonth.Items.AddRange(New Object() {"วัน"})
-        Me.cmbMonth.Location = New System.Drawing.Point(188, 118)
+        Me.cmbMonth.Location = New System.Drawing.Point(278, 222)
         Me.cmbMonth.Name = "cmbMonth"
-        Me.cmbMonth.Size = New System.Drawing.Size(75, 21)
+        Me.cmbMonth.Size = New System.Drawing.Size(108, 35)
         Me.cmbMonth.TabIndex = 59
         Me.cmbMonth.Text = "เดือน"
         '
         'cmbDay
         '
         Me.cmbDay.FormattingEnabled = True
-        Me.cmbDay.Location = New System.Drawing.Point(140, 118)
+        Me.cmbDay.Location = New System.Drawing.Point(214, 222)
         Me.cmbDay.Name = "cmbDay"
-        Me.cmbDay.Size = New System.Drawing.Size(42, 21)
+        Me.cmbDay.Size = New System.Drawing.Size(61, 35)
         Me.cmbDay.TabIndex = 58
         Me.cmbDay.Text = "วัน"
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel2.Controls.Add(Me.btnAddCustomerInfo)
         Me.Panel2.Controls.Add(Me.btnSearch)
         Me.Panel2.Controls.Add(Me.txtGroupCorp)
+        Me.Panel2.Controls.Add(Me.lblInfoCustomer)
         Me.Panel2.Controls.Add(Me.lblGroupCorp)
         Me.Panel2.Controls.Add(Me.txtCorpSubName)
         Me.Panel2.Controls.Add(Me.txtCorpName)
         Me.Panel2.Controls.Add(Me.lblCorpName)
         Me.Panel2.Controls.Add(Me.lblCorpSubName)
-        Me.Panel2.Location = New System.Drawing.Point(199, 24)
+        Me.Panel2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel2.Location = New System.Drawing.Point(255, 62)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(807, 175)
+        Me.Panel2.Size = New System.Drawing.Size(1094, 273)
         Me.Panel2.TabIndex = 70
         '
         'btnAddCustomerInfo
         '
-        Me.btnAddCustomerInfo.Location = New System.Drawing.Point(389, 120)
+        Me.btnAddCustomerInfo.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnAddCustomerInfo.FlatAppearance.BorderSize = 0
+        Me.btnAddCustomerInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddCustomerInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddCustomerInfo.Location = New System.Drawing.Point(562, 212)
         Me.btnAddCustomerInfo.Name = "btnAddCustomerInfo"
-        Me.btnAddCustomerInfo.Size = New System.Drawing.Size(127, 23)
+        Me.btnAddCustomerInfo.Size = New System.Drawing.Size(129, 41)
         Me.btnAddCustomerInfo.TabIndex = 68
         Me.btnAddCustomerInfo.Text = "เพิ่มข้อมูลลูกค้าใหม่"
-        Me.btnAddCustomerInfo.UseVisualStyleBackColor = True
+        Me.btnAddCustomerInfo.UseVisualStyleBackColor = False
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(297, 120)
+        Me.btnSearch.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(414, 212)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.Size = New System.Drawing.Size(129, 41)
         Me.btnSearch.TabIndex = 67
         Me.btnSearch.Text = "ค้นหา"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtGroupCorp
         '
-        Me.txtGroupCorp.Location = New System.Drawing.Point(459, 61)
+        Me.txtGroupCorp.Location = New System.Drawing.Point(214, 157)
         Me.txtGroupCorp.Name = "txtGroupCorp"
-        Me.txtGroupCorp.Size = New System.Drawing.Size(195, 20)
+        Me.txtGroupCorp.Size = New System.Drawing.Size(676, 36)
         Me.txtGroupCorp.TabIndex = 72
         '
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(392, 64)
+        Me.lblGroupCorp.Location = New System.Drawing.Point(122, 160)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(61, 13)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
         Me.lblGroupCorp.TabIndex = 71
         Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
         '
         'txtCorpSubName
         '
-        Me.txtCorpSubName.Location = New System.Drawing.Point(158, 61)
+        Me.txtCorpSubName.Location = New System.Drawing.Point(213, 109)
         Me.txtCorpSubName.Name = "txtCorpSubName"
-        Me.txtCorpSubName.Size = New System.Drawing.Size(195, 20)
+        Me.txtCorpSubName.Size = New System.Drawing.Size(676, 36)
         Me.txtCorpSubName.TabIndex = 70
         '
         'txtCorpName
         '
-        Me.txtCorpName.Location = New System.Drawing.Point(158, 21)
+        Me.txtCorpName.Location = New System.Drawing.Point(213, 60)
         Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(562, 20)
+        Me.txtCorpName.Size = New System.Drawing.Size(676, 36)
         Me.txtCorpName.TabIndex = 69
         '
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(98, 24)
+        Me.lblCorpName.Location = New System.Drawing.Point(131, 63)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(54, 13)
+        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
         Me.lblCorpName.TabIndex = 67
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
         'lblCorpSubName
         '
         Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(85, 64)
+        Me.lblCorpSubName.Location = New System.Drawing.Point(112, 112)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(67, 13)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
         Me.lblCorpSubName.TabIndex = 68
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
         '
         'lblInfoCustomer
         '
         Me.lblInfoCustomer.AutoSize = True
-        Me.lblInfoCustomer.Location = New System.Drawing.Point(199, 8)
+        Me.lblInfoCustomer.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfoCustomer.Location = New System.Drawing.Point(19, 17)
         Me.lblInfoCustomer.Name = "lblInfoCustomer"
-        Me.lblInfoCustomer.Size = New System.Drawing.Size(57, 13)
+        Me.lblInfoCustomer.Size = New System.Drawing.Size(148, 34)
         Me.lblInfoCustomer.TabIndex = 67
-        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า"
+        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า >>"
         '
         'tvUserMenu
         '
-        Me.tvUserMenu.Location = New System.Drawing.Point(3, 3)
+        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
@@ -533,19 +565,34 @@ Partial Class CreateSerial
         TreeNode8.Name = "ndUserInfo"
         TreeNode8.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
-        Me.tvUserMenu.Size = New System.Drawing.Size(190, 454)
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(1349, 67)
+        Me.Button1.TabIndex = 72
+        Me.Button1.Text = "ชื่อผู้ใช้ 1"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'CreateSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1033, 484)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateSerial"
         Me.Text = "สร้างซีเรียลคีย์"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -598,4 +645,5 @@ Partial Class CreateSerial
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

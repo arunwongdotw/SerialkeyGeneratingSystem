@@ -130,12 +130,11 @@ Partial Class ChangePassword
         '
         'txtNewPasswordConfirm
         '
-        Me.txtNewPasswordConfirm.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtNewPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNewPasswordConfirm.BackColor = System.Drawing.SystemColors.Window
         Me.txtNewPasswordConfirm.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(605, 251)
         Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
-        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(318, 29)
+        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(318, 36)
         Me.txtNewPasswordConfirm.TabIndex = 9
         '
         'Label3
@@ -144,9 +143,9 @@ Partial Class ChangePassword
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(465, 249)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(135, 27)
+        Me.Label3.Size = New System.Drawing.Size(134, 27)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "ยืนยันรหัสผ่านใหม่ |"
+        Me.Label3.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
         'btnChangePassword
         '
@@ -163,22 +162,20 @@ Partial Class ChangePassword
         '
         'txtNewPassword
         '
-        Me.txtNewPassword.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNewPassword.BackColor = System.Drawing.SystemColors.Window
         Me.txtNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNewPassword.Location = New System.Drawing.Point(604, 199)
         Me.txtNewPassword.Name = "txtNewPassword"
-        Me.txtNewPassword.Size = New System.Drawing.Size(318, 29)
+        Me.txtNewPassword.Size = New System.Drawing.Size(318, 36)
         Me.txtNewPassword.TabIndex = 6
         '
         'txtOldPassword
         '
-        Me.txtOldPassword.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtOldPassword.BackColor = System.Drawing.SystemColors.Window
         Me.txtOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtOldPassword.Location = New System.Drawing.Point(604, 148)
         Me.txtOldPassword.Name = "txtOldPassword"
-        Me.txtOldPassword.Size = New System.Drawing.Size(318, 29)
+        Me.txtOldPassword.Size = New System.Drawing.Size(318, 36)
         Me.txtOldPassword.TabIndex = 5
         '
         'Label2
@@ -187,9 +184,9 @@ Partial Class ChangePassword
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(500, 199)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 27)
+        Me.Label2.Size = New System.Drawing.Size(98, 27)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "รหัสผ่านใหม่ |"
+        Me.Label2.Text = "รหัสผ่านใหม่ :"
         '
         'Label1
         '
@@ -197,9 +194,9 @@ Partial Class ChangePassword
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(502, 148)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 27)
+        Me.Label1.Size = New System.Drawing.Size(96, 27)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "รหัสผ่านเก่า |"
+        Me.Label1.Text = "รหัสผ่านเก่า :"
         '
         'tvAdminMenu
         '
