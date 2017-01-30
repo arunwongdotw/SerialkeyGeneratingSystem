@@ -96,6 +96,7 @@ Partial Class CreateSerial
         '
         'txtAmountUser
         '
+        Me.txtAmountUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAmountUser.Location = New System.Drawing.Point(741, 66)
         Me.txtAmountUser.Name = "txtAmountUser"
         Me.txtAmountUser.Size = New System.Drawing.Size(329, 36)
@@ -134,6 +135,7 @@ Partial Class CreateSerial
         '
         'txtOption
         '
+        Me.txtOption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtOption.Location = New System.Drawing.Point(741, 120)
         Me.txtOption.Name = "txtOption"
         Me.txtOption.Size = New System.Drawing.Size(329, 36)
@@ -159,6 +161,7 @@ Partial Class CreateSerial
         '
         'txtSoftwareName
         '
+        Me.txtSoftwareName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSoftwareName.Location = New System.Drawing.Point(214, 171)
         Me.txtSoftwareName.Name = "txtSoftwareName"
         Me.txtSoftwareName.Size = New System.Drawing.Size(329, 36)
@@ -188,6 +191,7 @@ Partial Class CreateSerial
         '
         'txtBrandSoftware
         '
+        Me.txtBrandSoftware.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBrandSoftware.Location = New System.Drawing.Point(214, 120)
         Me.txtBrandSoftware.Name = "txtBrandSoftware"
         Me.txtBrandSoftware.Size = New System.Drawing.Size(329, 36)
@@ -337,6 +341,7 @@ Partial Class CreateSerial
         '
         'txtContractNumber
         '
+        Me.txtContractNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtContractNumber.Location = New System.Drawing.Point(214, 66)
         Me.txtContractNumber.Name = "txtContractNumber"
         Me.txtContractNumber.Size = New System.Drawing.Size(329, 36)
@@ -442,6 +447,7 @@ Partial Class CreateSerial
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.btnAddCustomerInfo)
         Me.Panel2.Controls.Add(Me.btnSearch)
         Me.Panel2.Controls.Add(Me.txtGroupCorp)
@@ -485,6 +491,7 @@ Partial Class CreateSerial
         '
         'txtGroupCorp
         '
+        Me.txtGroupCorp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtGroupCorp.Location = New System.Drawing.Point(214, 157)
         Me.txtGroupCorp.Name = "txtGroupCorp"
         Me.txtGroupCorp.Size = New System.Drawing.Size(676, 36)
@@ -501,6 +508,7 @@ Partial Class CreateSerial
         '
         'txtCorpSubName
         '
+        Me.txtCorpSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCorpSubName.Location = New System.Drawing.Point(213, 109)
         Me.txtCorpSubName.Name = "txtCorpSubName"
         Me.txtCorpSubName.Size = New System.Drawing.Size(676, 36)
@@ -508,6 +516,7 @@ Partial Class CreateSerial
         '
         'txtCorpName
         '
+        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCorpName.Location = New System.Drawing.Point(213, 60)
         Me.txtCorpName.Name = "txtCorpName"
         Me.txtCorpName.Size = New System.Drawing.Size(676, 36)
