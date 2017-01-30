@@ -2,8 +2,8 @@
 Imports System.Data
 
 Public Class Login
-    Private username = "ชื่อผู้ใช้"
-    Private password = "*****"
+    Private username = ""
+    Private password = ""
     Private con As New ConnectDB
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -11,7 +11,7 @@ Public Class Login
 
     End Sub
 
- 
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -22,7 +22,7 @@ Public Class Login
         s.Close()
 
         Me.Visible = True
-        
+
 
 
 
