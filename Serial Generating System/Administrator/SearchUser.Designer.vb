@@ -117,7 +117,7 @@ Partial Class SearchUser
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(881, 318)
+        Me.btnClear.Location = New System.Drawing.Point(1125, 347)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 33
@@ -289,9 +289,9 @@ Partial Class SearchUser
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSearchUser.Location = New System.Drawing.Point(256, 380)
+        Me.dgvSearchUser.Location = New System.Drawing.Point(262, 418)
         Me.dgvSearchUser.Name = "dgvSearchUser"
-        Me.dgvSearchUser.Size = New System.Drawing.Size(1093, 348)
+        Me.dgvSearchUser.Size = New System.Drawing.Size(1076, 299)
         Me.dgvSearchUser.TabIndex = 11
         '
         'tvAdminMenu

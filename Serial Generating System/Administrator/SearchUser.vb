@@ -142,6 +142,9 @@ Public Class SearchUser
             isDelete = con.save(strQuery)
             If isDelete Then
                 MessageBox.Show("ลบข้อมูลสำเร็จ")
+                Dim a As New Object
+                Dim es As New EventArgs
+                loadDataTable(a, es)
             Else
                 MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
             End If

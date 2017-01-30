@@ -490,9 +490,9 @@ Partial Class EditUser
         '
         Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(308, 95)
+        Me.PictureBox1.Location = New System.Drawing.Point(304, 95)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(103, 98)
+        Me.PictureBox1.Size = New System.Drawing.Size(107, 111)
         Me.PictureBox1.TabIndex = 81
         Me.PictureBox1.TabStop = False
         '
