@@ -56,7 +56,7 @@ Public Class CreateUser
         Dim isCorrect As Boolean = False
         Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
-        Dim PhonenumberRegex As String = "^[0][0-9]+[0-9]"
+        Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
         Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
         Dim EmailRegexCheck As New Regex(EmailRegex)
         Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
@@ -88,10 +88,6 @@ Public Class CreateUser
         Return isCorrect
     End Function
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
@@ -100,20 +96,19 @@ Public Class CreateUser
         End If
     End Sub
 
-    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
-
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-
+    Private Sub clear()
+        txtEmpID.Clear()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtPosition.Clear()
+        txtEmail.Clear()
+        txtPhoneNumber.Clear()
+        cmbUserType.SelectedIndex = 0
+        chbPerCreate.Checked = False
+        chbPerDelete.Checked = False
+        chbPerEdit.Checked = False
     End Sub
 
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
@@ -133,14 +128,11 @@ Public Class CreateUser
                 End Select
             End If
         Catch ex As Exception
-
         End Try
     End Sub
 
-
-
-
-    Private Sub CreateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        Me.clear()
     End Sub
+
 End Class
