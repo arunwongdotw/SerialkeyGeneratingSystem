@@ -494,21 +494,21 @@ Partial Class EditUser
         Me.rdbIT.AutoSize = True
         Me.rdbIT.Location = New System.Drawing.Point(533, 342)
         Me.rdbIT.Name = "rdbIT"
-        Me.rdbIT.Size = New System.Drawing.Size(36, 24)
+        Me.rdbIT.Size = New System.Drawing.Size(45, 24)
         Me.rdbIT.TabIndex = 83
         Me.rdbIT.TabStop = True
-        Me.rdbIT.Text = "IT"
+        Me.rdbIT.Text = "ไอที"
         Me.rdbIT.UseVisualStyleBackColor = True
         '
         'rdbAccountant
         '
         Me.rdbAccountant.AutoSize = True
-        Me.rdbAccountant.Location = New System.Drawing.Point(659, 348)
+        Me.rdbAccountant.Location = New System.Drawing.Point(659, 345)
         Me.rdbAccountant.Name = "rdbAccountant"
-        Me.rdbAccountant.Size = New System.Drawing.Size(88, 24)
+        Me.rdbAccountant.Size = New System.Drawing.Size(52, 24)
         Me.rdbAccountant.TabIndex = 84
         Me.rdbAccountant.TabStop = True
-        Me.rdbAccountant.Text = "Accountant"
+        Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
         'EditUser
