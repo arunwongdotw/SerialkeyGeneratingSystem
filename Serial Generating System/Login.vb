@@ -27,12 +27,14 @@ Public Class Login
 
 
         Me.txtUsername.TextAlign = HorizontalAlignment.Center
-        txtUsername.ForeColor = Color.Gray
+        'txtUsername.ForeColor = Color.Gray
+        txtUsername.ForeColor = Color.Black
         txtUsername.Text = username
         Me.txtPassword.TextAlign = HorizontalAlignment.Center
-        txtPassword.ForeColor = Color.Gray
+        'txtPassword.ForeColor = Color.Gray
+        txtPassword.ForeColor = Color.Black
         txtPassword.Text = password
-        btnLogin.Select()
+        txtUsername.Select()
 
     End Sub
 
