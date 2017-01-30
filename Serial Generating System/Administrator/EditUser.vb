@@ -169,11 +169,15 @@ Public Class EditUser
             userType = "user"
         End If
     End Sub
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         SearchUser.Show()
     End Sub
 
-  
- 
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class

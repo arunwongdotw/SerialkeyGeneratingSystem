@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Text.RegularExpressions
+Imports System.Data.SqlClient
 Imports System.Data
 
 Public Class CreateCustomer
@@ -58,7 +59,15 @@ Public Class CreateCustomer
 
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
-        If txtCorpName.Text = "" Then
+        Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+        Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
+        Dim EmailRegexCheck As New Regex(EmailRegex)
+        Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
+        If Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
+            MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
+        ElseIf txtCorpName.Text = "" Then
             MsgBox("กรุณากรอกชื่อบริษัท")
         ElseIf txtCorp_s_Name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท")

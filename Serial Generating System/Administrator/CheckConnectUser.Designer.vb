@@ -35,7 +35,7 @@ Partial Class CheckConnectUser
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -59,7 +59,7 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -78,7 +78,7 @@ Partial Class CheckConnectUser
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label5.Location = New System.Drawing.Point(381, 82)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(259, 27)
+        Me.Label5.Size = New System.Drawing.Size(250, 26)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "ผู้ใช้งานระบบที่กำลังเชื่อมต่อในขณะนี้"
         '
@@ -104,7 +104,7 @@ Partial Class CheckConnectUser
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(1202, 668)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 27)
+        Me.Label4.Size = New System.Drawing.Size(31, 26)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "คน"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -115,22 +115,22 @@ Partial Class CheckConnectUser
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(1202, 622)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 27)
+        Me.Label3.Size = New System.Drawing.Size(31, 26)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button3
+        'btnLogOut
         '
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(61, 643)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(129, 41)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 21
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -158,7 +158,7 @@ Partial Class CheckConnectUser
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(948, 668)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(151, 27)
+        Me.Label2.Size = New System.Drawing.Size(151, 26)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้ |"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -169,7 +169,7 @@ Partial Class CheckConnectUser
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(940, 622)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(159, 27)
+        Me.Label1.Size = New System.Drawing.Size(158, 26)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด |"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -268,7 +268,7 @@ Partial Class CheckConnectUser
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

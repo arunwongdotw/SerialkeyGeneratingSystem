@@ -52,6 +52,16 @@ Public Class CreateUser
         con.close()
     End Sub
 
+    'Public Function EmailValidate(ByVal Email As String) As Boolean
+    '    Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+    '    Dim EmailRegexCheck As New Regex(EmailRegex)
+    '    If Not EmailRegexCheck.IsMatch(Email) Then
+    '        MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+    '        Return False
+    '    End If
+    '    Return True
+    'End Function
+
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
         Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
@@ -60,6 +70,8 @@ Public Class CreateUser
         Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
         Dim EmailRegexCheck As New Regex(EmailRegex)
         Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
+        'Dim EmailValidation As Boolean
+        'EmailValidation = EmailValidate(txtEmail.Text)
         If Not CharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
             MsgBox("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
         ElseIf Not CharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
@@ -135,4 +147,9 @@ Public Class CreateUser
         Me.clear()
     End Sub
 
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class
