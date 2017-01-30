@@ -223,7 +223,7 @@ Partial Class CheckConnectUser
         '
         'tvAdminMenu
         '
-        Me.tvAdminMenu.BackColor = System.Drawing.Color.LightBlue
+        Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Name = "tvAdminMenu"

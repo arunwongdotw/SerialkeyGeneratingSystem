@@ -84,7 +84,7 @@ Partial Class Form1
         '
         'tvAdminMenu
         '
-        Me.tvAdminMenu.BackColor = System.Drawing.Color.LightBlue
+        Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
         Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tvAdminMenu.Font = New System.Drawing.Font("ThaiSans Neue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.ForeColor = System.Drawing.Color.Black
