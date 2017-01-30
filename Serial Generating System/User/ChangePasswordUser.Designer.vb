@@ -36,7 +36,7 @@ Partial Class ChangePasswordUser
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.txtNewPasswordConfirm = New System.Windows.Forms.TextBox()
         Me.lblConfirmPassword = New System.Windows.Forms.Label()
         Me.btnChangePassword = New System.Windows.Forms.Button()
@@ -55,7 +55,7 @@ Partial Class ChangePasswordUser
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Controls.Add(Me.btnExit)
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.txtNewPasswordConfirm)
         Me.Panel1.Controls.Add(Me.lblConfirmPassword)
         Me.Panel1.Controls.Add(Me.btnChangePassword)
@@ -91,7 +91,7 @@ Partial Class ChangePasswordUser
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(1023, 294)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 27)
+        Me.Label5.Size = New System.Drawing.Size(18, 26)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -102,7 +102,7 @@ Partial Class ChangePasswordUser
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(1023, 236)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 27)
+        Me.Label4.Size = New System.Drawing.Size(18, 26)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -113,21 +113,21 @@ Partial Class ChangePasswordUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(1023, 174)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
-        'btnExit
+        'btnLogOut
         '
-        Me.btnExit.FlatAppearance.BorderSize = 0
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(63, 643)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(129, 41)
-        Me.btnExit.TabIndex = 21
-        Me.btnExit.Text = "ออกจากระบบ"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(63, 643)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 21
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'txtNewPasswordConfirm
         '
@@ -144,7 +144,7 @@ Partial Class ChangePasswordUser
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.Location = New System.Drawing.Point(492, 294)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(132, 26)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -185,7 +185,7 @@ Partial Class ChangePasswordUser
         Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNewPassword.Location = New System.Drawing.Point(528, 236)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
+        Me.lblNewPassword.Size = New System.Drawing.Size(96, 26)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
@@ -195,7 +195,7 @@ Partial Class ChangePasswordUser
         Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOldPassword.Location = New System.Drawing.Point(530, 174)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
+        Me.lblOldPassword.Size = New System.Drawing.Size(95, 26)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
@@ -249,7 +249,7 @@ Partial Class ChangePasswordUser
     Friend WithEvents txtOldPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblNewPassword As System.Windows.Forms.Label
     Friend WithEvents lblOldPassword As System.Windows.Forms.Label
-    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label

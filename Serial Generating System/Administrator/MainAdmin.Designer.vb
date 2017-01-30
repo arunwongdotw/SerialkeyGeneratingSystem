@@ -32,7 +32,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class Form1
         Me.Panel1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
@@ -69,24 +69,24 @@ Partial Class Form1
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnLogOut
         '
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(61, 643)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(129, 41)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 21
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
         Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tvAdminMenu.Font = New System.Drawing.Font("ThaiSans Neue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.ForeColor = System.Drawing.Color.Black
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Margin = New System.Windows.Forms.Padding(1)
@@ -130,6 +130,6 @@ Partial Class Form1
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
 End Class

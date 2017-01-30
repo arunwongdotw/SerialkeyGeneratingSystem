@@ -9,6 +9,7 @@ Public Class EditUser
     Private perdelete As Integer
     Private userType As String
     Private oldData As New Hashtable
+    Private position As String
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -51,8 +52,8 @@ Public Class EditUser
             oldData.Add("password", txtPassword.Text)
             txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
             oldData.Add("phonenumber", txtPhoneNumber.Text)
-            txtPosition.Text = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
-            oldData.Add("position", txtPosition.Text)
+            position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
+            oldData.Add("position", position)
             txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
             oldData.Add("username", txtUsername.Text)
             perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
@@ -64,6 +65,12 @@ Public Class EditUser
             oldData.Add("per_edit", perEdit)
             oldData.Add("user_type", userType)
         End If
+        If position.Equals("IT") Then
+            rdbIT.Checked = True
+        ElseIf position.Equals("accountant") Then
+            rdbIT.Checked = True
+        End If
+
         If perCreate = 1 Then
             chbPerCreate.Checked = True
         ElseIf perCreate = 0 Then
@@ -93,7 +100,7 @@ Public Class EditUser
             strquery &= " password = '" & txtPassword.Text.Trim & "' , "
             strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
             strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
-            strquery &= " position = '" & txtPosition.Text.Trim & "' , "
+            strquery &= " position = '" & position & "' , "
             strquery &= " phonenumber = '" & txtPhoneNumber.Text.Trim & "' , "
             strquery &= " email = '" & txtEmail.Text.Trim & "' , "
             strquery &= " user_type = '" & userType & "' , "
@@ -149,9 +156,6 @@ Public Class EditUser
         ElseIf txtLastName.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกนามสกุล")
             valid = False
-        ElseIf txtPosition.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกตำแหน่ง")
-            valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
             valid = False
@@ -176,4 +180,11 @@ Public Class EditUser
 
   
  
+    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
+        position = "IT"
+    End Sub
+
+    Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
+        position = "accountant"
+    End Sub
 End Class

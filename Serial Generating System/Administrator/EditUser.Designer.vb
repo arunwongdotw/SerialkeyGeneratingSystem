@@ -45,11 +45,10 @@ Partial Class EditUser
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -66,6 +65,8 @@ Partial Class EditUser
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.rdbIT = New System.Windows.Forms.RadioButton()
+        Me.rdbAccountant = New System.Windows.Forms.RadioButton()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -227,18 +228,18 @@ Partial Class EditUser
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "อีเมล์ :"
         '
-        'Button3
+        'btnLogOut
         '
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(61, 643)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(129, 41)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "ออกจากระบบ"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 15
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
@@ -274,15 +275,6 @@ Partial Class EditUser
         Me.Label7.Size = New System.Drawing.Size(158, 20)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
-        '
-        'txtPosition
-        '
-        Me.txtPosition.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPosition.Location = New System.Drawing.Point(533, 333)
-        Me.txtPosition.Name = "txtPosition"
-        Me.txtPosition.Size = New System.Drawing.Size(318, 36)
-        Me.txtPosition.TabIndex = 6
         '
         'Label6
         '
@@ -430,6 +422,8 @@ Partial Class EditUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.rdbAccountant)
+        Me.Panel1.Controls.Add(Me.rdbIT)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label16)
@@ -447,11 +441,10 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.txtPosition)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtLastName)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -496,6 +489,28 @@ Partial Class EditUser
         Me.PictureBox1.TabIndex = 81
         Me.PictureBox1.TabStop = False
         '
+        'rdbIT
+        '
+        Me.rdbIT.AutoSize = True
+        Me.rdbIT.Location = New System.Drawing.Point(533, 342)
+        Me.rdbIT.Name = "rdbIT"
+        Me.rdbIT.Size = New System.Drawing.Size(45, 24)
+        Me.rdbIT.TabIndex = 83
+        Me.rdbIT.TabStop = True
+        Me.rdbIT.Text = "ไอที"
+        Me.rdbIT.UseVisualStyleBackColor = True
+        '
+        'rdbAccountant
+        '
+        Me.rdbAccountant.AutoSize = True
+        Me.rdbAccountant.Location = New System.Drawing.Point(659, 345)
+        Me.rdbAccountant.Name = "rdbAccountant"
+        Me.rdbAccountant.Size = New System.Drawing.Size(52, 24)
+        Me.rdbAccountant.TabIndex = 84
+        Me.rdbAccountant.TabStop = True
+        Me.rdbAccountant.Text = "บัญชี"
+        Me.rdbAccountant.UseVisualStyleBackColor = True
+        '
         'EditUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,11 +541,10 @@ Partial Class EditUser
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtPosition As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -547,4 +561,6 @@ Partial Class EditUser
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnHeader As System.Windows.Forms.Button
+    Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
 End Class

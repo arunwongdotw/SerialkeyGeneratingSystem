@@ -78,6 +78,7 @@ Public Class SearchUser
         checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทธิ์การลบ"
         checkboxDelete.ReadOnly = True
+
         dgvSearchUser.Columns.Add(checkboxDelete)
         Dim btnEdit As New DataGridViewButtonColumn()
         dgvSearchUser.Columns.Add(btnEdit)
@@ -103,9 +104,7 @@ Public Class SearchUser
         Next
     End Sub
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+         loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub clearTxtBox()
         txtUsername.Text = String.Empty
@@ -118,9 +117,7 @@ Public Class SearchUser
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clearTxtBox()
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub checkTextSingle(ByVal textBox As TextBox)
         If New Regex("'").Match(txtUsername.Text).Success Then
@@ -130,9 +127,7 @@ Public Class SearchUser
     End Sub
     Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         checkTextSingle(txtUsername)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+         loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
         Dim strQuery As String
@@ -142,9 +137,7 @@ Public Class SearchUser
             isDelete = con.save(strQuery)
             If isDelete Then
                 MessageBox.Show("ลบข้อมูลสำเร็จ")
-                Dim a As New Object
-                Dim es As New EventArgs
-                loadDataTable(a, es)
+
             Else
                 MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
             End If
@@ -181,39 +174,27 @@ Public Class SearchUser
     End Sub
     Private Sub txtEmployeeId_TextChanged(sender As Object, e As EventArgs) Handles txtEmployeeId.TextChanged
         checkTextSingle(txtEmployeeId)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
         checkTextSingle(txtFirstname)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
         checkTextSingle(txtLastname)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
         checkTextSingle(txtPosition)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+         loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
         checkTextSingle(txtEmail)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+         loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNo.TextChanged
         checkTextSingle(txtPhoneNo)
-        Dim a As New Object
-        Dim es As New EventArgs
-        loadDataTable(a, es)
+         loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try

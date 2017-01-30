@@ -20,9 +20,12 @@
                 End Select
             End If
         Catch ex As Exception
-
         End Try
     End Sub
 
-
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class

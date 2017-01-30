@@ -9,6 +9,7 @@ Public Class CreateUser
         Dim perCreate As String
         Dim perDelete As String
         Dim perEdit As String
+        Dim position As String
         If cmbUserType.Text = "ผู้ใช้งานทั่วไป" Then
             userType = "user"
         Else
@@ -29,6 +30,11 @@ Public Class CreateUser
         Else
             perEdit = 0
         End If
+        If rdbIT.Checked = True Then
+            position = "IT"
+        ElseIf rdbAccountant.Checked = True Then
+            position = "Accountant"
+        End If
         Dim strSQL As String
         strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, phonenumber, email, user_type, per_create, per_edit, per_delete) "
         strSQL &= "values ('" & txtEmpID.Text & "',"
@@ -36,7 +42,7 @@ Public Class CreateUser
         strSQL &= "'" & txtPassword.Text & "',"
         strSQL &= "'" & txtFirstName.Text & "',"
         strSQL &= "'" & txtLastName.Text & "',"
-        strSQL &= "'" & txtPosition.Text & "',"
+        strSQL &= "'" & position & "',"
         strSQL &= "'" & txtPhoneNumber.Text & "',"
         strSQL &= "'" & txtEmail.Text & "',"
         strSQL &= "'" & userType & "',"
@@ -52,6 +58,16 @@ Public Class CreateUser
         con.close()
     End Sub
 
+    'Public Function EmailValidate(ByVal Email As String) As Boolean
+    '    Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+    '    Dim EmailRegexCheck As New Regex(EmailRegex)
+    '    If Not EmailRegexCheck.IsMatch(Email) Then
+    '        MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+    '        Return False
+    '    End If
+    '    Return True
+    'End Function
+
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
         Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
@@ -60,6 +76,8 @@ Public Class CreateUser
         Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
         Dim EmailRegexCheck As New Regex(EmailRegex)
         Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
+        'Dim EmailValidation As Boolean
+        'EmailValidation = EmailValidate(txtEmail.Text)
         If Not CharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
             MsgBox("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
         ElseIf Not CharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
@@ -78,8 +96,6 @@ Public Class CreateUser
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
             MsgBox("กรุณากรอกนามสกุล")
-        ElseIf txtPosition.Text = "" Then
-            MsgBox("กรุณากรอกตำแหน่ง")
         ElseIf cmbUserType.Text = "" Then
             MsgBox("กรุณาเลือกประเภทบัญชีผู้ใช้")
         Else
@@ -102,7 +118,6 @@ Public Class CreateUser
         txtPassword.Clear()
         txtFirstName.Clear()
         txtLastName.Clear()
-        txtPosition.Clear()
         txtEmail.Clear()
         txtPhoneNumber.Clear()
         cmbUserType.SelectedIndex = 0
@@ -135,4 +150,9 @@ Public Class CreateUser
         Me.clear()
     End Sub
 
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class
