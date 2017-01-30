@@ -39,6 +39,9 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
@@ -53,7 +56,8 @@ Partial Class Form1
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(65, 642)
+        Me.Button3.Location = New System.Drawing.Point(61, 643)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(1)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(129, 41)
         Me.Button3.TabIndex = 21
@@ -63,40 +67,48 @@ Partial Class Form1
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightBlue
-        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tvAdminMenu.Font = New System.Drawing.Font("ThaiSans Neue", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.ForeColor = System.Drawing.Color.Black
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
+        Me.tvAdminMenu.Margin = New System.Windows.Forms.Padding(1)
         Me.tvAdminMenu.Name = "tvAdminMenu"
+        TreeNode1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
+        TreeNode2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         TreeNode2.Name = "ndFindUserAccount"
         TreeNode2.Text = "ค้นหาบัญชีผู้ใช้"
         TreeNode3.Name = "ndManageUserAccount"
         TreeNode3.Text = "จัดการบัญชีผู้ใช้"
+        TreeNode4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         TreeNode4.Name = "ndCheckConnectingUser"
         TreeNode4.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
         TreeNode5.Name = "ndCheck"
         TreeNode5.Text = "การตรวจสอบ"
+        TreeNode6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         TreeNode6.Name = "ndAdminResetPassword"
         TreeNode6.Text = "เปลี่ยนรหัสผ่าน"
         TreeNode7.Name = "ndAdminInfo"
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 663)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvAdminMenu.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightSlateGray
+        Me.Button1.BackColor = System.Drawing.Color.LightBlue
+        Me.Button1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(1)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(1346, 66)
+        Me.Button1.Size = New System.Drawing.Size(1348, 66)
         Me.Button1.TabIndex = 22
         Me.Button1.Text = "ผู้ดูแลระบบ"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
