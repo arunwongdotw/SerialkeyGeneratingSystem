@@ -2,8 +2,7 @@
 Imports System.Text.RegularExpressions
 Public Class SearchUser
     Private con As New ConnectDB
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
+    Private Sub loadDataTable(sender As Object, e As EventArgs)
         Dim strQuery = "select id,emp_id,username,password,firstname,lastname,position,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtUsername.Text & "%'"
@@ -32,7 +31,6 @@ Public Class SearchUser
         adapter.Fill(table)
         dgvSearchUser.Columns.Clear()
         dgvSearchUser.DataSource = table
-
         With dgvSearchUser
             .RowHeadersVisible = False
             .Columns("id").Visible = False
@@ -46,7 +44,7 @@ Public Class SearchUser
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
             .Columns("position").HeaderCell.Value = "ตำแหน่ง"
             .Columns("phonenumber").HeaderCell.Value = "หมายเลขโทรศัพท์"
-            .Columns("email").HeaderCell.Value = "อีเมลย์"
+            .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
             .Columns("emp_id").ReadOnly = True
             .Columns("firstname").ReadOnly = True
@@ -67,18 +65,18 @@ Public Class SearchUser
         Next
         randerColorRow()
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
-        checkboxCreate.HeaderText = "สิทการสร้าง"
+        checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
         checkboxCreate.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxCreate)
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
-        checkboxEdit.HeaderText = "สิทการแก้ไข"
+        checkboxEdit.HeaderText = "สิทธิ์การแก้ไข"
         checkboxEdit.Name = "chbEdit"
         checkboxEdit.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxEdit)
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
         checkboxDelete.Name = "chbDelete"
-        checkboxDelete.HeaderText = "สิทการลบ"
+        checkboxDelete.HeaderText = "สิทธิ์การลบ"
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
         Dim btnEdit As New DataGridViewButtonColumn()
@@ -107,11 +105,22 @@ Public Class SearchUser
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
+    End Sub
+    Private Sub clearTxtBox()
+        txtUsername.Text = String.Empty
+        txtEmployeeId.Text = String.Empty
+        txtFirstname.Text = String.Empty
+        txtLastname.Text = String.Empty
+        txtPosition.Text = String.Empty
+        txtPhoneNo.Text = String.Empty
+        txtEmail.Text = String.Empty
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        dgvSearchUser.Columns.Clear()
-        dgvSearchUser.DataSource = Nothing
+        clearTxtBox()
+        Dim a As New Object
+        Dim es As New EventArgs
+        loadDataTable(a, es)
     End Sub
     Private Sub checkTextSingle(ByVal textBox As TextBox)
         If New Regex("'").Match(txtUsername.Text).Success Then
@@ -123,7 +132,7 @@ Public Class SearchUser
         checkTextSingle(txtUsername)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
         Dim strQuery As String
@@ -171,39 +180,38 @@ Public Class SearchUser
         checkTextSingle(txtEmployeeId)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
         checkTextSingle(txtFirstname)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
         checkTextSingle(txtLastname)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
         checkTextSingle(txtPosition)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
         checkTextSingle(txtEmail)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
     Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNo.TextChanged
         checkTextSingle(txtPhoneNo)
         Dim a As New Object
         Dim es As New EventArgs
-        Button1_Click(a, es)
+        loadDataTable(a, es)
     End Sub
-
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
@@ -221,7 +229,6 @@ Public Class SearchUser
                 End Select
             End If
         Catch ex As Exception
-
         End Try
     End Sub
 End Class

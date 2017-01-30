@@ -10,7 +10,7 @@ Public Class EditUser
     Private userType As String
     Private oldData As New Hashtable
     Public Sub New()
-        ' This call is required by the designers.
+        ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
     End Sub

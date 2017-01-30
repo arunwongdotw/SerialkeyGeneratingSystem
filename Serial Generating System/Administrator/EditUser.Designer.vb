@@ -46,7 +46,7 @@ Partial Class EditUser
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPosition = New System.Windows.Forms.TextBox()
@@ -57,7 +57,7 @@ Partial Class EditUser
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtEmpID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -240,18 +240,18 @@ Partial Class EditUser
         Me.Button3.Text = "ออกจากระบบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'btnClear
+        'btnCancel
         '
-        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(722, 607)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 14
-        Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = False
+        Me.btnCancel.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(722, 607)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(129, 41)
+        Me.btnCancel.TabIndex = 14
+        Me.btnCancel.Text = "ยกเลิก"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -351,18 +351,18 @@ Partial Class EditUser
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "รหัสพนักงาน :"
         '
-        'btnAdd
+        'btnSave
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(533, 607)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 13
-        Me.btnAdd.Text = "ยืนยัน"
-        Me.btnAdd.UseVisualStyleBackColor = False
+        Me.btnSave.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(533, 607)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(129, 41)
+        Me.btnSave.TabIndex = 13
+        Me.btnSave.Text = "ยืนยัน"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'txtPassword
         '
@@ -448,7 +448,7 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.txtPosition)
@@ -459,7 +459,7 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.txtEmpID)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -527,7 +527,7 @@ Partial Class EditUser
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtPosition As System.Windows.Forms.TextBox
@@ -538,7 +538,7 @@ Partial Class EditUser
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label

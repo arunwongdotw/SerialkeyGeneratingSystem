@@ -34,7 +34,6 @@ Partial Class SearchUser
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.bntExit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.bntSearch = New System.Windows.Forms.Button()
         Me.txtPhoneNo = New System.Windows.Forms.TextBox()
         Me.lblPhoneNo = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -51,6 +50,7 @@ Partial Class SearchUser
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.bntSearch = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -123,19 +123,6 @@ Partial Class SearchUser
         Me.btnClear.TabIndex = 33
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'bntSearch
-        '
-        Me.bntSearch.BackColor = System.Drawing.Color.DarkOrange
-        Me.bntSearch.FlatAppearance.BorderSize = 0
-        Me.bntSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bntSearch.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bntSearch.Location = New System.Drawing.Point(714, 318)
-        Me.bntSearch.Name = "bntSearch"
-        Me.bntSearch.Size = New System.Drawing.Size(129, 41)
-        Me.bntSearch.TabIndex = 32
-        Me.bntSearch.Text = "ค้นหา"
-        Me.bntSearch.UseVisualStyleBackColor = False
         '
         'txtPhoneNo
         '
@@ -319,6 +306,19 @@ Partial Class SearchUser
         Me.tvAdminMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvAdminMenu.TabIndex = 0
         '
+        'bntSearch
+        '
+        Me.bntSearch.BackColor = System.Drawing.Color.DarkOrange
+        Me.bntSearch.FlatAppearance.BorderSize = 0
+        Me.bntSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bntSearch.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bntSearch.Location = New System.Drawing.Point(714, 318)
+        Me.bntSearch.Name = "bntSearch"
+        Me.bntSearch.Size = New System.Drawing.Size(129, 41)
+        Me.bntSearch.TabIndex = 32
+        Me.bntSearch.Text = "ค้นหา"
+        Me.bntSearch.UseVisualStyleBackColor = False
+        '
         'SearchUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -352,7 +352,7 @@ Partial Class SearchUser
     Friend WithEvents lblLastname As System.Windows.Forms.Label
     Friend WithEvents lblFirstname As System.Windows.Forms.Label
     Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents bntSearch As System.Windows.Forms.Button
     Friend WithEvents bntExit As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
+    Friend WithEvents bntSearch As System.Windows.Forms.Button
 End Class
