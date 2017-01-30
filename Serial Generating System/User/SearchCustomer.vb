@@ -10,6 +10,7 @@ Public Class SearchCustomer
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.GenerateColumn()
         Me.LoadData()
+        tvUserMenu.ExpandAll()
 
     End Sub
 
@@ -308,5 +309,11 @@ Public Class SearchCustomer
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
