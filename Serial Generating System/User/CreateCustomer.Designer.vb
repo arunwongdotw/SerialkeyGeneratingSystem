@@ -32,7 +32,10 @@ Partial Class CreateCustomer
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateCustomer))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -40,7 +43,6 @@ Partial Class CreateCustomer
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -72,14 +74,15 @@ Partial Class CreateCustomer
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.Label21)
@@ -126,85 +129,40 @@ Partial Class CreateCustomer
         Me.Panel1.Size = New System.Drawing.Size(1354, 729)
         Me.Panel1.TabIndex = 2
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(280, 112)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(115, 106)
+        Me.PictureBox1.TabIndex = 80
+        Me.PictureBox1.TabStop = False
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
         'Label22
         '
         Me.Label22.AutoSize = True
         Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(1200, 104)
+        Me.Label22.Location = New System.Drawing.Point(1308, 115)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(18, 27)
         Me.Label22.TabIndex = 78
         Me.Label22.Text = "*"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(710, 158)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(18, 27)
-        Me.Label21.TabIndex = 77
-        Me.Label21.Text = "*"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(710, 211)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 27)
-        Me.Label20.TabIndex = 76
-        Me.Label20.Text = "*"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(1200, 264)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(18, 27)
-        Me.Label19.TabIndex = 75
-        Me.Label19.Text = "*"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(710, 374)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 27)
-        Me.Label18.TabIndex = 74
-        Me.Label18.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(1200, 158)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 27)
-        Me.Label17.TabIndex = 73
-        Me.Label17.Text = "*"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(1200, 319)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(18, 27)
-        Me.Label16.TabIndex = 72
-        Me.Label16.Text = "*"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(1200, 374)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
-        Me.Label15.TabIndex = 71
-        Me.Label15.Text = "*"
         '
         'btnLogOut
         '
@@ -217,9 +175,79 @@ Partial Class CreateCustomer
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(818, 169)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(18, 27)
+        Me.Label21.TabIndex = 77
+        Me.Label21.Text = "*"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.ForeColor = System.Drawing.Color.Red
+        Me.Label20.Location = New System.Drawing.Point(818, 222)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(18, 27)
+        Me.Label20.TabIndex = 76
+        Me.Label20.Text = "*"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.Location = New System.Drawing.Point(1308, 275)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(18, 27)
+        Me.Label19.TabIndex = 75
+        Me.Label19.Text = "*"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.ForeColor = System.Drawing.Color.Red
+        Me.Label18.Location = New System.Drawing.Point(818, 385)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(18, 27)
+        Me.Label18.TabIndex = 74
+        Me.Label18.Text = "*"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(1308, 169)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
+        Me.Label17.TabIndex = 73
+        Me.Label17.Text = "*"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(1308, 330)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(18, 27)
+        Me.Label16.TabIndex = 72
+        Me.Label16.Text = "*"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(1308, 385)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.TabIndex = 71
+        Me.Label15.Text = "*"
+        '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(394, 425)
+        Me.txtPhone.Location = New System.Drawing.Point(502, 436)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(310, 36)
         Me.txtPhone.TabIndex = 14
@@ -227,7 +255,7 @@ Partial Class CreateCustomer
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(317, 428)
+        Me.lblPhone.Location = New System.Drawing.Point(425, 439)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 56
@@ -235,7 +263,7 @@ Partial Class CreateCustomer
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(394, 371)
+        Me.txtEmail.Location = New System.Drawing.Point(502, 382)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(310, 36)
         Me.txtEmail.TabIndex = 13
@@ -243,7 +271,7 @@ Partial Class CreateCustomer
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(335, 374)
+        Me.lblEmail.Location = New System.Drawing.Point(443, 385)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(53, 27)
         Me.lblEmail.TabIndex = 54
@@ -251,7 +279,7 @@ Partial Class CreateCustomer
         '
         'txtPostalCode
         '
-        Me.txtPostalCode.Location = New System.Drawing.Point(884, 425)
+        Me.txtPostalCode.Location = New System.Drawing.Point(992, 436)
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(310, 36)
         Me.txtPostalCode.TabIndex = 12
@@ -259,7 +287,7 @@ Partial Class CreateCustomer
         'lblPostalCode
         '
         Me.lblPostalCode.AutoSize = True
-        Me.lblPostalCode.Location = New System.Drawing.Point(777, 428)
+        Me.lblPostalCode.Location = New System.Drawing.Point(885, 439)
         Me.lblPostalCode.Name = "lblPostalCode"
         Me.lblPostalCode.Size = New System.Drawing.Size(101, 27)
         Me.lblPostalCode.TabIndex = 52
@@ -267,7 +295,7 @@ Partial Class CreateCustomer
         '
         'txtDistrict
         '
-        Me.txtDistrict.Location = New System.Drawing.Point(884, 316)
+        Me.txtDistrict.Location = New System.Drawing.Point(992, 327)
         Me.txtDistrict.Name = "txtDistrict"
         Me.txtDistrict.Size = New System.Drawing.Size(310, 36)
         Me.txtDistrict.TabIndex = 10
@@ -275,7 +303,7 @@ Partial Class CreateCustomer
         'lblDistrict
         '
         Me.lblDistrict.AutoSize = True
-        Me.lblDistrict.Location = New System.Drawing.Point(791, 319)
+        Me.lblDistrict.Location = New System.Drawing.Point(899, 330)
         Me.lblDistrict.Name = "lblDistrict"
         Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
         Me.lblDistrict.TabIndex = 50
@@ -283,7 +311,7 @@ Partial Class CreateCustomer
         '
         'txtLane
         '
-        Me.txtLane.Location = New System.Drawing.Point(1066, 208)
+        Me.txtLane.Location = New System.Drawing.Point(1174, 219)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(128, 36)
         Me.txtLane.TabIndex = 8
@@ -291,7 +319,7 @@ Partial Class CreateCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(1018, 211)
+        Me.lblLane.Location = New System.Drawing.Point(1126, 222)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
@@ -299,7 +327,7 @@ Partial Class CreateCustomer
         '
         'txtCorpGroup
         '
-        Me.txtCorpGroup.Location = New System.Drawing.Point(394, 208)
+        Me.txtCorpGroup.Location = New System.Drawing.Point(502, 219)
         Me.txtCorpGroup.Name = "txtCorpGroup"
         Me.txtCorpGroup.Size = New System.Drawing.Size(310, 36)
         Me.txtCorpGroup.TabIndex = 3
@@ -307,7 +335,7 @@ Partial Class CreateCustomer
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(303, 211)
+        Me.lblGroupCorp.Location = New System.Drawing.Point(411, 222)
         Me.lblGroupCorp.Name = "lblGroupCorp"
         Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
         Me.lblGroupCorp.TabIndex = 46
@@ -315,7 +343,7 @@ Partial Class CreateCustomer
         '
         'txtProvince
         '
-        Me.txtProvince.Location = New System.Drawing.Point(884, 371)
+        Me.txtProvince.Location = New System.Drawing.Point(992, 382)
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(310, 36)
         Me.txtProvince.TabIndex = 11
@@ -323,7 +351,7 @@ Partial Class CreateCustomer
         'lblProvince
         '
         Me.lblProvince.AutoSize = True
-        Me.lblProvince.Location = New System.Drawing.Point(812, 374)
+        Me.lblProvince.Location = New System.Drawing.Point(920, 385)
         Me.lblProvince.Name = "lblProvince"
         Me.lblProvince.Size = New System.Drawing.Size(66, 27)
         Me.lblProvince.TabIndex = 44
@@ -331,7 +359,7 @@ Partial Class CreateCustomer
         '
         'txtRoad
         '
-        Me.txtRoad.Location = New System.Drawing.Point(884, 208)
+        Me.txtRoad.Location = New System.Drawing.Point(992, 219)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(128, 36)
         Me.txtRoad.TabIndex = 7
@@ -339,7 +367,7 @@ Partial Class CreateCustomer
         'lblRoad
         '
         Me.lblRoad.AutoSize = True
-        Me.lblRoad.Location = New System.Drawing.Point(827, 211)
+        Me.lblRoad.Location = New System.Drawing.Point(935, 222)
         Me.lblRoad.Name = "lblRoad"
         Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
@@ -360,7 +388,7 @@ Partial Class CreateCustomer
         '
         'txtSubdistrict
         '
-        Me.txtSubdistrict.Location = New System.Drawing.Point(884, 261)
+        Me.txtSubdistrict.Location = New System.Drawing.Point(992, 272)
         Me.txtSubdistrict.Name = "txtSubdistrict"
         Me.txtSubdistrict.Size = New System.Drawing.Size(310, 36)
         Me.txtSubdistrict.TabIndex = 9
@@ -368,7 +396,7 @@ Partial Class CreateCustomer
         'lblSubdistrict
         '
         Me.lblSubdistrict.AutoSize = True
-        Me.lblSubdistrict.Location = New System.Drawing.Point(783, 264)
+        Me.lblSubdistrict.Location = New System.Drawing.Point(891, 275)
         Me.lblSubdistrict.Name = "lblSubdistrict"
         Me.lblSubdistrict.Size = New System.Drawing.Size(95, 27)
         Me.lblSubdistrict.TabIndex = 37
@@ -376,7 +404,7 @@ Partial Class CreateCustomer
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(394, 316)
+        Me.txtLastName.Location = New System.Drawing.Point(502, 327)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(310, 36)
         Me.txtLastName.TabIndex = 5
@@ -384,7 +412,7 @@ Partial Class CreateCustomer
         'lblLastName
         '
         Me.lblLastName.AutoSize = True
-        Me.lblLastName.Location = New System.Drawing.Point(313, 319)
+        Me.lblLastName.Location = New System.Drawing.Point(421, 330)
         Me.lblLastName.Name = "lblLastName"
         Me.lblLastName.Size = New System.Drawing.Size(75, 27)
         Me.lblLastName.TabIndex = 35
@@ -392,7 +420,7 @@ Partial Class CreateCustomer
         '
         'txtHouseNo
         '
-        Me.txtHouseNo.Location = New System.Drawing.Point(884, 155)
+        Me.txtHouseNo.Location = New System.Drawing.Point(992, 166)
         Me.txtHouseNo.Name = "txtHouseNo"
         Me.txtHouseNo.Size = New System.Drawing.Size(310, 36)
         Me.txtHouseNo.TabIndex = 6
@@ -400,7 +428,7 @@ Partial Class CreateCustomer
         'lblNo
         '
         Me.lblNo.AutoSize = True
-        Me.lblNo.Location = New System.Drawing.Point(827, 158)
+        Me.lblNo.Location = New System.Drawing.Point(935, 169)
         Me.lblNo.Name = "lblNo"
         Me.lblNo.Size = New System.Drawing.Size(51, 27)
         Me.lblNo.TabIndex = 33
@@ -408,7 +436,7 @@ Partial Class CreateCustomer
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(394, 261)
+        Me.txtFirstName.Location = New System.Drawing.Point(502, 272)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(310, 36)
         Me.txtFirstName.TabIndex = 4
@@ -416,7 +444,7 @@ Partial Class CreateCustomer
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(323, 264)
+        Me.lblFirstName.Location = New System.Drawing.Point(431, 275)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(65, 27)
         Me.lblFirstName.TabIndex = 31
@@ -437,14 +465,14 @@ Partial Class CreateCustomer
         '
         'txtCorp_s_Name
         '
-        Me.txtCorp_s_Name.Location = New System.Drawing.Point(394, 155)
+        Me.txtCorp_s_Name.Location = New System.Drawing.Point(502, 166)
         Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
         Me.txtCorp_s_Name.Size = New System.Drawing.Size(310, 36)
         Me.txtCorp_s_Name.TabIndex = 2
         '
         'txtCorpName
         '
-        Me.txtCorpName.Location = New System.Drawing.Point(394, 101)
+        Me.txtCorpName.Location = New System.Drawing.Point(502, 112)
         Me.txtCorpName.Name = "txtCorpName"
         Me.txtCorpName.Size = New System.Drawing.Size(800, 36)
         Me.txtCorpName.TabIndex = 1
@@ -452,7 +480,7 @@ Partial Class CreateCustomer
         'lblCorpSubName
         '
         Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(293, 158)
+        Me.lblCorpSubName.Location = New System.Drawing.Point(401, 169)
         Me.lblCorpSubName.Name = "lblCorpSubName"
         Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
         Me.lblCorpSubName.TabIndex = 27
@@ -461,7 +489,7 @@ Partial Class CreateCustomer
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(312, 104)
+        Me.lblCorpName.Location = New System.Drawing.Point(420, 115)
         Me.lblCorpName.Name = "lblCorpName"
         Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
         Me.lblCorpName.TabIndex = 26
@@ -493,21 +521,6 @@ Partial Class CreateCustomer
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(1354, 68)
-        Me.Button1.TabIndex = 79
-        Me.Button1.Text = "ชื่อผู้ใช้ 1"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'CreateCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -521,6 +534,7 @@ Partial Class CreateCustomer
         Me.Text = "เพิ่มข้อมูลลูกค้า"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -565,5 +579,6 @@ Partial Class CreateCustomer
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnHeader As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

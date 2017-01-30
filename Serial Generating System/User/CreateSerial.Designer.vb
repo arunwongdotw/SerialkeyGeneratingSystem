@@ -45,8 +45,9 @@ Partial Class CreateSerial
         Me.txtBrandSoftware = New System.Windows.Forms.TextBox()
         Me.lblBrandSoftware = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblSerialKey = New System.Windows.Forms.Label()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblSerialKey = New System.Windows.Forms.Label()
         Me.lblOptionLanguage = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -69,14 +70,13 @@ Partial Class CreateSerial
         Me.btnAddCustomerInfo = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtGroupCorp = New System.Windows.Forms.TextBox()
+        Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.txtCorpSubName = New System.Windows.Forms.TextBox()
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -208,7 +208,7 @@ Partial Class CreateSerial
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.btnLogOut)
@@ -218,16 +218,20 @@ Partial Class CreateSerial
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
-        'lblSerialKey
+        'btnHeader
         '
-        Me.lblSerialKey.AutoSize = True
-        Me.lblSerialKey.BackColor = System.Drawing.Color.Transparent
-        Me.lblSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSerialKey.Location = New System.Drawing.Point(19, 14)
-        Me.lblSerialKey.Name = "lblSerialKey"
-        Me.lblSerialKey.Size = New System.Drawing.Size(125, 34)
-        Me.lblSerialKey.TabIndex = 72
-        Me.lblSerialKey.Text = "ซีเรียลคีย์ >>"
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1349, 67)
+        Me.btnHeader.TabIndex = 72
+        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -268,6 +272,17 @@ Partial Class CreateSerial
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1094, 395)
         Me.Panel3.TabIndex = 71
+        '
+        'lblSerialKey
+        '
+        Me.lblSerialKey.AutoSize = True
+        Me.lblSerialKey.BackColor = System.Drawing.Color.Transparent
+        Me.lblSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSerialKey.Location = New System.Drawing.Point(19, 14)
+        Me.lblSerialKey.Name = "lblSerialKey"
+        Me.lblSerialKey.Size = New System.Drawing.Size(125, 34)
+        Me.lblSerialKey.TabIndex = 72
+        Me.lblSerialKey.Text = "ซีเรียลคีย์ >>"
         '
         'lblOptionLanguage
         '
@@ -497,6 +512,17 @@ Partial Class CreateSerial
         Me.txtGroupCorp.Size = New System.Drawing.Size(676, 36)
         Me.txtGroupCorp.TabIndex = 72
         '
+        'lblInfoCustomer
+        '
+        Me.lblInfoCustomer.AutoSize = True
+        Me.lblInfoCustomer.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfoCustomer.Location = New System.Drawing.Point(19, 17)
+        Me.lblInfoCustomer.Name = "lblInfoCustomer"
+        Me.lblInfoCustomer.Size = New System.Drawing.Size(148, 34)
+        Me.lblInfoCustomer.TabIndex = 67
+        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า >>"
+        '
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
@@ -540,17 +566,6 @@ Partial Class CreateSerial
         Me.lblCorpSubName.TabIndex = 68
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
         '
-        'lblInfoCustomer
-        '
-        Me.lblInfoCustomer.AutoSize = True
-        Me.lblInfoCustomer.BackColor = System.Drawing.Color.Transparent
-        Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfoCustomer.Location = New System.Drawing.Point(19, 17)
-        Me.lblInfoCustomer.Name = "lblInfoCustomer"
-        Me.lblInfoCustomer.Size = New System.Drawing.Size(148, 34)
-        Me.lblInfoCustomer.TabIndex = 67
-        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า >>"
-        '
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
@@ -576,21 +591,6 @@ Partial Class CreateSerial
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(1349, 67)
-        Me.Button1.TabIndex = 72
-        Me.Button1.Text = "ชื่อผู้ใช้ 1"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'CreateSerial
         '
@@ -654,5 +654,5 @@ Partial Class CreateSerial
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnHeader As System.Windows.Forms.Button
 End Class
