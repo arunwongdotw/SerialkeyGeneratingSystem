@@ -4,6 +4,11 @@ Imports System.Data
 Public Class SearchCustomer
     Private con As New ConnectDB
 
+    Private Sub SearchCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+
+    End Sub
+
     'Protected objCmd As New SqlCommand
 
 
@@ -21,7 +26,7 @@ Public Class SearchCustomer
 
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
-            Col.Width = 40
+            Col.Width = 60
             Col.DataPropertyName = "id"
             Col.Name = "id"
             Col.ReadOnly = True
@@ -56,7 +61,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อ-นามสกุล"
-            Col.Width = 120
+            Col.Width = 135
             Col.ReadOnly = True
             Col.DataPropertyName = "fullname"
             Col.Name = "fullname"
@@ -104,7 +109,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "จังหวัด"
-            Col.Width = 100
+            Col.Width = 125
             Col.ReadOnly = True
             Col.DataPropertyName = "province"
             Col.Name = "province"
@@ -112,7 +117,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "รหัสไปรษณีย์"
-            Col.Width = 50
+            Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "postalCode"
             Col.Name = "postalCode"
@@ -120,7 +125,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "อีเมล"
-            Col.Width = 100
+            Col.Width = 180
             Col.ReadOnly = True
             Col.DataPropertyName = "email"
             Col.Name = "email"
@@ -201,7 +206,7 @@ Public Class SearchCustomer
             'sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             'sql &= province & postalcode & email & phone
 
-            sql = "select id,corpname,corp_s_name,corpgroup,(firstname+lastname) as fullname,house_no,road,lane,subdistrict "
+            sql = "select id,corpname,corp_s_name,corpgroup,(firstname+' '+lastname) as fullname,house_no,road,lane,subdistrict "
             sql &= ",district , province, postalcode, email, phone from customer where id <> 0 "
             sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             sql &= province & postalcode & email & phone
@@ -233,6 +238,7 @@ Public Class SearchCustomer
             da.Fill(dt)
             If dt.Rows.Count > 0 Then
                 dgvSearchCus.Columns.Clear()
+                GenerateColumn()
                 dgvSearchCus.DataSource = dt
             End If
 
@@ -315,5 +321,61 @@ Public Class SearchCustomer
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtCorp_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_name.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs) Handles txtCorpGroup.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtHouseNo_TextChanged(sender As Object, e As EventArgs) Handles txtHouseNo.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs) Handles txtRoad.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs) Handles txtLane.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtSubDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtSubDistrict.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtDistrict.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs) Handles txtProvince.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged
+        LoadData()
     End Sub
 End Class

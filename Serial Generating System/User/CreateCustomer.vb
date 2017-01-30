@@ -4,6 +4,19 @@ Imports System.Data
 Public Class CreateCustomer
     Private con As New ConnectDB
 
+
+    Function CheckData() As Boolean
+
+        Dim sql As String = "select top(1) from customer where corp_s_name = '" & txtCorp_s_Name.Text.Trim & "'"
+        Dim sqlread As SqlDataReader = con.query(sql)
+        If sqlread.Read Then
+            MsgBox("มีข้อมูลลูกค้าอยู่แล้ว")
+            txtCorp_s_Name.Clear()
+            Return False
+        End If
+        Return True
+    End Function
+
     Private Sub add()
 
         Dim strSQL As String
@@ -85,7 +98,10 @@ Public Class CreateCustomer
         Dim check As Boolean = False
         check = ValidateDataInput()
         If check = True Then
+            'If CheckData() = True Then
             add()
+            'End If
+
         End If
     End Sub
 

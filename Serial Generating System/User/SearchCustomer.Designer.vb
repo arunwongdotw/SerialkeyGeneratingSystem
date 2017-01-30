@@ -337,6 +337,7 @@ Partial Class SearchCustomer
         Me.btnSearch.TabIndex = 30
         Me.btnSearch.Text = "ค้นหา"
         Me.btnSearch.UseVisualStyleBackColor = False
+        Me.btnSearch.Visible = False
         '
         'txtCorp_s_name
         '
