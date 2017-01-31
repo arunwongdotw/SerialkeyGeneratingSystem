@@ -114,6 +114,18 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\AddProduct.Designer.vb">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\SearchProduct.Designer.vb">
+      <DependentUpon>SearchProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\SearchProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
@@ -193,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\MainAdmin.resx">
       <DependentUpon>MainAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\AddProduct.resx">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\SearchProduct.resx">
+      <DependentUpon>SearchProduct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

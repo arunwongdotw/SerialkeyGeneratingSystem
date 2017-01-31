@@ -6,17 +6,23 @@ Public Class CreateCustomer
     Private con As New ConnectDB
 
 
-    Function CheckData() As Boolean
+    'Function CheckData() As Boolean
+    '    Try
+    '        Dim sql As String = "select top(1) from customer where corp_s_name = '" & txtCorp_s_Name.Text.Trim & "'"
+    '        Dim sqlread As SqlDataReader = con.query(sql)
+    '        If sqlread.Read Then
+    '            MsgBox("มีข้อมูลลูกค้าอยู่แล้ว")
+    '            txtCorp_s_Name.Clear()
+    '            Return False
+    '        End If
+    '        Return True
+    '    Catch
+    '        MsgBox("มีข้อมูลลูกค้าอยู่แล้ว")
+    '        txtCorp_s_Name.Clear()
+    '        Return False
+    '    End Try
 
-        Dim sql As String = "select top(1) from customer where corp_s_name = '" & txtCorp_s_Name.Text.Trim & "'"
-        Dim sqlread As SqlDataReader = con.query(sql)
-        If sqlread.Read Then
-            MsgBox("มีข้อมูลลูกค้าอยู่แล้ว")
-            txtCorp_s_Name.Clear()
-            Return False
-        End If
-        Return True
-    End Function
+    'End Function
 
     Private Sub add()
 
@@ -96,6 +102,8 @@ Public Class CreateCustomer
             MsgBox("กรุณากรอกจังหวัด")
         ElseIf txtPhone.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์")
+        ElseIf txtPostalCode.Text = "" Then
+            MsgBox("กรุณากรอกรหัสไปรษณีย์")
         Else
             isCorrect = True
         End If

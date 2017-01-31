@@ -32,14 +32,11 @@ Partial Class CreateCustomer
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateCustomer))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -74,6 +71,10 @@ Partial Class CreateCustomer
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,6 +82,8 @@ Partial Class CreateCustomer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label22)
@@ -88,7 +91,6 @@ Partial Class CreateCustomer
         Me.Panel1.Controls.Add(Me.Label21)
         Me.Panel1.Controls.Add(Me.Label20)
         Me.Panel1.Controls.Add(Me.Label19)
-        Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label15)
@@ -128,31 +130,6 @@ Partial Class CreateCustomer
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1354, 729)
         Me.Panel1.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(280, 112)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 106)
-        Me.PictureBox1.TabIndex = 80
-        Me.PictureBox1.TabStop = False
-        '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
-        Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -204,16 +181,6 @@ Partial Class CreateCustomer
         Me.Label19.Size = New System.Drawing.Size(18, 27)
         Me.Label19.TabIndex = 75
         Me.Label19.Text = "*"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(818, 385)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 27)
-        Me.Label18.TabIndex = 74
-        Me.Label18.Text = "*"
         '
         'Label17
         '
@@ -521,6 +488,51 @@ Partial Class CreateCustomer
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(280, 112)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(115, 106)
+        Me.PictureBox1.TabIndex = 80
+        Me.PictureBox1.TabStop = False
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(818, 436)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 27)
+        Me.Label1.TabIndex = 81
+        Me.Label1.Text = "*"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(1308, 436)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(18, 27)
+        Me.Label2.TabIndex = 82
+        Me.Label2.Text = "*"
+        '
         'CreateCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -574,11 +586,12 @@ Partial Class CreateCustomer
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
