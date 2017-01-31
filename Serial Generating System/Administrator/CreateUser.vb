@@ -113,7 +113,7 @@ Public Class CreateUser
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True Then
+        If check = True AndAlso Not checkDuplicate() Then
             add()
         End If
     End Sub
@@ -225,4 +225,21 @@ Public Class CreateUser
                 MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
+
+    Public Function checkDuplicate() As Boolean
+        If isEmployeeDuplicate("username", txtUsername.Text) Then
+            MessageBox.Show("ชื่อผู้ใช้ซ้ำ")
+            Return True
+        End If
+        Return False
+    End Function
+
+    Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
+        Dim isDup As Boolean = False
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "'"
+        isDup = con.query(strSelect).Read
+        con.close()
+        Return isDup
+    End Function
+
 End Class
