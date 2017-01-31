@@ -9,7 +9,7 @@ Public Class CreateUser
         Dim perCreate As String
         Dim perDelete As String
         Dim perEdit As String
-        Dim position As String
+        Dim position As String = ""
         If cmbUserType.Text = "ผู้ใช้งานทั่วไป" Then
             userType = "user"
         Else
@@ -70,22 +70,28 @@ Public Class CreateUser
 
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
-        Dim CharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
+        Dim MatchCharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
+        Dim NotMatchNumberRegex As String = "^([^0-9]*)$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
-        Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
-        Dim CharAndNumberRegexCheck As New Regex(CharAndNumberRegex)
+        Dim PhoneNumberRegex As String = "^[0]{1}[0-9]{9}$"
+        Dim MatchCharAndNumberRegexCheck As New Regex(MatchCharAndNumberRegex)
         Dim EmailRegexCheck As New Regex(EmailRegex)
-        Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
+        Dim PhoneNumberRegexCheck As New Regex(PhoneNumberRegex)
+        Dim NotMatchNumberRegexCheck As New Regex(NotMatchNumberRegex)
         'Dim EmailValidation As Boolean
         'EmailValidation = EmailValidate(txtEmail.Text)
-        If Not CharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
-            MsgBox("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
-        ElseIf Not CharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
-            MsgBox("กรุณากรอกรหัสผ่านเฉพาะตัวอักษรและตัวเลขเท่านั้น")
+        If Not MatchCharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
+            MsgBox("ชื่อผู้ใช้ต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
+            MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhoneNumber.Text) Then
+        ElseIf Not PhoneNumberRegexCheck.IsMatch(txtPhoneNumber.Text) Then
             MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
+        ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtFirstName.Text) Then
+            MsgBox("รูปแบบชื่อไม่ถูกต้อง")
+        ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtLastName.Text) Then
+            MsgBox("รูปแบบนามสกุลไม่ถูกต้อง")
         ElseIf txtUsername.Text = "" Then
             MsgBox("กรุณากรอกชื่อผู้ใช้")
         ElseIf txtPassword.Text = "" Then
@@ -154,5 +160,69 @@ Public Class CreateUser
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsername.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ชื่อผู้ใช้ต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        End Select
+    End Sub
+
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        End Select
+    End Sub
+
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+        End Select
+    End Sub
+
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+        End Select
+    End Sub
+
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+        End Select
     End Sub
 End Class

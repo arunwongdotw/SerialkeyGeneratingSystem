@@ -80,6 +80,7 @@ Partial Class ChangePasswordUser
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1349, 65)
         Me.btnHeader.TabIndex = 74
+        Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
@@ -125,7 +126,7 @@ Partial Class ChangePasswordUser
         Me.btnLogOut.Location = New System.Drawing.Point(63, 643)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 21
+        Me.btnLogOut.TabIndex = 5
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -136,7 +137,7 @@ Partial Class ChangePasswordUser
         Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(638, 291)
         Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
         Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(365, 36)
-        Me.txtNewPasswordConfirm.TabIndex = 16
+        Me.txtNewPasswordConfirm.TabIndex = 3
         '
         'lblConfirmPassword
         '
@@ -157,8 +158,8 @@ Partial Class ChangePasswordUser
         Me.btnChangePassword.Location = New System.Drawing.Point(874, 396)
         Me.btnChangePassword.Name = "btnChangePassword"
         Me.btnChangePassword.Size = New System.Drawing.Size(129, 41)
-        Me.btnChangePassword.TabIndex = 14
-        Me.btnChangePassword.Text = "แก้ไขรหัสผ่าน"
+        Me.btnChangePassword.TabIndex = 4
+        Me.btnChangePassword.Text = "เปลี่ยนรหัสผ่าน"
         Me.btnChangePassword.UseVisualStyleBackColor = False
         '
         'txtNewPassword
@@ -168,7 +169,7 @@ Partial Class ChangePasswordUser
         Me.txtNewPassword.Location = New System.Drawing.Point(638, 233)
         Me.txtNewPassword.Name = "txtNewPassword"
         Me.txtNewPassword.Size = New System.Drawing.Size(365, 36)
-        Me.txtNewPassword.TabIndex = 13
+        Me.txtNewPassword.TabIndex = 2
         '
         'txtOldPassword
         '
@@ -177,7 +178,7 @@ Partial Class ChangePasswordUser
         Me.txtOldPassword.Location = New System.Drawing.Point(638, 171)
         Me.txtOldPassword.Name = "txtOldPassword"
         Me.txtOldPassword.Size = New System.Drawing.Size(365, 36)
-        Me.txtOldPassword.TabIndex = 12
+        Me.txtOldPassword.TabIndex = 1
         '
         'lblNewPassword
         '
@@ -225,6 +226,7 @@ Partial Class ChangePasswordUser
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
+        Me.tvUserMenu.TabStop = False
         '
         'ChangePasswordUser
         '

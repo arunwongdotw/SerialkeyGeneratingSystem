@@ -44,7 +44,7 @@ Partial Class Login
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(167, 35)
-        Me.btnLogin.TabIndex = 0
+        Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "เข้าสู่ระบบ"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
@@ -61,7 +61,7 @@ Partial Class Login
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(167, 35)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "ปิดการใช้งาน"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -74,7 +74,7 @@ Partial Class Login
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(257, 33)
-        Me.txtUsername.TabIndex = 4
+        Me.txtUsername.TabIndex = 1
         Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPassword
@@ -87,7 +87,7 @@ Partial Class Login
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(257, 33)
-        Me.txtPassword.TabIndex = 5
+        Me.txtPassword.TabIndex = 2
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnLoginUsername
@@ -100,7 +100,8 @@ Partial Class Login
         Me.btnLoginUsername.Location = New System.Drawing.Point(61, 202)
         Me.btnLoginUsername.Name = "btnLoginUsername"
         Me.btnLoginUsername.Size = New System.Drawing.Size(93, 33)
-        Me.btnLoginUsername.TabIndex = 6
+        Me.btnLoginUsername.TabIndex = 5
+        Me.btnLoginUsername.TabStop = False
         Me.btnLoginUsername.Text = "ชื่อผู้ใช้ :"
         Me.btnLoginUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLoginUsername.UseVisualStyleBackColor = False
@@ -115,7 +116,8 @@ Partial Class Login
         Me.btnLoginPassword.Location = New System.Drawing.Point(61, 236)
         Me.btnLoginPassword.Name = "btnLoginPassword"
         Me.btnLoginPassword.Size = New System.Drawing.Size(93, 33)
-        Me.btnLoginPassword.TabIndex = 7
+        Me.btnLoginPassword.TabIndex = 6
+        Me.btnLoginPassword.TabStop = False
         Me.btnLoginPassword.Text = "รหัสผ่าน :"
         Me.btnLoginPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLoginPassword.UseVisualStyleBackColor = False

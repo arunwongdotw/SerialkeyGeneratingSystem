@@ -34,7 +34,6 @@ Partial Class SearchUser
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.bntSearch = New System.Windows.Forms.Button()
         Me.txtPhoneNo = New System.Windows.Forms.TextBox()
         Me.lblPhoneNo = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -61,7 +60,6 @@ Partial Class SearchUser
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnClear)
-        Me.Panel1.Controls.Add(Me.bntSearch)
         Me.Panel1.Controls.Add(Me.txtPhoneNo)
         Me.Panel1.Controls.Add(Me.lblPhoneNo)
         Me.Panel1.Controls.Add(Me.txtEmail)
@@ -95,6 +93,7 @@ Partial Class SearchUser
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1349, 66)
         Me.btnHeader.TabIndex = 35
+        Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ผู้ดูแลระบบ"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
@@ -107,7 +106,7 @@ Partial Class SearchUser
         Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 34
+        Me.btnLogOut.TabIndex = 9
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -117,35 +116,22 @@ Partial Class SearchUser
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1125, 347)
+        Me.btnClear.Location = New System.Drawing.Point(936, 244)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 33
+        Me.btnClear.Size = New System.Drawing.Size(318, 41)
+        Me.btnClear.TabIndex = 8
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'bntSearch
-        '
-        Me.bntSearch.BackColor = System.Drawing.Color.DarkOrange
-        Me.bntSearch.FlatAppearance.BorderSize = 0
-        Me.bntSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bntSearch.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bntSearch.Location = New System.Drawing.Point(714, 318)
-        Me.bntSearch.Name = "bntSearch"
-        Me.bntSearch.Size = New System.Drawing.Size(129, 41)
-        Me.bntSearch.TabIndex = 32
-        Me.bntSearch.Text = "ค้นหา"
-        Me.bntSearch.UseVisualStyleBackColor = False
         '
         'txtPhoneNo
         '
         Me.txtPhoneNo.BackColor = System.Drawing.SystemColors.Window
         Me.txtPhoneNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNo.Location = New System.Drawing.Point(936, 158)
+        Me.txtPhoneNo.Location = New System.Drawing.Point(936, 154)
         Me.txtPhoneNo.MaxLength = 100
         Me.txtPhoneNo.Name = "txtPhoneNo"
         Me.txtPhoneNo.Size = New System.Drawing.Size(318, 36)
-        Me.txtPhoneNo.TabIndex = 31
+        Me.txtPhoneNo.TabIndex = 4
         '
         'lblPhoneNo
         '
@@ -162,21 +148,21 @@ Partial Class SearchUser
         '
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(936, 203)
+        Me.txtEmail.Location = New System.Drawing.Point(936, 198)
         Me.txtEmail.MaxLength = 100
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 29
+        Me.txtEmail.TabIndex = 6
         '
         'txtPosition
         '
         Me.txtPosition.BackColor = System.Drawing.SystemColors.Window
         Me.txtPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPosition.Location = New System.Drawing.Point(936, 113)
+        Me.txtPosition.Location = New System.Drawing.Point(936, 109)
         Me.txtPosition.MaxLength = 100
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(318, 36)
-        Me.txtPosition.TabIndex = 28
+        Me.txtPosition.TabIndex = 2
         '
         'lblEmail
         '
@@ -193,7 +179,7 @@ Partial Class SearchUser
         '
         Me.lblPosition.AutoSize = True
         Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPosition.Location = New System.Drawing.Point(856, 113)
+        Me.lblPosition.Location = New System.Drawing.Point(856, 111)
         Me.lblPosition.Name = "lblPosition"
         Me.lblPosition.Size = New System.Drawing.Size(73, 27)
         Me.lblPosition.TabIndex = 26
@@ -208,7 +194,7 @@ Partial Class SearchUser
         Me.txtLastname.MaxLength = 100
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.Size = New System.Drawing.Size(318, 36)
-        Me.txtLastname.TabIndex = 25
+        Me.txtLastname.TabIndex = 7
         '
         'txtFirstname
         '
@@ -218,7 +204,7 @@ Partial Class SearchUser
         Me.txtFirstname.MaxLength = 100
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.Size = New System.Drawing.Size(318, 36)
-        Me.txtFirstname.TabIndex = 24
+        Me.txtFirstname.TabIndex = 5
         '
         'lblLastname
         '
@@ -250,7 +236,7 @@ Partial Class SearchUser
         Me.txtEmployeeId.MaxLength = 50
         Me.txtEmployeeId.Name = "txtEmployeeId"
         Me.txtEmployeeId.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmployeeId.TabIndex = 15
+        Me.txtEmployeeId.TabIndex = 3
         '
         'txtUsername
         '
@@ -260,7 +246,7 @@ Partial Class SearchUser
         Me.txtUsername.MaxLength = 100
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(318, 36)
-        Me.txtUsername.TabIndex = 14
+        Me.txtUsername.TabIndex = 1
         '
         'lblIdEmp
         '
@@ -289,10 +275,11 @@ Partial Class SearchUser
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSearchUser.Location = New System.Drawing.Point(262, 418)
+        Me.dgvSearchUser.Location = New System.Drawing.Point(262, 315)
         Me.dgvSearchUser.Name = "dgvSearchUser"
-        Me.dgvSearchUser.Size = New System.Drawing.Size(1076, 299)
+        Me.dgvSearchUser.Size = New System.Drawing.Size(1076, 378)
         Me.dgvSearchUser.TabIndex = 11
+        Me.dgvSearchUser.TabStop = False
         '
         'tvAdminMenu
         '
@@ -318,6 +305,7 @@ Partial Class SearchUser
         Me.tvAdminMenu.ShowLines = False
         Me.tvAdminMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvAdminMenu.TabIndex = 0
+        Me.tvAdminMenu.TabStop = False
         '
         'SearchUser
         '
@@ -354,5 +342,4 @@ Partial Class SearchUser
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents bntSearch As System.Windows.Forms.Button
 End Class

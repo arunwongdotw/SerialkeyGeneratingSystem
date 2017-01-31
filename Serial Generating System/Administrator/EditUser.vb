@@ -64,13 +64,14 @@ Public Class EditUser
             userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
             oldData.Add("per_edit", perEdit)
             oldData.Add("user_type", userType)
+            txtUsername.Enabled = False
+
         End If
         If position.Equals("IT") Then
             rdbIT.Checked = True
         ElseIf position.Equals("Accountant") Then
             rdbAccountant.Checked = True
         End If
-
         If perCreate = 1 Then
             chbPerCreate.Checked = True
         ElseIf perCreate = 0 Then
@@ -93,10 +94,9 @@ Public Class EditUser
         End If
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFromValid() Then
+        If isFromValid() AndAlso Not checkDuplicate() Then
             Dim strquery = "update sgs.dbo.employee set "
             strquery &= " emp_id = '" & txtEmpID.Text.Trim & "' , "
-            strquery &= " username = '" & txtUsername.Text.Trim & "' , "
             strquery &= " password = '" & txtPassword.Text.Trim & "' , "
             strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
             strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
@@ -141,14 +141,11 @@ Public Class EditUser
         Dim regexCharAndNumber = "^[0-9a-zA-Z]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
         Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
-        If Not New Regex(regexCharAndNumber).IsMatch(txtUsername.Text.Trim) Or txtUsername.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
-            valid = False
-        ElseIf Not New Regex(regexCharAndNumber).IsMatch(txtPassword.Text.Trim) Or txtPassword.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
+        If Not New Regex(regexCharAndNumber).IsMatch(txtPassword.Text.Trim) Or txtPassword.Text.Trim = String.Empty Then
+            MessageBox.Show("กรุณากรอกรหัสผ่านเฉพาะตัวอักษรและตัวเลขเท่านั้น")
             valid = False
         ElseIf Not New Regex(regexCharAndNumber).IsMatch(txtEmpID.Text.Trim) Or txtEmpID.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกชื่อผู้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น")
+            MessageBox.Show("กรุณากรอกรหัสพนักงานเฉพาะตัวอักษรและตัวเลขเท่านั้น")
             valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกชื่อ")
@@ -156,12 +153,16 @@ Public Class EditUser
         ElseIf txtLastName.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกนามสกุล")
             valid = False
-        ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
-            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
+            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์")
             valid = False
         ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtPhoneNumber.Text.Trim) Then
             MessageBox.Show("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
             valid = False
+        ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
+            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
+            valid = False
+        
         End If
         Return valid
     End Function
@@ -183,6 +184,31 @@ Public Class EditUser
     Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
         position = "IT"
     End Sub
+
+    Public Function checkDuplicate() As Boolean
+        If isEmployeeDuplicate("password", txtPassword.Text) Then
+            MessageBox.Show("รหัสผ่านซ้ำซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
+            MessageBox.Show("รหัสพนักงานซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("phonenumber", txtPhoneNumber.Text) Then
+            MessageBox.Show("หมายเลขโทรศัพย์ซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
+            MessageBox.Show("อีเมลซ้ำ")
+            Return True
+        End If
+        Return False
+    End Function
+
+    Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
+        Dim isDup As Boolean = False
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "' and id not in (" & id & ")"
+        isDup = con.query(strSelect).Read
+        con.close()
+        Return isDup
+    End Function
 
     Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
         position = "Accountant"
