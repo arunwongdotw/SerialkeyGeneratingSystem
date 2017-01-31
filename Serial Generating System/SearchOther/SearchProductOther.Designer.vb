@@ -44,7 +44,6 @@ Partial Class SearchProductOther
         Me.lblLastname = New System.Windows.Forms.Label()
         Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtProduct_s_name = New System.Windows.Forms.TextBox()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.lblCorp_s_name = New System.Windows.Forms.Label()
@@ -62,12 +61,15 @@ Partial Class SearchProductOther
         '
         'dgvSearchProduct
         '
+        Me.dgvSearchProduct.AllowUserToAddRows = False
+        Me.dgvSearchProduct.AllowUserToDeleteRows = False
         Me.dgvSearchProduct.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        Me.dgvSearchProduct.Location = New System.Drawing.Point(13, 315)
+        Me.dgvSearchProduct.Location = New System.Drawing.Point(3, 315)
         Me.dgvSearchProduct.Name = "dgvSearchProduct"
+        Me.dgvSearchProduct.ReadOnly = True
         Me.dgvSearchProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSearchProduct.Size = New System.Drawing.Size(1031, 253)
         Me.dgvSearchProduct.TabIndex = 120
@@ -76,78 +78,92 @@ Partial Class SearchProductOther
         '
         Me.Column1.HeaderText = "ลำดับที่"
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         Me.Column1.Width = 40
         '
         'Column2
         '
         Me.Column2.HeaderText = "ชื่อย่อบริษัท"
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         Me.Column2.Width = 50
         '
         'Column3
         '
         Me.Column3.HeaderText = "ชื่อบริษัท"
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         Me.Column3.Width = 150
         '
         'Column4
         '
         Me.Column4.HeaderText = "กลุ่มบริษัท"
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         Me.Column4.Width = 75
         '
         'Column5
         '
         Me.Column5.HeaderText = "ชื่อ-นามสกุล"
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         Me.Column5.Width = 175
         '
         'Column6
         '
         Me.Column6.HeaderText = "เลขที่"
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         Me.Column6.Width = 50
         '
         'Column7
         '
         Me.Column7.HeaderText = "ถนน"
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Column8
         '
         Me.Column8.HeaderText = "ซอย"
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Column9
         '
         Me.Column9.HeaderText = "ตำบล/แขวง"
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'Column10
         '
         Me.Column10.HeaderText = "อำเภอ/เขต"
         Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         '
         'Column11
         '
         Me.Column11.HeaderText = "จังหวัด"
         Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
         '
         'Column12
         '
         Me.Column12.HeaderText = "รหัสไปรษณีย์"
         Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
         Me.Column12.Width = 50
         '
         'Column13
         '
         Me.Column13.HeaderText = "อีเมล"
         Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
         '
         'Column14
         '
         Me.Column14.HeaderText = "โทรศัพท์"
         Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
         '
         'txtBrandName
         '
@@ -174,9 +190,9 @@ Partial Class SearchProductOther
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(800, 219)
+        Me.btnClear.Location = New System.Drawing.Point(739, 200)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 64)
+        Me.btnClear.Size = New System.Drawing.Size(240, 64)
         Me.btnClear.TabIndex = 103
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
@@ -218,20 +234,6 @@ Partial Class SearchProductOther
         Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
         Me.lblFirstName.TabIndex = 95
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.Color.SandyBrown
-        Me.btnSearch.FlatAppearance.BorderSize = 0
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(609, 219)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(129, 64)
-        Me.btnSearch.TabIndex = 94
-        Me.btnSearch.Text = "ค้นหา"
-        Me.btnSearch.UseVisualStyleBackColor = False
-        Me.btnSearch.Visible = False
         '
         'txtProduct_s_name
         '
@@ -275,7 +277,7 @@ Partial Class SearchProductOther
         '
         Me.chbWM.AutoSize = True
         Me.chbWM.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbWM.Location = New System.Drawing.Point(712, 133)
+        Me.chbWM.Location = New System.Drawing.Point(473, 196)
         Me.chbWM.Name = "chbWM"
         Me.chbWM.Size = New System.Drawing.Size(198, 31)
         Me.chbWM.TabIndex = 128
@@ -286,7 +288,7 @@ Partial Class SearchProductOther
         '
         Me.chbQC.AutoSize = True
         Me.chbQC.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbQC.Location = New System.Drawing.Point(712, 170)
+        Me.chbQC.Location = New System.Drawing.Point(473, 233)
         Me.chbQC.Name = "chbQC"
         Me.chbQC.Size = New System.Drawing.Size(134, 31)
         Me.chbQC.TabIndex = 127
@@ -297,7 +299,7 @@ Partial Class SearchProductOther
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.Label4.Location = New System.Drawing.Point(598, 139)
+        Me.Label4.Location = New System.Drawing.Point(359, 202)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(108, 27)
         Me.Label4.TabIndex = 126
@@ -361,7 +363,7 @@ Partial Class SearchProductOther
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1056, 580)
+        Me.ClientSize = New System.Drawing.Size(1035, 580)
         Me.Controls.Add(Me.chbWM)
         Me.Controls.Add(Me.chbQC)
         Me.Controls.Add(Me.Label4)
@@ -378,7 +380,6 @@ Partial Class SearchProductOther
         Me.Controls.Add(Me.lblLastname)
         Me.Controls.Add(Me.txtBrand_s_name)
         Me.Controls.Add(Me.lblFirstName)
-        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtProduct_s_name)
         Me.Controls.Add(Me.txtProductName)
         Me.Controls.Add(Me.lblCorp_s_name)
@@ -412,7 +413,6 @@ Partial Class SearchProductOther
     Friend WithEvents lblLastname As System.Windows.Forms.Label
     Friend WithEvents txtBrand_s_name As System.Windows.Forms.TextBox
     Friend WithEvents lblFirstName As System.Windows.Forms.Label
-    Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents txtProduct_s_name As System.Windows.Forms.TextBox
     Friend WithEvents txtProductName As System.Windows.Forms.TextBox
     Friend WithEvents lblCorp_s_name As System.Windows.Forms.Label

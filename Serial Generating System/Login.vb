@@ -99,7 +99,7 @@ Public Class Login
                 frm.Show()
                 Me.Hide()
             ElseIf type.Equals("user") Then
-                Dim frm As New CreateCustomer
+                Dim frm As New CreateSerial
                 frm.Show()
                 Me.Hide()
             End If
