@@ -94,6 +94,7 @@ Partial Class CheckConnectUser
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1352, 68)
         Me.btnHeader.TabIndex = 24
+        Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ผู้ดูแลระบบ"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
@@ -128,7 +129,7 @@ Partial Class CheckConnectUser
         Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 21
+        Me.btnLogOut.TabIndex = 1
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -141,6 +142,7 @@ Partial Class CheckConnectUser
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(92, 29)
         Me.TextBox2.TabIndex = 15
+        Me.TextBox2.TabStop = False
         '
         'TextBox1
         '
@@ -151,6 +153,7 @@ Partial Class CheckConnectUser
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(92, 29)
         Me.TextBox1.TabIndex = 14
+        Me.TextBox1.TabStop = False
         '
         'Label2
         '
@@ -158,9 +161,9 @@ Partial Class CheckConnectUser
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(948, 668)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(151, 26)
+        Me.Label2.Size = New System.Drawing.Size(140, 26)
         Me.Label2.TabIndex = 13
-        Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้ |"
+        Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
@@ -169,9 +172,9 @@ Partial Class CheckConnectUser
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(940, 622)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(158, 26)
+        Me.Label1.Size = New System.Drawing.Size(147, 26)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด |"
+        Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'DataGridView1
@@ -182,6 +185,7 @@ Partial Class CheckConnectUser
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(847, 483)
         Me.DataGridView1.TabIndex = 11
+        Me.DataGridView1.TabStop = False
         '
         'seq
         '
@@ -245,6 +249,7 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.ShowLines = False
         Me.tvAdminMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvAdminMenu.TabIndex = 0
+        Me.tvAdminMenu.TabStop = False
         '
         'CheckConnectUser
         '
