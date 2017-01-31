@@ -64,22 +64,27 @@ Public Class SearchUser
             dgvSearchUser.Rows(i).Cells("ลำดับ").Value = i + 1
         Next
         randerColorRow()
+
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
         checkboxCreate.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxCreate)
+
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
         checkboxEdit.HeaderText = "สิทธิ์การแก้ไข"
         checkboxEdit.Name = "chbEdit"
+        'checkboxEdit.FlatStyle = FlatStyle.Flat
+        'checkboxEdit.DefaultCellStyle.ForeColor = Color.Gray
         checkboxEdit.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxEdit)
+
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
         checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทธิ์การลบ"
         checkboxDelete.ReadOnly = True
-
         dgvSearchUser.Columns.Add(checkboxDelete)
+
         Dim btnEdit As New DataGridViewButtonColumn()
         dgvSearchUser.Columns.Add(btnEdit)
         btnEdit.HeaderText = ""
@@ -87,6 +92,7 @@ Public Class SearchUser
         btnEdit.Name = "btnEdit"
         btnEdit.Width = 50
         btnEdit.UseColumnTextForButtonValue = True
+
         Dim btnDelete As New DataGridViewButtonColumn()
         dgvSearchUser.Columns.Add(btnDelete)
         btnDelete.HeaderText = ""
@@ -95,6 +101,7 @@ Public Class SearchUser
         btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
         setPermissionCheckBox()
+
     End Sub
     Private Sub randerColorRow()
         For i = 0 To dgvSearchUser.Rows.Count - 2
@@ -107,13 +114,13 @@ Public Class SearchUser
          loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub clearTxtBox()
-        txtUsername.Text = String.Empty
-        txtEmployeeId.Text = String.Empty
-        txtFirstname.Text = String.Empty
-        txtLastname.Text = String.Empty
-        txtPosition.Text = String.Empty
-        txtPhoneNo.Text = String.Empty
-        txtEmail.Text = String.Empty
+        txtUsername.Clear()
+        txtEmployeeId.Clear()
+        txtFirstname.Clear()
+        txtLastname.Clear()
+        txtPosition.Clear()
+        txtPhoneNo.Clear()
+        txtEmail.Clear()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clearTxtBox()
