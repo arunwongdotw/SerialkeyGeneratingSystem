@@ -215,4 +215,8 @@ Public Class SearchUser
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub bntSearch_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
+
+    End Sub
 End Class

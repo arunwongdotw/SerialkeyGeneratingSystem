@@ -34,19 +34,19 @@ Partial Class CreateSerial
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.chbWM = New System.Windows.Forms.CheckBox()
+        Me.chbQC = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtSoftware_s_name = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAddSoftware = New System.Windows.Forms.Button()
+        Me.btnSearchSoftware = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtBrandSoftware = New System.Windows.Forms.TextBox()
+        Me.txtBrandName = New System.Windows.Forms.TextBox()
         Me.lblBrandSoftware = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.lblSoftwareName = New System.Windows.Forms.Label()
@@ -54,7 +54,7 @@ Partial Class CreateSerial
         Me.txtSoftwareName = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnAddCustomerInfo = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnSearchCus = New System.Windows.Forms.Button()
         Me.txtGroupCorp = New System.Windows.Forms.TextBox()
         Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.lblGroupCorp = New System.Windows.Forms.Label()
@@ -62,7 +62,6 @@ Partial Class CreateSerial
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblSerialKey = New System.Windows.Forms.Label()
         Me.lblOptionLanguage = New System.Windows.Forms.Label()
@@ -87,6 +86,7 @@ Partial Class CreateSerial
         Me.lblExpireDate = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -121,19 +121,19 @@ Partial Class CreateSerial
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel4.Controls.Add(Me.CheckBox3)
-        Me.Panel4.Controls.Add(Me.CheckBox4)
+        Me.Panel4.Controls.Add(Me.chbWM)
+        Me.Panel4.Controls.Add(Me.chbQC)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Controls.Add(Me.TextBox2)
+        Me.Panel4.Controls.Add(Me.txtSoftware_s_name)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Controls.Add(Me.TextBox1)
+        Me.Panel4.Controls.Add(Me.txtBrand_s_name)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.Button1)
-        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.btnAddSoftware)
+        Me.Panel4.Controls.Add(Me.btnSearchSoftware)
         Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Controls.Add(Me.txtBrandSoftware)
+        Me.Panel4.Controls.Add(Me.txtBrandName)
         Me.Panel4.Controls.Add(Me.lblBrandSoftware)
         Me.Panel4.Controls.Add(Me.Label16)
         Me.Panel4.Controls.Add(Me.lblSoftwareName)
@@ -145,25 +145,25 @@ Partial Class CreateSerial
         Me.Panel4.Size = New System.Drawing.Size(1094, 248)
         Me.Panel4.TabIndex = 74
         '
-        'CheckBox3
+        'chbWM
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(279, 128)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(198, 31)
-        Me.CheckBox3.TabIndex = 113
-        Me.CheckBox3.Text = "Warehouse Management"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.chbWM.AutoSize = True
+        Me.chbWM.Location = New System.Drawing.Point(279, 128)
+        Me.chbWM.Name = "chbWM"
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
+        Me.chbWM.TabIndex = 113
+        Me.chbWM.Text = "Warehouse Management"
+        Me.chbWM.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'chbQC
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(279, 165)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(134, 31)
-        Me.CheckBox4.TabIndex = 112
-        Me.CheckBox4.Text = "Quality Control"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.chbQC.AutoSize = True
+        Me.chbQC.Location = New System.Drawing.Point(279, 165)
+        Me.chbQC.Name = "chbQC"
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
+        Me.chbQC.TabIndex = 112
+        Me.chbQC.Text = "Quality Control"
+        Me.chbQC.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -174,13 +174,13 @@ Partial Class CreateSerial
         Me.Label6.TabIndex = 111
         Me.Label6.Text = "ออฟชัน(ถ้ามี) :"
         '
-        'TextBox2
+        'txtSoftware_s_name
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Location = New System.Drawing.Point(788, 82)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 36)
-        Me.TextBox2.TabIndex = 109
+        Me.txtSoftware_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSoftware_s_name.Location = New System.Drawing.Point(788, 82)
+        Me.txtSoftware_s_name.Name = "txtSoftware_s_name"
+        Me.txtSoftware_s_name.Size = New System.Drawing.Size(200, 36)
+        Me.txtSoftware_s_name.TabIndex = 109
         '
         'Label4
         '
@@ -201,13 +201,13 @@ Partial Class CreateSerial
         Me.Label5.TabIndex = 110
         Me.Label5.Text = "*"
         '
-        'TextBox1
+        'txtBrand_s_name
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Location = New System.Drawing.Point(788, 30)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 36)
-        Me.TextBox1.TabIndex = 106
+        Me.txtBrand_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBrand_s_name.Location = New System.Drawing.Point(788, 30)
+        Me.txtBrand_s_name.Name = "txtBrand_s_name"
+        Me.txtBrand_s_name.Size = New System.Drawing.Size(200, 36)
+        Me.txtBrand_s_name.TabIndex = 106
         '
         'Label2
         '
@@ -228,31 +228,31 @@ Partial Class CreateSerial
         Me.Label3.TabIndex = 107
         Me.Label3.Text = "*"
         '
-        'Button1
+        'btnAddSoftware
         '
-        Me.Button1.BackColor = System.Drawing.Color.SandyBrown
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(850, 165)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(162, 41)
-        Me.Button1.TabIndex = 102
-        Me.Button1.Text = "เพิ่มข้อมูลซอฟต์แวร์"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAddSoftware.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnAddSoftware.FlatAppearance.BorderSize = 0
+        Me.btnAddSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddSoftware.Location = New System.Drawing.Point(850, 165)
+        Me.btnAddSoftware.Name = "btnAddSoftware"
+        Me.btnAddSoftware.Size = New System.Drawing.Size(162, 41)
+        Me.btnAddSoftware.TabIndex = 102
+        Me.btnAddSoftware.Text = "เพิ่มข้อมูลซอฟต์แวร์"
+        Me.btnAddSoftware.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnSearchSoftware
         '
-        Me.Button2.BackColor = System.Drawing.Color.SandyBrown
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(715, 165)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 41)
-        Me.Button2.TabIndex = 101
-        Me.Button2.Text = "ค้นหา"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSearchSoftware.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnSearchSoftware.FlatAppearance.BorderSize = 0
+        Me.btnSearchSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearchSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchSoftware.Location = New System.Drawing.Point(715, 165)
+        Me.btnSearchSoftware.Name = "btnSearchSoftware"
+        Me.btnSearchSoftware.Size = New System.Drawing.Size(129, 41)
+        Me.btnSearchSoftware.TabIndex = 101
+        Me.btnSearchSoftware.Text = "ค้นหา"
+        Me.btnSearchSoftware.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -265,13 +265,13 @@ Partial Class CreateSerial
         Me.Label1.TabIndex = 100
         Me.Label1.Text = "ข้อมูลซอฟต์แวร์ >>"
         '
-        'txtBrandSoftware
+        'txtBrandName
         '
-        Me.txtBrandSoftware.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtBrandSoftware.Location = New System.Drawing.Point(279, 30)
-        Me.txtBrandSoftware.Name = "txtBrandSoftware"
-        Me.txtBrandSoftware.Size = New System.Drawing.Size(329, 36)
-        Me.txtBrandSoftware.TabIndex = 97
+        Me.txtBrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBrandName.Location = New System.Drawing.Point(279, 30)
+        Me.txtBrandName.Name = "txtBrandName"
+        Me.txtBrandName.Size = New System.Drawing.Size(329, 36)
+        Me.txtBrandName.TabIndex = 97
         '
         'lblBrandSoftware
         '
@@ -323,7 +323,7 @@ Partial Class CreateSerial
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.btnAddCustomerInfo)
-        Me.Panel2.Controls.Add(Me.btnSearch)
+        Me.Panel2.Controls.Add(Me.btnSearchCus)
         Me.Panel2.Controls.Add(Me.txtGroupCorp)
         Me.Panel2.Controls.Add(Me.lblInfoCustomer)
         Me.Panel2.Controls.Add(Me.lblGroupCorp)
@@ -350,18 +350,18 @@ Partial Class CreateSerial
         Me.btnAddCustomerInfo.Text = "เพิ่มข้อมูลลูกค้าใหม่"
         Me.btnAddCustomerInfo.UseVisualStyleBackColor = False
         '
-        'btnSearch
+        'btnSearchCus
         '
-        Me.btnSearch.BackColor = System.Drawing.Color.SandyBrown
-        Me.btnSearch.FlatAppearance.BorderSize = 0
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(724, 71)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(129, 41)
-        Me.btnSearch.TabIndex = 67
-        Me.btnSearch.Text = "ค้นหา"
-        Me.btnSearch.UseVisualStyleBackColor = False
+        Me.btnSearchCus.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnSearchCus.FlatAppearance.BorderSize = 0
+        Me.btnSearchCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearchCus.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchCus.Location = New System.Drawing.Point(724, 71)
+        Me.btnSearchCus.Name = "btnSearchCus"
+        Me.btnSearchCus.Size = New System.Drawing.Size(129, 41)
+        Me.btnSearchCus.TabIndex = 67
+        Me.btnSearchCus.Text = "ค้นหา"
+        Me.btnSearchCus.UseVisualStyleBackColor = False
         '
         'txtGroupCorp
         '
@@ -424,21 +424,6 @@ Partial Class CreateSerial
         Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
         Me.lblCorpSubName.TabIndex = 68
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
-        '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1349, 67)
-        Me.btnHeader.TabIndex = 72
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -715,6 +700,21 @@ Partial Class CreateSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1349, 67)
+        Me.btnHeader.TabIndex = 72
+        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
         'CreateSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -741,7 +741,7 @@ Partial Class CreateSerial
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents btnAddCustomerInfo As System.Windows.Forms.Button
-    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents btnSearchCus As System.Windows.Forms.Button
     Friend WithEvents txtGroupCorp As System.Windows.Forms.TextBox
     Friend WithEvents lblInfoCustomer As System.Windows.Forms.Label
     Friend WithEvents lblGroupCorp As System.Windows.Forms.Label
@@ -750,19 +750,19 @@ Partial Class CreateSerial
     Friend WithEvents lblCorpName As System.Windows.Forms.Label
     Friend WithEvents lblCorpSubName As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents chbWM As System.Windows.Forms.CheckBox
+    Friend WithEvents chbQC As System.Windows.Forms.CheckBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtSoftware_s_name As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtBrand_s_name As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnAddSoftware As System.Windows.Forms.Button
+    Friend WithEvents btnSearchSoftware As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtBrandSoftware As System.Windows.Forms.TextBox
+    Friend WithEvents txtBrandName As System.Windows.Forms.TextBox
     Friend WithEvents lblBrandSoftware As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents lblSoftwareName As System.Windows.Forms.Label

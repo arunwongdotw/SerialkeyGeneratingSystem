@@ -1,11 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class SearchCustomer
+Public Class searchCusOther
+
     Private con As New ConnectDB
+    Public row_search As DataRow
 
     Private Sub SearchCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Application.Exit()
+        Me.Hide()
+
 
     End Sub
 
@@ -15,7 +18,7 @@ Public Class SearchCustomer
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.GenerateColumn()
         Me.LoadData()
-        tvUserMenu.ExpandAll()
+        'tvUserMenu.ExpandAll()
 
     End Sub
 
@@ -207,7 +210,7 @@ Public Class SearchCustomer
             'sql &= province & postalcode & email & phone
 
             sql = "select id,corpname,corp_s_name,corpgroup,(firstname+' '+lastname) as fullname,house_no,road,lane,subdistrict "
-            sql &= ",district , province, postalcode, email, phone from customer where id <> -1 "
+            sql &= ",district , province, postalcode, email, phone from customer where id <> 0 "
             sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             sql &= province & postalcode & email & phone
 
@@ -293,35 +296,35 @@ Public Class SearchCustomer
 
     End Sub
 
-    Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
-        Try
-            Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
-            If Not (tvUserMenu.SelectedNode Is Nothing) Then
-                Select Case tn.Name
-                    Case "ndCreateSerialkey"
-                        CreateSerial.Show()
-                        Me.Hide()
-                    Case "ndFindSerialkey"
-                        SearchSerial.Show()
-                        Me.Hide()
-                    Case "ndAddCustomer"
-                        CreateCustomer.Show()
-                        Me.Hide()
-                    Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
-                        Me.Hide()
-                End Select
-            End If
-        Catch ex As Exception
+    'Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
+    '    Try
+    '        Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
+    '        If Not (tvUserMenu.SelectedNode Is Nothing) Then
+    '            Select Case tn.Name
+    '                Case "ndCreateSerialkey"
+    '                    CreateSerial.Show()
+    '                    Me.Hide()
+    '                Case "ndFindSerialkey"
+    '                    SearchSerial.Show()
+    '                    Me.Hide()
+    '                Case "ndAddCustomer"
+    '                    CreateCustomer.Show()
+    '                    Me.Hide()
+    '                Case "ndUserResetPassword"
+    '                    ChangePasswordUser.Show()
+    '                    Me.Hide()
+    '            End Select
+    '        End If
+    '    Catch ex As Exception
 
-        End Try
-    End Sub
+    '    End Try
+    'End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim frm As New Login
-        frm.Show()
-        Me.Hide()
-    End Sub
+    'Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+    '    Dim frm As New Login
+    '    frm.Show()
+    '    Me.Hide()
+    'End Sub
 
     Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
         LoadData()
@@ -377,5 +380,16 @@ Public Class SearchCustomer
 
     Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged
         LoadData()
+    End Sub
+
+    Private Sub dgvSearchCus_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchCus.CellContentClick
+
+    End Sub
+
+    Private Sub dgvSearchCus_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles dgvSearchCus.MouseDoubleClick
+        Dim Cur As CurrencyManager = Me.dgvSearchCus.BindingContext(Me.dgvSearchCus.DataSource, Me.dgvSearchCus.DataMember)
+        Me.row_search = Cur.Current.row
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.Dispose()
     End Sub
 End Class

@@ -114,6 +114,18 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SearchOther\searchCusOther.Designer.vb">
+      <DependentUpon>searchCusOther.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOther\searchCusOther.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOther\SearchProductOther.Designer.vb">
+      <DependentUpon>SearchProductOther.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOther\SearchProductOther.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\AddProduct.Designer.vb">
       <DependentUpon>AddProduct.vb</DependentUpon>
     </Compile>
@@ -205,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\MainAdmin.resx">
       <DependentUpon>MainAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOther\searchCusOther.resx">
+      <DependentUpon>searchCusOther.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOther\SearchProductOther.resx">
+      <DependentUpon>SearchProductOther.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\AddProduct.resx">
       <DependentUpon>AddProduct.vb</DependentUpon>
