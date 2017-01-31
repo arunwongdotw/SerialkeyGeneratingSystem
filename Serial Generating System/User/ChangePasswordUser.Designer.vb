@@ -158,7 +158,7 @@ Partial Class ChangePasswordUser
         Me.btnChangePassword.Name = "btnChangePassword"
         Me.btnChangePassword.Size = New System.Drawing.Size(129, 41)
         Me.btnChangePassword.TabIndex = 14
-        Me.btnChangePassword.Text = "แก้ไขรหัสผ่าน"
+        Me.btnChangePassword.Text = "เปลี่ยนรหัสผ่าน"
         Me.btnChangePassword.UseVisualStyleBackColor = False
         '
         'txtNewPassword

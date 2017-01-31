@@ -2,30 +2,23 @@
 Imports System.Data
 
 Public Class Login
+    Public Shared user As String = ""
+    Public Shared pass As String = ""
     Private username = ""
     Private password = ""
     Private con As New ConnectDB
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
-
     End Sub
 
-
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.Visible = False
         Dim s = New WelcomeScreen
         s.Show()
         System.Threading.Thread.Sleep(1000)
         s.Close()
-
         Me.Visible = True
-
-
-
-
         Me.txtUsername.TextAlign = HorizontalAlignment.Center
         'txtUsername.ForeColor = Color.Gray
         txtUsername.ForeColor = Color.Black
@@ -91,16 +84,16 @@ Public Class Login
         End If
     End Sub
     Private Sub LoadData()
+        user = txtUsername.Text
+        pass = txtPassword.Text
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
         If sqlread Is Nothing Then
             MsgBox("query ผิด")
         ElseIf Not sqlread.Read Then
             MsgBox("บัญชีผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
-
         Else
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
-
             If type.Equals("admin") Then
                 Dim frm As New CreateUser
                 frm.Show()
@@ -116,22 +109,9 @@ Public Class Login
 
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
         LoadData()
-
-    End Sub
-
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Application.Exit()
-
     End Sub
-
-    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-
-    End Sub
-
-
-
 End Class
