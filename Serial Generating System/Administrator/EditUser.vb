@@ -67,8 +67,8 @@ Public Class EditUser
         End If
         If position.Equals("IT") Then
             rdbIT.Checked = True
-        ElseIf position.Equals("accountant") Then
-            rdbIT.Checked = True
+        ElseIf position.Equals("Accountant") Then
+            rdbAccountant.Checked = True
         End If
 
         If perCreate = 1 Then
@@ -185,6 +185,6 @@ Public Class EditUser
     End Sub
 
     Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
-        position = "accountant"
+        position = "Accountant"
     End Sub
 End Class
