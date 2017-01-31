@@ -90,6 +90,8 @@ Public Class CreateCustomer
             MsgBox("กรุณากรอกชื่อบริษัท")
         ElseIf txtCorp_s_Name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท")
+        ElseIf txtCorp_s_Name.TextLength < 3 Or txtCorp_s_Name.TextLength > 5 Then
+            MsgBox("กรุณากรอกชื่อย่อบริษัทระหว่าง 3-5 ตัวอักษร")
         ElseIf txtCorpGroup.Text = "" Then
             MsgBox("กรุณากรอกชื่อกลุ่มบริษัท")
         ElseIf txtHouseNo.Text = "" Then
@@ -284,5 +286,21 @@ Public Class CreateCustomer
         End Try
     End Sub
 
+    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
+        End Select
+    End Sub
+
+
+    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
+
+    End Sub
 End Class
