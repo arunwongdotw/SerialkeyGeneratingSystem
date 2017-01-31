@@ -111,7 +111,7 @@ Public Class SearchUser
         Next
     End Sub
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-         loadDataTable(Nothing, Nothing)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub clearTxtBox()
         txtUsername.Clear()
@@ -223,7 +223,5 @@ Public Class SearchUser
         End Try
     End Sub
 
-    Private Sub bntSearch_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
-
-    End Sub
+    
 End Class

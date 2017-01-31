@@ -151,7 +151,7 @@ Public Class SearchProductOther
     Private Sub LoadData()
 
         Try
-
+            dgvSearchProduct.Columns.Clear()
             Dim sql As String
             Dim productname As String, product_s_name As String, brandname As String, brand_s_name As String, cost As String
             productname = "" : product_s_name = "" : brandname = "" : brand_s_name = "" : cost = ""
@@ -310,6 +310,12 @@ Public Class SearchProductOther
         txtBrand_s_name.Clear()
         txtCost.Clear()
 
+        chbEnglish.Checked = False
+        chbChinese.Checked = False
+        chbJapan.Checked = False
+        chbThai.Checked = False
+        chbWM.Checked = False
+        chbQC.Checked = False
 
         dgvSearchProduct.DataSource = Nothing
         dgvSearchProduct.Rows.Clear()

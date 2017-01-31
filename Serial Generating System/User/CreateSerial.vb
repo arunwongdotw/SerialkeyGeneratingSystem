@@ -90,8 +90,74 @@ Public Class CreateSerial
     End Sub
 
     Private Sub btnSearchSoftware_Click(sender As Object, e As EventArgs) Handles btnSearchSoftware.Click
-        Dim frm As New SearchProductOther
-        frm.Show()
-        'Me.Hide()
+        Try
+            Dim frm As New SearchProductOther
+            'frm.Show()
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim idx As String
+                idx = IIf(IsDBNull(frm.row_search("id")), "", frm.row_search("id"))
+                If idx <> "" Then
+
+                    Dim sql As String
+                    sql = "select id,product_name,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement "
+                    sql &= ",thai,eng,china,japan from product where id = '" & idx & "'"
+                    ',[product_name]
+                    ',[product_s_name]
+                    ',[brand_name]
+                    ',[brand_s_name]
+                    ',[QualityControl]
+                    ',[WarehouseManagement]
+                    ',[thai]
+                    ',[eng]
+                    ',[china]
+                    ',[japan]
+                    ',[cost]
+
+
+                    Dim dt As New DataTable
+                    Dim da As SqlDataAdapter = con.queryForAdapter(sql)
+                    con.close()
+                    dt.Clear()
+
+                    da.Fill(dt)
+                    If dt.Rows.Count > 0 Then
+
+                        Me.txtSoftwareName.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_name")), "", dt.Rows.Item(0)("product_name"))
+                        Me.txtSoftware_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_s_name")), "", dt.Rows.Item(0)("product_s_name"))
+                        Me.txtBrandName.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_name")), "", dt.Rows.Item(0)("brand_name"))
+                        Me.txtBrand_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_s_name")), "", dt.Rows.Item(0)("brand_s_name"))
+                        If IIf(IsDBNull(dt.Rows.Item(0)("QualityControl")), "", dt.Rows.Item(0)("QualityControl")) = 1 Then
+                            chbQC.Checked = True
+                        End If
+                        If IIf(IsDBNull(dt.Rows.Item(0)("WarehouseManagement")), "", dt.Rows.Item(0)("WarehouseManagement")) = 1 Then
+                            chbWM.Checked = True
+                        End If
+                        If IIf(IsDBNull(dt.Rows.Item(0)("thai")), "", dt.Rows.Item(0)("thai")) = 0 Then
+                            'chbThia.Checked = True
+                            chbThia.Enabled = False
+                            chbThia.BackColor = Color.Gray
+                        End If
+                        If IIf(IsDBNull(dt.Rows.Item(0)("eng")), "", dt.Rows.Item(0)("eng")) = 0 Then
+                            'chbEnglish.Checked = True
+                            chbEnglish.Enabled = False
+                            chbEnglish.BackColor = Color.Gray
+                        End If
+                        If IIf(IsDBNull(dt.Rows.Item(0)("china")), "", dt.Rows.Item(0)("china")) = 0 Then
+                            'chbChinese.Checked = True
+                            chbChinese.Enabled = False
+                            chbChinese.BackColor = Color.Gray
+                        End If
+                        If IIf(IsDBNull(dt.Rows.Item(0)("japan")), "", dt.Rows.Item(0)("japan")) = 0 Then
+                            'chbJapan.Checked = True
+                            chbJapan.Enabled = False
+                            chbJapan.BackColor = Color.Gray
+                        End If
+                    End If
+                End If
+            End If
+        Catch
+            MsgBox("error")
+
+        End Try
     End Sub
 End Class

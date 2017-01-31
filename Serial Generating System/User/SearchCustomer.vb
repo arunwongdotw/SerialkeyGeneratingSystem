@@ -150,6 +150,7 @@ Public Class SearchCustomer
     Private Sub LoadData()
 
         Try
+            dgvSearchCus.Columns.Clear()
 
             Dim sql As String
             Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String
