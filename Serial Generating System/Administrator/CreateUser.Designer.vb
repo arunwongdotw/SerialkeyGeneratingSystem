@@ -97,6 +97,7 @@ Partial Class CreateUser
         Me.tvAdminMenu.ShowLines = False
         Me.tvAdminMenu.Size = New System.Drawing.Size(256, 665)
         Me.tvAdminMenu.TabIndex = 0
+        Me.tvAdminMenu.TabStop = False
         '
         'Panel1
         '
@@ -150,7 +151,8 @@ Partial Class CreateUser
         Me.rdbAccountant.Location = New System.Drawing.Point(638, 326)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(48, 17)
-        Me.rdbAccountant.TabIndex = 86
+        Me.rdbAccountant.TabIndex = 7
+        Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
@@ -161,7 +163,7 @@ Partial Class CreateUser
         Me.rdbIT.Location = New System.Drawing.Point(558, 326)
         Me.rdbIT.Name = "rdbIT"
         Me.rdbIT.Size = New System.Drawing.Size(44, 17)
-        Me.rdbIT.TabIndex = 85
+        Me.rdbIT.TabIndex = 6
         Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
         Me.rdbIT.UseVisualStyleBackColor = True
@@ -188,6 +190,7 @@ Partial Class CreateUser
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1348, 65)
         Me.btnHeader.TabIndex = 81
+        Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ผู้ดูแลระบบ"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = False
@@ -256,7 +259,7 @@ Partial Class CreateUser
         Me.cmbUserType.Location = New System.Drawing.Point(557, 442)
         Me.cmbUserType.Name = "cmbUserType"
         Me.cmbUserType.Size = New System.Drawing.Size(318, 34)
-        Me.cmbUserType.TabIndex = 12
+        Me.cmbUserType.TabIndex = 10
         '
         'Label11
         '
@@ -278,7 +281,7 @@ Partial Class CreateUser
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
-        Me.chbPerDelete.TabIndex = 10
+        Me.chbPerDelete.TabIndex = 13
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
         '
@@ -291,7 +294,7 @@ Partial Class CreateUser
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
-        Me.chbPerEdit.TabIndex = 11
+        Me.chbPerEdit.TabIndex = 12
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
         '
@@ -304,7 +307,7 @@ Partial Class CreateUser
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
-        Me.chbPerCreate.TabIndex = 9
+        Me.chbPerCreate.TabIndex = 11
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
         '
@@ -346,7 +349,7 @@ Partial Class CreateUser
         Me.txtEmail.Location = New System.Drawing.Point(557, 400)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 7
+        Me.txtEmail.TabIndex = 9
         '
         'Label10
         '
@@ -368,7 +371,7 @@ Partial Class CreateUser
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 15
+        Me.btnLogOut.TabIndex = 16
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -381,7 +384,7 @@ Partial Class CreateUser
         Me.btnClear.Location = New System.Drawing.Point(746, 629)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 14
+        Me.btnClear.TabIndex = 15
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -487,7 +490,7 @@ Partial Class CreateUser
         Me.btnAdd.Location = New System.Drawing.Point(557, 629)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 13
+        Me.btnAdd.TabIndex = 14
         Me.btnAdd.Text = "สร้าง"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
