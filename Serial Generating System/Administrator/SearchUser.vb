@@ -10,6 +10,7 @@ Public Class SearchUser
             con.close()
             adapter.Fill(table) ' add data from database to datatable
             dgvSearchUser.Columns.Clear() 'clear data gridview
+            dgvSearchUser.RowTemplate.MinimumHeight = 35
             dgvSearchUser.DataSource = table 'add tadatable to tadagridview
             setHeaderColumns() ' set name colum 
             table.Columns.Add("ลำดับ")
@@ -36,6 +37,7 @@ Public Class SearchUser
         loadDataTable()
     End Sub
     Private Sub clearTxtBox()
+
         txtUsername.Clear()
         txtEmployeeId.Clear()
         txtFirstname.Clear()
@@ -43,6 +45,7 @@ Public Class SearchUser
         txtPosition.Clear()
         txtPhoneNo.Clear()
         txtEmail.Clear()
+
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clearTxtBox()
@@ -72,11 +75,11 @@ Public Class SearchUser
                     MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
                 End If
             End If
-            If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
-                Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
-                formEditUser.Show()
-                Me.Hide()
-            End If
+        End If
+        If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
+            Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
+            formEditUser.Show()
+            Me.Hide()
         End If
     End Sub
     Private Sub setPermissionCheckBox()
@@ -155,8 +158,7 @@ Public Class SearchUser
             .Columns("per_edit").Visible = False
             .Columns("per_delete").Visible = False
             .Columns("emp_id").HeaderCell.Value = "รหัสพนักงาน"
-            .Columns("firstname").HeaderCell.Value = "ชื่อ"
-            .Columns("lastname").HeaderCell.Value = "นามสกุล"
+            .Columns("fullname").HeaderCell.Value = "ชื่อ - สกุล"
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
             .Columns("position").HeaderCell.Value = "ตำแหน่ง"
@@ -164,14 +166,20 @@ Public Class SearchUser
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
             .Columns("emp_id").ReadOnly = True
-            .Columns("firstname").ReadOnly = True
-            .Columns("lastname").ReadOnly = True
+            .Columns("fullname").ReadOnly = True
             .Columns("username").ReadOnly = True
             .Columns("password").ReadOnly = True
             .Columns("position").ReadOnly = True
             .Columns("phonenumber").ReadOnly = True
             .Columns("email").ReadOnly = True
             .Columns("user_type").ReadOnly = True
+            .Columns("emp_id").Width = 150
+            .Columns("username").Width = 120
+            .Columns("password").Width = 120
+            .Columns("fullname").Width = 200
+            .Columns("phonenumber").Width = 150
+            .Columns("email").Width = 150
+            .Columns("user_type").Width = 120
         End With
     End Sub
 
@@ -180,6 +188,7 @@ Public Class SearchUser
         checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
         checkboxCreate.ReadOnly = True
+        checkboxCreate.Width = 120
         dgvSearchUser.Columns.Add(checkboxCreate)
 
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
@@ -201,7 +210,7 @@ Public Class SearchUser
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
         btnEdit.Name = "btnEdit"
-        btnEdit.Width = 50
+        btnEdit.Width = 70
         btnEdit.UseColumnTextForButtonValue = True
 
         Dim btnDelete As New DataGridViewButtonColumn()
@@ -209,14 +218,14 @@ Public Class SearchUser
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
         btnDelete.Name = "btnDelete"
-        btnDelete.Width = 50
+        btnDelete.Width = 70
         btnDelete.UseColumnTextForButtonValue = True
 
 
     End Sub
 
     Private Function getQuery() As String
-        Dim strQuery = "select id,emp_id,username,password,firstname,lastname,position,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
+        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtUsername.Text & "%'"
         End If
