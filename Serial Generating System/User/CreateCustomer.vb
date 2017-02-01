@@ -116,7 +116,7 @@ Public Class CreateCustomer
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True Then
+        If check = True AndAlso Not checkDuplicate() Then
             'If CheckData() = True Then
             add()
             'End If
@@ -303,4 +303,23 @@ Public Class CreateCustomer
     Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
 
     End Sub
+
+    Public Function checkDuplicate() As Boolean
+        If isCustomerDuplicate("corpname", txtCorpName.Text) Then
+            MessageBox.Show("ชื่อบริษัทซ้ำ")
+            Return True
+        ElseIf isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text) Then
+            MessageBox.Show("ชื่อย่อบริษัทซ้ำ")
+            Return True
+        End If
+        Return False
+    End Function
+
+    Public Function isCustomerDuplicate(ByVal field As String, ByVal text As String) As Boolean
+        Dim isDup As Boolean = False
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Customer where " & field & " ='" & text.Trim & "'"
+        isDup = con.query(strSelect).Read
+        con.close()
+        Return isDup
+    End Function
 End Class
