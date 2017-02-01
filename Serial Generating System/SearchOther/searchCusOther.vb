@@ -262,10 +262,7 @@ Public Class searchCusOther
     End Sub
 
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        LoadData()
-
-    End Sub
+    
 
     Private Sub clear()
 

@@ -27,7 +27,7 @@ Public Class SearchProductOther
     Private Sub GenerateColumn()
         Try
             Me.dgvSearchProduct.Columns.Clear()
-            'Me.dgvSearchCus.AutoGenerateColumns = False
+            Me.dgvSearchProduct.AutoGenerateColumns = False
 
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
@@ -297,10 +297,7 @@ Public Class SearchProductOther
         Next
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        LoadData()
-
-    End Sub
+    
 
     Private Sub clear()
 

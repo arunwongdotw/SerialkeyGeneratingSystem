@@ -6,6 +6,10 @@ Public Class CreateSerial
 
     Private con As New ConnectDB
 
+    Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tvUserMenu.ExpandAll()
+
+    End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
@@ -88,7 +92,14 @@ Public Class CreateSerial
         frm.Show()
         Me.Hide()
     End Sub
-
+    Private Sub clearCheckbox()
+        chbEnglish.Checked = False
+        chbChinese.Checked = False
+        chbJapan.Checked = False
+        chbThai.Checked = False
+        chbWM.Checked = False
+        chbQC.Checked = False
+    End Sub
     Private Sub btnSearchSoftware_Click(sender As Object, e As EventArgs) Handles btnSearchSoftware.Click
         Try
             Dim frm As New SearchProductOther
@@ -118,6 +129,7 @@ Public Class CreateSerial
                     Dim da As SqlDataAdapter = con.queryForAdapter(sql)
                     con.close()
                     dt.Clear()
+                    Me.clearCheckbox()
 
                     da.Fill(dt)
                     If dt.Rows.Count > 0 Then
@@ -134,23 +146,31 @@ Public Class CreateSerial
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("thai")), "", dt.Rows.Item(0)("thai")) = 0 Then
                             'chbThia.Checked = True
-                            chbThia.Enabled = False
-                            chbThia.BackColor = Color.Gray
+                            chbThai.Enabled = False
+                            'chbThia.BackColor = Color.Gray
+                        Else
+                            chbThai.Enabled = True
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("eng")), "", dt.Rows.Item(0)("eng")) = 0 Then
                             'chbEnglish.Checked = True
                             chbEnglish.Enabled = False
-                            chbEnglish.BackColor = Color.Gray
+                            'chbEnglish.BackColor = Color.Gray
+                        Else
+                            chbEnglish.Enabled = True
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("china")), "", dt.Rows.Item(0)("china")) = 0 Then
                             'chbChinese.Checked = True
                             chbChinese.Enabled = False
-                            chbChinese.BackColor = Color.Gray
+                            'chbChinese.BackColor = Color.Gray
+                        Else
+                            chbChinese.Enabled = True
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("japan")), "", dt.Rows.Item(0)("japan")) = 0 Then
                             'chbJapan.Checked = True
                             chbJapan.Enabled = False
-                            chbJapan.BackColor = Color.Gray
+                            'chbJapan.BackColor = Color.Gray
+                        Else
+                            chbJapan.Enabled = True
                         End If
                     End If
                 End If
@@ -159,5 +179,12 @@ Public Class CreateSerial
             MsgBox("error")
 
         End Try
+    End Sub
+
+    
+    Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
+        Dim frm As New AddProduct
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
