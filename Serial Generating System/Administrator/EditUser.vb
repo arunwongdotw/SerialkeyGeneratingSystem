@@ -20,7 +20,7 @@ Public Class EditUser
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         Me.id = id
-       
+
     End Sub
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadData()
@@ -33,7 +33,7 @@ Public Class EditUser
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If isFromValid() AndAlso Not checkDuplicate() Then
-            saveData()    
+            saveData()
         End If
     End Sub
     Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
@@ -216,7 +216,7 @@ Public Class EditUser
     End Sub
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 122,8, 13, 46
+            Case 48 To 122, 8, 13, 46
             Case Else
                 e.Handled = True
                 MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")

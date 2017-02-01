@@ -22,7 +22,7 @@ Public Class SearchUser
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
         End Try
-       
+
 
     End Sub
     Private Sub randerColorRow()
