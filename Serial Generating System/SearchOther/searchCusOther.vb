@@ -214,25 +214,6 @@ Public Class searchCusOther
             sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             sql &= province & postalcode & email & phone
 
-            '  ,[id]()
-            ',[corpname]
-            ',[corp_s_name]
-            ',[corpgroup]
-            ',[firstname]
-            ',[lastname]
-            ',[house_no]
-            ',[road]
-            ',[lane]
-            ',[subdistrict]
-            ',[district]
-            ',[province]
-            ',[postalcode]
-            ',[email]
-            ',[phone]
-
-            'If da Is Nothing Then
-            '    MsgBox("ไม่พบข้อมูล")
-            'Else
             Dim dt As New DataTable
             Dim da As SqlDataAdapter = con.queryForAdapter(sql)
             con.close()
