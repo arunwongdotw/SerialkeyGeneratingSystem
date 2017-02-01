@@ -2,6 +2,7 @@
 Imports System.Text.RegularExpressions
 Public Class SearchUser
     Private con As New ConnectDB
+
     Private Sub loadDataTable()
         Try
             Dim table As New DataTable
@@ -22,9 +23,8 @@ Public Class SearchUser
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
         End Try
-
-
     End Sub
+
     Private Sub randerColorRow()
         For i = 0 To dgvSearchUser.Rows.Count - 2
             If i Mod 2 = 0 Then
@@ -32,9 +32,11 @@ Public Class SearchUser
             End If
         Next
     End Sub
+
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadDataTable()
     End Sub
+
     Private Sub clearTxtBox()
         txtUsername.Clear()
         txtEmployeeId.Clear()
@@ -44,20 +46,24 @@ Public Class SearchUser
         txtPhoneNo.Clear()
         txtEmail.Clear()
     End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clearTxtBox()
         loadDataTable()
     End Sub
+
     Private Sub checkTextSingle(ByVal textBox As TextBox)
         If New Regex("'").Match(txtUsername.Text).Success Then
             MessageBox.Show("ไม่สามารถกรอก ( ' ) ได้ กรุณากรอกข้อมูลใหม่")
             textBox.Text = textBox.Text.Replace("'", "")
         End If
     End Sub
+
     Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         checkTextSingle(txtUsername)
         loadDataTable()
     End Sub
+
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
         Dim strQuery As String
         Dim isDelete As Boolean
@@ -244,5 +250,9 @@ Public Class SearchUser
         Next
     End Sub
 
-
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class
