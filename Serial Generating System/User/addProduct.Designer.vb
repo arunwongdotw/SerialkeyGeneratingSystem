@@ -22,14 +22,17 @@ Partial Class AddProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18})
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode23})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
@@ -70,23 +73,29 @@ Partial Class AddProduct
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode17.Name = "ndCreateSerialkey"
-        TreeNode17.Text = "สร้างซีเรียลคีย์"
-        TreeNode18.Name = "ndFindSerialkey"
-        TreeNode18.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode19.Name = "ndSerialkeyManagement"
-        TreeNode19.Text = "จัดการซีเรียลคีย์"
-        TreeNode20.Name = "ndAddCustomer"
-        TreeNode20.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode21.Name = "ndFindCustomer"
-        TreeNode21.Text = "ค้นหาลูกค้า"
-        TreeNode22.Name = "ndCustomerManage"
-        TreeNode22.Text = "จัดการลูกค้า"
-        TreeNode23.Name = "ndUserResetPassword"
-        TreeNode23.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode24.Name = "ndUserInfo"
-        TreeNode24.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode22, TreeNode24})
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndAddProduct"
+        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        TreeNode8.Name = "ndSearchProduct"
+        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
+        TreeNode9.Name = "ndProductManagement"
+        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
+        TreeNode10.Name = "ndUserResetPassword"
+        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode11.Name = "ndUserInfo"
+        TreeNode11.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
@@ -96,7 +105,7 @@ Partial Class AddProduct
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(431, 114)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
+        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
         Me.lblCorpName.TabIndex = 26
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -105,7 +114,7 @@ Partial Class AddProduct
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(412, 163)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
         Me.lblCorpSubName.TabIndex = 27
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -141,7 +150,7 @@ Partial Class AddProduct
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(434, 275)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
+        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
         Me.lblFirstName.TabIndex = 31
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -170,7 +179,7 @@ Partial Class AddProduct
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(453, 220)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
         Me.lblGroupCorp.TabIndex = 46
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -187,7 +196,7 @@ Partial Class AddProduct
         Me.Label18.ForeColor = System.Drawing.Color.Red
         Me.Label18.Location = New System.Drawing.Point(773, 272)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 27)
+        Me.Label18.Size = New System.Drawing.Size(18, 26)
         Me.Label18.TabIndex = 74
         Me.Label18.Text = "*"
         '
@@ -197,7 +206,7 @@ Partial Class AddProduct
         Me.Label20.ForeColor = System.Drawing.Color.Red
         Me.Label20.Location = New System.Drawing.Point(1266, 217)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 27)
+        Me.Label20.Size = New System.Drawing.Size(18, 26)
         Me.Label20.TabIndex = 76
         Me.Label20.Text = "*"
         '
@@ -207,7 +216,7 @@ Partial Class AddProduct
         Me.Label21.ForeColor = System.Drawing.Color.Red
         Me.Label21.Location = New System.Drawing.Point(773, 163)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(18, 27)
+        Me.Label21.Size = New System.Drawing.Size(18, 26)
         Me.Label21.TabIndex = 77
         Me.Label21.Text = "*"
         '
@@ -228,7 +237,7 @@ Partial Class AddProduct
         Me.Label22.ForeColor = System.Drawing.Color.Red
         Me.Label22.Location = New System.Drawing.Point(1266, 111)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 27)
+        Me.Label22.Size = New System.Drawing.Size(18, 26)
         Me.Label22.TabIndex = 78
         Me.Label22.Text = "*"
         '
@@ -301,7 +310,7 @@ Partial Class AddProduct
         Me.chbWM.AutoSize = True
         Me.chbWM.Location = New System.Drawing.Point(870, 382)
         Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(198, 31)
+        Me.chbWM.Size = New System.Drawing.Size(201, 30)
         Me.chbWM.TabIndex = 92
         Me.chbWM.Text = "Warehouse Management"
         Me.chbWM.UseVisualStyleBackColor = True
@@ -311,7 +320,7 @@ Partial Class AddProduct
         Me.chbQC.AutoSize = True
         Me.chbQC.Location = New System.Drawing.Point(870, 419)
         Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 31)
+        Me.chbQC.Size = New System.Drawing.Size(134, 30)
         Me.chbQC.TabIndex = 91
         Me.chbQC.Text = "Quality Control"
         Me.chbQC.UseVisualStyleBackColor = True
@@ -321,7 +330,7 @@ Partial Class AddProduct
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(756, 383)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(108, 27)
+        Me.Label4.Size = New System.Drawing.Size(107, 26)
         Me.Label4.TabIndex = 90
         Me.Label4.Text = "ออฟชัน(ถ้ามี) :"
         '
@@ -337,7 +346,7 @@ Partial Class AddProduct
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(445, 328)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 27)
+        Me.Label3.Size = New System.Drawing.Size(91, 26)
         Me.Label3.TabIndex = 89
         Me.Label3.Text = "ราคา(บาท) :"
         '
@@ -346,7 +355,7 @@ Partial Class AddProduct
         Me.chbJapan.AutoSize = True
         Me.chbJapan.Location = New System.Drawing.Point(626, 419)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
+        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
         Me.chbJapan.TabIndex = 87
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -356,7 +365,7 @@ Partial Class AddProduct
         Me.chbChinese.AutoSize = True
         Me.chbChinese.Location = New System.Drawing.Point(542, 419)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
         Me.chbChinese.TabIndex = 86
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -366,7 +375,7 @@ Partial Class AddProduct
         Me.chbEnglish.AutoSize = True
         Me.chbEnglish.Location = New System.Drawing.Point(543, 382)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
         Me.chbEnglish.TabIndex = 85
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -376,7 +385,7 @@ Partial Class AddProduct
         Me.chbThai.AutoSize = True
         Me.chbThai.Location = New System.Drawing.Point(626, 382)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
+        Me.chbThai.Size = New System.Drawing.Size(53, 30)
         Me.chbThai.TabIndex = 84
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -386,7 +395,7 @@ Partial Class AddProduct
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(479, 382)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
+        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
         Me.lblLanguage.TabIndex = 83
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -395,7 +404,7 @@ Partial Class AddProduct
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(797, 275)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(266, 27)
+        Me.Label2.Size = New System.Drawing.Size(268, 26)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
@@ -404,7 +413,7 @@ Partial Class AddProduct
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(797, 166)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(266, 27)
+        Me.Label1.Size = New System.Drawing.Size(268, 26)
         Me.Label1.TabIndex = 81
         Me.Label1.Text = "3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
