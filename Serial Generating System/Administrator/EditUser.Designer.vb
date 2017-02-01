@@ -41,9 +41,9 @@ Partial Class EditUser
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -63,10 +63,10 @@ Partial Class EditUser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rdbAccountant = New System.Windows.Forms.RadioButton()
+        Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.rdbIT = New System.Windows.Forms.RadioButton()
-        Me.rdbAccountant = New System.Windows.Forms.RadioButton()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -190,14 +190,14 @@ Partial Class EditUser
         Me.Label12.TabIndex = 67
         Me.Label12.Text = "สิทธิ์การเข้าถึง :"
         '
-        'txtPhoneNumber
+        'txtEmail
         '
-        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(533, 377)
-        Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
-        Me.txtPhoneNumber.TabIndex = 8
+        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(532, 416)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
+        Me.txtEmail.TabIndex = 8
         '
         'Label9
         '
@@ -209,14 +209,14 @@ Partial Class EditUser
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "เบอร์โทรศัพท์ :"
         '
-        'txtEmail
+        'txtPhoneNumber
         '
-        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
-        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(533, 419)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 7
+        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
+        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(533, 372)
+        Me.txtPhoneNumber.Name = "txtPhoneNumber"
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
+        Me.txtPhoneNumber.TabIndex = 7
         '
         'Label10
         '
@@ -437,9 +437,9 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.chbPerEdit)
         Me.Panel1.Controls.Add(Me.chbPerCreate)
         Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.txtPhoneNumber)
-        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.txtEmail)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.txtPhoneNumber)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnCancel)
@@ -463,6 +463,28 @@ Partial Class EditUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 768)
         Me.Panel1.TabIndex = 4
+        '
+        'rdbAccountant
+        '
+        Me.rdbAccountant.AutoSize = True
+        Me.rdbAccountant.Location = New System.Drawing.Point(659, 345)
+        Me.rdbAccountant.Name = "rdbAccountant"
+        Me.rdbAccountant.Size = New System.Drawing.Size(52, 24)
+        Me.rdbAccountant.TabIndex = 84
+        Me.rdbAccountant.TabStop = True
+        Me.rdbAccountant.Text = "บัญชี"
+        Me.rdbAccountant.UseVisualStyleBackColor = True
+        '
+        'rdbIT
+        '
+        Me.rdbIT.AutoSize = True
+        Me.rdbIT.Location = New System.Drawing.Point(533, 342)
+        Me.rdbIT.Name = "rdbIT"
+        Me.rdbIT.Size = New System.Drawing.Size(45, 24)
+        Me.rdbIT.TabIndex = 83
+        Me.rdbIT.TabStop = True
+        Me.rdbIT.Text = "ไอที"
+        Me.rdbIT.UseVisualStyleBackColor = True
         '
         'btnHeader
         '
@@ -488,28 +510,6 @@ Partial Class EditUser
         Me.PictureBox1.Size = New System.Drawing.Size(107, 111)
         Me.PictureBox1.TabIndex = 81
         Me.PictureBox1.TabStop = False
-        '
-        'rdbIT
-        '
-        Me.rdbIT.AutoSize = True
-        Me.rdbIT.Location = New System.Drawing.Point(533, 342)
-        Me.rdbIT.Name = "rdbIT"
-        Me.rdbIT.Size = New System.Drawing.Size(45, 24)
-        Me.rdbIT.TabIndex = 83
-        Me.rdbIT.TabStop = True
-        Me.rdbIT.Text = "ไอที"
-        Me.rdbIT.UseVisualStyleBackColor = True
-        '
-        'rdbAccountant
-        '
-        Me.rdbAccountant.AutoSize = True
-        Me.rdbAccountant.Location = New System.Drawing.Point(659, 345)
-        Me.rdbAccountant.Name = "rdbAccountant"
-        Me.rdbAccountant.Size = New System.Drawing.Size(52, 24)
-        Me.rdbAccountant.TabIndex = 84
-        Me.rdbAccountant.TabStop = True
-        Me.rdbAccountant.Text = "บัญชี"
-        Me.rdbAccountant.UseVisualStyleBackColor = True
         '
         'EditUser
         '
@@ -537,9 +537,9 @@ Partial Class EditUser
     Friend WithEvents chbPerEdit As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerCreate As System.Windows.Forms.CheckBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
