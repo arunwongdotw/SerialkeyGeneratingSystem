@@ -187,4 +187,12 @@ Public Class CreateSerial
         frm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+
+    End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+
+    End Sub
 End Class
