@@ -424,7 +424,7 @@ Partial Class AddProduct
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "AddProduct"
-        Me.Text = "เพิ่มผลิตภัณฑ์"
+        Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
