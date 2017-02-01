@@ -20,120 +20,30 @@ Public Class EditUser
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         Me.id = id
-        Dim strQuery = "select id,"
-        strQuery &= "emp_id,"
-        strQuery &= "username,"
-        strQuery &= "password,"
-        strQuery &= "firstname,"
-        strQuery &= "lastname,"
-        strQuery &= "position,"
-        strQuery &= "phonenumber,"
-        strQuery &= "email,"
-        strQuery &= "user_type,"
-        strQuery &= "per_create,"
-        strQuery &= "per_edit,"
-        strQuery &= "per_delete"
-        strQuery &= " from SGS.dbo.Employee "
-        strQuery &= "where id = " & id
-        txtEmail.Text = strQuery
-        sqlReader = con.query(strQuery)
+
     End Sub
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadData()
         If sqlReader.Read Then
-            txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
-            oldData.Add("email", txtEmail.Text)
-            txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
-            oldData.Add("emp_id", txtEmpID.Text)
-            txtFirstName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("firstname"))
-            oldData.Add("firstname", txtFirstName.Text)
-            txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
-            oldData.Add("lastname", txtLastName.Text)
-            txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
-            oldData.Add("password", txtPassword.Text)
-            txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
-            oldData.Add("phonenumber", txtPhoneNumber.Text)
-            position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
-            oldData.Add("position", position)
-            txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
-            oldData.Add("username", txtUsername.Text)
-            perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
-            oldData.Add("per_create", perCreate)
-            perdelete = sqlReader.GetValue(sqlReader.GetOrdinal("per_delete"))
-            oldData.Add("per_delete", perdelete)
-            perEdit = sqlReader.GetValue(sqlReader.GetOrdinal("per_edit"))
-            userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
-            oldData.Add("per_edit", perEdit)
-            oldData.Add("user_type", userType)
-            txtUsername.Enabled = False
+            initialData()
+        End If
 
-        End If
-        If position.Equals("IT") Then
-            rdbIT.Checked = True
-        ElseIf position.Equals("Accountant") Then
-            rdbAccountant.Checked = True
-        End If
-        If perCreate = 1 Then
-            chbPerCreate.Checked = True
-        ElseIf perCreate = 0 Then
-            chbPerCreate.Checked = False
-        End If
-        If perdelete = 1 Then
-            chbPerDelete.Checked = True
-        ElseIf perdelete = 0 Then
-            chbPerDelete.Checked = False
-        End If
-        If perEdit = 1 Then
-            chbPerEdit.Checked = True
-        ElseIf perEdit = 0 Then
-            chbPerEdit.Checked = False
-        End If
-        If userType.Equals("admin") Then
-            cmbUserType.SelectedItem = "ผู้ดูแลระบบ"
-        Else
-            cmbUserType.SelectedItem = "ผู้ใช้งานทั่วไป"
-        End If
+        convertData()
+
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If isFromValid() AndAlso Not checkDuplicate() Then
-            Dim strquery = "update sgs.dbo.employee set "
-            strquery &= " emp_id = '" & txtEmpID.Text.Trim & "' , "
-            strquery &= " password = '" & txtPassword.Text.Trim & "' , "
-            strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
-            strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
-            strquery &= " position = '" & position & "' , "
-            strquery &= " phonenumber = '" & txtPhoneNumber.Text.Trim & "' , "
-            strquery &= " email = '" & txtEmail.Text.Trim & "' , "
-            strquery &= " user_type = '" & userType & "' , "
-            strquery &= " per_create = '" & perCreate & "' , "
-            strquery &= " per_edit = '" & perEdit & "' , "
-            strquery &= " per_delete = '" & perdelete & "' "
-            strquery &= " where id = " & id
-            If con.save(strquery) Then
-                MessageBox.Show("บันทึกข้อมูลสำเร็จ")
-            Else : MessageBox.Show("บันทึกข้อมูลไม่สำเร็จ")
-            End If
-            Me.Hide()
-            Dim formSearchUser As New SearchUser
-            formSearchUser.Show()
+            saveData()
         End If
     End Sub
     Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
-        If chbPerCreate.Checked = True Then
-            perCreate = 1
-        Else : perCreate = 0
-        End If
+        perCreate = IIf(chbPerCreate.Checked, 1, 0)
     End Sub
     Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
-        If chbPerDelete.Checked = True Then
-            perdelete = 1
-        Else : perdelete = 0
-        End If
+        perdelete = IIf(chbPerDelete.Checked, 1, 0)
     End Sub
     Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
-        If chbPerEdit.Checked = True Then
-            perEdit = 1
-        Else : perEdit = 0
-        End If
+        perEdit = IIf(chbPerEdit.Checked, 1, 0)
     End Sub
 
     Private Function isFromValid() As Boolean
@@ -141,11 +51,11 @@ Public Class EditUser
         Dim regexCharAndNumber = "^[0-9a-zA-Z]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
         Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
-        If Not New Regex(regexCharAndNumber).IsMatch(txtPassword.Text.Trim) Or txtPassword.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสผ่านเฉพาะตัวอักษรและตัวเลขเท่านั้น")
+        If txtPassword.Text.Trim = String.Empty Then
+            MessageBox.Show("กรุณากรอกรหัสผ่าน")
             valid = False
-        ElseIf Not New Regex(regexCharAndNumber).IsMatch(txtEmpID.Text.Trim) Or txtEmpID.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสพนักงานเฉพาะตัวอักษรและตัวเลขเท่านั้น")
+        ElseIf txtEmpID.Text.Trim = String.Empty Then
+            MessageBox.Show("กรุณากรอกรหัสพนักงาน")
             valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกชื่อ")
@@ -159,28 +69,25 @@ Public Class EditUser
         ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtPhoneNumber.Text.Trim) Then
             MessageBox.Show("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
             valid = False
+        ElseIf txtEmail.Text.Trim = String.Empty Then
+            MessageBox.Show("กรุณากรอกอีเมล")
+            valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
             valid = False
-        
+
         End If
         Return valid
     End Function
 
     Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
-        If cmbUserType.SelectedItem = "ผู้ดูแลระบบ" Then
-            userType = "admin"
-        Else
-            userType = "user"
-        End If
+        userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         SearchUser.Show()
     End Sub
 
-  
- 
     Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
         position = "IT"
     End Sub
@@ -212,5 +119,115 @@ Public Class EditUser
 
     Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
         position = "Accountant"
+    End Sub
+
+    Private Sub saveData()
+        Dim strquery = "update sgs.dbo.employee set "
+        strquery &= " emp_id = '" & txtEmpID.Text.Trim & "' , "
+        strquery &= " password = '" & txtPassword.Text.Trim & "' , "
+        strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
+        strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
+        strquery &= " position = '" & position & "' , "
+        strquery &= " phonenumber = '" & txtPhoneNumber.Text.Trim & "' , "
+        strquery &= " email = '" & txtEmail.Text.Trim & "' , "
+        strquery &= " user_type = '" & userType & "' , "
+        strquery &= " per_create = '" & perCreate & "' , "
+        strquery &= " per_edit = '" & perEdit & "' , "
+        strquery &= " per_delete = '" & perdelete & "' "
+        strquery &= " where id = " & id
+        If con.save(strquery) Then
+            MessageBox.Show("บันทึกข้อมูลสำเร็จ")
+        Else : MessageBox.Show("บันทึกข้อมูลไม่สำเร็จ")
+        End If
+        Me.Hide()
+        Dim formSearchUser As New SearchUser
+        formSearchUser.Show()
+    End Sub
+
+    Private Sub convertData()
+
+        IIf(position.Equals("IT"), rdbIT.Checked = True, rdbAccountant.Checked = True)
+        chbPerCreate.Checked = perCreate = 1
+        chbPerDelete.Checked = perdelete = 1
+        chbPerEdit.Checked = perEdit = 1
+        cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
+
+    End Sub
+
+    Private Sub loadData()
+        Dim strQuery = "select id,"
+        strQuery &= "emp_id,"
+        strQuery &= "username,"
+        strQuery &= "password,"
+        strQuery &= "firstname,"
+        strQuery &= "lastname,"
+        strQuery &= "position,"
+        strQuery &= "phonenumber,"
+        strQuery &= "email,"
+        strQuery &= "user_type,"
+        strQuery &= "per_create,"
+        strQuery &= "per_edit,"
+        strQuery &= "per_delete"
+        strQuery &= " from SGS.dbo.Employee "
+        strQuery &= "where id = " & id
+        txtPhoneNumber.Text = strQuery
+        sqlReader = con.query(strQuery)
+    End Sub
+
+    Private Sub initialData()
+        txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
+        txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
+        txtFirstName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("firstname"))
+        txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
+        txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
+        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
+        position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
+        txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
+        perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
+        perdelete = sqlReader.GetValue(sqlReader.GetOrdinal("per_delete"))
+        perEdit = sqlReader.GetValue(sqlReader.GetOrdinal("per_edit"))
+        userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
+        txtUsername.Enabled = False
+        con.close()
+    End Sub
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57, 8, 13, 46
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+        End Select
+    End Sub
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122, 8, 13, 46, 161 To 240
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+        End Select
+    End Sub
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122, 8, 13, 46, 161 To 240
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+        End Select
+    End Sub
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122, 8, 13, 46
+            Case Else
+                e.Handled = True
+                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        End Select
+    End Sub
+    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122, 8, 13, 46
+            Case Else
+                e.Handled = True
+                MessageBox.Show("รหัสพนักงานต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        End Select
     End Sub
 End Class
