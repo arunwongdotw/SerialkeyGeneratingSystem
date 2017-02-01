@@ -2,18 +2,19 @@
 Imports System.Data.SqlClient
 Imports System.Data
 Public Class ChangePassword
-    Dim user As String = Login.user
-    Dim pass As String = Login.pass
+    Dim username As String = Login.user
+    Dim password As String = Login.pass
     Private con As New ConnectDB
 
     Private Sub edit()
         Dim strSQL As String
-        strSQL = "update employee set password = '" & txtNewPassword.Text & "' where username = '" & user & "'"
+        strSQL = "update employee set password = '" & txtNewPassword.Text & "' where username = '" & username & "'"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
             MsgBox("เปลี่ยนรหัสผ่านล้มเหลว")
         Else
             MsgBox("เปลี่ยนรหัสผ่านสำเร็จ")
+            password = txtNewPassword.Text
         End If
         con.close()
     End Sub
@@ -36,7 +37,7 @@ Public Class ChangePassword
 
     Private Function CompareOldNewPassword() As Boolean
         Dim isCorrect As Boolean = False
-        If Not pass = txtOldPassword.Text Then
+        If Not password = txtOldPassword.Text Then
             MsgBox("รหัสผ่านกับรหัสผ่านเก่าไม่ตรงกัน")
         Else
             isCorrect = True

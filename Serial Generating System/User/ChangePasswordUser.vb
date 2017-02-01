@@ -14,6 +14,7 @@ Public Class ChangePasswordUser
             MsgBox("เปลี่ยนรหัสผ่านล้มเหลว")
         Else
             MsgBox("เปลี่ยนรหัสผ่านสำเร็จ")
+            password = txtNewPassword.Text
         End If
         con.close()
     End Sub
