@@ -323,7 +323,7 @@ Partial Class searchProduct
         Me.Controls.Add(Me.Panel1)
         Me.Name = "searchProduct"
         Me.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
-        CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
