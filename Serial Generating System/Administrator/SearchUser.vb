@@ -3,22 +3,26 @@ Imports System.Text.RegularExpressions
 Public Class SearchUser
     Private con As New ConnectDB
     Private Sub loadDataTable()
-
-        Dim table As New DataTable
-        Dim strSelect = getQuery() ' add query for datatable
-        Dim adapter As SqlDataAdapter = con.queryForAdapter(strSelect) ' get data from data base
-        con.close()
-        adapter.Fill(table) ' add data from database to datatable
-        dgvSearchUser.Columns.Clear() 'clear data gridview
-        dgvSearchUser.DataSource = table 'add tadatable to tadagridview
-        setHeaderColumns() ' set name colum 
-        table.Columns.Add("ลำดับ")
-        dgvSearchUser.Columns("ลำดับ").DisplayIndex = 0
-        dgvSearchUser.Columns("ลำดับ").ReadOnly = True
-        genRowNumber() ' generate rows index
-        randerColorRow() ' rander color of rows
-        addCustomColumns()
-        setPermissionCheckBox()
+        Try
+            Dim table As New DataTable
+            Dim strSelect = getQuery() ' add query for datatable
+            Dim adapter As SqlDataAdapter = con.queryForAdapter(strSelect) ' get data from data base
+            con.close()
+            adapter.Fill(table) ' add data from database to datatable
+            dgvSearchUser.Columns.Clear() 'clear data gridview
+            dgvSearchUser.DataSource = table 'add tadatable to tadagridview
+            setHeaderColumns() ' set name colum 
+            table.Columns.Add("ลำดับ")
+            dgvSearchUser.Columns("ลำดับ").DisplayIndex = 0
+            dgvSearchUser.Columns("ลำดับ").ReadOnly = True
+            genRowNumber() ' generate rows index
+            randerColorRow() ' rander color of rows
+            addCustomColumns()
+            setPermissionCheckBox()
+        Catch ex As Exception
+            MsgBox("โหลดข้อมูลล้มเหลว")
+        End Try
+       
 
     End Sub
     Private Sub randerColorRow()
