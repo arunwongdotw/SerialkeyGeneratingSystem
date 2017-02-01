@@ -134,7 +134,7 @@ Public Class SearchUser
     End Sub
     Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         checkTextSingle(txtUsername)
-         loadDataTable(Nothing, Nothing)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchUser.CellContentClick
         Dim strQuery As String
@@ -193,15 +193,15 @@ Public Class SearchUser
     End Sub
     Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
         checkTextSingle(txtPosition)
-         loadDataTable(Nothing, Nothing)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
         checkTextSingle(txtEmail)
-         loadDataTable(Nothing, Nothing)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNo.TextChanged
         checkTextSingle(txtPhoneNo)
-         loadDataTable(Nothing, Nothing)
+        loadDataTable(Nothing, Nothing)
     End Sub
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try
@@ -223,5 +223,5 @@ Public Class SearchUser
         End Try
     End Sub
 
-    
+
 End Class

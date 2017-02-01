@@ -179,8 +179,8 @@ Public Class EditUser
         SearchUser.Show()
     End Sub
 
-  
- 
+
+
     Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
         position = "IT"
     End Sub
