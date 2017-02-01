@@ -22,14 +22,14 @@ Partial Class AddProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18})
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode23})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
@@ -70,23 +70,23 @@ Partial Class AddProduct
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode17.Name = "ndCreateSerialkey"
-        TreeNode17.Text = "สร้างซีเรียลคีย์"
-        TreeNode18.Name = "ndFindSerialkey"
-        TreeNode18.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode19.Name = "ndSerialkeyManagement"
-        TreeNode19.Text = "จัดการซีเรียลคีย์"
-        TreeNode20.Name = "ndAddCustomer"
-        TreeNode20.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode21.Name = "ndFindCustomer"
-        TreeNode21.Text = "ค้นหาลูกค้า"
-        TreeNode22.Name = "ndCustomerManage"
-        TreeNode22.Text = "จัดการลูกค้า"
-        TreeNode23.Name = "ndUserResetPassword"
-        TreeNode23.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode24.Name = "ndUserInfo"
-        TreeNode24.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode22, TreeNode24})
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndUserResetPassword"
+        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode8.Name = "ndUserInfo"
+        TreeNode8.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
@@ -415,7 +415,7 @@ Partial Class AddProduct
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "AddProduct"
-        Me.Text = "เพิ่มผลิตภัณฑ์"
+        Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

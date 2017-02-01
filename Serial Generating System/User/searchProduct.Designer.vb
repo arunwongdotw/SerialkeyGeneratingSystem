@@ -22,14 +22,14 @@ Partial Class searchProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18})
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode23})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchCus = New System.Windows.Forms.DataGridView()
@@ -47,6 +47,7 @@ Partial Class searchProduct
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
@@ -65,7 +66,6 @@ Partial Class searchProduct
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.lblGroupCorp = New System.Windows.Forms.Label()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -203,6 +203,15 @@ Partial Class searchProduct
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 4
+        '
+        'lblGroupCorp
+        '
+        Me.lblGroupCorp.AutoSize = True
+        Me.lblGroupCorp.Location = New System.Drawing.Point(392, 195)
+        Me.lblGroupCorp.Name = "lblGroupCorp"
+        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
+        Me.lblGroupCorp.TabIndex = 120
+        Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
         'lblFirstName
         '
@@ -368,35 +377,26 @@ Partial Class searchProduct
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode17.Name = "ndCreateSerialkey"
-        TreeNode17.Text = "สร้างซีเรียลคีย์"
-        TreeNode18.Name = "ndFindSerialkey"
-        TreeNode18.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode19.Name = "ndSerialkeyManagement"
-        TreeNode19.Text = "จัดการซีเรียลคีย์"
-        TreeNode20.Name = "ndAddCustomer"
-        TreeNode20.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode21.Name = "ndFindCustomer"
-        TreeNode21.Text = "ค้นหาลูกค้า"
-        TreeNode22.Name = "ndCustomerManage"
-        TreeNode22.Text = "จัดการลูกค้า"
-        TreeNode23.Name = "ndUserResetPassword"
-        TreeNode23.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode24.Name = "ndUserInfo"
-        TreeNode24.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode22, TreeNode24})
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndUserResetPassword"
+        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode8.Name = "ndUserInfo"
+        TreeNode8.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
-        '
-        'lblGroupCorp
-        '
-        Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(392, 195)
-        Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
-        Me.lblGroupCorp.TabIndex = 120
-        Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
         'searchProduct
         '
@@ -405,7 +405,7 @@ Partial Class searchProduct
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "searchProduct"
-        Me.Text = "ค้นหาผลิตภัณฑ์"
+        Me.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
