@@ -68,18 +68,21 @@ Public Class SearchUser
         Dim strQuery As String
         Dim isDelete As Boolean
         If e.ColumnIndex = dgvSearchUser.Columns("btnDelete").Index Then
-            strQuery = "delete from SGS.dbo.Employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
-            isDelete = con.save(strQuery)
-            If isDelete Then
-                MessageBox.Show("ลบข้อมูลสำเร็จ")
-            Else
-                MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo, Title:="ยืนยันการลบข้อมูล") = vbYes Then ' or  = 6 
+                strQuery = "delete from sgs.dbo.employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
+                isDelete = con.save(strQuery)
+                If isDelete Then
+                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    loadDataTable()
+                Else
+                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                End If
             End If
-        End If
-        If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
-            Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
-            formEditUser.Show()
-            Me.Hide()
+            If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
+                Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
+                formEditUser.Show()
+                Me.Hide()
+            End If
         End If
     End Sub
     Private Sub setPermissionCheckBox()
