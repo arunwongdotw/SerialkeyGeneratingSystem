@@ -234,6 +234,21 @@ Public Class CreateUser
         If isEmployeeDuplicate("username", txtUsername.Text) Then
             MessageBox.Show("ชื่อผู้ใช้ซ้ำ")
             Return True
+        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
+            MessageBox.Show("รหัสพนักงานซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("firstname", txtFirstName.Text) Then
+            MessageBox.Show("ชื่อซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("lastname", txtLastName.Text) Then
+            MessageBox.Show("นามสกุลซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("phonenumber", txtPhoneNumber.Text) Then
+            MessageBox.Show("หมายเลขโทรศัพท์ซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
+            MessageBox.Show("อีเมลซ้ำ")
+            Return True
         End If
         Return False
     End Function

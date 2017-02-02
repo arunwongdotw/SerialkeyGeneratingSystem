@@ -93,14 +93,17 @@ Public Class EditUser
     End Sub
 
     Public Function checkDuplicate() As Boolean
-        If isEmployeeDuplicate("password", txtPassword.Text) Then
-            MessageBox.Show("รหัสผ่านซ้ำซ้ำ")
-            Return True
-        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
+        If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
             MessageBox.Show("รหัสพนักงานซ้ำ")
             Return True
+        ElseIf isEmployeeDuplicate("firstname", txtFirstName.Text) Then
+            MessageBox.Show("ชื่อซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("lastname", txtLastName.Text) Then
+            MessageBox.Show("นามสกุลซ้ำ")
+            Return True
         ElseIf isEmployeeDuplicate("phonenumber", txtPhoneNumber.Text) Then
-            MessageBox.Show("หมายเลขโทรศัพย์ซ้ำ")
+            MessageBox.Show("หมายเลขโทรศัพท์ซ้ำ")
             Return True
         ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
             MessageBox.Show("อีเมลซ้ำ")
