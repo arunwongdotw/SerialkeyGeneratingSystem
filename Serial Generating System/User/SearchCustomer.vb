@@ -22,7 +22,7 @@ Public Class SearchCustomer
     Private Sub GenerateColumn()
         Try
             Me.dgvSearchCus.Columns.Clear()
-            'Me.dgvSearchCus.AutoGenerateColumns = False
+            Me.dgvSearchCus.AutoGenerateColumns = False
 
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
@@ -139,6 +139,22 @@ Public Class SearchCustomer
             Col.Name = "phone"
             Me.dgvSearchCus.Columns.Add(Col)
 
+            Dim btnEdit As New DataGridViewButtonColumn()
+            btnEdit.HeaderText = ""
+            btnEdit.Text = "แก้ไข"
+            btnEdit.Name = "btnEdit"
+            btnEdit.Width = 70
+            btnEdit.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnEdit)
+
+
+            Dim btnDelete As New DataGridViewButtonColumn()
+            btnDelete.HeaderText = ""
+            btnDelete.Text = "ลบ"
+            btnDelete.Name = "btnDelete"
+            btnDelete.Width = 70
+            btnDelete.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnDelete)
 
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
@@ -260,7 +276,7 @@ Public Class SearchCustomer
     End Sub
 
 
-    
+
 
     Private Sub clear()
 
@@ -381,5 +397,27 @@ Public Class SearchCustomer
 
     Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged
         LoadData()
+    End Sub
+
+    Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchCus.CellContentClick
+        Dim strQuery As String
+        Dim isDelete As Boolean
+        If e.ColumnIndex = dgvSearchCus.Columns("btnDelete").Index Then
+            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo, Title:="ยืนยันการลบข้อมูล") = vbYes Then ' or  = 6 
+                strQuery = "delete from sgs.dbo.Customer where id = " & dgvSearchCus.Rows(e.RowIndex).Cells("id").Value
+                isDelete = con.save(strQuery)
+                If isDelete Then
+                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    Search_Cus_Load(Nothing, Nothing)
+                Else
+                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                End If
+            End If
+        End If
+        If e.ColumnIndex = dgvSearchCus.Columns("btnEdit").Index Then
+            Dim formEditUser As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
+            formEditUser.Show()
+            Me.Hide()
+        End If
     End Sub
 End Class
