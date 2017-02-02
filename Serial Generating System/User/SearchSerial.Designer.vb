@@ -86,7 +86,7 @@ Partial Class SearchSerial
         Me.lblVersion.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVersion.Location = New System.Drawing.Point(671, 204)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(68, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(69, 27)
         Me.lblVersion.TabIndex = 65
         Me.lblVersion.Text = "เวอร์ชัน :"
         '
@@ -96,7 +96,7 @@ Partial Class SearchSerial
         Me.chbJapan.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbJapan.Location = New System.Drawing.Point(1219, 149)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
         Me.chbJapan.TabIndex = 64
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -107,7 +107,7 @@ Partial Class SearchSerial
         Me.chbChinese.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbChinese.Location = New System.Drawing.Point(1219, 186)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 63
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -118,7 +118,7 @@ Partial Class SearchSerial
         Me.chbEnglist.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbEnglist.Location = New System.Drawing.Point(1136, 149)
         Me.chbEnglist.Name = "chbEnglist"
-        Me.chbEnglist.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglist.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglist.TabIndex = 62
         Me.chbEnglist.Text = "อังกฤษ"
         Me.chbEnglist.UseVisualStyleBackColor = True
@@ -129,7 +129,7 @@ Partial Class SearchSerial
         Me.chbThai.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbThai.Location = New System.Drawing.Point(1136, 186)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 61
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -141,7 +141,7 @@ Partial Class SearchSerial
         Me.chbYear.Items.AddRange(New Object() {"วัน"})
         Me.chbYear.Location = New System.Drawing.Point(525, 201)
         Me.chbYear.Name = "chbYear"
-        Me.chbYear.Size = New System.Drawing.Size(66, 34)
+        Me.chbYear.Size = New System.Drawing.Size(66, 35)
         Me.chbYear.TabIndex = 60
         Me.chbYear.Text = "ปี พ.ศ."
         '
@@ -152,7 +152,7 @@ Partial Class SearchSerial
         Me.chbMonth.Items.AddRange(New Object() {"วัน"})
         Me.chbMonth.Location = New System.Drawing.Point(444, 201)
         Me.chbMonth.Name = "chbMonth"
-        Me.chbMonth.Size = New System.Drawing.Size(75, 34)
+        Me.chbMonth.Size = New System.Drawing.Size(75, 35)
         Me.chbMonth.TabIndex = 59
         Me.chbMonth.Text = "เดือน"
         '
@@ -162,7 +162,7 @@ Partial Class SearchSerial
         Me.chbDay.FormattingEnabled = True
         Me.chbDay.Location = New System.Drawing.Point(396, 201)
         Me.chbDay.Name = "chbDay"
-        Me.chbDay.Size = New System.Drawing.Size(42, 34)
+        Me.chbDay.Size = New System.Drawing.Size(42, 35)
         Me.chbDay.TabIndex = 58
         Me.chbDay.Text = "วัน"
         '
@@ -212,7 +212,7 @@ Partial Class SearchSerial
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(1349, 65)
         Me.Button3.TabIndex = 70
-        Me.Button3.Text = "ชื่อผู้ใช้ 1"
+        Me.Button3.Text = "ค้นหาซีเรียลคีย์"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -224,7 +224,7 @@ Partial Class SearchSerial
         Me.dgvSeriaKey.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
         Me.dgvSeriaKey.Location = New System.Drawing.Point(256, 349)
         Me.dgvSeriaKey.Name = "dgvSeriaKey"
-        Me.dgvSeriaKey.Size = New System.Drawing.Size(1093, 379)
+        Me.dgvSeriaKey.Size = New System.Drawing.Size(1093, 335)
         Me.dgvSeriaKey.TabIndex = 69
         '
         'Column1
@@ -326,7 +326,7 @@ Partial Class SearchSerial
         Me.lblOrderฆales.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOrderฆales.Location = New System.Drawing.Point(636, 150)
         Me.lblOrderฆales.Name = "lblOrderฆales"
-        Me.lblOrderฆales.Size = New System.Drawing.Size(103, 26)
+        Me.lblOrderฆales.Size = New System.Drawing.Size(104, 27)
         Me.lblOrderฆales.TabIndex = 67
         Me.lblOrderฆales.Text = "ลำดับที่ขายได้ :"
         '
@@ -337,7 +337,7 @@ Partial Class SearchSerial
         Me.cmbVersion.Items.AddRange(New Object() {"วัน"})
         Me.cmbVersion.Location = New System.Drawing.Point(746, 201)
         Me.cmbVersion.Name = "cmbVersion"
-        Me.cmbVersion.Size = New System.Drawing.Size(195, 34)
+        Me.cmbVersion.Size = New System.Drawing.Size(195, 35)
         Me.cmbVersion.TabIndex = 66
         Me.cmbVersion.Text = "Demo"
         '
@@ -368,7 +368,7 @@ Partial Class SearchSerial
         Me.lblAmountUser.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAmountUser.Location = New System.Drawing.Point(951, 96)
         Me.lblAmountUser.Name = "lblAmountUser"
-        Me.lblAmountUser.Size = New System.Drawing.Size(177, 26)
+        Me.lblAmountUser.Size = New System.Drawing.Size(179, 27)
         Me.lblAmountUser.TabIndex = 46
         Me.lblAmountUser.Text = "จำนวนผู้ใช้งานซอฟต์แวร์ :"
         '
@@ -378,7 +378,7 @@ Partial Class SearchSerial
         Me.lblLanguage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguage.Location = New System.Drawing.Point(1073, 150)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 42
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -410,7 +410,7 @@ Partial Class SearchSerial
         Me.lblOption.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOption.Location = New System.Drawing.Point(608, 96)
         Me.lblOption.Name = "lblOption"
-        Me.lblOption.Size = New System.Drawing.Size(132, 26)
+        Me.lblOption.Size = New System.Drawing.Size(132, 27)
         Me.lblOption.TabIndex = 35
         Me.lblOption.Text = "ออปชันซอฟต์แวร์ :"
         '
@@ -420,7 +420,7 @@ Partial Class SearchSerial
         Me.lblExpireDate.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblExpireDate.Location = New System.Drawing.Point(296, 204)
         Me.lblExpireDate.Name = "lblExpireDate"
-        Me.lblExpireDate.Size = New System.Drawing.Size(93, 26)
+        Me.lblExpireDate.Size = New System.Drawing.Size(94, 27)
         Me.lblExpireDate.TabIndex = 33
         Me.lblExpireDate.Text = "วันหมดอายุ :"
         '
@@ -439,7 +439,7 @@ Partial Class SearchSerial
         Me.lblSoftwareName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSoftwareName.Location = New System.Drawing.Point(285, 150)
         Me.lblSoftwareName.Name = "lblSoftwareName"
-        Me.lblSoftwareName.Size = New System.Drawing.Size(104, 26)
+        Me.lblSoftwareName.Size = New System.Drawing.Size(105, 27)
         Me.lblSoftwareName.TabIndex = 31
         Me.lblSoftwareName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -471,7 +471,7 @@ Partial Class SearchSerial
         Me.lblBrandSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBrandSoftware.Location = New System.Drawing.Point(260, 96)
         Me.lblBrandSoftware.Name = "lblBrandSoftware"
-        Me.lblBrandSoftware.Size = New System.Drawing.Size(128, 26)
+        Me.lblBrandSoftware.Size = New System.Drawing.Size(130, 27)
         Me.lblBrandSoftware.TabIndex = 27
         Me.lblBrandSoftware.Text = "แบรนด์ซอฟต์แวร์ :"
         '
@@ -516,7 +516,7 @@ Partial Class SearchSerial
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SearchSerial"
-        Me.Text = "ค้นหาซีเรียลคีย์"
+        Me.Text = "ค้นหาซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvSeriaKey, System.ComponentModel.ISupportInitialize).EndInit()

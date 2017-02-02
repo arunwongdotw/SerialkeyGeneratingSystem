@@ -80,7 +80,7 @@ Partial Class ChangePassword
         Me.btnHeader.Size = New System.Drawing.Size(1357, 65)
         Me.btnHeader.TabIndex = 74
         Me.btnHeader.TabStop = False
-        Me.btnHeader.Text = "ผู้ดูแลระบบ"
+        Me.btnHeader.Text = "เปลี่ยนรหัสผ่าน"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
@@ -91,7 +91,7 @@ Partial Class ChangePassword
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(1085, 177)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 26)
+        Me.Label5.Size = New System.Drawing.Size(18, 27)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -102,7 +102,7 @@ Partial Class ChangePassword
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(1085, 228)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 26)
+        Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -113,7 +113,7 @@ Partial Class ChangePassword
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(1086, 280)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
@@ -145,7 +145,7 @@ Partial Class ChangePassword
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(440, 276)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(132, 26)
+        Me.Label3.Size = New System.Drawing.Size(134, 27)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -188,7 +188,7 @@ Partial Class ChangePassword
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(475, 226)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 26)
+        Me.Label2.Size = New System.Drawing.Size(98, 27)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "รหัสผ่านใหม่ :"
         '
@@ -198,7 +198,7 @@ Partial Class ChangePassword
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(477, 175)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 26)
+        Me.Label1.Size = New System.Drawing.Size(96, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "รหัสผ่านเก่า :"
         '
@@ -236,7 +236,7 @@ Partial Class ChangePassword
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ChangePassword"
-        Me.Text = "เปลี่ยนรหัสผ่าน"
+        Me.Text = "เปลี่ยนรหัสผ่าน - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

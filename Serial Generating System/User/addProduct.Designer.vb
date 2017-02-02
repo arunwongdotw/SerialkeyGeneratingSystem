@@ -49,8 +49,6 @@ Partial Class AddProduct
         Me.Label21 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.btnHeader = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chbWM = New System.Windows.Forms.CheckBox()
         Me.chbQC = New System.Windows.Forms.CheckBox()
@@ -64,8 +62,11 @@ Partial Class AddProduct
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
+        Me.btnAttachProductImage = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvUserMenu
@@ -103,31 +104,31 @@ Partial Class AddProduct
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(431, 114)
+        Me.lblCorpName.Location = New System.Drawing.Point(453, 97)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
         Me.lblCorpName.TabIndex = 26
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
         'lblCorpSubName
         '
         Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(412, 163)
+        Me.lblCorpSubName.Location = New System.Drawing.Point(434, 146)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
         Me.lblCorpSubName.TabIndex = 27
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
         'txtProductName
         '
-        Me.txtProductName.Location = New System.Drawing.Point(542, 111)
+        Me.txtProductName.Location = New System.Drawing.Point(564, 94)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.Size = New System.Drawing.Size(718, 36)
         Me.txtProductName.TabIndex = 1
         '
         'txtProduct_s_name
         '
-        Me.txtProduct_s_name.Location = New System.Drawing.Point(542, 163)
+        Me.txtProduct_s_name.Location = New System.Drawing.Point(564, 146)
         Me.txtProduct_s_name.Name = "txtProduct_s_name"
         Me.txtProduct_s_name.Size = New System.Drawing.Size(225, 36)
         Me.txtProduct_s_name.TabIndex = 2
@@ -138,7 +139,7 @@ Partial Class AddProduct
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(638, 528)
+        Me.btnAdd.Location = New System.Drawing.Point(660, 511)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
         Me.btnAdd.TabIndex = 15
@@ -148,15 +149,15 @@ Partial Class AddProduct
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(434, 275)
+        Me.lblFirstName.Location = New System.Drawing.Point(456, 258)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
+        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
         Me.lblFirstName.TabIndex = 31
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
         'txtBrand_s_name
         '
-        Me.txtBrand_s_name.Location = New System.Drawing.Point(542, 272)
+        Me.txtBrand_s_name.Location = New System.Drawing.Point(564, 255)
         Me.txtBrand_s_name.Name = "txtBrand_s_name"
         Me.txtBrand_s_name.Size = New System.Drawing.Size(225, 36)
         Me.txtBrand_s_name.TabIndex = 4
@@ -167,7 +168,7 @@ Partial Class AddProduct
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(846, 528)
+        Me.btnClear.Location = New System.Drawing.Point(868, 511)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 16
@@ -177,15 +178,15 @@ Partial Class AddProduct
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(453, 220)
+        Me.lblGroupCorp.Location = New System.Drawing.Point(475, 203)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
         Me.lblGroupCorp.TabIndex = 46
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
         'txtBrandName
         '
-        Me.txtBrandName.Location = New System.Drawing.Point(542, 217)
+        Me.txtBrandName.Location = New System.Drawing.Point(564, 200)
         Me.txtBrandName.Name = "txtBrandName"
         Me.txtBrandName.Size = New System.Drawing.Size(718, 36)
         Me.txtBrandName.TabIndex = 3
@@ -194,9 +195,9 @@ Partial Class AddProduct
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(773, 272)
+        Me.Label18.Location = New System.Drawing.Point(795, 255)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 26)
+        Me.Label18.Size = New System.Drawing.Size(18, 27)
         Me.Label18.TabIndex = 74
         Me.Label18.Text = "*"
         '
@@ -204,9 +205,9 @@ Partial Class AddProduct
         '
         Me.Label20.AutoSize = True
         Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(1266, 217)
+        Me.Label20.Location = New System.Drawing.Point(1288, 200)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 26)
+        Me.Label20.Size = New System.Drawing.Size(18, 27)
         Me.Label20.TabIndex = 76
         Me.Label20.Text = "*"
         '
@@ -214,9 +215,9 @@ Partial Class AddProduct
         '
         Me.Label21.AutoSize = True
         Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(773, 163)
+        Me.Label21.Location = New System.Drawing.Point(795, 146)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(18, 26)
+        Me.Label21.Size = New System.Drawing.Size(18, 27)
         Me.Label21.TabIndex = 77
         Me.Label21.Text = "*"
         '
@@ -235,40 +236,16 @@ Partial Class AddProduct
         '
         Me.Label22.AutoSize = True
         Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(1266, 111)
+        Me.Label22.Location = New System.Drawing.Point(1288, 94)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 26)
+        Me.Label22.Size = New System.Drawing.Size(18, 27)
         Me.Label22.TabIndex = 78
         Me.Label22.Text = "*"
-        '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
-        Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(273, 80)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 106)
-        Me.PictureBox1.TabIndex = 80
-        Me.PictureBox1.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.btnAttachProductImage)
         Me.Panel1.Controls.Add(Me.chbWM)
         Me.Panel1.Controls.Add(Me.chbQC)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -308,9 +285,9 @@ Partial Class AddProduct
         'chbWM
         '
         Me.chbWM.AutoSize = True
-        Me.chbWM.Location = New System.Drawing.Point(870, 382)
+        Me.chbWM.Location = New System.Drawing.Point(892, 365)
         Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(201, 30)
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
         Me.chbWM.TabIndex = 92
         Me.chbWM.Text = "Warehouse Management"
         Me.chbWM.UseVisualStyleBackColor = True
@@ -318,9 +295,9 @@ Partial Class AddProduct
         'chbQC
         '
         Me.chbQC.AutoSize = True
-        Me.chbQC.Location = New System.Drawing.Point(870, 419)
+        Me.chbQC.Location = New System.Drawing.Point(892, 402)
         Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 30)
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
         Me.chbQC.TabIndex = 91
         Me.chbQC.Text = "Quality Control"
         Me.chbQC.UseVisualStyleBackColor = True
@@ -328,15 +305,15 @@ Partial Class AddProduct
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(756, 383)
+        Me.Label4.Location = New System.Drawing.Point(778, 366)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 26)
+        Me.Label4.Size = New System.Drawing.Size(108, 27)
         Me.Label4.TabIndex = 90
         Me.Label4.Text = "ออฟชัน(ถ้ามี) :"
         '
         'txtCost
         '
-        Me.txtCost.Location = New System.Drawing.Point(542, 325)
+        Me.txtCost.Location = New System.Drawing.Point(564, 308)
         Me.txtCost.Name = "txtCost"
         Me.txtCost.Size = New System.Drawing.Size(310, 36)
         Me.txtCost.TabIndex = 88
@@ -344,18 +321,18 @@ Partial Class AddProduct
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(445, 328)
+        Me.Label3.Location = New System.Drawing.Point(467, 311)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 26)
+        Me.Label3.Size = New System.Drawing.Size(91, 27)
         Me.Label3.TabIndex = 89
         Me.Label3.Text = "ราคา(บาท) :"
         '
         'chbJapan
         '
         Me.chbJapan.AutoSize = True
-        Me.chbJapan.Location = New System.Drawing.Point(626, 419)
+        Me.chbJapan.Location = New System.Drawing.Point(648, 402)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
         Me.chbJapan.TabIndex = 87
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -363,9 +340,9 @@ Partial Class AddProduct
         'chbChinese
         '
         Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(542, 419)
+        Me.chbChinese.Location = New System.Drawing.Point(564, 402)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 86
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -373,9 +350,9 @@ Partial Class AddProduct
         'chbEnglish
         '
         Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(543, 382)
+        Me.chbEnglish.Location = New System.Drawing.Point(565, 365)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 85
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -383,9 +360,9 @@ Partial Class AddProduct
         'chbThai
         '
         Me.chbThai.AutoSize = True
-        Me.chbThai.Location = New System.Drawing.Point(626, 382)
+        Me.chbThai.Location = New System.Drawing.Point(648, 365)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 84
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -393,29 +370,68 @@ Partial Class AddProduct
         'lblLanguage
         '
         Me.lblLanguage.AutoSize = True
-        Me.lblLanguage.Location = New System.Drawing.Point(479, 382)
+        Me.lblLanguage.Location = New System.Drawing.Point(501, 365)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 83
         Me.lblLanguage.Text = "ภาษา :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(797, 275)
+        Me.Label2.Location = New System.Drawing.Point(819, 258)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(268, 26)
+        Me.Label2.Size = New System.Drawing.Size(266, 27)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(797, 166)
+        Me.Label1.Location = New System.Drawing.Point(819, 149)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(268, 26)
+        Me.Label1.Size = New System.Drawing.Size(266, 27)
         Me.Label1.TabIndex = 81
         Me.Label1.Text = "3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.SoftwareBoxIcon
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(279, 94)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(127, 131)
+        Me.PictureBox1.TabIndex = 80
+        Me.PictureBox1.TabStop = False
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
+        'btnAttachProductImage
+        '
+        Me.btnAttachProductImage.BackColor = System.Drawing.Color.DarkGray
+        Me.btnAttachProductImage.FlatAppearance.BorderSize = 0
+        Me.btnAttachProductImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAttachProductImage.Location = New System.Drawing.Point(279, 222)
+        Me.btnAttachProductImage.Name = "btnAttachProductImage"
+        Me.btnAttachProductImage.Size = New System.Drawing.Size(127, 40)
+        Me.btnAttachProductImage.TabIndex = 93
+        Me.btnAttachProductImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAttachProductImage.UseVisualStyleBackColor = False
         '
         'AddProduct
         '
@@ -424,10 +440,10 @@ Partial Class AddProduct
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "AddProduct"
-        Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -448,7 +464,6 @@ Partial Class AddProduct
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -462,4 +477,6 @@ Partial Class AddProduct
     Friend WithEvents chbWM As System.Windows.Forms.CheckBox
     Friend WithEvents chbQC As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnAttachProductImage As System.Windows.Forms.Button
 End Class
