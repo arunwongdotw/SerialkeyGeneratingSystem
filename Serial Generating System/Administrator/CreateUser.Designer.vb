@@ -32,6 +32,7 @@ Partial Class CreateUser
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateUser))
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnAttachImage = New System.Windows.Forms.Button()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.pbAttachImage = New System.Windows.Forms.PictureBox()
@@ -67,7 +68,7 @@ Partial Class CreateUser
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnAttachImage = New System.Windows.Forms.Button()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -103,7 +104,7 @@ Partial Class CreateUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnAttachImage)
         Me.Panel1.Controls.Add(Me.rdbAccountant)
         Me.Panel1.Controls.Add(Me.rdbIT)
@@ -146,6 +147,20 @@ Partial Class CreateUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
+        '
+        'btnAttachImage
+        '
+        Me.btnAttachImage.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnAttachImage.FlatAppearance.BorderSize = 0
+        Me.btnAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttachImage.Location = New System.Drawing.Point(308, 217)
+        Me.btnAttachImage.Name = "btnAttachImage"
+        Me.btnAttachImage.Size = New System.Drawing.Size(113, 35)
+        Me.btnAttachImage.TabIndex = 83
+        Me.btnAttachImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAttachImage.UseVisualStyleBackColor = False
         '
         'rdbAccountant
         '
@@ -193,7 +208,7 @@ Partial Class CreateUser
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1348, 65)
+        Me.btnHeader.Size = New System.Drawing.Size(1349, 65)
         Me.btnHeader.TabIndex = 81
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
@@ -257,7 +272,7 @@ Partial Class CreateUser
         '
         'cmbUserType
         '
-        Me.cmbUserType.BackColor = System.Drawing.Color.DarkOrange
+        Me.cmbUserType.BackColor = System.Drawing.Color.PeachPuff
         Me.cmbUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbUserType.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmbUserType.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -388,7 +403,7 @@ Partial Class CreateUser
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(746, 629)
+        Me.btnClear.Location = New System.Drawing.Point(746, 555)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 15
@@ -494,7 +509,7 @@ Partial Class CreateUser
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(557, 629)
+        Me.btnAdd.Location = New System.Drawing.Point(557, 555)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
         Me.btnAdd.TabIndex = 14
@@ -542,19 +557,17 @@ Partial Class CreateUser
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
-        'btnAttachImage
+        'txtAccountInfo
         '
-        Me.btnAttachImage.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btnAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnAttachImage.FlatAppearance.BorderSize = 0
-        Me.btnAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAttachImage.Location = New System.Drawing.Point(308, 217)
-        Me.btnAttachImage.Name = "btnAttachImage"
-        Me.btnAttachImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnAttachImage.TabIndex = 83
-        Me.btnAttachImage.Text = "เพิ่มรูปภาพ"
-        Me.btnAttachImage.UseVisualStyleBackColor = False
+        Me.txtAccountInfo.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.SystemColors.ScrollBar
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1237, 11)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(100, 33)
+        Me.txtAccountInfo.TabIndex = 84
         '
         'CreateUser
         '
@@ -609,4 +622,5 @@ Partial Class CreateUser
     Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
     Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
     Friend WithEvents btnAttachImage As System.Windows.Forms.Button
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class
