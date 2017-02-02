@@ -94,14 +94,12 @@ Partial Class CreateSerial
         Me.lblExpireDate = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.pbWelcomText = New System.Windows.Forms.PictureBox()
         Me.lbWelcome = New System.Windows.Forms.Label()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.pbWelcomText, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogOut
@@ -118,9 +116,8 @@ Partial Class CreateSerial
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.lbWelcome)
-        Me.Panel1.Controls.Add(Me.pbWelcomText)
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -452,7 +449,7 @@ Partial Class CreateSerial
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1207, 67)
+        Me.btnHeader.Size = New System.Drawing.Size(1350, 67)
         Me.btnHeader.TabIndex = 72
         Me.btnHeader.Text = "สร้างซีเรียลคีย์"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -805,19 +802,10 @@ Partial Class CreateSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
-        'pbWelcomText
-        '
-        Me.pbWelcomText.BackColor = System.Drawing.SystemColors.InfoText
-        Me.pbWelcomText.Location = New System.Drawing.Point(1194, 0)
-        Me.pbWelcomText.Name = "pbWelcomText"
-        Me.pbWelcomText.Size = New System.Drawing.Size(156, 67)
-        Me.pbWelcomText.TabIndex = 75
-        Me.pbWelcomText.TabStop = False
-        '
         'lbWelcome
         '
         Me.lbWelcome.AutoSize = True
-        Me.lbWelcome.BackColor = System.Drawing.SystemColors.InfoText
+        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbWelcome.ForeColor = System.Drawing.Color.White
         Me.lbWelcome.Location = New System.Drawing.Point(1266, 8)
@@ -829,13 +817,13 @@ Partial Class CreateSerial
         '
         'txtAccountInfo
         '
-        Me.txtAccountInfo.BackColor = System.Drawing.SystemColors.InfoText
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1208, 38)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 38)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(138, 29)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(278, 29)
         Me.txtAccountInfo.TabIndex = 77
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -856,7 +844,6 @@ Partial Class CreateSerial
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.pbWelcomText, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -920,7 +907,6 @@ Partial Class CreateSerial
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents pbWelcomText As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
     Friend WithEvents lbWelcome As System.Windows.Forms.Label
 End Class

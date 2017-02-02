@@ -70,10 +70,8 @@ Partial Class CreateUser
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvAdminMenu
@@ -107,8 +105,8 @@ Partial Class CreateUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel1.Controls.Add(Me.lbWelcome)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
+        Me.Panel1.Controls.Add(Me.lbWelcome)
         Me.Panel1.Controls.Add(Me.btnAttachImage)
         Me.Panel1.Controls.Add(Me.rdbAccountant)
         Me.Panel1.Controls.Add(Me.rdbIT)
@@ -146,7 +144,6 @@ Partial Class CreateUser
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
@@ -156,7 +153,7 @@ Partial Class CreateUser
         'lbWelcome
         '
         Me.lbWelcome.AutoSize = True
-        Me.lbWelcome.BackColor = System.Drawing.SystemColors.InfoText
+        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbWelcome.ForeColor = System.Drawing.Color.White
         Me.lbWelcome.Location = New System.Drawing.Point(1253, 8)
@@ -167,7 +164,7 @@ Partial Class CreateUser
         '
         'txtAccountInfo
         '
-        Me.txtAccountInfo.BackColor = System.Drawing.SystemColors.InfoText
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -238,7 +235,7 @@ Partial Class CreateUser
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1195, 65)
+        Me.btnHeader.Size = New System.Drawing.Size(1349, 65)
         Me.btnHeader.TabIndex = 81
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
@@ -587,15 +584,6 @@ Partial Class CreateUser
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.InfoText
-        Me.PictureBox1.Location = New System.Drawing.Point(1193, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(156, 65)
-        Me.PictureBox1.TabIndex = 85
-        Me.PictureBox1.TabStop = False
-        '
         'CreateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -608,7 +596,6 @@ Partial Class CreateUser
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -651,6 +638,5 @@ Partial Class CreateUser
     Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
     Friend WithEvents btnAttachImage As System.Windows.Forms.Button
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lbWelcome As System.Windows.Forms.Label
 End Class
