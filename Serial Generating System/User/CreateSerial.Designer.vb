@@ -91,6 +91,7 @@ Partial Class CreateSerial
         Me.lblExpireDate = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -451,6 +452,7 @@ Partial Class CreateSerial
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel3.Controls.Add(Me.chbForever)
         Me.Panel3.Controls.Add(Me.txtSerialKey)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.txtInfo)
@@ -538,9 +540,11 @@ Partial Class CreateSerial
         'dtpExpireDate
         '
         Me.dtpExpireDate.Location = New System.Drawing.Point(728, 9)
+        Me.dtpExpireDate.MinDate = New Date(2017, 2, 2, 15, 10, 44, 0)
         Me.dtpExpireDate.Name = "dtpExpireDate"
         Me.dtpExpireDate.Size = New System.Drawing.Size(200, 36)
         Me.dtpExpireDate.TabIndex = 99
+        Me.dtpExpireDate.Value = New Date(2017, 2, 2, 15, 10, 44, 0)
         '
         'lblSerialKey
         '
@@ -789,6 +793,16 @@ Partial Class CreateSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '
+        'chbForever
+        '
+        Me.chbForever.AutoSize = True
+        Me.chbForever.Location = New System.Drawing.Point(969, 14)
+        Me.chbForever.Name = "chbForever"
+        Me.chbForever.Size = New System.Drawing.Size(65, 31)
+        Me.chbForever.TabIndex = 118
+        Me.chbForever.Text = "ถาวร"
+        Me.chbForever.UseVisualStyleBackColor = True
+        '
         'CreateSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -868,4 +882,5 @@ Partial Class CreateSerial
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents chbForever As System.Windows.Forms.CheckBox
 End Class

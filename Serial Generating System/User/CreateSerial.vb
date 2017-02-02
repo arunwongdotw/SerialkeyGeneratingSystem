@@ -14,6 +14,7 @@ Public Class CreateSerial
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
+        dtpExpireDate.MinDate = DateTime.Now
 
     End Sub
 
@@ -108,6 +109,7 @@ Public Class CreateSerial
         chbWM.Checked = False
         chbQC.Checked = False
         chbUnlimit.Checked = False
+        chbForever.Checked = False
 
         txtCorpName.Clear()
         txtCorpSubName.Clear()
@@ -299,7 +301,7 @@ Public Class CreateSerial
         amountUser = txtAmountUser.Text
 
         If chbUnlimit.Checked = True Then
-            amountUser = "xxxx"
+            UserAfterAdd0 = "xxxx"
         Else
             Dim chkAmountUser As Integer = txtAmountUser.Text
             'MsgBox(chkAmountUser)
@@ -365,10 +367,12 @@ Public Class CreateSerial
         '************************************************************************************'
         '*************************************** EXP ****************************************'
         '************************************************************************************'
-
-        expireDate = toSqlDate(dtpExpireDate.Value.Date)
-        'MsgBox(expireDate)
-
+        If chbForever.Checked = True Then
+            expireDate = "xxxxxx"
+        Else
+            expireDate = toSqlDate(dtpExpireDate.Value.Date)
+            'MsgBox(expireDate)
+        End If
         '************************************************************************************'
         '*************************************** LANGUAGE ****************************************'
         '************************************************************************************'
@@ -437,14 +441,27 @@ Public Class CreateSerial
         Try
             Dim isCorrect As Boolean = False
             Dim i As Integer = txtAmountUser.TextLength
-            If txtAmountUser.Text = "" Then
-                MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
-            ElseIf txtCorpName.Text = "" Then
+            
+            If txtCorpName.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลลูกค้า")
             ElseIf txtBrand_s_name.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลซอฟต์แวร์")
-            ElseIf i = 0 Or i > 4 Then
-                MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+            ElseIf chbChinese.Checked = False And chbEnglish.Checked = False And chbThai.Checked = False And chbJapan.Checked = False Then
+                MsgBox("กรุณาเลือกอย่างน้อย 1 ภาษา")
+                'Else
+                '    isCorrect = True
+                'End If
+            ElseIf chbUnlimit.Checked = False Then
+                If txtAmountUser.Text = "" Then
+                    MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
+                    'isCorrect = False
+                ElseIf i = 0 Or i > 4 Then
+                    MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+                    'isCorrect = False
+                    ''End If
+                Else
+                    isCorrect = True
+                End If
             Else
                 isCorrect = True
             End If
@@ -504,6 +521,18 @@ Public Class CreateSerial
     End Sub
 
     Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
+
+    End Sub
+
+    Private Sub chbForever_CheckedChanged(sender As Object, e As EventArgs) Handles chbForever.CheckedChanged
+        If chbForever.Checked = True Then
+            dtpExpireDate.Enabled = False
+        Else
+            dtpExpireDate.Enabled = True
+        End If
+    End Sub
+
+    Private Sub dtpExpireDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpExpireDate.ValueChanged
 
     End Sub
 End Class
