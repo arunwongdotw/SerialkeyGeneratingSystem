@@ -121,14 +121,17 @@
   <data name="bgBlueCover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlueCover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bgHexa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bgHexa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UserIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgBlurColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlurColor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgWelcomePage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgWelcomePage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OfficerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OfficerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +142,10 @@
   <data name="SKGSIconHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SKGSIconHeader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UserIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UserIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bgHexa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgHexa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OfficerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OfficerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoSKGS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoSKGS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
