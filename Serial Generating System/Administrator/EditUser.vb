@@ -173,7 +173,6 @@ Public Class EditUser
         strQuery &= "per_delete"
         strQuery &= " from SGS.dbo.Employee "
         strQuery &= "where id = " & id
-        txtPhoneNumber.Text = strQuery
         sqlReader = con.query(strQuery)
     End Sub
 
