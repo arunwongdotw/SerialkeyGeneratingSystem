@@ -14,6 +14,7 @@ Public Class ChangePasswordUser
             MsgBox("เปลี่ยนรหัสผ่านล้มเหลว")
         Else
             MsgBox("เปลี่ยนรหัสผ่านสำเร็จ")
+            password = txtNewPassword.Text
         End If
         con.close()
     End Sub
@@ -74,6 +75,12 @@ Public Class ChangePasswordUser
                         Me.Hide()
                     Case "ndFindCustomer"
                         SearchCustomer.Show()
+                        Me.Hide()
+                    Case "ndAddProduct"
+                        AddProduct.Show()
+                        Me.Hide()
+                    Case "ndSearchProduct"
+                        searchProduct.Show()
                         Me.Hide()
                 End Select
             End If

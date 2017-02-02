@@ -6,8 +6,15 @@ Public Class CreateSerial
 
     Private con As New ConnectDB
 
+    Private Sub CreateSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+
+    End Sub
+
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tvUserMenu.ExpandAll()
+        cmbVersion.SelectedIndex = 0
+        txtAccountInfo.Text = Login.txtUsername.Text
 
     End Sub
 
@@ -35,6 +42,12 @@ Public Class CreateSerial
                         Me.Hide()
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
+                        Me.Hide()
+                    Case "ndAddProduct"
+                        AddProduct.Show()
+                        Me.Hide()
+                    Case "ndSearchProduct"
+                        searchProduct.Show()
                         Me.Hide()
                 End Select
             End If
@@ -92,6 +105,32 @@ Public Class CreateSerial
         frm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub clearAll()
+
+        chbEnglish.Checked = False
+        chbChinese.Checked = False
+        chbJapan.Checked = False
+        chbThai.Checked = False
+        chbWM.Checked = False
+        chbQC.Checked = False
+        chbUnlimit.Checked = False
+
+        txtCorpName.Clear()
+        txtCorpSubName.Clear()
+        txtGroupCorp.Clear()
+        txtBrandName.Clear()
+        txtBrand_s_name.Clear()
+        txtSoftwareName.Clear()
+        txtSoftware_s_name.Clear()
+        txtContractNumber.Clear()
+        txtAmountUser.Clear()
+
+        cmbVersion.SelectedIndex = 0
+
+
+    End Sub
+
     Private Sub clearCheckbox()
         chbEnglish.Checked = False
         chbChinese.Checked = False
@@ -181,7 +220,7 @@ Public Class CreateSerial
         End Try
     End Sub
 
-    
+
     Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
         Dim frm As New AddProduct
         frm.Show()
@@ -189,10 +228,289 @@ Public Class CreateSerial
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        Me.clearAll()
 
     End Sub
 
+    Public Function toSqlDate(ByVal val As Date) As String
+        Dim dd As Integer = Format(CDate(val), "dd")
+
+        Dim day As String = ""
+        If dd < 10 Then
+            day = 0 & dd
+        Else
+            day = dd
+        End If
+
+        Dim MM As Integer = Format(CDate(val), "MM")
+
+        Dim month As String = ""
+        If MM < 10 Then
+            month = 0 & MM
+        Else
+            month = MM
+        End If
+
+        'Dim yyyy As Integer = Format(CDate(val), "yyyy")
+        Dim yyyy As Integer = Format(CDate(val), "yy")
+
+        Dim ymd As String
+
+        'ymd = yyyy & MM & dd
+        ymd = yyyy & month & day
+
+        toSqlDate = ymd
+
+    End Function
+
+    Private Function getSEQ() As Integer
+        Dim sql As String = "select seq from SerialKey"
+        Dim dt As New DataTable
+        Dim da As SqlDataAdapter = con.queryForAdapter(sql)
+        Dim row As Integer = 0
+        con.close()
+        dt.Clear()
+        da.Fill(dt)
+        row = dt.Rows.Count
+        Return row
+
+    End Function
+
+    Private Sub GenSerial()
+        Dim i As Integer = 0
+        Dim brand As String = ""
+        Dim amountUser As String = ""
+        Dim add0 As String = ""
+        Dim UserAfterAdd0 As String = ""
+        Dim seq As String = ""
+        Dim seqAfterAdd0 As String = ""
+        Dim getrow As Integer = 0
+        Dim productName As String = ""
+        Dim optionName As String = ""
+        Dim qc As String = ""
+        Dim wm As String = ""
+        Dim expireDate As String = ""
+        Dim Language As String = ""
+        Dim countLan As Integer = 0
+        Dim T As String = ""
+        Dim E As String = ""
+        Dim C As String = ""
+        Dim J As String = ""
+        Dim languageName As String = ""
+        Dim version As String = ""
+
+        '*************************************** brand ****************************************'
+        brand = txtBrand_s_name.Text
+
+        '*************************************** user ****************************************'
+        amountUser = txtAmountUser.Text
+
+        If chbUnlimit.Checked = True Then
+            amountUser = "xxxx"
+        Else
+            Dim chkAmountUser As Integer = txtAmountUser.Text
+            'MsgBox(chkAmountUser)
+            txtAmountUser.Text = chkAmountUser
+            If amountUser.Length < 4 Then
+                Dim count As Integer = amountUser.Length
+                For i = count To 3
+                    add0 &= "0"
+                    'i = i + 1
+                Next
+                'MsgBox(add0)
+                UserAfterAdd0 = add0 & amountUser
+            End If
+
+        End If
+
+        '************************************************************************************'
+        '*************************************** seq ****************************************'
+        '************************************************************************************'
+
+        getrow = getSEQ() + 1
+        Dim add0forGETROW As String = ""
+        seq = getrow
+        If seq.Length < 5 Then
+            For i = seq.Length To 4
+                add0forGETROW &= "0"
+            Next
+            'MsgBox(add0forGETROW)
+            seqAfterAdd0 = add0forGETROW & seq
+            'MsgBox(seqAfterAdd0)
+        End If
+
+        '************************************************************************************'
+        '*************************************** Product Name ****************************************'
+        '************************************************************************************'
+
+        productName = txtSoftware_s_name.Text
+
+        If productName.Length < 15 Then
+            For i = productName.Length To 14
+                productName &= "x"
+            Next
+        End If
+        'MsgBox(productName & " " & productName.Length)
+
+        '************************************************************************************'
+        '*************************************** option ****************************************'
+        '************************************************************************************'
+
+        If chbQC.Checked = True Then
+            qc = "QCx"
+        Else
+            qc = "xxx"
+        End If
+        If chbWM.Checked = True Then
+            wm = "WMx"
+        Else
+            wm = "xxx"
+        End If
+
+        optionName = qc & wm
+
+        '************************************************************************************'
+        '*************************************** EXP ****************************************'
+        '************************************************************************************'
+
+        expireDate = toSqlDate(dtpExpireDate.Value.Date)
+        'MsgBox(expireDate)
+
+        '************************************************************************************'
+        '*************************************** LANGUAGE ****************************************'
+        '************************************************************************************'
+
+        If chbThai.Checked = True Then
+            T = "T"
+            countLan = countLan + 1
+        Else
+            T = "x"
+        End If
+        If chbEnglish.Checked = True Then
+            E = "E"
+            countLan = countLan + 1
+        Else
+            E = "x"
+        End If
+        If chbChinese.Checked = True Then
+            C = "C"
+            countLan = countLan + 1
+        Else
+            C = "x"
+        End If
+        If chbJapan.Checked = True Then
+            J = "J"
+            countLan = countLan + 1
+        Else
+            J = "x"
+        End If
+
+        Language = countLan & T & E & C & J & "xx"
+
+        '************************************************************************************'
+        '*************************************** Version ****************************************'
+        '************************************************************************************'
+
+        Select Case cmbVersion.Text
+            Case "Demo"
+                version = "D"
+            Case "Test"
+                version = "T"
+            Case Else
+                version = "R"
+        End Select
+        'MsgBox(version)
+
+        '************************************************************************************'
+        '*************************************** Serial Key ****************************************'
+        '************************************************************************************'
+
+        Dim a As String = "-"
+        Dim serialINFO As String = ""
+        serialINFO = brand
+        serialINFO &= a & UserAfterAdd0
+        serialINFO &= a & seqAfterAdd0
+        serialINFO &= a & productName
+        serialINFO &= a & optionName
+        serialINFO &= a & expireDate
+        serialINFO &= a & Language
+        serialINFO &= a & version
+
+        txtInfo.Text = serialINFO
+
+    End Sub
+
+    Private Function ValidateDataInput() As Boolean
+        Try
+            Dim isCorrect As Boolean = False
+            Dim i As Integer = txtAmountUser.TextLength
+            If txtAmountUser.Text = "" Then
+                MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
+            ElseIf txtCorpName.Text = "" Then
+                MsgBox("กรุณาเพิ่มข้อมูลลูกค้า")
+            ElseIf txtBrand_s_name.Text = "" Then
+                MsgBox("กรุณาเพิ่มข้อมูลซอฟต์แวร์")
+            ElseIf i = 0 Or i > 4 Then
+                MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+            Else
+                isCorrect = True
+            End If
+            Return isCorrect
+        Catch
+            Return False
+        End Try
+
+
+    End Function
+
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+        Dim check As Boolean = False
+        check = ValidateDataInput()
+        If check = True Then
+            GenSerial()
+        End If
+    End Sub
+
+    Private Sub chbUnlimit_CheckedChanged(sender As Object, e As EventArgs) Handles chbUnlimit.CheckedChanged
+        If chbUnlimit.Checked = True Then
+            txtAmountUser.Clear()
+            txtAmountUser.Enabled = False
+        Else
+            txtAmountUser.Enabled = True
+        End If
+    End Sub
+
+    Private Sub txtAmountUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmountUser.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+
+        End Select
+    End Sub
+
+    Private Sub txtAmountUser_TextChanged(sender As Object, e As EventArgs) Handles txtAmountUser.TextChanged
+
+    End Sub
+
+    Private Sub txtContractNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContractNumber.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+
+        End Select
+    End Sub
+
+    Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
 
     End Sub
 End Class

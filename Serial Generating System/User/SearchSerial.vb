@@ -17,6 +17,12 @@
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
                         Me.Hide()
+                    Case "ndAddProduct"
+                        AddProduct.Show()
+                        Me.Hide()
+                    Case "ndSearchProduct"
+                        searchProduct.Show()
+                        Me.Hide()
                 End Select
             End If
         Catch ex As Exception
