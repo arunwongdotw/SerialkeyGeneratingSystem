@@ -58,6 +58,9 @@ Public Class CreateUser
         End If
         con.close()
     End Sub
+    Private Sub Form2_Load() Handles MyBase.Load
+        txtAccountInfo.Text = Login.txtUsername.Text
+    End Sub
 
     'Public Function EmailValidate(ByVal Email As String) As Boolean
     '    Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
@@ -242,5 +245,6 @@ Public Class CreateUser
         con.close()
         Return isDup
     End Function
+
 
 End Class

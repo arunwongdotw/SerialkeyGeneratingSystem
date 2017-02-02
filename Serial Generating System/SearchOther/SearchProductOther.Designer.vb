@@ -385,7 +385,7 @@ Partial Class SearchProductOther
         Me.Controls.Add(Me.lblCorp_s_name)
         Me.Controls.Add(Me.lblCorpName)
         Me.Name = "SearchProductOther"
-        Me.Text = "ค้นหาซอฟต์แวร์"
+        Me.Text = "ค้นหาซอฟต์แวร์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -14,6 +14,7 @@ Public Class CreateSerial
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
+        txtAccountInfo.Text = Login.txtUsername.Text
 
     End Sub
 

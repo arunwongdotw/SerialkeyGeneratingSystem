@@ -68,7 +68,7 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1366, 768)
+        Me.Panel1.Size = New System.Drawing.Size(1350, 768)
         Me.Panel1.TabIndex = 4
         '
         'Label5
