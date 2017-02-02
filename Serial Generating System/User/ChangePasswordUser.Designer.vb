@@ -28,8 +28,11 @@ Partial Class ChangePasswordUser
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePasswordUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnHeader = New System.Windows.Forms.Button()
@@ -81,7 +84,7 @@ Partial Class ChangePasswordUser
         Me.btnHeader.Size = New System.Drawing.Size(1349, 65)
         Me.btnHeader.TabIndex = 74
         Me.btnHeader.TabStop = False
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.Text = "เปลี่ยนรหัสผ่าน"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
@@ -92,7 +95,7 @@ Partial Class ChangePasswordUser
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(1023, 294)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 26)
+        Me.Label5.Size = New System.Drawing.Size(18, 27)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -103,7 +106,7 @@ Partial Class ChangePasswordUser
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(1023, 236)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 26)
+        Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -114,7 +117,7 @@ Partial Class ChangePasswordUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(1023, 174)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
@@ -145,7 +148,7 @@ Partial Class ChangePasswordUser
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.Location = New System.Drawing.Point(492, 294)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(132, 26)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -186,7 +189,7 @@ Partial Class ChangePasswordUser
         Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNewPassword.Location = New System.Drawing.Point(528, 236)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(96, 26)
+        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
@@ -196,7 +199,7 @@ Partial Class ChangePasswordUser
         Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOldPassword.Location = New System.Drawing.Point(530, 174)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(95, 26)
+        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
@@ -218,11 +221,17 @@ Partial Class ChangePasswordUser
         TreeNode5.Text = "ค้นหาลูกค้า"
         TreeNode6.Name = "ndCustomerManage"
         TreeNode6.Text = "จัดการลูกค้า"
-        TreeNode7.Name = "ndUserResetPassword"
-        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode8.Name = "ndUserInfo"
-        TreeNode8.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
+        TreeNode7.Name = "ndAddProduct"
+        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        TreeNode8.Name = "ndSearchProduct"
+        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
+        TreeNode9.Name = "ndProductManagement"
+        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
+        TreeNode10.Name = "ndUserResetPassword"
+        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode11.Name = "ndUserInfo"
+        TreeNode11.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
@@ -236,7 +245,7 @@ Partial Class ChangePasswordUser
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ChangePasswordUser"
-        Me.Text = "เปลี่ยนรหัสผ่าน"
+        Me.Text = "เปลี่ยนรหัสผ่าน - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

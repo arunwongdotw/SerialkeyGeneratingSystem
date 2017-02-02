@@ -497,7 +497,7 @@ Partial Class EditUser
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1348, 65)
         Me.btnHeader.TabIndex = 82
-        Me.btnHeader.Text = "ผู้ดูแลระบบ"
+        Me.btnHeader.Text = "แก้ไขบัญชีผู้ใช้"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
@@ -519,7 +519,7 @@ Partial Class EditUser
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditUser"
-        Me.Text = "แก้ไขบัญชีผู้ใช้"
+        Me.Text = "แก้ไขบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -28,7 +28,6 @@ Public Class Login
         txtPassword.ForeColor = Color.Black
         txtPassword.Text = password
         txtUsername.Select()
-
     End Sub
 
     Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown

@@ -490,7 +490,7 @@ Partial Class searchCusOther
         Me.Controls.Add(Me.lblCorp_s_name)
         Me.Controls.Add(Me.lblCorpName)
         Me.Name = "searchCusOther"
-        Me.Text = "ค้นหาข้อมูลลูกค้า"
+        Me.Text = "ค้นหาข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

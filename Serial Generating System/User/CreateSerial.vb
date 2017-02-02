@@ -15,6 +15,7 @@ Public Class CreateSerial
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
         dtpExpireDate.MinDate = DateTime.Now
+        txtAccountInfo.Text = Login.txtUsername.Text
 
     End Sub
 
@@ -42,6 +43,12 @@ Public Class CreateSerial
                         Me.Hide()
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
+                        Me.Hide()
+                    Case "ndAddProduct"
+                        AddProduct.Show()
+                        Me.Hide()
+                    Case "ndSearchProduct"
+                        searchProduct.Show()
                         Me.Hide()
                 End Select
             End If
@@ -215,7 +222,7 @@ Public Class CreateSerial
         End Try
     End Sub
 
-    
+
     Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
         Dim frm As New AddProduct
         frm.Show()
@@ -250,10 +257,10 @@ Public Class CreateSerial
         Dim yyyy As Integer = Format(CDate(val), "yy")
 
         Dim ymd As String
-        
+
         'ymd = yyyy & MM & dd
         ymd = yyyy & month & day
-        
+
         toSqlDate = ymd
 
     End Function
@@ -441,7 +448,7 @@ Public Class CreateSerial
         Try
             Dim isCorrect As Boolean = False
             Dim i As Integer = txtAmountUser.TextLength
-            
+
             If txtCorpName.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลลูกค้า")
             ElseIf txtBrand_s_name.Text = "" Then

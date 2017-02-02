@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 Imports System.Data
+
 Public Class CreateUser
     Private con As New ConnectDB
 
@@ -56,6 +57,9 @@ Public Class CreateUser
             MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
         End If
         con.close()
+    End Sub
+    Private Sub Form2_Load() Handles MyBase.Load
+        txtAccountInfo.Text = Login.txtUsername.Text
     End Sub
 
     'Public Function EmailValidate(ByVal Email As String) As Boolean
@@ -188,7 +192,7 @@ Public Class CreateUser
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
@@ -230,6 +234,21 @@ Public Class CreateUser
         If isEmployeeDuplicate("username", txtUsername.Text) Then
             MessageBox.Show("ชื่อผู้ใช้ซ้ำ")
             Return True
+        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
+            MessageBox.Show("รหัสพนักงานซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("firstname", txtFirstName.Text) Then
+            MessageBox.Show("ชื่อซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("lastname", txtLastName.Text) Then
+            MessageBox.Show("นามสกุลซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("phonenumber", txtPhoneNumber.Text) Then
+            MessageBox.Show("หมายเลขโทรศัพท์ซ้ำ")
+            Return True
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
+            MessageBox.Show("อีเมลซ้ำ")
+            Return True
         End If
         Return False
     End Function
@@ -241,5 +260,6 @@ Public Class CreateUser
         con.close()
         Return isDup
     End Function
+
 
 End Class
