@@ -24,6 +24,23 @@ Public Class SearchCustomer
             Me.dgvSearchCus.Columns.Clear()
             Me.dgvSearchCus.AutoGenerateColumns = False
 
+            Dim btnEdit As New DataGridViewButtonColumn()
+            btnEdit.HeaderText = ""
+            btnEdit.Text = "แก้ไข"
+            btnEdit.Name = "btnEdit"
+            btnEdit.Width = 70
+            btnEdit.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnEdit)
+
+
+            Dim btnDelete As New DataGridViewButtonColumn()
+            btnDelete.HeaderText = ""
+            btnDelete.Text = "ลบ"
+            btnDelete.Name = "btnDelete"
+            btnDelete.Width = 70
+            btnDelete.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnDelete)
+
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
             Col.Width = 60
@@ -139,22 +156,22 @@ Public Class SearchCustomer
             Col.Name = "phone"
             Me.dgvSearchCus.Columns.Add(Col)
 
-            Dim btnEdit As New DataGridViewButtonColumn()
-            btnEdit.HeaderText = ""
-            btnEdit.Text = "แก้ไข"
-            btnEdit.Name = "btnEdit"
-            btnEdit.Width = 70
-            btnEdit.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnEdit)
+            'Dim btnEdit As New DataGridViewButtonColumn()
+            'btnEdit.HeaderText = ""
+            'btnEdit.Text = "แก้ไข"
+            'btnEdit.Name = "btnEdit"
+            'btnEdit.Width = 70
+            'btnEdit.UseColumnTextForButtonValue = True
+            'Me.dgvSearchCus.Columns.Add(btnEdit)
 
 
-            Dim btnDelete As New DataGridViewButtonColumn()
-            btnDelete.HeaderText = ""
-            btnDelete.Text = "ลบ"
-            btnDelete.Name = "btnDelete"
-            btnDelete.Width = 70
-            btnDelete.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnDelete)
+            'Dim btnDelete As New DataGridViewButtonColumn()
+            'btnDelete.HeaderText = ""
+            'btnDelete.Text = "ลบ"
+            'btnDelete.Name = "btnDelete"
+            'btnDelete.Width = 70
+            'btnDelete.UseColumnTextForButtonValue = True
+            'Me.dgvSearchCus.Columns.Add(btnDelete)
 
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
