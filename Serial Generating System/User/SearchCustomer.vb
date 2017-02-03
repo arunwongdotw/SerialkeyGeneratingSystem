@@ -415,8 +415,8 @@ Public Class SearchCustomer
             End If
         End If
         If e.ColumnIndex = dgvSearchCus.Columns("btnEdit").Index Then
-            Dim formEditUser As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
-            formEditUser.Show()
+            Dim formEditCustomer As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
+            formEditCustomer.Show()
             Me.Hide()
         End If
     End Sub
