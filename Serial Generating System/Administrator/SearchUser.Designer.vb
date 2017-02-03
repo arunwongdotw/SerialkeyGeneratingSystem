@@ -31,6 +31,8 @@ Partial Class SearchUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -51,12 +53,15 @@ Partial Class SearchUser
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.pbAccountInfo)
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnClear)
@@ -81,6 +86,29 @@ Partial Class SearchUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 5
+        '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1312, 4)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 77
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1142, 26)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.TabIndex = 78
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnHeader
         '
@@ -284,7 +312,10 @@ Partial Class SearchUser
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.HotTracking = True
+        Me.tvAdminMenu.ItemHeight = 44
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
@@ -318,6 +349,7 @@ Partial Class SearchUser
         Me.Text = "ค้นหาบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -342,4 +374,6 @@ Partial Class SearchUser
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class

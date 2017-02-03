@@ -6,6 +6,9 @@ Public Class AddProduct
     Private con As New ConnectDB
 
     Private Sub frmAddProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
 
     End Sub

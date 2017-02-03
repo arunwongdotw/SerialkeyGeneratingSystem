@@ -36,6 +36,8 @@ Partial Class CreateSerial
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateSerial))
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lbWelcome = New System.Windows.Forms.Label()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.chbWM = New System.Windows.Forms.CheckBox()
@@ -65,6 +67,7 @@ Partial Class CreateSerial
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.txtSerialKey = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtInfo = New System.Windows.Forms.TextBox()
@@ -94,9 +97,6 @@ Partial Class CreateSerial
         Me.lblExpireDate = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.chbForever = New System.Windows.Forms.CheckBox()
-        Me.lbWelcome = New System.Windows.Forms.Label()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -129,6 +129,31 @@ Partial Class CreateSerial
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
+        '
+        'lbWelcome
+        '
+        Me.lbWelcome.AutoSize = True
+        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbWelcome.ForeColor = System.Drawing.Color.White
+        Me.lbWelcome.Location = New System.Drawing.Point(1266, 8)
+        Me.lbWelcome.Name = "lbWelcome"
+        Me.lbWelcome.Size = New System.Drawing.Size(84, 27)
+        Me.lbWelcome.TabIndex = 76
+        Me.lbWelcome.Text = "ยินดีต้อนรับ"
+        Me.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 38)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(278, 29)
+        Me.txtAccountInfo.TabIndex = 77
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel4
         '
@@ -494,6 +519,16 @@ Partial Class CreateSerial
         Me.Panel3.Size = New System.Drawing.Size(1094, 344)
         Me.Panel3.TabIndex = 71
         '
+        'chbForever
+        '
+        Me.chbForever.AutoSize = True
+        Me.chbForever.Location = New System.Drawing.Point(969, 14)
+        Me.chbForever.Name = "chbForever"
+        Me.chbForever.Size = New System.Drawing.Size(65, 31)
+        Me.chbForever.TabIndex = 118
+        Me.chbForever.Text = "ถาวร"
+        Me.chbForever.UseVisualStyleBackColor = True
+        '
         'txtSerialKey
         '
         Me.txtSerialKey.BackColor = System.Drawing.SystemColors.Window
@@ -777,7 +812,10 @@ Partial Class CreateSerial
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.HotTracking = True
+        Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
@@ -803,43 +841,10 @@ Partial Class CreateSerial
         TreeNode11.Name = "ndUserInfo"
         TreeNode11.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
+        Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
-        '
-        'lbWelcome
-        '
-        Me.lbWelcome.AutoSize = True
-        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbWelcome.ForeColor = System.Drawing.Color.White
-        Me.lbWelcome.Location = New System.Drawing.Point(1266, 8)
-        Me.lbWelcome.Name = "lbWelcome"
-        Me.lbWelcome.Size = New System.Drawing.Size(84, 27)
-        Me.lbWelcome.TabIndex = 76
-        Me.lbWelcome.Text = "ยินดีต้อนรับ"
-        Me.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 38)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(278, 29)
-        Me.txtAccountInfo.TabIndex = 77
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'chbForever
-        '
-        Me.chbForever.AutoSize = True
-        Me.chbForever.Location = New System.Drawing.Point(969, 14)
-        Me.chbForever.Name = "chbForever"
-        Me.chbForever.Size = New System.Drawing.Size(65, 31)
-        Me.chbForever.TabIndex = 118
-        Me.chbForever.Text = "ถาวร"
-        Me.chbForever.UseVisualStyleBackColor = True
+        Me.tvUserMenu.TabStop = False
         '
         'CreateSerial
         '

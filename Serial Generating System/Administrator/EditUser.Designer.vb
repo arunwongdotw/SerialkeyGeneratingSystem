@@ -63,11 +63,14 @@ Partial Class EditUser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -397,7 +400,10 @@ Partial Class EditUser
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.HotTracking = True
+        Me.tvAdminMenu.ItemHeight = 44
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
@@ -422,6 +428,8 @@ Partial Class EditUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.pbAccountInfo)
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.rdbAccountant)
         Me.Panel1.Controls.Add(Me.rdbIT)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -463,6 +471,29 @@ Partial Class EditUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 768)
         Me.Panel1.TabIndex = 4
+        '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1311, 3)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 85
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.TabIndex = 86
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'rdbAccountant
         '
@@ -522,6 +553,7 @@ Partial Class EditUser
         Me.Text = "แก้ไขบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -563,4 +595,6 @@ Partial Class EditUser
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
     Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class

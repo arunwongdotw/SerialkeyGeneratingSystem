@@ -32,7 +32,7 @@ Partial Class CheckConnectUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheckConnectUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
@@ -52,14 +52,14 @@ Partial Class CheckConnectUser
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -77,16 +77,16 @@ Partial Class CheckConnectUser
         Me.Panel1.Size = New System.Drawing.Size(1350, 768)
         Me.Panel1.TabIndex = 4
         '
-        'PictureBox1
+        'pbAccountInfo
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(1312, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 26)
-        Me.PictureBox1.TabIndex = 27
-        Me.PictureBox1.TabStop = False
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1312, 3)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 27
+        Me.pbAccountInfo.TabStop = False
         '
         'txtAccountInfo
         '
@@ -94,7 +94,7 @@ Partial Class CheckConnectUser
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 38)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1142, 27)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
         Me.txtAccountInfo.TabIndex = 26
@@ -265,7 +265,10 @@ Partial Class CheckConnectUser
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.HotTracking = True
+        Me.tvAdminMenu.ItemHeight = 44
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
@@ -299,7 +302,7 @@ Partial Class CheckConnectUser
         Me.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -323,5 +326,5 @@ Partial Class CheckConnectUser
     Friend WithEvents del As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
 End Class

@@ -15,6 +15,9 @@ Public Class EditCustomer
     End Sub
 
     Private Sub Edit_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         loadData()
         If sqlReader.Read Then
             initialData()

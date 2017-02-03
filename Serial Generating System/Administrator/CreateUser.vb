@@ -59,7 +59,9 @@ Public Class CreateUser
         con.close()
     End Sub
     Private Sub Form2_Load() Handles MyBase.Load
-        txtAccountInfo.Text = Login.txtUsername.Text
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
     End Sub
 
     'Public Function EmailValidate(ByVal Email As String) As Boolean

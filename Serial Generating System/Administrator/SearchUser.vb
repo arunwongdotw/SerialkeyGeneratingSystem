@@ -35,6 +35,9 @@ Public Class SearchUser
     End Sub
 
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         loadDataTable()
     End Sub
 

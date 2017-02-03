@@ -12,10 +12,12 @@ Public Class CreateSerial
     End Sub
 
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
         dtpExpireDate.MinDate = DateTime.Now
-        txtAccountInfo.Text = Login.txtUsername.Text
 
     End Sub
 
