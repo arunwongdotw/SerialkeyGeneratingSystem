@@ -38,6 +38,7 @@ Public Class SearchUser
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
         loadDataTable()
     End Sub
 

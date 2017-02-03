@@ -62,6 +62,7 @@ Public Class CreateUser
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
     End Sub
 
     'Public Function EmailValidate(ByVal Email As String) As Boolean

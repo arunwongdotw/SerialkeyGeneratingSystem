@@ -26,6 +26,7 @@ Public Class EditUser
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
         loadData()
         If sqlReader.Read Then
             initialData()

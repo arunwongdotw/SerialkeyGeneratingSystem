@@ -197,6 +197,7 @@ Public Class searchProduct
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         loadDataTable()
+        tvUserMenu.ExpandAll()
     End Sub
 
     Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
