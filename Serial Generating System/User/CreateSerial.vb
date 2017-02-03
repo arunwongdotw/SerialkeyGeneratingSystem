@@ -127,6 +127,8 @@ Public Class CreateSerial
         txtSoftware_s_name.Clear()
         txtContractNumber.Clear()
         txtAmountUser.Clear()
+        txtInfo.Clear()
+        txtSerialKey.Clear()
 
         cmbVersion.SelectedIndex = 0
 
