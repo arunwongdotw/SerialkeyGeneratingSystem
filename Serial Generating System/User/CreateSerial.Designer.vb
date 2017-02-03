@@ -68,7 +68,7 @@ Partial Class CreateSerial
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCopySerial = New System.Windows.Forms.Button()
         Me.btnCopyInfo = New System.Windows.Forms.Button()
-        Me.chbForever = New System.Windows.Forms.CheckBox()
+        'Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.txtSerialKey = New System.Windows.Forms.TextBox()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
