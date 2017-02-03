@@ -61,7 +61,7 @@ Partial Class main
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1349, 66)
         Me.btnHeader.TabIndex = 23
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.Text = "ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
@@ -80,7 +80,10 @@ Partial Class main
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.HotTracking = True
+        Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"

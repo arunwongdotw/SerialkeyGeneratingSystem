@@ -24,8 +24,10 @@
 
         End Try
     End Sub
-    Private Sub Form2_Load() Handles MyBase.Load
-        txtAccountInfo.Text = Login.txtUsername.Text
+    Private Sub checkConnectionLoad() Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click

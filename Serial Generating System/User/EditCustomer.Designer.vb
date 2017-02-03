@@ -59,23 +59,26 @@ Partial Class EditCustomer
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.txtPostalCode = New System.Windows.Forms.TextBox()
+        Me.txtProvince = New System.Windows.Forms.TextBox()
+        Me.txtDistrict = New System.Windows.Forms.TextBox()
+        Me.txtSubdistrict = New System.Windows.Forms.TextBox()
+        Me.txtLane = New System.Windows.Forms.TextBox()
+        Me.txtRoad = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
+        Me.txtHouseNo = New System.Windows.Forms.TextBox()
+        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
+        Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.txtCorpName = New System.Windows.Forms.TextBox()
-        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
-        Me.txtHouseNo = New System.Windows.Forms.TextBox()
-        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtPhone = New System.Windows.Forms.TextBox()
-        Me.txtRoad = New System.Windows.Forms.TextBox()
-        Me.txtLane = New System.Windows.Forms.TextBox()
-        Me.txtSubdistrict = New System.Windows.Forms.TextBox()
-        Me.txtDistrict = New System.Windows.Forms.TextBox()
-        Me.txtProvince = New System.Windows.Forms.TextBox()
-        Me.txtPostalCode = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -344,6 +347,9 @@ Partial Class EditCustomer
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tvUserMenu.HotTracking = True
+        Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
@@ -366,10 +372,13 @@ Partial Class EditCustomer
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
+        Me.tvUserMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.pbAccountInfo)
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.txtPostalCode)
         Me.Panel1.Controls.Add(Me.txtProvince)
         Me.Panel1.Controls.Add(Me.txtDistrict)
@@ -420,6 +429,127 @@ Partial Class EditCustomer
         Me.Panel1.Size = New System.Drawing.Size(1354, 729)
         Me.Panel1.TabIndex = 3
         '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1314, 3)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 99
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1144, 27)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.TabIndex = 98
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtPostalCode
+        '
+        Me.txtPostalCode.Location = New System.Drawing.Point(990, 489)
+        Me.txtPostalCode.Name = "txtPostalCode"
+        Me.txtPostalCode.Size = New System.Drawing.Size(309, 36)
+        Me.txtPostalCode.TabIndex = 97
+        '
+        'txtProvince
+        '
+        Me.txtProvince.Location = New System.Drawing.Point(990, 435)
+        Me.txtProvince.Name = "txtProvince"
+        Me.txtProvince.Size = New System.Drawing.Size(309, 36)
+        Me.txtProvince.TabIndex = 96
+        '
+        'txtDistrict
+        '
+        Me.txtDistrict.Location = New System.Drawing.Point(990, 380)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(309, 36)
+        Me.txtDistrict.TabIndex = 95
+        '
+        'txtSubdistrict
+        '
+        Me.txtSubdistrict.Location = New System.Drawing.Point(990, 325)
+        Me.txtSubdistrict.Name = "txtSubdistrict"
+        Me.txtSubdistrict.Size = New System.Drawing.Size(309, 36)
+        Me.txtSubdistrict.TabIndex = 94
+        '
+        'txtLane
+        '
+        Me.txtLane.Location = New System.Drawing.Point(1181, 269)
+        Me.txtLane.Name = "txtLane"
+        Me.txtLane.Size = New System.Drawing.Size(118, 36)
+        Me.txtLane.TabIndex = 93
+        '
+        'txtRoad
+        '
+        Me.txtRoad.Location = New System.Drawing.Point(990, 272)
+        Me.txtRoad.Name = "txtRoad"
+        Me.txtRoad.Size = New System.Drawing.Size(130, 36)
+        Me.txtRoad.TabIndex = 92
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(502, 486)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(310, 36)
+        Me.txtPhone.TabIndex = 91
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(502, 432)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(310, 36)
+        Me.txtEmail.TabIndex = 90
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(502, 377)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(310, 36)
+        Me.txtLastName.TabIndex = 89
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(502, 322)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(310, 36)
+        Me.txtFirstName.TabIndex = 88
+        '
+        'txtCorpGroup
+        '
+        Me.txtCorpGroup.Location = New System.Drawing.Point(502, 269)
+        Me.txtCorpGroup.Name = "txtCorpGroup"
+        Me.txtCorpGroup.Size = New System.Drawing.Size(310, 36)
+        Me.txtCorpGroup.TabIndex = 87
+        '
+        'txtHouseNo
+        '
+        Me.txtHouseNo.Location = New System.Drawing.Point(502, 219)
+        Me.txtHouseNo.Name = "txtHouseNo"
+        Me.txtHouseNo.Size = New System.Drawing.Size(310, 36)
+        Me.txtHouseNo.TabIndex = 86
+        '
+        'txtCorp_s_Name
+        '
+        Me.txtCorp_s_Name.Location = New System.Drawing.Point(502, 166)
+        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
+        Me.txtCorp_s_Name.Size = New System.Drawing.Size(310, 36)
+        Me.txtCorp_s_Name.TabIndex = 85
+        '
+        'txtCorpName
+        '
+        Me.txtCorpName.Location = New System.Drawing.Point(502, 115)
+        Me.txtCorpName.Name = "txtCorpName"
+        Me.txtCorpName.Size = New System.Drawing.Size(786, 36)
+        Me.txtCorpName.TabIndex = 84
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
@@ -441,107 +571,9 @@ Partial Class EditCustomer
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
         Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "ชื่อผู้ใช้ 1"
+        Me.btnHeader.Text = "แก้ไขข้อมูลลูกค้า"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
-        '
-        'txtCorpName
-        '
-        Me.txtCorpName.Location = New System.Drawing.Point(502, 115)
-        Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(786, 36)
-        Me.txtCorpName.TabIndex = 84
-        '
-        'txtCorp_s_Name
-        '
-        Me.txtCorp_s_Name.Location = New System.Drawing.Point(502, 166)
-        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
-        Me.txtCorp_s_Name.Size = New System.Drawing.Size(310, 36)
-        Me.txtCorp_s_Name.TabIndex = 85
-        '
-        'txtHouseNo
-        '
-        Me.txtHouseNo.Location = New System.Drawing.Point(502, 219)
-        Me.txtHouseNo.Name = "txtHouseNo"
-        Me.txtHouseNo.Size = New System.Drawing.Size(310, 36)
-        Me.txtHouseNo.TabIndex = 86
-        '
-        'txtCorpGroup
-        '
-        Me.txtCorpGroup.Location = New System.Drawing.Point(502, 269)
-        Me.txtCorpGroup.Name = "txtCorpGroup"
-        Me.txtCorpGroup.Size = New System.Drawing.Size(310, 36)
-        Me.txtCorpGroup.TabIndex = 87
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Location = New System.Drawing.Point(502, 322)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(310, 36)
-        Me.txtFirstName.TabIndex = 88
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(502, 377)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(310, 36)
-        Me.txtLastName.TabIndex = 89
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(502, 432)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(310, 36)
-        Me.txtEmail.TabIndex = 90
-        '
-        'txtPhone
-        '
-        Me.txtPhone.Location = New System.Drawing.Point(502, 486)
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(310, 36)
-        Me.txtPhone.TabIndex = 91
-        '
-        'txtRoad
-        '
-        Me.txtRoad.Location = New System.Drawing.Point(990, 272)
-        Me.txtRoad.Name = "txtRoad"
-        Me.txtRoad.Size = New System.Drawing.Size(130, 36)
-        Me.txtRoad.TabIndex = 92
-        '
-        'txtLane
-        '
-        Me.txtLane.Location = New System.Drawing.Point(1181, 269)
-        Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(118, 36)
-        Me.txtLane.TabIndex = 93
-        '
-        'txtSubdistrict
-        '
-        Me.txtSubdistrict.Location = New System.Drawing.Point(990, 325)
-        Me.txtSubdistrict.Name = "txtSubdistrict"
-        Me.txtSubdistrict.Size = New System.Drawing.Size(309, 36)
-        Me.txtSubdistrict.TabIndex = 94
-        '
-        'txtDistrict
-        '
-        Me.txtDistrict.Location = New System.Drawing.Point(990, 380)
-        Me.txtDistrict.Name = "txtDistrict"
-        Me.txtDistrict.Size = New System.Drawing.Size(309, 36)
-        Me.txtDistrict.TabIndex = 95
-        '
-        'txtProvince
-        '
-        Me.txtProvince.Location = New System.Drawing.Point(990, 435)
-        Me.txtProvince.Name = "txtProvince"
-        Me.txtProvince.Size = New System.Drawing.Size(309, 36)
-        Me.txtProvince.TabIndex = 96
-        '
-        'txtPostalCode
-        '
-        Me.txtPostalCode.Location = New System.Drawing.Point(990, 489)
-        Me.txtPostalCode.Name = "txtPostalCode"
-        Me.txtPostalCode.Size = New System.Drawing.Size(309, 36)
-        Me.txtPostalCode.TabIndex = 97
         '
         'EditCustomer
         '
@@ -550,9 +582,10 @@ Partial Class EditCustomer
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "EditCustomer"
-        Me.Text = "EditCustomer"
+        Me.Text = "แก้ไขข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -602,4 +635,6 @@ Partial Class EditCustomer
     Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
     Friend WithEvents txtProvince As System.Windows.Forms.TextBox
     Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class

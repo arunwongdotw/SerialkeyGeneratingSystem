@@ -65,7 +65,7 @@ Partial Class Form1
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1348, 66)
         Me.btnHeader.TabIndex = 22
-        Me.btnHeader.Text = "ผู้ดูแลระบบ"
+        Me.btnHeader.Text = "ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = False
         '
@@ -85,9 +85,11 @@ Partial Class Form1
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tvAdminMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.ForeColor = System.Drawing.Color.Black
+        Me.tvAdminMenu.HotTracking = True
+        Me.tvAdminMenu.ItemHeight = 44
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Margin = New System.Windows.Forms.Padding(1)
         Me.tvAdminMenu.Name = "tvAdminMenu"

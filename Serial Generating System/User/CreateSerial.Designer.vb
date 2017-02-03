@@ -68,6 +68,7 @@ Partial Class CreateSerial
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCopySerial = New System.Windows.Forms.Button()
         Me.btnCopyInfo = New System.Windows.Forms.Button()
+        Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.txtSerialKey = New System.Windows.Forms.TextBox()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -790,7 +791,10 @@ Partial Class CreateSerial
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvUserMenu.HotTracking = True
+        Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
@@ -816,6 +820,7 @@ Partial Class CreateSerial
         TreeNode11.Name = "ndUserInfo"
         TreeNode11.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
+        Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         '

@@ -193,6 +193,9 @@ Public Class searchProduct
     End Sub
 
     Private Sub searchProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         loadDataTable()
     End Sub
 
