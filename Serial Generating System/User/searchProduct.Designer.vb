@@ -136,7 +136,7 @@ Partial Class searchProduct
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(392, 195)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
         Me.lblGroupCorp.TabIndex = 120
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -144,11 +144,11 @@ Partial Class searchProduct
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 28
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -157,7 +157,7 @@ Partial Class searchProduct
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(373, 250)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
+        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
         Me.lblFirstName.TabIndex = 119
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -166,7 +166,7 @@ Partial Class searchProduct
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(351, 138)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
         Me.lblCorpSubName.TabIndex = 118
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -175,7 +175,7 @@ Partial Class searchProduct
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(370, 89)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
+        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
         Me.lblCorpName.TabIndex = 117
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -184,7 +184,7 @@ Partial Class searchProduct
         Me.chbWarehouseManagement.AutoSize = True
         Me.chbWarehouseManagement.Location = New System.Drawing.Point(809, 298)
         Me.chbWarehouseManagement.Name = "chbWarehouseManagement"
-        Me.chbWarehouseManagement.Size = New System.Drawing.Size(198, 31)
+        Me.chbWarehouseManagement.Size = New System.Drawing.Size(201, 30)
         Me.chbWarehouseManagement.TabIndex = 116
         Me.chbWarehouseManagement.Text = "Warehouse Management"
         Me.chbWarehouseManagement.UseVisualStyleBackColor = True
@@ -194,7 +194,7 @@ Partial Class searchProduct
         Me.chbQualityControl.AutoSize = True
         Me.chbQualityControl.Location = New System.Drawing.Point(809, 335)
         Me.chbQualityControl.Name = "chbQualityControl"
-        Me.chbQualityControl.Size = New System.Drawing.Size(134, 31)
+        Me.chbQualityControl.Size = New System.Drawing.Size(134, 30)
         Me.chbQualityControl.TabIndex = 115
         Me.chbQualityControl.Text = "Quality Control"
         Me.chbQualityControl.UseVisualStyleBackColor = True
@@ -204,7 +204,7 @@ Partial Class searchProduct
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(719, 298)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 27)
+        Me.Label4.Size = New System.Drawing.Size(71, 26)
         Me.Label4.TabIndex = 114
         Me.Label4.Text = "ออฟชัน :"
         '
@@ -213,7 +213,7 @@ Partial Class searchProduct
         Me.chbJapanese.AutoSize = True
         Me.chbJapanese.Location = New System.Drawing.Point(565, 335)
         Me.chbJapanese.Name = "chbJapanese"
-        Me.chbJapanese.Size = New System.Drawing.Size(63, 31)
+        Me.chbJapanese.Size = New System.Drawing.Size(64, 30)
         Me.chbJapanese.TabIndex = 111
         Me.chbJapanese.Text = "ญี่ปุ่น"
         Me.chbJapanese.UseVisualStyleBackColor = True
@@ -223,7 +223,7 @@ Partial Class searchProduct
         Me.chbChinese.AutoSize = True
         Me.chbChinese.Location = New System.Drawing.Point(481, 335)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
         Me.chbChinese.TabIndex = 110
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -233,7 +233,7 @@ Partial Class searchProduct
         Me.chbEnglish.AutoSize = True
         Me.chbEnglish.Location = New System.Drawing.Point(482, 298)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
         Me.chbEnglish.TabIndex = 109
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -243,7 +243,7 @@ Partial Class searchProduct
         Me.chbThai.AutoSize = True
         Me.chbThai.Location = New System.Drawing.Point(565, 298)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
+        Me.chbThai.Size = New System.Drawing.Size(53, 30)
         Me.chbThai.TabIndex = 108
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -253,7 +253,7 @@ Partial Class searchProduct
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(418, 298)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
+        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
         Me.lblLanguage.TabIndex = 107
         Me.lblLanguage.Text = "ภาษา :"
         '
