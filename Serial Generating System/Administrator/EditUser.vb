@@ -27,8 +27,10 @@ Public Class EditUser
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
-        txtAccountInfo.Text = username.ToString
-        tvAdminMenu.ExpandAll()
+        lblMsgEmpId.Visible = False
+        pbEmpId.Visible = False
+        lblMsgEmail.Visible = False
+        pbEmail.Visible = False
         loadData()
         If sqlReader.Read Then
             initialData()
@@ -69,7 +71,7 @@ Public Class EditUser
             MessageBox.Show("กรุณากรอกอีเมล")
             valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
-            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
+            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
         End If
         Return valid
@@ -84,22 +86,12 @@ Public Class EditUser
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
             MessageBox.Show("รหัสพนักงานซ้ำ")
             Return True
-        ElseIf isEmployeeDuplicate("firstname", txtFirstName.Text) Then
-            MessageBox.Show("ชื่อซ้ำ")
-            Return True
-        ElseIf isEmployeeDuplicate("lastname", txtLastName.Text) Then
-            MessageBox.Show("นามสกุลซ้ำ")
-            Return True
-        ElseIf isEmployeeDuplicate("phonenumber", txtPhoneNumber.Text) Then
-            MessageBox.Show("หมายเลขโทรศัพท์ซ้ำ")
-            Return True
         ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
             MessageBox.Show("อีเมลซ้ำ")
             Return True
         End If
         Return False
     End Function
-
     Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
         Dim isDup As Boolean = False
         Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "' and id not in (" & id & ")"
@@ -154,7 +146,6 @@ Public Class EditUser
         Dim formSearchUser As New SearchUser
         formSearchUser.Show()
     End Sub
-
     Private Sub convertData()
         IIf(position.Equals("IT"), rdbIT.Checked = True, rdbAccountant.Checked = True)
         chbPerCreate.Checked = perCreate = 1
@@ -162,7 +153,6 @@ Public Class EditUser
         chbPerEdit.Checked = perEdit = 1
         cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
     End Sub
-
     Private Sub loadData()
         Dim strQuery = "select id,"
         strQuery &= "emp_id,"
@@ -181,10 +171,11 @@ Public Class EditUser
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
     End Sub
-
     Private Sub initialData()
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
+        oldData.Add("email", txtEmail.Text)
         txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
+        oldData.Add("emp_id", txtEmpID.Text)
         txtFirstName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("firstname"))
         txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
@@ -242,5 +233,59 @@ Public Class EditUser
                 e.Handled = True
                 MessageBox.Show("รหัสพนักงานต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
+    End Sub
+    Private Sub txtEmpID_correct()
+        lblMsgEmpId.Visible = True
+        pbEmpId.Visible = True
+        pbEmpId.Image = Nothing
+        pbEmpId.BackgroundImage = My.Resources.correct
+        lblMsgEmpId.ForeColor = Color.ForestGreen
+        lblMsgEmpId.Text = "สามารถใช้รหัสพนักงานนี้ได้"
+    End Sub
+    Private Sub txtEmpID_incorrect()
+        lblMsgEmpId.Visible = True
+        pbEmpId.Visible = True
+        pbEmpId.Image = Nothing
+        pbEmpId.BackgroundImage = My.Resources.incorrect
+        lblMsgEmpId.ForeColor = Color.Red
+        lblMsgEmpId.Text = "รหัสพนักงานซ้ำ"
+    End Sub
+    Private Sub txtEmail_incorrect(ByVal msg As String)
+        lblMsgEmail.Visible = True
+        pbEmail.Visible = True
+        pbEmail.Image = Nothing
+        pbEmail.BackgroundImage = My.Resources.incorrect
+        lblMsgEmail.ForeColor = Color.Red
+        lblMsgEmail.Text = msg
+    End Sub
+    Private Sub txtEmail_correct()
+        lblMsgEmail.Visible = True
+        pbEmail.Visible = True
+        pbEmail.Image = Nothing
+        pbEmail.BackgroundImage = My.Resources.correct
+        lblMsgEmail.ForeColor = Color.ForestGreen
+        lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
+    End Sub
+    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
+        If txtEmpID.Text Is String.Empty OrElse oldData("emp_id").Equals(txtEmpID.Text) Then
+            lblMsgEmpId.Visible = False
+            pbEmpId.Visible = False
+        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) AndAlso Not oldData("emp_id").Equals(txtEmpID.Text) Then
+            txtEmpID_incorrect()
+        ElseIf Not isEmployeeDuplicate("emp_id", txtEmpID.Text) AndAlso Not oldData("emp_id").Equals(txtEmpID.Text) AndAlso Not txtEmpID.Text Is String.Empty Then
+            txtEmpID_correct()
+        End If
+    End Sub
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text) Then
+            lblMsgEmail.Visible = False
+            pbEmail.Visible = False
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) Then
+            txtEmail_incorrect("อีเมลซ้ำ")
+        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text.Trim) Then
+            txtEmail_incorrect("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtEmail.Text Is String.Empty Then
+            txtEmail_correct()
+        End If
     End Sub
 End Class
