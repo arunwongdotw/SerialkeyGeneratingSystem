@@ -12,9 +12,12 @@ Public Class CreateSerial
     End Sub
 
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
-        txtAccountInfo.Text = Login.txtUsername.Text
+        dtpExpireDate.MinDate = DateTime.Now
 
     End Sub
 
@@ -88,6 +91,9 @@ Public Class CreateSerial
                         Me.txtCorpSubName.Text = IIf(IsDBNull(dt.Rows.Item(0)("corp_s_name")), "", dt.Rows.Item(0)("corp_s_name"))
                         Me.txtGroupCorp.Text = IIf(IsDBNull(dt.Rows.Item(0)("corpgroup")), "", dt.Rows.Item(0)("corpgroup"))
                         'Me.txt_RefBranch.Text = IIf(IsDBNull(Me.DT_SCC.Rows.Item(0)("BRANCHCODE")), "", Me.DT_SCC.Rows.Item(0)("BRANCHCODE"))
+                        txtCorpName.Visible = True
+                        txtCorpSubName.Visible = True
+                        txtGroupCorp.Visible = True
 
                     End If
 
@@ -115,16 +121,33 @@ Public Class CreateSerial
         chbWM.Checked = False
         chbQC.Checked = False
         chbUnlimit.Checked = False
+        chbForever.Checked = False
 
-        txtCorpName.Clear()
-        txtCorpSubName.Clear()
-        txtGroupCorp.Clear()
-        txtBrandName.Clear()
-        txtBrand_s_name.Clear()
-        txtSoftwareName.Clear()
-        txtSoftware_s_name.Clear()
-        txtContractNumber.Clear()
-        txtAmountUser.Clear()
+        txtCorpName.Text = ""
+        txtCorpSubName.Text = ""
+        txtGroupCorp.Text = ""
+        txtBrandName.Text = ""
+        txtBrand_s_name.Text = ""
+        txtSoftwareName.Text = ""
+        txtSoftware_s_name.Text = ""
+        txtContractNumber.Text = ""
+        txtAmountUser.Text = ""
+        'txtInfo.Text = ""
+        'txtSerialKey.Text = ""
+
+        Panel5.Visible = False
+
+        'txtCorpName.Clear()
+        'txtCorpSubName.Clear()
+        'txtGroupCorp.Clear()
+        'txtBrandName.Clear()
+        'txtBrand_s_name.Clear()
+        'txtSoftwareName.Clear()
+        'txtSoftware_s_name.Clear()
+        'txtContractNumber.Clear()
+        'txtAmountUser.Clear()
+        txtInfo.Clear()
+        txtSerialKey.Clear()
 
         cmbVersion.SelectedIndex = 0
 
@@ -177,6 +200,12 @@ Public Class CreateSerial
                         Me.txtSoftware_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_s_name")), "", dt.Rows.Item(0)("product_s_name"))
                         Me.txtBrandName.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_name")), "", dt.Rows.Item(0)("brand_name"))
                         Me.txtBrand_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_s_name")), "", dt.Rows.Item(0)("brand_s_name"))
+
+                        txtSoftwareName.Visible = True
+                        txtSoftware_s_name.Visible = True
+                        txtBrandName.Visible = True
+                        txtBrand_s_name.Visible = True
+
                         If IIf(IsDBNull(dt.Rows.Item(0)("QualityControl")), "", dt.Rows.Item(0)("QualityControl")) = 1 Then
                             chbQC.Checked = True
                         End If
@@ -306,7 +335,7 @@ Public Class CreateSerial
         amountUser = txtAmountUser.Text
 
         If chbUnlimit.Checked = True Then
-            amountUser = "xxxx"
+            UserAfterAdd0 = "xxxx"
         Else
             Dim chkAmountUser As Integer = txtAmountUser.Text
             'MsgBox(chkAmountUser)
@@ -372,10 +401,12 @@ Public Class CreateSerial
         '************************************************************************************'
         '*************************************** EXP ****************************************'
         '************************************************************************************'
-
-        expireDate = toSqlDate(dtpExpireDate.Value.Date)
-        'MsgBox(expireDate)
-
+        If chbForever.Checked = True Then
+            expireDate = "xxxxxx"
+        Else
+            expireDate = toSqlDate(dtpExpireDate.Value.Date)
+            'MsgBox(expireDate)
+        End If
         '************************************************************************************'
         '*************************************** LANGUAGE ****************************************'
         '************************************************************************************'
@@ -436,7 +467,12 @@ Public Class CreateSerial
         serialINFO &= a & Language
         serialINFO &= a & version
 
+        txtInfo.BorderStyle = BorderStyle.None
+        txtSerialKey.BorderStyle = BorderStyle.None
+
         txtInfo.Text = serialINFO
+        txtInfo.Visible = True
+        Panel5.Visible = True
 
     End Sub
 
@@ -444,14 +480,27 @@ Public Class CreateSerial
         Try
             Dim isCorrect As Boolean = False
             Dim i As Integer = txtAmountUser.TextLength
-            If txtAmountUser.Text = "" Then
-                MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
-            ElseIf txtCorpName.Text = "" Then
+
+            If txtCorpName.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลลูกค้า")
             ElseIf txtBrand_s_name.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลซอฟต์แวร์")
-            ElseIf i = 0 Or i > 4 Then
-                MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+            ElseIf chbChinese.Checked = False And chbEnglish.Checked = False And chbThai.Checked = False And chbJapan.Checked = False Then
+                MsgBox("กรุณาเลือกอย่างน้อย 1 ภาษา")
+                'Else
+                '    isCorrect = True
+                'End If
+            ElseIf chbUnlimit.Checked = False Then
+                If txtAmountUser.Text = "" Then
+                    MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
+                    'isCorrect = False
+                ElseIf i = 0 Or i > 4 Then
+                    MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+                    'isCorrect = False
+                    ''End If
+                Else
+                    isCorrect = True
+                End If
             Else
                 isCorrect = True
             End If
@@ -512,5 +561,59 @@ Public Class CreateSerial
 
     Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
 
+    End Sub
+
+    Private Sub chbForever_CheckedChanged(sender As Object, e As EventArgs) Handles chbForever.CheckedChanged
+        If chbForever.Checked = True Then
+            dtpExpireDate.Enabled = False
+        Else
+            dtpExpireDate.Enabled = True
+        End If
+    End Sub
+
+    Private Sub dtpExpireDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpExpireDate.ValueChanged
+
+    End Sub
+
+    Private Sub txtCorpName_Click(sender As Object, e As EventArgs) Handles txtCorpName.Click
+
+    End Sub
+
+    Private Sub txtGroupCorp_Click(sender As Object, e As EventArgs) Handles txtGroupCorp.Click
+
+    End Sub
+
+    Private Sub btnCopyInfo_Click(sender As Object, e As EventArgs) Handles btnCopyInfo.Click
+        Try
+            If txtInfo.Text <> "" Then
+                System.Windows.Forms.Clipboard.SetText(txtInfo.Text)
+                MsgBox("คัดลอกข้อมูลสำเร็จ")
+            End If
+        Catch
+            MsgBox("error")
+        End Try
+    End Sub
+
+    Private Sub btnCopySerial_Click(sender As Object, e As EventArgs) Handles btnCopySerial.Click
+        Try
+            If txtSerialKey.Text <> "" Then
+                System.Windows.Forms.Clipboard.SetText(txtSerialKey.Text)
+                MsgBox("คัดลอกข้อมูลสำเร็จ")
+            End If
+        Catch
+            MsgBox("error")
+        End Try
+    End Sub
+
+    Private Sub txtInfo_TextChanged(sender As Object, e As EventArgs) Handles txtInfo.TextChanged
+        If txtInfo.Text <> "" Then
+            btnCopyInfo.Visible = True
+        End If
+    End Sub
+
+    Private Sub txtSerialKey_TextChanged(sender As Object, e As EventArgs) Handles txtSerialKey.TextChanged
+        If txtSerialKey.Text <> "" Then
+            btnCopySerial.Visible = True
+        End If
     End Sub
 End Class

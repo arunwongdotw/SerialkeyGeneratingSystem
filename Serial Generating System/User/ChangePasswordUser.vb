@@ -19,6 +19,13 @@ Public Class ChangePasswordUser
         con.close()
     End Sub
 
+    Private Sub changePasswordUserLoad() Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
+        tvUserMenu.ExpandAll()
+    End Sub
+
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
         Dim MatchCharAndNumberRegex As String = "^[a-zA-Z0-9]*$"

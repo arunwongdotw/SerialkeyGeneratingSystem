@@ -9,17 +9,17 @@ Public Class SearchUser
             Dim strSelect = getQuery() ' add query for datatable
             Dim adapter As SqlDataAdapter = con.queryForAdapter(strSelect) ' get data from data base
             con.close()
-            adapter.Fill(table) ' add data from database to datatable
-            dgvSearchUser.Columns.Clear() 'clear data gridview
-            dgvSearchUser.RowTemplate.MinimumHeight = 35
+            adapter.Fill(table) ' add data from database to datatable 
+            dgvSearchUser.Columns.Clear() 'clear data gridview 
+            dgvSearchUser.RowTemplate.MinimumHeight = 30
             dgvSearchUser.DataSource = table 'add tadatable to tadagridview
-            setHeaderColumns() ' set name colum 
             table.Columns.Add("ลำดับ")
             dgvSearchUser.Columns("ลำดับ").DisplayIndex = 0
             dgvSearchUser.Columns("ลำดับ").ReadOnly = True
+            addCustomColumns()
+            setHeaderColumns() ' set name colum 
             genRowNumber() ' generate rows index
             randerColorRow() ' rander color of rows
-            addCustomColumns()
             setPermissionCheckBox()
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
@@ -35,6 +35,10 @@ Public Class SearchUser
     End Sub
 
     Private Sub Serach_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
         loadDataTable()
     End Sub
 
@@ -75,7 +79,7 @@ Public Class SearchUser
                 strQuery = "delete from sgs.dbo.employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    MessageBox.Show("ขณะนี้ผู้ใช้ " & dgvSearchUser.Rows(e.RowIndex).Cells("username").Value & "ไม่สามารถเข้าสู่ระบบได้")
                     loadDataTable()
                 Else
                     MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
@@ -142,12 +146,15 @@ Public Class SearchUser
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
+                        clearTxtBox()
                         CreateUser.Show()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
+                        clearTxtBox()
                         CheckConnectUser.Show()
                         Me.Hide()
                     Case "ndAdminResetPassword"
+                        clearTxtBox()
                         ChangePassword.Show()
                         Me.Hide()
                 End Select
@@ -179,20 +186,39 @@ Public Class SearchUser
             .Columns("phonenumber").ReadOnly = True
             .Columns("email").ReadOnly = True
             .Columns("user_type").ReadOnly = True
-            .Columns("emp_id").Width = 150
+            .Columns("ลำดับ").Width = 60
+            .Columns("emp_id").Width = 120
             .Columns("username").Width = 120
             .Columns("password").Width = 120
             .Columns("fullname").Width = 200
             .Columns("phonenumber").Width = 150
-            .Columns("email").Width = 150
+            .Columns("email").Width = 200
             .Columns("user_type").Width = 120
+            .Columns("position").Width = 120
+            .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("fullname").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("username").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("phonenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("email").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("user_type").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbEdit").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbDelete").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("phonenumber").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         End With
     End Sub
 
     Private Sub addCustomColumns()
+
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
+        checkboxCreate.FlatStyle = FlatStyle.Flat
+        checkboxCreate.DefaultCellStyle.ForeColor = Color.Black
         checkboxCreate.ReadOnly = True
         checkboxCreate.Width = 120
         dgvSearchUser.Columns.Add(checkboxCreate)
@@ -200,32 +226,37 @@ Public Class SearchUser
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
         checkboxEdit.HeaderText = "สิทธิ์การแก้ไข"
         checkboxEdit.Name = "chbEdit"
-        'checkboxEdit.FlatStyle = FlatStyle.Flat
-        'checkboxEdit.DefaultCellStyle.ForeColor = Color.Gray
+        checkboxEdit.FlatStyle = FlatStyle.Flat
+        checkboxEdit.DefaultCellStyle.ForeColor = Color.Black
         checkboxEdit.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxEdit)
 
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
         checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทธิ์การลบ"
+        checkboxDelete.FlatStyle = FlatStyle.Flat
+        checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
 
         Dim btnEdit As New DataGridViewButtonColumn()
-        dgvSearchUser.Columns.Add(btnEdit)
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
         btnEdit.Name = "btnEdit"
         btnEdit.Width = 70
         btnEdit.UseColumnTextForButtonValue = True
+        dgvSearchUser.Columns.Add(btnEdit)
+        dgvSearchUser.Columns("btnEdit").DisplayIndex = 0
 
         Dim btnDelete As New DataGridViewButtonColumn()
-        dgvSearchUser.Columns.Add(btnDelete)
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
         btnDelete.Name = "btnDelete"
         btnDelete.Width = 70
         btnDelete.UseColumnTextForButtonValue = True
+        dgvSearchUser.Columns.Add(btnDelete)
+        dgvSearchUser.Columns("btnDelete").DisplayIndex = 1
+
 
 
     End Sub

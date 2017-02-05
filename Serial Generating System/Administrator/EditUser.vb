@@ -23,6 +23,10 @@ Public Class EditUser
 
     End Sub
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
         loadData()
         If sqlReader.Read Then
             initialData()
@@ -173,7 +177,6 @@ Public Class EditUser
         strQuery &= "per_delete"
         strQuery &= " from SGS.dbo.Employee "
         strQuery &= "where id = " & id
-        txtPhoneNumber.Text = strQuery
         sqlReader = con.query(strQuery)
     End Sub
 

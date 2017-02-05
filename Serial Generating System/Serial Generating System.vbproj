@@ -114,6 +114,10 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Application1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
     <Compile Include="SearchOther\searchCusOther.Designer.vb">
       <DependentUpon>searchCusOther.vb</DependentUpon>
     </Compile>
@@ -136,6 +140,12 @@
       <DependentUpon>AddProduct.vb</DependentUpon>
     </Compile>
     <Compile Include="User\AddProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\EditCustomer.Designer.vb">
+      <DependentUpon>EditCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\EditCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\SearchProduct.Designer.vb">
@@ -236,6 +246,9 @@
     <EmbeddedResource Include="User\AddProduct.resx">
       <DependentUpon>AddProduct.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\EditCustomer.resx">
+      <DependentUpon>EditCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\SearchProduct.resx">
       <DependentUpon>SearchProduct.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,7 +283,7 @@
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

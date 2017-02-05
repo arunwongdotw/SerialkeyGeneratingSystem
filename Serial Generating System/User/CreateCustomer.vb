@@ -134,6 +134,9 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub Create_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         txtCorpName.Select()
         tvUserMenu.ExpandAll()
 

@@ -13,6 +13,9 @@ Public Class SearchCustomer
 
 
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim username As String = Login.user
+        Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         Me.GenerateColumn()
         Me.LoadData()
         tvUserMenu.ExpandAll()
@@ -23,6 +26,23 @@ Public Class SearchCustomer
         Try
             Me.dgvSearchCus.Columns.Clear()
             Me.dgvSearchCus.AutoGenerateColumns = False
+
+            Dim btnEdit As New DataGridViewButtonColumn()
+            btnEdit.HeaderText = ""
+            btnEdit.Text = "แก้ไข"
+            btnEdit.Name = "btnEdit"
+            btnEdit.Width = 70
+            btnEdit.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnEdit)
+
+
+            Dim btnDelete As New DataGridViewButtonColumn()
+            btnDelete.HeaderText = ""
+            btnDelete.Text = "ลบ"
+            btnDelete.Name = "btnDelete"
+            btnDelete.Width = 70
+            btnDelete.UseColumnTextForButtonValue = True
+            Me.dgvSearchCus.Columns.Add(btnDelete)
 
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
@@ -139,22 +159,22 @@ Public Class SearchCustomer
             Col.Name = "phone"
             Me.dgvSearchCus.Columns.Add(Col)
 
-            Dim btnEdit As New DataGridViewButtonColumn()
-            btnEdit.HeaderText = ""
-            btnEdit.Text = "แก้ไข"
-            btnEdit.Name = "btnEdit"
-            btnEdit.Width = 70
-            btnEdit.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnEdit)
+            'Dim btnEdit As New DataGridViewButtonColumn()
+            'btnEdit.HeaderText = ""
+            'btnEdit.Text = "แก้ไข"
+            'btnEdit.Name = "btnEdit"
+            'btnEdit.Width = 70
+            'btnEdit.UseColumnTextForButtonValue = True
+            'Me.dgvSearchCus.Columns.Add(btnEdit)
 
 
-            Dim btnDelete As New DataGridViewButtonColumn()
-            btnDelete.HeaderText = ""
-            btnDelete.Text = "ลบ"
-            btnDelete.Name = "btnDelete"
-            btnDelete.Width = 70
-            btnDelete.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnDelete)
+            'Dim btnDelete As New DataGridViewButtonColumn()
+            'btnDelete.HeaderText = ""
+            'btnDelete.Text = "ลบ"
+            'btnDelete.Name = "btnDelete"
+            'btnDelete.Width = 70
+            'btnDelete.UseColumnTextForButtonValue = True
+            'Me.dgvSearchCus.Columns.Add(btnDelete)
 
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
@@ -415,8 +435,8 @@ Public Class SearchCustomer
             End If
         End If
         If e.ColumnIndex = dgvSearchCus.Columns("btnEdit").Index Then
-            Dim formEditUser As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
-            formEditUser.Show()
+            Dim formEditCustomer As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
+            formEditCustomer.Show()
             Me.Hide()
         End If
     End Sub

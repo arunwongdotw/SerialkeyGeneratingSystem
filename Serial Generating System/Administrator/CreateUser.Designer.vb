@@ -32,8 +32,8 @@ Partial Class CreateUser
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateUser))
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lbWelcome = New System.Windows.Forms.Label()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.lbWelcome = New System.Windows.Forms.Label()
         Me.btnAttachImage = New System.Windows.Forms.Button()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
@@ -77,8 +77,10 @@ Partial Class CreateUser
         'tvAdminMenu
         '
         Me.tvAdminMenu.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tvAdminMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvAdminMenu.HotTracking = True
+        Me.tvAdminMenu.ItemHeight = 44
         Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvAdminMenu.Margin = New System.Windows.Forms.Padding(1)
         Me.tvAdminMenu.Name = "tvAdminMenu"
@@ -150,18 +152,6 @@ Partial Class CreateUser
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
-        'lbWelcome
-        '
-        Me.lbWelcome.AutoSize = True
-        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbWelcome.ForeColor = System.Drawing.Color.White
-        Me.lbWelcome.Location = New System.Drawing.Point(1253, 8)
-        Me.lbWelcome.Name = "lbWelcome"
-        Me.lbWelcome.Size = New System.Drawing.Size(93, 30)
-        Me.lbWelcome.TabIndex = 86
-        Me.lbWelcome.Text = "ยินดีต้อนรับ"
-        '
         'txtAccountInfo
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -174,6 +164,18 @@ Partial Class CreateUser
         Me.txtAccountInfo.Size = New System.Drawing.Size(145, 33)
         Me.txtAccountInfo.TabIndex = 84
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lbWelcome
+        '
+        Me.lbWelcome.AutoSize = True
+        Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbWelcome.ForeColor = System.Drawing.Color.White
+        Me.lbWelcome.Location = New System.Drawing.Point(1253, 8)
+        Me.lbWelcome.Name = "lbWelcome"
+        Me.lbWelcome.Size = New System.Drawing.Size(93, 30)
+        Me.lbWelcome.TabIndex = 86
+        Me.lbWelcome.Text = "ยินดีต้อนรับ"
         '
         'btnAttachImage
         '
