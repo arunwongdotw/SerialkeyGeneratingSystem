@@ -126,6 +126,12 @@
     <Compile Include="SearchOther\SearchProductOther.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\EditProduct.Designer.vb">
+      <DependentUpon>EditProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\EditProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\AddProduct.Designer.vb">
       <DependentUpon>AddProduct.vb</DependentUpon>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchOther\SearchProductOther.resx">
       <DependentUpon>SearchProductOther.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\EditProduct.resx">
+      <DependentUpon>EditProduct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\AddProduct.resx">
       <DependentUpon>AddProduct.vb</DependentUpon>

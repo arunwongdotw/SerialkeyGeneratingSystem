@@ -179,6 +179,28 @@ Public Class searchProduct
         Next
     End Sub
 
+    Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchProduct.CellContentClick
+        Dim strQuery As String
+        Dim isDelete As Boolean
+        If e.ColumnIndex = dgvSearchProduct.Columns("btnDelete").Index Then
+            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo, Title:="ยืนยันการลบข้อมูล") = vbYes Then
+                strQuery = "delete from sgs.dbo.product where id = " & dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value
+                isDelete = con.save(strQuery)
+                If isDelete Then
+                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    loadDataTable()
+                Else
+                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                End If
+            End If
+            If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
+                Dim formEditProduct As New EditProduct(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
+                formEditProduct.Show()
+                Me.Hide()
+            End If
+        End If
+    End Sub
+
     Private Sub clearTextBox()
         txtProductName.Clear()
         txtProductSName.Clear()
