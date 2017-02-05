@@ -10,18 +10,20 @@ Public Class EditUser
     Private userType As String
     Private oldData As New Hashtable
     Private position As String
+
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
     End Sub
+
     Public Sub New(ByVal id As String)
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         Me.id = id
-
     End Sub
+
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
@@ -31,23 +33,13 @@ Public Class EditUser
         If sqlReader.Read Then
             initialData()
         End If
-
         convertData()
-
     End Sub
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If isFromValid() AndAlso Not checkDuplicate() Then
             saveData()
         End If
-    End Sub
-    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
-        perCreate = IIf(chbPerCreate.Checked, 1, 0)
-    End Sub
-    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
-        perdelete = IIf(chbPerDelete.Checked, 1, 0)
-    End Sub
-    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
-        perEdit = IIf(chbPerEdit.Checked, 1, 0)
     End Sub
 
     Private Function isFromValid() As Boolean
@@ -79,21 +71,13 @@ Public Class EditUser
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง")
             valid = False
-
         End If
         Return valid
     End Function
 
-    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
-        userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
-    End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         SearchUser.Show()
-    End Sub
-
-    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
-        position = "IT"
     End Sub
 
     Public Function checkDuplicate() As Boolean
@@ -124,8 +108,28 @@ Public Class EditUser
         Return isDup
     End Function
 
+    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
+        position = "IT"
+    End Sub
+
     Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
         position = "Accountant"
+    End Sub
+
+    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
+        userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
+    End Sub
+
+    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
+        perCreate = IIf(chbPerCreate.Checked, 1, 0)
+    End Sub
+
+    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
+        perdelete = IIf(chbPerDelete.Checked, 1, 0)
+    End Sub
+
+    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
+        perEdit = IIf(chbPerEdit.Checked, 1, 0)
     End Sub
 
     Private Sub saveData()
@@ -152,13 +156,11 @@ Public Class EditUser
     End Sub
 
     Private Sub convertData()
-
         IIf(position.Equals("IT"), rdbIT.Checked = True, rdbAccountant.Checked = True)
         chbPerCreate.Checked = perCreate = 1
         chbPerDelete.Checked = perdelete = 1
         chbPerEdit.Checked = perEdit = 1
         cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
-
     End Sub
 
     Private Sub loadData()
@@ -196,6 +198,7 @@ Public Class EditUser
         txtUsername.Enabled = False
         con.close()
     End Sub
+
     Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13, 46
@@ -204,6 +207,7 @@ Public Class EditUser
                 MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
+
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
@@ -212,6 +216,7 @@ Public Class EditUser
                 MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
+
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
@@ -220,6 +225,7 @@ Public Class EditUser
                 MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
+
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46
@@ -228,6 +234,7 @@ Public Class EditUser
                 MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
+
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46

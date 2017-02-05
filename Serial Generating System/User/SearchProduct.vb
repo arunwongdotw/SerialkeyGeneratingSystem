@@ -129,19 +129,21 @@ Public Class searchProduct
         checkboxJapanese.ReadOnly = True
         dgvSearchProduct.Columns.Add(checkboxJapanese)
         Dim btnEdit As New DataGridViewButtonColumn()
-        dgvSearchProduct.Columns.Add(btnEdit)
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
         btnEdit.Name = "btnEdit"
         btnEdit.Width = 50
         btnEdit.UseColumnTextForButtonValue = True
+        dgvSearchProduct.Columns.Add(btnEdit)
+        dgvSearchProduct.Columns("btnEdit").DisplayIndex = 0
         Dim btnDelete As New DataGridViewButtonColumn()
-        dgvSearchProduct.Columns.Add(btnDelete)
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
         btnDelete.Name = "btnDelete"
         btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
+        dgvSearchProduct.Columns.Add(btnDelete)
+        dgvSearchProduct.Columns("btnDelete").DisplayIndex = 1
     End Sub
 
     Private Sub setCheckBox()
@@ -193,11 +195,11 @@ Public Class searchProduct
                     MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
                 End If
             End If
-            If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
-                Dim formEditProduct As New EditProduct(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
-                formEditProduct.Show()
-                Me.Hide()
-            End If
+        End If
+        If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
+            Dim formEditProduct As New EditProduct(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
+            formEditProduct.Show()
+            Me.Hide()
         End If
     End Sub
 
