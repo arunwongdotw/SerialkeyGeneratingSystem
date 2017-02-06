@@ -53,7 +53,7 @@ Public Class SearchUser
         txtFirstname.Clear()
         txtLastname.Clear()
         txtPosition.Clear()
-        txtPhoneNo.Clear()
+        txtMobilePhone.Clear()
         txtEmail.Clear()
 
     End Sub
@@ -140,8 +140,8 @@ Public Class SearchUser
         checkTextSingle(txtEmail)
         loadDataTable()
     End Sub
-    Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNo.TextChanged
-        checkTextSingle(txtPhoneNo)
+    Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtMobilePhone.TextChanged
+        checkTextSingle(txtMobilePhone)
         loadDataTable()
     End Sub
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
@@ -179,6 +179,7 @@ Public Class SearchUser
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
             .Columns("position").HeaderCell.Value = "ตำแหน่ง"
+            .Columns("mobilenumber").HeaderCell.Value = "หมายเลขโทรศัพท์มือถือ"
             .Columns("phonenumber").HeaderCell.Value = "หมายเลขโทรศัพท์"
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
@@ -187,6 +188,7 @@ Public Class SearchUser
             .Columns("username").ReadOnly = True
             .Columns("password").ReadOnly = True
             .Columns("position").ReadOnly = True
+            .Columns("mobilenumber").ReadOnly = True
             .Columns("phonenumber").ReadOnly = True
             .Columns("email").ReadOnly = True
             .Columns("user_type").ReadOnly = True
@@ -195,6 +197,7 @@ Public Class SearchUser
             .Columns("username").Width = 120
             .Columns("password").Width = 120
             .Columns("fullname").Width = 200
+            .Columns("mobilenumber").Width = 150
             .Columns("phonenumber").Width = 150
             .Columns("email").Width = 200
             .Columns("user_type").Width = 120
@@ -206,6 +209,7 @@ Public Class SearchUser
             .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("phonenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("mobilenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("email").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("user_type").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -266,7 +270,7 @@ Public Class SearchUser
     End Sub
 
     Private Function getQuery() As String
-        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
+        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,mobilenumber,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtUsername.Text & "%'"
         End If
@@ -282,8 +286,11 @@ Public Class SearchUser
         If Not txtPosition.Text = String.Empty Then
             strQuery &= " and position like '%" & txtPosition.Text & "%'"
         End If
-        If Not txtPhoneNo.Text = String.Empty Then
-            strQuery &= " and phonenumber like '%" & txtPhoneNo.Text & "%'"
+        If Not txtMobilePhone.Text = String.Empty Then
+            strQuery &= " and mobilenumber like '%" & txtMobilePhone.Text & "%'"
+        End If
+        If Not txtPhone.Text = String.Empty Then
+            strQuery &= " and phonenumber like '%" & txtPhone.Text & "%'"
         End If
         If Not txtEmail.Text = String.Empty Then
             strQuery &= " and email like '%" & txtEmail.Text & "%'"
@@ -301,5 +308,10 @@ Public Class SearchUser
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+        checkTextSingle(txtPhone)
+        loadDataTable()
     End Sub
 End Class
