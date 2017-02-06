@@ -157,6 +157,7 @@ Public Class EditProduct
     Private Sub EditProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
         loadData()
         If sqlReader.Read Then
