@@ -61,10 +61,10 @@ Public Class EditUser
         ElseIf txtLastName.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกนามสกุล")
             valid = False
-        ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
+        ElseIf txtMobileNumber.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์")
             valid = False
-        ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtPhoneNumber.Text.Trim) Then
+        ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtMobileNumber.Text.Trim) Then
             MessageBox.Show("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
             valid = False
         ElseIf txtEmail.Text.Trim = String.Empty Then
@@ -131,6 +131,7 @@ Public Class EditUser
         strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
         strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
         strquery &= " position = '" & position & "' , "
+        strquery &= " mobilenumber = '" & txtMobileNumber.Text.Trim & "' , "
         strquery &= " phonenumber = '" & txtPhoneNumber.Text.Trim & "' , "
         strquery &= " email = '" & txtEmail.Text.Trim & "' , "
         strquery &= " user_type = '" & userType & "' , "
@@ -161,6 +162,7 @@ Public Class EditUser
         strQuery &= "firstname,"
         strQuery &= "lastname,"
         strQuery &= "position,"
+        strQuery &= "mobilenumber,"
         strQuery &= "phonenumber,"
         strQuery &= "email,"
         strQuery &= "user_type,"
@@ -179,6 +181,7 @@ Public Class EditUser
         txtFirstName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("firstname"))
         txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
+        txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
         txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
         position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
@@ -190,7 +193,7 @@ Public Class EditUser
         con.close()
     End Sub
 
-    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13, 46
             Case Else
