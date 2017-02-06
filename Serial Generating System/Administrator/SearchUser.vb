@@ -20,6 +20,7 @@ Public Class SearchUser
             setHeaderColumns() ' set name colum 
             genRowNumber() ' generate rows index
             randerColorRow() ' rander color of rows
+            setUserType()
             setPermissionCheckBox()
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
@@ -313,4 +314,11 @@ Public Class SearchUser
         checkTextSingle(txtPhone)
         loadDataTable()
     End Sub
+
+    Private Sub setUserType()
+        For i As Integer = 0 To dgvSearchUser.Rows.Count - 1
+            dgvSearchUser.Rows(i).Cells("user_type").Value = IIf(dgvSearchUser.Rows(i).Cells("user_type").Value.Equals("admin"), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
+        Next
+    End Sub
+
 End Class
