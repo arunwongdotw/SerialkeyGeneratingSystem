@@ -19,6 +19,10 @@ Public Class ChangePasswordUser
         con.close()
     End Sub
 
+    Private Sub ChangePasswordUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     Private Sub changePasswordUserLoad() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass

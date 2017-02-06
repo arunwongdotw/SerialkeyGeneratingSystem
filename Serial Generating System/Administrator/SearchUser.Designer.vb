@@ -304,6 +304,8 @@ Partial Class SearchUser
         '
         'dgvSearchUser
         '
+        Me.dgvSearchUser.AllowUserToAddRows = False
+        Me.dgvSearchUser.AllowUserToDeleteRows = False
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

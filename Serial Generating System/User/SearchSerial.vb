@@ -30,6 +30,11 @@
         End Try
     End Sub
 
+    Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+
+    End Sub
+
     Private Sub searchSerialLoad() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
