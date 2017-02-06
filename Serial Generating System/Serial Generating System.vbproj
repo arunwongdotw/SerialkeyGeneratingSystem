@@ -106,6 +106,7 @@
     <Compile Include="Administrator\SearchUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Caesar.vb" />
     <Compile Include="ConnectDB.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
@@ -114,6 +115,7 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MD5.vb" />
     <Compile Include="My Project\Application1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
