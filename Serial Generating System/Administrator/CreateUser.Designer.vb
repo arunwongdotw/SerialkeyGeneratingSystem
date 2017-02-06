@@ -187,11 +187,11 @@ Partial Class CreateUser
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(449, 363)
+        Me.Label18.Location = New System.Drawing.Point(479, 363)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 26)
+        Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
-        Me.Label18.Text = "เบอร์โทรศัพท์ :"
+        Me.Label18.Text = "โทรศัพท์ :"
         '
         'txtPhoneNumber
         '
@@ -439,11 +439,11 @@ Partial Class CreateUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(411, 321)
+        Me.Label9.Location = New System.Drawing.Point(441, 321)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(140, 26)
+        Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
-        Me.Label9.Text = "เบอร์โทรศัพท์มือถือ :"
+        Me.Label9.Text = "โทรศัพท์มือถือ :"
         '
         'txtEmail
         '
