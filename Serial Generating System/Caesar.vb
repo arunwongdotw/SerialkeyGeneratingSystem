@@ -19,14 +19,14 @@ Public Class Caesar
     Public Shared Function encript(ByVal text As String, ByVal shift As String) As String
         Dim strEncript As New System.Text.StringBuilder()
         For Each c As Char In text
-            If Char.IsLower(c) Then
+            If Asc(c) = 45 Then
+                strEncript.Append("-")
+            ElseIf Char.IsLower(c) Then
                 strEncript.Append(Chr((((Asc(c) Mod Asc("a")) + shift) Mod 26) + Asc("a")))
             ElseIf Char.IsUpper(c) Then
                 strEncript.Append(Chr((((Asc(c) Mod Asc("A")) + shift) Mod 26) + Asc("A")))
             ElseIf Char.IsNumber(c) Then
                 strEncript.Append(Chr(Asc("A") + (Asc(c) Mod 48) + (shift Mod 26)))
-            ElseIf Asc(c) = 45 Then
-                strEncript.Append("-")
             End If
         Next
         Return strEncript.ToString
