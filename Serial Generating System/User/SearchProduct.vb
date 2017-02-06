@@ -11,14 +11,16 @@ Public Class searchProduct
             con.close()
             adapter.Fill(Table)
             dgvSearchProduct.Columns.Clear()
+            dgvSearchProduct.RowTemplate.MinimumHeight = 30
             dgvSearchProduct.DataSource = Table
+            addCustomColumns()
             setHeaderColumns()
             Table.Columns.Add("ลำดับ")
-            dgvSearchProduct.Columns("ลำดับ").DisplayIndex = 0
+            dgvSearchProduct.Columns("ลำดับ").DisplayIndex = 3
             dgvSearchProduct.Columns("ลำดับ").ReadOnly = True
+            dgvSearchProduct.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
             randerColorRow()
-            addCustomColumns()
             setCheckBox()
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
@@ -80,29 +82,39 @@ Public Class searchProduct
             .Columns("brand_name").ReadOnly = True
             .Columns("brand_s_name").ReadOnly = True
             .Columns("cost").ReadOnly = True
-            '.Columns("product_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("product_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("brand_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("brand_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("QualityControl").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("WarehouseManagement").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("thai").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("eng").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("china").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("japan").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.Columns("cost").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-
+            .Columns("product_name").Width = 120
+            .Columns("product_s_name").Width = 150
+            .Columns("brand_name").Width = 100
+            .Columns("brand_s_name").Width = 120
+            .Columns("cost").Width = 100
+            .Columns("chbQualityControl").Width = 170
+            .Columns("chbWarehouseManagement").Width = 180
+            .Columns("chbThai").Width = 100
+            .Columns("chbEnglish").Width = 100
+            .Columns("chbChinese").Width = 100
+            .Columns("chbJapanese").Width = 100
+            .Columns("product_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("product_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("brand_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("brand_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("cost").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbQualityControl").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbWarehouseManagement").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbThai").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbEnglish").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbChinese").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbJapanese").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         End With
     End Sub
 
     Private Sub genRowNumber()
-        For i = 0 To dgvSearchProduct.Rows.Count - 2
+        For i = 0 To dgvSearchProduct.Rows.Count - 1
             dgvSearchProduct.Rows(i).Cells("ลำดับ").Value = i + 1
         Next
     End Sub
 
     Private Sub randerColorRow()
-        For i = 0 To dgvSearchProduct.Rows.Count - 2
+        For i = 0 To dgvSearchProduct.Rows.Count - 1
             If i Mod 2 = 0 Then
                 dgvSearchProduct.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
             End If
@@ -159,7 +171,7 @@ Public Class searchProduct
     End Sub
 
     Private Sub setCheckBox()
-        For i As Integer = 0 To dgvSearchProduct.Rows.Count - 2
+        For i As Integer = 0 To dgvSearchProduct.Rows.Count - 1
             If IsDBNull(dgvSearchProduct.Rows(i).Cells("thai").Value) OrElse dgvSearchProduct.Rows(i).Cells("thai").Value = 0 Then
                 dgvSearchProduct.Rows(i).Cells("chbThai").Value = False
             ElseIf dgvSearchProduct.Rows(i).Cells("thai").Value = 1 Then
