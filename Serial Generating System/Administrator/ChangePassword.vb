@@ -23,6 +23,7 @@ Public Class ChangePassword
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
     End Sub
 
     Private Function ValidateDataInput() As Boolean

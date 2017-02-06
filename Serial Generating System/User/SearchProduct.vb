@@ -80,6 +80,18 @@ Public Class searchProduct
             .Columns("brand_name").ReadOnly = True
             .Columns("brand_s_name").ReadOnly = True
             .Columns("cost").ReadOnly = True
+            '.Columns("product_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("product_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("brand_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("brand_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("QualityControl").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("WarehouseManagement").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("thai").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("eng").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("china").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("japan").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("cost").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+
         End With
     End Sub
 
@@ -122,26 +134,28 @@ Public Class searchProduct
         checkboxChinese.HeaderText = "ภาษาจีน"
         checkboxChinese.Name = "chbChinese"
         checkboxChinese.ReadOnly = True
-        dgvSearchProduct.Columns.Add(checkboxChinese)
+        dgvSearchProduct.Columns.Add(checkboxChinese)s
         Dim checkboxJapanese As New DataGridViewCheckBoxColumn
         checkboxJapanese.HeaderText = "ภาษาญี่ปุ่น"
         checkboxJapanese.Name = "chbJapanese"
         checkboxJapanese.ReadOnly = True
         dgvSearchProduct.Columns.Add(checkboxJapanese)
         Dim btnEdit As New DataGridViewButtonColumn()
-        dgvSearchProduct.Columns.Add(btnEdit)
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
         btnEdit.Name = "btnEdit"
         btnEdit.Width = 50
         btnEdit.UseColumnTextForButtonValue = True
+        dgvSearchProduct.Columns.Add(btnEdit)
+        dgvSearchProduct.Columns("btnEdit").DisplayIndex = 0
         Dim btnDelete As New DataGridViewButtonColumn()
-        dgvSearchProduct.Columns.Add(btnDelete)
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
         btnDelete.Name = "btnDelete"
         btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
+        dgvSearchProduct.Columns.Add(btnDelete)
+        dgvSearchProduct.Columns("btnDelete").DisplayIndex = 1
     End Sub
 
     Private Sub setCheckBox()
@@ -179,6 +193,28 @@ Public Class searchProduct
         Next
     End Sub
 
+    Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchProduct.CellContentClick
+        Dim strQuery As String
+        Dim isDelete As Boolean
+        If e.ColumnIndex = dgvSearchProduct.Columns("btnDelete").Index Then
+            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo, Title:="ยืนยันการลบข้อมูล") = vbYes Then
+                strQuery = "delete from sgs.dbo.product where id = " & dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value
+                isDelete = con.save(strQuery)
+                If isDelete Then
+                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    loadDataTable()
+                Else
+                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                End If
+            End If
+        End If
+        If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
+            Dim formEditProduct As New EditProduct(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
+            formEditProduct.Show()
+            Me.Hide()
+        End If
+    End Sub
+
     Private Sub clearTextBox()
         txtProductName.Clear()
         txtProductSName.Clear()
@@ -197,6 +233,7 @@ Public Class searchProduct
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         loadDataTable()
+        tvUserMenu.ExpandAll()
     End Sub
 
     Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
@@ -272,5 +309,11 @@ Public Class searchProduct
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class

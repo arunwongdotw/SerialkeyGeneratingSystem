@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddProduct
+Partial Class EditProduct
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -38,7 +38,7 @@ Partial Class AddProduct
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.txtProduct_s_name = New System.Windows.Forms.TextBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -50,8 +50,6 @@ Partial Class AddProduct
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnAttachProductImage = New System.Windows.Forms.Button()
         Me.chbWM = New System.Windows.Forms.CheckBox()
         Me.chbQC = New System.Windows.Forms.CheckBox()
@@ -68,16 +66,12 @@ Partial Class AddProduct
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvUserMenu
         '
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
-        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tvUserMenu.HotTracking = True
-        Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode12.Name = "ndCreateSerialkey"
@@ -106,7 +100,6 @@ Partial Class AddProduct
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
-        Me.tvUserMenu.TabStop = False
         '
         'lblCorpName
         '
@@ -140,18 +133,18 @@ Partial Class AddProduct
         Me.txtProduct_s_name.Size = New System.Drawing.Size(225, 36)
         Me.txtProduct_s_name.TabIndex = 2
         '
-        'btnAdd
+        'btnEdit
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.SandyBrown
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(660, 511)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 15
-        Me.btnAdd.Text = "เพิ่ม"
-        Me.btnAdd.UseVisualStyleBackColor = False
+        Me.btnEdit.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnEdit.FlatAppearance.BorderSize = 0
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.Location = New System.Drawing.Point(660, 511)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(129, 41)
+        Me.btnEdit.TabIndex = 15
+        Me.btnEdit.Text = "แก้ไข"
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'lblFirstName
         '
@@ -252,8 +245,6 @@ Partial Class AddProduct
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.pbAccountInfo)
-        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnAttachProductImage)
         Me.Panel1.Controls.Add(Me.chbWM)
         Me.Panel1.Controls.Add(Me.chbQC)
@@ -279,7 +270,7 @@ Partial Class AddProduct
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.txtBrand_s_name)
         Me.Panel1.Controls.Add(Me.lblFirstName)
-        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Controls.Add(Me.btnEdit)
         Me.Panel1.Controls.Add(Me.txtProduct_s_name)
         Me.Panel1.Controls.Add(Me.txtProductName)
         Me.Panel1.Controls.Add(Me.lblCorpSubName)
@@ -291,32 +282,9 @@ Partial Class AddProduct
         Me.Panel1.Size = New System.Drawing.Size(1354, 729)
         Me.Panel1.TabIndex = 3
         '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1314, 3)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 95
-        Me.pbAccountInfo.TabStop = False
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1144, 27)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
-        Me.txtAccountInfo.TabIndex = 94
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'btnAttachProductImage
         '
-        Me.btnAttachProductImage.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnAttachProductImage.BackColor = System.Drawing.Color.DarkGray
         Me.btnAttachProductImage.FlatAppearance.BorderSize = 0
         Me.btnAttachProductImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAttachProductImage.Location = New System.Drawing.Point(279, 222)
@@ -349,7 +317,7 @@ Partial Class AddProduct
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(776, 365)
+        Me.Label4.Location = New System.Drawing.Point(776, 366)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(110, 26)
         Me.Label4.TabIndex = 90
@@ -461,21 +429,20 @@ Partial Class AddProduct
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
         Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        Me.btnHeader.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
-        'AddProduct
+        'EditProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "AddProduct"
-        Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
+        Me.Name = "EditProduct"
+        Me.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -485,7 +452,7 @@ Partial Class AddProduct
     Friend WithEvents lblCorpSubName As System.Windows.Forms.Label
     Friend WithEvents txtProductName As System.Windows.Forms.TextBox
     Friend WithEvents txtProduct_s_name As System.Windows.Forms.TextBox
-    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
     Friend WithEvents lblFirstName As System.Windows.Forms.Label
     Friend WithEvents txtBrand_s_name As System.Windows.Forms.TextBox
     Friend WithEvents btnClear As System.Windows.Forms.Button
@@ -512,6 +479,4 @@ Partial Class AddProduct
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnAttachProductImage As System.Windows.Forms.Button
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class

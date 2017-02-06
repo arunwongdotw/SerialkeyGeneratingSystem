@@ -28,6 +28,7 @@
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        tvAdminMenu.ExpandAll()
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click

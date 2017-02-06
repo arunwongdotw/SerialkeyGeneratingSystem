@@ -91,6 +91,9 @@ Public Class CreateSerial
                         Me.txtCorpSubName.Text = IIf(IsDBNull(dt.Rows.Item(0)("corp_s_name")), "", dt.Rows.Item(0)("corp_s_name"))
                         Me.txtGroupCorp.Text = IIf(IsDBNull(dt.Rows.Item(0)("corpgroup")), "", dt.Rows.Item(0)("corpgroup"))
                         'Me.txt_RefBranch.Text = IIf(IsDBNull(Me.DT_SCC.Rows.Item(0)("BRANCHCODE")), "", Me.DT_SCC.Rows.Item(0)("BRANCHCODE"))
+                        txtCorpName.Visible = True
+                        txtCorpSubName.Visible = True
+                        txtGroupCorp.Visible = True
 
                     End If
 
@@ -120,15 +123,29 @@ Public Class CreateSerial
         chbUnlimit.Checked = False
         chbForever.Checked = False
 
-        txtCorpName.Clear()
-        txtCorpSubName.Clear()
-        txtGroupCorp.Clear()
-        txtBrandName.Clear()
-        txtBrand_s_name.Clear()
-        txtSoftwareName.Clear()
-        txtSoftware_s_name.Clear()
-        txtContractNumber.Clear()
-        txtAmountUser.Clear()
+        txtCorpName.Text = ""
+        txtCorpSubName.Text = ""
+        txtGroupCorp.Text = ""
+        txtBrandName.Text = ""
+        txtBrand_s_name.Text = ""
+        txtSoftwareName.Text = ""
+        txtSoftware_s_name.Text = ""
+        txtContractNumber.Text = ""
+        txtAmountUser.Text = ""
+        'txtInfo.Text = ""
+        'txtSerialKey.Text = ""
+
+        Panel5.Visible = False
+
+        'txtCorpName.Clear()
+        'txtCorpSubName.Clear()
+        'txtGroupCorp.Clear()
+        'txtBrandName.Clear()
+        'txtBrand_s_name.Clear()
+        'txtSoftwareName.Clear()
+        'txtSoftware_s_name.Clear()
+        'txtContractNumber.Clear()
+        'txtAmountUser.Clear()
         txtInfo.Clear()
         txtSerialKey.Clear()
 
@@ -183,6 +200,12 @@ Public Class CreateSerial
                         Me.txtSoftware_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_s_name")), "", dt.Rows.Item(0)("product_s_name"))
                         Me.txtBrandName.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_name")), "", dt.Rows.Item(0)("brand_name"))
                         Me.txtBrand_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_s_name")), "", dt.Rows.Item(0)("brand_s_name"))
+
+                        txtSoftwareName.Visible = True
+                        txtSoftware_s_name.Visible = True
+                        txtBrandName.Visible = True
+                        txtBrand_s_name.Visible = True
+
                         If IIf(IsDBNull(dt.Rows.Item(0)("QualityControl")), "", dt.Rows.Item(0)("QualityControl")) = 1 Then
                             chbQC.Checked = True
                         End If
@@ -444,7 +467,12 @@ Public Class CreateSerial
         serialINFO &= a & Language
         serialINFO &= a & version
 
+        txtInfo.BorderStyle = BorderStyle.None
+        txtSerialKey.BorderStyle = BorderStyle.None
+
         txtInfo.Text = serialINFO
+        txtInfo.Visible = True
+        Panel5.Visible = True
 
     End Sub
 
@@ -545,5 +573,47 @@ Public Class CreateSerial
 
     Private Sub dtpExpireDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpExpireDate.ValueChanged
 
+    End Sub
+
+    Private Sub txtCorpName_Click(sender As Object, e As EventArgs) Handles txtCorpName.Click
+
+    End Sub
+
+    Private Sub txtGroupCorp_Click(sender As Object, e As EventArgs) Handles txtGroupCorp.Click
+
+    End Sub
+
+    Private Sub btnCopyInfo_Click(sender As Object, e As EventArgs) Handles btnCopyInfo.Click
+        Try
+            If txtInfo.Text <> "" Then
+                System.Windows.Forms.Clipboard.SetText(txtInfo.Text)
+                MsgBox("คัดลอกข้อมูลสำเร็จ")
+            End If
+        Catch
+            MsgBox("error")
+        End Try
+    End Sub
+
+    Private Sub btnCopySerial_Click(sender As Object, e As EventArgs) Handles btnCopySerial.Click
+        Try
+            If txtSerialKey.Text <> "" Then
+                System.Windows.Forms.Clipboard.SetText(txtSerialKey.Text)
+                MsgBox("คัดลอกข้อมูลสำเร็จ")
+            End If
+        Catch
+            MsgBox("error")
+        End Try
+    End Sub
+
+    Private Sub txtInfo_TextChanged(sender As Object, e As EventArgs) Handles txtInfo.TextChanged
+        If txtInfo.Text <> "" Then
+            btnCopyInfo.Visible = True
+        End If
+    End Sub
+
+    Private Sub txtSerialKey_TextChanged(sender As Object, e As EventArgs) Handles txtSerialKey.TextChanged
+        If txtSerialKey.Text <> "" Then
+            btnCopySerial.Visible = True
+        End If
     End Sub
 End Class
