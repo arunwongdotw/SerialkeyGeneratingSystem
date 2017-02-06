@@ -129,7 +129,7 @@ Partial Class ChangePassword
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(1085, 228)
+        Me.Label4.Location = New System.Drawing.Point(1085, 219)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(18, 26)
         Me.Label4.TabIndex = 72
@@ -140,7 +140,7 @@ Partial Class ChangePassword
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(1086, 280)
+        Me.Label15.Location = New System.Drawing.Point(1085, 261)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 71
@@ -163,7 +163,7 @@ Partial Class ChangePassword
         Me.txtNewPasswordConfirm.BackColor = System.Drawing.SystemColors.Window
         Me.txtNewPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNewPasswordConfirm.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(580, 278)
+        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(579, 259)
         Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
         Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(500, 36)
         Me.txtNewPasswordConfirm.TabIndex = 3
@@ -172,7 +172,7 @@ Partial Class ChangePassword
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(440, 276)
+        Me.Label3.Location = New System.Drawing.Point(440, 261)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(132, 26)
         Me.Label3.TabIndex = 8
@@ -184,7 +184,7 @@ Partial Class ChangePassword
         Me.btnChangePassword.FlatAppearance.BorderSize = 0
         Me.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChangePassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChangePassword.Location = New System.Drawing.Point(951, 352)
+        Me.btnChangePassword.Location = New System.Drawing.Point(950, 336)
         Me.btnChangePassword.Name = "btnChangePassword"
         Me.btnChangePassword.Size = New System.Drawing.Size(129, 41)
         Me.btnChangePassword.TabIndex = 4
@@ -196,7 +196,7 @@ Partial Class ChangePassword
         Me.txtNewPassword.BackColor = System.Drawing.SystemColors.Window
         Me.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNewPassword.Location = New System.Drawing.Point(579, 226)
+        Me.txtNewPassword.Location = New System.Drawing.Point(579, 217)
         Me.txtNewPassword.Name = "txtNewPassword"
         Me.txtNewPassword.Size = New System.Drawing.Size(500, 36)
         Me.txtNewPassword.TabIndex = 2
@@ -215,7 +215,7 @@ Partial Class ChangePassword
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(475, 226)
+        Me.Label2.Location = New System.Drawing.Point(478, 219)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 26)
         Me.Label2.TabIndex = 2
@@ -225,7 +225,7 @@ Partial Class ChangePassword
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(477, 175)
+        Me.Label1.Location = New System.Drawing.Point(478, 177)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(95, 26)
         Me.Label1.TabIndex = 1
