@@ -300,7 +300,7 @@ Public Class SearchUser
     End Function
 
     Private Sub genRowNumber()
-        For i = 0 To dgvSearchUser.Rows.Count - 2
+        For i = 0 To dgvSearchUser.Rows.Count - 1
             dgvSearchUser.Rows(i).Cells("ลำดับ").Value = i + 1
         Next
     End Sub
