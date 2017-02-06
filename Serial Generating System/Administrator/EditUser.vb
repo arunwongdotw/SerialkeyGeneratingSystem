@@ -24,6 +24,10 @@ Public Class EditUser
         Me.id = id
     End Sub
 
+    Private Sub EditUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
@@ -70,7 +74,7 @@ Public Class EditUser
         ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกอีเมล")
             valid = False
-        ElseIf Not New Regex(EmailRegex).IsMatch(txtPhoneNumber.Text.Trim) Then
+        ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
         End If
@@ -281,14 +285,14 @@ Public Class EditUser
         End If
     End Sub
     Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtPhoneNumber.LostFocus
-        If txtPhoneNumber.Text Is String.Empty OrElse oldData("email").Equals(txtPhoneNumber.Text) Then
+        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text) Then
             lblMsgEmail.Visible = False
             pbEmail.Visible = False
-        ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) Then
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmail.Text) Then
             txtEmail_incorrect("อีเมลซ้ำ")
-        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtPhoneNumber.Text.Trim) Then
+        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text.Trim) Then
             txtEmail_incorrect("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not isEmployeeDuplicate("email", txtPhoneNumber.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtPhoneNumber.Text Is String.Empty Then
+        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtEmail.Text Is String.Empty Then
             txtEmail_correct()
         End If
     End Sub

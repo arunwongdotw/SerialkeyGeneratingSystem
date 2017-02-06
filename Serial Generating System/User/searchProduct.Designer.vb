@@ -141,7 +141,7 @@ Partial Class searchProduct
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(392, 195)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
         Me.lblGroupCorp.TabIndex = 120
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -163,7 +163,7 @@ Partial Class searchProduct
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(373, 250)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
+        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
         Me.lblFirstName.TabIndex = 119
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -172,7 +172,7 @@ Partial Class searchProduct
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(351, 138)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
         Me.lblCorpSubName.TabIndex = 118
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -181,7 +181,7 @@ Partial Class searchProduct
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(370, 89)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
         Me.lblCorpName.TabIndex = 117
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -259,7 +259,7 @@ Partial Class searchProduct
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(418, 298)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 107
         Me.lblLanguage.Text = "ภาษา :"
         '

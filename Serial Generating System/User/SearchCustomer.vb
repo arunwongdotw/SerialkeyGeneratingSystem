@@ -324,6 +324,8 @@ Public Class SearchCustomer
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clear()
+        LoadData()
+
 
     End Sub
 

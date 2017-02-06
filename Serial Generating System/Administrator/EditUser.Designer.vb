@@ -49,33 +49,33 @@ Partial Class EditUser
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cmbUserType = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblUSerType = New System.Windows.Forms.Label()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtMobileNumber = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblMobile = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.lblMsgEngAndNumbers = New System.Windows.Forms.Label()
+        Me.lblMsgEngAndNumber = New System.Windows.Forms.Label()
+        Me.lblPosition = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblLastname = New System.Windows.Forms.Label()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.txtEmpID = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblEmpID = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblPhone = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -157,7 +157,7 @@ Partial Class EditUser
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Controls.Add(Me.Label20)
+        Me.Panel1.Controls.Add(Me.lblPhone)
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.lblMsgEmail)
@@ -173,28 +173,28 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.cmbUserType)
-        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.lblUSerType)
         Me.Panel1.Controls.Add(Me.chbPerDelete)
         Me.Panel1.Controls.Add(Me.chbPerEdit)
         Me.Panel1.Controls.Add(Me.chbPerCreate)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.txtMobileNumber)
-        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.lblMobile)
         Me.Panel1.Controls.Add(Me.txtPhoneNumber)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.lblEmail)
+        Me.Panel1.Controls.Add(Me.lblMsgEngAndNumbers)
+        Me.Panel1.Controls.Add(Me.lblMsgEngAndNumber)
+        Me.Panel1.Controls.Add(Me.lblPosition)
         Me.Panel1.Controls.Add(Me.txtLastName)
-        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.lblLastname)
         Me.Panel1.Controls.Add(Me.txtFirstName)
-        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Controls.Add(Me.txtEmpID)
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.lblEmpID)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.txtUsername)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.lblPassword)
+        Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -367,16 +367,16 @@ Partial Class EditUser
         Me.cmbUserType.Size = New System.Drawing.Size(318, 35)
         Me.cmbUserType.TabIndex = 12
         '
-        'Label11
+        'lblUSerType
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(414, 483)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(119, 27)
-        Me.Label11.TabIndex = 71
-        Me.Label11.Text = "ประเภทบัญชีผู้ใช้ :"
+        Me.lblUSerType.AutoSize = True
+        Me.lblUSerType.BackColor = System.Drawing.Color.Transparent
+        Me.lblUSerType.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUSerType.Location = New System.Drawing.Point(414, 483)
+        Me.lblUSerType.Name = "lblUSerType"
+        Me.lblUSerType.Size = New System.Drawing.Size(119, 27)
+        Me.lblUSerType.TabIndex = 71
+        Me.lblUSerType.Text = "ประเภทบัญชีผู้ใช้ :"
         '
         'chbPerDelete
         '
@@ -437,16 +437,16 @@ Partial Class EditUser
         Me.txtMobileNumber.Size = New System.Drawing.Size(318, 36)
         Me.txtMobileNumber.TabIndex = 96
         '
-        'Label9
+        'lblMobile
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(391, 355)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(139, 27)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "เบอร์โทรศัพท์มือถือ :"
+        Me.lblMobile.AutoSize = True
+        Me.lblMobile.BackColor = System.Drawing.Color.Transparent
+        Me.lblMobile.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMobile.Location = New System.Drawing.Point(391, 355)
+        Me.lblMobile.Name = "lblMobile"
+        Me.lblMobile.Size = New System.Drawing.Size(139, 27)
+        Me.lblMobile.TabIndex = 24
+        Me.lblMobile.Text = "เบอร์โทรศัพท์มือถือ :"
         '
         'txtPhoneNumber
         '
@@ -457,49 +457,49 @@ Partial Class EditUser
         Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
         Me.txtPhoneNumber.TabIndex = 98
         '
-        'Label10
+        'lblEmail
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(480, 438)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(53, 27)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "อีเมล์ :"
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(480, 438)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
+        Me.lblEmail.TabIndex = 22
+        Me.lblEmail.Text = "อีเมล์ :"
         '
-        'Label8
+        'lblMsgEngAndNumbers
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(856, 187)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(204, 27)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
+        Me.lblMsgEngAndNumbers.AutoSize = True
+        Me.lblMsgEngAndNumbers.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMsgEngAndNumbers.ForeColor = System.Drawing.Color.Red
+        Me.lblMsgEngAndNumbers.Location = New System.Drawing.Point(856, 187)
+        Me.lblMsgEngAndNumbers.Name = "lblMsgEngAndNumbers"
+        Me.lblMsgEngAndNumbers.Size = New System.Drawing.Size(204, 27)
+        Me.lblMsgEngAndNumbers.TabIndex = 17
+        Me.lblMsgEngAndNumbers.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
-        'Label7
+        'lblMsgEngAndNumber
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(857, 146)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(204, 27)
-        Me.Label7.TabIndex = 16
-        Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
+        Me.lblMsgEngAndNumber.AutoSize = True
+        Me.lblMsgEngAndNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMsgEngAndNumber.ForeColor = System.Drawing.Color.Red
+        Me.lblMsgEngAndNumber.Location = New System.Drawing.Point(857, 146)
+        Me.lblMsgEngAndNumber.Name = "lblMsgEngAndNumber"
+        Me.lblMsgEngAndNumber.Size = New System.Drawing.Size(204, 27)
+        Me.lblMsgEngAndNumber.TabIndex = 16
+        Me.lblMsgEngAndNumber.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
-        'Label6
+        'lblPosition
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(460, 530)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 27)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "ตำแหน่ง :"
+        Me.lblPosition.AutoSize = True
+        Me.lblPosition.BackColor = System.Drawing.Color.Transparent
+        Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPosition.Location = New System.Drawing.Point(460, 530)
+        Me.lblPosition.Name = "lblPosition"
+        Me.lblPosition.Size = New System.Drawing.Size(73, 27)
+        Me.lblPosition.TabIndex = 14
+        Me.lblPosition.Text = "ตำแหน่ง :"
         '
         'txtLastName
         '
@@ -510,16 +510,16 @@ Partial Class EditUser
         Me.txtLastName.Size = New System.Drawing.Size(316, 36)
         Me.txtLastName.TabIndex = 93
         '
-        'Label5
+        'lblLastname
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(458, 309)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 27)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "นามสกุล :"
+        Me.lblLastname.AutoSize = True
+        Me.lblLastname.BackColor = System.Drawing.Color.Transparent
+        Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastname.Location = New System.Drawing.Point(458, 309)
+        Me.lblLastname.Name = "lblLastname"
+        Me.lblLastname.Size = New System.Drawing.Size(75, 27)
+        Me.lblLastname.TabIndex = 12
+        Me.lblLastname.Text = "นามสกุล :"
         '
         'txtFirstName
         '
@@ -530,16 +530,16 @@ Partial Class EditUser
         Me.txtFirstName.Size = New System.Drawing.Size(316, 36)
         Me.txtFirstName.TabIndex = 92
         '
-        'Label4
+        'lblName
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(493, 268)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 27)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "ชื่อ :"
+        Me.lblName.AutoSize = True
+        Me.lblName.BackColor = System.Drawing.Color.Transparent
+        Me.lblName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(493, 268)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(40, 27)
+        Me.lblName.TabIndex = 10
+        Me.lblName.Text = "ชื่อ :"
         '
         'txtEmpID
         '
@@ -550,16 +550,16 @@ Partial Class EditUser
         Me.txtEmpID.Size = New System.Drawing.Size(316, 36)
         Me.txtEmpID.TabIndex = 91
         '
-        'Label3
+        'lblEmpID
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(430, 228)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 27)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "รหัสพนักงาน :"
+        Me.lblEmpID.AutoSize = True
+        Me.lblEmpID.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpID.Location = New System.Drawing.Point(430, 228)
+        Me.lblEmpID.Name = "lblEmpID"
+        Me.lblEmpID.Size = New System.Drawing.Size(103, 27)
+        Me.lblEmpID.TabIndex = 8
+        Me.lblEmpID.Text = "รหัสพนักงาน :"
         '
         'txtPassword
         '
@@ -579,28 +579,28 @@ Partial Class EditUser
         Me.txtUsername.Size = New System.Drawing.Size(318, 36)
         Me.txtUsername.TabIndex = 88
         '
-        'Label2
+        'lblPassword
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(457, 187)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 27)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "รหัสผ่าน :"
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.BackColor = System.Drawing.Color.Transparent
+        Me.lblPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.Location = New System.Drawing.Point(457, 187)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(76, 27)
+        Me.lblPassword.TabIndex = 2
+        Me.lblPassword.Text = "รหัสผ่าน :"
         '
-        'Label1
+        'lblUsername
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(470, 146)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 27)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ชื่อผู้ใช้ :"
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.BackColor = System.Drawing.Color.Transparent
+        Me.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsername.Location = New System.Drawing.Point(470, 146)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(63, 27)
+        Me.lblUsername.TabIndex = 1
+        Me.lblUsername.Text = "ชื่อผู้ใช้ :"
         '
         'pbAccountInfo
         '
@@ -651,16 +651,16 @@ Partial Class EditUser
         Me.Label18.TabIndex = 128
         Me.Label18.Text = "*"
         '
-        'Label20
+        'lblPhone
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(427, 400)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(101, 27)
-        Me.Label20.TabIndex = 127
-        Me.Label20.Text = "เบอร์โทรศัพท์ :"
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.BackColor = System.Drawing.Color.Transparent
+        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPhone.Location = New System.Drawing.Point(427, 400)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(101, 27)
+        Me.lblPhone.TabIndex = 127
+        Me.lblPhone.Text = "เบอร์โทรศัพท์ :"
         '
         'txtEmail
         '
@@ -717,35 +717,35 @@ Partial Class EditUser
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents cmbUserType As System.Windows.Forms.ComboBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents lblUSerType As System.Windows.Forms.Label
     Friend WithEvents chbPerDelete As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerEdit As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerCreate As System.Windows.Forms.CheckBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtMobileNumber As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents lblMobile As System.Windows.Forms.Label
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblEmail As System.Windows.Forms.Label
+    Friend WithEvents lblMsgEngAndNumbers As System.Windows.Forms.Label
+    Friend WithEvents lblMsgEngAndNumber As System.Windows.Forms.Label
+    Friend WithEvents lblPosition As System.Windows.Forms.Label
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblLastname As System.Windows.Forms.Label
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lblName As System.Windows.Forms.Label
     Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblEmpID As System.Windows.Forms.Label
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblPassword As System.Windows.Forms.Label
+    Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents pbEmpId As System.Windows.Forms.PictureBox
     Friend WithEvents lblMsgEmpId As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents lblMsgEmail As System.Windows.Forms.Label
     Friend WithEvents pbEmail As System.Windows.Forms.PictureBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents lblPhone As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

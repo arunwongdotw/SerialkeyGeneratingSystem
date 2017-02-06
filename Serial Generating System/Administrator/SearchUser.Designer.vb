@@ -53,7 +53,7 @@ Partial Class SearchUser
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.txtPhone = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPhone = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +63,7 @@ Partial Class SearchUser
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.txtPhone)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.lblPhone)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -304,6 +304,8 @@ Partial Class SearchUser
         '
         'dgvSearchUser
         '
+        Me.dgvSearchUser.AllowUserToAddRows = False
+        Me.dgvSearchUser.AllowUserToDeleteRows = False
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -352,16 +354,16 @@ Partial Class SearchUser
         Me.txtPhone.Size = New System.Drawing.Size(318, 36)
         Me.txtPhone.TabIndex = 79
         '
-        'Label1
+        'lblPhone
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(828, 227)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 27)
-        Me.Label1.TabIndex = 80
-        Me.Label1.Text = "เบอร์โทรศัพท์ :"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPhone.Location = New System.Drawing.Point(828, 227)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(101, 27)
+        Me.lblPhone.TabIndex = 80
+        Me.lblPhone.Text = "เบอร์โทรศัพท์ :"
+        Me.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'SearchUser
         '
@@ -402,5 +404,5 @@ Partial Class SearchUser
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
     Friend WithEvents txtPhone As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblPhone As System.Windows.Forms.Label
 End Class

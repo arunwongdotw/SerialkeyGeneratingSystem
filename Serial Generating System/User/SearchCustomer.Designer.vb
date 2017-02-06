@@ -65,7 +65,6 @@ Partial Class SearchCustomer
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchCus = New System.Windows.Forms.DataGridView()
@@ -85,7 +84,6 @@ Partial Class SearchCustomer
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -408,7 +406,6 @@ Partial Class SearchCustomer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.dgvSearchCus)
@@ -449,26 +446,15 @@ Partial Class SearchCustomer
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1311, 3)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 61
-        Me.pbAccountInfo.TabStop = False
-        '
         'txtAccountInfo
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 60
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -616,7 +602,6 @@ Partial Class SearchCustomer
         Me.Text = "ค้นหาข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -669,6 +654,5 @@ Partial Class SearchCustomer
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
 End Class
