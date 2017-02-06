@@ -105,11 +105,11 @@ Partial Class SearchUser
         '
         Me.lblPhone.AutoSize = True
         Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPhone.Location = New System.Drawing.Point(828, 176)
+        Me.lblPhone.Location = New System.Drawing.Point(858, 176)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(102, 26)
+        Me.lblPhone.Size = New System.Drawing.Size(72, 26)
         Me.lblPhone.TabIndex = 80
-        Me.lblPhone.Text = "เบอร์โทรศัพท์ :"
+        Me.lblPhone.Text = "โทรศัพท์ :"
         Me.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'pbAccountInfo
@@ -191,11 +191,11 @@ Partial Class SearchUser
         '
         Me.lblPhoneNo.AutoSize = True
         Me.lblPhoneNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPhoneNo.Location = New System.Drawing.Point(341, 176)
+        Me.lblPhoneNo.Location = New System.Drawing.Point(371, 176)
         Me.lblPhoneNo.Name = "lblPhoneNo"
-        Me.lblPhoneNo.Size = New System.Drawing.Size(140, 26)
+        Me.lblPhoneNo.Size = New System.Drawing.Size(110, 26)
         Me.lblPhoneNo.TabIndex = 30
-        Me.lblPhoneNo.Text = "เบอร์โทรศัพท์มือถือ :"
+        Me.lblPhoneNo.Text = "โทรศัพท์มือถือ :"
         Me.lblPhoneNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtEmail
