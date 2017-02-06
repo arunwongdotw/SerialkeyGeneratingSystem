@@ -50,6 +50,7 @@ Public Class SearchUser
         txtLastname.Clear()
         txtPosition.Clear()
         txtMobilePhone.Clear()
+        txtPhone.Clear()
         txtEmail.Clear()
 
     End Sub
