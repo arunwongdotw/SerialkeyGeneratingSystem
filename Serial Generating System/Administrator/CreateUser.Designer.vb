@@ -32,6 +32,10 @@ Partial Class CreateUser
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateUser))
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.lbWelcome = New System.Windows.Forms.Label()
         Me.btnAttachImage = New System.Windows.Forms.Button()
@@ -70,10 +74,6 @@ Partial Class CreateUser
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -160,6 +160,48 @@ Partial Class CreateUser
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 3
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.Red
+        Me.Label20.Location = New System.Drawing.Point(876, 405)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(18, 26)
+        Me.Label20.TabIndex = 90
+        Me.Label20.Text = "*"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.Location = New System.Drawing.Point(876, 363)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(18, 26)
+        Me.Label19.TabIndex = 89
+        Me.Label19.Text = "*"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(449, 363)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(102, 26)
+        Me.Label18.TabIndex = 88
+        Me.Label18.Text = "เบอร์โทรศัพท์ :"
+        '
+        'txtPhoneNumber
+        '
+        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
+        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(557, 360)
+        Me.txtPhoneNumber.Name = "txtPhoneNumber"
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
+        Me.txtPhoneNumber.TabIndex = 7
+        '
         'txtAccountInfo
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -171,6 +213,7 @@ Partial Class CreateUser
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.Size = New System.Drawing.Size(145, 33)
         Me.txtAccountInfo.TabIndex = 84
+        Me.txtAccountInfo.TabStop = False
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lbWelcome
@@ -196,6 +239,7 @@ Partial Class CreateUser
         Me.btnAttachImage.Name = "btnAttachImage"
         Me.btnAttachImage.Size = New System.Drawing.Size(113, 35)
         Me.btnAttachImage.TabIndex = 83
+        Me.btnAttachImage.TabStop = False
         Me.btnAttachImage.Text = "เพิ่มรูปภาพ"
         Me.btnAttachImage.UseVisualStyleBackColor = False
         '
@@ -593,48 +637,6 @@ Partial Class CreateUser
         Me.Label1.Size = New System.Drawing.Size(61, 26)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
-        '
-        'txtPhoneNumber
-        '
-        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(557, 360)
-        Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
-        Me.txtPhoneNumber.TabIndex = 7
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(449, 363)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 26)
-        Me.Label18.TabIndex = 88
-        Me.Label18.Text = "เบอร์โทรศัพท์ :"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(876, 363)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(18, 26)
-        Me.Label19.TabIndex = 89
-        Me.Label19.Text = "*"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(876, 405)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 26)
-        Me.Label20.TabIndex = 90
-        Me.Label20.Text = "*"
         '
         'CreateUser
         '
