@@ -35,6 +35,10 @@ Partial Class EditUser
         Me.btnSave = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.lblPhone = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.lblMsgEmail = New System.Windows.Forms.Label()
         Me.pbEmail = New System.Windows.Forms.PictureBox()
@@ -74,10 +78,6 @@ Partial Class EditUser
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.lblPhone = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +104,7 @@ Partial Class EditUser
         Me.btnCancel.FlatAppearance.BorderSize = 0
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCancel.Location = New System.Drawing.Point(726, 620)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(129, 41)
@@ -117,6 +118,7 @@ Partial Class EditUser
         Me.btnSave.FlatAppearance.BorderSize = 0
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSave.Location = New System.Drawing.Point(537, 620)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(129, 41)
@@ -209,6 +211,49 @@ Partial Class EditUser
         Me.Panel1.Size = New System.Drawing.Size(1349, 768)
         Me.Panel1.TabIndex = 4
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(856, 400)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.TabIndex = 129
+        Me.Label15.Text = "*"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Red
+        Me.Label18.Location = New System.Drawing.Point(856, 362)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(18, 27)
+        Me.Label18.TabIndex = 128
+        Me.Label18.Text = "*"
+        '
+        'lblPhone
+        '
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.BackColor = System.Drawing.Color.Transparent
+        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblPhone.Location = New System.Drawing.Point(427, 400)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(101, 27)
+        Me.lblPhone.TabIndex = 127
+        Me.lblPhone.Text = "เบอร์โทรศัพท์ :"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(537, 439)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
+        Me.txtEmail.TabIndex = 126
+        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -267,6 +312,7 @@ Partial Class EditUser
         Me.btnAttachImage.FlatAppearance.BorderSize = 0
         Me.btnAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttachImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAttachImage.Location = New System.Drawing.Point(288, 250)
         Me.btnAttachImage.Name = "btnAttachImage"
         Me.btnAttachImage.Size = New System.Drawing.Size(113, 35)
@@ -278,6 +324,7 @@ Partial Class EditUser
         '
         Me.rdbAccountant.AutoSize = True
         Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbAccountant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbAccountant.Location = New System.Drawing.Point(669, 530)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(62, 31)
@@ -291,6 +338,7 @@ Partial Class EditUser
         Me.rdbIT.AutoSize = True
         Me.rdbIT.Checked = True
         Me.rdbIT.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbIT.Location = New System.Drawing.Point(543, 527)
         Me.rdbIT.Name = "rdbIT"
         Me.rdbIT.Size = New System.Drawing.Size(53, 31)
@@ -372,6 +420,7 @@ Partial Class EditUser
         Me.lblUSerType.AutoSize = True
         Me.lblUSerType.BackColor = System.Drawing.Color.Transparent
         Me.lblUSerType.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUSerType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblUSerType.Location = New System.Drawing.Point(414, 483)
         Me.lblUSerType.Name = "lblUSerType"
         Me.lblUSerType.Size = New System.Drawing.Size(119, 27)
@@ -383,6 +432,7 @@ Partial Class EditUser
         Me.chbPerDelete.AutoSize = True
         Me.chbPerDelete.BackColor = System.Drawing.Color.Transparent
         Me.chbPerDelete.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbPerDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.chbPerDelete.Location = New System.Drawing.Point(709, 575)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
@@ -396,6 +446,7 @@ Partial Class EditUser
         Me.chbPerEdit.AutoSize = True
         Me.chbPerEdit.BackColor = System.Drawing.Color.Transparent
         Me.chbPerEdit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbPerEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.chbPerEdit.Location = New System.Drawing.Point(629, 575)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
@@ -409,6 +460,7 @@ Partial Class EditUser
         Me.chbPerCreate.AutoSize = True
         Me.chbPerCreate.BackColor = System.Drawing.Color.Transparent
         Me.chbPerCreate.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbPerCreate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.chbPerCreate.Location = New System.Drawing.Point(548, 575)
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
@@ -422,6 +474,7 @@ Partial Class EditUser
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Location = New System.Drawing.Point(423, 575)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(110, 27)
@@ -442,6 +495,7 @@ Partial Class EditUser
         Me.lblMobile.AutoSize = True
         Me.lblMobile.BackColor = System.Drawing.Color.Transparent
         Me.lblMobile.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMobile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblMobile.Location = New System.Drawing.Point(391, 355)
         Me.lblMobile.Name = "lblMobile"
         Me.lblMobile.Size = New System.Drawing.Size(139, 27)
@@ -462,6 +516,7 @@ Partial Class EditUser
         Me.lblEmail.AutoSize = True
         Me.lblEmail.BackColor = System.Drawing.Color.Transparent
         Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblEmail.Location = New System.Drawing.Point(480, 438)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(53, 27)
@@ -495,6 +550,7 @@ Partial Class EditUser
         Me.lblPosition.AutoSize = True
         Me.lblPosition.BackColor = System.Drawing.Color.Transparent
         Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPosition.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblPosition.Location = New System.Drawing.Point(460, 530)
         Me.lblPosition.Name = "lblPosition"
         Me.lblPosition.Size = New System.Drawing.Size(73, 27)
@@ -515,6 +571,7 @@ Partial Class EditUser
         Me.lblLastname.AutoSize = True
         Me.lblLastname.BackColor = System.Drawing.Color.Transparent
         Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblLastname.Location = New System.Drawing.Point(458, 309)
         Me.lblLastname.Name = "lblLastname"
         Me.lblLastname.Size = New System.Drawing.Size(75, 27)
@@ -535,6 +592,7 @@ Partial Class EditUser
         Me.lblName.AutoSize = True
         Me.lblName.BackColor = System.Drawing.Color.Transparent
         Me.lblName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblName.Location = New System.Drawing.Point(493, 268)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(40, 27)
@@ -555,6 +613,7 @@ Partial Class EditUser
         Me.lblEmpID.AutoSize = True
         Me.lblEmpID.BackColor = System.Drawing.Color.Transparent
         Me.lblEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblEmpID.Location = New System.Drawing.Point(430, 228)
         Me.lblEmpID.Name = "lblEmpID"
         Me.lblEmpID.Size = New System.Drawing.Size(103, 27)
@@ -584,6 +643,7 @@ Partial Class EditUser
         Me.lblPassword.AutoSize = True
         Me.lblPassword.BackColor = System.Drawing.Color.Transparent
         Me.lblPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblPassword.Location = New System.Drawing.Point(457, 187)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(76, 27)
@@ -596,6 +656,7 @@ Partial Class EditUser
         Me.lblUsername.BackColor = System.Drawing.Color.Transparent
         Me.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblUsername.Location = New System.Drawing.Point(470, 146)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(63, 27)
@@ -639,48 +700,6 @@ Partial Class EditUser
         Me.btnHeader.Text = "แก้ไขบัญชีผู้ใช้"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(856, 362)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 27)
-        Me.Label18.TabIndex = 128
-        Me.Label18.Text = "*"
-        '
-        'lblPhone
-        '
-        Me.lblPhone.AutoSize = True
-        Me.lblPhone.BackColor = System.Drawing.Color.Transparent
-        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPhone.Location = New System.Drawing.Point(427, 400)
-        Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(101, 27)
-        Me.lblPhone.TabIndex = 127
-        Me.lblPhone.Text = "เบอร์โทรศัพท์ :"
-        '
-        'txtEmail
-        '
-        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
-        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(537, 439)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 126
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(856, 400)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
-        Me.Label15.TabIndex = 129
-        Me.Label15.Text = "*"
         '
         'EditUser
         '

@@ -43,6 +43,7 @@ Public Class EditCustomer
         strQuery &= "district,"
         strQuery &= "province,"
         strQuery &= "postalcode,"
+        strQuery &= "cellphone,"
         strQuery &= "email,"
         strQuery &= "phone "
         strQuery &= " from SGS.dbo.Customer "
@@ -67,7 +68,41 @@ Public Class EditCustomer
         txtPostalCode.Text = sqlReader.GetValue(sqlReader.GetOrdinal("postalcode"))
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         txtPhone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phone"))
+        txtcellphone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cellphone"))
 
     End Sub
 
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If isFormValid() Then
+
+        End If
+    End Sub
+
+    Public Function isFormValid() As Boolean
+        If txtCorpName.Text.Trim Is String.Empty Then
+            MsgBox("กรุณากรอกชื่อบริษัท")
+        ElseIf txtCorp_s_Name.Text.Trim Is String.Empty Then
+            MsgBox("กรุณากรอกชื่อย่อบริษัท")
+        End If
+
+        Return True
+    End Function
+    Private Sub txtCorpName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+
+        End Select
+    End Sub
+    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+
+        End Select
+    End Sub
 End Class
