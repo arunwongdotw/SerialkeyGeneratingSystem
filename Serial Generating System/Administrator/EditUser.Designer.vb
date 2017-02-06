@@ -56,7 +56,7 @@ Partial Class EditUser
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtMobileNumber = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -76,7 +76,7 @@ Partial Class EditUser
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,7 +158,7 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.Label20)
-        Me.Panel1.Controls.Add(Me.txtPhoneNumber)
+        Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.lblMsgEmail)
         Me.Panel1.Controls.Add(Me.pbEmail)
@@ -180,7 +180,7 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.txtMobileNumber)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.txtEmail)
+        Me.Panel1.Controls.Add(Me.txtPhoneNumber)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -448,14 +448,14 @@ Partial Class EditUser
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "เบอร์โทรศัพท์มือถือ :"
         '
-        'txtEmail
+        'txtPhoneNumber
         '
-        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
-        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(537, 438)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 98
+        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
+        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(537, 397)
+        Me.txtPhoneNumber.Name = "txtPhoneNumber"
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
+        Me.txtPhoneNumber.TabIndex = 98
         '
         'Label10
         '
@@ -662,14 +662,14 @@ Partial Class EditUser
         Me.Label20.TabIndex = 127
         Me.Label20.Text = "เบอร์โทรศัพท์ :"
         '
-        'txtPhoneNumber
+        'txtEmail
         '
-        Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(537, 397)
-        Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
-        Me.txtPhoneNumber.TabIndex = 126
+        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(537, 439)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
+        Me.txtEmail.TabIndex = 126
         '
         'Label15
         '
@@ -724,7 +724,7 @@ Partial Class EditUser
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtMobileNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -746,6 +746,6 @@ Partial Class EditUser
     Friend WithEvents pbEmail As System.Windows.Forms.PictureBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

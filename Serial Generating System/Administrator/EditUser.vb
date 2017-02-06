@@ -71,10 +71,10 @@ Public Class EditUser
         ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtMobileNumber.Text.Trim) Then
             MessageBox.Show("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
             valid = False
-        ElseIf txtEmail.Text.Trim = String.Empty Then
+        ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกอีเมล")
             valid = False
-        ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
+        ElseIf Not New Regex(EmailRegex).IsMatch(txtPhoneNumber.Text.Trim) Then
             MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
         End If
@@ -90,7 +90,7 @@ Public Class EditUser
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
             MessageBox.Show("รหัสพนักงานซ้ำ")
             Return True
-        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
+        ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) Then
             MessageBox.Show("อีเมลซ้ำ")
             Return True
         End If
@@ -178,7 +178,7 @@ Public Class EditUser
         sqlReader = con.query(strQuery)
     End Sub
     Private Sub initialData()
-        txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
+        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         oldData.Add("email", txtEmail.Text)
         txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
         oldData.Add("emp_id", txtEmpID.Text)
@@ -187,6 +187,7 @@ Public Class EditUser
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
         txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
         txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
+        txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
@@ -283,15 +284,15 @@ Public Class EditUser
             txtEmpID_correct()
         End If
     End Sub
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
-        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text) Then
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtPhoneNumber.LostFocus
+        If txtPhoneNumber.Text Is String.Empty OrElse oldData("email").Equals(txtPhoneNumber.Text) Then
             lblMsgEmail.Visible = False
             pbEmail.Visible = False
-        ElseIf isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) Then
+        ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) Then
             txtEmail_incorrect("อีเมลซ้ำ")
-        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text.Trim) Then
+        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtPhoneNumber.Text.Trim) Then
             txtEmail_incorrect("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtEmail.Text Is String.Empty Then
+        ElseIf Not isEmployeeDuplicate("email", txtPhoneNumber.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtPhoneNumber.Text Is String.Empty Then
             txtEmail_correct()
         End If
     End Sub
