@@ -29,7 +29,7 @@ Public Class CreateCustomer
         Dim strSQL As String
 
         strSQL = "insert into customer (corpname,corp_s_name,corpgroup,firstname,lastname,house_no,road,lane,subdistrict,district,province"
-        strSQL &= ",postalcode,email,phone) "
+        strSQL &= ",postalcode,email,phone,cellphone) "
         strSQL &= "values ('" & Trim(txtCorpName.Text) & "',"
         strSQL &= "'" & Trim(txtCorp_s_Name.Text) & "',"
         strSQL &= "'" & Trim(txtCorpGroup.Text) & "',"
@@ -43,7 +43,8 @@ Public Class CreateCustomer
         strSQL &= "'" & Trim(txtProvince.Text) & "',"
         strSQL &= "'" & Trim(txtPostalCode.Text) & "',"
         strSQL &= "'" & Trim(txtEmail.Text) & "',"
-        strSQL &= "'" & Trim(txtPhone.Text) & "')"
+        strSQL &= "'" & Trim(txtPhone.Text) & "',"
+        strSQL &= "'" & Trim(txtcellphone.Text) & "')"
 
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
@@ -79,14 +80,15 @@ Public Class CreateCustomer
     Private Function ValidateDataInput() As Boolean
         Dim isCorrect As Boolean = False
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
-        Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
+        Dim houseNo As String = "^[1-9]{1}"
+        'Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
         Dim EmailRegexCheck As New Regex(EmailRegex)
-        Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
-        If Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
-            MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
-        ElseIf txtCorpName.Text = "" Then
+        Dim houseNoRegexCheck As New Regex(houseNo)
+        'Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
+        
+            'ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
+            'MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
+        If txtCorpName.Text = "" Then
             MsgBox("กรุณากรอกชื่อบริษัท")
         ElseIf txtCorp_s_Name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท")
@@ -95,15 +97,22 @@ Public Class CreateCustomer
         ElseIf txtCorpGroup.Text = "" Then
             MsgBox("กรุณากรอกชื่อกลุ่มบริษัท")
         ElseIf txtHouseNo.Text = "" Then
-            MsgBox("กรุณากรอกบ้านเลขที่")
+            MsgBox("กรุณากรอกเลขที่")
+        ElseIf Not houseNoRegexCheck.IsMatch(txtHouseNo.Text) Then
+            MsgBox("รูปแบบเลขที่ไม่ถูกต้อง")
         ElseIf txtSubdistrict.Text = "" Then
             MsgBox("กรุณากรอกตำบล/แขวง")
         ElseIf txtDistrict.Text = "" Then
             MsgBox("กรุณากรอกอำเภอ/เขต")
         ElseIf txtProvince.Text = "" Then
             MsgBox("กรุณากรอกจังหวัด")
-        ElseIf txtPhone.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
+        ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf txtPhone.Text = "" And txtcellphone.Text = "" Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+            'ElseIf txtPhone.Text = "" Then
+            '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
+
         ElseIf txtPostalCode.Text = "" Then
             MsgBox("กรุณากรอกรหัสไปรษณีย์")
         Else
@@ -166,7 +175,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -183,6 +192,19 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+
+        End Select
+    End Sub
+
+    Private Sub txtcellPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -241,6 +263,7 @@ Public Class CreateCustomer
         txtPostalCode.Clear()
         txtEmail.Clear()
         txtPhone.Clear()
+        txtcellphone.Clear()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -331,4 +354,148 @@ Public Class CreateCustomer
         con.close()
         Return isDup
     End Function
+
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = True
+                MessageBox.Show("อีเมลไม่สามารถใช้ภาษาไทยได้")
+            Case Else
+                e.Handled = False
+
+        End Select
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
+
+    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
+
+    End Sub
+
+    Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58 ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs) Handles txtCorpGroup.TextChanged
+
+    End Sub
+
+    Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48 มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs) Handles txtRoad.TextChanged
+
+    End Sub
+
+    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, 32=space bar ,Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+                'Case Asc(e.KeyChar) = Asc(" ")
+                '    e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs) Handles txtLane.TextChanged
+
+    End Sub
+
+    Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtDistrict.TextChanged
+
+    End Sub
+
+    Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtSubdistrict_TextChanged(sender As Object, e As EventArgs) Handles txtSubdistrict.TextChanged
+
+    End Sub
+
+    Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+
+        End Select
+    End Sub
+
+    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs) Handles txtProvince.TextChanged
+
+    End Sub
 End Class
