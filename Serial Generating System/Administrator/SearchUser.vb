@@ -20,6 +20,7 @@ Public Class SearchUser
             setHeaderColumns() ' set name colum 
             genRowNumber() ' generate rows index
             randerColorRow() ' rander color of rows
+            setUserType()
             setPermissionCheckBox()
         Catch ex As Exception
             MsgBox("โหลดข้อมูลล้มเหลว")
@@ -180,8 +181,8 @@ Public Class SearchUser
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
             .Columns("position").HeaderCell.Value = "ตำแหน่ง"
-            .Columns("mobilenumber").HeaderCell.Value = "หมายเลขโทรศัพท์มือถือ"
-            .Columns("phonenumber").HeaderCell.Value = "หมายเลขโทรศัพท์"
+            .Columns("mobilenumber").HeaderCell.Value = "โทรศัพท์มือถือ"
+            .Columns("phonenumber").HeaderCell.Value = "โทรศัพท์"
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
             .Columns("emp_id").ReadOnly = True
@@ -216,8 +217,6 @@ Public Class SearchUser
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbEdit").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbDelete").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("phonenumber").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         End With
     End Sub
 
@@ -315,4 +314,11 @@ Public Class SearchUser
         checkTextSingle(txtPhone)
         loadDataTable()
     End Sub
+
+    Private Sub setUserType()
+        For i As Integer = 0 To dgvSearchUser.Rows.Count - 1
+            dgvSearchUser.Rows(i).Cells("user_type").Value = IIf(dgvSearchUser.Rows(i).Cells("user_type").Value.Equals("admin"), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
+        Next
+    End Sub
+
 End Class

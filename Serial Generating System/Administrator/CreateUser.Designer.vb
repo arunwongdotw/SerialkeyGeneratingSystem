@@ -33,7 +33,6 @@ Partial Class CreateUser
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
@@ -44,7 +43,6 @@ Partial Class CreateUser
         Me.pbAttachImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -74,8 +72,12 @@ Partial Class CreateUser
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvAdminMenu
@@ -111,8 +113,10 @@ Partial Class CreateUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel1.Controls.Add(Me.Label21)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.Label20)
-        Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.txtPhoneNumber)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
@@ -123,7 +127,6 @@ Partial Class CreateUser
         Me.Panel1.Controls.Add(Me.pbAttachImage)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label16)
-        Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label13)
@@ -171,27 +174,16 @@ Partial Class CreateUser
         Me.Label20.TabIndex = 90
         Me.Label20.Text = "*"
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(876, 363)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(18, 26)
-        Me.Label19.TabIndex = 89
-        Me.Label19.Text = "*"
-        '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(449, 363)
+        Me.Label18.Location = New System.Drawing.Point(479, 363)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 26)
+        Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
-        Me.Label18.Text = "เบอร์โทรศัพท์ :"
+        Me.Label18.Text = "โทรศัพท์ :"
         '
         'txtPhoneNumber
         '
@@ -306,17 +298,6 @@ Partial Class CreateUser
         Me.Label16.Size = New System.Drawing.Size(18, 26)
         Me.Label16.TabIndex = 80
         Me.Label16.Text = "*"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(875, 321)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
-        Me.Label15.TabIndex = 79
-        Me.Label15.Text = "*"
         '
         'Label14
         '
@@ -439,11 +420,11 @@ Partial Class CreateUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(411, 321)
+        Me.Label9.Location = New System.Drawing.Point(441, 321)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(140, 26)
+        Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
-        Me.Label9.Text = "เบอร์โทรศัพท์มือถือ :"
+        Me.Label9.Text = "โทรศัพท์มือถือ :"
         '
         'txtEmail
         '
@@ -638,6 +619,38 @@ Partial Class CreateUser
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(928, 353)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(115, 25)
+        Me.Label21.TabIndex = 95
+        Me.Label21.Text = "อย่างน้อย 1 เบอร์"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
+        Me.PictureBox2.Location = New System.Drawing.Point(881, 330)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 94
+        Me.PictureBox2.TabStop = False
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label22.ForeColor = System.Drawing.Color.Red
+        Me.Label22.Location = New System.Drawing.Point(898, 330)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(171, 25)
+        Me.Label22.TabIndex = 93
+        Me.Label22.Text = "* กรุณากรอกเบอร์โทรศัพท์"
+        '
         'CreateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -650,6 +663,7 @@ Partial Class CreateUser
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -684,7 +698,6 @@ Partial Class CreateUser
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents pbAttachImage As System.Windows.Forms.PictureBox
@@ -696,5 +709,7 @@ Partial Class CreateUser
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
 End Class
