@@ -80,6 +80,18 @@ Public Class searchProduct
             .Columns("brand_name").ReadOnly = True
             .Columns("brand_s_name").ReadOnly = True
             .Columns("cost").ReadOnly = True
+            '.Columns("product_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("product_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("brand_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("brand_s_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("QualityControl").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("WarehouseManagement").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("thai").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("eng").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("china").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("japan").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.Columns("cost").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+
         End With
     End Sub
 
@@ -122,7 +134,7 @@ Public Class searchProduct
         checkboxChinese.HeaderText = "ภาษาจีน"
         checkboxChinese.Name = "chbChinese"
         checkboxChinese.ReadOnly = True
-        dgvSearchProduct.Columns.Add(checkboxChinese)
+        dgvSearchProduct.Columns.Add(checkboxChinese)s
         Dim checkboxJapanese As New DataGridViewCheckBoxColumn
         checkboxJapanese.HeaderText = "ภาษาญี่ปุ่น"
         checkboxJapanese.Name = "chbJapanese"
@@ -297,5 +309,11 @@ Public Class searchProduct
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
