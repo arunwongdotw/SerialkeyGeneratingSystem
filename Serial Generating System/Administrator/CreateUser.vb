@@ -60,6 +60,10 @@ Public Class CreateUser
         con.close()
         Me.clear()
     End Sub
+
+    Private Sub CreateUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
     Private Sub Form2_Load() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass

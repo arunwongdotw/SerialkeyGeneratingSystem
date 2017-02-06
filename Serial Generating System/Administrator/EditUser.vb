@@ -24,6 +24,10 @@ Public Class EditUser
         Me.id = id
     End Sub
 
+    Private Sub EditUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass

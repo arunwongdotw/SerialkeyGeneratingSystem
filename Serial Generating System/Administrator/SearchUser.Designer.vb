@@ -102,11 +102,11 @@ Partial Class SearchUser
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1142, 26)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 78
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -300,11 +300,14 @@ Partial Class SearchUser
         '
         'dgvSearchUser
         '
+        Me.dgvSearchUser.AllowUserToAddRows = False
+        Me.dgvSearchUser.AllowUserToDeleteRows = False
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchUser.Location = New System.Drawing.Point(262, 315)
         Me.dgvSearchUser.Name = "dgvSearchUser"
+        Me.dgvSearchUser.ReadOnly = True
         Me.dgvSearchUser.Size = New System.Drawing.Size(1076, 378)
         Me.dgvSearchUser.TabIndex = 11
         Me.dgvSearchUser.TabStop = False

@@ -154,6 +154,10 @@ Public Class EditProduct
         End Select
     End Sub
 
+    Private Sub EditProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     Private Sub EditProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass

@@ -134,7 +134,7 @@ Public Class searchProduct
         checkboxChinese.HeaderText = "ภาษาจีน"
         checkboxChinese.Name = "chbChinese"
         checkboxChinese.ReadOnly = True
-        dgvSearchProduct.Columns.Add(checkboxChinese)s
+        dgvSearchProduct.Columns.Add(checkboxChinese)
         Dim checkboxJapanese As New DataGridViewCheckBoxColumn
         checkboxJapanese.HeaderText = "ภาษาญี่ปุ่น"
         checkboxJapanese.Name = "chbJapanese"
@@ -226,6 +226,11 @@ Public Class searchProduct
         chbJapanese.Checked = False
         chbQualityControl.Checked = False
         chbWarehouseManagement.Checked = False
+    End Sub
+
+    Private Sub searchProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+
     End Sub
 
     Private Sub searchProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
