@@ -25,14 +25,25 @@ Public Class Caesar
                 strEncript.Append(Chr((((Asc(c) Mod Asc("A")) + shift) Mod 26) + Asc("A")))
             ElseIf Char.IsNumber(c) Then
                 strEncript.Append(Chr(Asc("A") + (Asc(c) Mod 48) + (shift Mod 26)))
+            ElseIf Asc(c) = 45 Then
+                strEncript.Append("-")
             End If
         Next
         Return strEncript.ToString
     End Function
 
     Public Shared Function decript(ByVal text As String, ByVal shift As String) As String
-
-        Return Nothing
+        Dim strDecript As New System.Text.StringBuilder()
+        Dim index As Integer
+        For Each c As Char In text
+            index = Asc(c) + (shift Mod 26)
+            If Char.IsUpper(c) Then
+                strDecript.Append(Chr(Asc("Z") - ((Asc("Z") Mod Asc(c)) + shift) Mod 26))
+            ElseIf Char.IsLower(c) Then
+                strDecript.Append(Chr(Asc("z") - ((Asc("z") Mod Asc(c)) + shift) Mod 26))
+            End If
+        Next
+        Return strDecript.ToString
     End Function
 
 
