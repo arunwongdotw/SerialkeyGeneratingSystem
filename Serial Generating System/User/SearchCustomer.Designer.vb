@@ -83,6 +83,8 @@ Partial Class SearchCustomer
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.txtCellphone = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -248,7 +250,7 @@ Partial Class SearchCustomer
         Me.btnClear.Location = New System.Drawing.Point(1098, 401)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(165, 36)
-        Me.btnClear.TabIndex = 15
+        Me.btnClear.TabIndex = 16
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -406,6 +408,8 @@ Partial Class SearchCustomer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.txtCellphone)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.dgvSearchCus)
@@ -484,10 +488,11 @@ Partial Class SearchCustomer
         Me.dgvSearchCus.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchCus.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        Me.dgvSearchCus.Location = New System.Drawing.Point(297, 484)
+        Me.dgvSearchCus.Location = New System.Drawing.Point(356, 471)
         Me.dgvSearchCus.Name = "dgvSearchCus"
         Me.dgvSearchCus.ReadOnly = True
-        Me.dgvSearchCus.Size = New System.Drawing.Size(1031, 277)
+        Me.dgvSearchCus.RowHeadersVisible = False
+        Me.dgvSearchCus.Size = New System.Drawing.Size(910, 230)
         Me.dgvSearchCus.TabIndex = 58
         Me.dgvSearchCus.TabStop = False
         '
@@ -590,9 +595,28 @@ Partial Class SearchCustomer
         Me.btnLogout.Location = New System.Drawing.Point(63, 643)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogout.TabIndex = 16
+        Me.btnLogout.TabIndex = 17
         Me.btnLogout.Text = "ออกจากระบบ"
         Me.btnLogout.UseVisualStyleBackColor = True
+        '
+        'txtCellphone
+        '
+        Me.txtCellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCellphone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCellphone.Location = New System.Drawing.Point(454, 373)
+        Me.txtCellphone.Name = "txtCellphone"
+        Me.txtCellphone.Size = New System.Drawing.Size(330, 36)
+        Me.txtCellphone.TabIndex = 15
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(338, 375)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(110, 26)
+        Me.Label1.TabIndex = 62
+        Me.Label1.Text = "โทรศัพท์มือถือ :"
         '
         'SearchCustomer
         '
@@ -658,4 +682,6 @@ Partial Class SearchCustomer
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
+    Friend WithEvents txtCellphone As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
