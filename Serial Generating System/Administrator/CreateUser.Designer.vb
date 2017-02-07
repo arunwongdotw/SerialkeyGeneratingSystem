@@ -87,7 +87,7 @@ Partial Class CreateUser
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.HotTracking = True
         Me.tvAdminMenu.ItemHeight = 44
-        Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
+        Me.tvAdminMenu.Location = New System.Drawing.Point(0, 65)
         Me.tvAdminMenu.Margin = New System.Windows.Forms.Padding(1)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
@@ -106,7 +106,7 @@ Partial Class CreateUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 665)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(255, 666)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
@@ -157,10 +157,10 @@ Partial Class CreateUser
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
-        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
+        Me.Panel1.Size = New System.Drawing.Size(1350, 730)
         Me.Panel1.TabIndex = 3
         '
         'Label21
@@ -168,7 +168,7 @@ Partial Class CreateUser
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
         Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(957, 350)
+        Me.Label21.Location = New System.Drawing.Point(1018, 350)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(115, 25)
         Me.Label21.TabIndex = 95
@@ -177,7 +177,7 @@ Partial Class CreateUser
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(910, 327)
+        Me.PictureBox2.Location = New System.Drawing.Point(971, 327)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -189,7 +189,7 @@ Partial Class CreateUser
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
         Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(927, 327)
+        Me.Label22.Location = New System.Drawing.Point(988, 327)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(171, 25)
         Me.Label22.TabIndex = 93
@@ -200,7 +200,7 @@ Partial Class CreateUser
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(908, 403)
+        Me.Label20.Location = New System.Drawing.Point(969, 403)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(18, 26)
         Me.Label20.TabIndex = 90
@@ -211,7 +211,7 @@ Partial Class CreateUser
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(506, 361)
+        Me.Label18.Location = New System.Drawing.Point(567, 361)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
@@ -221,7 +221,7 @@ Partial Class CreateUser
         '
         Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(584, 358)
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(645, 358)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(318, 36)
         Me.txtPhoneNumber.TabIndex = 7
@@ -233,7 +233,7 @@ Partial Class CreateUser
         Me.txtAccountInfo.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1201, 32)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1193, 30)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.Size = New System.Drawing.Size(145, 33)
         Me.txtAccountInfo.TabIndex = 84
@@ -246,7 +246,7 @@ Partial Class CreateUser
         Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbWelcome.ForeColor = System.Drawing.Color.White
-        Me.lbWelcome.Location = New System.Drawing.Point(1253, 8)
+        Me.lbWelcome.Location = New System.Drawing.Point(1250, 3)
         Me.lbWelcome.Name = "lbWelcome"
         Me.lbWelcome.Size = New System.Drawing.Size(97, 30)
         Me.lbWelcome.TabIndex = 86
@@ -271,7 +271,7 @@ Partial Class CreateUser
         '
         Me.rdbAccountant.AutoSize = True
         Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbAccountant.Location = New System.Drawing.Point(654, 484)
+        Me.rdbAccountant.Location = New System.Drawing.Point(715, 484)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
         Me.rdbAccountant.TabIndex = 11
@@ -284,7 +284,7 @@ Partial Class CreateUser
         Me.rdbIT.AutoSize = True
         Me.rdbIT.Checked = True
         Me.rdbIT.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbIT.Location = New System.Drawing.Point(584, 484)
+        Me.rdbIT.Location = New System.Drawing.Point(645, 484)
         Me.rdbIT.Name = "rdbIT"
         Me.rdbIT.Size = New System.Drawing.Size(53, 30)
         Me.rdbIT.TabIndex = 10
@@ -313,7 +313,7 @@ Partial Class CreateUser
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1349, 65)
+        Me.btnHeader.Size = New System.Drawing.Size(1350, 65)
         Me.btnHeader.TabIndex = 81
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
@@ -325,7 +325,7 @@ Partial Class CreateUser
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(908, 277)
+        Me.Label16.Location = New System.Drawing.Point(969, 277)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(18, 26)
         Me.Label16.TabIndex = 80
@@ -336,7 +336,7 @@ Partial Class CreateUser
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(908, 235)
+        Me.Label14.Location = New System.Drawing.Point(969, 235)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(18, 26)
         Me.Label14.TabIndex = 78
@@ -347,7 +347,7 @@ Partial Class CreateUser
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(908, 445)
+        Me.Label17.Location = New System.Drawing.Point(969, 445)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(18, 26)
         Me.Label17.TabIndex = 77
@@ -358,7 +358,7 @@ Partial Class CreateUser
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(908, 193)
+        Me.Label13.Location = New System.Drawing.Point(969, 193)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(18, 26)
         Me.Label13.TabIndex = 73
@@ -372,7 +372,7 @@ Partial Class CreateUser
         Me.cmbUserType.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbUserType.FormattingEnabled = True
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
-        Me.cmbUserType.Location = New System.Drawing.Point(584, 442)
+        Me.cmbUserType.Location = New System.Drawing.Point(645, 442)
         Me.cmbUserType.Name = "cmbUserType"
         Me.cmbUserType.Size = New System.Drawing.Size(318, 34)
         Me.cmbUserType.TabIndex = 9
@@ -382,7 +382,7 @@ Partial Class CreateUser
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(460, 445)
+        Me.Label11.Location = New System.Drawing.Point(521, 445)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(118, 26)
         Me.Label11.TabIndex = 71
@@ -393,7 +393,7 @@ Partial Class CreateUser
         Me.chbPerDelete.AutoSize = True
         Me.chbPerDelete.BackColor = System.Drawing.Color.Transparent
         Me.chbPerDelete.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerDelete.Location = New System.Drawing.Point(715, 518)
+        Me.chbPerDelete.Location = New System.Drawing.Point(776, 518)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
@@ -406,7 +406,7 @@ Partial Class CreateUser
         Me.chbPerEdit.AutoSize = True
         Me.chbPerEdit.BackColor = System.Drawing.Color.Transparent
         Me.chbPerEdit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerEdit.Location = New System.Drawing.Point(654, 518)
+        Me.chbPerEdit.Location = New System.Drawing.Point(715, 518)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
@@ -419,7 +419,7 @@ Partial Class CreateUser
         Me.chbPerCreate.AutoSize = True
         Me.chbPerCreate.BackColor = System.Drawing.Color.Transparent
         Me.chbPerCreate.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerCreate.Location = New System.Drawing.Point(584, 518)
+        Me.chbPerCreate.Location = New System.Drawing.Point(645, 518)
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
@@ -432,7 +432,7 @@ Partial Class CreateUser
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(406, 519)
+        Me.Label12.Location = New System.Drawing.Point(467, 519)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(172, 26)
         Me.Label12.TabIndex = 67
@@ -442,7 +442,7 @@ Partial Class CreateUser
         '
         Me.txtMobileNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtMobileNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMobileNumber.Location = New System.Drawing.Point(584, 316)
+        Me.txtMobileNumber.Location = New System.Drawing.Point(645, 316)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.Size = New System.Drawing.Size(318, 36)
         Me.txtMobileNumber.TabIndex = 6
@@ -452,7 +452,7 @@ Partial Class CreateUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(468, 319)
+        Me.Label9.Location = New System.Drawing.Point(529, 319)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
@@ -462,7 +462,7 @@ Partial Class CreateUser
         '
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(584, 400)
+        Me.txtEmail.Location = New System.Drawing.Point(645, 400)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(318, 36)
         Me.txtEmail.TabIndex = 8
@@ -472,7 +472,7 @@ Partial Class CreateUser
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(526, 403)
+        Me.Label10.Location = New System.Drawing.Point(587, 403)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(52, 26)
         Me.Label10.TabIndex = 22
@@ -483,10 +483,10 @@ Partial Class CreateUser
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(61, 643)
+        Me.btnLogOut.Location = New System.Drawing.Point(50, 643)
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.Size = New System.Drawing.Size(140, 36)
         Me.btnLogOut.TabIndex = 17
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
@@ -497,7 +497,7 @@ Partial Class CreateUser
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(762, 586)
+        Me.btnClear.Location = New System.Drawing.Point(823, 586)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(140, 36)
         Me.btnClear.TabIndex = 16
@@ -509,7 +509,7 @@ Partial Class CreateUser
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(908, 151)
+        Me.Label8.Location = New System.Drawing.Point(969, 151)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(204, 26)
         Me.Label8.TabIndex = 17
@@ -520,7 +520,7 @@ Partial Class CreateUser
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(908, 109)
+        Me.Label7.Location = New System.Drawing.Point(969, 109)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(204, 26)
         Me.Label7.TabIndex = 16
@@ -531,7 +531,7 @@ Partial Class CreateUser
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(506, 484)
+        Me.Label6.Location = New System.Drawing.Point(567, 484)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(72, 26)
         Me.Label6.TabIndex = 14
@@ -541,7 +541,7 @@ Partial Class CreateUser
         '
         Me.txtLastName.BackColor = System.Drawing.SystemColors.Window
         Me.txtLastName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastName.Location = New System.Drawing.Point(584, 274)
+        Me.txtLastName.Location = New System.Drawing.Point(645, 274)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(318, 36)
         Me.txtLastName.TabIndex = 5
@@ -551,7 +551,7 @@ Partial Class CreateUser
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(504, 277)
+        Me.Label5.Location = New System.Drawing.Point(565, 277)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 26)
         Me.Label5.TabIndex = 12
@@ -561,7 +561,7 @@ Partial Class CreateUser
         '
         Me.txtFirstName.BackColor = System.Drawing.SystemColors.Window
         Me.txtFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstName.Location = New System.Drawing.Point(584, 232)
+        Me.txtFirstName.Location = New System.Drawing.Point(645, 232)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(318, 36)
         Me.txtFirstName.TabIndex = 4
@@ -571,7 +571,7 @@ Partial Class CreateUser
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(539, 235)
+        Me.Label4.Location = New System.Drawing.Point(600, 235)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 26)
         Me.Label4.TabIndex = 10
@@ -581,7 +581,7 @@ Partial Class CreateUser
         '
         Me.txtEmpID.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpID.Location = New System.Drawing.Point(584, 190)
+        Me.txtEmpID.Location = New System.Drawing.Point(645, 190)
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(318, 36)
         Me.txtEmpID.TabIndex = 3
@@ -591,7 +591,7 @@ Partial Class CreateUser
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(476, 193)
+        Me.Label3.Location = New System.Drawing.Point(537, 193)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(102, 26)
         Me.Label3.TabIndex = 8
@@ -603,7 +603,7 @@ Partial Class CreateUser
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(584, 586)
+        Me.btnAdd.Location = New System.Drawing.Point(645, 586)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(140, 36)
         Me.btnAdd.TabIndex = 15
@@ -614,7 +614,7 @@ Partial Class CreateUser
         '
         Me.txtPassword.BackColor = System.Drawing.SystemColors.Window
         Me.txtPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(584, 148)
+        Me.txtPassword.Location = New System.Drawing.Point(645, 148)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(318, 36)
         Me.txtPassword.TabIndex = 2
@@ -623,7 +623,7 @@ Partial Class CreateUser
         '
         Me.txtUsername.BackColor = System.Drawing.SystemColors.Window
         Me.txtUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(584, 106)
+        Me.txtUsername.Location = New System.Drawing.Point(645, 106)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(318, 36)
         Me.txtUsername.TabIndex = 1
@@ -633,7 +633,7 @@ Partial Class CreateUser
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(503, 151)
+        Me.Label2.Location = New System.Drawing.Point(564, 151)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 26)
         Me.Label2.TabIndex = 2
@@ -645,7 +645,7 @@ Partial Class CreateUser
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(517, 109)
+        Me.Label1.Location = New System.Drawing.Point(578, 109)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 26)
         Me.Label1.TabIndex = 1
