@@ -472,7 +472,13 @@ Public Class CreateSerial
 
         txtInfo.Text = serialINFO
         txtInfo.Visible = True
+        txtSerialKey.Text = Caesar.encript(serialINFO, 3)
+        txtSerialKey.Visible = True
         Panel5.Visible = True
+
+        Dim serialMD5 As String = MD5.Encrypt(serialINFO, 1)
+        MsgBox(serialMD5 & "       จำนวน = " & serialMD5.Length)
+
 
     End Sub
 
