@@ -79,7 +79,7 @@ Public Class Caesar
         Dim index As Integer
         For Each c As Char In text
             index = Asc(c) + (shift Mod 26)
-            strDecript.Append(Chr((Asc("Z") - ((Asc("Z") Mod Asc(c)) + shift) Mod 26) - 17))
+            strDecript.Append(Chr((Asc("Z") - ((Asc("Z") Mod Asc(c)) - shift) Mod 26) - 17))
         Next
         Return strDecript.ToString
     End Function

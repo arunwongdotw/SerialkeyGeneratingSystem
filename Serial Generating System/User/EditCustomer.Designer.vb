@@ -22,14 +22,14 @@ Partial Class EditCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18})
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode23})
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10})
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode15})
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -37,9 +37,6 @@ Partial Class EditCustomer
         Me.Label15 = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
-        Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
         Me.lbConditionText = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -92,12 +89,15 @@ Partial Class EditCustomer
         Me.lblPostalCode = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -159,23 +159,23 @@ Partial Class EditCustomer
         Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode17.Name = "ndCreateSerialkey"
-        TreeNode17.Text = "สร้างซีเรียลคีย์"
-        TreeNode18.Name = "ndFindSerialkey"
-        TreeNode18.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode19.Name = "ndSerialkeyManagement"
-        TreeNode19.Text = "จัดการซีเรียลคีย์"
-        TreeNode20.Name = "ndAddCustomer"
-        TreeNode20.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode21.Name = "ndFindCustomer"
-        TreeNode21.Text = "ค้นหาลูกค้า"
-        TreeNode22.Name = "ndCustomerManage"
-        TreeNode22.Text = "จัดการลูกค้า"
-        TreeNode23.Name = "ndUserResetPassword"
-        TreeNode23.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode24.Name = "ndUserInfo"
-        TreeNode24.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode22, TreeNode24})
+        TreeNode9.Name = "ndCreateSerialkey"
+        TreeNode9.Text = "สร้างซีเรียลคีย์"
+        TreeNode10.Name = "ndFindSerialkey"
+        TreeNode10.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode11.Name = "ndSerialkeyManagement"
+        TreeNode11.Text = "จัดการซีเรียลคีย์"
+        TreeNode12.Name = "ndAddCustomer"
+        TreeNode12.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode13.Name = "ndFindCustomer"
+        TreeNode13.Text = "ค้นหาลูกค้า"
+        TreeNode14.Name = "ndCustomerManage"
+        TreeNode14.Text = "จัดการลูกค้า"
+        TreeNode15.Name = "ndUserResetPassword"
+        TreeNode15.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode16.Name = "ndUserInfo"
+        TreeNode16.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode11, TreeNode14, TreeNode16})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
@@ -214,44 +214,6 @@ Partial Class EditCustomer
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1354, 729)
         Me.Panel1.TabIndex = 3
-        '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1314, 3)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 99
-        Me.pbAccountInfo.TabStop = False
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1144, 27)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
-        Me.txtAccountInfo.TabIndex = 98
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
-        Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "แก้ไขข้อมูลลูกค้า"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
         '
         'btnAttachCustomerImage
         '
@@ -488,8 +450,8 @@ Partial Class EditCustomer
         Me.Panel3.Controls.Add(Me.lblRoad)
         Me.Panel3.Controls.Add(Me.lblProvince)
         Me.Panel3.Controls.Add(Me.lblLane)
-        Me.Panel3.Controls.Add(Me.lblDistrict)
         Me.Panel3.Controls.Add(Me.lblPostalCode)
+        Me.Panel3.Controls.Add(Me.lblDistrict)
         Me.Panel3.Controls.Add(Me.lblEmail)
         Me.Panel3.Controls.Add(Me.lblPhone)
         Me.Panel3.Location = New System.Drawing.Point(306, 266)
@@ -547,7 +509,7 @@ Partial Class EditCustomer
         '
         'txtRoad
         '
-        Me.txtRoad.Location = New System.Drawing.Point(547, 23)
+        Me.txtRoad.Location = New System.Drawing.Point(100, 65)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(290, 36)
         Me.txtRoad.TabIndex = 7
@@ -581,7 +543,7 @@ Partial Class EditCustomer
         '
         'txtSubdistrict
         '
-        Me.txtSubdistrict.Location = New System.Drawing.Point(100, 107)
+        Me.txtSubdistrict.Location = New System.Drawing.Point(545, 65)
         Me.txtSubdistrict.Name = "txtSubdistrict"
         Me.txtSubdistrict.Size = New System.Drawing.Size(290, 36)
         Me.txtSubdistrict.TabIndex = 9
@@ -590,7 +552,7 @@ Partial Class EditCustomer
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(666, 110)
+        Me.Label10.Location = New System.Drawing.Point(843, 114)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(18, 27)
         Me.Label10.TabIndex = 82
@@ -598,7 +560,7 @@ Partial Class EditCustomer
         '
         'txtProvince
         '
-        Me.txtProvince.Location = New System.Drawing.Point(100, 149)
+        Me.txtProvince.Location = New System.Drawing.Point(545, 107)
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(290, 36)
         Me.txtProvince.TabIndex = 11
@@ -615,21 +577,21 @@ Partial Class EditCustomer
         '
         'txtLane
         '
-        Me.txtLane.Location = New System.Drawing.Point(100, 65)
+        Me.txtLane.Location = New System.Drawing.Point(545, 23)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(290, 36)
         Me.txtLane.TabIndex = 8
         '
         'txtDistrict
         '
-        Me.txtDistrict.Location = New System.Drawing.Point(547, 65)
+        Me.txtDistrict.Location = New System.Drawing.Point(100, 107)
         Me.txtDistrict.Name = "txtDistrict"
         Me.txtDistrict.Size = New System.Drawing.Size(290, 36)
         Me.txtDistrict.TabIndex = 10
         '
         'txtPostalCode
         '
-        Me.txtPostalCode.Location = New System.Drawing.Point(547, 107)
+        Me.txtPostalCode.Location = New System.Drawing.Point(100, 150)
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(113, 36)
         Me.txtPostalCode.TabIndex = 12
@@ -690,7 +652,7 @@ Partial Class EditCustomer
         'lblSubdistrict
         '
         Me.lblSubdistrict.AutoSize = True
-        Me.lblSubdistrict.Location = New System.Drawing.Point(8, 110)
+        Me.lblSubdistrict.Location = New System.Drawing.Point(453, 68)
         Me.lblSubdistrict.Name = "lblSubdistrict"
         Me.lblSubdistrict.Size = New System.Drawing.Size(95, 27)
         Me.lblSubdistrict.TabIndex = 37
@@ -699,7 +661,7 @@ Partial Class EditCustomer
         'lblRoad
         '
         Me.lblRoad.AutoSize = True
-        Me.lblRoad.Location = New System.Drawing.Point(501, 26)
+        Me.lblRoad.Location = New System.Drawing.Point(54, 68)
         Me.lblRoad.Name = "lblRoad"
         Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
@@ -708,7 +670,7 @@ Partial Class EditCustomer
         'lblProvince
         '
         Me.lblProvince.AutoSize = True
-        Me.lblProvince.Location = New System.Drawing.Point(37, 152)
+        Me.lblProvince.Location = New System.Drawing.Point(482, 110)
         Me.lblProvince.Name = "lblProvince"
         Me.lblProvince.Size = New System.Drawing.Size(66, 27)
         Me.lblProvince.TabIndex = 44
@@ -717,7 +679,7 @@ Partial Class EditCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(54, 68)
+        Me.lblLane.Location = New System.Drawing.Point(499, 26)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
@@ -726,7 +688,7 @@ Partial Class EditCustomer
         'lblDistrict
         '
         Me.lblDistrict.AutoSize = True
-        Me.lblDistrict.Location = New System.Drawing.Point(463, 68)
+        Me.lblDistrict.Location = New System.Drawing.Point(16, 110)
         Me.lblDistrict.Name = "lblDistrict"
         Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
         Me.lblDistrict.TabIndex = 50
@@ -735,7 +697,7 @@ Partial Class EditCustomer
         'lblPostalCode
         '
         Me.lblPostalCode.AutoSize = True
-        Me.lblPostalCode.Location = New System.Drawing.Point(449, 110)
+        Me.lblPostalCode.Location = New System.Drawing.Point(2, 153)
         Me.lblPostalCode.Name = "lblPostalCode"
         Me.lblPostalCode.Size = New System.Drawing.Size(101, 27)
         Me.lblPostalCode.TabIndex = 52
@@ -759,6 +721,44 @@ Partial Class EditCustomer
         Me.lblPhone.TabIndex = 56
         Me.lblPhone.Text = "โทรศัพท์ :"
         '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1314, 3)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 99
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1144, 27)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
+        Me.txtAccountInfo.TabIndex = 98
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "แก้ไขข้อมูลลูกค้า"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
         'EditCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -769,13 +769,13 @@ Partial Class EditCustomer
         Me.Text = "แก้ไขข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
