@@ -92,11 +92,11 @@ Partial Class ChangePasswordUser
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("ThaiSans Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 25)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 75
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -121,9 +121,9 @@ Partial Class ChangePasswordUser
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(1023, 294)
+        Me.Label5.Location = New System.Drawing.Point(986, 263)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 27)
+        Me.Label5.Size = New System.Drawing.Size(18, 26)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -132,9 +132,9 @@ Partial Class ChangePasswordUser
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(1023, 236)
+        Me.Label4.Location = New System.Drawing.Point(986, 221)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 27)
+        Me.Label4.Size = New System.Drawing.Size(18, 26)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -143,9 +143,9 @@ Partial Class ChangePasswordUser
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(1023, 174)
+        Me.Label15.Location = New System.Drawing.Point(986, 179)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
@@ -165,18 +165,18 @@ Partial Class ChangePasswordUser
         '
         Me.txtNewPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNewPasswordConfirm.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(638, 291)
+        Me.txtNewPasswordConfirm.Location = New System.Drawing.Point(730, 261)
         Me.txtNewPasswordConfirm.Name = "txtNewPasswordConfirm"
-        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(365, 36)
+        Me.txtNewPasswordConfirm.Size = New System.Drawing.Size(250, 36)
         Me.txtNewPasswordConfirm.TabIndex = 3
         '
         'lblConfirmPassword
         '
         Me.lblConfirmPassword.AutoSize = True
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(492, 294)
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(592, 263)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(132, 26)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -186,9 +186,9 @@ Partial Class ChangePasswordUser
         Me.btnChangePassword.FlatAppearance.BorderSize = 0
         Me.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChangePassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChangePassword.Location = New System.Drawing.Point(874, 396)
+        Me.btnChangePassword.Location = New System.Drawing.Point(851, 331)
         Me.btnChangePassword.Name = "btnChangePassword"
-        Me.btnChangePassword.Size = New System.Drawing.Size(129, 41)
+        Me.btnChangePassword.Size = New System.Drawing.Size(130, 40)
         Me.btnChangePassword.TabIndex = 4
         Me.btnChangePassword.Text = "เปลี่ยนรหัสผ่าน"
         Me.btnChangePassword.UseVisualStyleBackColor = False
@@ -197,27 +197,27 @@ Partial Class ChangePasswordUser
         '
         Me.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNewPassword.Location = New System.Drawing.Point(638, 233)
+        Me.txtNewPassword.Location = New System.Drawing.Point(730, 219)
         Me.txtNewPassword.Name = "txtNewPassword"
-        Me.txtNewPassword.Size = New System.Drawing.Size(365, 36)
+        Me.txtNewPassword.Size = New System.Drawing.Size(250, 36)
         Me.txtNewPassword.TabIndex = 2
         '
         'txtOldPassword
         '
         Me.txtOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOldPassword.Location = New System.Drawing.Point(638, 171)
+        Me.txtOldPassword.Location = New System.Drawing.Point(730, 177)
         Me.txtOldPassword.Name = "txtOldPassword"
-        Me.txtOldPassword.Size = New System.Drawing.Size(365, 36)
+        Me.txtOldPassword.Size = New System.Drawing.Size(250, 36)
         Me.txtOldPassword.TabIndex = 1
         '
         'lblNewPassword
         '
         Me.lblNewPassword.AutoSize = True
         Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNewPassword.Location = New System.Drawing.Point(528, 236)
+        Me.lblNewPassword.Location = New System.Drawing.Point(628, 221)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
+        Me.lblNewPassword.Size = New System.Drawing.Size(96, 26)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
@@ -225,9 +225,9 @@ Partial Class ChangePasswordUser
         '
         Me.lblOldPassword.AutoSize = True
         Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOldPassword.Location = New System.Drawing.Point(530, 174)
+        Me.lblOldPassword.Location = New System.Drawing.Point(629, 179)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
+        Me.lblOldPassword.Size = New System.Drawing.Size(95, 26)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
