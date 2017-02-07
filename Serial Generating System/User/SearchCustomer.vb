@@ -26,6 +26,7 @@ Public Class SearchCustomer
         Try
             Me.dgvSearchCus.Columns.Clear()
             Me.dgvSearchCus.AutoGenerateColumns = False
+            Me.dgvSearchCus.RowTemplate.MinimumHeight = 30
 
             Dim btnEdit As New DataGridViewButtonColumn()
             btnEdit.HeaderText = ""
@@ -34,7 +35,6 @@ Public Class SearchCustomer
             btnEdit.Width = 70
             btnEdit.UseColumnTextForButtonValue = True
             Me.dgvSearchCus.Columns.Add(btnEdit)
-
 
             Dim btnDelete As New DataGridViewButtonColumn()
             btnDelete.HeaderText = ""
@@ -96,19 +96,19 @@ Public Class SearchCustomer
             Me.dgvSearchCus.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
-            Col.HeaderText = "ถนน"
-            Col.Width = 100
-            Col.ReadOnly = True
-            Col.DataPropertyName = "road"
-            Col.Name = "road"
-            Me.dgvSearchCus.Columns.Add(Col)
-
-            Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ซอย"
             Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "lane"
             Col.Name = "lane"
+            Me.dgvSearchCus.Columns.Add(Col)
+
+            Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "ถนน"
+            Col.Width = 100
+            Col.ReadOnly = True
+            Col.DataPropertyName = "road"
+            Col.Name = "road"
             Me.dgvSearchCus.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
@@ -159,6 +159,14 @@ Public Class SearchCustomer
             Col.Name = "phone"
             Me.dgvSearchCus.Columns.Add(Col)
 
+            Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "โทรศัพท์มือถือ"
+            Col.Width = 100
+            Col.ReadOnly = True
+            Col.DataPropertyName = "cellphone"
+            Col.Name = "cellphone"
+            Me.dgvSearchCus.Columns.Add(Col)
+
             'Dim btnEdit As New DataGridViewButtonColumn()
             'btnEdit.HeaderText = ""
             'btnEdit.Text = "แก้ไข"
@@ -191,10 +199,10 @@ Public Class SearchCustomer
             Dim sql As String
             Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String
             Dim road As String, lane As String, subdistrict As String, district As String, province As String, postalcode As String
-            Dim email As String, phone As String
+            Dim email As String, phone As String, cellphone As String
 
             corpname = "" : corp_s_name = "" : corpgroup = "" : firstname = "" : lastname = "" : house_no = "" : road = ""
-            lane = "" : subdistrict = "" : district = "" : province = "" : postalcode = "" : email = "" : phone = ""
+            lane = "" : subdistrict = "" : district = "" : province = "" : postalcode = "" : email = "" : phone = "" : cellphone = ""
 
             If txtCorpName.Text <> "" Then
                 corpname = " and corpname like  '%" & txtCorpName.Text & "%' "
@@ -238,15 +246,18 @@ Public Class SearchCustomer
             If txtPhone.Text <> "" Then
                 phone = " and phone like  '%" & txtPhone.Text & "%' "
             End If
+            If txtCellphone.Text <> "" Then
+                cellphone = " and cellphone like '%" & txtCellphone.Text & "&' "
+            End If
 
             'sql = "select * from customer where id <> 0 "
             'sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             'sql &= province & postalcode & email & phone
 
             sql = "select id,corpname,corp_s_name,corpgroup,(firstname+' '+lastname) as fullname,house_no,road,lane,subdistrict "
-            sql &= ",district , province, postalcode, email, phone from customer where id <> -1 "
+            sql &= ",district , province, postalcode, email, phone, cellphone from customer where id <> -1 "
             sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
-            sql &= province & postalcode & email & phone
+            sql &= province & postalcode & email & phone & cellphone
 
             '  ,[id]()
             ',[corpname]
@@ -314,6 +325,7 @@ Public Class SearchCustomer
         txtPostalCode.Clear()
         txtEmail.Clear()
         txtPhone.Clear()
+        txtCellphone.Clear()
 
         dgvSearchCus.DataSource = Nothing
         dgvSearchCus.Rows.Clear()
@@ -386,6 +398,10 @@ Public Class SearchCustomer
     End Sub
 
     Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+        LoadData()
+    End Sub
+
+    Private Sub txtCellphone_TextChanged(sender As Object, e As EventArgs) Handles txtCellphone.TextChanged
         LoadData()
     End Sub
 

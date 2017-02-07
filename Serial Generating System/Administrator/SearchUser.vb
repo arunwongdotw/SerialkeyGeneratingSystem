@@ -320,5 +320,4 @@ Public Class SearchUser
             dgvSearchUser.Rows(i).Cells("user_type").Value = IIf(dgvSearchUser.Rows(i).Cells("user_type").Value.Equals("admin"), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
         Next
     End Sub
-
 End Class

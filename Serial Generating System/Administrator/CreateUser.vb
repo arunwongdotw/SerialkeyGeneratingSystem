@@ -99,8 +99,8 @@ Public Class CreateUser
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
             MsgBox("กรุณากรอกนามสกุล")
-        ElseIf txtMobileNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
+        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
             '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         ElseIf txtPhoneNumber.Text = "" Then
@@ -222,7 +222,19 @@ Public Class CreateUser
         End Select
     End Sub
 
-    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+        End Select
+    End Sub
+
+    Private Sub txtMobileNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False

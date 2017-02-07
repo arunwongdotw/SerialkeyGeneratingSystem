@@ -90,7 +90,7 @@ Public Class Login
         If sqlread Is Nothing Then
             MsgBox("query ผิด")
         ElseIf Not sqlread.Read Then
-            MsgBox("บัญชีผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
+            MsgBox("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
         Else
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
             If type.Equals("admin") Then
