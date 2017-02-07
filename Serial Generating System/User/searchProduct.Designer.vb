@@ -22,17 +22,17 @@ Partial Class searchProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode23, TreeNode24})
-        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode26, TreeNode27})
-        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode29, TreeNode30})
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode32})
+        Dim TreeNode78 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode79 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode80 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode78, TreeNode79})
+        Dim TreeNode81 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode82 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode83 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode81, TreeNode82})
+        Dim TreeNode84 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode85 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode86 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode84, TreeNode85})
+        Dim TreeNode87 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode88 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode87})
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -86,10 +86,10 @@ Partial Class searchProduct
         Me.dgvSearchProduct.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSearchProduct.Location = New System.Drawing.Point(262, 428)
+        Me.dgvSearchProduct.Location = New System.Drawing.Point(356, 420)
         Me.dgvSearchProduct.Name = "dgvSearchProduct"
         Me.dgvSearchProduct.ReadOnly = True
-        Me.dgvSearchProduct.Size = New System.Drawing.Size(1084, 277)
+        Me.dgvSearchProduct.Size = New System.Drawing.Size(910, 270)
         Me.dgvSearchProduct.TabIndex = 58
         Me.dgvSearchProduct.TabStop = False
         '
@@ -139,9 +139,9 @@ Partial Class searchProduct
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(392, 195)
+        Me.lblGroupCorp.Location = New System.Drawing.Point(367, 166)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
         Me.lblGroupCorp.TabIndex = 120
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -161,34 +161,34 @@ Partial Class searchProduct
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(373, 250)
+        Me.lblFirstName.Location = New System.Drawing.Point(348, 208)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
+        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
         Me.lblFirstName.TabIndex = 119
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
         'lblCorpSubName
         '
         Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(351, 138)
+        Me.lblCorpSubName.Location = New System.Drawing.Point(325, 124)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
         Me.lblCorpSubName.TabIndex = 118
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(370, 89)
+        Me.lblCorpName.Location = New System.Drawing.Point(344, 82)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
+        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
         Me.lblCorpName.TabIndex = 117
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
         'chbWarehouseManagement
         '
         Me.chbWarehouseManagement.AutoSize = True
-        Me.chbWarehouseManagement.Location = New System.Drawing.Point(799, 298)
+        Me.chbWarehouseManagement.Location = New System.Drawing.Point(776, 247)
         Me.chbWarehouseManagement.Name = "chbWarehouseManagement"
         Me.chbWarehouseManagement.Size = New System.Drawing.Size(201, 30)
         Me.chbWarehouseManagement.TabIndex = 9
@@ -198,7 +198,7 @@ Partial Class searchProduct
         'chbQualityControl
         '
         Me.chbQualityControl.AutoSize = True
-        Me.chbQualityControl.Location = New System.Drawing.Point(799, 335)
+        Me.chbQualityControl.Location = New System.Drawing.Point(776, 280)
         Me.chbQualityControl.Name = "chbQualityControl"
         Me.chbQualityControl.Size = New System.Drawing.Size(134, 30)
         Me.chbQualityControl.TabIndex = 10
@@ -208,7 +208,7 @@ Partial Class searchProduct
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(726, 298)
+        Me.Label4.Location = New System.Drawing.Point(703, 248)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(67, 26)
         Me.Label4.TabIndex = 114
@@ -217,7 +217,7 @@ Partial Class searchProduct
         'chbJapanese
         '
         Me.chbJapanese.AutoSize = True
-        Me.chbJapanese.Location = New System.Drawing.Point(565, 335)
+        Me.chbJapanese.Location = New System.Drawing.Point(548, 283)
         Me.chbJapanese.Name = "chbJapanese"
         Me.chbJapanese.Size = New System.Drawing.Size(64, 30)
         Me.chbJapanese.TabIndex = 8
@@ -227,7 +227,7 @@ Partial Class searchProduct
         'chbChinese
         '
         Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(481, 335)
+        Me.chbChinese.Location = New System.Drawing.Point(454, 283)
         Me.chbChinese.Name = "chbChinese"
         Me.chbChinese.Size = New System.Drawing.Size(49, 30)
         Me.chbChinese.TabIndex = 7
@@ -237,7 +237,7 @@ Partial Class searchProduct
         'chbEnglish
         '
         Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(482, 298)
+        Me.chbEnglish.Location = New System.Drawing.Point(454, 247)
         Me.chbEnglish.Name = "chbEnglish"
         Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
         Me.chbEnglish.TabIndex = 5
@@ -247,7 +247,7 @@ Partial Class searchProduct
         'chbThai
         '
         Me.chbThai.AutoSize = True
-        Me.chbThai.Location = New System.Drawing.Point(565, 298)
+        Me.chbThai.Location = New System.Drawing.Point(548, 247)
         Me.chbThai.Name = "chbThai"
         Me.chbThai.Size = New System.Drawing.Size(53, 30)
         Me.chbThai.TabIndex = 6
@@ -257,38 +257,38 @@ Partial Class searchProduct
         'lblLanguage
         '
         Me.lblLanguage.AutoSize = True
-        Me.lblLanguage.Location = New System.Drawing.Point(418, 298)
+        Me.lblLanguage.Location = New System.Drawing.Point(392, 248)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
+        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
         Me.lblLanguage.TabIndex = 107
         Me.lblLanguage.Text = "ภาษา :"
         '
         'txtBrandName
         '
-        Me.txtBrandName.Location = New System.Drawing.Point(482, 192)
+        Me.txtBrandName.Location = New System.Drawing.Point(454, 163)
         Me.txtBrandName.Name = "txtBrandName"
-        Me.txtBrandName.Size = New System.Drawing.Size(718, 36)
+        Me.txtBrandName.Size = New System.Drawing.Size(500, 36)
         Me.txtBrandName.TabIndex = 3
         '
         'txtBrandSName
         '
-        Me.txtBrandSName.Location = New System.Drawing.Point(482, 247)
+        Me.txtBrandSName.Location = New System.Drawing.Point(454, 205)
         Me.txtBrandSName.Name = "txtBrandSName"
-        Me.txtBrandSName.Size = New System.Drawing.Size(225, 36)
+        Me.txtBrandSName.Size = New System.Drawing.Size(250, 36)
         Me.txtBrandSName.TabIndex = 4
         '
         'txtProductSName
         '
-        Me.txtProductSName.Location = New System.Drawing.Point(482, 138)
+        Me.txtProductSName.Location = New System.Drawing.Point(454, 121)
         Me.txtProductSName.Name = "txtProductSName"
-        Me.txtProductSName.Size = New System.Drawing.Size(225, 36)
+        Me.txtProductSName.Size = New System.Drawing.Size(250, 36)
         Me.txtProductSName.TabIndex = 2
         '
         'txtProductName
         '
-        Me.txtProductName.Location = New System.Drawing.Point(482, 86)
+        Me.txtProductName.Location = New System.Drawing.Point(454, 79)
         Me.txtProductName.Name = "txtProductName"
-        Me.txtProductName.Size = New System.Drawing.Size(718, 36)
+        Me.txtProductName.Size = New System.Drawing.Size(500, 36)
         Me.txtProductName.TabIndex = 1
         '
         'btnLogout
@@ -309,9 +309,9 @@ Partial Class searchProduct
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1127, 367)
+        Me.btnClear.Location = New System.Drawing.Point(789, 350)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 41)
+        Me.btnClear.Size = New System.Drawing.Size(165, 36)
         Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
@@ -325,29 +325,29 @@ Partial Class searchProduct
         Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode23.Name = "ndCreateSerialkey"
-        TreeNode23.Text = "สร้างซีเรียลคีย์"
-        TreeNode24.Name = "ndFindSerialkey"
-        TreeNode24.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode25.Name = "ndSerialkeyManagement"
-        TreeNode25.Text = "จัดการซีเรียลคีย์"
-        TreeNode26.Name = "ndAddCustomer"
-        TreeNode26.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode27.Name = "ndFindCustomer"
-        TreeNode27.Text = "ค้นหาลูกค้า"
-        TreeNode28.Name = "ndCustomerManage"
-        TreeNode28.Text = "จัดการลูกค้า"
-        TreeNode29.Name = "ndAddProduct"
-        TreeNode29.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
-        TreeNode30.Name = "ndSearchProduct"
-        TreeNode30.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
-        TreeNode31.Name = "ndProductManagement"
-        TreeNode31.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
-        TreeNode32.Name = "ndUserResetPassword"
-        TreeNode32.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode33.Name = "ndUserInfo"
-        TreeNode33.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode25, TreeNode28, TreeNode31, TreeNode33})
+        TreeNode78.Name = "ndCreateSerialkey"
+        TreeNode78.Text = "สร้างซีเรียลคีย์"
+        TreeNode79.Name = "ndFindSerialkey"
+        TreeNode79.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode80.Name = "ndSerialkeyManagement"
+        TreeNode80.Text = "จัดการซีเรียลคีย์"
+        TreeNode81.Name = "ndAddCustomer"
+        TreeNode81.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode82.Name = "ndFindCustomer"
+        TreeNode82.Text = "ค้นหาลูกค้า"
+        TreeNode83.Name = "ndCustomerManage"
+        TreeNode83.Text = "จัดการลูกค้า"
+        TreeNode84.Name = "ndAddProduct"
+        TreeNode84.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        TreeNode85.Name = "ndSearchProduct"
+        TreeNode85.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
+        TreeNode86.Name = "ndProductManagement"
+        TreeNode86.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
+        TreeNode87.Name = "ndUserResetPassword"
+        TreeNode87.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode88.Name = "ndUserInfo"
+        TreeNode88.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode80, TreeNode83, TreeNode86, TreeNode88})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
