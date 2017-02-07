@@ -36,7 +36,6 @@ Public Class SearchCustomer
             btnEdit.UseColumnTextForButtonValue = True
             Me.dgvSearchCus.Columns.Add(btnEdit)
 
-
             Dim btnDelete As New DataGridViewButtonColumn()
             btnDelete.HeaderText = ""
             btnDelete.Text = "ลบ"
