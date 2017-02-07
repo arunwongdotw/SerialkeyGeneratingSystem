@@ -40,6 +40,10 @@
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
+
+        cmbVersion.SelectedIndex = 0
+        dtpExpireDate.MinDate = DateTime.Now
+
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -53,6 +57,33 @@
     End Sub
 
     Private Sub lblBrandSoftware_Click(sender As Object, e As EventArgs) Handles lblBrandSoftware.Click
+
+    End Sub
+
+    Private Sub clear()
+        txtContractNo.Clear()
+        txtCorpName.Clear()
+        txtCorp_s_name.Clear()
+        txtBrandName.Clear()
+        txtBrand_s_name.Clear()
+        txtSEQ.Clear()
+        txtSoftWareName.Clear()
+        txtSoftware_s_Name.Clear()
+        txtAmountUser.Clear()
+
+        chbChinese.Checked = False
+        chbEnglish.Checked = False
+        chbThai.Checked = False
+        chbJapan.Checked = False
+
+        chbWM.Checked = False
+        chbQC.Checked = False
+
+        cmbVersion.SelectedIndex = 0
+        dtpExpireDate.MinDate = DateTime.Now
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
 
     End Sub
 End Class

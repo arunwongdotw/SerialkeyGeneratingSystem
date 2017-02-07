@@ -476,7 +476,7 @@ Public Class CreateSerial
         txtSerialKey.Visible = True
         Panel5.Visible = True
 
-        Dim serialMD5 As String = MD5.Encrypt(serialINFO, 1)
+        Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
         MsgBox(serialMD5 & "       จำนวน = " & serialMD5.Length)
 
 
@@ -517,12 +517,130 @@ Public Class CreateSerial
 
 
     End Function
+    Public Function toSqlDate2(ByVal val As Date) As String
+        Dim dd As Integer = Format(CDate(val), "dd")
+        Dim MM As Integer = Format(CDate(val), "MM")
+        Dim yyyy As Integer = Format(CDate(val), "yyyy")
+
+        Dim ymd As String
+        'If yyyy > 2500 Then yyyy = yyyy - 543
+        'If DATETIMEFORMAT = "DMY" Then
+        ymd = yyyy & "/" & MM & "/" & dd
+        'Else
+        '    dmy = MM & "/" & dd & "/" & yyyy
+        '    'dmy = dd & "/" & MM & "/" & yyyy
+        'End If
+        toSqlDate2 = ymd
+    End Function
+
+    Private Function getEMP_ID() As String
+        Dim sql As String = "select * from employee where username = '" & Login.user & "'"
+        Dim sqlread As SqlDataReader = con.query(sql)
+        If sqlread Is Nothing Then
+            MsgBox("query ผิด")
+            Return ""
+        ElseIf Not sqlread.Read Then
+            MsgBox("ไม่พบบัญชีผู้ใช้")
+            Return ""
+        Else
+            Dim emp_id As String = sqlread.GetValue(sqlread.GetOrdinal("emp_id"))
+            Return emp_id
+        End If
+        con.close()
+    End Function
+
+    Private Sub addSerial()
+        Dim strsql As String = ""
+        Dim qc As String = ""
+        Dim wm As String = ""
+        Dim Language As String = ""
+        Dim countLan As Integer = 0
+        Dim T As String = ""
+        Dim E As String = ""
+        Dim C As String = ""
+        Dim J As String = ""
+        Dim languageName As String = ""
+        Dim version As String = ""
+
+        If chbQC.Checked = True Then
+            qc = "1"
+        Else
+            qc = "0"
+        End If
+        If chbWM.Checked = True Then
+            wm = "1"
+        Else
+            wm = "0"
+        End If
+
+        If chbThai.Checked = True Then
+            T = "1"
+            countLan = countLan + 1
+        Else
+            T = "0"
+        End If
+        If chbEnglish.Checked = True Then
+            E = "1"
+            countLan = countLan + 1
+        Else
+            E = "0"
+        End If
+        If chbChinese.Checked = True Then
+            C = "1"
+            countLan = countLan + 1
+        Else
+            C = "0"
+        End If
+        If chbJapan.Checked = True Then
+            J = "1"
+            countLan = countLan + 1
+        Else
+            J = "0"
+        End If
+
+        strsql = "insert into serialkey (corp_s_name,contractbook_id,serialKey_r,serialKey_ez,serialKey_encrypted,brand_s_name"
+        strsql &= ",total_user,seq,product_s_Name,wharehouse_management,quality_control,EXPdate,totalLanguage"
+        strsql &= ",eng,thai,china,japan,version,emp_id,createdate) "
+        strsql &= "values ('" & Trim(txtCorpSubName.Text) & "',"
+        strsql &= "'" & Trim(txtContractNumber.Text) & "',"
+        strsql &= "'" & Trim(txtInfo.Text) & "',"
+        strsql &= "'" & Trim(txtSerialKey.Text) & "',"
+        strsql &= "'" & Trim(MD5.Encrypt(txtSerialKey.Text, 1)) & "',"
+        strsql &= "'" & Trim(txtBrand_s_name.Text) & "',"
+        strsql &= "'" & Trim(txtAmountUser.Text) & "',"
+        strsql &= "'" & Trim(getSEQ() + 1) & "',"
+        strsql &= "'" & Trim(txtSoftware_s_name.Text) & "',"
+        strsql &= "'" & Trim(qc) & "',"
+        strsql &= "'" & Trim(wm) & "',"
+        strsql &= "'" & Trim(toSqlDate2(dtpExpireDate.Value.Date)) & "',"
+        strsql &= "'" & Trim(countLan) & "',"
+        strsql &= "'" & Trim(E) & "',"
+        strsql &= "'" & Trim(T) & "',"
+        strsql &= "'" & Trim(C) & "',"
+        strsql &= "'" & Trim(J) & "',"
+        strsql &= "'" & Trim(cmbVersion.Text) & "',"
+        strsql &= "'" & Trim(getEMP_ID()) & "'," 'emp_id ******
+        strsql &= "'" & Trim(toSqlDate2(DateTime.Now)) & "')"
+        
+
+        Dim sqlread As SqlDataReader = con.query(strsql)
+        If sqlread Is Nothing Then
+            MsgBox("การเพิ่มข้อมูลล้มเหลว")
+        Else
+            MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+
+
+        End If
+        con.close()
+    End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
         If check = True Then
             GenSerial()
+            addSerial()
+
         End If
     End Sub
 
