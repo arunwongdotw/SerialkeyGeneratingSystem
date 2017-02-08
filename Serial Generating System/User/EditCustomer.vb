@@ -74,7 +74,7 @@ Public Class EditCustomer
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFormValid() And Not idDuplicate() Then
+        If isFormValid() And Not idDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
             If isSave() Then
                 con.close()
                 MsgBox("บันทึกข้อมูลสำเร็จ")

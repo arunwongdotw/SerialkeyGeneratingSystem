@@ -43,7 +43,7 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFromValid() AndAlso Not checkDuplicate() Then
+        If isFromValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub

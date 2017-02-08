@@ -125,7 +125,7 @@ Public Class CreateCustomer
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso Not checkDuplicate() Then
+        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะสร้างข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
             'If CheckData() = True Then
             add()
             'End If
