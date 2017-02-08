@@ -178,7 +178,7 @@ Public Class EditUser
         sqlReader = con.query(strQuery)
     End Sub
     Private Sub initialData()
-        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
+        txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         oldData.Add("email", txtEmail.Text)
         txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
         oldData.Add("emp_id", txtEmpID.Text)
@@ -187,7 +187,6 @@ Public Class EditUser
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
         txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
         txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
-        txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
@@ -284,15 +283,15 @@ Public Class EditUser
             txtEmpID_correct()
         End If
     End Sub
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtPhoneNumber.LostFocus
-        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text) Then
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text.Trim) Then
             lblMsgEmail.Visible = False
             pbEmail.Visible = False
-        ElseIf isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmail.Text) Then
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text.Trim) AndAlso Not oldData("email").Equals(txtEmail.Text.Trim) Then
             txtEmail_incorrect("อีเมลซ้ำ")
         ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text.Trim) Then
             txtEmail_incorrect("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmpID.Text) AndAlso Not txtEmail.Text Is String.Empty Then
+        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmail.Text.Trim) AndAlso Not txtEmail.Text.Trim Is String.Empty Then
             txtEmail_correct()
         End If
     End Sub
