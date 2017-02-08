@@ -22,6 +22,7 @@ Partial Class SearchProductOther
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -65,11 +66,20 @@ Partial Class SearchProductOther
         Me.dgvSearchProduct.AllowUserToDeleteRows = False
         Me.dgvSearchProduct.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Thai Sans Lite", 14.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSearchProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvSearchProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
         Me.dgvSearchProduct.Location = New System.Drawing.Point(3, 315)
         Me.dgvSearchProduct.Name = "dgvSearchProduct"
         Me.dgvSearchProduct.ReadOnly = True
+        Me.dgvSearchProduct.RowHeadersVisible = False
         Me.dgvSearchProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSearchProduct.Size = New System.Drawing.Size(1031, 253)
         Me.dgvSearchProduct.TabIndex = 120
@@ -180,7 +190,7 @@ Partial Class SearchProductOther
         Me.lblCorpGroup.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorpGroup.Location = New System.Drawing.Point(89, 79)
         Me.lblCorpGroup.Name = "lblCorpGroup"
-        Me.lblCorpGroup.Size = New System.Drawing.Size(83, 27)
+        Me.lblCorpGroup.Size = New System.Drawing.Size(81, 26)
         Me.lblCorpGroup.TabIndex = 108
         Me.lblCorpGroup.Text = "ชื่อแบรนด์ :"
         '
@@ -212,7 +222,7 @@ Partial Class SearchProductOther
         Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLastname.Location = New System.Drawing.Point(81, 135)
         Me.lblLastname.Name = "lblLastname"
-        Me.lblLastname.Size = New System.Drawing.Size(91, 27)
+        Me.lblLastname.Size = New System.Drawing.Size(91, 26)
         Me.lblLastname.TabIndex = 99
         Me.lblLastname.Text = "ราคา(บาท) :"
         '
@@ -231,7 +241,7 @@ Partial Class SearchProductOther
         Me.lblFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirstName.Location = New System.Drawing.Point(604, 79)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
+        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
         Me.lblFirstName.TabIndex = 95
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -259,7 +269,7 @@ Partial Class SearchProductOther
         Me.lblCorp_s_name.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorp_s_name.Location = New System.Drawing.Point(582, 25)
         Me.lblCorp_s_name.Name = "lblCorp_s_name"
-        Me.lblCorp_s_name.Size = New System.Drawing.Size(124, 27)
+        Me.lblCorp_s_name.Size = New System.Drawing.Size(123, 26)
         Me.lblCorp_s_name.TabIndex = 91
         Me.lblCorp_s_name.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -269,7 +279,7 @@ Partial Class SearchProductOther
         Me.lblCorpName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorpName.Location = New System.Drawing.Point(67, 25)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
+        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
         Me.lblCorpName.TabIndex = 90
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -279,7 +289,7 @@ Partial Class SearchProductOther
         Me.chbWM.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbWM.Location = New System.Drawing.Point(473, 196)
         Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(198, 31)
+        Me.chbWM.Size = New System.Drawing.Size(201, 30)
         Me.chbWM.TabIndex = 128
         Me.chbWM.Text = "Warehouse Management"
         Me.chbWM.UseVisualStyleBackColor = True
@@ -290,7 +300,7 @@ Partial Class SearchProductOther
         Me.chbQC.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbQC.Location = New System.Drawing.Point(473, 233)
         Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 31)
+        Me.chbQC.Size = New System.Drawing.Size(134, 30)
         Me.chbQC.TabIndex = 127
         Me.chbQC.Text = "Quality Control"
         Me.chbQC.UseVisualStyleBackColor = True
@@ -301,9 +311,9 @@ Partial Class SearchProductOther
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.Label4.Location = New System.Drawing.Point(359, 202)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(108, 27)
+        Me.Label4.Size = New System.Drawing.Size(110, 26)
         Me.Label4.TabIndex = 126
-        Me.Label4.Text = "ออฟชัน(ถ้ามี) :"
+        Me.Label4.Text = "ออปชัน (ถ้ามี) :"
         '
         'chbJapan
         '
@@ -311,7 +321,7 @@ Partial Class SearchProductOther
         Me.chbJapan.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbJapan.Location = New System.Drawing.Point(261, 237)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
+        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
         Me.chbJapan.TabIndex = 125
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -322,7 +332,7 @@ Partial Class SearchProductOther
         Me.chbChinese.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbChinese.Location = New System.Drawing.Point(177, 237)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
         Me.chbChinese.TabIndex = 124
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -333,7 +343,7 @@ Partial Class SearchProductOther
         Me.chbEnglish.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbEnglish.Location = New System.Drawing.Point(178, 200)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
         Me.chbEnglish.TabIndex = 123
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -344,7 +354,7 @@ Partial Class SearchProductOther
         Me.chbThai.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbThai.Location = New System.Drawing.Point(261, 200)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
+        Me.chbThai.Size = New System.Drawing.Size(53, 30)
         Me.chbThai.TabIndex = 122
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -355,7 +365,7 @@ Partial Class SearchProductOther
         Me.lblLanguage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.lblLanguage.Location = New System.Drawing.Point(115, 200)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
+        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
         Me.lblLanguage.TabIndex = 121
         Me.lblLanguage.Text = "ภาษา :"
         '
