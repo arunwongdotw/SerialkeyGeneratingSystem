@@ -96,6 +96,7 @@ Partial Class CheckConnectUser
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1142, 27)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 26
         Me.txtAccountInfo.TabStop = False
@@ -108,7 +109,7 @@ Partial Class CheckConnectUser
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label5.Location = New System.Drawing.Point(381, 82)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 26)
+        Me.Label5.Size = New System.Drawing.Size(259, 27)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "ผู้ใช้งานระบบที่กำลังเชื่อมต่อในขณะนี้"
         '
@@ -135,7 +136,7 @@ Partial Class CheckConnectUser
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(1202, 668)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 26)
+        Me.Label4.Size = New System.Drawing.Size(30, 27)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "คน"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -146,7 +147,7 @@ Partial Class CheckConnectUser
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(1202, 622)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 26)
+        Me.Label3.Size = New System.Drawing.Size(30, 27)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -191,7 +192,7 @@ Partial Class CheckConnectUser
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(948, 668)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(140, 26)
+        Me.Label2.Size = New System.Drawing.Size(140, 27)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -202,7 +203,7 @@ Partial Class CheckConnectUser
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(940, 622)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 26)
+        Me.Label1.Size = New System.Drawing.Size(148, 27)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight

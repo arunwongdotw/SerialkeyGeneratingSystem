@@ -41,40 +41,27 @@ Partial Class SearchSerial
         Me.chbEnglish = New System.Windows.Forms.CheckBox()
         Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtSoftWareName = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtBrandName = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtCorp_s_name = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCorpName = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtContractNo = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.chbWM = New System.Windows.Forms.CheckBox()
+        Me.chbQC = New System.Windows.Forms.CheckBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.chbForever = New System.Windows.Forms.CheckBox()
+        Me.chbUnlimit = New System.Windows.Forms.CheckBox()
         Me.dtpExpireDate = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.dgvSeriaKey = New System.Windows.Forms.DataGridView()
-        Me.txtSEQ = New System.Windows.Forms.TextBox()
-        Me.lblOrderฆales = New System.Windows.Forms.Label()
-        Me.cmbVersion = New System.Windows.Forms.ComboBox()
-        Me.btnLogout = New System.Windows.Forms.Button()
-        Me.txtAmountUser = New System.Windows.Forms.TextBox()
-        Me.lblAmountUser = New System.Windows.Forms.Label()
-        Me.lblLanguage = New System.Windows.Forms.Label()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.txtSoftware_s_Name = New System.Windows.Forms.TextBox()
-        Me.lblSoftwareName = New System.Windows.Forms.Label()
-        Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
-        Me.lblBrandSoftware = New System.Windows.Forms.Label()
-        Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.chbUnlimit = New System.Windows.Forms.CheckBox()
-        Me.chbForever = New System.Windows.Forms.CheckBox()
-        Me.chbWM = New System.Windows.Forms.CheckBox()
-        Me.chbQC = New System.Windows.Forms.CheckBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtContractNo = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCorpName = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCorp_s_name = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtBrandName = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtSoftWareName = New System.Windows.Forms.TextBox()
         Me.Column13 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,6 +76,19 @@ Partial Class SearchSerial
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.txtSEQ = New System.Windows.Forms.TextBox()
+        Me.lblOrderฆales = New System.Windows.Forms.Label()
+        Me.cmbVersion = New System.Windows.Forms.ComboBox()
+        Me.btnLogout = New System.Windows.Forms.Button()
+        Me.txtAmountUser = New System.Windows.Forms.TextBox()
+        Me.lblAmountUser = New System.Windows.Forms.Label()
+        Me.lblLanguage = New System.Windows.Forms.Label()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.txtSoftware_s_Name = New System.Windows.Forms.TextBox()
+        Me.lblSoftwareName = New System.Windows.Forms.Label()
+        Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
+        Me.lblBrandSoftware = New System.Windows.Forms.Label()
+        Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSeriaKey, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,6 +195,158 @@ Partial Class SearchSerial
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 4
         '
+        'txtSoftWareName
+        '
+        Me.txtSoftWareName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSoftWareName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoftWareName.Location = New System.Drawing.Point(434, 170)
+        Me.txtSoftWareName.Name = "txtSoftWareName"
+        Me.txtSoftWareName.Size = New System.Drawing.Size(361, 36)
+        Me.txtSoftWareName.TabIndex = 132
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(323, 172)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(105, 27)
+        Me.Label7.TabIndex = 131
+        Me.Label7.Text = "ชื่อซอฟต์แวร์ :"
+        '
+        'txtBrandName
+        '
+        Me.txtBrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBrandName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBrandName.Location = New System.Drawing.Point(434, 128)
+        Me.txtBrandName.Name = "txtBrandName"
+        Me.txtBrandName.Size = New System.Drawing.Size(361, 36)
+        Me.txtBrandName.TabIndex = 130
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(280, 130)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(148, 27)
+        Me.Label5.TabIndex = 129
+        Me.Label5.Text = "ชื่อแบรนด์ซอฟต์แวร์ :"
+        '
+        'txtCorp_s_name
+        '
+        Me.txtCorp_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorp_s_name.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorp_s_name.Location = New System.Drawing.Point(1207, 86)
+        Me.txtCorp_s_name.Name = "txtCorp_s_name"
+        Me.txtCorp_s_name.Size = New System.Drawing.Size(102, 36)
+        Me.txtCorp_s_name.TabIndex = 128
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(1106, 88)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(95, 27)
+        Me.Label4.TabIndex = 127
+        Me.Label4.Text = "ชื่อย่อบริษัท :"
+        '
+        'txtCorpName
+        '
+        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorpName.Location = New System.Drawing.Point(710, 86)
+        Me.txtCorpName.Name = "txtCorpName"
+        Me.txtCorpName.Size = New System.Drawing.Size(381, 36)
+        Me.txtCorpName.TabIndex = 126
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(628, 88)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 27)
+        Me.Label3.TabIndex = 125
+        Me.Label3.Text = "ชื่อบริษัท :"
+        '
+        'txtContractNo
+        '
+        Me.txtContractNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtContractNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContractNo.Location = New System.Drawing.Point(434, 86)
+        Me.txtContractNo.Name = "txtContractNo"
+        Me.txtContractNo.Size = New System.Drawing.Size(181, 36)
+        Me.txtContractNo.TabIndex = 124
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(304, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(124, 27)
+        Me.Label2.TabIndex = 123
+        Me.Label2.Text = "หมายเลขสัญญา :"
+        '
+        'chbWM
+        '
+        Me.chbWM.AutoSize = True
+        Me.chbWM.BackColor = System.Drawing.Color.Gainsboro
+        Me.chbWM.Enabled = False
+        Me.chbWM.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
+        Me.chbWM.Location = New System.Drawing.Point(742, 255)
+        Me.chbWM.Name = "chbWM"
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
+        Me.chbWM.TabIndex = 122
+        Me.chbWM.Text = "Warehouse Management"
+        Me.chbWM.UseVisualStyleBackColor = False
+        '
+        'chbQC
+        '
+        Me.chbQC.AutoSize = True
+        Me.chbQC.Enabled = False
+        Me.chbQC.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
+        Me.chbQC.Location = New System.Drawing.Point(742, 292)
+        Me.chbQC.Name = "chbQC"
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
+        Me.chbQC.TabIndex = 121
+        Me.chbQC.Text = "Quality Control"
+        Me.chbQC.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
+        Me.Label6.Location = New System.Drawing.Point(628, 256)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(108, 27)
+        Me.Label6.TabIndex = 120
+        Me.Label6.Text = "ออฟชัน(ถ้ามี) :"
+        '
+        'chbForever
+        '
+        Me.chbForever.AutoSize = True
+        Me.chbForever.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
+        Me.chbForever.Location = New System.Drawing.Point(624, 213)
+        Me.chbForever.Name = "chbForever"
+        Me.chbForever.Size = New System.Drawing.Size(65, 31)
+        Me.chbForever.TabIndex = 119
+        Me.chbForever.Text = "ถาวร"
+        Me.chbForever.UseVisualStyleBackColor = True
+        '
+        'chbUnlimit
+        '
+        Me.chbUnlimit.AutoSize = True
+        Me.chbUnlimit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
+        Me.chbUnlimit.Location = New System.Drawing.Point(1111, 214)
+        Me.chbUnlimit.Name = "chbUnlimit"
+        Me.chbUnlimit.Size = New System.Drawing.Size(79, 31)
+        Me.chbUnlimit.TabIndex = 102
+        Me.chbUnlimit.Text = "ไม่จำกัด"
+        Me.chbUnlimit.UseVisualStyleBackColor = True
+        '
         'dtpExpireDate
         '
         Me.dtpExpireDate.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
@@ -234,6 +386,7 @@ Partial Class SearchSerial
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 71
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -271,6 +424,90 @@ Partial Class SearchSerial
         Me.dgvSeriaKey.Name = "dgvSeriaKey"
         Me.dgvSeriaKey.Size = New System.Drawing.Size(1075, 367)
         Me.dgvSeriaKey.TabIndex = 69
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "แก้ไข"
+        Me.Column13.Name = "Column13"
+        Me.Column13.Width = 30
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "ลบ"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Width = 30
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ลำดับที่"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 50
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ซีเรียลคีย์"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 200
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "แบรนด์"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 75
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "จำนวนผู้ใช้งาน"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 75
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "ลำดับที่ขาย"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 50
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "ชื่อซอฟต์แวร์"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 175
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "วันหมดอายุ"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 75
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "เวอร์ชัน"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 60
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "ภาษาไทย"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 50
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "ภาษาอังกฤษ"
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 50
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "ภาษาจีน"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 50
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "ภาษาญี่ปุ่น"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 50
         '
         'txtSEQ
         '
@@ -430,242 +667,6 @@ Partial Class SearchSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
-        '
-        'chbUnlimit
-        '
-        Me.chbUnlimit.AutoSize = True
-        Me.chbUnlimit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbUnlimit.Location = New System.Drawing.Point(1111, 214)
-        Me.chbUnlimit.Name = "chbUnlimit"
-        Me.chbUnlimit.Size = New System.Drawing.Size(79, 31)
-        Me.chbUnlimit.TabIndex = 102
-        Me.chbUnlimit.Text = "ไม่จำกัด"
-        Me.chbUnlimit.UseVisualStyleBackColor = True
-        '
-        'chbForever
-        '
-        Me.chbForever.AutoSize = True
-        Me.chbForever.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbForever.Location = New System.Drawing.Point(624, 213)
-        Me.chbForever.Name = "chbForever"
-        Me.chbForever.Size = New System.Drawing.Size(65, 31)
-        Me.chbForever.TabIndex = 119
-        Me.chbForever.Text = "ถาวร"
-        Me.chbForever.UseVisualStyleBackColor = True
-        '
-        'chbWM
-        '
-        Me.chbWM.AutoSize = True
-        Me.chbWM.BackColor = System.Drawing.Color.Gainsboro
-        Me.chbWM.Enabled = False
-        Me.chbWM.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbWM.Location = New System.Drawing.Point(742, 255)
-        Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(198, 31)
-        Me.chbWM.TabIndex = 122
-        Me.chbWM.Text = "Warehouse Management"
-        Me.chbWM.UseVisualStyleBackColor = False
-        '
-        'chbQC
-        '
-        Me.chbQC.AutoSize = True
-        Me.chbQC.Enabled = False
-        Me.chbQC.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.chbQC.Location = New System.Drawing.Point(742, 292)
-        Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 31)
-        Me.chbQC.TabIndex = 121
-        Me.chbQC.Text = "Quality Control"
-        Me.chbQC.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.Label6.Location = New System.Drawing.Point(628, 256)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(108, 27)
-        Me.Label6.TabIndex = 120
-        Me.Label6.Text = "ออฟชัน(ถ้ามี) :"
-        '
-        'txtContractNo
-        '
-        Me.txtContractNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtContractNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContractNo.Location = New System.Drawing.Point(434, 86)
-        Me.txtContractNo.Name = "txtContractNo"
-        Me.txtContractNo.Size = New System.Drawing.Size(181, 36)
-        Me.txtContractNo.TabIndex = 124
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(304, 88)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(124, 27)
-        Me.Label2.TabIndex = 123
-        Me.Label2.Text = "หมายเลขสัญญา :"
-        '
-        'txtCorpName
-        '
-        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCorpName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorpName.Location = New System.Drawing.Point(710, 86)
-        Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(381, 36)
-        Me.txtCorpName.TabIndex = 126
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(628, 88)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 27)
-        Me.Label3.TabIndex = 125
-        Me.Label3.Text = "ชื่อบริษัท :"
-        '
-        'txtCorp_s_name
-        '
-        Me.txtCorp_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCorp_s_name.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorp_s_name.Location = New System.Drawing.Point(1207, 86)
-        Me.txtCorp_s_name.Name = "txtCorp_s_name"
-        Me.txtCorp_s_name.Size = New System.Drawing.Size(102, 36)
-        Me.txtCorp_s_name.TabIndex = 128
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1106, 88)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 27)
-        Me.Label4.TabIndex = 127
-        Me.Label4.Text = "ชื่อย่อบริษัท :"
-        '
-        'txtBrandName
-        '
-        Me.txtBrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtBrandName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBrandName.Location = New System.Drawing.Point(434, 128)
-        Me.txtBrandName.Name = "txtBrandName"
-        Me.txtBrandName.Size = New System.Drawing.Size(361, 36)
-        Me.txtBrandName.TabIndex = 130
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(280, 130)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(148, 27)
-        Me.Label5.TabIndex = 129
-        Me.Label5.Text = "ชื่อแบรนด์ซอฟต์แวร์ :"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(323, 172)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(105, 27)
-        Me.Label7.TabIndex = 131
-        Me.Label7.Text = "ชื่อซอฟต์แวร์ :"
-        '
-        'txtSoftWareName
-        '
-        Me.txtSoftWareName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSoftWareName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSoftWareName.Location = New System.Drawing.Point(434, 170)
-        Me.txtSoftWareName.Name = "txtSoftWareName"
-        Me.txtSoftWareName.Size = New System.Drawing.Size(361, 36)
-        Me.txtSoftWareName.TabIndex = 132
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "แก้ไข"
-        Me.Column13.Name = "Column13"
-        Me.Column13.Width = 30
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "ลบ"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 30
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ลำดับที่"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 50
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ซีเรียลคีย์"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 200
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "แบรนด์"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 75
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "จำนวนผู้ใช้งาน"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 75
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "ลำดับที่ขาย"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 50
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "ชื่อซอฟต์แวร์"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 175
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "วันหมดอายุ"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 75
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "เวอร์ชัน"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 60
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "ภาษาไทย"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 50
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "ภาษาอังกฤษ"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 50
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "ภาษาจีน"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 50
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "ภาษาญี่ปุ่น"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 50
         '
         'SearchSerial
         '

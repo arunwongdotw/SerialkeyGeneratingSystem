@@ -68,7 +68,6 @@ Partial Class CreateSerial
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCopySerial = New System.Windows.Forms.Button()
         Me.btnCopyInfo = New System.Windows.Forms.Button()
-        'Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.txtSerialKey = New System.Windows.Forms.TextBox()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -151,6 +150,7 @@ Partial Class CreateSerial
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 38)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(278, 29)
         Me.txtAccountInfo.TabIndex = 77
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right

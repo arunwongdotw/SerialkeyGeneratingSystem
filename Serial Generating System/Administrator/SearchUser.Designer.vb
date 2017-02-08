@@ -107,7 +107,7 @@ Partial Class SearchUser
         Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPhone.Location = New System.Drawing.Point(297, 232)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(72, 26)
+        Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 80
         Me.lblPhone.Text = "โทรศัพท์ :"
         Me.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -127,11 +127,12 @@ Partial Class SearchUser
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!)
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1193, 30)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1113, 26)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(145, 33)
+        Me.txtAccountInfo.ReadOnly = True
+        Me.txtAccountInfo.Size = New System.Drawing.Size(225, 26)
         Me.txtAccountInfo.TabIndex = 78
         Me.txtAccountInfo.TabStop = False
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -193,7 +194,7 @@ Partial Class SearchUser
         Me.lblPhoneNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPhoneNo.Location = New System.Drawing.Point(740, 190)
         Me.lblPhoneNo.Name = "lblPhoneNo"
-        Me.lblPhoneNo.Size = New System.Drawing.Size(110, 26)
+        Me.lblPhoneNo.Size = New System.Drawing.Size(109, 27)
         Me.lblPhoneNo.TabIndex = 30
         Me.lblPhoneNo.Text = "โทรศัพท์มือถือ :"
         Me.lblPhoneNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -224,7 +225,7 @@ Partial Class SearchUser
         Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmail.Location = New System.Drawing.Point(798, 232)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(52, 26)
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
         Me.lblEmail.TabIndex = 27
         Me.lblEmail.Text = "อีเมล์ :"
         Me.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -235,7 +236,7 @@ Partial Class SearchUser
         Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPosition.Location = New System.Drawing.Point(297, 190)
         Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(72, 26)
+        Me.lblPosition.Size = New System.Drawing.Size(73, 27)
         Me.lblPosition.TabIndex = 26
         Me.lblPosition.Text = "ตำแหน่ง :"
         Me.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -266,7 +267,7 @@ Partial Class SearchUser
         Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLastname.Location = New System.Drawing.Point(776, 148)
         Me.lblLastname.Name = "lblLastname"
-        Me.lblLastname.Size = New System.Drawing.Size(74, 26)
+        Me.lblLastname.Size = New System.Drawing.Size(75, 27)
         Me.lblLastname.TabIndex = 23
         Me.lblLastname.Text = "นามสกุล :"
         Me.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -277,7 +278,7 @@ Partial Class SearchUser
         Me.lblFirstname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirstname.Location = New System.Drawing.Point(330, 148)
         Me.lblFirstname.Name = "lblFirstname"
-        Me.lblFirstname.Size = New System.Drawing.Size(39, 26)
+        Me.lblFirstname.Size = New System.Drawing.Size(40, 27)
         Me.lblFirstname.TabIndex = 22
         Me.lblFirstname.Text = "ชื่อ :"
         Me.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -308,7 +309,7 @@ Partial Class SearchUser
         Me.lblIdEmp.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdEmp.Location = New System.Drawing.Point(748, 106)
         Me.lblIdEmp.Name = "lblIdEmp"
-        Me.lblIdEmp.Size = New System.Drawing.Size(102, 26)
+        Me.lblIdEmp.Size = New System.Drawing.Size(103, 27)
         Me.lblIdEmp.TabIndex = 13
         Me.lblIdEmp.Text = "รหัสพนักงาน :"
         Me.lblIdEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -319,7 +320,7 @@ Partial Class SearchUser
         Me.lblUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.Location = New System.Drawing.Point(308, 106)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(61, 26)
+        Me.lblUsername.Size = New System.Drawing.Size(63, 27)
         Me.lblUsername.TabIndex = 12
         Me.lblUsername.Text = "ชื่อผู้ใช้ :"
         Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight

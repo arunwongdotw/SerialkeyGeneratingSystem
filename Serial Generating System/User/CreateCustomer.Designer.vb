@@ -159,6 +159,7 @@ Partial Class CreateCustomer
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1143, 27)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 28
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right

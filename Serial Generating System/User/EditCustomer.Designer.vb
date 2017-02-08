@@ -22,14 +22,14 @@ Partial Class EditCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10})
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode15})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode7})
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -85,8 +85,8 @@ Partial Class EditCustomer
         Me.lblRoad = New System.Windows.Forms.Label()
         Me.lblProvince = New System.Windows.Forms.Label()
         Me.lblLane = New System.Windows.Forms.Label()
-        Me.lblDistrict = New System.Windows.Forms.Label()
         Me.lblPostalCode = New System.Windows.Forms.Label()
+        Me.lblDistrict = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
@@ -159,23 +159,23 @@ Partial Class EditCustomer
         Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode9.Name = "ndCreateSerialkey"
-        TreeNode9.Text = "สร้างซีเรียลคีย์"
-        TreeNode10.Name = "ndFindSerialkey"
-        TreeNode10.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode11.Name = "ndSerialkeyManagement"
-        TreeNode11.Text = "จัดการซีเรียลคีย์"
-        TreeNode12.Name = "ndAddCustomer"
-        TreeNode12.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode13.Name = "ndFindCustomer"
-        TreeNode13.Text = "ค้นหาลูกค้า"
-        TreeNode14.Name = "ndCustomerManage"
-        TreeNode14.Text = "จัดการลูกค้า"
-        TreeNode15.Name = "ndUserResetPassword"
-        TreeNode15.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode16.Name = "ndUserInfo"
-        TreeNode16.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode11, TreeNode14, TreeNode16})
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndUserResetPassword"
+        TreeNode7.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode8.Name = "ndUserInfo"
+        TreeNode8.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode8})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
@@ -685,15 +685,6 @@ Partial Class EditCustomer
         Me.lblLane.TabIndex = 48
         Me.lblLane.Text = "ซอย :"
         '
-        'lblDistrict
-        '
-        Me.lblDistrict.AutoSize = True
-        Me.lblDistrict.Location = New System.Drawing.Point(16, 110)
-        Me.lblDistrict.Name = "lblDistrict"
-        Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
-        Me.lblDistrict.TabIndex = 50
-        Me.lblDistrict.Text = "อำเภอ/เขต :"
-        '
         'lblPostalCode
         '
         Me.lblPostalCode.AutoSize = True
@@ -702,6 +693,15 @@ Partial Class EditCustomer
         Me.lblPostalCode.Size = New System.Drawing.Size(101, 27)
         Me.lblPostalCode.TabIndex = 52
         Me.lblPostalCode.Text = "รหัสไปรษณีย์ :"
+        '
+        'lblDistrict
+        '
+        Me.lblDistrict.AutoSize = True
+        Me.lblDistrict.Location = New System.Drawing.Point(16, 110)
+        Me.lblDistrict.Name = "lblDistrict"
+        Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
+        Me.lblDistrict.TabIndex = 50
+        Me.lblDistrict.Text = "อำเภอ/เขต :"
         '
         'lblEmail
         '
@@ -740,6 +740,7 @@ Partial Class EditCustomer
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1144, 27)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 98
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right

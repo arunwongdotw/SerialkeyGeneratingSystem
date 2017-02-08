@@ -35,6 +35,9 @@ Partial Class EditUser
         Me.btnSave = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -76,15 +79,12 @@ Partial Class EditUser
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogOut
@@ -214,6 +214,38 @@ Partial Class EditUser
         Me.Panel1.Size = New System.Drawing.Size(1349, 768)
         Me.Panel1.TabIndex = 4
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(957, 350)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(114, 25)
+        Me.Label21.TabIndex = 130
+        Me.Label21.Text = "อย่างน้อย 1 เบอร์"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
+        Me.PictureBox2.Location = New System.Drawing.Point(910, 327)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 129
+        Me.PictureBox2.TabStop = False
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label22.ForeColor = System.Drawing.Color.Red
+        Me.Label22.Location = New System.Drawing.Point(927, 327)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(170, 25)
+        Me.Label22.TabIndex = 128
+        Me.Label22.Text = "* กรุณากรอกเบอร์โทรศัพท์"
+        '
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
@@ -222,7 +254,7 @@ Partial Class EditUser
         Me.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblPhone.Location = New System.Drawing.Point(506, 361)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(72, 26)
+        Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 127
         Me.lblPhone.Text = "โทรศัพท์ :"
         '
@@ -242,7 +274,7 @@ Partial Class EditUser
         Me.Label19.ForeColor = System.Drawing.Color.Red
         Me.Label19.Location = New System.Drawing.Point(908, 403)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(18, 26)
+        Me.Label19.Size = New System.Drawing.Size(18, 27)
         Me.Label19.TabIndex = 125
         Me.Label19.Text = "*"
         '
@@ -253,7 +285,7 @@ Partial Class EditUser
         Me.lblMsgEmail.ForeColor = System.Drawing.Color.Green
         Me.lblMsgEmail.Location = New System.Drawing.Point(970, 403)
         Me.lblMsgEmail.Name = "lblMsgEmail"
-        Me.lblMsgEmail.Size = New System.Drawing.Size(127, 26)
+        Me.lblMsgEmail.Size = New System.Drawing.Size(128, 27)
         Me.lblMsgEmail.TabIndex = 124
         Me.lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
         '
@@ -273,7 +305,7 @@ Partial Class EditUser
         Me.lblMsgEmpId.ForeColor = System.Drawing.Color.Green
         Me.lblMsgEmpId.Location = New System.Drawing.Point(970, 193)
         Me.lblMsgEmpId.Name = "lblMsgEmpId"
-        Me.lblMsgEmpId.Size = New System.Drawing.Size(177, 26)
+        Me.lblMsgEmpId.Size = New System.Drawing.Size(178, 27)
         Me.lblMsgEmpId.TabIndex = 122
         Me.lblMsgEmpId.Text = "สามารถใช้รหัสพนักงานนี้ได้"
         '
@@ -308,7 +340,7 @@ Partial Class EditUser
         Me.rdbAccountant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbAccountant.Location = New System.Drawing.Point(654, 484)
         Me.rdbAccountant.Name = "rdbAccountant"
-        Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
+        Me.rdbAccountant.Size = New System.Drawing.Size(62, 31)
         Me.rdbAccountant.TabIndex = 84
         Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
@@ -322,7 +354,7 @@ Partial Class EditUser
         Me.rdbIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbIT.Location = New System.Drawing.Point(584, 484)
         Me.rdbIT.Name = "rdbIT"
-        Me.rdbIT.Size = New System.Drawing.Size(53, 30)
+        Me.rdbIT.Size = New System.Drawing.Size(53, 31)
         Me.rdbIT.TabIndex = 83
         Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
@@ -346,7 +378,7 @@ Partial Class EditUser
         Me.Label16.ForeColor = System.Drawing.Color.Red
         Me.Label16.Location = New System.Drawing.Point(908, 277)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(18, 26)
+        Me.Label16.Size = New System.Drawing.Size(18, 27)
         Me.Label16.TabIndex = 80
         Me.Label16.Text = "*"
         '
@@ -357,7 +389,7 @@ Partial Class EditUser
         Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Location = New System.Drawing.Point(908, 235)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(18, 26)
+        Me.Label14.Size = New System.Drawing.Size(18, 27)
         Me.Label14.TabIndex = 78
         Me.Label14.Text = "*"
         '
@@ -368,7 +400,7 @@ Partial Class EditUser
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(908, 445)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 26)
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 77
         Me.Label17.Text = "*"
         '
@@ -379,7 +411,7 @@ Partial Class EditUser
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(908, 193)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 26)
+        Me.Label13.Size = New System.Drawing.Size(18, 27)
         Me.Label13.TabIndex = 73
         Me.Label13.Text = "*"
         '
@@ -393,7 +425,7 @@ Partial Class EditUser
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
         Me.cmbUserType.Location = New System.Drawing.Point(584, 442)
         Me.cmbUserType.Name = "cmbUserType"
-        Me.cmbUserType.Size = New System.Drawing.Size(318, 34)
+        Me.cmbUserType.Size = New System.Drawing.Size(318, 35)
         Me.cmbUserType.TabIndex = 12
         '
         'lblUSerType
@@ -404,7 +436,7 @@ Partial Class EditUser
         Me.lblUSerType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblUSerType.Location = New System.Drawing.Point(460, 445)
         Me.lblUSerType.Name = "lblUSerType"
-        Me.lblUSerType.Size = New System.Drawing.Size(118, 26)
+        Me.lblUSerType.Size = New System.Drawing.Size(119, 27)
         Me.lblUSerType.TabIndex = 71
         Me.lblUSerType.Text = "ประเภทบัญชีผู้ใช้ :"
         '
@@ -417,7 +449,7 @@ Partial Class EditUser
         Me.chbPerDelete.Location = New System.Drawing.Point(715, 518)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
-        Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
+        Me.chbPerDelete.Size = New System.Drawing.Size(49, 31)
         Me.chbPerDelete.TabIndex = 10
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
@@ -431,7 +463,7 @@ Partial Class EditUser
         Me.chbPerEdit.Location = New System.Drawing.Point(654, 518)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
-        Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
+        Me.chbPerEdit.Size = New System.Drawing.Size(60, 31)
         Me.chbPerEdit.TabIndex = 11
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
@@ -445,7 +477,7 @@ Partial Class EditUser
         Me.chbPerCreate.Location = New System.Drawing.Point(584, 518)
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
-        Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
+        Me.chbPerCreate.Size = New System.Drawing.Size(64, 31)
         Me.chbPerCreate.TabIndex = 9
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
@@ -458,7 +490,7 @@ Partial Class EditUser
         Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Location = New System.Drawing.Point(406, 519)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(172, 26)
+        Me.Label12.Size = New System.Drawing.Size(172, 27)
         Me.Label12.TabIndex = 67
         Me.Label12.Text = "สิทธิ์การจัดการซีเรียลคีย์ :"
         '
@@ -479,7 +511,7 @@ Partial Class EditUser
         Me.lblMobile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblMobile.Location = New System.Drawing.Point(468, 319)
         Me.lblMobile.Name = "lblMobile"
-        Me.lblMobile.Size = New System.Drawing.Size(110, 26)
+        Me.lblMobile.Size = New System.Drawing.Size(109, 27)
         Me.lblMobile.TabIndex = 24
         Me.lblMobile.Text = "โทรศัพท์มือถือ :"
         '
@@ -500,7 +532,7 @@ Partial Class EditUser
         Me.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblEmail.Location = New System.Drawing.Point(526, 403)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(52, 26)
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
         Me.lblEmail.TabIndex = 22
         Me.lblEmail.Text = "อีเมล :"
         '
@@ -511,7 +543,7 @@ Partial Class EditUser
         Me.lblMsgEngAndNumbers.ForeColor = System.Drawing.Color.Red
         Me.lblMsgEngAndNumbers.Location = New System.Drawing.Point(908, 151)
         Me.lblMsgEngAndNumbers.Name = "lblMsgEngAndNumbers"
-        Me.lblMsgEngAndNumbers.Size = New System.Drawing.Size(204, 26)
+        Me.lblMsgEngAndNumbers.Size = New System.Drawing.Size(204, 27)
         Me.lblMsgEngAndNumbers.TabIndex = 17
         Me.lblMsgEngAndNumbers.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
@@ -522,7 +554,7 @@ Partial Class EditUser
         Me.lblMsgEngAndNumber.ForeColor = System.Drawing.Color.Red
         Me.lblMsgEngAndNumber.Location = New System.Drawing.Point(908, 109)
         Me.lblMsgEngAndNumber.Name = "lblMsgEngAndNumber"
-        Me.lblMsgEngAndNumber.Size = New System.Drawing.Size(204, 26)
+        Me.lblMsgEngAndNumber.Size = New System.Drawing.Size(204, 27)
         Me.lblMsgEngAndNumber.TabIndex = 16
         Me.lblMsgEngAndNumber.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
@@ -534,7 +566,7 @@ Partial Class EditUser
         Me.lblPosition.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblPosition.Location = New System.Drawing.Point(506, 484)
         Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(72, 26)
+        Me.lblPosition.Size = New System.Drawing.Size(73, 27)
         Me.lblPosition.TabIndex = 14
         Me.lblPosition.Text = "ตำแหน่ง :"
         '
@@ -555,7 +587,7 @@ Partial Class EditUser
         Me.lblLastname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblLastname.Location = New System.Drawing.Point(504, 277)
         Me.lblLastname.Name = "lblLastname"
-        Me.lblLastname.Size = New System.Drawing.Size(74, 26)
+        Me.lblLastname.Size = New System.Drawing.Size(75, 27)
         Me.lblLastname.TabIndex = 12
         Me.lblLastname.Text = "นามสกุล :"
         '
@@ -576,7 +608,7 @@ Partial Class EditUser
         Me.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblName.Location = New System.Drawing.Point(539, 235)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(39, 26)
+        Me.lblName.Size = New System.Drawing.Size(40, 27)
         Me.lblName.TabIndex = 10
         Me.lblName.Text = "ชื่อ :"
         '
@@ -597,7 +629,7 @@ Partial Class EditUser
         Me.lblEmpID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblEmpID.Location = New System.Drawing.Point(476, 193)
         Me.lblEmpID.Name = "lblEmpID"
-        Me.lblEmpID.Size = New System.Drawing.Size(102, 26)
+        Me.lblEmpID.Size = New System.Drawing.Size(103, 27)
         Me.lblEmpID.TabIndex = 8
         Me.lblEmpID.Text = "รหัสพนักงาน :"
         '
@@ -627,7 +659,7 @@ Partial Class EditUser
         Me.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblPassword.Location = New System.Drawing.Point(503, 151)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(75, 26)
+        Me.lblPassword.Size = New System.Drawing.Size(76, 27)
         Me.lblPassword.TabIndex = 2
         Me.lblPassword.Text = "รหัสผ่าน :"
         '
@@ -640,7 +672,7 @@ Partial Class EditUser
         Me.lblUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblUsername.Location = New System.Drawing.Point(517, 109)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(61, 26)
+        Me.lblUsername.Size = New System.Drawing.Size(63, 27)
         Me.lblUsername.TabIndex = 1
         Me.lblUsername.Text = "ชื่อผู้ใช้ :"
         '
@@ -663,6 +695,7 @@ Partial Class EditUser
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 86
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -682,38 +715,6 @@ Partial Class EditUser
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(957, 350)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(115, 25)
-        Me.Label21.TabIndex = 130
-        Me.Label21.Text = "อย่างน้อย 1 เบอร์"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(910, 327)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 129
-        Me.PictureBox2.TabStop = False
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
-        Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(927, 327)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(171, 25)
-        Me.Label22.TabIndex = 128
-        Me.Label22.Text = "* กรุณากรอกเบอร์โทรศัพท์"
-        '
         'EditUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -725,11 +726,11 @@ Partial Class EditUser
         Me.Text = "แก้ไขบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

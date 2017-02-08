@@ -96,6 +96,7 @@ Partial Class ChangePasswordUser
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 75
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -123,7 +124,7 @@ Partial Class ChangePasswordUser
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(986, 263)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 26)
+        Me.Label5.Size = New System.Drawing.Size(18, 27)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -134,7 +135,7 @@ Partial Class ChangePasswordUser
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(986, 221)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 26)
+        Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -145,7 +146,7 @@ Partial Class ChangePasswordUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(986, 179)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
@@ -176,7 +177,7 @@ Partial Class ChangePasswordUser
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.Location = New System.Drawing.Point(592, 263)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(132, 26)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -217,7 +218,7 @@ Partial Class ChangePasswordUser
         Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNewPassword.Location = New System.Drawing.Point(628, 221)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(96, 26)
+        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
@@ -227,7 +228,7 @@ Partial Class ChangePasswordUser
         Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOldPassword.Location = New System.Drawing.Point(629, 179)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(95, 26)
+        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
