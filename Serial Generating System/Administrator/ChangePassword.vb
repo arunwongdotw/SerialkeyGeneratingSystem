@@ -102,7 +102,7 @@ Public Class ChangePassword
             checkOldNewPassword = CompareOldNewPassword()
             If checkOldNewPassword = True Then
                 checkConfirmPassword = CompareConfirmPassword()
-                If checkConfirmPassword = True Then
+                If checkConfirmPassword = True AndAlso MsgBox("คุณแน่ใจที่เปลี่ยนรหัสผ่าน", MsgBoxStyle.YesNo) = vbYes Then
                     edit()
                 End If
             End If

@@ -50,8 +50,6 @@ Public Class ChangePasswordUser
         Dim isCorrect As Boolean = False
         username = Login.user
         password = Login.pass
-        MsgBox("password login" + password)
-        MsgBox("password old" + txtOldPassword.Text)
         If Not password = txtOldPassword.Text Then
             MsgBox("รหัสผ่านกับรหัสผ่านเก่าไม่ตรงกัน")
         Else
@@ -151,7 +149,7 @@ Public Class ChangePasswordUser
             checkOldNewPassword = CompareOldNewPassword()
             If checkOldNewPassword = True Then
                 checkConfirmPassword = CompareConfirmPassword()
-                If checkConfirmPassword = True Then
+                If checkConfirmPassword = True AndAlso MsgBox("คุณแน่ใจที่เปลี่ยนรหัสผ่าน", MsgBoxStyle.YesNo) = vbYes Then
                     edit()
                 End If
             End If

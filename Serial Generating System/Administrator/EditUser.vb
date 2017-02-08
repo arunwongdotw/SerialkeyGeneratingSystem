@@ -68,9 +68,6 @@ Public Class EditUser
         ElseIf txtMobileNumber.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์")
             valid = False
-        ElseIf Not New Regex(PhonenumberRegex).IsMatch(txtMobileNumber.Text.Trim) Then
-            MessageBox.Show("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
-            valid = False
         ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
             MessageBox.Show("กรุณากรอกอีเมล")
             valid = False
