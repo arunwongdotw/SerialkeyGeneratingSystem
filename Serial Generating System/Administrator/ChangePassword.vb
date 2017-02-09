@@ -117,7 +117,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -129,7 +129,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -141,7 +141,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 End Class
