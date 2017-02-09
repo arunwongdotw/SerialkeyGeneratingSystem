@@ -50,25 +50,28 @@ Public Class EditUser
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
         Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
         If txtPassword.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสผ่าน")
+            MsgBox("กรุณากรอกรหัสผ่าน")
             valid = False
         ElseIf txtEmpID.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสพนักงาน")
+            MsgBox("กรุณากรอกรหัสพนักงาน")
+            valid = False
+        ElseIf txtEmpID.TextLength <> 5 Then
+            MsgBox("กรุณากรอกรหัสพนักงานความยาว 5 หลัก")
             valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกชื่อ")
+            MsgBox("กรุณากรอกชื่อ")
             valid = False
         ElseIf txtLastName.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกนามสกุล")
+            MsgBox("กรุณากรอกนามสกุล")
             valid = False
         ElseIf txtMobileNumber.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์")
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
             valid = False
         ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกอีเมล")
+            MsgBox("กรุณากรอกอีเมล")
             valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
-            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
         End If
         Return valid
@@ -81,10 +84,10 @@ Public Class EditUser
 
     Public Function checkDuplicate() As Boolean
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
-            MessageBox.Show("รหัสพนักงานซ้ำ")
+            msgBox("รหัสพนักงานซ้ำ")
             Return True
         ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) Then
-            MessageBox.Show("อีเมลซ้ำ")
+            msgBox("อีเมลซ้ำ")
             Return True
         End If
         Return False
@@ -137,8 +140,8 @@ Public Class EditUser
         strquery &= " per_delete = '" & perdelete & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
-            MessageBox.Show("บันทึกข้อมูลสำเร็จ")
-        Else : MessageBox.Show("บันทึกข้อมูลไม่สำเร็จ")
+            msgBox("บันทึกข้อมูลสำเร็จ")
+        Else : msgBox("บันทึกข้อมูลไม่สำเร็จ")
         End If
         Me.Hide()
         Dim formSearchUser As New SearchUser
@@ -207,7 +210,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13, 46
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
 
@@ -216,7 +219,7 @@ Public Class EditUser
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -225,7 +228,7 @@ Public Class EditUser
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -234,7 +237,7 @@ Public Class EditUser
             Case 48 To 122, 8, 13, 46
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -301,5 +304,15 @@ Public Class EditUser
         End If
     End Sub
 
-    
+    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+        End Select
+    End Sub
 End Class
