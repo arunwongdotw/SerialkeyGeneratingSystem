@@ -561,6 +561,19 @@ Public Class CreateSerial
         Dim J As String = ""
         Dim languageName As String = ""
         Dim version As String = ""
+        Dim total_user As String = ""
+        Dim EXPdate As String = ""
+
+        If chbForever.Checked = True Then
+            EXPdate = "xxxx"
+        Else
+            EXPdate = toSqlDate2(dtpExpireDate.Value.Date)
+        End If
+        If chbUnlimit.Checked = True Then
+            total_user = "xxxx"
+        Else
+            total_user = txtAmountUser.Text
+        End If
 
         If chbQC.Checked = True Then
             qc = "1"
@@ -607,12 +620,12 @@ Public Class CreateSerial
         strsql &= "'" & Trim(txtSerialKey.Text) & "',"
         strsql &= "'" & Trim(MD5.Encrypt(txtSerialKey.Text, 1)) & "',"
         strsql &= "'" & Trim(txtBrand_s_name.Text) & "',"
-        strsql &= "'" & Trim(txtAmountUser.Text) & "',"
+        strsql &= "'" & Trim(total_user) & "',"
         strsql &= "'" & Trim(getSEQ() + 1) & "',"
         strsql &= "'" & Trim(txtSoftware_s_name.Text) & "',"
         strsql &= "'" & Trim(qc) & "',"
         strsql &= "'" & Trim(wm) & "',"
-        strsql &= "'" & Trim(toSqlDate2(dtpExpireDate.Value.Date)) & "',"
+        strsql &= "'" & Trim(EXPdate) & "',"
         strsql &= "'" & Trim(countLan) & "',"
         strsql &= "'" & Trim(E) & "',"
         strsql &= "'" & Trim(T) & "',"

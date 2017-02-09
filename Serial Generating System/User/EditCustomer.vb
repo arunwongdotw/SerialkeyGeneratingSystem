@@ -223,7 +223,7 @@ Public Class EditCustomer
 
     Private Function isSave() As Boolean
         Dim strquery = "update sgs.dbo.Customer set "
-        strquery &= " corpname = '" & txtCorpName.Text.Trim & "' , " 
+        strquery &= " corpname = '" & txtCorpName.Text.Trim & "' , "
         strquery &= " corp_s_name = '" & txtCorp_s_Name.Text.Trim & "' , "
         strquery &= " corpgroup = '" & txtCorpGroup.Text.Trim & "' , "
         strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "

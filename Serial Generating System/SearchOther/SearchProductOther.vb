@@ -215,25 +215,6 @@ Public Class SearchProductOther
             sql &= productname & product_s_name & brandname & brand_s_name
             sql &= qc & wm & thai & eng & china & japan & cost
 
-            '  ,[id]()
-            ',[productname]
-            ',[product_s_name]
-            ',[brandname]
-            ',[brand_s_name]
-            ',[cost]
-            ',[house_no]
-            ',[road]
-            ',[lane]
-            ',[subdistrict]
-            ',[district]
-            ',[province]
-            ',[postalcode]
-            ',[email]
-            ',[phone]
-
-            'If da Is Nothing Then
-            '    MsgBox("ไม่พบข้อมูล")
-            'Else
             Dim dt As New DataTable
             Dim da As SqlDataAdapter = con.queryForAdapter(sql)
             con.close()
