@@ -84,10 +84,10 @@ Public Class EditUser
 
     Public Function checkDuplicate() As Boolean
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
-            msgBox("รหัสพนักงานซ้ำ")
+            MsgBox("รหัสพนักงานซ้ำ")
             Return True
         ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) Then
-            msgBox("อีเมลซ้ำ")
+            MsgBox("อีเมลซ้ำ")
             Return True
         End If
         Return False
@@ -140,8 +140,8 @@ Public Class EditUser
         strquery &= " per_delete = '" & perdelete & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
-            msgBox("บันทึกข้อมูลสำเร็จ")
-        Else : msgBox("บันทึกข้อมูลไม่สำเร็จ")
+            MsgBox("บันทึกข้อมูลสำเร็จ")
+        Else : MsgBox("บันทึกข้อมูลไม่สำเร็จ")
         End If
         Me.Hide()
         Dim formSearchUser As New SearchUser
@@ -210,7 +210,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13, 46
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
 
@@ -219,7 +219,7 @@ Public Class EditUser
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -228,7 +228,7 @@ Public Class EditUser
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -237,7 +237,7 @@ Public Class EditUser
             Case 48 To 122, 8, 13, 46
             Case Else
                 e.Handled = True
-                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -302,17 +302,5 @@ Public Class EditUser
         ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmail.Text.Trim) AndAlso Not txtEmail.Text.Trim Is String.Empty Then
             txtEmail_correct()
         End If
-    End Sub
-
-    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
-        End Select
     End Sub
 End Class
