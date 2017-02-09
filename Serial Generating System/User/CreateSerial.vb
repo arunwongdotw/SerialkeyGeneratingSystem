@@ -634,7 +634,7 @@ Public Class CreateSerial
         strsql &= "'" & Trim(cmbVersion.Text) & "',"
         strsql &= "'" & Trim(getEMP_ID()) & "'," 'emp_id ******
         strsql &= "'" & Trim(toSqlDate2(DateTime.Now)) & "')"
-        
+
 
         Dim sqlread As SqlDataReader = con.query(strsql)
         If sqlread Is Nothing Then
