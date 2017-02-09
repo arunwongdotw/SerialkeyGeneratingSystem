@@ -22,17 +22,17 @@ Partial Class EditProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
-        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
-        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode45, TreeNode46})
-        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode50 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode48, TreeNode49})
-        Dim TreeNode51 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode52 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode53 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode51, TreeNode52})
-        Dim TreeNode54 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode55 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode54})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สร้างซีเรียลคีย์")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.txtProduct_s_name = New System.Windows.Forms.TextBox()
@@ -44,36 +44,36 @@ Partial Class EditProduct
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
-        Me.chbWM = New System.Windows.Forms.CheckBox()
-        Me.chbQC = New System.Windows.Forms.CheckBox()
-        Me.txtCost = New System.Windows.Forms.TextBox()
-        Me.chbJapan = New System.Windows.Forms.CheckBox()
-        Me.chbChinese = New System.Windows.Forms.CheckBox()
-        Me.chbEnglish = New System.Windows.Forms.CheckBox()
-        Me.chbThai = New System.Windows.Forms.CheckBox()
-        Me.btnHeader = New System.Windows.Forms.Button()
-        Me.btnAddProductFormAttachImage = New System.Windows.Forms.Button()
-        Me.pbAddProductFormAttachImage = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.chbEnglish = New System.Windows.Forms.CheckBox()
+        Me.chbThai = New System.Windows.Forms.CheckBox()
+        Me.chbJapan = New System.Windows.Forms.CheckBox()
+        Me.chbChinese = New System.Windows.Forms.CheckBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.chbQC = New System.Windows.Forms.CheckBox()
+        Me.chbWM = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtCost = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnAddProductFormAttachImage = New System.Windows.Forms.Button()
+        Me.pbAddProductFormAttachImage = New System.Windows.Forms.PictureBox()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvUserMenu
@@ -83,29 +83,29 @@ Partial Class EditProduct
         Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode45.Name = "ndCreateSerialkey"
-        TreeNode45.Text = "สร้างซีเรียลคีย์"
-        TreeNode46.Name = "ndFindSerialkey"
-        TreeNode46.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode47.Name = "ndSerialkeyManagement"
-        TreeNode47.Text = "จัดการซีเรียลคีย์"
-        TreeNode48.Name = "ndAddCustomer"
-        TreeNode48.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode49.Name = "ndFindCustomer"
-        TreeNode49.Text = "ค้นหาลูกค้า"
-        TreeNode50.Name = "ndCustomerManage"
-        TreeNode50.Text = "จัดการลูกค้า"
-        TreeNode51.Name = "ndAddProduct"
-        TreeNode51.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
-        TreeNode52.Name = "ndSearchProduct"
-        TreeNode52.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
-        TreeNode53.Name = "ndProductManagement"
-        TreeNode53.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
-        TreeNode54.Name = "ndUserResetPassword"
-        TreeNode54.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode55.Name = "ndUserInfo"
-        TreeNode55.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode47, TreeNode50, TreeNode53, TreeNode55})
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndAddProduct"
+        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        TreeNode8.Name = "ndSearchProduct"
+        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
+        TreeNode9.Name = "ndProductManagement"
+        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
+        TreeNode10.Name = "ndUserResetPassword"
+        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode11.Name = "ndUserInfo"
+        TreeNode11.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
         Me.tvUserMenu.TabIndex = 0
@@ -220,139 +220,6 @@ Partial Class EditProduct
         Me.Panel1.Size = New System.Drawing.Size(1317, 700)
         Me.Panel1.TabIndex = 3
         '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 97
-        Me.pbAccountInfo.TabStop = False
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
-        Me.txtAccountInfo.TabIndex = 96
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'chbWM
-        '
-        Me.chbWM.AutoSize = True
-        Me.chbWM.Location = New System.Drawing.Point(2, 4)
-        Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(198, 31)
-        Me.chbWM.TabIndex = 92
-        Me.chbWM.Text = "Warehouse Management"
-        Me.chbWM.UseVisualStyleBackColor = True
-        '
-        'chbQC
-        '
-        Me.chbQC.AutoSize = True
-        Me.chbQC.Location = New System.Drawing.Point(246, 4)
-        Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 31)
-        Me.chbQC.TabIndex = 91
-        Me.chbQC.Text = "Quality Control"
-        Me.chbQC.UseVisualStyleBackColor = True
-        '
-        'txtCost
-        '
-        Me.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCost.Location = New System.Drawing.Point(169, 191)
-        Me.txtCost.Name = "txtCost"
-        Me.txtCost.Size = New System.Drawing.Size(250, 36)
-        Me.txtCost.TabIndex = 88
-        '
-        'chbJapan
-        '
-        Me.chbJapan.AutoSize = True
-        Me.chbJapan.Location = New System.Drawing.Point(182, 3)
-        Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
-        Me.chbJapan.TabIndex = 87
-        Me.chbJapan.Text = "ญี่ปุ่น"
-        Me.chbJapan.UseVisualStyleBackColor = True
-        '
-        'chbChinese
-        '
-        Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(133, 3)
-        Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
-        Me.chbChinese.TabIndex = 86
-        Me.chbChinese.Text = "จีน"
-        Me.chbChinese.UseVisualStyleBackColor = True
-        '
-        'chbEnglish
-        '
-        Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
-        Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
-        Me.chbEnglish.TabIndex = 85
-        Me.chbEnglish.Text = "อังกฤษ"
-        Me.chbEnglish.UseVisualStyleBackColor = True
-        '
-        'chbThai
-        '
-        Me.chbThai.AutoSize = True
-        Me.chbThai.Location = New System.Drawing.Point(80, 3)
-        Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
-        Me.chbThai.TabIndex = 84
-        Me.chbThai.Text = "ไทย"
-        Me.chbThai.UseVisualStyleBackColor = True
-        '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
-        Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
-        '
-        'btnAddProductFormAttachImage
-        '
-        Me.btnAddProductFormAttachImage.BackColor = System.Drawing.Color.Coral
-        Me.btnAddProductFormAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnAddProductFormAttachImage.FlatAppearance.BorderSize = 0
-        Me.btnAddProductFormAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddProductFormAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddProductFormAttachImage.Location = New System.Drawing.Point(285, 203)
-        Me.btnAddProductFormAttachImage.Name = "btnAddProductFormAttachImage"
-        Me.btnAddProductFormAttachImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnAddProductFormAttachImage.TabIndex = 99
-        Me.btnAddProductFormAttachImage.TabStop = False
-        Me.btnAddProductFormAttachImage.Text = "เพิ่มรูปภาพ"
-        Me.btnAddProductFormAttachImage.UseVisualStyleBackColor = False
-        '
-        'pbAddProductFormAttachImage
-        '
-        Me.pbAddProductFormAttachImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.SoftwareBoxIcon
-        Me.pbAddProductFormAttachImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAddProductFormAttachImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbAddProductFormAttachImage.Location = New System.Drawing.Point(285, 92)
-        Me.pbAddProductFormAttachImage.Name = "pbAddProductFormAttachImage"
-        Me.pbAddProductFormAttachImage.Size = New System.Drawing.Size(113, 116)
-        Me.pbAddProductFormAttachImage.TabIndex = 98
-        Me.pbAddProductFormAttachImage.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -398,6 +265,46 @@ Partial Class EditProduct
         Me.Panel5.Size = New System.Drawing.Size(250, 36)
         Me.Panel5.TabIndex = 123
         '
+        'chbEnglish
+        '
+        Me.chbEnglish.AutoSize = True
+        Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
+        Me.chbEnglish.Name = "chbEnglish"
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
+        Me.chbEnglish.TabIndex = 85
+        Me.chbEnglish.Text = "อังกฤษ"
+        Me.chbEnglish.UseVisualStyleBackColor = True
+        '
+        'chbThai
+        '
+        Me.chbThai.AutoSize = True
+        Me.chbThai.Location = New System.Drawing.Point(80, 3)
+        Me.chbThai.Name = "chbThai"
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
+        Me.chbThai.TabIndex = 84
+        Me.chbThai.Text = "ไทย"
+        Me.chbThai.UseVisualStyleBackColor = True
+        '
+        'chbJapan
+        '
+        Me.chbJapan.AutoSize = True
+        Me.chbJapan.Location = New System.Drawing.Point(182, 3)
+        Me.chbJapan.Name = "chbJapan"
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
+        Me.chbJapan.TabIndex = 87
+        Me.chbJapan.Text = "ญี่ปุ่น"
+        Me.chbJapan.UseVisualStyleBackColor = True
+        '
+        'chbChinese
+        '
+        Me.chbChinese.AutoSize = True
+        Me.chbChinese.Location = New System.Drawing.Point(133, 3)
+        Me.chbChinese.Name = "chbChinese"
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
+        Me.chbChinese.TabIndex = 86
+        Me.chbChinese.Text = "จีน"
+        Me.chbChinese.UseVisualStyleBackColor = True
+        '
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -407,6 +314,26 @@ Partial Class EditProduct
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(500, 36)
         Me.Panel3.TabIndex = 124
+        '
+        'chbQC
+        '
+        Me.chbQC.AutoSize = True
+        Me.chbQC.Location = New System.Drawing.Point(246, 4)
+        Me.chbQC.Name = "chbQC"
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
+        Me.chbQC.TabIndex = 91
+        Me.chbQC.Text = "Quality Control"
+        Me.chbQC.UseVisualStyleBackColor = True
+        '
+        'chbWM
+        '
+        Me.chbWM.AutoSize = True
+        Me.chbWM.Location = New System.Drawing.Point(2, 4)
+        Me.chbWM.Name = "chbWM"
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
+        Me.chbWM.TabIndex = 92
+        Me.chbWM.Text = "Warehouse Management"
+        Me.chbWM.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -455,6 +382,14 @@ Partial Class EditProduct
         Me.Label10.TabIndex = 81
         Me.Label10.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
+        'txtCost
+        '
+        Me.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCost.Location = New System.Drawing.Point(169, 191)
+        Me.txtCost.Name = "txtCost"
+        Me.txtCost.Size = New System.Drawing.Size(250, 36)
+        Me.txtCost.TabIndex = 88
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -484,6 +419,71 @@ Partial Class EditProduct
         Me.Label13.TabIndex = 83
         Me.Label13.Text = "ภาษา :"
         '
+        'btnAddProductFormAttachImage
+        '
+        Me.btnAddProductFormAttachImage.BackColor = System.Drawing.Color.Coral
+        Me.btnAddProductFormAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnAddProductFormAttachImage.FlatAppearance.BorderSize = 0
+        Me.btnAddProductFormAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddProductFormAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddProductFormAttachImage.Location = New System.Drawing.Point(285, 203)
+        Me.btnAddProductFormAttachImage.Name = "btnAddProductFormAttachImage"
+        Me.btnAddProductFormAttachImage.Size = New System.Drawing.Size(113, 35)
+        Me.btnAddProductFormAttachImage.TabIndex = 99
+        Me.btnAddProductFormAttachImage.TabStop = False
+        Me.btnAddProductFormAttachImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAddProductFormAttachImage.UseVisualStyleBackColor = False
+        '
+        'pbAddProductFormAttachImage
+        '
+        Me.pbAddProductFormAttachImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.SoftwareBoxIcon
+        Me.pbAddProductFormAttachImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAddProductFormAttachImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbAddProductFormAttachImage.Location = New System.Drawing.Point(285, 92)
+        Me.pbAddProductFormAttachImage.Name = "pbAddProductFormAttachImage"
+        Me.pbAddProductFormAttachImage.Size = New System.Drawing.Size(113, 116)
+        Me.pbAddProductFormAttachImage.TabIndex = 98
+        Me.pbAddProductFormAttachImage.TabStop = False
+        '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 97
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
+        Me.txtAccountInfo.TabIndex = 96
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
         'EditProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -494,14 +494,14 @@ Partial Class EditProduct
         Me.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -36,6 +36,13 @@ Partial Class CreateSerial
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateSerial))
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnCopySerial = New System.Windows.Forms.Button()
+        Me.btnCopyInfo = New System.Windows.Forms.Button()
+        Me.txtSerialKey = New System.Windows.Forms.TextBox()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lbWelcome = New System.Windows.Forms.Label()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -48,31 +55,29 @@ Partial Class CreateSerial
         Me.txtBrandName = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAddSoftware = New System.Windows.Forms.Button()
         Me.btnSearchSoftware = New System.Windows.Forms.Button()
+        Me.btnAddSoftware = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblBrandSoftware = New System.Windows.Forms.Label()
         Me.lblSoftwareName = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.txtCorpSubName = New System.Windows.Forms.Label()
         Me.txtGroupCorp = New System.Windows.Forms.Label()
         Me.txtCorpName = New System.Windows.Forms.Label()
         Me.btnAddCustomerInfo = New System.Windows.Forms.Button()
         Me.btnSearchCus = New System.Windows.Forms.Button()
-        Me.lblInfoCustomer = New System.Windows.Forms.Label()
         Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnCopySerial = New System.Windows.Forms.Button()
-        Me.btnCopyInfo = New System.Windows.Forms.Button()
-        Me.txtSerialKey = New System.Windows.Forms.TextBox()
-        Me.txtInfo = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.chbForever = New System.Windows.Forms.CheckBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.chbEnglish = New System.Windows.Forms.CheckBox()
+        Me.chbThai = New System.Windows.Forms.CheckBox()
+        Me.chbChinese = New System.Windows.Forms.CheckBox()
+        Me.chbJapan = New System.Windows.Forms.CheckBox()
         Me.chbUnlimit = New System.Windows.Forms.CheckBox()
         Me.dtpExpireDate = New System.Windows.Forms.DateTimePicker()
         Me.lblSerialKey = New System.Windows.Forms.Label()
@@ -84,23 +89,18 @@ Partial Class CreateSerial
         Me.lblContractNumber = New System.Windows.Forms.Label()
         Me.cmbVersion = New System.Windows.Forms.ComboBox()
         Me.lblVersion = New System.Windows.Forms.Label()
-        Me.chbJapan = New System.Windows.Forms.CheckBox()
-        Me.chbChinese = New System.Windows.Forms.CheckBox()
-        Me.chbEnglish = New System.Windows.Forms.CheckBox()
-        Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.txtAmountUser = New System.Windows.Forms.TextBox()
         Me.lblAmountUser = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
-        Me.btnClear = New System.Windows.Forms.Button()
         Me.lblExpireDate = New System.Windows.Forms.Label()
-        Me.btnCreate = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -135,6 +135,98 @@ Partial Class CreateSerial
         Me.Panel1.Size = New System.Drawing.Size(1349, 698)
         Me.Panel1.TabIndex = 3
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Panel5.Controls.Add(Me.btnCopySerial)
+        Me.Panel5.Controls.Add(Me.btnCopyInfo)
+        Me.Panel5.Controls.Add(Me.txtSerialKey)
+        Me.Panel5.Controls.Add(Me.txtInfo)
+        Me.Panel5.Controls.Add(Me.Label5)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel5.Location = New System.Drawing.Point(281, 73)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1040, 109)
+        Me.Panel5.TabIndex = 119
+        Me.Panel5.Visible = False
+        '
+        'btnCopySerial
+        '
+        Me.btnCopySerial.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnCopySerial.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnCopySerial.FlatAppearance.BorderSize = 0
+        Me.btnCopySerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCopySerial.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCopySerial.Location = New System.Drawing.Point(843, 12)
+        Me.btnCopySerial.Name = "btnCopySerial"
+        Me.btnCopySerial.Size = New System.Drawing.Size(129, 32)
+        Me.btnCopySerial.TabIndex = 122
+        Me.btnCopySerial.Text = "คัดลอก"
+        Me.btnCopySerial.UseVisualStyleBackColor = False
+        Me.btnCopySerial.Visible = False
+        '
+        'btnCopyInfo
+        '
+        Me.btnCopyInfo.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnCopyInfo.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnCopyInfo.FlatAppearance.BorderSize = 0
+        Me.btnCopyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCopyInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCopyInfo.Location = New System.Drawing.Point(843, 54)
+        Me.btnCopyInfo.Name = "btnCopyInfo"
+        Me.btnCopyInfo.Size = New System.Drawing.Size(129, 33)
+        Me.btnCopyInfo.TabIndex = 78
+        Me.btnCopyInfo.Text = "คัดลอก"
+        Me.btnCopyInfo.UseVisualStyleBackColor = False
+        Me.btnCopyInfo.Visible = False
+        '
+        'txtSerialKey
+        '
+        Me.txtSerialKey.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.txtSerialKey.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSerialKey.Location = New System.Drawing.Point(138, 54)
+        Me.txtSerialKey.Name = "txtSerialKey"
+        Me.txtSerialKey.ReadOnly = True
+        Me.txtSerialKey.Size = New System.Drawing.Size(699, 33)
+        Me.txtSerialKey.TabIndex = 121
+        Me.txtSerialKey.TabStop = False
+        Me.txtSerialKey.Visible = False
+        '
+        'txtInfo
+        '
+        Me.txtInfo.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInfo.Location = New System.Drawing.Point(138, 12)
+        Me.txtInfo.Name = "txtInfo"
+        Me.txtInfo.ReadOnly = True
+        Me.txtInfo.Size = New System.Drawing.Size(699, 33)
+        Me.txtInfo.TabIndex = 120
+        Me.txtInfo.TabStop = False
+        Me.txtInfo.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(21, 59)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(111, 27)
+        Me.Label5.TabIndex = 116
+        Me.Label5.Text = "ซีเรียลคีย์ที่ได้ :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(43, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 27)
+        Me.Label3.TabIndex = 114
+        Me.Label3.Text = "ข้อมูลที่ได้ :"
+        '
         'lbWelcome
         '
         Me.lbWelcome.AutoSize = True
@@ -154,7 +246,7 @@ Partial Class CreateSerial
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 38)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1068, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(278, 29)
@@ -275,19 +367,6 @@ Partial Class CreateSerial
         Me.Label2.TabIndex = 105
         Me.Label2.Text = "ชื่อย่อแบรนด์ :"
         '
-        'btnAddSoftware
-        '
-        Me.btnAddSoftware.BackColor = System.Drawing.Color.LightBlue
-        Me.btnAddSoftware.FlatAppearance.BorderSize = 0
-        Me.btnAddSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddSoftware.Location = New System.Drawing.Point(869, 107)
-        Me.btnAddSoftware.Name = "btnAddSoftware"
-        Me.btnAddSoftware.Size = New System.Drawing.Size(162, 37)
-        Me.btnAddSoftware.TabIndex = 102
-        Me.btnAddSoftware.Text = "เพิ่มข้อมูลซอฟต์แวร์"
-        Me.btnAddSoftware.UseVisualStyleBackColor = False
-        '
         'btnSearchSoftware
         '
         Me.btnSearchSoftware.BackColor = System.Drawing.Color.LightBlue
@@ -300,6 +379,19 @@ Partial Class CreateSerial
         Me.btnSearchSoftware.TabIndex = 101
         Me.btnSearchSoftware.Text = "ค้นหา"
         Me.btnSearchSoftware.UseVisualStyleBackColor = False
+        '
+        'btnAddSoftware
+        '
+        Me.btnAddSoftware.BackColor = System.Drawing.Color.LightBlue
+        Me.btnAddSoftware.FlatAppearance.BorderSize = 0
+        Me.btnAddSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddSoftware.Location = New System.Drawing.Point(869, 107)
+        Me.btnAddSoftware.Name = "btnAddSoftware"
+        Me.btnAddSoftware.Size = New System.Drawing.Size(162, 37)
+        Me.btnAddSoftware.TabIndex = 102
+        Me.btnAddSoftware.Text = "เพิ่มข้อมูลซอฟต์แวร์"
+        Me.btnAddSoftware.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -348,6 +440,17 @@ Partial Class CreateSerial
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1040, 125)
         Me.Panel2.TabIndex = 73
+        '
+        'lblInfoCustomer
+        '
+        Me.lblInfoCustomer.AutoSize = True
+        Me.lblInfoCustomer.BackColor = System.Drawing.Color.PeachPuff
+        Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfoCustomer.Location = New System.Drawing.Point(12, 10)
+        Me.lblInfoCustomer.Name = "lblInfoCustomer"
+        Me.lblInfoCustomer.Size = New System.Drawing.Size(116, 34)
+        Me.lblInfoCustomer.TabIndex = 67
+        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า"
         '
         'txtCorpSubName
         '
@@ -404,17 +507,6 @@ Partial Class CreateSerial
         Me.btnSearchCus.TabIndex = 67
         Me.btnSearchCus.Text = "ค้นหา"
         Me.btnSearchCus.UseVisualStyleBackColor = False
-        '
-        'lblInfoCustomer
-        '
-        Me.lblInfoCustomer.AutoSize = True
-        Me.lblInfoCustomer.BackColor = System.Drawing.Color.PeachPuff
-        Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfoCustomer.Location = New System.Drawing.Point(12, 10)
-        Me.lblInfoCustomer.Name = "lblInfoCustomer"
-        Me.lblInfoCustomer.Size = New System.Drawing.Size(116, 34)
-        Me.lblInfoCustomer.TabIndex = 67
-        Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า"
         '
         'lblGroupCorp
         '
@@ -485,98 +577,6 @@ Partial Class CreateSerial
         Me.Panel3.Size = New System.Drawing.Size(1040, 156)
         Me.Panel3.TabIndex = 71
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Transparent
-        Me.Panel5.Controls.Add(Me.btnCopySerial)
-        Me.Panel5.Controls.Add(Me.btnCopyInfo)
-        Me.Panel5.Controls.Add(Me.txtSerialKey)
-        Me.Panel5.Controls.Add(Me.txtInfo)
-        Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(281, 73)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1040, 109)
-        Me.Panel5.TabIndex = 119
-        Me.Panel5.Visible = False
-        '
-        'btnCopySerial
-        '
-        Me.btnCopySerial.BackColor = System.Drawing.Color.SandyBrown
-        Me.btnCopySerial.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnCopySerial.FlatAppearance.BorderSize = 0
-        Me.btnCopySerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCopySerial.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopySerial.Location = New System.Drawing.Point(843, 12)
-        Me.btnCopySerial.Name = "btnCopySerial"
-        Me.btnCopySerial.Size = New System.Drawing.Size(129, 32)
-        Me.btnCopySerial.TabIndex = 122
-        Me.btnCopySerial.Text = "คัดลอก"
-        Me.btnCopySerial.UseVisualStyleBackColor = False
-        Me.btnCopySerial.Visible = False
-        '
-        'btnCopyInfo
-        '
-        Me.btnCopyInfo.BackColor = System.Drawing.Color.SandyBrown
-        Me.btnCopyInfo.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnCopyInfo.FlatAppearance.BorderSize = 0
-        Me.btnCopyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCopyInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopyInfo.Location = New System.Drawing.Point(843, 54)
-        Me.btnCopyInfo.Name = "btnCopyInfo"
-        Me.btnCopyInfo.Size = New System.Drawing.Size(129, 33)
-        Me.btnCopyInfo.TabIndex = 78
-        Me.btnCopyInfo.Text = "คัดลอก"
-        Me.btnCopyInfo.UseVisualStyleBackColor = False
-        Me.btnCopyInfo.Visible = False
-        '
-        'txtSerialKey
-        '
-        Me.txtSerialKey.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.txtSerialKey.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSerialKey.Location = New System.Drawing.Point(138, 54)
-        Me.txtSerialKey.Name = "txtSerialKey"
-        Me.txtSerialKey.ReadOnly = True
-        Me.txtSerialKey.Size = New System.Drawing.Size(699, 33)
-        Me.txtSerialKey.TabIndex = 121
-        Me.txtSerialKey.TabStop = False
-        Me.txtSerialKey.Visible = False
-        '
-        'txtInfo
-        '
-        Me.txtInfo.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInfo.Location = New System.Drawing.Point(138, 12)
-        Me.txtInfo.Name = "txtInfo"
-        Me.txtInfo.ReadOnly = True
-        Me.txtInfo.Size = New System.Drawing.Size(699, 33)
-        Me.txtInfo.TabIndex = 120
-        Me.txtInfo.TabStop = False
-        Me.txtInfo.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(21, 59)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(111, 27)
-        Me.Label5.TabIndex = 116
-        Me.Label5.Text = "ซีเรียลคีย์ที่ได้ :"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 17)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 27)
-        Me.Label3.TabIndex = 114
-        Me.Label3.Text = "ข้อมูลที่ได้ :"
-        '
         'chbForever
         '
         Me.chbForever.AutoSize = True
@@ -586,6 +586,59 @@ Partial Class CreateSerial
         Me.chbForever.TabIndex = 118
         Me.chbForever.Text = "ถาวร"
         Me.chbForever.UseVisualStyleBackColor = True
+        '
+        'Panel7
+        '
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.chbEnglish)
+        Me.Panel7.Controls.Add(Me.chbThai)
+        Me.Panel7.Controls.Add(Me.chbChinese)
+        Me.Panel7.Controls.Add(Me.chbJapan)
+        Me.Panel7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel7.Location = New System.Drawing.Point(665, 58)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(250, 36)
+        Me.Panel7.TabIndex = 123
+        '
+        'chbEnglish
+        '
+        Me.chbEnglish.AutoSize = True
+        Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
+        Me.chbEnglish.Name = "chbEnglish"
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
+        Me.chbEnglish.TabIndex = 87
+        Me.chbEnglish.Text = "อังกฤษ"
+        Me.chbEnglish.UseVisualStyleBackColor = True
+        '
+        'chbThai
+        '
+        Me.chbThai.AutoSize = True
+        Me.chbThai.Location = New System.Drawing.Point(82, 3)
+        Me.chbThai.Name = "chbThai"
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
+        Me.chbThai.TabIndex = 86
+        Me.chbThai.Text = "ไทย"
+        Me.chbThai.UseVisualStyleBackColor = True
+        '
+        'chbChinese
+        '
+        Me.chbChinese.AutoSize = True
+        Me.chbChinese.Location = New System.Drawing.Point(135, 3)
+        Me.chbChinese.Name = "chbChinese"
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
+        Me.chbChinese.TabIndex = 88
+        Me.chbChinese.Text = "จีน"
+        Me.chbChinese.UseVisualStyleBackColor = True
+        '
+        'chbJapan
+        '
+        Me.chbJapan.AutoSize = True
+        Me.chbJapan.Location = New System.Drawing.Point(186, 3)
+        Me.chbJapan.Name = "chbJapan"
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
+        Me.chbJapan.TabIndex = 89
+        Me.chbJapan.Text = "ญี่ปุ่น"
+        Me.chbJapan.UseVisualStyleBackColor = True
         '
         'chbUnlimit
         '
@@ -694,46 +747,6 @@ Partial Class CreateSerial
         Me.lblVersion.TabIndex = 90
         Me.lblVersion.Text = "เวอร์ชัน :"
         '
-        'chbJapan
-        '
-        Me.chbJapan.AutoSize = True
-        Me.chbJapan.Location = New System.Drawing.Point(186, 3)
-        Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
-        Me.chbJapan.TabIndex = 89
-        Me.chbJapan.Text = "ญี่ปุ่น"
-        Me.chbJapan.UseVisualStyleBackColor = True
-        '
-        'chbChinese
-        '
-        Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(135, 3)
-        Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
-        Me.chbChinese.TabIndex = 88
-        Me.chbChinese.Text = "จีน"
-        Me.chbChinese.UseVisualStyleBackColor = True
-        '
-        'chbEnglish
-        '
-        Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
-        Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
-        Me.chbEnglish.TabIndex = 87
-        Me.chbEnglish.Text = "อังกฤษ"
-        Me.chbEnglish.UseVisualStyleBackColor = True
-        '
-        'chbThai
-        '
-        Me.chbThai.AutoSize = True
-        Me.chbThai.Location = New System.Drawing.Point(82, 3)
-        Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
-        Me.chbThai.TabIndex = 86
-        Me.chbThai.Text = "ไทย"
-        Me.chbThai.UseVisualStyleBackColor = True
-        '
         'txtAmountUser
         '
         Me.txtAmountUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -760,19 +773,6 @@ Partial Class CreateSerial
         Me.lblLanguage.TabIndex = 80
         Me.lblLanguage.Text = "ภาษา :"
         '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1192, 645)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 79
-        Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = False
-        '
         'lblExpireDate
         '
         Me.lblExpireDate.AutoSize = True
@@ -781,19 +781,6 @@ Partial Class CreateSerial
         Me.lblExpireDate.Size = New System.Drawing.Size(94, 27)
         Me.lblExpireDate.TabIndex = 78
         Me.lblExpireDate.Text = "วันหมดอายุ :"
-        '
-        'btnCreate
-        '
-        Me.btnCreate.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnCreate.FlatAppearance.BorderSize = 0
-        Me.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCreate.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCreate.Location = New System.Drawing.Point(1057, 645)
-        Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(129, 41)
-        Me.btnCreate.TabIndex = 77
-        Me.btnCreate.Text = "สร้าง"
-        Me.btnCreate.UseVisualStyleBackColor = False
         '
         'tvUserMenu
         '
@@ -831,18 +818,31 @@ Partial Class CreateSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
         Me.tvUserMenu.TabIndex = 0
         '
-        'Panel7
+        'btnCreate
         '
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.chbEnglish)
-        Me.Panel7.Controls.Add(Me.chbThai)
-        Me.Panel7.Controls.Add(Me.chbChinese)
-        Me.Panel7.Controls.Add(Me.chbJapan)
-        Me.Panel7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel7.Location = New System.Drawing.Point(665, 58)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(250, 36)
-        Me.Panel7.TabIndex = 123
+        Me.btnCreate.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnCreate.FlatAppearance.BorderSize = 0
+        Me.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCreate.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCreate.Location = New System.Drawing.Point(1057, 645)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(129, 41)
+        Me.btnCreate.TabIndex = 77
+        Me.btnCreate.Text = "สร้าง"
+        Me.btnCreate.UseVisualStyleBackColor = False
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(1192, 645)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(129, 41)
+        Me.btnClear.TabIndex = 79
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'CreateSerial
         '
@@ -855,14 +855,14 @@ Partial Class CreateSerial
         Me.Text = "สร้างซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)

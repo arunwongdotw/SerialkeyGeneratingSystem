@@ -35,17 +35,8 @@ Partial Class EditCustomer
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
-        Me.lbConditionText = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
-        Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
-        Me.txtCorpName = New System.Windows.Forms.TextBox()
-        Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.lblCorpName = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -89,6 +80,15 @@ Partial Class EditCustomer
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lblCorpName = New System.Windows.Forms.Label()
+        Me.lbConditionText = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblGroupCorp = New System.Windows.Forms.Label()
+        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
+        Me.lblCorpSubName = New System.Windows.Forms.Label()
+        Me.txtCorpName = New System.Windows.Forms.TextBox()
+        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -182,17 +182,6 @@ Partial Class EditCustomer
         Me.btnAttachCustomerImage.Text = "เพิ่มรูปภาพ"
         Me.btnAttachCustomerImage.UseVisualStyleBackColor = False
         '
-        'lbConditionText
-        '
-        Me.lbConditionText.AutoSize = True
-        Me.lbConditionText.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbConditionText.ForeColor = System.Drawing.Color.Red
-        Me.lbConditionText.Location = New System.Drawing.Point(216, 56)
-        Me.lbConditionText.Name = "lbConditionText"
-        Me.lbConditionText.Size = New System.Drawing.Size(249, 24)
-        Me.lbConditionText.TabIndex = 112
-        Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
@@ -203,43 +192,6 @@ Partial Class EditCustomer
         Me.PictureBox1.Size = New System.Drawing.Size(113, 116)
         Me.PictureBox1.TabIndex = 111
         Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(602, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 27)
-        Me.Label1.TabIndex = 110
-        Me.Label1.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(602, 96)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 27)
-        Me.Label17.TabIndex = 108
-        Me.Label17.Text = "*"
-        '
-        'txtCorpGroup
-        '
-        Me.txtCorpGroup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCorpGroup.Location = New System.Drawing.Point(148, 94)
-        Me.txtCorpGroup.Name = "txtCorpGroup"
-        Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpGroup.TabIndex = 102
-        '
-        'lblGroupCorp
-        '
-        Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(57, 96)
-        Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
-        Me.lblGroupCorp.TabIndex = 107
-        Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
         '
         'btnSave
         '
@@ -253,40 +205,6 @@ Partial Class EditCustomer
         Me.btnSave.TabIndex = 103
         Me.btnSave.Text = "บันทึก"
         Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'txtCorp_s_Name
-        '
-        Me.txtCorp_s_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCorp_s_Name.Location = New System.Drawing.Point(148, 52)
-        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
-        Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
-        Me.txtCorp_s_Name.TabIndex = 101
-        '
-        'txtCorpName
-        '
-        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCorpName.Location = New System.Drawing.Point(148, 10)
-        Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpName.TabIndex = 100
-        '
-        'lblCorpSubName
-        '
-        Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(47, 54)
-        Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
-        Me.lblCorpSubName.TabIndex = 106
-        Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
-        '
-        'lblCorpName
-        '
-        Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(66, 12)
-        Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
-        Me.lblCorpName.TabIndex = 105
-        Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
         'btnCancel
         '
@@ -699,12 +617,12 @@ Partial Class EditCustomer
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
         Me.txtAccountInfo.TabIndex = 98
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -740,6 +658,88 @@ Partial Class EditCustomer
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(880, 146)
         Me.Panel4.TabIndex = 116
+        '
+        'lblCorpName
+        '
+        Me.lblCorpName.AutoSize = True
+        Me.lblCorpName.Location = New System.Drawing.Point(66, 12)
+        Me.lblCorpName.Name = "lblCorpName"
+        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
+        Me.lblCorpName.TabIndex = 105
+        Me.lblCorpName.Text = "ชื่อบริษัท :"
+        '
+        'lbConditionText
+        '
+        Me.lbConditionText.AutoSize = True
+        Me.lbConditionText.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbConditionText.ForeColor = System.Drawing.Color.Red
+        Me.lbConditionText.Location = New System.Drawing.Point(216, 56)
+        Me.lbConditionText.Name = "lbConditionText"
+        Me.lbConditionText.Size = New System.Drawing.Size(249, 24)
+        Me.lbConditionText.TabIndex = 112
+        Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(602, 96)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
+        Me.Label17.TabIndex = 108
+        Me.Label17.Text = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(602, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 27)
+        Me.Label1.TabIndex = 110
+        Me.Label1.Text = "*"
+        '
+        'lblGroupCorp
+        '
+        Me.lblGroupCorp.AutoSize = True
+        Me.lblGroupCorp.Location = New System.Drawing.Point(57, 96)
+        Me.lblGroupCorp.Name = "lblGroupCorp"
+        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
+        Me.lblGroupCorp.TabIndex = 107
+        Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
+        '
+        'txtCorpGroup
+        '
+        Me.txtCorpGroup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpGroup.Location = New System.Drawing.Point(148, 94)
+        Me.txtCorpGroup.Name = "txtCorpGroup"
+        Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
+        Me.txtCorpGroup.TabIndex = 102
+        '
+        'lblCorpSubName
+        '
+        Me.lblCorpSubName.AutoSize = True
+        Me.lblCorpSubName.Location = New System.Drawing.Point(47, 54)
+        Me.lblCorpSubName.Name = "lblCorpSubName"
+        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
+        Me.lblCorpSubName.TabIndex = 106
+        Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
+        '
+        'txtCorpName
+        '
+        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpName.Location = New System.Drawing.Point(148, 10)
+        Me.txtCorpName.Name = "txtCorpName"
+        Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
+        Me.txtCorpName.TabIndex = 100
+        '
+        'txtCorp_s_Name
+        '
+        Me.txtCorp_s_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorp_s_Name.Location = New System.Drawing.Point(148, 52)
+        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
+        Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
+        Me.txtCorp_s_Name.TabIndex = 101
         '
         'EditCustomer
         '

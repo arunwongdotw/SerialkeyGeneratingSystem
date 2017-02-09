@@ -35,15 +35,13 @@ Partial Class CreateCustomer
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateCustomer))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnHeader = New System.Windows.Forms.Button()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.btnClear = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.lblLastName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -86,20 +84,22 @@ Partial Class CreateCustomer
         Me.lblCorpSubName = New System.Windows.Forms.Label()
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
+        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -124,140 +124,76 @@ Partial Class CreateCustomer
         Me.Panel1.Size = New System.Drawing.Size(1317, 700)
         Me.Panel1.TabIndex = 2
         '
-        'pbAccountInfo
+        'Panel2
         '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 29
-        Me.pbAccountInfo.TabStop = False
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.txtFirstName)
+        Me.Panel2.Controls.Add(Me.lblFirstName)
+        Me.Panel2.Controls.Add(Me.txtLastName)
+        Me.Panel2.Controls.Add(Me.lblLastName)
+        Me.Panel2.Location = New System.Drawing.Point(285, 498)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(999, 88)
+        Me.Panel2.TabIndex = 119
         '
-        'btnAttachCustomerImage
+        'Label7
         '
-        Me.btnAttachCustomerImage.BackColor = System.Drawing.Color.Silver
-        Me.btnAttachCustomerImage.FlatAppearance.BorderSize = 0
-        Me.btnAttachCustomerImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAttachCustomerImage.Location = New System.Drawing.Point(285, 203)
-        Me.btnAttachCustomerImage.Name = "btnAttachCustomerImage"
-        Me.btnAttachCustomerImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnAttachCustomerImage.TabIndex = 84
-        Me.btnAttachCustomerImage.Text = "เพิ่มรูปภาพ"
-        Me.btnAttachCustomerImage.UseVisualStyleBackColor = False
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(771, 28)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(18, 27)
+        Me.Label7.TabIndex = 91
+        Me.Label7.Text = "*"
         '
-        'txtAccountInfo
+        'Label6
         '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
-        Me.txtAccountInfo.TabIndex = 28
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(375, 28)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(18, 27)
+        Me.Label6.TabIndex = 90
+        Me.Label6.Text = "*"
         '
-        'PictureBox1
+        'txtFirstName
         '
-        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(285, 92)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(113, 116)
-        Me.PictureBox1.TabIndex = 80
-        Me.PictureBox1.TabStop = False
+        Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtFirstName.Location = New System.Drawing.Point(118, 26)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(251, 36)
+        Me.txtFirstName.TabIndex = 4
         '
-        'btnHeader
+        'lblFirstName
         '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
-        Me.btnHeader.TabIndex = 79
-        Me.btnHeader.Text = "เพิ่มข้อมูลลูกค้า"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.BackColor = System.Drawing.Color.Transparent
+        Me.lblFirstName.Location = New System.Drawing.Point(72, 28)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
+        Me.lblFirstName.TabIndex = 31
+        Me.lblFirstName.Text = "ชื่อ :"
         '
-        'btnLogOut
+        'txtLastName
         '
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(63, 643)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 22
-        Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLastName.Location = New System.Drawing.Point(515, 24)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(250, 36)
+        Me.txtLastName.TabIndex = 5
         '
-        'btnAdd
+        'lblLastName
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(1020, 592)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 15
-        Me.btnAdd.Text = "เพิ่ม"
-        Me.btnAdd.UseVisualStyleBackColor = False
-        '
-        'tvUserMenu
-        '
-        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
-        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tvUserMenu.HotTracking = True
-        Me.tvUserMenu.ItemHeight = 44
-        Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
-        Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode1.Name = "ndCreateSerialkey"
-        TreeNode1.Text = "สร้างซีเรียลคีย์"
-        TreeNode2.Name = "ndFindSerialkey"
-        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode3.Name = "ndSerialkeyManagement"
-        TreeNode3.Text = "จัดการซีเรียลคีย์"
-        TreeNode4.Name = "ndAddCustomer"
-        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode5.Name = "ndFindCustomer"
-        TreeNode5.Text = "ค้นหาลูกค้า"
-        TreeNode6.Name = "ndCustomerManage"
-        TreeNode6.Text = "จัดการลูกค้า"
-        TreeNode7.Name = "ndAddProduct"
-        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
-        TreeNode8.Name = "ndSearchProduct"
-        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
-        TreeNode9.Name = "ndProductManagement"
-        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
-        TreeNode10.Name = "ndUserResetPassword"
-        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode11.Name = "ndUserInfo"
-        TreeNode11.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
-        Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
-        Me.tvUserMenu.TabIndex = 0
-        Me.tvUserMenu.TabStop = False
-        '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1155, 592)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 16
-        Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = False
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.BackColor = System.Drawing.Color.Transparent
+        Me.lblLastName.Location = New System.Drawing.Point(434, 28)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(75, 27)
+        Me.lblLastName.TabIndex = 35
+        Me.lblLastName.Text = "นามสกุล :"
         '
         'Panel3
         '
@@ -681,76 +617,140 @@ Partial Class CreateCustomer
         Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
         Me.txtCorp_s_Name.TabIndex = 101
         '
-        'Panel2
+        'pbAccountInfo
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.txtFirstName)
-        Me.Panel2.Controls.Add(Me.lblFirstName)
-        Me.Panel2.Controls.Add(Me.txtLastName)
-        Me.Panel2.Controls.Add(Me.lblLastName)
-        Me.Panel2.Location = New System.Drawing.Point(285, 498)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(999, 88)
-        Me.Panel2.TabIndex = 119
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 29
+        Me.pbAccountInfo.TabStop = False
         '
-        'Label7
+        'btnAttachCustomerImage
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(771, 28)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(18, 27)
-        Me.Label7.TabIndex = 91
-        Me.Label7.Text = "*"
+        Me.btnAttachCustomerImage.BackColor = System.Drawing.Color.Silver
+        Me.btnAttachCustomerImage.FlatAppearance.BorderSize = 0
+        Me.btnAttachCustomerImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAttachCustomerImage.Location = New System.Drawing.Point(285, 203)
+        Me.btnAttachCustomerImage.Name = "btnAttachCustomerImage"
+        Me.btnAttachCustomerImage.Size = New System.Drawing.Size(113, 35)
+        Me.btnAttachCustomerImage.TabIndex = 84
+        Me.btnAttachCustomerImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAttachCustomerImage.UseVisualStyleBackColor = False
         '
-        'Label6
+        'txtAccountInfo
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(375, 28)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(18, 27)
-        Me.Label6.TabIndex = 90
-        Me.Label6.Text = "*"
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
+        Me.txtAccountInfo.TabIndex = 28
+        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'txtFirstName
+        'PictureBox1
         '
-        Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFirstName.Location = New System.Drawing.Point(118, 26)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(251, 36)
-        Me.txtFirstName.TabIndex = 4
+        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(285, 92)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(113, 116)
+        Me.PictureBox1.TabIndex = 80
+        Me.PictureBox1.TabStop = False
         '
-        'lblFirstName
+        'btnHeader
         '
-        Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.BackColor = System.Drawing.Color.Transparent
-        Me.lblFirstName.Location = New System.Drawing.Point(72, 28)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
-        Me.lblFirstName.TabIndex = 31
-        Me.lblFirstName.Text = "ชื่อ :"
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
+        Me.btnHeader.TabIndex = 79
+        Me.btnHeader.Text = "เพิ่มข้อมูลลูกค้า"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
         '
-        'txtLastName
+        'btnLogOut
         '
-        Me.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLastName.Location = New System.Drawing.Point(515, 24)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(250, 36)
-        Me.txtLastName.TabIndex = 5
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Location = New System.Drawing.Point(63, 643)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 22
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
-        'lblLastName
+        'btnAdd
         '
-        Me.lblLastName.AutoSize = True
-        Me.lblLastName.BackColor = System.Drawing.Color.Transparent
-        Me.lblLastName.Location = New System.Drawing.Point(434, 28)
-        Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(75, 27)
-        Me.lblLastName.TabIndex = 35
-        Me.lblLastName.Text = "นามสกุล :"
+        Me.btnAdd.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnAdd.FlatAppearance.BorderSize = 0
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Location = New System.Drawing.Point(1020, 592)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(129, 41)
+        Me.btnAdd.TabIndex = 15
+        Me.btnAdd.Text = "เพิ่ม"
+        Me.btnAdd.UseVisualStyleBackColor = False
+        '
+        'tvUserMenu
+        '
+        Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
+        Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tvUserMenu.HotTracking = True
+        Me.tvUserMenu.ItemHeight = 44
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
+        Me.tvUserMenu.Name = "tvUserMenu"
+        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Text = "สร้างซีเรียลคีย์"
+        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Text = "ค้นหาซีเรียลคีย์"
+        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Text = "จัดการซีเรียลคีย์"
+        TreeNode4.Name = "ndAddCustomer"
+        TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
+        TreeNode5.Name = "ndFindCustomer"
+        TreeNode5.Text = "ค้นหาลูกค้า"
+        TreeNode6.Name = "ndCustomerManage"
+        TreeNode6.Text = "จัดการลูกค้า"
+        TreeNode7.Name = "ndAddProduct"
+        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
+        TreeNode8.Name = "ndSearchProduct"
+        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
+        TreeNode9.Name = "ndProductManagement"
+        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
+        TreeNode10.Name = "ndUserResetPassword"
+        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode11.Name = "ndUserInfo"
+        TreeNode11.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
+        Me.tvUserMenu.ShowLines = False
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
+        Me.tvUserMenu.TabIndex = 0
+        Me.tvUserMenu.TabStop = False
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(1155, 592)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(129, 41)
+        Me.btnClear.TabIndex = 16
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'CreateCustomer
         '
@@ -765,15 +765,15 @@ Partial Class CreateCustomer
         Me.Text = "เพิ่มข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
