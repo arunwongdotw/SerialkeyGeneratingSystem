@@ -38,27 +38,12 @@ Partial Class CreateCustomer
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
-        Me.lbConditionText = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
-        Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
-        Me.txtCorpName = New System.Windows.Forms.TextBox()
-        Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.lblLastName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -70,62 +55,73 @@ Partial Class CreateCustomer
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtHouseNo = New System.Windows.Forms.TextBox()
         Me.txtSubdistrict = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.txtProvince = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtLane = New System.Windows.Forms.TextBox()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.txtPostalCode = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblNo = New System.Windows.Forms.Label()
         Me.lblSubdistrict = New System.Windows.Forms.Label()
         Me.lblRoad = New System.Windows.Forms.Label()
         Me.lblProvince = New System.Windows.Forms.Label()
         Me.lblLane = New System.Windows.Forms.Label()
-        Me.lblDistrict = New System.Windows.Forms.Label()
         Me.lblPostalCode = New System.Windows.Forms.Label()
+        Me.lblDistrict = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lblCorpName = New System.Windows.Forms.Label()
+        Me.lbConditionText = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblGroupCorp = New System.Windows.Forms.Label()
+        Me.txtCorpGroup = New System.Windows.Forms.TextBox()
+        Me.lblCorpSubName = New System.Windows.Forms.Label()
+        Me.txtCorpName = New System.Windows.Forms.TextBox()
+        Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.lblLastName = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.btnAttachCustomerImage)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
-        Me.Panel1.Controls.Add(Me.lbConditionText)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.Label21)
-        Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Controls.Add(Me.txtCorpGroup)
-        Me.Panel1.Controls.Add(Me.lblGroupCorp)
         Me.Panel1.Controls.Add(Me.btnAdd)
-        Me.Panel1.Controls.Add(Me.txtCorp_s_Name)
-        Me.Panel1.Controls.Add(Me.txtCorpName)
-        Me.Panel1.Controls.Add(Me.lblCorpSubName)
-        Me.Panel1.Controls.Add(Me.lblCorpName)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Controls.Add(Me.btnClear)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1349, 728)
+        Me.Panel1.Size = New System.Drawing.Size(1317, 700)
         Me.Panel1.TabIndex = 2
         '
         'pbAccountInfo
@@ -133,7 +129,7 @@ Partial Class CreateCustomer
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1313, 3)
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
         Me.pbAccountInfo.Name = "pbAccountInfo"
         Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
         Me.pbAccountInfo.TabIndex = 29
@@ -144,9 +140,9 @@ Partial Class CreateCustomer
         Me.btnAttachCustomerImage.BackColor = System.Drawing.Color.Silver
         Me.btnAttachCustomerImage.FlatAppearance.BorderSize = 0
         Me.btnAttachCustomerImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAttachCustomerImage.Location = New System.Drawing.Point(297, 191)
+        Me.btnAttachCustomerImage.Location = New System.Drawing.Point(285, 203)
         Me.btnAttachCustomerImage.Name = "btnAttachCustomerImage"
-        Me.btnAttachCustomerImage.Size = New System.Drawing.Size(115, 41)
+        Me.btnAttachCustomerImage.Size = New System.Drawing.Size(113, 35)
         Me.btnAttachCustomerImage.TabIndex = 84
         Me.btnAttachCustomerImage.Text = "เพิ่มรูปภาพ"
         Me.btnAttachCustomerImage.UseVisualStyleBackColor = False
@@ -157,32 +153,21 @@ Partial Class CreateCustomer
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1143, 27)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 28
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'lbConditionText
-        '
-        Me.lbConditionText.AutoSize = True
-        Me.lbConditionText.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbConditionText.ForeColor = System.Drawing.Color.Red
-        Me.lbConditionText.Location = New System.Drawing.Point(695, 144)
-        Me.lbConditionText.Name = "lbConditionText"
-        Me.lbConditionText.Size = New System.Drawing.Size(238, 24)
-        Me.lbConditionText.TabIndex = 83
-        Me.lbConditionText.Text = "3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.OfficerIcon
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(297, 84)
+        Me.PictureBox1.Location = New System.Drawing.Point(285, 92)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 111)
+        Me.PictureBox1.Size = New System.Drawing.Size(113, 116)
         Me.PictureBox1.TabIndex = 80
         Me.PictureBox1.TabStop = False
         '
@@ -195,21 +180,11 @@ Partial Class CreateCustomer
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1354, 68)
+        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
         Me.btnHeader.TabIndex = 79
         Me.btnHeader.Text = "เพิ่มข้อมูลลูกค้า"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(998, 100)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 27)
-        Me.Label22.TabIndex = 78
-        Me.Label22.Text = "*"
         '
         'btnLogOut
         '
@@ -222,86 +197,18 @@ Partial Class CreateCustomer
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(663, 142)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(18, 27)
-        Me.Label21.TabIndex = 77
-        Me.Label21.Text = "*"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(998, 184)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 27)
-        Me.Label17.TabIndex = 73
-        Me.Label17.Text = "*"
-        '
-        'txtCorpGroup
-        '
-        Me.txtCorpGroup.Location = New System.Drawing.Point(544, 181)
-        Me.txtCorpGroup.Name = "txtCorpGroup"
-        Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpGroup.TabIndex = 3
-        '
-        'lblGroupCorp
-        '
-        Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(462, 184)
-        Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
-        Me.lblGroupCorp.TabIndex = 46
-        Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
-        '
         'btnAdd
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnAdd.BackColor = System.Drawing.Color.DarkOrange
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(623, 652)
+        Me.btnAdd.Location = New System.Drawing.Point(1020, 592)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
         Me.btnAdd.TabIndex = 15
         Me.btnAdd.Text = "เพิ่ม"
         Me.btnAdd.UseVisualStyleBackColor = False
-        '
-        'txtCorp_s_Name
-        '
-        Me.txtCorp_s_Name.Location = New System.Drawing.Point(544, 139)
-        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
-        Me.txtCorp_s_Name.Size = New System.Drawing.Size(113, 36)
-        Me.txtCorp_s_Name.TabIndex = 2
-        '
-        'txtCorpName
-        '
-        Me.txtCorpName.Location = New System.Drawing.Point(544, 97)
-        Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpName.TabIndex = 1
-        '
-        'lblCorpSubName
-        '
-        Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(452, 142)
-        Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
-        Me.lblCorpSubName.TabIndex = 27
-        Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
-        '
-        'lblCorpName
-        '
-        Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(471, 100)
-        Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
-        Me.lblCorpName.TabIndex = 26
-        Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
         'tvUserMenu
         '
@@ -335,72 +242,27 @@ Partial Class CreateCustomer
         TreeNode11.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
         'btnClear
         '
-        Me.btnClear.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(768, 652)
+        Me.btnClear.Location = New System.Drawing.Point(1155, 592)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 16
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.PeachPuff
-        Me.Panel2.Controls.Add(Me.txtFirstName)
-        Me.Panel2.Controls.Add(Me.lblFirstName)
-        Me.Panel2.Controls.Add(Me.txtLastName)
-        Me.Panel2.Controls.Add(Me.lblLastName)
-        Me.Panel2.Location = New System.Drawing.Point(297, 536)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1017, 88)
-        Me.Panel2.TabIndex = 88
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Location = New System.Drawing.Point(151, 28)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(290, 36)
-        Me.txtFirstName.TabIndex = 4
-        '
-        'lblFirstName
-        '
-        Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.BackColor = System.Drawing.Color.PeachPuff
-        Me.lblFirstName.Location = New System.Drawing.Point(116, 31)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
-        Me.lblFirstName.TabIndex = 31
-        Me.lblFirstName.Text = "ชื่อ :"
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(599, 28)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(290, 36)
-        Me.txtLastName.TabIndex = 5
-        '
-        'lblLastName
-        '
-        Me.lblLastName.AutoSize = True
-        Me.lblLastName.BackColor = System.Drawing.Color.PeachPuff
-        Me.lblLastName.Location = New System.Drawing.Point(527, 31)
-        Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(75, 27)
-        Me.lblLastName.TabIndex = 35
-        Me.lblLastName.Text = "นามสกุล :"
-        '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.PeachPuff
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.Label8)
@@ -411,37 +273,38 @@ Partial Class CreateCustomer
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.txtHouseNo)
         Me.Panel3.Controls.Add(Me.txtSubdistrict)
-        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.txtProvince)
-        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.txtLane)
         Me.Panel3.Controls.Add(Me.txtDistrict)
         Me.Panel3.Controls.Add(Me.txtPostalCode)
-        Me.Panel3.Controls.Add(Me.Label19)
+        Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.txtEmail)
-        Me.Panel3.Controls.Add(Me.Label16)
-        Me.Panel3.Controls.Add(Me.Label15)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Controls.Add(Me.txtPhone)
         Me.Panel3.Controls.Add(Me.lblNo)
         Me.Panel3.Controls.Add(Me.lblSubdistrict)
         Me.Panel3.Controls.Add(Me.lblRoad)
         Me.Panel3.Controls.Add(Me.lblProvince)
         Me.Panel3.Controls.Add(Me.lblLane)
-        Me.Panel3.Controls.Add(Me.lblDistrict)
         Me.Panel3.Controls.Add(Me.lblPostalCode)
+        Me.Panel3.Controls.Add(Me.lblDistrict)
         Me.Panel3.Controls.Add(Me.lblEmail)
         Me.Panel3.Controls.Add(Me.lblPhone)
-        Me.Panel3.Location = New System.Drawing.Point(297, 251)
+        Me.Panel3.Location = New System.Drawing.Point(285, 244)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1017, 248)
-        Me.Panel3.TabIndex = 89
+        Me.Panel3.Size = New System.Drawing.Size(999, 248)
+        Me.Panel3.TabIndex = 117
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(873, 186)
+        Me.Label5.Location = New System.Drawing.Point(786, 193)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 25)
         Me.Label5.TabIndex = 92
@@ -450,7 +313,7 @@ Partial Class CreateCustomer
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(840, 161)
+        Me.PictureBox2.Location = New System.Drawing.Point(765, 166)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -462,7 +325,7 @@ Partial Class CreateCustomer
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(850, 161)
+        Me.Label8.Location = New System.Drawing.Point(781, 168)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(164, 25)
         Me.Label8.TabIndex = 90
@@ -470,15 +333,16 @@ Partial Class CreateCustomer
         '
         'txtcellphone
         '
-        Me.txtcellphone.Location = New System.Drawing.Point(547, 191)
+        Me.txtcellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtcellphone.Location = New System.Drawing.Point(515, 197)
         Me.txtcellphone.Name = "txtcellphone"
-        Me.txtcellphone.Size = New System.Drawing.Size(290, 36)
+        Me.txtcellphone.Size = New System.Drawing.Size(250, 36)
         Me.txtcellphone.TabIndex = 88
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(441, 194)
+        Me.Label9.Location = New System.Drawing.Point(400, 199)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(109, 27)
         Me.Label9.TabIndex = 89
@@ -486,16 +350,17 @@ Partial Class CreateCustomer
         '
         'txtRoad
         '
-        Me.txtRoad.Location = New System.Drawing.Point(547, 23)
+        Me.txtRoad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRoad.Location = New System.Drawing.Point(515, 29)
         Me.txtRoad.Name = "txtRoad"
-        Me.txtRoad.Size = New System.Drawing.Size(290, 36)
+        Me.txtRoad.Size = New System.Drawing.Size(250, 36)
         Me.txtRoad.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(843, 68)
+        Me.Label4.Location = New System.Drawing.Point(771, 34)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 86
@@ -505,7 +370,7 @@ Partial Class CreateCustomer
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(396, 110)
+        Me.Label3.Location = New System.Drawing.Point(375, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(18, 27)
         Me.Label3.TabIndex = 85
@@ -513,114 +378,132 @@ Partial Class CreateCustomer
         '
         'txtHouseNo
         '
-        Me.txtHouseNo.Location = New System.Drawing.Point(100, 23)
+        Me.txtHouseNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtHouseNo.Location = New System.Drawing.Point(119, 31)
         Me.txtHouseNo.Name = "txtHouseNo"
-        Me.txtHouseNo.Size = New System.Drawing.Size(113, 36)
+        Me.txtHouseNo.Size = New System.Drawing.Size(62, 36)
         Me.txtHouseNo.TabIndex = 6
         '
         'txtSubdistrict
         '
-        Me.txtSubdistrict.Location = New System.Drawing.Point(100, 107)
+        Me.txtSubdistrict.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSubdistrict.Location = New System.Drawing.Point(119, 73)
         Me.txtSubdistrict.Name = "txtSubdistrict"
-        Me.txtSubdistrict.Size = New System.Drawing.Size(290, 36)
+        Me.txtSubdistrict.Size = New System.Drawing.Size(250, 36)
         Me.txtSubdistrict.TabIndex = 9
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(375, 117)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(18, 27)
+        Me.Label10.TabIndex = 82
+        Me.Label10.Text = "*"
+        '
+        'txtProvince
+        '
+        Me.txtProvince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtProvince.Location = New System.Drawing.Point(119, 115)
+        Me.txtProvince.Name = "txtProvince"
+        Me.txtProvince.Size = New System.Drawing.Size(250, 36)
+        Me.txtProvince.TabIndex = 11
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(178, 34)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(18, 27)
+        Me.Label11.TabIndex = 81
+        Me.Label11.Text = "*"
+        '
+        'txtLane
+        '
+        Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLane.Location = New System.Drawing.Point(244, 31)
+        Me.txtLane.Name = "txtLane"
+        Me.txtLane.Size = New System.Drawing.Size(125, 36)
+        Me.txtLane.TabIndex = 8
+        '
+        'txtDistrict
+        '
+        Me.txtDistrict.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDistrict.Location = New System.Drawing.Point(515, 71)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(250, 36)
+        Me.txtDistrict.TabIndex = 10
+        '
+        'txtPostalCode
+        '
+        Me.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPostalCode.Location = New System.Drawing.Point(515, 113)
+        Me.txtPostalCode.Name = "txtPostalCode"
+        Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
+        Me.txtPostalCode.TabIndex = 12
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(771, 76)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(18, 27)
+        Me.Label12.TabIndex = 75
+        Me.Label12.Text = "*"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmail.Location = New System.Drawing.Point(119, 157)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(250, 36)
+        Me.txtEmail.TabIndex = 13
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(666, 110)
+        Me.Label2.Location = New System.Drawing.Point(646, 117)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(18, 27)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "*"
         '
-        'txtProvince
+        'Label13
         '
-        Me.txtProvince.Location = New System.Drawing.Point(100, 149)
-        Me.txtProvince.Name = "txtProvince"
-        Me.txtProvince.Size = New System.Drawing.Size(290, 36)
-        Me.txtProvince.TabIndex = 11
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(375, 159)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(18, 27)
+        Me.Label13.TabIndex = 72
+        Me.Label13.Text = "*"
         '
-        'Label1
+        'Label14
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(219, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 27)
-        Me.Label1.TabIndex = 81
-        Me.Label1.Text = "*"
-        '
-        'txtLane
-        '
-        Me.txtLane.Location = New System.Drawing.Point(100, 65)
-        Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(290, 36)
-        Me.txtLane.TabIndex = 8
-        '
-        'txtDistrict
-        '
-        Me.txtDistrict.Location = New System.Drawing.Point(547, 65)
-        Me.txtDistrict.Name = "txtDistrict"
-        Me.txtDistrict.Size = New System.Drawing.Size(290, 36)
-        Me.txtDistrict.TabIndex = 10
-        '
-        'txtPostalCode
-        '
-        Me.txtPostalCode.Location = New System.Drawing.Point(547, 107)
-        Me.txtPostalCode.Name = "txtPostalCode"
-        Me.txtPostalCode.Size = New System.Drawing.Size(113, 36)
-        Me.txtPostalCode.TabIndex = 12
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(396, 152)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(18, 27)
-        Me.Label19.TabIndex = 75
-        Me.Label19.Text = "*"
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(100, 191)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(290, 36)
-        Me.txtEmail.TabIndex = 13
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(396, 194)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(18, 27)
-        Me.Label16.TabIndex = 72
-        Me.Label16.Text = "*"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(843, 26)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
-        Me.Label15.TabIndex = 71
-        Me.Label15.Text = "*"
+        Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(740, 34)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(18, 27)
+        Me.Label14.TabIndex = 71
+        Me.Label14.Text = "*"
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(547, 149)
+        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPhone.Location = New System.Drawing.Point(515, 155)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(290, 36)
+        Me.txtPhone.Size = New System.Drawing.Size(250, 36)
         Me.txtPhone.TabIndex = 14
         '
         'lblNo
         '
         Me.lblNo.AutoSize = True
-        Me.lblNo.Location = New System.Drawing.Point(52, 26)
+        Me.lblNo.Location = New System.Drawing.Point(62, 31)
         Me.lblNo.Name = "lblNo"
         Me.lblNo.Size = New System.Drawing.Size(51, 27)
         Me.lblNo.TabIndex = 33
@@ -629,7 +512,7 @@ Partial Class CreateCustomer
         'lblSubdistrict
         '
         Me.lblSubdistrict.AutoSize = True
-        Me.lblSubdistrict.Location = New System.Drawing.Point(8, 110)
+        Me.lblSubdistrict.Location = New System.Drawing.Point(18, 76)
         Me.lblSubdistrict.Name = "lblSubdistrict"
         Me.lblSubdistrict.Size = New System.Drawing.Size(95, 27)
         Me.lblSubdistrict.TabIndex = 37
@@ -638,7 +521,7 @@ Partial Class CreateCustomer
         'lblRoad
         '
         Me.lblRoad.AutoSize = True
-        Me.lblRoad.Location = New System.Drawing.Point(501, 26)
+        Me.lblRoad.Location = New System.Drawing.Point(460, 31)
         Me.lblRoad.Name = "lblRoad"
         Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
@@ -647,7 +530,7 @@ Partial Class CreateCustomer
         'lblProvince
         '
         Me.lblProvince.AutoSize = True
-        Me.lblProvince.Location = New System.Drawing.Point(37, 152)
+        Me.lblProvince.Location = New System.Drawing.Point(47, 117)
         Me.lblProvince.Name = "lblProvince"
         Me.lblProvince.Size = New System.Drawing.Size(66, 27)
         Me.lblProvince.TabIndex = 44
@@ -656,34 +539,34 @@ Partial Class CreateCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(54, 68)
+        Me.lblLane.Location = New System.Drawing.Point(195, 33)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
         Me.lblLane.Text = "ซอย :"
         '
-        'lblDistrict
-        '
-        Me.lblDistrict.AutoSize = True
-        Me.lblDistrict.Location = New System.Drawing.Point(463, 68)
-        Me.lblDistrict.Name = "lblDistrict"
-        Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
-        Me.lblDistrict.TabIndex = 50
-        Me.lblDistrict.Text = "อำเภอ/เขต :"
-        '
         'lblPostalCode
         '
         Me.lblPostalCode.AutoSize = True
-        Me.lblPostalCode.Location = New System.Drawing.Point(449, 110)
+        Me.lblPostalCode.Location = New System.Drawing.Point(408, 115)
         Me.lblPostalCode.Name = "lblPostalCode"
         Me.lblPostalCode.Size = New System.Drawing.Size(101, 27)
         Me.lblPostalCode.TabIndex = 52
         Me.lblPostalCode.Text = "รหัสไปรษณีย์ :"
         '
+        'lblDistrict
+        '
+        Me.lblDistrict.AutoSize = True
+        Me.lblDistrict.Location = New System.Drawing.Point(422, 75)
+        Me.lblDistrict.Name = "lblDistrict"
+        Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
+        Me.lblDistrict.TabIndex = 50
+        Me.lblDistrict.Text = "อำเภอ/เขต :"
+        '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(50, 194)
+        Me.lblEmail.Location = New System.Drawing.Point(60, 159)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(53, 27)
         Me.lblEmail.TabIndex = 54
@@ -692,17 +575,188 @@ Partial Class CreateCustomer
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(479, 152)
+        Me.lblPhone.Location = New System.Drawing.Point(438, 157)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 56
         Me.lblPhone.Text = "โทรศัพท์ :"
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.lblCorpName)
+        Me.Panel4.Controls.Add(Me.lbConditionText)
+        Me.Panel4.Controls.Add(Me.Label17)
+        Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Controls.Add(Me.lblGroupCorp)
+        Me.Panel4.Controls.Add(Me.txtCorpGroup)
+        Me.Panel4.Controls.Add(Me.lblCorpSubName)
+        Me.Panel4.Controls.Add(Me.txtCorpName)
+        Me.Panel4.Controls.Add(Me.txtCorp_s_Name)
+        Me.Panel4.Location = New System.Drawing.Point(404, 92)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(880, 146)
+        Me.Panel4.TabIndex = 118
+        '
+        'lblCorpName
+        '
+        Me.lblCorpName.AutoSize = True
+        Me.lblCorpName.Location = New System.Drawing.Point(66, 12)
+        Me.lblCorpName.Name = "lblCorpName"
+        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
+        Me.lblCorpName.TabIndex = 105
+        Me.lblCorpName.Text = "ชื่อบริษัท :"
+        '
+        'lbConditionText
+        '
+        Me.lbConditionText.AutoSize = True
+        Me.lbConditionText.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbConditionText.ForeColor = System.Drawing.Color.Red
+        Me.lbConditionText.Location = New System.Drawing.Point(216, 56)
+        Me.lbConditionText.Name = "lbConditionText"
+        Me.lbConditionText.Size = New System.Drawing.Size(249, 24)
+        Me.lbConditionText.TabIndex = 112
+        Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(602, 96)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
+        Me.Label17.TabIndex = 108
+        Me.Label17.Text = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(602, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 27)
+        Me.Label1.TabIndex = 110
+        Me.Label1.Text = "*"
+        '
+        'lblGroupCorp
+        '
+        Me.lblGroupCorp.AutoSize = True
+        Me.lblGroupCorp.Location = New System.Drawing.Point(57, 96)
+        Me.lblGroupCorp.Name = "lblGroupCorp"
+        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
+        Me.lblGroupCorp.TabIndex = 107
+        Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
+        '
+        'txtCorpGroup
+        '
+        Me.txtCorpGroup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpGroup.Location = New System.Drawing.Point(148, 94)
+        Me.txtCorpGroup.Name = "txtCorpGroup"
+        Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
+        Me.txtCorpGroup.TabIndex = 102
+        '
+        'lblCorpSubName
+        '
+        Me.lblCorpSubName.AutoSize = True
+        Me.lblCorpSubName.Location = New System.Drawing.Point(47, 54)
+        Me.lblCorpSubName.Name = "lblCorpSubName"
+        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
+        Me.lblCorpSubName.TabIndex = 106
+        Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
+        '
+        'txtCorpName
+        '
+        Me.txtCorpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorpName.Location = New System.Drawing.Point(148, 10)
+        Me.txtCorpName.Name = "txtCorpName"
+        Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
+        Me.txtCorpName.TabIndex = 100
+        '
+        'txtCorp_s_Name
+        '
+        Me.txtCorp_s_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorp_s_Name.Location = New System.Drawing.Point(148, 52)
+        Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
+        Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
+        Me.txtCorp_s_Name.TabIndex = 101
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.txtFirstName)
+        Me.Panel2.Controls.Add(Me.lblFirstName)
+        Me.Panel2.Controls.Add(Me.txtLastName)
+        Me.Panel2.Controls.Add(Me.lblLastName)
+        Me.Panel2.Location = New System.Drawing.Point(285, 498)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(999, 88)
+        Me.Panel2.TabIndex = 119
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(771, 28)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(18, 27)
+        Me.Label7.TabIndex = 91
+        Me.Label7.Text = "*"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(375, 28)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(18, 27)
+        Me.Label6.TabIndex = 90
+        Me.Label6.Text = "*"
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtFirstName.Location = New System.Drawing.Point(118, 26)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(251, 36)
+        Me.txtFirstName.TabIndex = 4
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.BackColor = System.Drawing.Color.Transparent
+        Me.lblFirstName.Location = New System.Drawing.Point(72, 28)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
+        Me.lblFirstName.TabIndex = 31
+        Me.lblFirstName.Text = "ชื่อ :"
+        '
+        'txtLastName
+        '
+        Me.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLastName.Location = New System.Drawing.Point(515, 24)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(250, 36)
+        Me.txtLastName.TabIndex = 5
+        '
+        'lblLastName
+        '
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.BackColor = System.Drawing.Color.Transparent
+        Me.lblLastName.Location = New System.Drawing.Point(434, 28)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(75, 27)
+        Me.lblLastName.TabIndex = 35
+        Me.lblLastName.Text = "นามสกุล :"
+        '
         'CreateCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.ClientSize = New System.Drawing.Size(1318, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(1, 1)
@@ -713,68 +767,73 @@ Partial Class CreateCustomer
         Me.Panel1.PerformLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents txtProvince As System.Windows.Forms.TextBox
-    Friend WithEvents lblProvince As System.Windows.Forms.Label
-    Friend WithEvents txtRoad As System.Windows.Forms.TextBox
-    Friend WithEvents lblRoad As System.Windows.Forms.Label
     Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents txtSubdistrict As System.Windows.Forms.TextBox
-    Friend WithEvents lblSubdistrict As System.Windows.Forms.Label
-    Friend WithEvents txtLastName As System.Windows.Forms.TextBox
-    Friend WithEvents lblLastName As System.Windows.Forms.Label
-    Friend WithEvents txtHouseNo As System.Windows.Forms.TextBox
-    Friend WithEvents lblNo As System.Windows.Forms.Label
-    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
-    Friend WithEvents lblFirstName As System.Windows.Forms.Label
     Friend WithEvents btnAdd As System.Windows.Forms.Button
-    Friend WithEvents txtCorp_s_Name As System.Windows.Forms.TextBox
-    Friend WithEvents txtCorpName As System.Windows.Forms.TextBox
-    Friend WithEvents lblCorpSubName As System.Windows.Forms.Label
-    Friend WithEvents lblCorpName As System.Windows.Forms.Label
-    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
-    Friend WithEvents lblPhone As System.Windows.Forms.Label
-    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
-    Friend WithEvents lblEmail As System.Windows.Forms.Label
-    Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
-    Friend WithEvents lblPostalCode As System.Windows.Forms.Label
-    Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
-    Friend WithEvents lblDistrict As System.Windows.Forms.Label
-    Friend WithEvents txtLane As System.Windows.Forms.TextBox
-    Friend WithEvents lblLane As System.Windows.Forms.Label
-    Friend WithEvents txtCorpGroup As System.Windows.Forms.TextBox
-    Friend WithEvents lblGroupCorp As System.Windows.Forms.Label
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lbConditionText As System.Windows.Forms.Label
     Friend WithEvents btnAttachCustomerImage As System.Windows.Forms.Button
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtcellphone As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtRoad As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtHouseNo As System.Windows.Forms.TextBox
+    Friend WithEvents txtSubdistrict As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents txtProvince As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents txtLane As System.Windows.Forms.TextBox
+    Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
+    Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
+    Friend WithEvents lblNo As System.Windows.Forms.Label
+    Friend WithEvents lblSubdistrict As System.Windows.Forms.Label
+    Friend WithEvents lblRoad As System.Windows.Forms.Label
+    Friend WithEvents lblProvince As System.Windows.Forms.Label
+    Friend WithEvents lblLane As System.Windows.Forms.Label
+    Friend WithEvents lblPostalCode As System.Windows.Forms.Label
+    Friend WithEvents lblDistrict As System.Windows.Forms.Label
+    Friend WithEvents lblEmail As System.Windows.Forms.Label
+    Friend WithEvents lblPhone As System.Windows.Forms.Label
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents lblCorpName As System.Windows.Forms.Label
+    Friend WithEvents lbConditionText As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblGroupCorp As System.Windows.Forms.Label
+    Friend WithEvents txtCorpGroup As System.Windows.Forms.TextBox
+    Friend WithEvents lblCorpSubName As System.Windows.Forms.Label
+    Friend WithEvents txtCorpName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCorp_s_Name As System.Windows.Forms.TextBox
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents lblFirstName As System.Windows.Forms.Label
+    Friend WithEvents txtLastName As System.Windows.Forms.TextBox
+    Friend WithEvents lblLastName As System.Windows.Forms.Label
 End Class

@@ -31,22 +31,11 @@ Partial Class SearchUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtPhone = New System.Windows.Forms.TextBox()
-        Me.lblPhone = New System.Windows.Forms.Label()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.txtMobilePhone = New System.Windows.Forms.TextBox()
-        Me.lblPhoneNo = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtPosition = New System.Windows.Forms.TextBox()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblPosition = New System.Windows.Forms.Label()
-        Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.txtFirstname = New System.Windows.Forms.TextBox()
-        Me.lblLastname = New System.Windows.Forms.Label()
         Me.lblFirstname = New System.Windows.Forms.Label()
         Me.txtEmployeeId = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -54,30 +43,33 @@ Partial Class SearchUser
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.dgvSearchUser = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.lblPhone = New System.Windows.Forms.Label()
+        Me.txtLastname = New System.Windows.Forms.TextBox()
+        Me.lblLastname = New System.Windows.Forms.Label()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.txtPosition = New System.Windows.Forms.TextBox()
+        Me.txtMobilePhone = New System.Windows.Forms.TextBox()
+        Me.lblPhoneNo = New System.Windows.Forms.Label()
+        Me.lblPosition = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblEmail = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.txtPhone)
-        Me.Panel1.Controls.Add(Me.lblPhone)
+        Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.btnClear)
-        Me.Panel1.Controls.Add(Me.txtMobilePhone)
-        Me.Panel1.Controls.Add(Me.lblPhoneNo)
-        Me.Panel1.Controls.Add(Me.txtEmail)
-        Me.Panel1.Controls.Add(Me.txtPosition)
-        Me.Panel1.Controls.Add(Me.lblEmail)
-        Me.Panel1.Controls.Add(Me.lblPosition)
-        Me.Panel1.Controls.Add(Me.txtLastname)
         Me.Panel1.Controls.Add(Me.txtFirstname)
-        Me.Panel1.Controls.Add(Me.lblLastname)
         Me.Panel1.Controls.Add(Me.lblFirstname)
         Me.Panel1.Controls.Add(Me.txtEmployeeId)
         Me.Panel1.Controls.Add(Me.txtUsername)
@@ -85,39 +77,19 @@ Partial Class SearchUser
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.dgvSearchUser)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1349, 731)
+        Me.Panel1.Size = New System.Drawing.Size(1317, 701)
         Me.Panel1.TabIndex = 5
-        '
-        'txtPhone
-        '
-        Me.txtPhone.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(375, 229)
-        Me.txtPhone.MaxLength = 100
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(318, 36)
-        Me.txtPhone.TabIndex = 7
-        '
-        'lblPhone
-        '
-        Me.lblPhone.AutoSize = True
-        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPhone.Location = New System.Drawing.Point(297, 232)
-        Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(71, 27)
-        Me.lblPhone.TabIndex = 80
-        Me.lblPhone.Text = "โทรศัพท์ :"
-        Me.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'pbAccountInfo
         '
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1312, 4)
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
         Me.pbAccountInfo.Name = "pbAccountInfo"
         Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
         Me.pbAccountInfo.TabIndex = 77
@@ -129,10 +101,10 @@ Partial Class SearchUser
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1113, 26)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(225, 26)
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
         Me.txtAccountInfo.TabIndex = 78
         Me.txtAccountInfo.TabStop = False
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -146,7 +118,7 @@ Partial Class SearchUser
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1350, 65)
+        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
         Me.btnHeader.TabIndex = 35
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ค้นหาบัญชีผู้ใช้"
@@ -160,123 +132,27 @@ Partial Class SearchUser
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogOut.Location = New System.Drawing.Point(50, 643)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(140, 36)
+        Me.btnLogOut.Size = New System.Drawing.Size(121, 49)
         Me.btnLogOut.TabIndex = 10
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnClear.FlatAppearance.BorderSize = 0
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1009, 289)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(165, 36)
-        Me.btnClear.TabIndex = 9
-        Me.btnClear.Text = "เคลียร์"
-        Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'txtMobilePhone
-        '
-        Me.txtMobilePhone.BackColor = System.Drawing.SystemColors.Window
-        Me.txtMobilePhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMobilePhone.Location = New System.Drawing.Point(856, 187)
-        Me.txtMobilePhone.MaxLength = 100
-        Me.txtMobilePhone.Name = "txtMobilePhone"
-        Me.txtMobilePhone.Size = New System.Drawing.Size(318, 36)
-        Me.txtMobilePhone.TabIndex = 6
-        '
-        'lblPhoneNo
-        '
-        Me.lblPhoneNo.AutoSize = True
-        Me.lblPhoneNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPhoneNo.Location = New System.Drawing.Point(740, 190)
-        Me.lblPhoneNo.Name = "lblPhoneNo"
-        Me.lblPhoneNo.Size = New System.Drawing.Size(109, 27)
-        Me.lblPhoneNo.TabIndex = 30
-        Me.lblPhoneNo.Text = "โทรศัพท์มือถือ :"
-        Me.lblPhoneNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtEmail
-        '
-        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
-        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(856, 229)
-        Me.txtEmail.MaxLength = 100
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(318, 36)
-        Me.txtEmail.TabIndex = 8
-        '
-        'txtPosition
-        '
-        Me.txtPosition.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPosition.Location = New System.Drawing.Point(375, 187)
-        Me.txtPosition.MaxLength = 100
-        Me.txtPosition.Name = "txtPosition"
-        Me.txtPosition.Size = New System.Drawing.Size(318, 36)
-        Me.txtPosition.TabIndex = 5
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(798, 232)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
-        Me.lblEmail.TabIndex = 27
-        Me.lblEmail.Text = "อีเมล์ :"
-        Me.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'lblPosition
-        '
-        Me.lblPosition.AutoSize = True
-        Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPosition.Location = New System.Drawing.Point(297, 190)
-        Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(73, 27)
-        Me.lblPosition.TabIndex = 26
-        Me.lblPosition.Text = "ตำแหน่ง :"
-        Me.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtLastname
-        '
-        Me.txtLastname.BackColor = System.Drawing.SystemColors.Window
-        Me.txtLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastname.Location = New System.Drawing.Point(856, 145)
-        Me.txtLastname.MaxLength = 100
-        Me.txtLastname.Name = "txtLastname"
-        Me.txtLastname.Size = New System.Drawing.Size(318, 36)
-        Me.txtLastname.TabIndex = 4
-        '
         'txtFirstname
         '
         Me.txtFirstname.BackColor = System.Drawing.SystemColors.Window
+        Me.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFirstname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstname.Location = New System.Drawing.Point(375, 145)
+        Me.txtFirstname.Location = New System.Drawing.Point(467, 156)
         Me.txtFirstname.MaxLength = 100
         Me.txtFirstname.Name = "txtFirstname"
-        Me.txtFirstname.Size = New System.Drawing.Size(318, 36)
+        Me.txtFirstname.Size = New System.Drawing.Size(250, 36)
         Me.txtFirstname.TabIndex = 3
-        '
-        'lblLastname
-        '
-        Me.lblLastname.AutoSize = True
-        Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLastname.Location = New System.Drawing.Point(776, 148)
-        Me.lblLastname.Name = "lblLastname"
-        Me.lblLastname.Size = New System.Drawing.Size(75, 27)
-        Me.lblLastname.TabIndex = 23
-        Me.lblLastname.Text = "นามสกุล :"
-        Me.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblFirstname
         '
         Me.lblFirstname.AutoSize = True
         Me.lblFirstname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFirstname.Location = New System.Drawing.Point(330, 148)
+        Me.lblFirstname.Location = New System.Drawing.Point(422, 158)
         Me.lblFirstname.Name = "lblFirstname"
         Me.lblFirstname.Size = New System.Drawing.Size(40, 27)
         Me.lblFirstname.TabIndex = 22
@@ -286,28 +162,30 @@ Partial Class SearchUser
         'txtEmployeeId
         '
         Me.txtEmployeeId.BackColor = System.Drawing.SystemColors.Window
+        Me.txtEmployeeId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmployeeId.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeId.Location = New System.Drawing.Point(856, 103)
+        Me.txtEmployeeId.Location = New System.Drawing.Point(925, 114)
         Me.txtEmployeeId.MaxLength = 50
         Me.txtEmployeeId.Name = "txtEmployeeId"
-        Me.txtEmployeeId.Size = New System.Drawing.Size(318, 36)
+        Me.txtEmployeeId.Size = New System.Drawing.Size(99, 36)
         Me.txtEmployeeId.TabIndex = 2
         '
         'txtUsername
         '
         Me.txtUsername.BackColor = System.Drawing.SystemColors.Window
+        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(375, 103)
+        Me.txtUsername.Location = New System.Drawing.Point(467, 114)
         Me.txtUsername.MaxLength = 100
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(318, 36)
+        Me.txtUsername.Size = New System.Drawing.Size(250, 36)
         Me.txtUsername.TabIndex = 1
         '
         'lblIdEmp
         '
         Me.lblIdEmp.AutoSize = True
         Me.lblIdEmp.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdEmp.Location = New System.Drawing.Point(748, 106)
+        Me.lblIdEmp.Location = New System.Drawing.Point(817, 117)
         Me.lblIdEmp.Name = "lblIdEmp"
         Me.lblIdEmp.Size = New System.Drawing.Size(103, 27)
         Me.lblIdEmp.TabIndex = 13
@@ -318,7 +196,7 @@ Partial Class SearchUser
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.Location = New System.Drawing.Point(308, 106)
+        Me.lblUsername.Location = New System.Drawing.Point(399, 116)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(63, 27)
         Me.lblUsername.TabIndex = 12
@@ -330,11 +208,10 @@ Partial Class SearchUser
         Me.dgvSearchUser.AllowUserToAddRows = False
         Me.dgvSearchUser.AllowUserToDeleteRows = False
         Me.dgvSearchUser.BackgroundColor = System.Drawing.SystemColors.ScrollBar
-        Me.dgvSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSearchUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSearchUser.Location = New System.Drawing.Point(308, 349)
+        Me.dgvSearchUser.Location = New System.Drawing.Point(286, 362)
         Me.dgvSearchUser.Name = "dgvSearchUser"
-        Me.dgvSearchUser.Size = New System.Drawing.Size(994, 330)
+        Me.dgvSearchUser.Size = New System.Drawing.Size(1000, 308)
         Me.dgvSearchUser.TabIndex = 11
         Me.dgvSearchUser.TabStop = False
         '
@@ -364,15 +241,156 @@ Partial Class SearchUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(255, 666)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 635)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.txtPhone)
+        Me.Panel2.Controls.Add(Me.lblPhone)
+        Me.Panel2.Controls.Add(Me.txtLastname)
+        Me.Panel2.Controls.Add(Me.lblLastname)
+        Me.Panel2.Controls.Add(Me.txtPosition)
+        Me.Panel2.Controls.Add(Me.txtMobilePhone)
+        Me.Panel2.Controls.Add(Me.lblPhoneNo)
+        Me.Panel2.Controls.Add(Me.lblPosition)
+        Me.Panel2.Controls.Add(Me.txtEmail)
+        Me.Panel2.Controls.Add(Me.lblEmail)
+        Me.Panel2.Location = New System.Drawing.Point(286, 94)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1000, 215)
+        Me.Panel2.TabIndex = 81
+        '
+        'txtPhone
+        '
+        Me.txtPhone.BackColor = System.Drawing.SystemColors.Window
+        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(638, 62)
+        Me.txtPhone.MaxLength = 100
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(250, 36)
+        Me.txtPhone.TabIndex = 7
+        '
+        'lblPhone
+        '
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPhone.Location = New System.Drawing.Point(562, 64)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(71, 27)
+        Me.lblPhone.TabIndex = 80
+        Me.lblPhone.Text = "โทรศัพท์ :"
+        Me.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtLastname
+        '
+        Me.txtLastname.BackColor = System.Drawing.SystemColors.Window
+        Me.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastname.Location = New System.Drawing.Point(181, 104)
+        Me.txtLastname.MaxLength = 100
+        Me.txtLastname.Name = "txtLastname"
+        Me.txtLastname.Size = New System.Drawing.Size(250, 36)
+        Me.txtLastname.TabIndex = 4
+        '
+        'lblLastname
+        '
+        Me.lblLastname.AutoSize = True
+        Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastname.Location = New System.Drawing.Point(101, 106)
+        Me.lblLastname.Name = "lblLastname"
+        Me.lblLastname.Size = New System.Drawing.Size(75, 27)
+        Me.lblLastname.TabIndex = 23
+        Me.lblLastname.Text = "นามสกุล :"
+        Me.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(1157, 315)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(129, 41)
+        Me.btnClear.TabIndex = 9
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
+        'txtPosition
+        '
+        Me.txtPosition.BackColor = System.Drawing.SystemColors.Window
+        Me.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPosition.Location = New System.Drawing.Point(181, 146)
+        Me.txtPosition.MaxLength = 100
+        Me.txtPosition.Name = "txtPosition"
+        Me.txtPosition.Size = New System.Drawing.Size(250, 36)
+        Me.txtPosition.TabIndex = 5
+        '
+        'txtMobilePhone
+        '
+        Me.txtMobilePhone.BackColor = System.Drawing.SystemColors.Window
+        Me.txtMobilePhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtMobilePhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMobilePhone.Location = New System.Drawing.Point(639, 104)
+        Me.txtMobilePhone.MaxLength = 100
+        Me.txtMobilePhone.Name = "txtMobilePhone"
+        Me.txtMobilePhone.Size = New System.Drawing.Size(250, 36)
+        Me.txtMobilePhone.TabIndex = 6
+        '
+        'lblPhoneNo
+        '
+        Me.lblPhoneNo.AutoSize = True
+        Me.lblPhoneNo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPhoneNo.Location = New System.Drawing.Point(523, 107)
+        Me.lblPhoneNo.Name = "lblPhoneNo"
+        Me.lblPhoneNo.Size = New System.Drawing.Size(109, 27)
+        Me.lblPhoneNo.TabIndex = 30
+        Me.lblPhoneNo.Text = "โทรศัพท์มือถือ :"
+        Me.lblPhoneNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblPosition
+        '
+        Me.lblPosition.AutoSize = True
+        Me.lblPosition.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPosition.Location = New System.Drawing.Point(103, 148)
+        Me.lblPosition.Name = "lblPosition"
+        Me.lblPosition.Size = New System.Drawing.Size(73, 27)
+        Me.lblPosition.TabIndex = 26
+        Me.lblPosition.Text = "ตำแหน่ง :"
+        Me.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtEmail
+        '
+        Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(639, 146)
+        Me.txtEmail.MaxLength = 100
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(250, 36)
+        Me.txtEmail.TabIndex = 8
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(579, 148)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
+        Me.lblEmail.TabIndex = 27
+        Me.lblEmail.Text = "อีเมล :"
+        Me.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'SearchUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SearchUser"
@@ -381,6 +399,8 @@ Partial Class SearchUser
         Me.Panel1.PerformLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -408,4 +428,5 @@ Partial Class SearchUser
     Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
     Friend WithEvents txtPhone As System.Windows.Forms.TextBox
     Friend WithEvents lblPhone As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

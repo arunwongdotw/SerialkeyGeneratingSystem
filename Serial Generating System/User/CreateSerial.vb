@@ -740,4 +740,7 @@ Public Class CreateSerial
             btnCopySerial.Visible = True
         End If
     End Sub
+
+
+
 End Class

@@ -151,7 +151,7 @@ Public Class CreateCustomer
 
     End Sub
 
-    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -167,11 +167,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged
+    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -187,11 +187,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs) Handles txtLastName.TextChanged
+    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -204,7 +204,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtcellPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
+    Private Sub txtcellPhone_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -217,15 +217,15 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtPostalCode_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPostalCode.KeyDown
+    Private Sub txtPostalCode_KeyDown(sender As Object, e As KeyEventArgs)
 
     End Sub
 
-    Private Sub txtPostalCode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPostalCode.KeyPress
+    Private Sub txtPostalCode_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -238,7 +238,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged
+    Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -318,7 +318,7 @@ Public Class CreateCustomer
         End Try
     End Sub
 
-    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
+    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -332,7 +332,7 @@ Public Class CreateCustomer
     End Sub
 
 
-    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
+    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -355,7 +355,7 @@ Public Class CreateCustomer
         Return isDup
     End Function
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -370,15 +370,15 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
+    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
+    Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58 ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -394,11 +394,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs) Handles txtCorpGroup.TextChanged
+    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
+    Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48 มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -414,11 +414,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs) Handles txtRoad.TextChanged
+    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
+    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -435,11 +435,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs) Handles txtLane.TextChanged
+    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
+    Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -455,11 +455,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtDistrict.TextChanged
+    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
+    Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -475,11 +475,11 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtSubdistrict_TextChanged(sender As Object, e As EventArgs) Handles txtSubdistrict.TextChanged
+    Private Sub txtSubdistrict_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
+    Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -495,7 +495,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs) Handles txtProvince.TextChanged
+    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -101,27 +101,27 @@ Public Class EditUser
         Return isDup
     End Function
 
-    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
+    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs)
         position = "IT"
     End Sub
 
-    Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
+    Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs)
         position = "Accountant"
     End Sub
 
-    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
+    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs)
         userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
     End Sub
 
-    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
+    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs)
         perCreate = IIf(chbPerCreate.Checked, 1, 0)
     End Sub
 
-    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
+    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs)
         perdelete = IIf(chbPerDelete.Checked, 1, 0)
     End Sub
 
-    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
+    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs)
         perEdit = IIf(chbPerEdit.Checked, 1, 0)
     End Sub
 
@@ -194,7 +194,7 @@ Public Class EditUser
         con.close()
     End Sub
 
-    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13, 46
             Case Else
@@ -203,7 +203,7 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
@@ -212,7 +212,7 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
@@ -221,7 +221,7 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46
             Case Else
@@ -230,7 +230,7 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
+    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46
             Case Else
@@ -270,7 +270,7 @@ Public Class EditUser
         lblMsgEmail.ForeColor = Color.ForestGreen
         lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
     End Sub
-    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
+    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs)
         If txtEmpID.Text Is String.Empty OrElse oldData("emp_id").Equals(txtEmpID.Text) Then
             lblMsgEmpId.Visible = False
             pbEmpId.Visible = False
@@ -280,7 +280,7 @@ Public Class EditUser
             txtEmpID_correct()
         End If
     End Sub
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs)
         If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text.Trim) Then
             lblMsgEmail.Visible = False
             pbEmail.Visible = False
