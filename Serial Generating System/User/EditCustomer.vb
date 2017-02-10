@@ -131,15 +131,15 @@ Public Class EditCustomer
         End If
         Return True
     End Function
-    Private Sub txtCorpName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-            Case Else
-                e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+    'Private Sub txtCorpName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpName.KeyPress
+    '    Select Case Asc(e.KeyChar)
+    '        Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '        Case Else
+    '            e.Handled = True
+    '            MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
-        End Select
-    End Sub
+    '    End Select
+    'End Sub
     Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
@@ -206,9 +206,6 @@ Public Class EditCustomer
         ElseIf isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
             MsgBox("ชื่อย่อบริษัทซ้ำ")
             Return True
-        ElseIf isCustomerDuplicate("email", txtEmail.Text.Trim) Then
-            MsgBox("อีเมลซ้ำ")
-            Return True
         End If
         Return False
     End Function
@@ -245,4 +242,20 @@ Public Class EditCustomer
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         SearchCustomer.Show()
     End Sub
+
+    Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
+        If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
+            MsgBox("ชื่อบริษัทซ้ำ")
+            txtCorpName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtCorp_s_Name_LostFocus(sender As Object, e As EventArgs) Handles txtCorp_s_Name.LostFocus
+        If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
+            MsgBox("ชื่อย่อบริษัทซ้ำ")
+            txtCorp_s_Name.Focus()
+        End If
+    End Sub
+
+
 End Class

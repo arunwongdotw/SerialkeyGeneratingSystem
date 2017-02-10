@@ -39,12 +39,12 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFromValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub
 
-    Private Function isFromValid() As Boolean
+    Private Function isFoพmValid() As Boolean
         Dim valid = True
         Dim regexCharAndNumber = "^[0-9a-zA-Z]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
