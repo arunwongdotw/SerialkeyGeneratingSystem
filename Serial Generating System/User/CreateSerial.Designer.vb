@@ -70,7 +70,6 @@ Partial Class CreateSerial
         Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.chbForever = New System.Windows.Forms.CheckBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -96,6 +95,8 @@ Partial Class CreateSerial
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnDecrypt = New System.Windows.Forms.Button()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -138,6 +139,7 @@ Partial Class CreateSerial
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Panel5.Controls.Add(Me.btnDecrypt)
         Me.Panel5.Controls.Add(Me.btnCopySerial)
         Me.Panel5.Controls.Add(Me.btnCopyInfo)
         Me.Panel5.Controls.Add(Me.txtSerialKey)
@@ -535,21 +537,6 @@ Partial Class CreateSerial
         Me.lblCorpSubName.TabIndex = 68
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
         '
-        'btnHeader
-        '
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1350, 67)
-        Me.btnHeader.TabIndex = 72
-        Me.btnHeader.Text = "สร้างซีเรียลคีย์"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = True
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
@@ -846,6 +833,35 @@ Partial Class CreateSerial
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
+        'btnDecrypt
+        '
+        Me.btnDecrypt.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnDecrypt.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnDecrypt.FlatAppearance.BorderSize = 0
+        Me.btnDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDecrypt.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDecrypt.Location = New System.Drawing.Point(978, 12)
+        Me.btnDecrypt.Name = "btnDecrypt"
+        Me.btnDecrypt.Size = New System.Drawing.Size(54, 75)
+        Me.btnDecrypt.TabIndex = 123
+        Me.btnDecrypt.Text = "ถอดรหัส"
+        Me.btnDecrypt.UseVisualStyleBackColor = False
+        '
+        'btnHeader
+        '
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1350, 67)
+        Me.btnHeader.TabIndex = 72
+        Me.btnHeader.Text = "สร้างซีเรียลคีย์"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = True
+        '
         'CreateSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -932,4 +948,5 @@ Partial Class CreateSerial
     Friend WithEvents btnCopySerial As System.Windows.Forms.Button
     Friend WithEvents btnCopyInfo As System.Windows.Forms.Button
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents btnDecrypt As System.Windows.Forms.Button
 End Class

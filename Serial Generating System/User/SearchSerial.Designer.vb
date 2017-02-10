@@ -41,6 +41,8 @@ Partial Class SearchSerial
         Me.chbEnglish = New System.Windows.Forms.CheckBox()
         Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtEmpID = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSoftWareName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtBrandName = New System.Windows.Forms.TextBox()
@@ -86,8 +88,6 @@ Partial Class SearchSerial
         Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.lblBrandSoftware = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.txtEmpID = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,6 +192,25 @@ Partial Class SearchSerial
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1349, 728)
         Me.Panel1.TabIndex = 4
+        '
+        'txtEmpID
+        '
+        Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmpID.Location = New System.Drawing.Point(434, 212)
+        Me.txtEmpID.Name = "txtEmpID"
+        Me.txtEmpID.Size = New System.Drawing.Size(181, 36)
+        Me.txtEmpID.TabIndex = 134
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(292, 215)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(136, 27)
+        Me.Label1.TabIndex = 133
+        Me.Label1.Text = "รหัสพนักงานี่สร้าง :"
         '
         'txtSoftWareName
         '
@@ -373,6 +392,8 @@ Partial Class SearchSerial
         '
         'dgvSerialKey
         '
+        Me.dgvSerialKey.AllowUserToAddRows = False
+        Me.dgvSerialKey.AllowUserToDeleteRows = False
         Me.dgvSerialKey.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.dgvSerialKey.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -387,6 +408,8 @@ Partial Class SearchSerial
         Me.dgvSerialKey.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column13, Me.Column14, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
         Me.dgvSerialKey.Location = New System.Drawing.Point(265, 343)
         Me.dgvSerialKey.Name = "dgvSerialKey"
+        Me.dgvSerialKey.ReadOnly = True
+        Me.dgvSerialKey.RowHeadersVisible = False
         Me.dgvSerialKey.Size = New System.Drawing.Size(1075, 367)
         Me.dgvSerialKey.TabIndex = 69
         '
@@ -394,84 +417,98 @@ Partial Class SearchSerial
         '
         Me.Column13.HeaderText = "แก้ไข"
         Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
         Me.Column13.Width = 30
         '
         'Column14
         '
         Me.Column14.HeaderText = "ลบ"
         Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
         Me.Column14.Width = 30
         '
         'Column1
         '
         Me.Column1.HeaderText = "ลำดับที่"
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         Me.Column1.Width = 50
         '
         'Column2
         '
         Me.Column2.HeaderText = "ซีเรียลคีย์"
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         Me.Column2.Width = 200
         '
         'Column3
         '
         Me.Column3.HeaderText = "แบรนด์"
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         Me.Column3.Width = 75
         '
         'Column4
         '
         Me.Column4.HeaderText = "จำนวนผู้ใช้งาน"
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         Me.Column4.Width = 75
         '
         'Column5
         '
         Me.Column5.HeaderText = "ลำดับที่ขาย"
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         Me.Column5.Width = 50
         '
         'Column6
         '
         Me.Column6.HeaderText = "ชื่อซอฟต์แวร์"
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         Me.Column6.Width = 175
         '
         'Column7
         '
         Me.Column7.HeaderText = "วันหมดอายุ"
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         Me.Column7.Width = 75
         '
         'Column8
         '
         Me.Column8.HeaderText = "เวอร์ชัน"
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         Me.Column8.Width = 60
         '
         'Column9
         '
         Me.Column9.HeaderText = "ภาษาไทย"
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         Me.Column9.Width = 50
         '
         'Column10
         '
         Me.Column10.HeaderText = "ภาษาอังกฤษ"
         Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         Me.Column10.Width = 50
         '
         'Column11
         '
         Me.Column11.HeaderText = "ภาษาจีน"
         Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
         Me.Column11.Width = 50
         '
         'Column12
         '
         Me.Column12.HeaderText = "ภาษาญี่ปุ่น"
         Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
         Me.Column12.Width = 50
         '
         'txtSEQ
@@ -632,25 +669,6 @@ Partial Class SearchSerial
         Me.tvUserMenu.Size = New System.Drawing.Size(256, 666)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
-        '
-        'txtEmpID
-        '
-        Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpID.Location = New System.Drawing.Point(434, 212)
-        Me.txtEmpID.Name = "txtEmpID"
-        Me.txtEmpID.Size = New System.Drawing.Size(181, 36)
-        Me.txtEmpID.TabIndex = 134
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(292, 215)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(136, 27)
-        Me.Label1.TabIndex = 133
-        Me.Label1.Text = "รหัสพนักงานี่สร้าง :"
         '
         'SearchSerial
         '

@@ -1,40 +1,12 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class SearchSerial
+Public Class SearchSerialOther
 
     Private con As New ConnectDB
     Public row_search As DataRow
 
-    Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
-        Try
-            Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
-            If Not (tvUserMenu.SelectedNode Is Nothing) Then
-                Select Case tn.Name
-                    Case "ndCreateSerialkey"
-                        CreateSerial.Show()
-                        Me.Hide()
-                    Case "ndAddCustomer"
-                        CreateCustomer.Show()
-                        Me.Hide()
-                    Case "ndFindCustomer"
-                        SearchCustomer.Show()
-                        Me.Hide()
-                    Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
-                        Me.Hide()
-                    Case "ndAddProduct"
-                        AddProduct.Show()
-                        Me.Hide()
-                    Case "ndSearchProduct"
-                        searchProduct.Show()
-                        Me.Hide()
-                End Select
-            End If
-        Catch ex As Exception
 
-        End Try
-    End Sub
 
     Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
@@ -44,8 +16,7 @@ Public Class SearchSerial
     Private Sub searchSerialLoad() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
-        txtAccountInfo.Text = username.ToString
-        tvUserMenu.ExpandAll()
+
         txtContractNo.Select()
 
         cmbVersion.SelectedIndex = -1
@@ -56,15 +27,9 @@ Public Class SearchSerial
 
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim frm As New Login
-        frm.Show()
-        Me.Hide()
-    End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
-    End Sub
+
 
     Private Sub lblBrandSoftware_Click(sender As Object, e As EventArgs) Handles lblBrandSoftware.Click
 
@@ -551,6 +516,8 @@ Public Class SearchSerial
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         Me.LoadData()
     End Sub
+
+
 
 
 End Class
