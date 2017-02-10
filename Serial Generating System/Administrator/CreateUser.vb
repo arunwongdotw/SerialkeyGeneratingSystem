@@ -95,6 +95,8 @@ Public Class CreateUser
             MsgBox("กรุณากรอกรหัสผ่าน")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
+        ElseIf txtEmpID.TextLength <> 5 Then
+            MsgBox("กรุณากรอกรหัสพนักงานความยาว 5 หลัก")
         ElseIf txtFirstName.Text = "" Then
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
@@ -268,5 +270,38 @@ Public Class CreateUser
         Return isDup
     End Function
 
+    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+        End Select
+    End Sub
 
+
+
+    Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
+        If isEmployeeDuplicate("username", txtUsername.Text.Trim) Then
+            MsgBox("ชื่อผู้ใช้ซ้ำ")
+            txtUsername.Focus()
+        End If
+    End Sub
+
+    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
+        If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
+            MsgBox("รหัสพนักงานซ้ำ")
+            txtEmpID.Focus()
+        End If
+    End Sub
+
+    Private Sub LostFocus_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+        If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
+            MsgBox("อีเมลซ้ำ")
+            txtEmail.Focus()
+        End If
+    End Sub
 End Class

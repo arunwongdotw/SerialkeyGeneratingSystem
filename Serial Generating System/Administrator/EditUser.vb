@@ -282,25 +282,15 @@ Public Class EditUser
         lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
     End Sub
     Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
-        If txtEmpID.Text Is String.Empty OrElse oldData("emp_id").Equals(txtEmpID.Text) Then
-            lblMsgEmpId.Visible = False
-            pbEmpId.Visible = False
-        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) AndAlso Not oldData("emp_id").Equals(txtEmpID.Text) Then
-            txtEmpID_incorrect()
-        ElseIf Not isEmployeeDuplicate("emp_id", txtEmpID.Text) AndAlso Not oldData("emp_id").Equals(txtEmpID.Text) AndAlso Not txtEmpID.Text Is String.Empty Then
-            txtEmpID_correct()
+        If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
+            MsgBox("รหัสพนักงานซ้ำ")
+            txtEmpID.Focus()
         End If
     End Sub
     Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
-        If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text.Trim) Then
-            lblMsgEmail.Visible = False
-            pbEmail.Visible = False
-        ElseIf isEmployeeDuplicate("email", txtEmail.Text.Trim) AndAlso Not oldData("email").Equals(txtEmail.Text.Trim) Then
-            txtEmail_incorrect("อีเมลซ้ำ")
-        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text.Trim) Then
-            txtEmail_incorrect("รูปแบบอีเมลไม่ถูกต้อง")
-        ElseIf Not isEmployeeDuplicate("email", txtEmail.Text) AndAlso Not oldData("email").Equals(txtEmail.Text.Trim) AndAlso Not txtEmail.Text.Trim Is String.Empty Then
-            txtEmail_correct()
+        If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
+            MsgBox("อีเมลซ้ำ")
+            txtEmpID.Focus()
         End If
     End Sub
 End Class
