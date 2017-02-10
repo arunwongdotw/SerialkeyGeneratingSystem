@@ -12,7 +12,7 @@ Public Class Login
         Application.Exit()
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Visible = False
         Dim s = New WelcomeScreen
         s.Show()
@@ -36,7 +36,7 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub TextBox1_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
+    Private Sub txtUsername_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
         If Not txtUsername.ForeColor = Color.Black Or txtUsername.Text = String.Empty Then
             txtUsername.ForeColor = Color.Gray
             txtUsername.Text = username
@@ -49,21 +49,21 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub TextBox2_empty(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
+    Private Sub txtPassword_empty(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
         If Not txtPassword.ForeColor = Color.Black Or txtPassword.Text = String.Empty Then
             txtPassword.ForeColor = Color.Gray
             txtPassword.Text = password
         End If
     End Sub
 
-    Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
+    Private Sub txtUsername_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
         If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
             txtUsername.Clear()
             txtUsername.ForeColor = Color.Black
         End If
     End Sub
 
-    Private Sub TextBox2_Click(sender As Object, e As EventArgs) Handles txtPassword.Click
+    Private Sub txtPassword_Click(sender As Object, e As EventArgs) Handles txtPassword.Click
         If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
             txtPassword.Clear()
             txtPassword.ForeColor = Color.Black
@@ -110,7 +110,7 @@ Public Class Login
         LoadData()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub bntClose_Click(sender As Object, e As EventArgs) Handles bntClose.Click
         Application.Exit()
     End Sub
 End Class

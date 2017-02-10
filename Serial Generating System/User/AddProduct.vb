@@ -156,9 +156,7 @@ Public Class AddProduct
         End Select
     End Sub
 
-    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
-       
-    End Sub
+   
 
     Private Sub txtBrand_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrand_s_name.KeyPress
         Select Case Asc(e.KeyChar)
@@ -173,9 +171,7 @@ Public Class AddProduct
         End Select
     End Sub
 
-    Private Sub txtBrand_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtBrand_s_name.TextChanged
-
-    End Sub
+   
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Me.clear()
@@ -227,5 +223,43 @@ Public Class AddProduct
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Function isProductDuplicate(field As String, Text As String) As Boolean
+        Dim isDup As Boolean = False
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Product where " & field & " ='" & Text.Trim & "'"
+        isDup = con.query(strSelect).Read
+        con.close()
+        Return isDup
+    End Function
+
+    Private Sub txtProductName_LostFocus(sender As Object, e As EventArgs) Handles txtProductName.LostFocus
+        If isProductDuplicate("product_name", txtProductName.Text.Trim) Then
+            MsgBox("ชื่อซอฟต์แวร์ซ้ำ")
+            txtProductName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtProduct_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtProduct_s_name.LostFocus
+        If isProductDuplicate("product_s_name", txtProduct_s_name.Text.Trim) Then
+            MsgBox("ชื่อย่อซอฟต์แวร์ซ้ำ")
+            txtProduct_s_name.Focus()
+        End If
+    End Sub
+
+   
+
+    Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
+        If isProductDuplicate("brand_name", txtBrandName.Text.Trim) Then
+            MsgBox("ชื่อแบรนด์ซ้ำ")
+            txtBrandName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtBrand_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtBrand_s_name.LostFocus
+        If isProductDuplicate("brand_s_name", txtBrand_s_name.Text.Trim) Then
+            MsgBox("ชื่อแบรนด์ซ้ำ")
+            txtBrand_s_name.Focus()
+        End If
     End Sub
 End Class
