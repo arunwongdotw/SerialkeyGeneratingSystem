@@ -162,7 +162,7 @@ Partial Class EditUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 635)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 637)
         Me.tvAdminMenu.TabIndex = 0
         '
         'Panel1
@@ -181,9 +181,9 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.Green
-        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1318, 701)
+        Me.Panel1.Size = New System.Drawing.Size(1318, 702)
         Me.Panel1.TabIndex = 4
         '
         'Panel3
