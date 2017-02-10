@@ -495,7 +495,19 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs)
+   
 
+    Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
+        If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
+            MsgBox("ชื่อบริษัทซ้ำ")
+            txtCorpName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtCorp_s_Name_LostFocus(sender As Object, e As EventArgs) Handles txtCorp_s_Name.LostFocus
+        If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
+            MsgBox("ชื่อย่อบริษัทซ้ำ")
+            txtCorp_s_Name.Focus()
+        End If
     End Sub
 End Class
