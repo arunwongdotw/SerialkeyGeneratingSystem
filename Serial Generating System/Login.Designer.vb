@@ -24,7 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.bntClose = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLoginUsername = New System.Windows.Forms.Button()
@@ -50,22 +50,22 @@ Partial Class Login
         Me.btnLogin.Text = "เข้าสู่ระบบ"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'Button2
+        'bntClose
         '
-        Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(239, 295)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(167, 35)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "ปิดการใช้งาน"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.bntClose.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.bntClose.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.bntClose.FlatAppearance.BorderSize = 0
+        Me.bntClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bntClose.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bntClose.ForeColor = System.Drawing.Color.White
+        Me.bntClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bntClose.Location = New System.Drawing.Point(239, 295)
+        Me.bntClose.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
+        Me.bntClose.Name = "bntClose"
+        Me.bntClose.Size = New System.Drawing.Size(167, 35)
+        Me.bntClose.TabIndex = 4
+        Me.bntClose.Text = "ปิดการใช้งาน"
+        Me.bntClose.UseVisualStyleBackColor = False
         '
         'txtUsername
         '
@@ -148,7 +148,7 @@ Partial Class Login
         Me.Controls.Add(Me.btnLoginUsername)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.bntClose)
         Me.Controls.Add(Me.btnLogin)
         Me.Font = New System.Drawing.Font("Lucida Sans Unicode", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlText
@@ -163,7 +163,7 @@ Partial Class Login
 
     End Sub
     Friend WithEvents btnLogin As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents bntClose As System.Windows.Forms.Button
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents btnLoginUsername As System.Windows.Forms.Button
