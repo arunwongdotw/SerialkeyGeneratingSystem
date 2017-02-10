@@ -67,7 +67,7 @@ Public Class SearchUser
 
     Private Sub checkTextSingle(ByVal textBox As TextBox)
         If New Regex("'").Match(txtUsername.Text).Success Then
-            MessageBox.Show("ไม่สามารถกรอก ( ' ) ได้ กรุณากรอกข้อมูลใหม่")
+            msgBox("ไม่สามารถกรอก ( ' ) ได้ กรุณากรอกข้อมูลใหม่")
             textBox.Text = textBox.Text.Replace("'", "")
         End If
     End Sub
@@ -85,10 +85,10 @@ Public Class SearchUser
                 strQuery = "delete from sgs.dbo.employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    MessageBox.Show("ขณะนี้ผู้ใช้ " & dgvSearchUser.Rows(e.RowIndex).Cells("username").Value & "ไม่สามารถเข้าสู่ระบบได้")
+                    msgBox("ขณะนี้ผู้ใช้ " & dgvSearchUser.Rows(e.RowIndex).Cells("username").Value & "ไม่สามารถเข้าสู่ระบบได้")
                     loadDataTable()
                 Else
-                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                    msgBox("ลบข้อมูลไม่สำเร็จ")
                 End If
             End If
         End If
@@ -206,6 +206,7 @@ Public Class SearchUser
             .Columns("position").Width = 120
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("fullname").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("username").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter

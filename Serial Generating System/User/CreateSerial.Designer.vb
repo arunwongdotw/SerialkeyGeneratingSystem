@@ -674,20 +674,22 @@ Partial Class CreateSerial
         '
         Me.lblOptionLanguage.AutoSize = True
         Me.lblOptionLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblOptionLanguage.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOptionLanguage.ForeColor = System.Drawing.Color.Red
         Me.lblOptionLanguage.Location = New System.Drawing.Point(664, 97)
         Me.lblOptionLanguage.Name = "lblOptionLanguage"
-        Me.lblOptionLanguage.Size = New System.Drawing.Size(173, 27)
+        Me.lblOptionLanguage.Size = New System.Drawing.Size(152, 24)
         Me.lblOptionLanguage.TabIndex = 98
         Me.lblOptionLanguage.Text = "* เลือกอย่างน้อย 1 ภาษา"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Red
         Me.Label19.Location = New System.Drawing.Point(374, 65)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(68, 27)
+        Me.Label19.Size = New System.Drawing.Size(59, 24)
         Me.Label19.TabIndex = 97
         Me.Label19.Text = "* 1-9999"
         '

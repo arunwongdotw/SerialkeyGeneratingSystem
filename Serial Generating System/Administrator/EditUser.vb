@@ -12,15 +12,11 @@ Public Class EditUser
     Private position As String
 
     Public Sub New()
-        ' This call is required by the designer.
         InitializeComponent()
-        ' Add any initialization after the InitializeComponent() call.
     End Sub
 
     Public Sub New(ByVal id As String)
-        ' This call is required by the designer.
         InitializeComponent()
-        ' Add any initialization after the InitializeComponent() call.
         Me.id = id
     End Sub
 
@@ -54,25 +50,28 @@ Public Class EditUser
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
         Dim PhonenumberRegex As String = "^[0]{1}[0-9]{9}$"
         If txtPassword.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสผ่าน")
+            MsgBox("กรุณากรอกรหัสผ่าน")
             valid = False
         ElseIf txtEmpID.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกรหัสพนักงาน")
+            MsgBox("กรุณากรอกรหัสพนักงาน")
+            valid = False
+        ElseIf txtEmpID.TextLength <> 5 Then
+            MsgBox("กรุณากรอกรหัสพนักงานความยาว 5 หลัก")
             valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกชื่อ")
+            MsgBox("กรุณากรอกชื่อ")
             valid = False
         ElseIf txtLastName.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกนามสกุล")
+            MsgBox("กรุณากรอกนามสกุล")
             valid = False
         ElseIf txtMobileNumber.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์")
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
             valid = False
         ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
-            MessageBox.Show("กรุณากรอกอีเมล")
+            MsgBox("กรุณากรอกอีเมล")
             valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
-            MessageBox.Show("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
         End If
         Return valid
@@ -85,10 +84,10 @@ Public Class EditUser
 
     Public Function checkDuplicate() As Boolean
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
-            MessageBox.Show("รหัสพนักงานซ้ำ")
+            MsgBox("รหัสพนักงานซ้ำ")
             Return True
         ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) Then
-            MessageBox.Show("อีเมลซ้ำ")
+            MsgBox("อีเมลซ้ำ")
             Return True
         End If
         Return False
@@ -101,27 +100,27 @@ Public Class EditUser
         Return isDup
     End Function
 
-    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub rdbIT_CheckedChanged(sender As Object, e As EventArgs) Handles rdbIT.CheckedChanged
         position = "IT"
     End Sub
 
-    Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub rdbAccountant_CheckedChanged(sender As Object, e As EventArgs) Handles rdbAccountant.CheckedChanged
         position = "Accountant"
     End Sub
 
-    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedValueChanged
         userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
     End Sub
 
-    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
         perCreate = IIf(chbPerCreate.Checked, 1, 0)
     End Sub
 
-    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
         perdelete = IIf(chbPerDelete.Checked, 1, 0)
     End Sub
 
-    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
         perEdit = IIf(chbPerEdit.Checked, 1, 0)
     End Sub
 
@@ -141,15 +140,18 @@ Public Class EditUser
         strquery &= " per_delete = '" & perdelete & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
-            MessageBox.Show("บันทึกข้อมูลสำเร็จ")
-        Else : MessageBox.Show("บันทึกข้อมูลไม่สำเร็จ")
+            MsgBox("บันทึกข้อมูลสำเร็จ")
+        Else : MsgBox("บันทึกข้อมูลไม่สำเร็จ")
         End If
         Me.Hide()
         Dim formSearchUser As New SearchUser
         formSearchUser.Show()
     End Sub
     Private Sub convertData()
-        IIf(position.Equals("IT"), rdbIT.Checked = True, rdbAccountant.Checked = True)
+        If position.Equals("IT") Then
+            rdbIT.Checked = True
+        Else : rdbAccountant.Checked = True
+        End If
         chbPerCreate.Checked = perCreate = 1
         chbPerDelete.Checked = perdelete = 1
         chbPerEdit.Checked = perEdit = 1
@@ -194,7 +196,7 @@ Public Class EditUser
         con.close()
     End Sub
 
-    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13, 46
             Case Else
@@ -203,34 +205,43 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtMobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57, 8, 13, 46
+            Case Else
+                e.Handled = True
+                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+        End Select
+    End Sub
+
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
-    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
-    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46
             Case Else
@@ -270,7 +281,7 @@ Public Class EditUser
         lblMsgEmail.ForeColor = Color.ForestGreen
         lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
     End Sub
-    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs)
+    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
         If txtEmpID.Text Is String.Empty OrElse oldData("emp_id").Equals(txtEmpID.Text) Then
             lblMsgEmpId.Visible = False
             pbEmpId.Visible = False
@@ -280,7 +291,7 @@ Public Class EditUser
             txtEmpID_correct()
         End If
     End Sub
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs)
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
         If txtEmail.Text Is String.Empty OrElse oldData("email").Equals(txtEmail.Text.Trim) Then
             lblMsgEmail.Visible = False
             pbEmail.Visible = False

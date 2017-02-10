@@ -333,11 +333,11 @@ Partial Class EditCustomer
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(786, 193)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(114, 25)
+        Me.Label5.Size = New System.Drawing.Size(109, 24)
         Me.Label5.TabIndex = 92
         Me.Label5.Text = "อย่างน้อย 1 เบอร์"
         '
@@ -354,11 +354,11 @@ Partial Class EditCustomer
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
+        Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(781, 168)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(164, 25)
+        Me.Label8.Size = New System.Drawing.Size(153, 24)
         Me.Label8.TabIndex = 90
         Me.Label8.Text = "*กรุณากรอกเบอร์โทรศัพท์"
         '
