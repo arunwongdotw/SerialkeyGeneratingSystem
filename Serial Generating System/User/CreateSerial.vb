@@ -501,7 +501,7 @@ Public Class CreateSerial
                     MsgBox("กรุณากรอกจำนวนผู้ใช้งานซอฟต์แวร์")
                     'isCorrect = False
                 ElseIf i = 0 Or i > 4 Then
-                    MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 4 หลัก")
+                    MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์จะต้องมากกว่า 0 และห้ามเกิน 9999")
                     'isCorrect = False
                     ''End If
                 Else
@@ -753,4 +753,7 @@ Public Class CreateSerial
             btnCopySerial.Visible = True
         End If
     End Sub
+
+
+
 End Class

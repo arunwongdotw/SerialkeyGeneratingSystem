@@ -74,7 +74,7 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1350, 768)
+        Me.Panel1.Size = New System.Drawing.Size(1317, 698)
         Me.Panel1.TabIndex = 4
         '
         'pbAccountInfo
@@ -82,7 +82,7 @@ Partial Class CheckConnectUser
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1312, 3)
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
         Me.pbAccountInfo.Name = "pbAccountInfo"
         Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
         Me.pbAccountInfo.TabIndex = 27
@@ -92,11 +92,12 @@ Partial Class CheckConnectUser
         '
         Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1142, 27)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
         Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
+        Me.txtAccountInfo.ReadOnly = True
+        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
         Me.txtAccountInfo.TabIndex = 26
         Me.txtAccountInfo.TabStop = False
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -106,9 +107,9 @@ Partial Class CheckConnectUser
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(381, 82)
+        Me.Label5.Location = New System.Drawing.Point(365, 86)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 26)
+        Me.Label5.Size = New System.Drawing.Size(259, 27)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "ผู้ใช้งานระบบที่กำลังเชื่อมต่อในขณะนี้"
         '
@@ -122,7 +123,7 @@ Partial Class CheckConnectUser
         Me.btnHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1350, 68)
+        Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
         Me.btnHeader.TabIndex = 24
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ"
@@ -133,9 +134,9 @@ Partial Class CheckConnectUser
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1202, 668)
+        Me.Label4.Location = New System.Drawing.Point(1188, 647)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 26)
+        Me.Label4.Size = New System.Drawing.Size(30, 27)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "คน"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -144,9 +145,9 @@ Partial Class CheckConnectUser
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1202, 622)
+        Me.Label3.Location = New System.Drawing.Point(1188, 613)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 26)
+        Me.Label3.Size = New System.Drawing.Size(30, 27)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -168,7 +169,7 @@ Partial Class CheckConnectUser
         Me.TextBox2.BackColor = System.Drawing.Color.White
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(1104, 668)
+        Me.TextBox2.Location = New System.Drawing.Point(1090, 647)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(92, 29)
         Me.TextBox2.TabIndex = 15
@@ -179,7 +180,7 @@ Partial Class CheckConnectUser
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1104, 622)
+        Me.TextBox1.Location = New System.Drawing.Point(1090, 613)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(92, 29)
         Me.TextBox1.TabIndex = 14
@@ -189,9 +190,9 @@ Partial Class CheckConnectUser
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(948, 668)
+        Me.Label2.Location = New System.Drawing.Point(934, 647)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(140, 26)
+        Me.Label2.Size = New System.Drawing.Size(140, 27)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -200,9 +201,9 @@ Partial Class CheckConnectUser
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(940, 622)
+        Me.Label1.Location = New System.Drawing.Point(926, 613)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 26)
+        Me.Label1.Size = New System.Drawing.Size(148, 27)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -219,9 +220,9 @@ Partial Class CheckConnectUser
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id, Me.del})
-        Me.DataGridView1.Location = New System.Drawing.Point(386, 121)
+        Me.DataGridView1.Location = New System.Drawing.Point(370, 127)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(847, 483)
+        Me.DataGridView1.Size = New System.Drawing.Size(848, 483)
         Me.DataGridView1.TabIndex = 11
         Me.DataGridView1.TabStop = False
         '
@@ -288,7 +289,7 @@ Partial Class CheckConnectUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 666)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 635)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
@@ -296,7 +297,7 @@ Partial Class CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.ClientSize = New System.Drawing.Size(1317, 698)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CheckConnectUser"

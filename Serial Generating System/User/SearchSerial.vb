@@ -118,27 +118,27 @@ Public Class SearchSerial
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
             Col.Width = 60
-            Col.DataPropertyName = "s.seq"
-            Col.Name = "s.seq"
+            Col.DataPropertyName = "seq"
+            Col.Name = "seq"
             Col.ReadOnly = True
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "หมายเลขสัญญา"
-            Col.Width = 70
+            Col.Width = 100
             'Col.Visible = False
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.contractbook_id"
-            Col.Name = "s.contractbook_id"
+            Col.DataPropertyName = "contractbook_id"
+            Col.Name = "contractbook_id"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ซีเรียลคีย์"
-            Col.Width = 70
+            Col.Width = 150
             'Col.Visible = False
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.serialKey_ez"
-            Col.Name = "s.serialKey_ez"
+            Col.DataPropertyName = "serialKey_ez"
+            Col.Name = "serialKey_ez"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
@@ -146,8 +146,8 @@ Public Class SearchSerial
             Col.Width = 150
             Col.ReadOnly = True
             'Col.Visible = False
-            Col.DataPropertyName = "s.serialKey_r"
-            Col.Name = "s.serialKey_r"
+            Col.DataPropertyName = "serialKey_r"
+            Col.Name = "serialKey_r"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
@@ -155,106 +155,106 @@ Public Class SearchSerial
             Col.Width = 150
             'Col.Visible = False
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.serialKey_encrypted"
-            Col.Name = "s.serialKey_encrypted"
+            Col.DataPropertyName = "serialKey_encrypted"
+            Col.Name = "serialKey_encrypted"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "สำหรับบริษัท"
-            Col.Width = 135
+            Col.Width = 140
             Col.ReadOnly = True
-            Col.DataPropertyName = "c.corpname"
-            Col.Name = "c.corpname"
+            Col.DataPropertyName = "corpname"
+            Col.Name = "corpname"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
-            Col.Width = 50
+            Col.Width = 70
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.corp_s_name"
-            Col.Name = "s.corp_s_name"
+            Col.DataPropertyName = "corp_s_name"
+            Col.Name = "corp_s_name"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อแบรนด์"
-            Col.Width = 125
+            Col.Width = 150
             Col.ReadOnly = True
-            Col.DataPropertyName = "p.brand_name"
-            Col.Name = "p.brand_name"
+            Col.DataPropertyName = "brand_name"
+            Col.Name = "brand_name"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อแบรนด์"
-            Col.Width = 125
+            Col.Width = 150
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.brand_s_name"
-            Col.Name = "s.brand_s_name"
+            Col.DataPropertyName = "brand_s_name"
+            Col.Name = "brand_s_name"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "จำนวนผู้ใช้"
             Col.Width = 100
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.total_user"
-            Col.Name = "s.total_user"
+            Col.DataPropertyName = "total_user"
+            Col.Name = "total_user"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อซอฟต์แวร์"
             Col.Width = 200
             Col.ReadOnly = True
-            Col.DataPropertyName = "p.product_name"
-            Col.Name = "p.product_name"
+            Col.DataPropertyName = "product_name"
+            Col.Name = "product_name"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อซอฟต์แวร์"
             Col.Width = 100
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.product_s_name"
-            Col.Name = "s.product_s_name"
+            Col.DataPropertyName = "product_s_Name"
+            Col.Name = "product_s_Name"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "เวอร์ชัน"
             Col.Width = 100
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.version"
-            Col.Name = "s.version"
+            Col.DataPropertyName = "version"
+            Col.Name = "version"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "วันที่สร้าง"
             Col.Width = 100
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.Createdate"
-            Col.Name = "s.Createdate"
+            Col.DataPropertyName = "Createdate"
+            Col.Name = "Createdate"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "วันหมดอายุ"
             Col.Width = 100
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.EXPdate"
-            Col.Name = "s.EXPdate"
+            Col.DataPropertyName = "EXPdate"
+            Col.Name = "EXPdate"
             Me.dgvSerialKey.Columns.Add(Col)
 
             Dim chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "QualityControl"
-            chk.Width = 125
+            chk.Width = 110
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.quality_control"
-            chk.Name = "s.quality_control"
+            chk.DataPropertyName = "quality_control"
+            chk.Name = "quality_control"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "WarehouseManagement"
-            chk.Width = 125
+            chk.Width = 130
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.wharehouse_management"
-            chk.Name = "s.wharehouse_management"
+            chk.DataPropertyName = "wharehouse_management"
+            chk.Name = "wharehouse_management"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
@@ -263,8 +263,8 @@ Public Class SearchSerial
             chk.HeaderText = "ภาษาไทย"
             chk.Width = 50
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.thai"
-            chk.Name = "s.thai"
+            chk.DataPropertyName = "thai"
+            chk.Name = "thai"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
@@ -273,8 +273,8 @@ Public Class SearchSerial
             chk.HeaderText = "ภาษาอังกฤษ"
             chk.Width = 50
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.eng"
-            chk.Name = "s.eng"
+            chk.DataPropertyName = "eng"
+            chk.Name = "eng"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
@@ -283,8 +283,8 @@ Public Class SearchSerial
             chk.HeaderText = "ภาษาจีน"
             chk.Width = 50
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.china"
-            chk.Name = "s.china"
+            chk.DataPropertyName = "china"
+            chk.Name = "china"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
@@ -293,8 +293,8 @@ Public Class SearchSerial
             chk.HeaderText = "ภาษาญี่ปุ่น"
             chk.Width = 50
             chk.ReadOnly = True
-            chk.DataPropertyName = "s.japan"
-            chk.Name = "s.japan"
+            chk.DataPropertyName = "japan"
+            chk.Name = "japan"
             chk.FlatStyle = FlatStyle.Flat
             chk.DefaultCellStyle.ForeColor = Color.Gray
             Me.dgvSerialKey.Columns.Add(chk)
@@ -303,8 +303,8 @@ Public Class SearchSerial
             Col.HeaderText = "รหัสพนักงานที่สร้าง"
             Col.Width = 150
             Col.ReadOnly = True
-            Col.DataPropertyName = "s.emp_id"
-            Col.Name = "s.emp_id"
+            Col.DataPropertyName = "emp_id"
+            Col.Name = "emp_id"
             Me.dgvSerialKey.Columns.Add(Col)
 
             'Dim btnEdit As New DataGridViewButtonColumn()
@@ -434,10 +434,10 @@ Public Class SearchSerial
             'sql &= province & postalcode & email & phone
 
             sql = "select s.contractbook_id,s.serialKey_r,s.serialKey_ez,s.serialKey_encrypted,s.brand_s_name,p.brand_name,s.total_user,s.seq "
-            sql &= ",s.product_s_name , p.product_name, s.EXPdate, s.version, s.wharehouse_management, s.quality_control ,s.eng,s.thai,s.china,s.japan  "
-            sql &= ",s.createDATE,c.corpname,s.corp_s_name "
+            sql &= ",s.product_s_Name , p.product_name, s.EXPdate, s.version, s.wharehouse_management, s.quality_control ,s.eng,s.thai,s.china,s.japan  "
+            sql &= ",s.Createdate,c.corpname,s.corp_s_name "
             sql &= " from customer c join serialKey s on c.corp_s_name = s.corp_s_name join product p on s.product_s_name = p.product_s_name "
-            sql &= " where s.id <> -1 "
+            sql &= " where s.seq <> -1 "
             sql &= corpname & corp_s_name & ContractNo & brandname & brand_s_name & version & seq & product_name & product_s_name & total_user
             sql &= E & T & C & J '& cellphone
 
@@ -551,4 +551,6 @@ Public Class SearchSerial
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         Me.LoadData()
     End Sub
+
+
 End Class

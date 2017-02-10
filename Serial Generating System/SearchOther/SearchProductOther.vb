@@ -101,7 +101,7 @@ Public Class SearchProductOther
             Me.dgvSearchProduct.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "thai"
+            chk.HeaderText = "ภาษาไทย"
             chk.Width = 35
             chk.ReadOnly = True
             chk.DataPropertyName = "thai"
@@ -111,7 +111,7 @@ Public Class SearchProductOther
             Me.dgvSearchProduct.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "eng"
+            chk.HeaderText = "ภาษาอังกฤษ"
             chk.Width = 35
             chk.ReadOnly = True
             chk.DataPropertyName = "eng"
@@ -121,7 +121,7 @@ Public Class SearchProductOther
             Me.dgvSearchProduct.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "china"
+            chk.HeaderText = "ภาษาจีน"
             chk.Width = 35
             chk.ReadOnly = True
             chk.DataPropertyName = "china"
@@ -131,7 +131,7 @@ Public Class SearchProductOther
             Me.dgvSearchProduct.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "japan"
+            chk.HeaderText = "ภาษาญี่ปุ่น"
             chk.Width = 35
             chk.ReadOnly = True
             chk.DataPropertyName = "japan"

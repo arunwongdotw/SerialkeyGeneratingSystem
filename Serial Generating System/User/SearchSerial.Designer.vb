@@ -351,6 +351,7 @@ Partial Class SearchSerial
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
         Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
         Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 22)
         Me.txtAccountInfo.TabIndex = 71
         Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
