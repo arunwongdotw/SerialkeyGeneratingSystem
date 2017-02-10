@@ -78,8 +78,8 @@ Partial Class EditUser
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnEditFormAttachImage = New System.Windows.Forms.Button()
-        Me.pbEditFormAttachImage = New System.Windows.Forms.PictureBox()
+        Me.btnAttachUserImage = New System.Windows.Forms.Button()
+        Me.pbAttachUserImage = New System.Windows.Forms.PictureBox()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
@@ -91,7 +91,7 @@ Partial Class EditUser
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.pbEditFormAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -144,7 +144,7 @@ Partial Class EditUser
         Me.tvAdminMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAdminMenu.HotTracking = True
         Me.tvAdminMenu.ItemHeight = 44
-        Me.tvAdminMenu.Location = New System.Drawing.Point(0, 62)
+        Me.tvAdminMenu.Location = New System.Drawing.Point(0, 65)
         Me.tvAdminMenu.Name = "tvAdminMenu"
         TreeNode1.Name = "ndCreateUserAccount"
         TreeNode1.Text = "สร้างบัญชีผู้ใช้"
@@ -162,7 +162,7 @@ Partial Class EditUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 668)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 637)
         Me.tvAdminMenu.TabIndex = 0
         '
         'Panel1
@@ -170,8 +170,8 @@ Partial Class EditUser
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.btnEditFormAttachImage)
-        Me.Panel1.Controls.Add(Me.pbEditFormAttachImage)
+        Me.Panel1.Controls.Add(Me.btnAttachUserImage)
+        Me.Panel1.Controls.Add(Me.pbAttachUserImage)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
@@ -181,9 +181,9 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.Green
-        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1349, 768)
+        Me.Panel1.Size = New System.Drawing.Size(1318, 702)
         Me.Panel1.TabIndex = 4
         '
         'Panel3
@@ -219,9 +219,9 @@ Partial Class EditUser
         Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Location = New System.Drawing.Point(404, 244)
+        Me.Panel3.Location = New System.Drawing.Point(285, 244)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(882, 290)
+        Me.Panel3.Size = New System.Drawing.Size(1001, 290)
         Me.Panel3.TabIndex = 134
         '
         'Panel5
@@ -229,7 +229,7 @@ Partial Class EditUser
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.rdbIT)
         Me.Panel5.Controls.Add(Me.rdbAccountant)
-        Me.Panel5.Location = New System.Drawing.Point(586, 144)
+        Me.Panel5.Location = New System.Drawing.Point(703, 144)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(249, 36)
         Me.Panel5.TabIndex = 97
@@ -298,7 +298,7 @@ Partial Class EditUser
         Me.lblMsgEmail.AutoSize = True
         Me.lblMsgEmail.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMsgEmail.ForeColor = System.Drawing.Color.Green
-        Me.lblMsgEmail.Location = New System.Drawing.Point(417, 175)
+        Me.lblMsgEmail.Location = New System.Drawing.Point(455, 150)
         Me.lblMsgEmail.Name = "lblMsgEmail"
         Me.lblMsgEmail.Size = New System.Drawing.Size(115, 24)
         Me.lblMsgEmail.TabIndex = 124
@@ -373,7 +373,7 @@ Partial Class EditUser
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(842, 64)
+        Me.Label17.Location = New System.Drawing.Point(959, 64)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 77
@@ -398,7 +398,7 @@ Partial Class EditUser
         Me.cmbUserType.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbUserType.FormattingEnabled = True
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
-        Me.cmbUserType.Location = New System.Drawing.Point(585, 62)
+        Me.cmbUserType.Location = New System.Drawing.Point(703, 62)
         Me.cmbUserType.Name = "cmbUserType"
         Me.cmbUserType.Size = New System.Drawing.Size(250, 35)
         Me.cmbUserType.TabIndex = 9
@@ -409,7 +409,7 @@ Partial Class EditUser
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label11.Location = New System.Drawing.Point(462, 65)
+        Me.Label11.Location = New System.Drawing.Point(579, 64)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(119, 27)
         Me.Label11.TabIndex = 71
@@ -465,7 +465,7 @@ Partial Class EditUser
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label12.Location = New System.Drawing.Point(408, 106)
+        Me.Label12.Location = New System.Drawing.Point(525, 106)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(172, 27)
         Me.Label12.TabIndex = 67
@@ -509,7 +509,7 @@ Partial Class EditUser
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(508, 148)
+        Me.Label6.Location = New System.Drawing.Point(625, 148)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(73, 27)
         Me.Label6.TabIndex = 14
@@ -576,7 +576,7 @@ Partial Class EditUser
         Me.Panel4.Controls.Add(Me.chbPerCreate)
         Me.Panel4.Controls.Add(Me.chbPerEdit)
         Me.Panel4.Controls.Add(Me.chbPerDelete)
-        Me.Panel4.Location = New System.Drawing.Point(586, 102)
+        Me.Panel4.Location = New System.Drawing.Point(703, 102)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(249, 36)
         Me.Panel4.TabIndex = 96
@@ -704,39 +704,39 @@ Partial Class EditUser
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
         '
-        'btnEditFormAttachImage
+        'btnAttachUserImage
         '
-        Me.btnEditFormAttachImage.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btnEditFormAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnEditFormAttachImage.FlatAppearance.BorderSize = 0
-        Me.btnEditFormAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditFormAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditFormAttachImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnEditFormAttachImage.Location = New System.Drawing.Point(285, 203)
-        Me.btnEditFormAttachImage.Name = "btnEditFormAttachImage"
-        Me.btnEditFormAttachImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnEditFormAttachImage.TabIndex = 132
-        Me.btnEditFormAttachImage.TabStop = False
-        Me.btnEditFormAttachImage.Text = "เพิ่มรูปภาพ"
-        Me.btnEditFormAttachImage.UseVisualStyleBackColor = False
+        Me.btnAttachUserImage.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnAttachUserImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnAttachUserImage.FlatAppearance.BorderSize = 0
+        Me.btnAttachUserImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAttachUserImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttachUserImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnAttachUserImage.Location = New System.Drawing.Point(285, 203)
+        Me.btnAttachUserImage.Name = "btnAttachUserImage"
+        Me.btnAttachUserImage.Size = New System.Drawing.Size(113, 35)
+        Me.btnAttachUserImage.TabIndex = 132
+        Me.btnAttachUserImage.TabStop = False
+        Me.btnAttachUserImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAttachUserImage.UseVisualStyleBackColor = False
         '
-        'pbEditFormAttachImage
+        'pbAttachUserImage
         '
-        Me.pbEditFormAttachImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbEditFormAttachImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbEditFormAttachImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbEditFormAttachImage.Location = New System.Drawing.Point(285, 92)
-        Me.pbEditFormAttachImage.Name = "pbEditFormAttachImage"
-        Me.pbEditFormAttachImage.Size = New System.Drawing.Size(113, 116)
-        Me.pbEditFormAttachImage.TabIndex = 131
-        Me.pbEditFormAttachImage.TabStop = False
+        Me.pbAttachUserImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAttachUserImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAttachUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbAttachUserImage.Location = New System.Drawing.Point(285, 92)
+        Me.pbAttachUserImage.Name = "pbAttachUserImage"
+        Me.pbAttachUserImage.Size = New System.Drawing.Size(113, 116)
+        Me.pbAttachUserImage.TabIndex = 131
+        Me.pbAttachUserImage.TabStop = False
         '
         'pbAccountInfo
         '
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
         Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1311, 3)
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
         Me.pbAccountInfo.Name = "pbAccountInfo"
         Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
         Me.pbAccountInfo.TabIndex = 85
@@ -748,7 +748,7 @@ Partial Class EditUser
         Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1141, 25)
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.ReadOnly = True
         Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
@@ -764,7 +764,7 @@ Partial Class EditUser
         Me.btnHeader.ForeColor = System.Drawing.Color.White
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1348, 65)
+        Me.btnHeader.Size = New System.Drawing.Size(1317, 65)
         Me.btnHeader.TabIndex = 82
         Me.btnHeader.Text = "แก้ไขบัญชีผู้ใช้"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -774,7 +774,7 @@ Partial Class EditUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.ClientSize = New System.Drawing.Size(1319, 702)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditUser"
@@ -792,7 +792,7 @@ Partial Class EditUser
         Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.pbEditFormAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -809,8 +809,8 @@ Partial Class EditUser
     Friend WithEvents lblMsgEmpId As System.Windows.Forms.Label
     Friend WithEvents lblMsgEmail As System.Windows.Forms.Label
     Friend WithEvents pbEmail As System.Windows.Forms.PictureBox
-    Friend WithEvents btnEditFormAttachImage As System.Windows.Forms.Button
-    Friend WithEvents pbEditFormAttachImage As System.Windows.Forms.PictureBox
+    Friend WithEvents btnAttachUserImage As System.Windows.Forms.Button
+    Friend WithEvents pbAttachUserImage As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label

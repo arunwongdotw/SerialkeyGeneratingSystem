@@ -756,4 +756,8 @@ Public Class CreateSerial
 
 
 
+    Private Sub btnDecrypt_Click(sender As Object, e As EventArgs) Handles btnDecrypt.Click
+        Dim frm As New Decrypt
+        frm.Show()
+    End Sub
 End Class

@@ -120,6 +120,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="SearchOther\Decrypt.Designer.vb">
+      <DependentUpon>Decrypt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOther\Decrypt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOther\SearchSerialOther.Designer.vb">
+      <DependentUpon>SearchSerialOther.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOther\SearchSerialOther.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SearchOther\searchCusOther.Designer.vb">
       <DependentUpon>searchCusOther.vb</DependentUpon>
     </Compile>
@@ -235,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\MainAdmin.resx">
       <DependentUpon>MainAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOther\Decrypt.resx">
+      <DependentUpon>Decrypt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOther\SearchSerialOther.resx">
+      <DependentUpon>SearchSerialOther.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchOther\searchCusOther.resx">
       <DependentUpon>searchCusOther.vb</DependentUpon>
