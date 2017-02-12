@@ -136,7 +136,7 @@ Public Class EditCustomer
     '        Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
     '        Case Else
     '            e.Handled = True
-    '            MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+    '            msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
     '    End Select
     'End Sub
@@ -145,7 +145,7 @@ Public Class EditCustomer
             Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
         End Select
     End Sub
@@ -154,7 +154,7 @@ Public Class EditCustomer
             Case 58 To 122, 8, 13, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
@@ -163,7 +163,7 @@ Public Class EditCustomer
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
         End Select
     End Sub
     Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
@@ -171,7 +171,7 @@ Public Class EditCustomer
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -180,14 +180,14 @@ Public Class EditCustomer
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
     Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
     Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
@@ -195,7 +195,7 @@ Public Class EditCustomer
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -257,7 +257,20 @@ Public Class EditCustomer
         End If
     End Sub
 
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = True
+                msgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
+            Case Else
+                e.Handled = False
 
+        End Select
+    End Subs
 
     Private Sub btnAttachNewCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewCustomerImage.Click
         ofdAttachNewCustomerImage.Title = "เลือกไฟล์รูปภาพ"

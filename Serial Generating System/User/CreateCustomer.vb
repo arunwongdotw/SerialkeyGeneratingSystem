@@ -4,8 +4,6 @@ Imports System.Data
 
 Public Class CreateCustomer
     Private con As New ConnectDB
-
-
     'Function CheckData() As Boolean
     '    Try
     '        Dim sql As String = "select top(1) from customer where corp_s_name = '" & txtCorp_s_Name.Text.Trim & "'"
@@ -25,9 +23,7 @@ Public Class CreateCustomer
     'End Function
 
     Private Sub add()
-
         Dim strSQL As String
-
         strSQL = "insert into customer (corpname,corp_s_name,corpgroup,firstname,lastname,house_no,road,lane,subdistrict,district,province"
         strSQL &= ",postalcode,email,phone,cellphone,corp_image) "
         strSQL &= "values ('" & Trim(txtCorpName.Text) & "',"
@@ -46,17 +42,14 @@ Public Class CreateCustomer
         strSQL &= "'" & Trim(txtPhone.Text) & "',"
         strSQL &= "'" & Trim(txtcellphone.Text) & "',"
         strSQL &= "'" & pbAttachCustomerImage.ImageLocation & "')"
-
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
             MsgBox("การเพิ่มข้อมูลล้มเหลว")
         Else
             MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
             Me.clear()
-
         End If
         con.close()
-
         '  [id]()
         ',[corpname]
         ',[corp_s_name]
@@ -73,9 +66,6 @@ Public Class CreateCustomer
         ',[email]
         ',[phone]
         '  FROM [SGS].[dbo].[Customer]
-
-
-
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -86,7 +76,6 @@ Public Class CreateCustomer
         Dim EmailRegexCheck As New Regex(EmailRegex)
         Dim houseNoRegexCheck As New Regex(houseNo)
         'Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
-
         'ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
         'MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         If txtCorpName.Text = "" Then
@@ -113,7 +102,6 @@ Public Class CreateCustomer
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             'ElseIf txtPhone.Text = "" Then
             '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
-
         ElseIf txtPostalCode.Text = "" Then
             MsgBox("กรุณากรอกรหัสไปรษณีย์")
         Else
@@ -122,7 +110,6 @@ Public Class CreateCustomer
         Return isCorrect
     End Function
 
-
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
@@ -130,17 +117,11 @@ Public Class CreateCustomer
             'If CheckData() = True Then
             add()
             'End If
-
         End If
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 
     Private Sub Create_Customer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
-
     End Sub
 
     Private Sub Create_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -149,10 +130,9 @@ Public Class CreateCustomer
         txtAccountInfo.Text = username.ToString
         txtCorpName.Select()
         tvUserMenu.ExpandAll()
-
     End Sub
 
-    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -163,16 +143,12 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
 
-    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -183,16 +159,12 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
 
-    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -200,12 +172,12 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
 
         End Select
     End Sub
 
-    Private Sub txtcellPhone_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtcellPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -213,20 +185,12 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
 
         End Select
     End Sub
 
-    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtPostalCode_KeyDown(sender As Object, e As KeyEventArgs)
-
-    End Sub
-
-    Private Sub txtPostalCode_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtPostalCode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPostalCode.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -234,13 +198,9 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
 
         End Select
-    End Sub
-
-    Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -319,7 +279,7 @@ Public Class CreateCustomer
         End Try
     End Sub
 
-    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -327,22 +287,17 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
         End Select
     End Sub
 
-
-    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
     Public Function checkDuplicate() As Boolean
         If isCustomerDuplicate("corpname", txtCorpName.Text) Then
-            MessageBox.Show("ชื่อบริษัทซ้ำ")
+            msgBox("ชื่อบริษัทซ้ำ")
             Return True
         ElseIf isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text) Then
-            MessageBox.Show("ชื่อย่อบริษัทซ้ำ")
+            msgBox("ชื่อย่อบริษัทซ้ำ")
             Return True
         End If
         Return False
@@ -356,7 +311,7 @@ Public Class CreateCustomer
         Return isDup
     End Function
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -364,22 +319,14 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = True
-                MessageBox.Show("อีเมลไม่สามารถใช้ภาษาไทยได้")
+                msgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
             Case Else
                 e.Handled = False
 
         End Select
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58 ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -390,16 +337,12 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
 
-    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48 มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -410,16 +353,12 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
 
         End Select
     End Sub
 
-    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -431,7 +370,7 @@ Public Class CreateCustomer
                 '    e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
 
         End Select
     End Sub
@@ -451,7 +390,7 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
@@ -471,7 +410,7 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
@@ -491,7 +430,7 @@ Public Class CreateCustomer
 
             Case Else
                 e.Handled = True
-                MessageBox.Show("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
 
         End Select
     End Sub
