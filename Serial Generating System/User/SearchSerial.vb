@@ -13,21 +13,27 @@ Public Class SearchSerial
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
                         CreateSerial.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
                         CreateCustomer.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
                         SearchCustomer.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
                         AddProduct.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
                         searchProduct.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
@@ -448,11 +454,11 @@ Public Class SearchSerial
             dt.Clear()
 
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                dgvSerialKey.Columns.Clear()
-                GenerateColumn()
-                dgvSerialKey.DataSource = dt
-            End If
+            'If dt.Rows.Count > 0 Then
+            dgvSerialKey.Columns.Clear()
+            GenerateColumn()
+            dgvSerialKey.DataSource = dt
+            'End If
 
 
 
@@ -464,7 +470,7 @@ Public Class SearchSerial
             'dgvSearchCus.DataSource = table
 
         Catch ex As Exception
-            MsgBox("ไม่พบข้อมูล")
+            'MsgBox("ไม่พบข้อมูล")
 
         End Try
 
@@ -472,6 +478,7 @@ Public Class SearchSerial
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Me.clear()
+        Me.LoadData()
 
     End Sub
 

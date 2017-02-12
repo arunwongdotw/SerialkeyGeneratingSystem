@@ -36,21 +36,27 @@ Public Class CreateSerial
                 Select Case tn.Name
                     Case "ndFindSerialkey"
                         SearchSerial.Show()
+                        Me.clearAll()
                         Me.Hide()
                     Case "ndAddCustomer"
                         CreateCustomer.Show()
+                        Me.clearAll()
                         Me.Hide()
                     Case "ndFindCustomer"
                         SearchCustomer.Show()
+                        Me.clearAll()
                         Me.Hide()
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
+                        Me.clearAll()
                         Me.Hide()
                     Case "ndAddProduct"
                         AddProduct.Show()
+                        Me.clearAll()
                         Me.Hide()
                     Case "ndSearchProduct"
                         searchProduct.Show()
+                        Me.clearAll()
                         Me.Hide()
                 End Select
             End If

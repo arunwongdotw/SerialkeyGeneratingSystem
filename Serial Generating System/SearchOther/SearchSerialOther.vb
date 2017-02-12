@@ -9,7 +9,7 @@ Public Class SearchSerialOther
 
 
     Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Application.Exit()
+        Me.Dispose()
 
     End Sub
 
@@ -412,11 +412,11 @@ Public Class SearchSerialOther
             dt.Clear()
 
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                dgvSerialKey.Columns.Clear()
-                GenerateColumn()
-                dgvSerialKey.DataSource = dt
-            End If
+            'If dt.Rows.Count > 0 Then
+            dgvSerialKey.Columns.Clear()
+            GenerateColumn()
+            dgvSerialKey.DataSource = dt
+            'End If
 
 
 
@@ -428,7 +428,7 @@ Public Class SearchSerialOther
             'dgvSearchCus.DataSource = table
 
         Catch ex As Exception
-            MsgBox("ไม่พบข้อมูล")
+            'MsgBox("ไม่พบข้อมูล")
 
         End Try
 
