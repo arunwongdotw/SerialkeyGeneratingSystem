@@ -305,21 +305,27 @@ Public Class searchProduct
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
                         CreateSerial.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                     Case "ndFindSerialkey"
                         SearchSerial.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                     Case "ndAddCustomer"
                         CreateCustomer.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                     Case "ndFindCustomer"
                         SearchCustomer.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                     Case "ndUserResetPassword"
                         ChangePasswordUser.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                     Case "ndAddProduct"
                         AddProduct.Show()
+                        Me.clearTextBox()
                         Me.Hide()
                 End Select
             End If

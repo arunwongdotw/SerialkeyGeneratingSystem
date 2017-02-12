@@ -280,4 +280,60 @@ Public Class EditCustomer
             pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
+
+    Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
+        Try
+            Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
+            If Not (tvUserMenu.SelectedNode Is Nothing) Then
+                Select Case tn.Name
+                    Case "ndCreateSerialkey"
+                        CreateSerial.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndFindSerialkey"
+                        SearchSerial.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndFindCustomer"
+                        SearchCustomer.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndUserResetPassword"
+                        ChangePasswordUser.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndAddProduct"
+                        AddProduct.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndSearchProduct"
+                        searchProduct.Show()
+                        Me.clear()
+                        Me.Hide()
+                End Select
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub clear()
+        txtCorpName.Clear()
+        txtCorp_s_Name.Clear()
+        txtCorpGroup.Clear()
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtHouseNo.Clear()
+        txtRoad.Clear()
+        txtLane.Clear()
+        txtSubdistrict.Clear()
+        txtDistrict.Clear()
+        txtProvince.Clear()
+        txtPostalCode.Clear()
+        txtEmail.Clear()
+        txtPhone.Clear()
+        txtcellphone.Clear()
+        pbAttachNewCustomerImage.Image = Nothing
+    End Sub
+
 End Class
