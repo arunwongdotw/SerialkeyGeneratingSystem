@@ -201,7 +201,7 @@ Public Class EditUser
 
     Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13, 46
+            Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
                 MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
@@ -210,7 +210,7 @@ Public Class EditUser
 
     Private Sub txtMobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13, 46
+            Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
                 MsgBox("กรุณากรอกเฉพาะตัวเลข")
@@ -247,7 +247,7 @@ Public Class EditUser
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
         
         Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13, 127
+            Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
                 MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
