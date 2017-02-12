@@ -7,7 +7,7 @@ Public Class searchCusOther
     Public row_search As DataRow
 
     Private Sub SearchCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Me.Hide()
+        Me.Dispose()
 
 
     End Sub
@@ -239,11 +239,11 @@ Public Class searchCusOther
             dt.Clear()
 
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                dgvSearchCus.Columns.Clear()
-                GenerateColumn()
-                dgvSearchCus.DataSource = dt
-            End If
+            'If dt.Rows.Count > 0 Then
+            dgvSearchCus.Columns.Clear()
+            GenerateColumn()
+            dgvSearchCus.DataSource = dt
+            'End If
 
 
 
@@ -255,7 +255,7 @@ Public Class searchCusOther
             'dgvSearchCus.DataSource = table
 
         Catch ex As Exception
-            MsgBox("ไม่พบข้อมูล")
+            'MsgBox("ไม่พบข้อมูล")
 
         End Try
 
@@ -290,6 +290,7 @@ Public Class searchCusOther
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clear()
+        LoadData()
 
     End Sub
 

@@ -74,7 +74,7 @@ Public Class EditUser
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
-         ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
+        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             valid = False
         End If
@@ -246,7 +246,7 @@ Public Class EditUser
     End Sub
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
-        
+
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13
             Case Else
@@ -321,6 +321,22 @@ Public Class EditUser
         End If
     End Sub
 
+    Private Sub clear()
+        txtEmpID.Clear()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtEmail.Clear()
+        txtMobileNumber.Clear()
+        txtPhoneNumber.Clear()
+        cmbUserType.SelectedItem = Nothing
+        chbPerCreate.Checked = False
+        chbPerDelete.Checked = False
+        chbPerEdit.Checked = False
+        pbAttachNewUserImage.Image = Nothing
+    End Sub
+
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
@@ -328,12 +344,15 @@ Public Class EditUser
                 Select Case tn.Name
                     Case "ndFindUserAccount"
                         SearchUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
                         CheckConnectUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
                         ChangePassword.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
