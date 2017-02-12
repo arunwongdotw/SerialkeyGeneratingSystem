@@ -52,6 +52,9 @@ Public Class EditUser
         If txtPassword.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกรหัสผ่าน")
             valid = False
+        ElseIf txtPassword.TextLength < 6 Then
+            MsgBox("รหัสผ่านต้องมีความยาว 6 ตัวขึ้นไป")
+            valid = False
         ElseIf txtEmpID.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
             valid = False
@@ -64,14 +67,14 @@ Public Class EditUser
         ElseIf txtLastName.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกนามสกุล")
             valid = False
-        ElseIf txtMobileNumber.Text.Trim = String.Empty Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
-            valid = False
-        ElseIf txtPhoneNumber.Text.Trim = String.Empty Then
+        ElseIf txtEmail.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกอีเมล")
             valid = False
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            valid = False
+         ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             valid = False
         End If
         Return valid
@@ -232,18 +235,6 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
-        End Select
-    End Sub
-
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 65 To 90, 97 To 122, 8, 13
@@ -259,7 +250,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13, 127
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 ตัวเท่านั้น")
+                MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
         End Select
     End Sub
     Private Sub txtEmpID_correct()
