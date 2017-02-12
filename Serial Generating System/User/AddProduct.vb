@@ -34,6 +34,7 @@ Public Class AddProduct
         chbThai.Checked = False
         chbWM.Checked = False
         chbQC.Checked = False
+        pbAttachProductImage.Image = Nothing
     End Sub
     Private Sub add()
 

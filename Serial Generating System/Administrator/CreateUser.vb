@@ -143,6 +143,7 @@ Public Class CreateUser
         chbPerCreate.Checked = False
         chbPerDelete.Checked = False
         chbPerEdit.Checked = False
+        pbAttachUserImage.Image = Nothing
     End Sub
 
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
@@ -152,12 +153,15 @@ Public Class CreateUser
                 Select Case tn.Name
                     Case "ndFindUserAccount"
                         SearchUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
                         CheckConnectUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
                         ChangePassword.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
