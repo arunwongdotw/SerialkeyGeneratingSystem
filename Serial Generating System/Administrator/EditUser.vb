@@ -27,6 +27,7 @@ Public Class EditUser
     Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
+        txtAccountInfo.Text = username.ToString
         lblMsgEmpId.Visible = False
         pbEmpId.Visible = False
         lblMsgEmail.Visible = False

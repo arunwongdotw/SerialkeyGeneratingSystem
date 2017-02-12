@@ -268,7 +268,7 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-
+        pbAttachCustomerImage.ImageLocation = Nothing
         Me.clear()
 
 

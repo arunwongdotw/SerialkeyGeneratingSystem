@@ -179,6 +179,7 @@ Public Class EditProduct
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        pbAttachNewProductImage.ImageLocation = Nothing
         Me.clear()
     End Sub
 

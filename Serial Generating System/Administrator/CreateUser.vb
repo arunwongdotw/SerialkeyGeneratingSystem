@@ -160,6 +160,7 @@ Public Class CreateUser
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        pbAttachUserImage.ImageLocation = Nothing
         Me.clear()
     End Sub
 
