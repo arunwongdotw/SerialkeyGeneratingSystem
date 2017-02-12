@@ -251,4 +251,8 @@ Public Class EditProduct
             pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
+
+    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
+
+    End Sub
 End Class

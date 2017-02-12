@@ -104,10 +104,6 @@ Public Class CreateUser
             MsgBox("กรุณากรอกนามสกุล")
         ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
-            'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
-            '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
-        ElseIf txtPhoneNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
         ElseIf txtEmail.Text = "" Then
             MsgBox("กรุณากรอกอีเมล")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then

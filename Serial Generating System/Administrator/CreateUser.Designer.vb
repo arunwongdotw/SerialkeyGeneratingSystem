@@ -33,6 +33,7 @@ Partial Class CreateUser
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbWelcome = New System.Windows.Forms.Label()
+        Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnAttachUserImage = New System.Windows.Forms.Button()
         Me.pbAttachUserImage = New System.Windows.Forms.PictureBox()
@@ -78,7 +79,6 @@ Partial Class CreateUser
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
-        Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,6 +154,19 @@ Partial Class CreateUser
         Me.lbWelcome.TabIndex = 86
         Me.lbWelcome.Text = "ยินดีต้อนรับ"
         Me.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1104, 22)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
+        Me.txtAccountInfo.TabIndex = 98
+        Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
+        Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnHeader
         '
@@ -502,6 +515,7 @@ Partial Class CreateUser
         Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmpID.Location = New System.Drawing.Point(141, 20)
+        Me.txtEmpID.MaxLength = 5
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(99, 36)
         Me.txtEmpID.TabIndex = 3
@@ -695,19 +709,6 @@ Partial Class CreateUser
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
         '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1104, 22)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
-        Me.txtAccountInfo.TabIndex = 98
-        Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
-        Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'ofdAttachUserImage
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
@@ -720,6 +721,7 @@ Partial Class CreateUser
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateUser"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "สร้างบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).EndInit()
