@@ -92,8 +92,12 @@ Public Class CreateUser
             MsgBox("รูปแบบนามสกุลไม่ถูกต้อง")
         ElseIf txtUsername.Text = "" Then
             MsgBox("กรุณากรอกชื่อผู้ใช้")
+        ElseIf txtUsername.TextLength < 6 Then
+            MsgBox("ชื่อผู้ใช้ต้องมีความยาว 6 ตัวขึ้นไป")
         ElseIf txtPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่าน")
+        ElseIf txtPassword.TextLength < 6 Then
+            MsgBox("รหัสผ่านต้องมีความยาว 6 ตัวขึ้นไป")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
         ElseIf txtEmpID.TextLength <> 5 Then
@@ -102,16 +106,14 @@ Public Class CreateUser
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
             MsgBox("กรุณากรอกนามสกุล")
+        ElseIf txtEmail.Text = "" Then
+            MsgBox("กรุณากรอกอีเมล")
+        ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
         ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
             '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
-        ElseIf txtPhoneNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์")
-        ElseIf txtEmail.Text = "" Then
-            MsgBox("กรุณากรอกอีเมล")
-        ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
         ElseIf cmbUserType.Text = "" Then
             MsgBox("กรุณาเลือกประเภทบัญชีผู้ใช้")
         Else
@@ -182,6 +184,18 @@ Public Class CreateUser
             Case Else
                 e.Handled = True
                 MsgBox("ชื่อผู้ใช้ต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        End Select
+    End Sub
+
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
         End Select
     End Sub
 

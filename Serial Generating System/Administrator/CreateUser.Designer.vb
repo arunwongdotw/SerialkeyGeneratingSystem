@@ -74,12 +74,12 @@ Partial Class CreateUser
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtMobileNumber = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -220,7 +220,7 @@ Partial Class CreateUser
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 17
+        Me.btnLogOut.TabIndex = 12
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -233,7 +233,7 @@ Partial Class CreateUser
         Me.btnClear.Location = New System.Drawing.Point(1157, 540)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 16
+        Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -246,7 +246,7 @@ Partial Class CreateUser
         Me.btnAdd.Location = New System.Drawing.Point(1022, 540)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 15
+        Me.btnAdd.TabIndex = 10
         Me.btnAdd.Text = "สร้าง"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
@@ -292,9 +292,9 @@ Partial Class CreateUser
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(543, 77)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(183, 24)
+        Me.Label7.Size = New System.Drawing.Size(335, 24)
         Me.Label7.TabIndex = 16
-        Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
+        Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขความยาวห้ามต่ำกว่า 6 ตัวอักษร"
         '
         'txtUsername
         '
@@ -325,9 +325,9 @@ Partial Class CreateUser
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(137, 77)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(183, 24)
+        Me.Label8.Size = New System.Drawing.Size(335, 24)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขเท่านั้น"
+        Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขความยาวห้ามต่ำกว่า 6 ตัวอักษร"
         '
         'Panel3
         '
@@ -382,7 +382,6 @@ Partial Class CreateUser
         Me.rdbIT.Name = "rdbIT"
         Me.rdbIT.Size = New System.Drawing.Size(53, 30)
         Me.rdbIT.TabIndex = 10
-        Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
         Me.rdbIT.UseVisualStyleBackColor = True
         '
@@ -390,11 +389,10 @@ Partial Class CreateUser
         '
         Me.rdbAccountant.AutoSize = True
         Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbAccountant.Location = New System.Drawing.Point(99, 0)
+        Me.rdbAccountant.Location = New System.Drawing.Point(99, 1)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
         Me.rdbAccountant.TabIndex = 11
-        Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
@@ -515,6 +513,7 @@ Partial Class CreateUser
         Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmpID.Location = New System.Drawing.Point(141, 20)
+        Me.txtEmpID.MaxLength = 5
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(99, 36)
         Me.txtEmpID.TabIndex = 3
@@ -591,7 +590,7 @@ Partial Class CreateUser
         Me.txtEmail.Location = New System.Drawing.Point(141, 146)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(250, 36)
-        Me.txtEmail.TabIndex = 8
+        Me.txtEmail.TabIndex = 6
         '
         'Label6
         '
@@ -634,7 +633,7 @@ Partial Class CreateUser
         Me.txtMobileNumber.Location = New System.Drawing.Point(141, 230)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.Size = New System.Drawing.Size(250, 36)
-        Me.txtMobileNumber.TabIndex = 6
+        Me.txtMobileNumber.TabIndex = 8
         '
         'Label14
         '
@@ -646,17 +645,6 @@ Partial Class CreateUser
         Me.Label14.Size = New System.Drawing.Size(18, 26)
         Me.Label14.TabIndex = 78
         Me.Label14.Text = "*"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(246, 22)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 26)
-        Me.Label13.TabIndex = 73
-        Me.Label13.Text = "*"
         '
         'Panel4
         '
@@ -678,7 +666,8 @@ Partial Class CreateUser
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
-        Me.chbPerCreate.TabIndex = 12
+        Me.chbPerCreate.TabIndex = 10
+        Me.chbPerCreate.TabStop = False
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
         '
@@ -691,7 +680,8 @@ Partial Class CreateUser
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
-        Me.chbPerEdit.TabIndex = 13
+        Me.chbPerEdit.TabIndex = 11
+        Me.chbPerEdit.TabStop = False
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
         '
@@ -705,12 +695,24 @@ Partial Class CreateUser
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
         Me.chbPerDelete.TabIndex = 14
+        Me.chbPerDelete.TabStop = False
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
         '
         'ofdAttachUserImage
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(246, 22)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(18, 26)
+        Me.Label13.TabIndex = 73
+        Me.Label13.Text = "*"
         '
         'CreateUser
         '
@@ -762,7 +764,6 @@ Partial Class CreateUser
     Friend WithEvents cmbUserType As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
@@ -787,4 +788,5 @@ Partial Class CreateUser
     Friend WithEvents chbPerDelete As System.Windows.Forms.CheckBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachUserImage As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class
