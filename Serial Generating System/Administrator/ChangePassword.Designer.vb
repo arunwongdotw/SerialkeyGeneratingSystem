@@ -267,6 +267,7 @@ Partial Class ChangePassword
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "ChangePassword"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เปลี่ยนรหัสผ่าน - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
