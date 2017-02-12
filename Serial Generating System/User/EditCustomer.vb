@@ -270,7 +270,7 @@ Public Class EditCustomer
                 e.Handled = False
 
         End Select
-    End Subs
+    End Sub
 
     Private Sub btnAttachNewCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewCustomerImage.Click
         ofdAttachNewCustomerImage.Title = "เลือกไฟล์รูปภาพ"
