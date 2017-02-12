@@ -269,6 +269,7 @@ Public Class AddProduct
         ofdAttachProductImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
         If ofdAttachProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
+            pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
 End Class

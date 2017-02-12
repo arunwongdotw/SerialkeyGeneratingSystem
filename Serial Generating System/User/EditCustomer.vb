@@ -264,6 +264,7 @@ Public Class EditCustomer
         ofdAttachNewCustomerImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
         If ofdAttachNewCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachNewCustomerImage.ImageLocation = ofdAttachNewCustomerImage.FileName
+            pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
 End Class

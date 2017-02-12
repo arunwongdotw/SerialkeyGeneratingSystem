@@ -299,6 +299,7 @@ Public Class EditUser
         ofdAttachNewUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
         If ofdAttachNewUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachNewUserImage.ImageLocation = ofdAttachNewUserImage.FileName
+            pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
 End Class
