@@ -30,6 +30,7 @@ Public Class EditUser
         lblMsgEmpId.Visible = False
         pbEmpId.Visible = False
         lblMsgEmail.Visible = False
+        tvAdminMenu.ExpandAll()
         pbEmail.Visible = False
         loadData()
         If sqlReader.Read Then
@@ -253,6 +254,19 @@ Public Class EditUser
                 MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
         End Select
     End Sub
+
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
+        End Select
+    End Sub
+
     Private Sub txtEmpID_correct()
         lblMsgEmpId.Visible = True
         pbEmpId.Visible = True
@@ -305,5 +319,31 @@ Public Class EditUser
             pbAttachNewUserImage.ImageLocation = ofdAttachNewUserImage.FileName
             pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
+    End Sub
+
+    Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
+        Try
+            Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
+            If Not (tvAdminMenu.SelectedNode Is Nothing) Then
+                Select Case tn.Name
+                    Case "ndFindUserAccount"
+                        SearchUser.Show()
+                        Me.Hide()
+                    Case "ndCheckConnectingUser"
+                        CheckConnectUser.Show()
+                        Me.Hide()
+                    Case "ndAdminResetPassword"
+                        ChangePassword.Show()
+                        Me.Hide()
+                End Select
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
