@@ -33,7 +33,7 @@ Partial Class CreateUser
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbWelcome = New System.Windows.Forms.Label()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnAttachUserImage = New System.Windows.Forms.Button()
         Me.pbAttachUserImage = New System.Windows.Forms.PictureBox()
         Me.btnLogOut = New System.Windows.Forms.Button()
@@ -78,7 +78,8 @@ Partial Class CreateUser
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
-        Me.btnHeader = New System.Windows.Forms.Button()
+        Me.txtAccountInfo = New System.Windows.Forms.Label()
+        Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -121,8 +122,8 @@ Partial Class CreateUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.lbWelcome)
+        Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.btnAttachUserImage)
         Me.Panel1.Controls.Add(Me.pbAttachUserImage)
@@ -142,32 +143,34 @@ Partial Class CreateUser
         '
         Me.lbWelcome.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbWelcome.AutoSize = True
         Me.lbWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.lbWelcome.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbWelcome.ForeColor = System.Drawing.Color.White
         Me.lbWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lbWelcome.Location = New System.Drawing.Point(1221, 9)
+        Me.lbWelcome.Location = New System.Drawing.Point(1222, 2)
         Me.lbWelcome.Name = "lbWelcome"
+        Me.lbWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lbWelcome.Size = New System.Drawing.Size(84, 27)
         Me.lbWelcome.TabIndex = 86
         Me.lbWelcome.Text = "ยินดีต้อนรับ"
         Me.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtAccountInfo
+        'btnHeader
         '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1152, 34)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(145, 29)
-        Me.txtAccountInfo.TabIndex = 84
-        Me.txtAccountInfo.TabStop = False
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
+        Me.btnHeader.FlatAppearance.BorderSize = 0
+        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeader.ForeColor = System.Drawing.Color.White
+        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
+        Me.btnHeader.Name = "btnHeader"
+        Me.btnHeader.Size = New System.Drawing.Size(1317, 65)
+        Me.btnHeader.TabIndex = 81
+        Me.btnHeader.TabStop = False
+        Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
+        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHeader.UseVisualStyleBackColor = False
         '
         'btnAttachUserImage
         '
@@ -200,7 +203,7 @@ Partial Class CreateUser
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(50, 643)
+        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
@@ -692,22 +695,22 @@ Partial Class CreateUser
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
         '
-        'btnHeader
+        'txtAccountInfo
         '
-        Me.btnHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnHeader.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLogin
-        Me.btnHeader.FlatAppearance.BorderSize = 0
-        Me.btnHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHeader.Font = New System.Drawing.Font("Thai Sans Lite", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHeader.ForeColor = System.Drawing.Color.White
-        Me.btnHeader.Location = New System.Drawing.Point(0, 0)
-        Me.btnHeader.Name = "btnHeader"
-        Me.btnHeader.Size = New System.Drawing.Size(1317, 65)
-        Me.btnHeader.TabIndex = 81
-        Me.btnHeader.TabStop = False
-        Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
-        Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHeader.UseVisualStyleBackColor = False
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1104, 22)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
+        Me.txtAccountInfo.TabIndex = 98
+        Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
+        Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ofdAttachUserImage
+        '
+        Me.ofdAttachUserImage.FileName = "AttachUserImage"
         '
         'CreateUser
         '
@@ -719,7 +722,6 @@ Partial Class CreateUser
         Me.Name = "CreateUser"
         Me.Text = "สร้างบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -767,7 +769,6 @@ Partial Class CreateUser
     Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
     Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
     Friend WithEvents btnAttachUserImage As System.Windows.Forms.Button
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
     Friend WithEvents lbWelcome As System.Windows.Forms.Label
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -782,4 +783,6 @@ Partial Class CreateUser
     Friend WithEvents chbPerCreate As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerEdit As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerDelete As System.Windows.Forms.CheckBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents ofdAttachUserImage As System.Windows.Forms.OpenFileDialog
 End Class

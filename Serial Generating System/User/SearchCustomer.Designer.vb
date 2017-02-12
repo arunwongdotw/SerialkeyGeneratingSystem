@@ -68,8 +68,6 @@ Partial Class SearchCustomer
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchCus = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,12 +88,14 @@ Partial Class SearchCustomer
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtCellphone = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPhone
@@ -384,7 +384,7 @@ Partial Class SearchCustomer
         Me.tvUserMenu.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvUserMenu.HotTracking = True
         Me.tvUserMenu.ItemHeight = 44
-        Me.tvUserMenu.Location = New System.Drawing.Point(0, 62)
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 65)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
@@ -410,27 +410,27 @@ Partial Class SearchCustomer
         TreeNode11.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.dgvSearchCus)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnClear)
-        Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1317, 698)
+        Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 3
         '
         'Panel4
@@ -458,31 +458,6 @@ Partial Class SearchCustomer
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1000, 69)
         Me.Panel3.TabIndex = 123
-        '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 63
-        Me.pbAccountInfo.TabStop = False
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
-        Me.txtAccountInfo.TabIndex = 60
-        Me.txtAccountInfo.TabStop = False
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnHeader
         '
@@ -621,7 +596,7 @@ Partial Class SearchCustomer
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(63, 643)
+        Me.btnLogout.Location = New System.Drawing.Point(59, 610)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(129, 41)
         Me.btnLogout.TabIndex = 17
@@ -675,25 +650,48 @@ Partial Class SearchCustomer
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "โทรศัพท์มือถือ :"
         '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1273, 4)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 125
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1104, 22)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
+        Me.txtAccountInfo.TabIndex = 126
+        Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
+        Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'SearchCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1318, 699)
+        Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SearchCustomer"
         Me.Text = "ค้นหาข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -731,7 +729,6 @@ Partial Class SearchCustomer
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents dgvSearchCus As System.Windows.Forms.DataGridView
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
     Friend WithEvents txtCellphone As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -748,8 +745,9 @@ Partial Class SearchCustomer
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
 End Class

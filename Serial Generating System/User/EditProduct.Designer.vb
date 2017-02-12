@@ -33,6 +33,7 @@ Partial Class EditProduct
         Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
         Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProduct))
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.txtProduct_s_name = New System.Windows.Forms.TextBox()
@@ -40,11 +41,14 @@ Partial Class EditProduct
         Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.txtBrandName = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
+        Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.chbEnglish = New System.Windows.Forms.CheckBox()
@@ -63,17 +67,16 @@ Partial Class EditProduct
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.btnAddProductFormAttachImage = New System.Windows.Forms.Button()
-        Me.pbAddProductFormAttachImage = New System.Windows.Forms.PictureBox()
-        Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
-        Me.txtAccountInfo = New System.Windows.Forms.TextBox()
+        Me.btnAttachNewProductImage = New System.Windows.Forms.Button()
+        Me.pbAttachNewProductImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
+        Me.ofdAttachNewProductImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAttachNewProductImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvUserMenu
@@ -81,7 +84,7 @@ Partial Class EditProduct
         Me.tvUserMenu.BackColor = System.Drawing.Color.Orange
         Me.tvUserMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tvUserMenu.ItemHeight = 44
-        Me.tvUserMenu.Location = New System.Drawing.Point(0, 64)
+        Me.tvUserMenu.Location = New System.Drawing.Point(0, 65)
         Me.tvUserMenu.Name = "tvUserMenu"
         TreeNode1.Name = "ndCreateSerialkey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
@@ -107,7 +110,7 @@ Partial Class EditProduct
         TreeNode11.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 635)
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
         Me.tvUserMenu.TabIndex = 0
         '
         'txtProductName
@@ -168,61 +171,66 @@ Partial Class EditProduct
         Me.txtBrandName.Size = New System.Drawing.Size(501, 36)
         Me.txtBrandName.TabIndex = 3
         '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(1288, 200)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 27)
-        Me.Label20.TabIndex = 76
-        Me.Label20.Text = "*"
-        '
         'btnLogOut
         '
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(63, 643)
+        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 22
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(1288, 94)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 27)
-        Me.Label22.TabIndex = 78
-        Me.Label22.Text = "*"
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.btnAddProductFormAttachImage)
-        Me.Panel1.Controls.Add(Me.pbAddProductFormAttachImage)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.btnAttachNewProductImage)
+        Me.Panel1.Controls.Add(Me.pbAttachNewProductImage)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.Label20)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.btnEdit)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(-2, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1317, 700)
+        Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 3
+        '
+        'pbAccountInfo
+        '
+        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
+        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAccountInfo.Location = New System.Drawing.Point(1273, 4)
+        Me.pbAccountInfo.Name = "pbAccountInfo"
+        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
+        Me.pbAccountInfo.TabIndex = 101
+        Me.pbAccountInfo.TabStop = False
+        '
+        'txtAccountInfo
+        '
+        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
+        Me.txtAccountInfo.Location = New System.Drawing.Point(1104, 22)
+        Me.txtAccountInfo.Name = "txtAccountInfo"
+        Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
+        Me.txtAccountInfo.TabIndex = 102
+        Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
+        Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.Panel3)
@@ -243,6 +251,39 @@ Partial Class EditProduct
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(882, 338)
         Me.Panel2.TabIndex = 100
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(423, 282)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(15, 24)
+        Me.Label4.TabIndex = 104
+        Me.Label4.Text = "*"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(677, 112)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(15, 24)
+        Me.Label2.TabIndex = 104
+        Me.Label2.Text = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(677, 27)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(15, 24)
+        Me.Label1.TabIndex = 103
+        Me.Label1.Text = "*"
         '
         'Label5
         '
@@ -310,7 +351,7 @@ Partial Class EditProduct
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.chbQC)
         Me.Panel3.Controls.Add(Me.chbWM)
-        Me.Panel3.Location = New System.Drawing.Point(172, 233)
+        Me.Panel3.Location = New System.Drawing.Point(171, 233)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(500, 36)
         Me.Panel3.TabIndex = 124
@@ -365,7 +406,7 @@ Partial Class EditProduct
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(56, 242)
+        Me.Label9.Location = New System.Drawing.Point(56, 238)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 27)
         Me.Label9.TabIndex = 90
@@ -385,7 +426,7 @@ Partial Class EditProduct
         'txtCost
         '
         Me.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCost.Location = New System.Drawing.Point(169, 191)
+        Me.txtCost.Location = New System.Drawing.Point(171, 191)
         Me.txtCost.Name = "txtCost"
         Me.txtCost.Size = New System.Drawing.Size(250, 36)
         Me.txtCost.TabIndex = 88
@@ -404,7 +445,7 @@ Partial Class EditProduct
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(74, 194)
+        Me.Label12.Location = New System.Drawing.Point(68, 193)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 27)
         Me.Label12.TabIndex = 89
@@ -413,61 +454,37 @@ Partial Class EditProduct
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(108, 280)
+        Me.Label13.Location = New System.Drawing.Point(108, 279)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(57, 27)
         Me.Label13.TabIndex = 83
         Me.Label13.Text = "ภาษา :"
         '
-        'btnAddProductFormAttachImage
+        'btnAttachNewProductImage
         '
-        Me.btnAddProductFormAttachImage.BackColor = System.Drawing.Color.Coral
-        Me.btnAddProductFormAttachImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnAddProductFormAttachImage.FlatAppearance.BorderSize = 0
-        Me.btnAddProductFormAttachImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddProductFormAttachImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddProductFormAttachImage.Location = New System.Drawing.Point(285, 203)
-        Me.btnAddProductFormAttachImage.Name = "btnAddProductFormAttachImage"
-        Me.btnAddProductFormAttachImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnAddProductFormAttachImage.TabIndex = 99
-        Me.btnAddProductFormAttachImage.TabStop = False
-        Me.btnAddProductFormAttachImage.Text = "เพิ่มรูปภาพ"
-        Me.btnAddProductFormAttachImage.UseVisualStyleBackColor = False
+        Me.btnAttachNewProductImage.BackColor = System.Drawing.Color.Coral
+        Me.btnAttachNewProductImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnAttachNewProductImage.FlatAppearance.BorderSize = 0
+        Me.btnAttachNewProductImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAttachNewProductImage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttachNewProductImage.Location = New System.Drawing.Point(285, 203)
+        Me.btnAttachNewProductImage.Name = "btnAttachNewProductImage"
+        Me.btnAttachNewProductImage.Size = New System.Drawing.Size(113, 35)
+        Me.btnAttachNewProductImage.TabIndex = 99
+        Me.btnAttachNewProductImage.TabStop = False
+        Me.btnAttachNewProductImage.Text = "เพิ่มรูปภาพ"
+        Me.btnAttachNewProductImage.UseVisualStyleBackColor = False
         '
-        'pbAddProductFormAttachImage
+        'pbAttachNewProductImage
         '
-        Me.pbAddProductFormAttachImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.SoftwareBoxIcon
-        Me.pbAddProductFormAttachImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAddProductFormAttachImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbAddProductFormAttachImage.Location = New System.Drawing.Point(285, 92)
-        Me.pbAddProductFormAttachImage.Name = "pbAddProductFormAttachImage"
-        Me.pbAddProductFormAttachImage.Size = New System.Drawing.Size(113, 116)
-        Me.pbAddProductFormAttachImage.TabIndex = 98
-        Me.pbAddProductFormAttachImage.TabStop = False
-        '
-        'pbAccountInfo
-        '
-        Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pbAccountInfo.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.UserIcon
-        Me.pbAccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAccountInfo.Location = New System.Drawing.Point(1281, 12)
-        Me.pbAccountInfo.Name = "pbAccountInfo"
-        Me.pbAccountInfo.Size = New System.Drawing.Size(26, 26)
-        Me.pbAccountInfo.TabIndex = 97
-        Me.pbAccountInfo.TabStop = False
-        '
-        'txtAccountInfo
-        '
-        Me.txtAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.txtAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountInfo.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountInfo.ForeColor = System.Drawing.Color.White
-        Me.txtAccountInfo.Location = New System.Drawing.Point(1111, 34)
-        Me.txtAccountInfo.Name = "txtAccountInfo"
-        Me.txtAccountInfo.ReadOnly = True
-        Me.txtAccountInfo.Size = New System.Drawing.Size(196, 26)
-        Me.txtAccountInfo.TabIndex = 96
-        Me.txtAccountInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.pbAttachNewProductImage.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.SoftwareBoxIcon
+        Me.pbAttachNewProductImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbAttachNewProductImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbAttachNewProductImage.Location = New System.Drawing.Point(285, 92)
+        Me.pbAttachNewProductImage.Name = "pbAttachNewProductImage"
+        Me.pbAttachNewProductImage.Size = New System.Drawing.Size(113, 116)
+        Me.pbAttachNewProductImage.TabIndex = 98
+        Me.pbAttachNewProductImage.TabStop = False
         '
         'btnHeader
         '
@@ -484,24 +501,28 @@ Partial Class EditProduct
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
+        'ofdAttachNewProductImage
+        '
+        Me.ofdAttachNewProductImage.FileName = "AttachNewProductImage"
+        '
         'EditProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1315, 700)
+        Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditProduct"
         Me.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.pbAddProductFormAttachImage, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAttachNewProductImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -512,9 +533,7 @@ Partial Class EditProduct
     Friend WithEvents txtBrand_s_name As System.Windows.Forms.TextBox
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents txtBrandName As System.Windows.Forms.TextBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
-    Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents chbJapan As System.Windows.Forms.CheckBox
@@ -524,10 +543,8 @@ Partial Class EditProduct
     Friend WithEvents txtCost As System.Windows.Forms.TextBox
     Friend WithEvents chbWM As System.Windows.Forms.CheckBox
     Friend WithEvents chbQC As System.Windows.Forms.CheckBox
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.TextBox
-    Friend WithEvents btnAddProductFormAttachImage As System.Windows.Forms.Button
-    Friend WithEvents pbAddProductFormAttachImage As System.Windows.Forms.PictureBox
+    Friend WithEvents btnAttachNewProductImage As System.Windows.Forms.Button
+    Friend WithEvents pbAttachNewProductImage As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
@@ -540,4 +557,10 @@ Partial Class EditProduct
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ofdAttachNewProductImage As System.Windows.Forms.OpenFileDialog
 End Class

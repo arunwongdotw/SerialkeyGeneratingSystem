@@ -23,6 +23,7 @@ Partial Class SearchSerialOther
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchSerialOther))
         Me.txtEmpID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSoftWareName = New System.Windows.Forms.TextBox()
@@ -554,8 +555,9 @@ Partial Class SearchSerialOther
         Me.Controls.Add(Me.lblSoftwareName)
         Me.Controls.Add(Me.txtBrand_s_name)
         Me.Controls.Add(Me.lblBrandSoftware)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SearchSerialOther"
-        Me.Text = "ค้นหาซีเรียลคีย์"
+        Me.Text = "ค้นหาซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
