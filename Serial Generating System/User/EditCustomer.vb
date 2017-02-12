@@ -258,4 +258,12 @@ Public Class EditCustomer
     End Sub
 
 
+
+    Private Sub btnAttachNewCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewCustomerImage.Click
+        ofdAttachNewCustomerImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachNewCustomerImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachNewCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachNewCustomerImage.ImageLocation = ofdAttachNewCustomerImage.FileName
+        End If
+    End Sub
 End Class

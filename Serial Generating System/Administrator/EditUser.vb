@@ -293,4 +293,12 @@ Public Class EditUser
             txtEmpID.Focus()
         End If
     End Sub
+
+    Private Sub btnAttachNewUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewUserImage.Click
+        ofdAttachNewUserImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachNewUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachNewUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachNewUserImage.ImageLocation = ofdAttachNewUserImage.FileName
+        End If
+    End Sub
 End Class

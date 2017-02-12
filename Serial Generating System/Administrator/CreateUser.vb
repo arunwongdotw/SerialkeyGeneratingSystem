@@ -37,7 +37,7 @@ Public Class CreateUser
             position = "Accountant"
         End If
         Dim strSQL As String
-        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete) "
+        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete, employee_image) "
         strSQL &= "values ('" & txtEmpID.Text & "',"
         strSQL &= "'" & txtUsername.Text & "',"
         strSQL &= "'" & txtPassword.Text & "',"
@@ -50,7 +50,8 @@ Public Class CreateUser
         strSQL &= "'" & userType & "',"
         strSQL &= "'" & perCreate & "',"
         strSQL &= "'" & perEdit & "',"
-        strSQL &= "'" & perDelete & "')"
+        strSQL &= "'" & perDelete & "',"
+        strSQL &= "'" & pbAttachUserImage.ImageLocation & "')"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
             MsgBox("การเพิ่มข้อมูลล้มเหลว")
@@ -302,6 +303,14 @@ Public Class CreateUser
         If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
             MsgBox("อีเมลซ้ำ")
             txtEmail.Focus()
+        End If
+    End Sub
+
+    Private Sub btnAttachUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachUserImage.Click
+        ofdAttachUserImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachUserImage.ImageLocation = ofdAttachUserImage.FileName
         End If
     End Sub
 End Class

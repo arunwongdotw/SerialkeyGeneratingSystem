@@ -22,6 +22,7 @@ Partial Class Decrypt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Decrypt))
         Me.lblSerialKey = New System.Windows.Forms.Label()
         Me.txtEncrypt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -104,8 +105,9 @@ Partial Class Decrypt
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtEncrypt)
         Me.Controls.Add(Me.lblSerialKey)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Decrypt"
-        Me.Text = "การถอดรหัสซีเรียลคีย์"
+        Me.Text = "การถอดรหัสซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

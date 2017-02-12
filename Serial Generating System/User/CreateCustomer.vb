@@ -29,7 +29,7 @@ Public Class CreateCustomer
         Dim strSQL As String
 
         strSQL = "insert into customer (corpname,corp_s_name,corpgroup,firstname,lastname,house_no,road,lane,subdistrict,district,province"
-        strSQL &= ",postalcode,email,phone,cellphone) "
+        strSQL &= ",postalcode,email,phone,cellphone,corp_image) "
         strSQL &= "values ('" & Trim(txtCorpName.Text) & "',"
         strSQL &= "'" & Trim(txtCorp_s_Name.Text) & "',"
         strSQL &= "'" & Trim(txtCorpGroup.Text) & "',"
@@ -44,7 +44,8 @@ Public Class CreateCustomer
         strSQL &= "'" & Trim(txtPostalCode.Text) & "',"
         strSQL &= "'" & Trim(txtEmail.Text) & "',"
         strSQL &= "'" & Trim(txtPhone.Text) & "',"
-        strSQL &= "'" & Trim(txtcellphone.Text) & "')"
+        strSQL &= "'" & Trim(txtcellphone.Text) & "',"
+        strSQL &= "'" & pbAttachCustomerImage.ImageLocation & "')"
 
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
@@ -508,6 +509,14 @@ Public Class CreateCustomer
         If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
             MsgBox("ชื่อย่อบริษัทซ้ำ")
             txtCorp_s_Name.Focus()
+        End If
+    End Sub
+
+    Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
+        ofdAttachCustomerImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachCustomerImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachCustomerImage.ImageLocation = ofdAttachCustomerImage.FileName
         End If
     End Sub
 End Class
