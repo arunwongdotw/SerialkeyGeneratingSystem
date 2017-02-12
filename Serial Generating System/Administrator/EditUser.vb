@@ -216,7 +216,7 @@ Public Class EditUser
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 46, 161 To 240
+            Case 65 To 90, 97 To 122, 8, 13, 161 To 240
             Case Else
                 e.Handled = True
                 MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
@@ -225,7 +225,7 @@ Public Class EditUser
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 46, 161 To 240
+            Case 65 To 90, 97 To 122, 8, 13, 161 To 240
             Case Else
                 e.Handled = True
                 MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
@@ -234,7 +234,7 @@ Public Class EditUser
 
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 46
+            Case 48 To 57, 65 To 90, 97 To 122, 8, 13
             Case Else
                 e.Handled = True
                 MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
@@ -242,11 +242,12 @@ Public Class EditUser
     End Sub
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
+        
         Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 46
+            Case 48 To 57, 8, 13, 127
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสพนักงานต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 ตัวเท่านั้น")
         End Select
     End Sub
     Private Sub txtEmpID_correct()
