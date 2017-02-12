@@ -440,6 +440,7 @@ Public Class SearchSerial
             sql &= " where s.seq <> -1 "
             sql &= corpname & corp_s_name & ContractNo & brandname & brand_s_name & version & seq & product_name & product_s_name & total_user
             sql &= E & T & C & J '& cellphone
+            sql &= "order by s.seq"
 
             Dim dt As New DataTable
             Dim da As SqlDataAdapter = con.queryForAdapter(sql)
