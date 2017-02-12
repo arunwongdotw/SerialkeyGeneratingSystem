@@ -446,6 +446,7 @@ Partial Class EditUser
         Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmpID.Location = New System.Drawing.Point(141, 20)
+        Me.txtEmpID.MaxLength = 5
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(99, 36)
         Me.txtEmpID.TabIndex = 3
