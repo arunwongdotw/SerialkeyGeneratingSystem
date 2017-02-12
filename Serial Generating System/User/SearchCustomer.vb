@@ -284,11 +284,11 @@ Public Class SearchCustomer
             dt.Clear()
 
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                dgvSearchCus.Columns.Clear()
-                GenerateColumn()
-                dgvSearchCus.DataSource = dt
-            End If
+            'If dt.Rows.Count > 0 Then
+            dgvSearchCus.Columns.Clear()
+            GenerateColumn()
+            dgvSearchCus.DataSource = dt
+            'End If
 
 
 
@@ -300,7 +300,7 @@ Public Class SearchCustomer
             'dgvSearchCus.DataSource = table
 
         Catch ex As Exception
-            MsgBox("ไม่พบข้อมูล")
+            ' MsgBox("ไม่พบข้อมูล")
 
         End Try
 

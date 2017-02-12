@@ -68,6 +68,13 @@ Public Class ChangePasswordUser
         Return isCorrect
     End Function
 
+    Private Sub clear()
+        txtNewPassword.Clear()
+        txtNewPasswordConfirm.Clear()
+        txtOldPassword.Clear()
+
+    End Sub
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -75,21 +82,27 @@ Public Class ChangePasswordUser
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
                         CreateSerial.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
                         SearchSerial.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
                         CreateCustomer.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
                         SearchCustomer.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
                         AddProduct.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
                         searchProduct.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If

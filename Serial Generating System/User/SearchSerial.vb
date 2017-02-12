@@ -448,11 +448,11 @@ Public Class SearchSerial
             dt.Clear()
 
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                dgvSerialKey.Columns.Clear()
-                GenerateColumn()
-                dgvSerialKey.DataSource = dt
-            End If
+            'If dt.Rows.Count > 0 Then
+            dgvSerialKey.Columns.Clear()
+            GenerateColumn()
+            dgvSerialKey.DataSource = dt
+            'End If
 
 
 
@@ -464,7 +464,7 @@ Public Class SearchSerial
             'dgvSearchCus.DataSource = table
 
         Catch ex As Exception
-            MsgBox("ไม่พบข้อมูล")
+            'MsgBox("ไม่พบข้อมูล")
 
         End Try
 
@@ -472,6 +472,7 @@ Public Class SearchSerial
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Me.clear()
+        Me.LoadData()
 
     End Sub
 
