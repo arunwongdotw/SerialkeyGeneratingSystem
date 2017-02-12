@@ -40,6 +40,12 @@ Public Class ChangePassword
             MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPasswordConfirm.Text) Then
             MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        ElseIf txtOldPassword.Text = "" Then
+            MsgBox("กรุณากรอกรหัสผ่านเก่า")
+        ElseIf txtNewPassword.Text = "" Then
+            MsgBox("กรุณากรอกรหัสผ่านใหม่")
+        ElseIf txtNewPasswordConfirm.Text = "" Then
+            MsgBox("กรุณากรอกยืนยันรหัสผ่าน")
         Else
             isCorrect = True
         End If
@@ -66,6 +72,12 @@ Public Class ChangePassword
         Return isCorrect
     End Function
 
+    Private Sub clear()
+        txtNewPassword.Clear()
+        txtNewPasswordConfirm.Clear()
+        txtOldPassword.Clear()
+    End Sub
+
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
@@ -73,12 +85,15 @@ Public Class ChangePassword
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
                         CreateUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndFindUserAccount"
                         SearchUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
                         CheckConnectUser.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
@@ -144,4 +159,6 @@ Public Class ChangePassword
                 MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
+
+
 End Class

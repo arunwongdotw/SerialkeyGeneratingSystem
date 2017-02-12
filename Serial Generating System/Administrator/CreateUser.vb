@@ -92,8 +92,12 @@ Public Class CreateUser
             MsgBox("รูปแบบนามสกุลไม่ถูกต้อง")
         ElseIf txtUsername.Text = "" Then
             MsgBox("กรุณากรอกชื่อผู้ใช้")
+        ElseIf txtUsername.TextLength < 6 Then
+            MsgBox("ชื่อผู้ใช้ต้องมีความยาว 6 ตัวขึ้นไป")
         ElseIf txtPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่าน")
+        ElseIf txtPassword.TextLength < 6 Then
+            MsgBox("รหัสผ่านต้องมีความยาว 6 ตัวขึ้นไป")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
         ElseIf txtEmpID.TextLength <> 5 Then
@@ -102,12 +106,14 @@ Public Class CreateUser
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
             MsgBox("กรุณากรอกนามสกุล")
-        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
         ElseIf txtEmail.Text = "" Then
             MsgBox("กรุณากรอกอีเมล")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+            'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
+            '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         ElseIf cmbUserType.Text = "" Then
             MsgBox("กรุณาเลือกประเภทบัญชีผู้ใช้")
         Else
@@ -137,6 +143,7 @@ Public Class CreateUser
         chbPerCreate.Checked = False
         chbPerDelete.Checked = False
         chbPerEdit.Checked = False
+        pbAttachUserImage.Image = Nothing
     End Sub
 
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
@@ -146,12 +153,15 @@ Public Class CreateUser
                 Select Case tn.Name
                     Case "ndFindUserAccount"
                         SearchUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
                         CheckConnectUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
                         ChangePassword.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
@@ -172,9 +182,9 @@ Public Class CreateUser
 
     Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsername.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+            Case 48 To 57, 65 To 90, 97 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -182,11 +192,23 @@ Public Class CreateUser
         End Select
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
+        End Select
+    End Sub
+
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57, 65 To 90, 97 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -196,9 +218,9 @@ Public Class CreateUser
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+            Case 65 To 90, 97 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -210,9 +232,10 @@ Public Class CreateUser
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+            
+            Case 65 To 90, 97 To 122
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -226,7 +249,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -238,7 +261,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -272,7 +295,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
