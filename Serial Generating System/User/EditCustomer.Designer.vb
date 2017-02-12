@@ -715,6 +715,7 @@ Partial Class EditCustomer
         '
         Me.txtCorp_s_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCorp_s_Name.Location = New System.Drawing.Point(148, 52)
+        Me.txtCorp_s_Name.MaxLength = 5
         Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
         Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
         Me.txtCorp_s_Name.TabIndex = 101
@@ -730,7 +731,9 @@ Partial Class EditCustomer
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "EditCustomer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "แก้ไขข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()

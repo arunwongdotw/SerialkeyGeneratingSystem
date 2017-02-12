@@ -319,7 +319,7 @@ Partial Class CreateSerial
         'chbWM
         '
         Me.chbWM.AutoSize = True
-        Me.chbWM.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.chbWM.BackColor = System.Drawing.Color.Transparent
         Me.chbWM.Enabled = False
         Me.chbWM.Location = New System.Drawing.Point(191, 107)
         Me.chbWM.Name = "chbWM"
@@ -872,7 +872,9 @@ Partial Class CreateSerial
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "CreateSerial"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "สร้างซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)

@@ -106,7 +106,9 @@ Partial Class Decrypt
         Me.Controls.Add(Me.txtEncrypt)
         Me.Controls.Add(Me.lblSerialKey)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Decrypt"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "การถอดรหัสซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.ResumeLayout(False)
         Me.PerformLayout()
