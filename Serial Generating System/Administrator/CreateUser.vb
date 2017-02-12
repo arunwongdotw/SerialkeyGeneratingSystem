@@ -143,6 +143,7 @@ Public Class CreateUser
         chbPerCreate.Checked = False
         chbPerDelete.Checked = False
         chbPerEdit.Checked = False
+        pbAttachUserImage.Image = Nothing
     End Sub
 
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect

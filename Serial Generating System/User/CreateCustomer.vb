@@ -225,6 +225,7 @@ Public Class CreateCustomer
         txtEmail.Clear()
         txtPhone.Clear()
         txtcellphone.Clear()
+        pbAttachCustomerImage.Image = Nothing
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
