@@ -99,7 +99,7 @@ Public Class SearchUser
         End If
     End Sub
     Private Sub setPermissionCheckBox()
-        For i As Integer = 0 To dgvSearchUser.Rows.Count - 2
+        For i As Integer = 0 To dgvSearchUser.Rows.Count - 1
             If IsDBNull(dgvSearchUser.Rows(i).Cells("per_create").Value) OrElse dgvSearchUser.Rows(i).Cells("per_create").Value = 0 Then
                 dgvSearchUser.Rows(i).Cells("chbCreate").Value = False
             ElseIf dgvSearchUser.Rows(i).Cells("per_create").Value = 1 Then

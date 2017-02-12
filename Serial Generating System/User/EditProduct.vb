@@ -39,7 +39,7 @@ Public Class EditProduct
         txtProduct_s_name.Text = sqlReader.GetValue(sqlReader.GetOrdinal("product_s_name"))
         txtBrandName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("brand_name"))
         txtBrand_s_name.Text = sqlReader.GetValue(sqlReader.GetOrdinal("brand_s_name"))
-        txtCost.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cost"))
+        txtCost.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cost")).ToString()
         QualityControl = sqlReader.GetValue(sqlReader.GetOrdinal("QualityControl"))
         WarehouseManagement = sqlReader.GetValue(sqlReader.GetOrdinal("WarehouseManagement"))
         thai = sqlReader.GetValue(sqlReader.GetOrdinal("thai"))
