@@ -495,7 +495,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-   
+
 
     Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
         If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then

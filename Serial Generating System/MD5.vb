@@ -24,7 +24,7 @@ Public Class MD5
             Dim Buffer As Byte() = Convert.FromBase64String(encryptedString)
             Return ASCIIEncoding.ASCII.GetString(DES.CreateDecryptor().TransformFinalBlock(Buffer, 0, Buffer.Length))
         Catch ex As Exception
-            MessageBox.Show("The encryption key specified was not appropriate for decryption.", "Invalid Enryption Key", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show("The encryption key specified was not appropriate for decryption.", "Invalid Enryption Key", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return ""
         End Try
     End Function
