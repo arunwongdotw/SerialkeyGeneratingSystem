@@ -152,16 +152,16 @@ Public Class SearchUser
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
-                        clearTxtBox()
                         CreateUser.Show()
+                        clearTxtBox()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
-                        clearTxtBox()
                         CheckConnectUser.Show()
+                        clearTxtBox()
                         Me.Hide()
                     Case "ndAdminResetPassword"
-                        clearTxtBox()
                         ChangePassword.Show()
+                        clearTxtBox()
                         Me.Hide()
                 End Select
             End If
