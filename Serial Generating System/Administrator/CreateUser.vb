@@ -177,9 +177,9 @@ Public Class CreateUser
 
     Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsername.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+            Case 48 To 57, 65 To 90, 97 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -201,9 +201,9 @@ Public Class CreateUser
 
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+            Case 48 To 57, 65 To 90, 97 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -213,9 +213,9 @@ Public Class CreateUser
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+            Case 65 To 90, 97 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -227,9 +227,10 @@ Public Class CreateUser
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+            
+            Case 65 To 90, 97 To 122
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -243,7 +244,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -255,7 +256,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -289,7 +290,7 @@ Public Class CreateUser
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
