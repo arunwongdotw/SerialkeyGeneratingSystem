@@ -153,12 +153,15 @@ Public Class CreateUser
                 Select Case tn.Name
                     Case "ndFindUserAccount"
                         SearchUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
                         CheckConnectUser.Show()
+                        Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
                         ChangePassword.Show()
+                        Me.clear()
                         Me.Hide()
                 End Select
             End If
