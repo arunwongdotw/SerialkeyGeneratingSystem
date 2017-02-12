@@ -472,6 +472,7 @@ Public Class CreateSerial
 
         txtInfo.Text = serialINFO
         txtInfo.Visible = True
+
         txtSerialKey.Text = Caesar.encript(serialINFO, 3)
         txtSerialKey.Visible = True
         Panel5.Visible = True
@@ -563,6 +564,7 @@ Public Class CreateSerial
         Dim version As String = ""
         Dim total_user As String = ""
         Dim EXPdate As String = ""
+        Dim checkcaesar As String = Caesar.getCheckCeasar(txtInfo.Text)
 
         If chbForever.Checked = True Then
             EXPdate = "xxxx"
@@ -639,12 +641,22 @@ Public Class CreateSerial
         Dim sqlread As SqlDataReader = con.query(strsql)
         If sqlread Is Nothing Then
             MsgBox("การเพิ่มข้อมูลล้มเหลว")
+            con.close()
         Else
             MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            con.close()
 
+            Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
+            sql &= " values ('" & txtSerialKey.Text & "'"
+            sql &= " , '" & checkcaesar & "')"
+            Dim sqlread2 As SqlDataReader = con.query(sql)
+            con.close()
 
         End If
-        con.close()
+
+
+        
+
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click

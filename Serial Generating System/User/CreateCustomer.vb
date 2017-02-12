@@ -86,9 +86,9 @@ Public Class CreateCustomer
         Dim EmailRegexCheck As New Regex(EmailRegex)
         Dim houseNoRegexCheck As New Regex(houseNo)
         'Dim PhonenumberRegexCheck As New Regex(PhonenumberRegex)
-        
-            'ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
-            'MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
+
+        'ElseIf Not PhonenumberRegexCheck.IsMatch(txtPhone.Text) Then
+        'MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         If txtCorpName.Text = "" Then
             MsgBox("กรุณากรอกชื่อบริษัท")
         ElseIf txtCorp_s_Name.Text = "" Then
