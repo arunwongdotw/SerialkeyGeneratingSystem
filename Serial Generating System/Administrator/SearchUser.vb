@@ -28,7 +28,7 @@ Public Class SearchUser
     End Sub
 
     Private Sub randerColorRow()
-        For i = 0 To dgvSearchUser.Rows.Count - 2
+        For i = 0 To dgvSearchUser.Rows.Count - 1
             If i Mod 2 = 0 Then
                 dgvSearchUser.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
             End If

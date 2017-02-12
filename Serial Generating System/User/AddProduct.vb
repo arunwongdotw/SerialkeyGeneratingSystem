@@ -78,9 +78,10 @@ Public Class AddProduct
         End If
 
 
-        strSQL = "insert into product (product_name,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
+        strSQL = "insert into product (product_name,product_image,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
         strSQL &= ",thai,eng,china,japan,cost) "
         strSQL &= "values ('" & Trim(txtProductName.Text) & "',"
+        strSQL &= "'" & pbAttachProductImage.ImageLocation & "',"
         strSQL &= "'" & Trim(txtProduct_s_name.Text) & "',"
         strSQL &= "'" & Trim(txtBrandName.Text) & "',"
         strSQL &= "'" & Trim(txtBrand_s_name.Text) & "',"
@@ -260,6 +261,15 @@ Public Class AddProduct
         If isProductDuplicate("brand_s_name", txtBrand_s_name.Text.Trim) Then
             MsgBox("ชื่อแบรนด์ซ้ำ")
             txtBrand_s_name.Focus()
+        End If
+    End Sub
+
+    Private Sub btnAttachProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachProductImage.Click
+        ofdAttachProductImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachProductImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
+            pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
 End Class

@@ -83,5 +83,34 @@ Public Class Caesar
         Next
         Return strDecript.ToString
     End Function
-
+    Public Shared Function decript(ByVal strCheck As String, ByVal text As String, ByVal shift As String) As String
+        Dim strDecript As New System.Text.StringBuilder()
+        Dim i As Integer = 1
+        For Each c As Char In text
+            If GetChar(strCheck, i) = "0" Then
+                If Char.IsUpper(c) Then
+                    strDecript.Append(Chr(Asc("Z") - ((Asc("Z") Mod Asc(c)) + shift) Mod 26))
+                ElseIf Char.IsLower(c) Then
+                    strDecript.Append(Chr(Asc("z") - ((Asc("z") Mod Asc(c)) + shift) Mod 26))
+                End If
+            ElseIf GetChar(strCheck, i) = "1" Then
+                strDecript.Append(Chr((Asc("Z") - ((Asc("Z") Mod Asc(c)) + shift) Mod 26) - 17))
+            Else : strDecript.Append("-")
+            End If
+            i += 1
+        Next
+        Return strDecript.ToString
+    End Function
+    Public Shared Function getCheckCeasar(ByVal text As String) As String
+        Dim strCheck As New System.Text.StringBuilder()
+        For Each c As Char In text
+            If c = "-" Then
+                strCheck.Append("-")
+            ElseIf Char.IsNumber(c) Then
+                strCheck.Append("1")
+            Else : strCheck.Append("0")
+            End If
+        Next
+        Return strCheck.ToString
+    End Function
 End Class

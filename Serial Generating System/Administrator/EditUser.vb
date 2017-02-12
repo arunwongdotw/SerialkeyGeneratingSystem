@@ -39,12 +39,12 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFromValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub
 
-    Private Function isFromValid() As Boolean
+    Private Function isFoพmValid() As Boolean
         Dim valid = True
         Dim regexCharAndNumber = "^[0-9a-zA-Z]*$"
         Dim EmailRegex As String = "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
@@ -291,6 +291,15 @@ Public Class EditUser
         If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
             MsgBox("อีเมลซ้ำ")
             txtEmpID.Focus()
+        End If
+    End Sub
+
+    Private Sub btnAttachNewUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewUserImage.Click
+        ofdAttachNewUserImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachNewUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachNewUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachNewUserImage.ImageLocation = ofdAttachNewUserImage.FileName
+            pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
 End Class

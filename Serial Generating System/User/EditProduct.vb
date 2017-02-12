@@ -241,4 +241,14 @@ Public Class EditProduct
 
         End Try
     End Sub
+
+
+    Private Sub btnAttachNewProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewProductImage.Click
+        ofdAttachNewProductImage.Title = "เลือกไฟล์รูปภาพ"
+        ofdAttachNewProductImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        If ofdAttachNewProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            pbAttachNewProductImage.ImageLocation = ofdAttachNewProductImage.FileName
+            pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+        End If
+    End Sub
 End Class
