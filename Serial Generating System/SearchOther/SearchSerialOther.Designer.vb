@@ -556,7 +556,9 @@ Partial Class SearchSerialOther
         Me.Controls.Add(Me.txtBrand_s_name)
         Me.Controls.Add(Me.lblBrandSoftware)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "SearchSerialOther"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ค้นหาซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

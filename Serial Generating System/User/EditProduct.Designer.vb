@@ -125,6 +125,7 @@ Partial Class EditProduct
         '
         Me.txtProduct_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtProduct_s_name.Location = New System.Drawing.Point(171, 65)
+        Me.txtProduct_s_name.MaxLength = 5
         Me.txtProduct_s_name.Name = "txtProduct_s_name"
         Me.txtProduct_s_name.Size = New System.Drawing.Size(250, 36)
         Me.txtProduct_s_name.TabIndex = 2
@@ -146,6 +147,7 @@ Partial Class EditProduct
         '
         Me.txtBrand_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBrand_s_name.Location = New System.Drawing.Point(171, 149)
+        Me.txtBrand_s_name.MaxLength = 5
         Me.txtBrand_s_name.Name = "txtBrand_s_name"
         Me.txtBrand_s_name.Size = New System.Drawing.Size(248, 36)
         Me.txtBrand_s_name.TabIndex = 4
@@ -512,7 +514,9 @@ Partial Class EditProduct
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "EditProduct"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "แก้ไขซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()

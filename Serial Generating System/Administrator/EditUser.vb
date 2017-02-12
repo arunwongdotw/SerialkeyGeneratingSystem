@@ -232,6 +232,18 @@ Public Class EditUser
         End Select
     End Sub
 
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
+        End Select
+    End Sub
+
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 65 To 90, 97 To 122, 8, 13

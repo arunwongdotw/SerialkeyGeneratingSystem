@@ -418,7 +418,9 @@ Partial Class SearchProductOther
         Me.Controls.Add(Me.lblCorp_s_name)
         Me.Controls.Add(Me.lblCorpName)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "SearchProductOther"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ค้นหาซอฟต์แวร์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
