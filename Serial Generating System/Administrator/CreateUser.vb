@@ -65,6 +65,7 @@ Public Class CreateUser
     Private Sub CreateUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
+
     Private Sub Form2_Load() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
@@ -152,20 +153,24 @@ Public Class CreateUser
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndFindUserAccount"
-                        SearchUser.Show()
+                        Dim frm As New SearchUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
-                        CheckConnectUser.Show()
+                        Dim frm As New CheckConnectUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
-                        ChangePassword.Show()
+                        Dim frm As New ChangePassword
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -302,8 +307,6 @@ Public Class CreateUser
                 MsgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
-
-
 
     Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
         If isEmployeeDuplicate("username", txtUsername.Text.Trim) Then

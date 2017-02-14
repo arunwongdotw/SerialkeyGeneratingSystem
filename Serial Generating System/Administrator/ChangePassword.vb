@@ -84,21 +84,24 @@ Public Class ChangePassword
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
-                        CreateUser.Show()
+                        Dim frm As New CreateUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindUserAccount"
-                        SearchUser.Show()
+                        Dim frm As New SearchUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
-                        CheckConnectUser.Show()
+                        Dim frm As New CheckConnectUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -132,7 +135,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -144,7 +147,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -156,9 +159,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
-
-
 End Class

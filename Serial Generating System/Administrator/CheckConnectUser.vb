@@ -10,24 +10,28 @@
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
-                        CreateUser.Show()
+                        Dim frm As New CreateUser()
+                        frm.Show()
                         Me.Hide()
                     Case "ndFindUserAccount"
-                        SearchUser.Show()
+                        Dim frm As New SearchUser
+                        frm.Show()
                         Me.Hide()
                     Case "ndAdminResetPassword"
-                        ChangePassword.Show()
+                        Dim frm As New ChangePassword
+                        frm.Show()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
     Private Sub CheckConnectUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
+
     Private Sub checkConnectionLoad() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass

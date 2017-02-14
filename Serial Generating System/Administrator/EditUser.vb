@@ -97,6 +97,7 @@ Public Class EditUser
         End If
         Return False
     End Function
+
     Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
         Dim isDup As Boolean = False
         Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "' and id not in (" & id & ")"
@@ -152,6 +153,7 @@ Public Class EditUser
         Dim formSearchUser As New SearchUser
         formSearchUser.Show()
     End Sub
+
     Private Sub convertData()
         If position.Equals("IT") Then
             rdbIT.Checked = True
@@ -162,6 +164,7 @@ Public Class EditUser
         chbPerEdit.Checked = perEdit = 1
         cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
     End Sub
+
     Private Sub loadData()
         Dim strQuery = "select id,"
         strQuery &= "emp_id,"
@@ -181,6 +184,7 @@ Public Class EditUser
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
     End Sub
+
     Private Sub initialData()
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         oldData.Add("email", txtEmail.Text)
@@ -206,7 +210,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
 
@@ -252,7 +256,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
+                msgBox("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
         End Select
     End Sub
 
@@ -276,6 +280,7 @@ Public Class EditUser
         lblMsgEmpId.ForeColor = Color.ForestGreen
         lblMsgEmpId.Text = "สามารถใช้รหัสพนักงานนี้ได้"
     End Sub
+
     Private Sub txtEmpID_incorrect()
         lblMsgEmpId.Visible = True
         pbEmpId.Visible = True
@@ -284,6 +289,7 @@ Public Class EditUser
         lblMsgEmpId.ForeColor = Color.Red
         lblMsgEmpId.Text = "รหัสพนักงานซ้ำ"
     End Sub
+
     Private Sub txtEmail_incorrect(ByVal msg As String)
         lblMsgEmail.Visible = True
         pbEmail.Visible = True
@@ -292,6 +298,7 @@ Public Class EditUser
         lblMsgEmail.ForeColor = Color.Red
         lblMsgEmail.Text = msg
     End Sub
+
     Private Sub txtEmail_correct()
         lblMsgEmail.Visible = True
         pbEmail.Visible = True
@@ -300,12 +307,14 @@ Public Class EditUser
         lblMsgEmail.ForeColor = Color.ForestGreen
         lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
     End Sub
+
     Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
         If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
             MsgBox("รหัสพนักงานซ้ำ")
             txtEmpID.Focus()
         End If
     End Sub
+
     Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
         If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
             MsgBox("อีเมลซ้ำ")
@@ -344,20 +353,24 @@ Public Class EditUser
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndFindUserAccount"
-                        SearchUser.Show()
+                        Dim frm As New SearchUser()
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
-                        CheckConnectUser.Show()
+                        Dim frm As New CheckConnectUser()
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAdminResetPassword"
-                        ChangePassword.Show()
+                        Dim frm As New ChangePassword()
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 

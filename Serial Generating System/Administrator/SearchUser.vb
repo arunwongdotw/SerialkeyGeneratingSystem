@@ -48,7 +48,6 @@ Public Class SearchUser
     End Sub
 
     Private Sub clearTxtBox()
-
         txtUsername.Clear()
         txtEmployeeId.Clear()
         txtFirstname.Clear()
@@ -57,7 +56,6 @@ Public Class SearchUser
         txtMobilePhone.Clear()
         txtPhone.Clear()
         txtEmail.Clear()
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -98,6 +96,7 @@ Public Class SearchUser
             Me.Hide()
         End If
     End Sub
+
     Private Sub setPermissionCheckBox()
         For i As Integer = 0 To dgvSearchUser.Rows.Count - 1
             If IsDBNull(dgvSearchUser.Rows(i).Cells("per_create").Value) OrElse dgvSearchUser.Rows(i).Cells("per_create").Value = 0 Then
@@ -117,11 +116,13 @@ Public Class SearchUser
             End If
         Next
     End Sub
+
     Private Sub dataGridView1_ColumnHeaderMouseClick(ByVal sender As Object, _
     ByVal e As DataGridViewCellMouseEventArgs) Handles dgvSearchUser.ColumnHeaderMouseClick
         randerColorRow()
         setPermissionCheckBox()
     End Sub
+
     Private Sub txtEmployeeId_TextChanged(sender As Object, e As EventArgs) Handles txtEmployeeId.TextChanged
         checkTextSingle(txtEmployeeId)
         loadDataTable()
@@ -130,42 +131,51 @@ Public Class SearchUser
         checkTextSingle(txtFirstname)
         loadDataTable()
     End Sub
+
     Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
         checkTextSingle(txtLastname)
         loadDataTable()
     End Sub
+
     Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
         checkTextSingle(txtPosition)
         loadDataTable()
     End Sub
+
     Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
         checkTextSingle(txtEmail)
         loadDataTable()
     End Sub
+
     Private Sub txtPhoneNo_TextChanged(sender As Object, e As EventArgs) Handles txtMobilePhone.TextChanged
         checkTextSingle(txtMobilePhone)
         loadDataTable()
     End Sub
+
     Private Sub tvAdminMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAdminMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateUserAccount"
-                        CreateUser.Show()
+                        Dim frm As New CreateUser
+                        frm.Show()
                         clearTxtBox()
                         Me.Hide()
                     Case "ndCheckConnectingUser"
-                        CheckConnectUser.Show()
+                        Dim frm As New CheckConnectUser
+                        frm.Show()
                         clearTxtBox()
                         Me.Hide()
                     Case "ndAdminResetPassword"
-                        ChangePassword.Show()
+                        Dim frm As New ChangePassword
+                        frm.Show()
                         clearTxtBox()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -222,7 +232,6 @@ Public Class SearchUser
     End Sub
 
     Private Sub addCustomColumns()
-
         Dim checkboxCreate As New DataGridViewCheckBoxColumn
         checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
@@ -231,7 +240,6 @@ Public Class SearchUser
         checkboxCreate.ReadOnly = True
         checkboxCreate.Width = 120
         dgvSearchUser.Columns.Add(checkboxCreate)
-
         Dim checkboxEdit As New DataGridViewCheckBoxColumn
         checkboxEdit.HeaderText = "สิทธิ์การแก้ไข"
         checkboxEdit.Name = "chbEdit"
@@ -239,7 +247,6 @@ Public Class SearchUser
         checkboxEdit.DefaultCellStyle.ForeColor = Color.Black
         checkboxEdit.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxEdit)
-
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
         checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทธิ์การลบ"
@@ -247,7 +254,6 @@ Public Class SearchUser
         checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
-
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
@@ -256,7 +262,6 @@ Public Class SearchUser
         btnEdit.UseColumnTextForButtonValue = True
         dgvSearchUser.Columns.Add(btnEdit)
         dgvSearchUser.Columns("btnEdit").DisplayIndex = 0
-
         Dim btnDelete As New DataGridViewButtonColumn()
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
@@ -265,9 +270,6 @@ Public Class SearchUser
         btnDelete.UseColumnTextForButtonValue = True
         dgvSearchUser.Columns.Add(btnDelete)
         dgvSearchUser.Columns("btnDelete").DisplayIndex = 1
-
-
-
     End Sub
 
     Private Function getQuery() As String
