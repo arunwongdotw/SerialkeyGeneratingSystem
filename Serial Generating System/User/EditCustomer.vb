@@ -2,10 +2,10 @@
 Imports System.Text.RegularExpressions
 
 Public Class EditCustomer
-
     Private id As String
     Private con As New ConnectDB
     Private sqlReader As SqlDataReader
+
     Public Sub New()
         InitializeComponent()
     End Sub
@@ -50,11 +50,9 @@ Public Class EditCustomer
         strQuery &= " from SGS.dbo.Customer "
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
-
     End Sub
 
     Private Sub initialData()
-
         txtCorpName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("corpname"))
         txtCorp_s_Name.Text = sqlReader.GetValue(sqlReader.GetOrdinal("corp_s_name"))
         txtCorpGroup.Text = sqlReader.GetValue(sqlReader.GetOrdinal("corpgroup"))
@@ -70,7 +68,6 @@ Public Class EditCustomer
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         txtPhone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phone"))
         txtcellphone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cellphone"))
-
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -131,6 +128,7 @@ Public Class EditCustomer
         End If
         Return True
     End Function
+
     'Private Sub txtCorpName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpName.KeyPress
     '    Select Case Asc(e.KeyChar)
     '        Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
@@ -140,6 +138,7 @@ Public Class EditCustomer
 
     '    End Select
     'End Sub
+
     Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
@@ -149,6 +148,7 @@ Public Class EditCustomer
 
         End Select
     End Sub
+
     Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
@@ -158,6 +158,7 @@ Public Class EditCustomer
 
         End Select
     End Sub
+
     Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
@@ -166,6 +167,7 @@ Public Class EditCustomer
                 msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
         End Select
     End Sub
+
     Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
@@ -183,6 +185,7 @@ Public Class EditCustomer
                 msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
+
     Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case Else
@@ -190,6 +193,7 @@ Public Class EditCustomer
                 msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
+
     Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
@@ -268,7 +272,6 @@ Public Class EditCustomer
                 msgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
             Case Else
                 e.Handled = False
-
         End Select
     End Sub
 
@@ -287,33 +290,39 @@ Public Class EditCustomer
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -335,5 +344,4 @@ Public Class EditCustomer
         txtcellphone.Clear()
         pbAttachNewCustomerImage.Image = Nothing
     End Sub
-
 End Class

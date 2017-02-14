@@ -87,33 +87,39 @@ Public Class ChangePasswordUser
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -131,7 +137,7 @@ Public Class ChangePasswordUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -143,7 +149,7 @@ Public Class ChangePasswordUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 
@@ -155,7 +161,7 @@ Public Class ChangePasswordUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         End Select
     End Sub
 

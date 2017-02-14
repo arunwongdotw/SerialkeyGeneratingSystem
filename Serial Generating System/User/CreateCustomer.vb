@@ -4,6 +4,7 @@ Imports System.Data
 
 Public Class CreateCustomer
     Private con As New ConnectDB
+
     'Function CheckData() As Boolean
     '    Try
     '        Dim sql As String = "select top(1) from customer where corp_s_name = '" & txtCorp_s_Name.Text.Trim & "'"
@@ -140,11 +141,9 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -156,11 +155,9 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -173,7 +170,6 @@ Public Class CreateCustomer
             Case Else
                 e.Handled = True
                 msgBox("กรุณากรอกเฉพาะตัวเลข")
-
         End Select
     End Sub
 
@@ -186,7 +182,6 @@ Public Class CreateCustomer
             Case Else
                 e.Handled = True
                 msgBox("กรุณากรอกเฉพาะตัวเลข")
-
         End Select
     End Sub
 
@@ -199,7 +194,6 @@ Public Class CreateCustomer
             Case Else
                 e.Handled = True
                 msgBox("กรุณากรอกเฉพาะตัวเลข")
-
         End Select
     End Sub
 
@@ -256,33 +250,39 @@ Public Class CreateCustomer
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -295,7 +295,6 @@ Public Class CreateCustomer
             Case Else
                 e.Handled = True
                 msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
-
         End Select
     End Sub
 
@@ -329,7 +328,6 @@ Public Class CreateCustomer
                 msgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
             Case Else
                 e.Handled = False
-
         End Select
     End Sub
 
@@ -341,11 +339,9 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -357,11 +353,9 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
         End Select
     End Sub
 
@@ -378,12 +372,7 @@ Public Class CreateCustomer
             Case Else
                 e.Handled = True
                 msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
-
         End Select
-    End Sub
-
-    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
@@ -394,16 +383,10 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
-    End Sub
-
-    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
@@ -414,16 +397,10 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
-    End Sub
-
-    Private Sub txtSubdistrict_TextChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs)
@@ -434,15 +411,11 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
-
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
-
-
 
     Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
         If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then

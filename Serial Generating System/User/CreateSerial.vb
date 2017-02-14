@@ -1,14 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-
 Public Class CreateSerial
-
     Private con As New ConnectDB
 
     Private Sub CreateSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
-
     End Sub
 
     Private Sub CreateSerial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -18,15 +15,6 @@ Public Class CreateSerial
         tvUserMenu.ExpandAll()
         cmbVersion.SelectedIndex = 0
         dtpExpireDate.MinDate = DateTime.Now
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
     End Sub
 
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
@@ -35,36 +23,41 @@ Public Class CreateSerial
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clearAll()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
-
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
         Dim frm As New Login
@@ -80,19 +73,15 @@ Public Class CreateSerial
                 Dim idx As String
                 idx = IIf(IsDBNull(frm.row_search("id")), "", frm.row_search("id"))
                 If idx <> "" Then
-
                     Dim sql As String
                     sql = "select id,corpname,corp_s_name,corpgroup from customer where id = '" & idx & "'"
                     'sql &= ""
-
                     Dim dt As New DataTable
                     Dim da As SqlDataAdapter = con.queryForAdapter(sql)
                     con.close()
                     dt.Clear()
-
                     da.Fill(dt)
                     If dt.Rows.Count > 0 Then
-
                         Me.txtCorpName.Text = IIf(IsDBNull(dt.Rows.Item(0)("corpname")), "", dt.Rows.Item(0)("corpname"))
                         Me.txtCorpSubName.Text = IIf(IsDBNull(dt.Rows.Item(0)("corp_s_name")), "", dt.Rows.Item(0)("corp_s_name"))
                         Me.txtGroupCorp.Text = IIf(IsDBNull(dt.Rows.Item(0)("corpgroup")), "", dt.Rows.Item(0)("corpgroup"))
@@ -100,16 +89,12 @@ Public Class CreateSerial
                         txtCorpName.Visible = True
                         txtCorpSubName.Visible = True
                         txtGroupCorp.Visible = True
-
                     End If
-
                 End If
             End If
         Catch
             MsgBox("error")
-
         End Try
-
     End Sub
 
     Private Sub btnAddCustomerInfo_Click(sender As Object, e As EventArgs) Handles btnAddCustomerInfo.Click
@@ -119,7 +104,6 @@ Public Class CreateSerial
     End Sub
 
     Private Sub clearAll()
-
         chbEnglish.Checked = False
         chbChinese.Checked = False
         chbJapan.Checked = False
@@ -128,7 +112,6 @@ Public Class CreateSerial
         chbQC.Checked = False
         chbUnlimit.Checked = False
         chbForever.Checked = False
-
         txtCorpName.Text = ""
         txtCorpSubName.Text = ""
         txtGroupCorp.Text = ""
@@ -140,9 +123,7 @@ Public Class CreateSerial
         txtAmountUser.Text = ""
         'txtInfo.Text = ""
         'txtSerialKey.Text = ""
-
         Panel5.Visible = False
-
         'txtCorpName.Clear()
         'txtCorpSubName.Clear()
         'txtGroupCorp.Clear()
@@ -154,10 +135,7 @@ Public Class CreateSerial
         'txtAmountUser.Clear()
         txtInfo.Clear()
         txtSerialKey.Clear()
-
         cmbVersion.SelectedIndex = 0
-
-
     End Sub
 
     Private Sub clearCheckbox()
@@ -168,6 +146,7 @@ Public Class CreateSerial
         chbWM.Checked = False
         chbQC.Checked = False
     End Sub
+
     Private Sub btnSearchSoftware_Click(sender As Object, e As EventArgs) Handles btnSearchSoftware.Click
         Try
             Dim frm As New SearchProductOther
@@ -176,7 +155,6 @@ Public Class CreateSerial
                 Dim idx As String
                 idx = IIf(IsDBNull(frm.row_search("id")), "", frm.row_search("id"))
                 If idx <> "" Then
-
                     Dim sql As String
                     sql = "select id,product_name,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement "
                     sql &= ",thai,eng,china,japan from product where id = '" & idx & "'"
@@ -191,27 +169,21 @@ Public Class CreateSerial
                     ',[china]
                     ',[japan]
                     ',[cost]
-
-
                     Dim dt As New DataTable
                     Dim da As SqlDataAdapter = con.queryForAdapter(sql)
                     con.close()
                     dt.Clear()
                     Me.clearCheckbox()
-
                     da.Fill(dt)
                     If dt.Rows.Count > 0 Then
-
                         Me.txtSoftwareName.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_name")), "", dt.Rows.Item(0)("product_name"))
                         Me.txtSoftware_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("product_s_name")), "", dt.Rows.Item(0)("product_s_name"))
                         Me.txtBrandName.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_name")), "", dt.Rows.Item(0)("brand_name"))
                         Me.txtBrand_s_name.Text = IIf(IsDBNull(dt.Rows.Item(0)("brand_s_name")), "", dt.Rows.Item(0)("brand_s_name"))
-
                         txtSoftwareName.Visible = True
                         txtSoftware_s_name.Visible = True
                         txtBrandName.Visible = True
                         txtBrand_s_name.Visible = True
-
                         If IIf(IsDBNull(dt.Rows.Item(0)("QualityControl")), "", dt.Rows.Item(0)("QualityControl")) = 1 Then
                             chbQC.Checked = True
                         End If
@@ -251,10 +223,8 @@ Public Class CreateSerial
             End If
         Catch
             MsgBox("error")
-
         End Try
     End Sub
-
 
     Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
         Dim frm As New AddProduct
@@ -269,33 +239,25 @@ Public Class CreateSerial
 
     Public Function toSqlDate(ByVal val As Date) As String
         Dim dd As Integer = Format(CDate(val), "dd")
-
         Dim day As String = ""
         If dd < 10 Then
             day = 0 & dd
         Else
             day = dd
         End If
-
         Dim MM As Integer = Format(CDate(val), "MM")
-
         Dim month As String = ""
         If MM < 10 Then
             month = 0 & MM
         Else
             month = MM
         End If
-
         'Dim yyyy As Integer = Format(CDate(val), "yyyy")
         Dim yyyy As Integer = Format(CDate(val), "yy")
-
         Dim ymd As String
-
         'ymd = yyyy & MM & dd
         ymd = yyyy & month & day
-
         toSqlDate = ymd
-
     End Function
 
     Private Function getSEQ() As Integer
@@ -308,7 +270,6 @@ Public Class CreateSerial
         da.Fill(dt)
         row = dt.Rows.Count
         Return row
-
     End Function
 
     Private Sub GenSerial()
@@ -485,8 +446,6 @@ Public Class CreateSerial
 
         Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
         MsgBox(serialMD5 & "       จำนวน = " & serialMD5.Length)
-
-
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -521,8 +480,6 @@ Public Class CreateSerial
         Catch
             Return False
         End Try
-
-
     End Function
     Public Function toSqlDate2(ByVal val As Date) As String
         Dim dd As Integer = Format(CDate(val), "dd")
@@ -659,10 +616,6 @@ Public Class CreateSerial
             con.close()
 
         End If
-
-
-        
-
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
@@ -671,7 +624,6 @@ Public Class CreateSerial
         If check = True Then
             GenSerial()
             addSerial()
-
         End If
     End Sub
 
@@ -692,13 +644,8 @@ Public Class CreateSerial
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
-
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
-    End Sub
-
-    Private Sub txtAmountUser_TextChanged(sender As Object, e As EventArgs) Handles txtAmountUser.TextChanged
-
     End Sub
 
     Private Sub txtContractNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContractNumber.KeyPress
@@ -709,13 +656,8 @@ Public Class CreateSerial
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
-
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
-    End Sub
-
-    Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
-
     End Sub
 
     Private Sub chbForever_CheckedChanged(sender As Object, e As EventArgs) Handles chbForever.CheckedChanged
@@ -724,18 +666,6 @@ Public Class CreateSerial
         Else
             dtpExpireDate.Enabled = True
         End If
-    End Sub
-
-    Private Sub dtpExpireDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpExpireDate.ValueChanged
-
-    End Sub
-
-    Private Sub txtCorpName_Click(sender As Object, e As EventArgs) Handles txtCorpName.Click
-
-    End Sub
-
-    Private Sub txtGroupCorp_Click(sender As Object, e As EventArgs) Handles txtGroupCorp.Click
-
     End Sub
 
     Private Sub btnCopyInfo_Click(sender As Object, e As EventArgs) Handles btnCopyInfo.Click
@@ -771,8 +701,6 @@ Public Class CreateSerial
             btnCopySerial.Visible = True
         End If
     End Sub
-
-
 
     Private Sub btnDecrypt_Click(sender As Object, e As EventArgs) Handles btnDecrypt.Click
         Dim frm As New Decrypt

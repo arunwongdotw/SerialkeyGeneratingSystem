@@ -105,13 +105,13 @@ Public Class EditProduct
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            MessageBox.Show("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            msgBox("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            MessageBox.Show("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            msgBox("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
         Else
             isCorrect = True
         End If
@@ -126,7 +126,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
         End Select
     End Sub
 
@@ -138,7 +138,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
         End Select
     End Sub
 
@@ -150,7 +150,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
     End Sub
 
@@ -219,36 +219,41 @@ Public Class EditProduct
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
-
 
     Private Sub btnAttachNewProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewProductImage.Click
         ofdAttachNewProductImage.Title = "เลือกไฟล์รูปภาพ"
@@ -257,9 +262,5 @@ Public Class EditProduct
             pbAttachNewProductImage.ImageLocation = ofdAttachNewProductImage.FileName
             pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
-    End Sub
-
-    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
-
     End Sub
 End Class

@@ -2,7 +2,6 @@
 Imports System.Data
 
 Public Class SearchSerial
-
     Private con As New ConnectDB
     Public row_search As DataRow
 
@@ -12,39 +11,44 @@ Public Class SearchSerial
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
     Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
-
     End Sub
 
     Private Sub searchSerialLoad() Handles MyBase.Load
@@ -53,27 +57,16 @@ Public Class SearchSerial
         txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
         txtContractNo.Select()
-
         cmbVersion.SelectedIndex = -1
         'dtpExpireDate.MinDate = DateTime.Now
-
         Me.GenerateColumn()
         Me.LoadData()
-
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Dim frm As New Login
         frm.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub lblBrandSoftware_Click(sender As Object, e As EventArgs) Handles lblBrandSoftware.Click
-
     End Sub
 
     Private Sub clear()
@@ -333,8 +326,6 @@ Public Class SearchSerial
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
-
-
     End Sub
 
     'Private Sub setPermissionCheckBox()
@@ -373,7 +364,6 @@ Public Class SearchSerial
     'End Sub
 
     Private Sub LoadData()
-
         Try
             dgvSerialKey.Columns.Clear()
 
@@ -459,9 +449,6 @@ Public Class SearchSerial
             GenerateColumn()
             dgvSerialKey.DataSource = dt
             'End If
-
-
-
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
             'con.close()
             'Dim table As New DataTable
@@ -471,20 +458,16 @@ Public Class SearchSerial
 
         Catch ex As Exception
             'MsgBox("ไม่พบข้อมูล")
-
         End Try
-
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Me.clear()
         Me.LoadData()
-
     End Sub
 
     Private Sub txtContractNo_TextChanged(sender As Object, e As EventArgs) Handles txtContractNo.TextChanged
         Me.LoadData()
-
     End Sub
 
     Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
@@ -559,6 +542,4 @@ Public Class SearchSerial
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         Me.LoadData()
     End Sub
-
-
 End Class

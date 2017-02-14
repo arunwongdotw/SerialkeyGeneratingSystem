@@ -6,12 +6,9 @@ Public Class SearchCustomer
 
     Private Sub SearchCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
-
     End Sub
 
     'Protected objCmd As New SqlCommand
-
-
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
@@ -19,7 +16,6 @@ Public Class SearchCustomer
         Me.GenerateColumn()
         Me.LoadData()
         tvUserMenu.ExpandAll()
-
     End Sub
 
     Private Sub GenerateColumn()
@@ -185,14 +181,11 @@ Public Class SearchCustomer
             'Me.dgvSearchCus.Columns.Add(btnDelete)
 
         Catch ex As Exception
-            MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
+            msgBox("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
-
-
     End Sub
 
     Private Sub LoadData()
-
         Try
             dgvSearchCus.Columns.Clear()
 
@@ -301,16 +294,10 @@ Public Class SearchCustomer
 
         Catch ex As Exception
             ' MsgBox("ไม่พบข้อมูล")
-
         End Try
-
     End Sub
 
-
-
-
     Private Sub clear()
-
         txtCorpName.Clear()
         txtCorp_s_name.Clear()
         txtCorpGroup.Clear()
@@ -330,15 +317,11 @@ Public Class SearchCustomer
         dgvSearchCus.DataSource = Nothing
         dgvSearchCus.Rows.Clear()
         'dt.Clear()
-
-
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clear()
         LoadData()
-
-
     End Sub
 
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
@@ -347,33 +330,39 @@ Public Class SearchCustomer
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        AddProduct.Show()
+                        Dim frm As New AddProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -451,10 +440,10 @@ Public Class SearchCustomer
                 strQuery = "delete from sgs.dbo.Customer where id = " & dgvSearchCus.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    MessageBox.Show("ลบข้อมูลสำเร็จ")
+                    msgBox("ลบข้อมูลสำเร็จ")
                     Search_Cus_Load(Nothing, Nothing)
                 Else
-                    MessageBox.Show("ลบข้อมูลไม่สำเร็จ")
+                    msgBox("ลบข้อมูลไม่สำเร็จ")
                 End If
             End If
         End If

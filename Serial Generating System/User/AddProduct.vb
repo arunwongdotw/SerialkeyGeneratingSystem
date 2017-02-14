@@ -2,7 +2,6 @@
 Imports System.Data
 
 Public Class AddProduct
-
     Private con As New ConnectDB
 
     Private Sub AddProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -14,7 +13,6 @@ Public Class AddProduct
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
-
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -22,6 +20,7 @@ Public Class AddProduct
         frm.Show()
         Me.Hide()
     End Sub
+
     Private Sub clear()
         txtProductName.Clear()
         txtProduct_s_name.Clear()
@@ -78,7 +77,6 @@ Public Class AddProduct
             japan = 1
         End If
 
-
         strSQL = "insert into product (product_name,product_image,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
         strSQL &= ",thai,eng,china,japan,cost) "
         strSQL &= "values ('" & Trim(txtProductName.Text) & "',"
@@ -111,7 +109,6 @@ Public Class AddProduct
 
         End If
         con.close()
-
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -124,17 +121,17 @@ Public Class AddProduct
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            MessageBox.Show("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            msgBox("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            MessageBox.Show("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            msgBox("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
         Else
             isCorrect = True
         End If
-            Return isCorrect
+        Return isCorrect
     End Function
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -153,12 +150,10 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
         End Select
     End Sub
-
-   
 
     Private Sub txtBrand_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrand_s_name.KeyPress
         Select Case Asc(e.KeyChar)
@@ -168,12 +163,10 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
 
         End Select
     End Sub
-
-   
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         pbAttachProductImage.ImageLocation = Nothing
@@ -189,13 +182,8 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณากรอกเฉพาะตัวเลข")
-
+                msgBox("กรุณากรอกเฉพาะตัวเลข")
         End Select
-    End Sub
-
-    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
-
     End Sub
 
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
@@ -204,33 +192,39 @@ Public Class AddProduct
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        CreateSerial.Show()
+                        Dim frm As New CreateSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindSerialkey"
-                        SearchSerial.Show()
+                        Dim frm As New SearchSerial
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndAddCustomer"
-                        CreateCustomer.Show()
+                        Dim frm As New CreateCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndFindCustomer"
-                        SearchCustomer.Show()
+                        Dim frm As New SearchCustomer
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndSearchProduct"
-                        searchProduct.Show()
+                        Dim frm As New searchProduct
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
-                        ChangePasswordUser.Show()
+                        Dim frm As New ChangePasswordUser
+                        frm.Show()
                         Me.clear()
                         Me.Hide()
                 End Select
             End If
         Catch ex As Exception
-
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
     End Sub
 
@@ -256,11 +250,6 @@ Public Class AddProduct
         End If
     End Sub
 
-    Private Sub txtBrandName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrandName.KeyPress
-
-    End Sub
-
-   
 
     'Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
     '    If isProductDuplicate("brand_name", txtBrandName.Text.Trim) Then
@@ -283,13 +272,5 @@ Public Class AddProduct
             pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
             pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
-    End Sub
-
-    Private Sub txtBrandName_TextChanged(sender As Object, e As EventArgs) Handles txtBrandName.TextChanged
-
-    End Sub
-
-    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
-
     End Sub
 End Class
