@@ -256,21 +256,25 @@ Public Class AddProduct
         End If
     End Sub
 
+    Private Sub txtBrandName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrandName.KeyPress
+
+    End Sub
+
    
 
-    Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
-        If isProductDuplicate("brand_name", txtBrandName.Text.Trim) Then
-            MsgBox("ชื่อแบรนด์ซ้ำ")
-            txtBrandName.Focus()
-        End If
-    End Sub
+    'Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
+    '    If isProductDuplicate("brand_name", txtBrandName.Text.Trim) Then
+    '        MsgBox("ชื่อแบรนด์ซ้ำ")
+    '        txtBrandName.Focus()
+    '    End If
+    'End Sub
 
-    Private Sub txtBrand_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtBrand_s_name.LostFocus
-        If isProductDuplicate("brand_s_name", txtBrand_s_name.Text.Trim) Then
-            MsgBox("ชื่อแบรนด์ซ้ำ")
-            txtBrand_s_name.Focus()
-        End If
-    End Sub
+    'Private Sub txtBrand_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtBrand_s_name.LostFocus
+    '    If isProductDuplicate("brand_s_name", txtBrand_s_name.Text.Trim) Then
+    '        MsgBox("ชื่อแบรนด์ซ้ำ")
+    '        txtBrand_s_name.Focus()
+    '    End If
+    'End Sub
 
     Private Sub btnAttachProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachProductImage.Click
         ofdAttachProductImage.Title = "เลือกไฟล์รูปภาพ"
@@ -279,5 +283,13 @@ Public Class AddProduct
             pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
             pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
+    End Sub
+
+    Private Sub txtBrandName_TextChanged(sender As Object, e As EventArgs) Handles txtBrandName.TextChanged
+
+    End Sub
+
+    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
+
     End Sub
 End Class
