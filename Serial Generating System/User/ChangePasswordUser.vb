@@ -34,10 +34,16 @@ Public Class ChangePasswordUser
         Dim isCorrect As Boolean = False
         Dim MatchCharAndNumberRegex As String = "^[a-zA-Z0-9]*$"
         Dim MatchCharAndNumberRegexCheck As New Regex(MatchCharAndNumberRegex)
-        If Not MatchCharAndNumberRegexCheck.IsMatch(txtOldPassword.Text) Then
+        If txtOldPassword.Text = "" Then
+            MsgBox("กรุณากรอกรหัสผ่านเก่า")
+        ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtOldPassword.Text) Then
             MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        ElseIf txtNewPassword.Text = "" Then
+            MsgBox("กรุณากรอกรหัสผ่านใหม่")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPassword.Text) Then
             MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+        ElseIf txtNewPasswordConfirm.Text = "" Then
+            MsgBox("กรุณากรอกยืนยันรหัสผ่าน")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPasswordConfirm.Text) Then
             MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
         Else
