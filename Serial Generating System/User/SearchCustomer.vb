@@ -181,7 +181,7 @@ Public Class SearchCustomer
             'Me.dgvSearchCus.Columns.Add(btnDelete)
 
         Catch ex As Exception
-            msgBox("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
+            MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
     End Sub
 
