@@ -173,7 +173,7 @@ Public Class EditProduct
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso MsgBox("คุณแน่ใจที่จะแก้ไขข้อมูลซอฟต์แวร์สำเร็จรูปนี้?", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso MsgBox("ยืนยันการแก้ไขข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub

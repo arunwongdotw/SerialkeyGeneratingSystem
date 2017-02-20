@@ -209,14 +209,14 @@ Public Class searchProduct
         Dim strQuery As String
         Dim isDelete As Boolean
         If e.ColumnIndex = dgvSearchProduct.Columns("btnDelete").Index Then
-            If MsgBox("คุณแน่ใจที่จะลบข้อมูลซอฟต์แวร์สำเร็จรูปนี้?", MsgBoxStyle.YesNo) = vbYes Then
+            If MsgBox("ยืนยันการลบข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
                 strQuery = "delete from sgs.dbo.product where id = " & dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    MessageBox.Show("ลบข้อมูลซอฟต์แวร์สำเร็จรูปสำเร็จ")
+                    MsgBox("ลบข้อมูลซอฟต์แวร์สำเร็จรูปสำเร็จ")
                     loadDataTable()
                 Else
-                    MessageBox.Show("ลบข้อมูลซอฟต์แวร์สำเร็จรูปล้มเหลว")
+                    MsgBox("ลบข้อมูลซอฟต์แวร์สำเร็จรูปล้มเหลว")
                 End If
             End If
         End If

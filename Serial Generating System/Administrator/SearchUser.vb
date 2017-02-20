@@ -79,11 +79,11 @@ Public Class SearchUser
         Dim strQuery As String
         Dim isDelete As Boolean
         If e.ColumnIndex = dgvSearchUser.Columns("btnDelete").Index Then
-            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then ' or  = 6 
+            If MsgBox("ยืนยันการลบบัญชีผู้ใช้?", MsgBoxStyle.YesNo) = vbYes Then ' or  = 6 
                 strQuery = "delete from sgs.dbo.employee where id = " & dgvSearchUser.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    MsgBox("ขณะนี้ผู้ใช้ " & dgvSearchUser.Rows(e.RowIndex).Cells("username").Value & "ไม่สามารถเข้าสู่ระบบได้")
+                    MsgBox("ขณะนี้ผู้ใช้ " & dgvSearchUser.Rows(e.RowIndex).Cells("username").Value & " ไม่สามารถเข้าสู่ระบบได้")
                     loadDataTable()
                 Else
                     MsgBox("ลบข้อมูลไม่สำเร็จ")

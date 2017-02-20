@@ -126,7 +126,7 @@ Public Class CreateUser
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะสร้างบัญชีผู้ใช้นี้?", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("ยืนยันการสร้างบัญชีผู้ใช้?", MsgBoxStyle.YesNo) = vbYes Then
             add()
         End If
     End Sub

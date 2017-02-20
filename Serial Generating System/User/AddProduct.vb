@@ -133,7 +133,7 @@ Public Class AddProduct
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso MsgBox("คุณแน่ใจที่จะเพิ่มซอฟต์แวร์สำเร็จรูปนี้?", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso MsgBox("ยืนยันการเพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
             add()
         End If
     End Sub
