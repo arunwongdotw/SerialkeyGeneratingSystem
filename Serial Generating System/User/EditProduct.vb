@@ -76,9 +76,9 @@ Public Class EditProduct
         strQuery &= "where id = " & id
         TextBox1.Text = strQuery
         If con.save(strQuery) Then
-            MsgBox("บันทึกข้อมูลสำเร็จ")
+            MsgBox("แก้ไขข้อมูลซอฟต์แวร์สำเร็จรูปเสร็จสิ้น")
         Else
-            MsgBox("บันทึกข้อมูลไม่สำเร็จ")
+            MsgBox("แก้ไขข้อมูลซอฟต์แวร์สำเร็จรูปล้มเหลว")
         End If
         Me.Hide()
         Dim formSearchProduct As New searchProduct
@@ -108,13 +108,13 @@ Public Class EditProduct
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            msgBox("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            MsgBox("ชื่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัว")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            msgBox("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัว")
         Else
             isCorrect = True
         End If
@@ -129,7 +129,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                MsgBox("ชื่อย่อซอฟต์แวร์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -141,7 +141,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                MsgBox("ชื่อย่อแบรนด์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -153,7 +153,7 @@ Public Class EditProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("ราคาต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -176,7 +176,7 @@ Public Class EditProduct
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso MsgBox("ยืนยันการแก้ไขข้อมูลซอฟต์แวร์", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso MsgBox("ยืนยันการแก้ไขข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub

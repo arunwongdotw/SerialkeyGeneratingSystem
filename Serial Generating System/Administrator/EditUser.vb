@@ -41,7 +41,7 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะแก้ไขบัญชีผู้ใช้นี้?", MsgBoxStyle.YesNo) = vbYes Then
+        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("ยืนยันการแก้ไขบัญชีผู้ใช้", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub

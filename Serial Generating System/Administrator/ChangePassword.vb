@@ -15,6 +15,7 @@ Public Class ChangePassword
         Else
             MsgBox("เปลี่ยนรหัสผ่านสำเร็จ")
             password = txtNewPassword.Text
+            Me.clear()
         End If
         con.close()
     End Sub
@@ -37,15 +38,15 @@ Public Class ChangePassword
         If txtOldPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่านเก่า")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtOldPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
+            MsgBox("รหัสผ่านเก่าต้องเป็นภาษาอังกฤษหรือตัวเลข")
         ElseIf txtNewPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่านใหม่")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
+            MsgBox("รหัสผ่านใหม่ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         ElseIf txtNewPasswordConfirm.Text = "" Then
             MsgBox("กรุณากรอกยืนยันรหัสผ่าน")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPasswordConfirm.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
+            MsgBox("ยืนยันรหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         Else
             isCorrect = True
         End If
@@ -120,7 +121,7 @@ Public Class ChangePassword
             checkOldNewPassword = CompareOldNewPassword()
             If checkOldNewPassword = True Then
                 checkConfirmPassword = CompareConfirmPassword()
-                If checkConfirmPassword = True AndAlso MsgBox("คุณแน่ใจที่จะเปลี่ยนรหัสผ่านนี้?", MsgBoxStyle.YesNo) = vbYes Then
+                If checkConfirmPassword = True AndAlso MsgBox("ยืนยันการเปลี่ยนรหัสผ่าน?", MsgBoxStyle.YesNo) = vbYes Then
                     edit()
                 End If
             End If

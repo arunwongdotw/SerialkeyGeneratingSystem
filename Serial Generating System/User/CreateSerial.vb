@@ -445,7 +445,7 @@ Public Class CreateSerial
         Panel5.Visible = True
 
         Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
-        MsgBox(serialMD5 & "       จำนวน = " & serialMD5.Length)
+        MsgBox("ซีเรียลคีย์ที่ผ่านการเข้ารหัส MD5 ที่ได้คือ " & serialMD5 & " ความยาวจำนวน = " & serialMD5.Length)
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -458,7 +458,7 @@ Public Class CreateSerial
             ElseIf txtBrand_s_name.Text = "" Then
                 MsgBox("กรุณาเพิ่มข้อมูลซอฟต์แวร์")
             ElseIf chbChinese.Checked = False And chbEnglish.Checked = False And chbThai.Checked = False And chbJapan.Checked = False Then
-                MsgBox("กรุณาเลือกอย่างน้อย 1 ภาษา")
+                MsgBox("กรุณาเลือกภาษาอย่างน้อย 1 ภาษา")
                 'Else
                 '    isCorrect = True
                 'End If
@@ -599,22 +599,18 @@ Public Class CreateSerial
         strsql &= "'" & Trim(cmbVersion.Text) & "',"
         strsql &= "'" & Trim(getEMP_ID()) & "'," 'emp_id ******
         strsql &= "'" & Trim(toSqlDate2(DateTime.Now)) & "')"
-
-
         Dim sqlread As SqlDataReader = con.query(strsql)
         If sqlread Is Nothing Then
-            MsgBox("การเพิ่มข้อมูลล้มเหลว")
+            MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
             con.close()
         Else
-            MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            MsgBox("สร้างซีเรียลคีย์ไม่สำเร็จ")
             con.close()
-
             Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
             sql &= " values ('" & txtSerialKey.Text & "'"
             sql &= " , '" & checkcaesar & "')"
             Dim sqlread2 As SqlDataReader = con.query(sql)
             con.close()
-
         End If
     End Sub
 
@@ -644,7 +640,7 @@ Public Class CreateSerial
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์ต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -656,7 +652,7 @@ Public Class CreateSerial
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("หมายเลขสัญญาต้องเป็นตัวเลข")
         End Select
     End Sub
 
