@@ -231,10 +231,10 @@ Partial Class CreateSerial
         Me.txtSerialKey.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtSerialKey.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSerialKey.Location = New System.Drawing.Point(138, 54)
+        Me.txtSerialKey.Location = New System.Drawing.Point(192, 54)
         Me.txtSerialKey.Name = "txtSerialKey"
         Me.txtSerialKey.ReadOnly = True
-        Me.txtSerialKey.Size = New System.Drawing.Size(699, 33)
+        Me.txtSerialKey.Size = New System.Drawing.Size(645, 33)
         Me.txtSerialKey.TabIndex = 121
         Me.txtSerialKey.TabStop = False
         Me.txtSerialKey.Visible = False
@@ -244,10 +244,10 @@ Partial Class CreateSerial
         Me.txtInfo.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtInfo.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInfo.Location = New System.Drawing.Point(138, 12)
+        Me.txtInfo.Location = New System.Drawing.Point(192, 12)
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ReadOnly = True
-        Me.txtInfo.Size = New System.Drawing.Size(699, 33)
+        Me.txtInfo.Size = New System.Drawing.Size(645, 33)
         Me.txtInfo.TabIndex = 120
         Me.txtInfo.TabStop = False
         Me.txtInfo.Visible = False
@@ -256,7 +256,7 @@ Partial Class CreateSerial
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(21, 59)
+        Me.Label5.Location = New System.Drawing.Point(82, 57)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(111, 27)
         Me.Label5.TabIndex = 116
@@ -266,11 +266,11 @@ Partial Class CreateSerial
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 17)
+        Me.Label3.Location = New System.Drawing.Point(0, 15)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 27)
+        Me.Label3.Size = New System.Drawing.Size(193, 27)
         Me.Label3.TabIndex = 114
-        Me.Label3.Text = "ข้อมูลที่ได้ :"
+        Me.Label3.Text = "ความหมายของซีเรียลคีย์ :"
         '
         'Panel4
         '

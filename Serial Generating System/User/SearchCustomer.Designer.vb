@@ -35,10 +35,6 @@ Partial Class SearchCustomer
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchCustomer))
-        Me.txtPhone = New System.Windows.Forms.TextBox()
-        Me.lblhone = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtPostalCode = New System.Windows.Forms.TextBox()
         Me.lblPostalCode = New System.Windows.Forms.Label()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
@@ -89,6 +85,10 @@ Partial Class SearchCustomer
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtCellphone = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.lblhone = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblEmail = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,44 +97,6 @@ Partial Class SearchCustomer
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'txtPhone
-        '
-        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(137, 139)
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(250, 36)
-        Me.txtPhone.TabIndex = 14
-        '
-        'lblhone
-        '
-        Me.lblhone.AutoSize = True
-        Me.lblhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhone.Location = New System.Drawing.Point(60, 141)
-        Me.lblhone.Name = "lblhone"
-        Me.lblhone.Size = New System.Drawing.Size(71, 27)
-        Me.lblhone.TabIndex = 56
-        Me.lblhone.Text = "โทรศัพท์ :"
-        '
-        'txtEmail
-        '
-        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(137, 181)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(250, 36)
-        Me.txtEmail.TabIndex = 13
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(78, 183)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
-        Me.lblEmail.TabIndex = 54
-        Me.lblEmail.Text = "อีเมล :"
         '
         'txtPostalCode
         '
@@ -256,7 +218,7 @@ Partial Class SearchCustomer
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1157, 415)
+        Me.btnClear.Location = New System.Drawing.Point(1141, 372)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 16
@@ -286,7 +248,7 @@ Partial Class SearchCustomer
         '
         Me.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastname.Location = New System.Drawing.Point(519, 17)
+        Me.txtLastname.Location = New System.Drawing.Point(519, 14)
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.Size = New System.Drawing.Size(250, 36)
         Me.txtLastname.TabIndex = 5
@@ -295,7 +257,7 @@ Partial Class SearchCustomer
         '
         Me.lblLastname.AutoSize = True
         Me.lblLastname.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLastname.Location = New System.Drawing.Point(439, 15)
+        Me.lblLastname.Location = New System.Drawing.Point(439, 12)
         Me.lblLastname.Name = "lblLastname"
         Me.lblLastname.Size = New System.Drawing.Size(75, 27)
         Me.lblLastname.TabIndex = 35
@@ -324,7 +286,7 @@ Partial Class SearchCustomer
         '
         Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstName.Location = New System.Drawing.Point(137, 17)
+        Me.txtFirstName.Location = New System.Drawing.Point(137, 14)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(250, 36)
         Me.txtFirstName.TabIndex = 4
@@ -333,7 +295,7 @@ Partial Class SearchCustomer
         '
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFirstName.Location = New System.Drawing.Point(92, 19)
+        Me.lblFirstName.Location = New System.Drawing.Point(92, 16)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
         Me.lblFirstName.TabIndex = 31
@@ -460,13 +422,19 @@ Partial Class SearchCustomer
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.txtCellphone)
+        Me.Panel4.Controls.Add(Me.txtPhone)
+        Me.Panel4.Controls.Add(Me.lblhone)
+        Me.Panel4.Controls.Add(Me.txtEmail)
+        Me.Panel4.Controls.Add(Me.lblEmail)
+        Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.txtFirstName)
         Me.Panel4.Controls.Add(Me.lblFirstName)
         Me.Panel4.Controls.Add(Me.txtLastname)
         Me.Panel4.Controls.Add(Me.lblLastname)
-        Me.Panel4.Location = New System.Drawing.Point(286, 399)
+        Me.Panel4.Location = New System.Drawing.Point(286, 317)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(829, 69)
+        Me.Panel4.Size = New System.Drawing.Size(829, 151)
         Me.Panel4.TabIndex = 124
         '
         'Panel3
@@ -631,14 +599,9 @@ Partial Class SearchCustomer
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.txtHouseNo)
-        Me.Panel2.Controls.Add(Me.txtCellphone)
         Me.Panel2.Controls.Add(Me.lblHouseNo)
         Me.Panel2.Controls.Add(Me.txtLane)
         Me.Panel2.Controls.Add(Me.lblLane)
-        Me.Panel2.Controls.Add(Me.txtPhone)
-        Me.Panel2.Controls.Add(Me.lblhone)
-        Me.Panel2.Controls.Add(Me.txtEmail)
-        Me.Panel2.Controls.Add(Me.lblEmail)
         Me.Panel2.Controls.Add(Me.lblRoad)
         Me.Panel2.Controls.Add(Me.txtPostalCode)
         Me.Panel2.Controls.Add(Me.txtRoad)
@@ -649,29 +612,66 @@ Partial Class SearchCustomer
         Me.Panel2.Controls.Add(Me.lblProvince)
         Me.Panel2.Controls.Add(Me.txtSubDistrict)
         Me.Panel2.Controls.Add(Me.lblDistrict)
-        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(286, 165)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1000, 228)
+        Me.Panel2.Size = New System.Drawing.Size(1000, 146)
         Me.Panel2.TabIndex = 122
         '
         'txtCellphone
         '
         Me.txtCellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCellphone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCellphone.Location = New System.Drawing.Point(519, 141)
+        Me.txtCellphone.Location = New System.Drawing.Point(519, 58)
         Me.txtCellphone.Name = "txtCellphone"
         Me.txtCellphone.Size = New System.Drawing.Size(250, 36)
-        Me.txtCellphone.TabIndex = 15
+        Me.txtCellphone.TabIndex = 65
+        '
+        'txtPhone
+        '
+        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(137, 56)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(250, 36)
+        Me.txtPhone.TabIndex = 64
+        '
+        'lblhone
+        '
+        Me.lblhone.AutoSize = True
+        Me.lblhone.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhone.Location = New System.Drawing.Point(60, 58)
+        Me.lblhone.Name = "lblhone"
+        Me.lblhone.Size = New System.Drawing.Size(71, 27)
+        Me.lblhone.TabIndex = 67
+        Me.lblhone.Text = "โทรศัพท์ :"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(137, 98)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(250, 36)
+        Me.txtEmail.TabIndex = 63
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(78, 100)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
+        Me.lblEmail.TabIndex = 66
+        Me.lblEmail.Text = "อีเมล :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(408, 143)
+        Me.Label1.Location = New System.Drawing.Point(408, 60)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 27)
-        Me.Label1.TabIndex = 62
+        Me.Label1.TabIndex = 68
         Me.Label1.Text = "โทรศัพท์มือถือ :"
         '
         'SearchCustomer
@@ -697,10 +697,6 @@ Partial Class SearchCustomer
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
-    Friend WithEvents lblhone As System.Windows.Forms.Label
-    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
-    Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
     Friend WithEvents lblPostalCode As System.Windows.Forms.Label
     Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
@@ -731,8 +727,6 @@ Partial Class SearchCustomer
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents dgvSearchCus As System.Windows.Forms.DataGridView
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents txtCellphone As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -752,4 +746,10 @@ Partial Class SearchCustomer
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents txtCellphone As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
+    Friend WithEvents lblhone As System.Windows.Forms.Label
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents lblEmail As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

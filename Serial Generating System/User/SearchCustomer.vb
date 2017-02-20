@@ -392,15 +392,15 @@ Public Class SearchCustomer
         LoadData()
     End Sub
 
-    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs)
         LoadData()
     End Sub
 
-    Private Sub txtCellphone_TextChanged(sender As Object, e As EventArgs) Handles txtCellphone.TextChanged
+    Private Sub txtCellphone_TextChanged(sender As Object, e As EventArgs)
         LoadData()
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
         LoadData()
     End Sub
 
