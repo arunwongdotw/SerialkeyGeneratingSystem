@@ -69,9 +69,12 @@ Public Class EditProduct
         strQuery &= "thai = '" & thai & "', "
         strQuery &= "eng = '" & eng & "', "
         strQuery &= "china = '" & china & "', "
-        strQuery &= "japan = '" & japan & "', "
-        strQuery &= "cost = '" & txtCost.Text.Trim & "' "
+        strQuery &= "japan = '" & japan & "' "
+        If Not txtCost.Text.Trim Is String.Empty Then
+            strQuery &= " , cost = '" & Convert.ToDouble(txtCost.Text.Trim) & "' "
+        End If
         strQuery &= "where id = " & id
+        TextBox1.Text = strQuery
         If con.save(strQuery) Then
             MsgBox("บันทึกข้อมูลสำเร็จ")
         Else
