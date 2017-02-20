@@ -290,7 +290,7 @@ Partial Class EditProduct
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(61, 26)
+        Me.Label5.Location = New System.Drawing.Point(61, 25)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(105, 27)
         Me.Label5.TabIndex = 26
@@ -390,7 +390,7 @@ Partial Class EditProduct
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(65, 151)
+        Me.Label7.Location = New System.Drawing.Point(64, 151)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(102, 27)
         Me.Label7.TabIndex = 31
@@ -399,7 +399,7 @@ Partial Class EditProduct
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(84, 110)
+        Me.Label8.Location = New System.Drawing.Point(83, 110)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(83, 27)
         Me.Label8.TabIndex = 46
@@ -408,7 +408,7 @@ Partial Class EditProduct
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(56, 238)
+        Me.Label9.Location = New System.Drawing.Point(56, 239)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 27)
         Me.Label9.TabIndex = 90
@@ -456,7 +456,7 @@ Partial Class EditProduct
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(108, 279)
+        Me.Label13.Location = New System.Drawing.Point(109, 280)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(57, 27)
         Me.Label13.TabIndex = 83

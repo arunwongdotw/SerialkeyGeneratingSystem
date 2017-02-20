@@ -261,7 +261,7 @@ Public Class EditCustomer
         End If
     End Sub
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -269,7 +269,7 @@ Public Class EditCustomer
                 e.Handled = False
             Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = True
-                msgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
+                MsgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
             Case Else
                 e.Handled = False
         End Select
