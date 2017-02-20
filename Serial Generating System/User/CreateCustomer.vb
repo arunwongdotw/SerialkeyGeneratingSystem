@@ -45,9 +45,9 @@ Public Class CreateCustomer
         strSQL &= "'" & pbAttachCustomerImage.ImageLocation & "')"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
-            MsgBox("การเพิ่มข้อมูลล้มเหลว")
+            MsgBox("เพิ่มข้อมูลลูกค้าล้มเหลว")
         Else
-            MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            MsgBox("เพิ่มข้อมูลลูกค้าสำเร็จ")
             Me.clear()
         End If
         con.close()
@@ -84,7 +84,7 @@ Public Class CreateCustomer
         ElseIf txtCorp_s_Name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท")
         ElseIf txtCorp_s_Name.TextLength < 3 Or txtCorp_s_Name.TextLength > 5 Then
-            MsgBox("กรุณากรอกชื่อย่อบริษัทระหว่าง 3-5 ตัวอักษร")
+            MsgBox("ชื่อย่อบริษัทต้องมีความยาว 3-5 ตัว")
         ElseIf txtCorpGroup.Text = "" Then
             MsgBox("กรุณากรอกชื่อกลุ่มบริษัท")
         ElseIf txtHouseNo.Text = "" Then
@@ -98,7 +98,7 @@ Public Class CreateCustomer
         ElseIf txtProvince.Text = "" Then
             MsgBox("กรุณากรอกจังหวัด")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
         ElseIf txtPhone.Text = "" And txtcellphone.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             'ElseIf txtPhone.Text = "" Then
@@ -114,7 +114,7 @@ Public Class CreateCustomer
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะสร้างข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่เพิ่มข้อมูลลูกค้านี้?", MsgBoxStyle.YesNo) = vbYes Then
             'If CheckData() = True Then
             add()
             'End If
@@ -143,7 +143,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ชื่อต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -157,7 +157,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("นามสกุลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -169,7 +169,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -181,7 +181,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัทพ์มือถือต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -193,7 +193,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("รหัสไปรษณีย์ต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -225,8 +225,6 @@ Public Class CreateCustomer
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         pbAttachCustomerImage.ImageLocation = Nothing
         Me.clear()
-
-
         '  [corpname]()
         ',[corp_s_name]
         ',[corpgroup]
@@ -241,7 +239,6 @@ Public Class CreateCustomer
         ',[postalcode]
         ',[email]
         ',[phone]
-
     End Sub
 
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
@@ -294,16 +291,16 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
+                MsgBox("ชื่อย่อบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
     Public Function checkDuplicate() As Boolean
         If isCustomerDuplicate("corpname", txtCorpName.Text) Then
-            msgBox("ชื่อบริษัทซ้ำ")
+            MsgBox("พบชื่อบริษัทนี้มีอยู่ในระบบแล้ว")
             Return True
         ElseIf isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text) Then
-            msgBox("ชื่อย่อบริษัทซ้ำ")
+            MsgBox("พบชื่อย่อบริษัทนี้มีอยู่ในระบบแล้ว")
             Return True
         End If
         Return False
@@ -325,7 +322,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = True
-                MsgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
+                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
             Case Else
                 e.Handled = False
         End Select
@@ -341,7 +338,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("กลุ่มบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -355,7 +352,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                MsgBox("ถนนต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
         End Select
     End Sub
 
@@ -371,7 +368,7 @@ Public Class CreateCustomer
                 '    e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                MsgBox("ซอยต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
         End Select
     End Sub
 
@@ -385,7 +382,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("อำเภอต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -399,7 +396,7 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ตำบลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -413,20 +410,20 @@ Public Class CreateCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("จังหวัดต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
     Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
         If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
-            MsgBox("ชื่อบริษัทซ้ำ")
+            MsgBox("พบชื่อบริษัทนี้มีอยู่ในระบบแล้ว")
             txtCorpName.Focus()
         End If
     End Sub
 
     Private Sub txtCorp_s_Name_LostFocus(sender As Object, e As EventArgs) Handles txtCorp_s_Name.LostFocus
         If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
-            MsgBox("ชื่อย่อบริษัทซ้ำ")
+            MsgBox("พบชื่อย่อบริษัทนี้มีอยู่ในระบบแล้ว")
             txtCorp_s_Name.Focus()
         End If
     End Sub

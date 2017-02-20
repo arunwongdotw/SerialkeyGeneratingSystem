@@ -35,12 +35,11 @@ Public Class AddProduct
         chbQC.Checked = False
         pbAttachProductImage.Image = Nothing
     End Sub
-    Private Sub add()
 
+    Private Sub add()
         Dim strSQL As String
         Dim wm As Byte, qc As Byte, eng As Byte, thai As Byte, china As Byte, japan As Byte
         Dim cost As String
-
         If txtCost.Text = "" Then
             cost = "null"
         Else
@@ -76,7 +75,6 @@ Public Class AddProduct
         Else
             japan = 1
         End If
-
         strSQL = "insert into product (product_name,product_image,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
         strSQL &= ",thai,eng,china,japan,cost) "
         strSQL &= "values ('" & Trim(txtProductName.Text) & "',"
@@ -102,11 +100,10 @@ Public Class AddProduct
 
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
-            MsgBox("การเพิ่มข้อมูลล้มเหลว")
+            MsgBox("เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูปล้มเหลว")
         Else
-            MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            MsgBox("เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูปสำเร็จ")
             Me.clear()
-
         End If
         con.close()
     End Sub
@@ -115,19 +112,18 @@ Public Class AddProduct
         Dim isCorrect As Boolean = False
         Dim i As Integer = txtBrand_s_name.TextLength
         Dim j As Integer = txtProduct_s_name.TextLength
-        
         If txtProductName.Text = "" Then
             MsgBox("กรุณากรอกชื่อซอฟต์แวร์")
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            msgBox("กรุณากรอกชื่อย่อซอฟต์แวร์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            MsgBox("ชื่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัว")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            msgBox("กรุณากรอกชื่อย่อแบรนด์จำนวน 3-5 ตัวอักษรภาษาอังกฤษหรือตัวเลข")
+            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัว")
         Else
             isCorrect = True
         End If
@@ -137,7 +133,7 @@ Public Class AddProduct
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso MsgBox("คุณแน่ใจที่จะเพิ่มข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso MsgBox("คุณแน่ใจที่จะเพิ่มซอฟต์แวร์สำเร็จรูปนี้?", MsgBoxStyle.YesNo) = vbYes Then
             add()
         End If
     End Sub
@@ -150,8 +146,7 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
-
+                MsgBox("ชื่อย่อซอฟต์แวร์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -163,8 +158,7 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
-
+                MsgBox("ชื่อย่อแบรนด์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -182,7 +176,7 @@ Public Class AddProduct
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("ราคาต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -238,14 +232,14 @@ Public Class AddProduct
 
     Private Sub txtProductName_LostFocus(sender As Object, e As EventArgs) Handles txtProductName.LostFocus
         If isProductDuplicate("product_name", txtProductName.Text.Trim) Then
-            MsgBox("ชื่อซอฟต์แวร์ซ้ำ")
+            MsgBox("พบชื่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
             txtProductName.Focus()
         End If
     End Sub
 
     Private Sub txtProduct_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtProduct_s_name.LostFocus
         If isProductDuplicate("product_s_name", txtProduct_s_name.Text.Trim) Then
-            MsgBox("ชื่อย่อซอฟต์แวร์ซ้ำ")
+            MsgBox("พบชื่อย่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
             txtProduct_s_name.Focus()
         End If
     End Sub

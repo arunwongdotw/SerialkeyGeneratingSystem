@@ -436,14 +436,14 @@ Public Class SearchCustomer
         Dim strQuery As String
         Dim isDelete As Boolean
         If e.ColumnIndex = dgvSearchCus.Columns("btnDelete").Index Then
-            If MsgBox("คุณแน่ใจที่จะลบข้อมูลนี้", MsgBoxStyle.YesNo, Title:="ยืนยันการลบข้อมูล") = vbYes Then ' or  = 6 
+            If MsgBox("คุณแน่ใจที่จะลบข้อมูลลูกค้านี้?", MsgBoxStyle.YesNo) = vbYes Then ' or  = 6 
                 strQuery = "delete from sgs.dbo.Customer where id = " & dgvSearchCus.Rows(e.RowIndex).Cells("id").Value
                 isDelete = con.save(strQuery)
                 If isDelete Then
-                    msgBox("ลบข้อมูลสำเร็จ")
+                    MsgBox("ลบข้อมูลลูกค้าสำเร็จ")
                     Search_Cus_Load(Nothing, Nothing)
                 Else
-                    msgBox("ลบข้อมูลไม่สำเร็จ")
+                    MsgBox("ลบข้อมูลลูกค้าล้มเหลว")
                 End If
             End If
         End If

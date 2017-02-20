@@ -71,13 +71,13 @@ Public Class EditCustomer
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFormValid() And Not idDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If isFormValid() And Not idDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะแก้ไขข้อมูลลูกค้านี้?", MsgBoxStyle.YesNo) = vbYes Then
             If isSave() Then
                 con.close()
-                MsgBox("บันทึกข้อมูลสำเร็จ")
+                MsgBox("แก้ไขข้อมูลลูกค้าสำเร็จ")
                 Dim search As New SearchCustomer
                 search.Show()
-            Else : MsgBox("บันทึกข้อมูลล้มเหลว")
+            Else : MsgBox("แก้ไขข้อมูลลูกค้าล้มเหลว")
             End If
         End If
     End Sub
@@ -90,7 +90,7 @@ Public Class EditCustomer
             MsgBox("กรุณากรอกชื่อย่อบริษัท")
             Return False
         ElseIf txtCorp_s_Name.TextLength < 3 Or txtCorp_s_Name.TextLength > 5 Then
-            MsgBox("กรุณากรอกชื่อย่อบริษัทระหว่าง 3-5 ตัวอักษร")
+            MsgBox("ชื่อย่อบริษัทต้องมีความยาว 3-5 ตัว")
             Return False
         ElseIf txtCorpGroup.Text.Trim Is String.Empty Then
             MsgBox("กรุณากรอกกลุ่มบริษัท")
@@ -117,7 +117,7 @@ Public Class EditCustomer
             MsgBox("กรุณากรอกอีเมล")
             Return False
         ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             Return False
         ElseIf txtPhone.Text Is String.Empty And txtcellphone.Text Is String.Empty Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
@@ -142,73 +142,83 @@ Public Class EditCustomer
     Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะภาษาอังกฤษและตัวเลข")
-
+                MsgBox("ชื่อย่อบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
     Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 46, 161 To 240
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
-
+                MsgBox("กลุ่มบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
     Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                MsgBox("ถนนต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
         End Select
     End Sub
 
     Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวอักษรพิเศษได้")
+                MsgBox("ซอยต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
         End Select
     End Sub
 
     Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("อำเภอต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
     Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
         Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ตำบลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
     Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
         End Select
     End Sub
 
     Private Function idDuplicate() As Boolean
         If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
-            MsgBox("ชื่อบริษัทซ้ำ")
+            MsgBox("พบชื่อบริษัทนี้มีอยู่ในระบบแล้ว")
             Return True
         ElseIf isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
-            MsgBox("ชื่อย่อบริษัทซ้ำ")
+            MsgBox("พบชื่อย่อบริษัทนี้มีอยู่ในระบบแล้ว")
             Return True
         End If
         Return False
@@ -249,14 +259,14 @@ Public Class EditCustomer
 
     Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
         If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
-            MsgBox("ชื่อบริษัทซ้ำ")
+            MsgBox("พบชื่อบริษัทนี้มีอยู่ในระบบแล้ว")
             txtCorpName.Focus()
         End If
     End Sub
 
     Private Sub txtCorp_s_Name_LostFocus(sender As Object, e As EventArgs) Handles txtCorp_s_Name.LostFocus
         If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
-            MsgBox("ชื่อย่อบริษัทซ้ำ")
+            MsgBox("พบชื่อย่อบริษัทนี้มีอยู่ในระบบแล้ว")
             txtCorp_s_Name.Focus()
         End If
     End Sub
@@ -269,7 +279,7 @@ Public Class EditCustomer
                 e.Handled = False
             Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = True
-                MsgBox("อีเมลไม่สามารถใช้ภาษาไทยได้")
+                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
             Case Else
                 e.Handled = False
         End Select
