@@ -54,9 +54,9 @@ Public Class CreateUser
         strSQL &= "'" & pbAttachUserImage.ImageLocation & "')"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
-            MsgBox("การเพิ่มข้อมูลล้มเหลว")
+            MsgBox("สร้างบัญชีผู้ใช้ไม่สำเร็จ")
         Else
-            MsgBox("การเพิ่มข้อมูลเสร็จสิ้น")
+            MsgBox("สร้างบัญชีผู้ใช้สำเร็จ")
         End If
         con.close()
         Me.clear()
@@ -66,7 +66,7 @@ Public Class CreateUser
         Application.Exit()
     End Sub
 
-    Private Sub Form2_Load() Handles MyBase.Load
+    Private Sub CreateUser_Load() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
@@ -84,9 +84,9 @@ Public Class CreateUser
         'Dim MobileNumberRegexCheck As New Regex(MobileNumberRegex)
         Dim NotMatchNumberRegexCheck As New Regex(NotMatchNumberRegex)
         If Not MatchCharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
-            MsgBox("ชื่อผู้ใช้ต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+            MsgBox("ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
         ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtFirstName.Text) Then
             MsgBox("รูปแบบชื่อไม่ถูกต้อง")
         ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtLastName.Text) Then
@@ -102,7 +102,7 @@ Public Class CreateUser
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
         ElseIf txtEmpID.TextLength <> 5 Then
-            MsgBox("กรุณากรอกรหัสพนักงานความยาว 5 หลัก")
+            MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
         ElseIf txtFirstName.Text = "" Then
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
@@ -110,7 +110,7 @@ Public Class CreateUser
         ElseIf txtEmail.Text = "" Then
             MsgBox("กรุณากรอกอีเมล")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง")
+            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
         ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
@@ -126,7 +126,7 @@ Public Class CreateUser
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะสร้างข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะสร้างบัญชีผู้ใช้นี้?", MsgBoxStyle.YesNo) = vbYes Then
             add()
         End If
     End Sub
@@ -193,7 +193,7 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ชื่อผู้ใช้ต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -205,7 +205,7 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
+                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
         End Select
     End Sub
 
@@ -217,7 +217,7 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -231,13 +231,12 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ชื่อต้องเป็นภาษาอังกฤษและภาษาไทย")
         End Select
     End Sub
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
         Select Case Asc(e.KeyChar)
-            
             Case 65 To 90, 97 To 122
                 e.Handled = False
             Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
@@ -246,7 +245,7 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("นามสกุลต้องเป็นภาษาอังกฤษและภาษาไทย")
         End Select
     End Sub
 
@@ -258,7 +257,7 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -270,31 +269,9 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัพท์มือถือต้องเป็นตัวเลข")
         End Select
     End Sub
-
-    Public Function checkDuplicate() As Boolean
-        If isEmployeeDuplicate("username", txtUsername.Text) Then
-            MsgBox("มีชื่อผู้ใช้นี้อยู่ในระบบแล้ว")
-            Return True
-        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
-            MsgBox("มีรหัสพนักงานนี้อยู่ในระบบแล้ว")
-            Return True
-        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
-            MsgBox("มีอีเมลนี้อยู่ในระบบแล้ว")
-            Return True
-        End If
-        Return False
-    End Function
-
-    Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
-        Dim isDup As Boolean = False
-        Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "'"
-        isDup = con.query(strSelect).Read
-        con.close()
-        Return isDup
-    End Function
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
         Select Case Asc(e.KeyChar)
@@ -304,30 +281,52 @@ Public Class CreateUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
         End Select
     End Sub
 
+    Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
+        Dim isDup As Boolean = False
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "'"
+        isDup = con.query(strSelect).Read
+        con.close()
+        Return isDup
+    End Function
+
     Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
         If isEmployeeDuplicate("username", txtUsername.Text.Trim) Then
-            MsgBox("ชื่อผู้ใช้ซ้ำ")
+            MsgBox("พบชื่อผู้ใช้นี้มีอยู่ในระบบแล้ว")
             txtUsername.Focus()
         End If
     End Sub
 
     Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
         If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
-            MsgBox("รหัสพนักงานซ้ำ")
+            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
             txtEmpID.Focus()
         End If
     End Sub
 
-    Private Sub LostFocus_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
         If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
-            MsgBox("อีเมลซ้ำ")
+            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
             txtEmail.Focus()
         End If
     End Sub
+
+    Public Function checkDuplicate() As Boolean
+        If isEmployeeDuplicate("username", txtUsername.Text) Then
+            MsgBox("พบชื่อผู้ใช้นี้มีอยู่ในระบบแล้ว")
+            Return True
+        ElseIf isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
+            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
+            Return True
+        ElseIf isEmployeeDuplicate("email", txtEmail.Text) Then
+            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
+            Return True
+        End If
+        Return False
+    End Function
 
     Private Sub btnAttachUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachUserImage.Click
         ofdAttachUserImage.Title = "เลือกไฟล์รูปภาพ"

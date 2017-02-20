@@ -24,7 +24,7 @@ Public Class EditUser
         Application.Exit()
     End Sub
 
-    Private Sub Edit_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub EditUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
@@ -41,7 +41,7 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่แก้ไขข้อมูลนี้", MsgBoxStyle.YesNo) = vbYes Then
+        If isFoพmValid() AndAlso Not checkDuplicate() AndAlso MsgBox("คุณแน่ใจที่จะแก้ไขบัญชีผู้ใช้นี้?", MsgBoxStyle.YesNo) = vbYes Then
             saveData()
         End If
     End Sub
@@ -61,7 +61,7 @@ Public Class EditUser
             MsgBox("กรุณากรอกรหัสพนักงาน")
             valid = False
         ElseIf txtEmpID.TextLength <> 5 Then
-            MsgBox("กรุณากรอกรหัสพนักงานความยาว 5 หลัก")
+            MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
             valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกชื่อ")
@@ -89,10 +89,10 @@ Public Class EditUser
 
     Public Function checkDuplicate() As Boolean
         If isEmployeeDuplicate("emp_id", txtEmpID.Text) Then
-            MsgBox("รหัสพนักงานซ้ำ")
+            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
             Return True
         ElseIf isEmployeeDuplicate("email", txtPhoneNumber.Text) Then
-            MsgBox("อีเมลซ้ำ")
+            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
             Return True
         End If
         Return False
@@ -146,8 +146,8 @@ Public Class EditUser
         strquery &= " per_delete = '" & perdelete & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
-            MsgBox("บันทึกข้อมูลสำเร็จ")
-        Else : MsgBox("บันทึกข้อมูลไม่สำเร็จ")
+            MsgBox("แก้ไขบัญชีผู้ใช้สำเร็จ")
+        Else : MsgBox("แก้ไขบัญชีผู้ใช้ไม่สำเร็จ")
         End If
         Me.Hide()
         Dim formSearchUser As New SearchUser
@@ -210,7 +210,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
-                msgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัทพ์ต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -219,7 +219,7 @@ Public Class EditUser
             Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
-                MsgBox("กรุณากรอกเฉพาะตัวเลข")
+                MsgBox("เบอร์โทรศัทพ์มือถือต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -228,7 +228,7 @@ Public Class EditUser
             Case 65 To 90, 97 To 122, 8, 13, 161 To 240
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("นามสกุลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -237,7 +237,7 @@ Public Class EditUser
             Case 65 To 90, 97 To 122, 8, 13, 161 To 240
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("ชื่อต้องเป็นภาษาอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -246,17 +246,16 @@ Public Class EditUser
             Case 48 To 57, 65 To 90, 97 To 122, 8, 13
             Case Else
                 e.Handled = True
-                MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
-
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13
             Case Else
                 e.Handled = True
-                msgBox("รหัสพนักงานต้องเป็นตัวเลข 5 หลักนั้น")
+                MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
         End Select
     End Sub
 
@@ -268,7 +267,7 @@ Public Class EditUser
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("อีเมลไม่สามารถกรอกภาษาไทยได้")
+                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
         End Select
     End Sub
 
@@ -310,14 +309,14 @@ Public Class EditUser
 
     Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
         If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
-            MsgBox("รหัสพนักงานซ้ำ")
+            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
             txtEmpID.Focus()
         End If
     End Sub
 
     Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
         If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
-            MsgBox("อีเมลซ้ำ")
+            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
             txtEmpID.Focus()
         End If
     End Sub

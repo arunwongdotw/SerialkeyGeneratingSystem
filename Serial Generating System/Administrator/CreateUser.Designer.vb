@@ -292,9 +292,9 @@ Partial Class CreateUser
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(543, 77)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(335, 24)
+        Me.Label7.Size = New System.Drawing.Size(306, 24)
         Me.Label7.TabIndex = 16
-        Me.Label7.Text = "* ภาษาอังกฤษและตัวเลขความยาวห้ามต่ำกว่า 6 ตัวอักษร"
+        Me.Label7.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
         'txtUsername
         '
@@ -325,9 +325,9 @@ Partial Class CreateUser
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(137, 77)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(335, 24)
+        Me.Label8.Size = New System.Drawing.Size(306, 24)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "* ภาษาอังกฤษและตัวเลขความยาวห้ามต่ำกว่า 6 ตัวอักษร"
+        Me.Label8.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
         'Panel3
         '

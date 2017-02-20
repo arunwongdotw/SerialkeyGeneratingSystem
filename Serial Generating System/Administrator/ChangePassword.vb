@@ -37,15 +37,15 @@ Public Class ChangePassword
         If txtOldPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่านเก่า")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtOldPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         ElseIf txtNewPassword.Text = "" Then
             MsgBox("กรุณากรอกรหัสผ่านใหม่")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         ElseIf txtNewPasswordConfirm.Text = "" Then
             MsgBox("กรุณากรอกยืนยันรหัสผ่าน")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPasswordConfirm.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         Else
             isCorrect = True
         End If
@@ -55,7 +55,7 @@ Public Class ChangePassword
     Private Function CompareOldNewPassword() As Boolean
         Dim isCorrect As Boolean = False
         If Not password = txtOldPassword.Text Then
-            MsgBox("รหัสผ่านกับรหัสผ่านเก่าไม่ตรงกัน")
+            MsgBox("รหัสผ่านปัจจุบันกับรหัสผ่านเก่าไม่ตรงกัน")
         Else
             isCorrect = True
         End If
@@ -120,7 +120,7 @@ Public Class ChangePassword
             checkOldNewPassword = CompareOldNewPassword()
             If checkOldNewPassword = True Then
                 checkConfirmPassword = CompareConfirmPassword()
-                If checkConfirmPassword = True AndAlso MsgBox("คุณแน่ใจที่เปลี่ยนรหัสผ่าน", MsgBoxStyle.YesNo) = vbYes Then
+                If checkConfirmPassword = True AndAlso MsgBox("คุณแน่ใจที่จะเปลี่ยนรหัสผ่านนี้?", MsgBoxStyle.YesNo) = vbYes Then
                     edit()
                 End If
             End If
@@ -135,7 +135,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านเก่าต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -147,7 +147,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("รหัสผ่านใหม่ต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 
@@ -159,7 +159,7 @@ Public Class ChangePassword
                 e.Handled = False
             Case Else
                 e.Handled = True
-                msgBox("รหัสผ่านต้องเป็นตัวอักษรภาษาอังกฤษและตัวเลขเท่านั้น")
+                MsgBox("ยืนยันรหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลข")
         End Select
     End Sub
 End Class
