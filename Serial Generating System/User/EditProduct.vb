@@ -74,7 +74,7 @@ Public Class EditProduct
             strQuery &= " , cost = '" & Convert.ToDouble(txtCost.Text.Trim) & "' "
         End If
         strQuery &= "where id = " & id
-        TextBox1.Text = strQuery
+
         If con.save(strQuery) Then
             MsgBox("แก้ไขข้อมูลซอฟต์แวร์สำเร็จรูปเสร็จสิ้น")
         Else
