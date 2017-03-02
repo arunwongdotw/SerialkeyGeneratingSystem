@@ -82,7 +82,7 @@ Public Class searchProduct
             .Columns("brand_name").ReadOnly = True
             .Columns("brand_s_name").ReadOnly = True
             .Columns("cost").ReadOnly = True
-            .Columns("product_name").Width = 120
+            .Columns("product_name").Width = 250
             .Columns("product_s_name").Width = 150
             .Columns("brand_name").Width = 100
             .Columns("brand_s_name").Width = 120
