@@ -43,6 +43,8 @@ Public Class ChangePasswordUser
             MsgBox("กรุณากรอกรหัสผ่านใหม่")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPassword.Text) Then
             MsgBox("รหัสผ่านใหม่ต้องเป็นภาษาอังกฤษหรือตัวเลข")
+        ElseIf txtNewPassword.TextLength < 6 Then
+            MsgBox("รหัสผ่านใหม่ต้องมีความยาวไม่ต่ำกว่า 6 ตัวอักษร")
         ElseIf txtNewPasswordConfirm.Text = "" Then
             MsgBox("กรุณากรอกยืนยันรหัสผ่าน")
         ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtNewPasswordConfirm.Text) Then
