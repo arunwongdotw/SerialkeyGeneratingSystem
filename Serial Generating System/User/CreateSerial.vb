@@ -604,12 +604,12 @@ Public Class CreateSerial
             MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
             con.close()
         Else
-            MsgBox("สร้างซีเรียลคีย์ไม่สำเร็จ")
             con.close()
             Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
             sql &= " values ('" & txtSerialKey.Text & "'"
             sql &= " , '" & checkcaesar & "')"
             Dim sqlread2 As SqlDataReader = con.query(sql)
+            MsgBox("สร้างซีเรียลคีย์สำเร็จ")
             con.close()
         End If
     End Sub
