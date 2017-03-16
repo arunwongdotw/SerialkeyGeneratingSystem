@@ -51,10 +51,7 @@ Partial Class CreateUser
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -80,12 +77,12 @@ Partial Class CreateUser
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -332,11 +329,9 @@ Partial Class CreateUser
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.txtPhoneNumber)
-        Me.Panel3.Controls.Add(Me.Label22)
-        Me.Panel3.Controls.Add(Me.Label21)
         Me.Panel3.Controls.Add(Me.Label20)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label17)
@@ -384,7 +379,6 @@ Partial Class CreateUser
         Me.rdbIT.TabIndex = 10
         Me.rdbIT.Text = "ไอที"
         Me.rdbIT.UseVisualStyleBackColor = True
-        Me.rdbIT.TabStop = False
         '
         'rdbAccountant
         '
@@ -397,49 +391,15 @@ Partial Class CreateUser
         Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(391, 200)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 94
-        Me.PictureBox2.TabStop = False
-        '
         'txtPhoneNumber
         '
         Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(141, 188)
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(141, 230)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(250, 36)
         Me.txtPhoneNumber.TabIndex = 7
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.Red
-        Me.Label22.Location = New System.Drawing.Point(411, 200)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(162, 24)
-        Me.Label22.TabIndex = 93
-        Me.Label22.Text = "* กรุณากรอกเบอร์โทรศัพท์"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(423, 220)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(109, 24)
-        Me.Label21.TabIndex = 95
-        Me.Label21.Text = "อย่างน้อย 1 เบอร์"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label20
         '
@@ -479,7 +439,7 @@ Partial Class CreateUser
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(65, 190)
+        Me.Label18.Location = New System.Drawing.Point(64, 232)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
@@ -609,7 +569,7 @@ Partial Class CreateUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(27, 232)
+        Me.Label9.Location = New System.Drawing.Point(27, 190)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
@@ -631,7 +591,7 @@ Partial Class CreateUser
         Me.txtMobileNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtMobileNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMobileNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMobileNumber.Location = New System.Drawing.Point(141, 230)
+        Me.txtMobileNumber.Location = New System.Drawing.Point(141, 188)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.Size = New System.Drawing.Size(250, 36)
         Me.txtMobileNumber.TabIndex = 8
@@ -715,6 +675,17 @@ Partial Class CreateUser
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(397, 190)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.TabIndex = 98
+        Me.Label15.Text = "*"
+        '
         'CreateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -734,7 +705,6 @@ Partial Class CreateUser
         Me.Panel3.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
@@ -777,9 +747,6 @@ Partial Class CreateUser
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
@@ -790,4 +757,5 @@ Partial Class CreateUser
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class
