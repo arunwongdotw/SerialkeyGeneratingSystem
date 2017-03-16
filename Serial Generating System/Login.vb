@@ -85,7 +85,7 @@ Public Class Login
     Private Sub LoadData()
         user = txtUsername.Text
         pass = txtPassword.Text
-        Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
+        Dim strQuery As String = "select * from SGSedit.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
         If sqlread Is Nothing Then
             MsgBox("query ผิด")
