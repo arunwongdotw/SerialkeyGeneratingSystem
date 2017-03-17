@@ -190,8 +190,6 @@ Public Class SearchUser
             .Columns("fullname").HeaderCell.Value = "ชื่อ - สกุล"
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
-            .Columns("position").HeaderCell.Value = "ตำแหน่ง"
-            .Columns("mobilenumber").HeaderCell.Value = "โทรศัพท์มือถือ"
             .Columns("phonenumber").HeaderCell.Value = "โทรศัพท์"
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
@@ -199,8 +197,6 @@ Public Class SearchUser
             .Columns("fullname").ReadOnly = True
             .Columns("username").ReadOnly = True
             .Columns("password").ReadOnly = True
-            .Columns("position").ReadOnly = True
-            .Columns("mobilenumber").ReadOnly = True
             .Columns("phonenumber").ReadOnly = True
             .Columns("email").ReadOnly = True
             .Columns("user_type").ReadOnly = True
@@ -209,20 +205,16 @@ Public Class SearchUser
             .Columns("username").Width = 120
             .Columns("password").Width = 120
             .Columns("fullname").Width = 200
-            .Columns("mobilenumber").Width = 150
             .Columns("phonenumber").Width = 150
             .Columns("email").Width = 200
             .Columns("user_type").Width = 120
-            .Columns("position").Width = 120
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("fullname").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("username").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("phonenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("mobilenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("email").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("user_type").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -272,33 +264,66 @@ Public Class SearchUser
         dgvSearchUser.Columns("btnDelete").DisplayIndex = 1
     End Sub
 
+
     Private Function getQuery() As String
-        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,mobilenumber,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
+        Dim strQuery As New System.Text.StringBuilder
+        strQuery.Append(" SELECT ")
+        strQuery.Append(" EMP.id, ")
+        strQuery.Append(" EMP.emp_id, ")
+        strQuery.Append(" EMP.username, ")
+        strQuery.Append(" EMP.password, ")
+        strQuery.Append(" EMP.firstname+' '+EMP.lastname as fullname, ")
+        strQuery.Append(" EMP.cellphone, ")
+        strQuery.Append(" EMP.phonenumber, ")
+        strQuery.Append(" EMP.email, ")
+        strQuery.Append(" STUFF((SELECT ', ' + PO.position_name ")
+        strQuery.Append(" FROM Position_of_employee POE ")
+        strQuery.Append(" join bciPosition PO ")
+        strQuery.Append(" on POE.position_id = PO.id ")
+        strQuery.Append(" WHERE POE.emp_id = EMP.emp_id ")
+        strQuery.Append(" ORDER BY PO.position_name ")
+        strQuery.Append(" FOR XML PATH('')), 1, 1, '') AS position , ")
+        strQuery.Append(" EMP.user_type, ")
+        strQuery.Append(" EMP.per_create, ")
+        strQuery.Append(" EMP.per_edit, ")
+        strQuery.Append(" EMP.per_delete, ")
+        strQuery.Append(" EMP.per_print ")
+        strQuery.Append(" FROM Employee EMP ")
+        strQuery.Append(" WHERE EMP.emp_id is not null ")
         If Not txtUsername.Text = String.Empty Then
-            strQuery &= " and username like '%" & txtUsername.Text & "%'"
+            strQuery.Append(" and username like '%" & txtUsername.Text & "%' ")
         End If
         If Not txtEmployeeId.Text = String.Empty Then
-            strQuery &= " and emp_id like '%" & txtEmployeeId.Text & "%'"
+            strQuery.Append(" and emp_id like '%" & txtEmployeeId.Text & "%' ")
         End If
         If Not txtFirstname.Text = String.Empty Then
-            strQuery &= " and firstname like '%" & txtFirstname.Text & "%'"
+            strQuery.Append(" and firstname like '%" & txtFirstname.Text & "%' ")
         End If
         If Not txtLastname.Text = String.Empty Then
-            strQuery &= " and lastname like '%" & txtLastname.Text & "%'"
-        End If
-        If Not txtPosition.Text = String.Empty Then
-            strQuery &= " and position like '%" & txtPosition.Text & "%'"
-        End If
-        If Not txtMobilePhone.Text = String.Empty Then
-            strQuery &= " and mobilenumber like '%" & txtMobilePhone.Text & "%'"
+            strQuery.Append(" and lastname like '%" & txtLastname.Text & "%' ")
         End If
         If Not txtPhone.Text = String.Empty Then
-            strQuery &= " and phonenumber like '%" & txtPhone.Text & "%'"
+            strQuery.Append(" and phonenumber like '%" & txtPhone.Text & "%' ")
         End If
         If Not txtEmail.Text = String.Empty Then
-            strQuery &= " and email like '%" & txtEmail.Text & "%'"
+            strQuery.Append(" and email like '%" & txtEmail.Text & "%' ")
         End If
-        Return strQuery
+        strQuery.Append(" GROUP BY  EMP.id , ")
+        strQuery.Append(" EMP.emp_id , ")
+        strQuery.Append(" EMP.username, ")
+        strQuery.Append(" EMP.password, ")
+        strQuery.Append(" EMP.firstname, ")
+        strQuery.Append(" EMP.lastname, ")
+        strQuery.Append(" EMP.cellphone, ")
+        strQuery.Append(" EMP.phonenumber, ")
+        strQuery.Append(" EMP.email, ")
+        strQuery.Append(" EMP.user_type, ")
+        strQuery.Append(" EMP.per_create, ")
+        strQuery.Append(" EMP.per_edit, ")
+        strQuery.Append(" EMP.per_delete, ")
+        strQuery.Append(" EMP.per_print ")
+        strQuery.Append(" ORDER BY  EMP.emp_id ")
+        Return strQuery.ToString
     End Function
 
     Private Sub genRowNumber()
