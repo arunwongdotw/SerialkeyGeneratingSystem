@@ -114,6 +114,12 @@ Public Class SearchUser
             ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
                 dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
             End If
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_print").Value) OrElse dgvSearchUser.Rows(i).Cells("per_print").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbPrint").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_print").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbPrint").Value = True
+            End If
+
         Next
     End Sub
 
@@ -183,6 +189,7 @@ Public Class SearchUser
         With dgvSearchUser
             .RowHeadersVisible = False
             .Columns("id").Visible = False
+            .Columns("per_print").Visible = False
             .Columns("per_create").Visible = False
             .Columns("per_edit").Visible = False
             .Columns("per_delete").Visible = False
@@ -191,6 +198,8 @@ Public Class SearchUser
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
             .Columns("phonenumber").HeaderCell.Value = "โทรศัพท์"
+            .Columns("cellphone").HeaderCell.Value = "โทรศัพท์มือถือ"
+            .Columns("position").HeaderCell.Value = "ตำแหน่ง"
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
             .Columns("emp_id").ReadOnly = True
@@ -206,15 +215,18 @@ Public Class SearchUser
             .Columns("password").Width = 120
             .Columns("fullname").Width = 200
             .Columns("phonenumber").Width = 150
+            .Columns("cellphone").Width = 150
             .Columns("email").Width = 200
             .Columns("user_type").Width = 120
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("fullname").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("username").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("phonenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("cellphone").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("email").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("user_type").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -246,6 +258,13 @@ Public Class SearchUser
         checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
+        Dim checkboxPrint As New DataGridViewCheckBoxColumn
+        checkboxPrint.Name = "chbPrint"
+        checkboxPrint.HeaderText = "สิทธิ์การออกรายงาน"
+        checkboxPrint.FlatStyle = FlatStyle.Flat
+        checkboxPrint.DefaultCellStyle.ForeColor = Color.Black
+        checkboxPrint.ReadOnly = True
+        dgvSearchUser.Columns.Add(checkboxPrint)
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
@@ -304,6 +323,9 @@ Public Class SearchUser
         End If
         If Not txtPhone.Text = String.Empty Then
             strQuery.Append(" and phonenumber like '%" & txtPhone.Text & "%' ")
+        End If
+        If Not txtMobilePhone.Text = String.Empty Then
+            strQuery.Append(" and cellphone like '%" & txtMobilePhone.Text & "%' ")
         End If
         If Not txtEmail.Text = String.Empty Then
             strQuery.Append(" and email like '%" & txtEmail.Text & "%' ")
