@@ -350,7 +350,7 @@ Public Class SearchCustomer
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        Dim frm As New AddProduct
+                        Dim frm As New Addsoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()

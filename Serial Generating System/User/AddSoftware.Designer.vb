@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddProduct
+Partial Class Addsoftware
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,18 +33,16 @@ Partial Class AddProduct
         Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
         Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddProduct))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Addsoftware))
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lblCorpSubName = New System.Windows.Forms.Label()
-        Me.txtProductName = New System.Windows.Forms.TextBox()
-        Me.txtProduct_s_name = New System.Windows.Forms.TextBox()
+        Me.txtSoftwareName = New System.Windows.Forms.TextBox()
+        Me.txtSoftware_s_name = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.txtBrand_s_name = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.lblGroupCorp = New System.Windows.Forms.Label()
-        Me.txtBrandName = New System.Windows.Forms.TextBox()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
@@ -53,30 +51,25 @@ Partial Class AddProduct
         Me.pbAttachProductImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.dgvLanguage = New System.Windows.Forms.DataGridView()
+        Me.dgvOption = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbBrand = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtSoftwareCode = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.chbThai = New System.Windows.Forms.CheckBox()
-        Me.chbJapan = New System.Windows.Forms.CheckBox()
-        Me.chbChinese = New System.Windows.Forms.CheckBox()
-        Me.chbEnglish = New System.Windows.Forms.CheckBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.chbWM = New System.Windows.Forms.CheckBox()
-        Me.chbQC = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCost = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.ofdAttachProductImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachProductImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        CType(Me.dgvLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tvUserMenu
@@ -118,7 +111,7 @@ Partial Class AddProduct
         'lblCorpName
         '
         Me.lblCorpName.AutoSize = True
-        Me.lblCorpName.Location = New System.Drawing.Point(61, 26)
+        Me.lblCorpName.Location = New System.Drawing.Point(40, 70)
         Me.lblCorpName.Name = "lblCorpName"
         Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
         Me.lblCorpName.TabIndex = 26
@@ -127,28 +120,28 @@ Partial Class AddProduct
         'lblCorpSubName
         '
         Me.lblCorpSubName.AutoSize = True
-        Me.lblCorpSubName.Location = New System.Drawing.Point(42, 68)
+        Me.lblCorpSubName.Location = New System.Drawing.Point(21, 112)
         Me.lblCorpSubName.Name = "lblCorpSubName"
         Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
         Me.lblCorpSubName.TabIndex = 27
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
-        'txtProductName
+        'txtSoftwareName
         '
-        Me.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtProductName.Location = New System.Drawing.Point(171, 23)
-        Me.txtProductName.Name = "txtProductName"
-        Me.txtProductName.Size = New System.Drawing.Size(500, 36)
-        Me.txtProductName.TabIndex = 1
+        Me.txtSoftwareName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSoftwareName.Location = New System.Drawing.Point(150, 67)
+        Me.txtSoftwareName.Name = "txtSoftwareName"
+        Me.txtSoftwareName.Size = New System.Drawing.Size(667, 36)
+        Me.txtSoftwareName.TabIndex = 1
         '
-        'txtProduct_s_name
+        'txtSoftware_s_name
         '
-        Me.txtProduct_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtProduct_s_name.Location = New System.Drawing.Point(171, 65)
-        Me.txtProduct_s_name.MaxLength = 5
-        Me.txtProduct_s_name.Name = "txtProduct_s_name"
-        Me.txtProduct_s_name.Size = New System.Drawing.Size(250, 36)
-        Me.txtProduct_s_name.TabIndex = 2
+        Me.txtSoftware_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSoftware_s_name.Location = New System.Drawing.Point(150, 109)
+        Me.txtSoftware_s_name.MaxLength = 5
+        Me.txtSoftware_s_name.Name = "txtSoftware_s_name"
+        Me.txtSoftware_s_name.Size = New System.Drawing.Size(250, 36)
+        Me.txtSoftware_s_name.TabIndex = 2
         '
         'btnAdd
         '
@@ -156,30 +149,12 @@ Partial Class AddProduct
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(1022, 436)
+        Me.btnAdd.Location = New System.Drawing.Point(1022, 619)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
         Me.btnAdd.TabIndex = 15
         Me.btnAdd.Text = "เพิ่ม"
         Me.btnAdd.UseVisualStyleBackColor = False
-        '
-        'lblFirstName
-        '
-        Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(64, 151)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
-        Me.lblFirstName.TabIndex = 31
-        Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
-        '
-        'txtBrand_s_name
-        '
-        Me.txtBrand_s_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtBrand_s_name.Location = New System.Drawing.Point(171, 149)
-        Me.txtBrand_s_name.MaxLength = 5
-        Me.txtBrand_s_name.Name = "txtBrand_s_name"
-        Me.txtBrand_s_name.Size = New System.Drawing.Size(250, 36)
-        Me.txtBrand_s_name.TabIndex = 4
         '
         'btnClear
         '
@@ -187,7 +162,7 @@ Partial Class AddProduct
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1157, 436)
+        Me.btnClear.Location = New System.Drawing.Point(1157, 619)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 16
@@ -197,19 +172,11 @@ Partial Class AddProduct
         'lblGroupCorp
         '
         Me.lblGroupCorp.AutoSize = True
-        Me.lblGroupCorp.Location = New System.Drawing.Point(83, 110)
+        Me.lblGroupCorp.Location = New System.Drawing.Point(62, 157)
         Me.lblGroupCorp.Name = "lblGroupCorp"
         Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
         Me.lblGroupCorp.TabIndex = 46
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
-        '
-        'txtBrandName
-        '
-        Me.txtBrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtBrandName.Location = New System.Drawing.Point(171, 107)
-        Me.txtBrandName.Name = "txtBrandName"
-        Me.txtBrandName.Size = New System.Drawing.Size(500, 36)
-        Me.txtBrandName.TabIndex = 3
         '
         'btnLogOut
         '
@@ -309,149 +276,125 @@ Partial Class AddProduct
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.dgvLanguage)
+        Me.Panel2.Controls.Add(Me.dgvOption)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.cmbBrand)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.txtSoftwareCode)
+        Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.txtProductName)
+        Me.Panel2.Controls.Add(Me.txtSoftwareName)
         Me.Panel2.Controls.Add(Me.lblCorpName)
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.lblCorpSubName)
-        Me.Panel2.Controls.Add(Me.txtProduct_s_name)
-        Me.Panel2.Controls.Add(Me.lblFirstName)
-        Me.Panel2.Controls.Add(Me.txtBrand_s_name)
+        Me.Panel2.Controls.Add(Me.txtSoftware_s_name)
         Me.Panel2.Controls.Add(Me.lblGroupCorp)
-        Me.Panel2.Controls.Add(Me.txtBrandName)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.txtCost)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.lblLanguage)
         Me.Panel2.Location = New System.Drawing.Point(404, 92)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(882, 338)
+        Me.Panel2.Size = New System.Drawing.Size(882, 521)
         Me.Panel2.TabIndex = 98
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(425, 282)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(15, 24)
-        Me.Label7.TabIndex = 104
-        Me.Label7.Text = "*"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(677, 112)
+        Me.Label6.Location = New System.Drawing.Point(823, 394)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(15, 24)
-        Me.Label6.TabIndex = 104
+        Me.Label6.TabIndex = 132
         Me.Label6.Text = "*"
+        '
+        'dgvLanguage
+        '
+        Me.dgvLanguage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLanguage.Location = New System.Drawing.Point(150, 384)
+        Me.dgvLanguage.Name = "dgvLanguage"
+        Me.dgvLanguage.Size = New System.Drawing.Size(667, 64)
+        Me.dgvLanguage.TabIndex = 131
+        '
+        'dgvOption
+        '
+        Me.dgvOption.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Thai Sans Lite", 12.75!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOption.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvOption.Location = New System.Drawing.Point(150, 195)
+        Me.dgvOption.Name = "dgvOption"
+        Me.dgvOption.Size = New System.Drawing.Size(667, 167)
+        Me.dgvOption.TabIndex = 130
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(406, 156)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(15, 24)
+        Me.Label2.TabIndex = 129
+        Me.Label2.Text = "*"
+        '
+        'cmbBrand
+        '
+        Me.cmbBrand.FormattingEnabled = True
+        Me.cmbBrand.Location = New System.Drawing.Point(150, 151)
+        Me.cmbBrand.Name = "cmbBrand"
+        Me.cmbBrand.Size = New System.Drawing.Size(250, 35)
+        Me.cmbBrand.TabIndex = 128
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(406, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(249, 24)
+        Me.Label3.TabIndex = 127
+        Me.Label3.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        '
+        'txtSoftwareCode
+        '
+        Me.txtSoftwareCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSoftwareCode.Location = New System.Drawing.Point(150, 25)
+        Me.txtSoftwareCode.Name = "txtSoftwareCode"
+        Me.txtSoftwareCode.Size = New System.Drawing.Size(248, 36)
+        Me.txtSoftwareCode.TabIndex = 125
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(32, 28)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(113, 27)
+        Me.Label8.TabIndex = 126
+        Me.Label8.Text = "รหัสซอฟต์แวร์ :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(677, 28)
+        Me.Label5.Location = New System.Drawing.Point(823, 67)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(15, 24)
         Me.Label5.TabIndex = 104
         Me.Label5.Text = "*"
         '
-        'Panel5
-        '
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.chbThai)
-        Me.Panel5.Controls.Add(Me.chbJapan)
-        Me.Panel5.Controls.Add(Me.chbChinese)
-        Me.Panel5.Controls.Add(Me.chbEnglish)
-        Me.Panel5.Location = New System.Drawing.Point(171, 275)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(250, 36)
-        Me.Panel5.TabIndex = 123
-        '
-        'chbThai
-        '
-        Me.chbThai.AutoSize = True
-        Me.chbThai.Location = New System.Drawing.Point(76, 3)
-        Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 31)
-        Me.chbThai.TabIndex = 84
-        Me.chbThai.Text = "ไทย"
-        Me.chbThai.UseVisualStyleBackColor = True
-        '
-        'chbJapan
-        '
-        Me.chbJapan.AutoSize = True
-        Me.chbJapan.Location = New System.Drawing.Point(184, 3)
-        Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
-        Me.chbJapan.TabIndex = 87
-        Me.chbJapan.Text = "ญี่ปุ่น"
-        Me.chbJapan.UseVisualStyleBackColor = True
-        '
-        'chbChinese
-        '
-        Me.chbChinese.AutoSize = True
-        Me.chbChinese.Location = New System.Drawing.Point(133, 3)
-        Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
-        Me.chbChinese.TabIndex = 86
-        Me.chbChinese.Text = "จีน"
-        Me.chbChinese.UseVisualStyleBackColor = True
-        '
-        'chbEnglish
-        '
-        Me.chbEnglish.AutoSize = True
-        Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
-        Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
-        Me.chbEnglish.TabIndex = 85
-        Me.chbEnglish.Text = "อังกฤษ"
-        Me.chbEnglish.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.chbWM)
-        Me.Panel3.Controls.Add(Me.chbQC)
-        Me.Panel3.Location = New System.Drawing.Point(171, 233)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(500, 36)
-        Me.Panel3.TabIndex = 124
-        '
-        'chbWM
-        '
-        Me.chbWM.AutoSize = True
-        Me.chbWM.Location = New System.Drawing.Point(3, 4)
-        Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(198, 31)
-        Me.chbWM.TabIndex = 92
-        Me.chbWM.Text = "Warehouse Management"
-        Me.chbWM.UseVisualStyleBackColor = True
-        '
-        'chbQC
-        '
-        Me.chbQC.AutoSize = True
-        Me.chbQC.Location = New System.Drawing.Point(245, 4)
-        Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 31)
-        Me.chbQC.TabIndex = 91
-        Me.chbQC.Text = "Quality Control"
-        Me.chbQC.UseVisualStyleBackColor = True
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(56, 238)
+        Me.Label4.Location = New System.Drawing.Point(35, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(110, 27)
         Me.Label4.TabIndex = 90
@@ -462,44 +405,16 @@ Partial Class AddProduct
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(427, 70)
+        Me.Label1.Location = New System.Drawing.Point(406, 114)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(249, 24)
         Me.Label1.TabIndex = 81
         Me.Label1.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
-        'txtCost
-        '
-        Me.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCost.Location = New System.Drawing.Point(171, 191)
-        Me.txtCost.Name = "txtCost"
-        Me.txtCost.Size = New System.Drawing.Size(250, 36)
-        Me.txtCost.TabIndex = 88
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(427, 153)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(249, 24)
-        Me.Label2.TabIndex = 82
-        Me.Label2.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(68, 193)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 27)
-        Me.Label3.TabIndex = 89
-        Me.Label3.Text = "ราคา (บาท) :"
-        '
         'lblLanguage
         '
         Me.lblLanguage.AutoSize = True
-        Me.lblLanguage.Location = New System.Drawing.Point(109, 279)
+        Me.lblLanguage.Location = New System.Drawing.Point(88, 394)
         Me.lblLanguage.Name = "lblLanguage"
         Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 83
@@ -509,7 +424,7 @@ Partial Class AddProduct
         '
         Me.ofdAttachProductImage.FileName = "AttachProductImage"
         '
-        'AddProduct
+        'Addsoftware
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -517,7 +432,7 @@ Partial Class AddProduct
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "AddProduct"
+        Me.Name = "Addsoftware"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
@@ -525,48 +440,38 @@ Partial Class AddProduct
         CType(Me.pbAttachProductImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        CType(Me.dgvLanguage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents tvUserMenu As System.Windows.Forms.TreeView
     Friend WithEvents lblCorpName As System.Windows.Forms.Label
     Friend WithEvents lblCorpSubName As System.Windows.Forms.Label
-    Friend WithEvents txtProductName As System.Windows.Forms.TextBox
-    Friend WithEvents txtProduct_s_name As System.Windows.Forms.TextBox
+    Friend WithEvents txtSoftwareName As System.Windows.Forms.TextBox
+    Friend WithEvents txtSoftware_s_name As System.Windows.Forms.TextBox
     Friend WithEvents btnAdd As System.Windows.Forms.Button
-    Friend WithEvents lblFirstName As System.Windows.Forms.Label
-    Friend WithEvents txtBrand_s_name As System.Windows.Forms.TextBox
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents lblGroupCorp As System.Windows.Forms.Label
-    Friend WithEvents txtBrandName As System.Windows.Forms.TextBox
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents chbJapan As System.Windows.Forms.CheckBox
-    Friend WithEvents chbChinese As System.Windows.Forms.CheckBox
-    Friend WithEvents chbEnglish As System.Windows.Forms.CheckBox
-    Friend WithEvents chbThai As System.Windows.Forms.CheckBox
     Friend WithEvents lblLanguage As System.Windows.Forms.Label
-    Friend WithEvents txtCost As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents chbWM As System.Windows.Forms.CheckBox
-    Friend WithEvents chbQC As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents btnAttachProductImage As System.Windows.Forms.Button
     Friend WithEvents pbAttachProductImage As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents ofdAttachProductImage As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents dgvLanguage As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvOption As System.Windows.Forms.DataGridView
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbBrand As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtSoftwareCode As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

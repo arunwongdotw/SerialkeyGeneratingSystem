@@ -150,10 +150,10 @@
     <Compile Include="User\EditProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\AddProduct.Designer.vb">
-      <DependentUpon>AddProduct.vb</DependentUpon>
+    <Compile Include="User\AddSoftware.Designer.vb">
+      <DependentUpon>AddSoftware.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\AddProduct.vb">
+    <Compile Include="User\AddSoftware.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\EditCustomer.Designer.vb">
@@ -263,8 +263,8 @@
     <EmbeddedResource Include="User\EditProduct.resx">
       <DependentUpon>EditProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\AddProduct.resx">
-      <DependentUpon>AddProduct.vb</DependentUpon>
+    <EmbeddedResource Include="User\AddSoftware.resx">
+      <DependentUpon>AddSoftware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\EditCustomer.resx">
       <DependentUpon>EditCustomer.vb</DependentUpon>
