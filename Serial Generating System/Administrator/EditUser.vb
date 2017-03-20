@@ -1,10 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 Public Class EditUser
-    Private id As String
+    Private empId As String
     Private con As New ConnectDB
     Private sqlReader As SqlDataReader
-    Private sqlAdapter As SqlDataAdapter
+
     Private perCreate As Integer
     Private perEdit As Integer
     Private perdelete As Integer
@@ -16,9 +16,9 @@ Public Class EditUser
         InitializeComponent()
     End Sub
 
-    Public Sub New(ByVal id As String)
+    Public Sub New(ByVal empId As String)
         InitializeComponent()
-        Me.id = id
+        Me.empId = empId
     End Sub
 
     Private Sub EditUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -36,7 +36,7 @@ Public Class EditUser
         pbEmail.Visible = False
         loadDataEmployee()
         loadDataPosition()     
-        convertData()
+
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -99,7 +99,7 @@ Public Class EditUser
 
     Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
         Dim isDup As Boolean = False
-        Dim strSelect As String = "select " & field & " from Employee where " & field & " ='" & text.Trim & "' and id not in (" & id & ")"
+        Dim strSelect As String = "select " & field & " from Employee where " & field & " ='" & text.Trim & "' and emp_id not in (" & empId & ")"
         isDup = con.query(strSelect).Read
         con.close()
         Return isDup
@@ -142,7 +142,7 @@ Public Class EditUser
         strquery &= " per_create = '" & perCreate & "' , "
         strquery &= " per_edit = '" & perEdit & "' , "
         strquery &= " per_delete = '" & perdelete & "' "
-        strquery &= " where id = " & id
+        strquery &= " where emp_id = " & empId
         If con.save(strquery) Then
             MsgBox("แก้ไขบัญชีผู้ใช้สำเร็จ")
         Else : MsgBox("แก้ไขบัญชีผู้ใช้ไม่สำเร็จ")
@@ -152,16 +152,7 @@ Public Class EditUser
         formSearchUser.Show()
     End Sub
 
-    Private Sub convertData()
-        If position.Equals("IT") Then
-            rdbIT.Checked = True
-        Else : rdbAccountant.Checked = True
-        End If
-        chbPerCreate.Checked = perCreate = 1
-        chbPerDelete.Checked = perdelete = 1
-        chbPerEdit.Checked = perEdit = 1
-        cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
-    End Sub
+    
 
     Private Sub loadDataEmployee()
         Dim strQuery = "select id,"
@@ -177,9 +168,9 @@ Public Class EditUser
         strQuery &= "per_create,"
         strQuery &= "per_edit,"
         strQuery &= "per_delete,"
-        strQuery &= "per_print"
-        strQuery &= " from SGSedit.dbo.Employee "
-        strQuery &= "where id = " & id
+        strQuery &= "per_print "
+        strQuery &= " from Employee "
+        strQuery &= " where emp_id = " & Me.empId
         sqlReader = con.query(strQuery)
         If sqlReader.Read Then
             initialDataEmployee()
@@ -381,33 +372,36 @@ Public Class EditUser
     End Sub
 
     Private Sub loadDataPosition()
+        Dim sqlAdapter As New SqlDataAdapter
         Dim table, tableOfPosition, tablePositionOfEmployee As New DataTable
-        Dim dataRow As DataRow
+        Dim i As Integer = 0
         Dim strQueryPositionName = getQueryPositionName()
         Dim strQueryFindPositionByEmpId = getQueryFindPositionByEmpId()
+        Dim rowData As DataRow
         sqlAdapter = con.queryForAdapter(strQueryPositionName)
         sqlAdapter.Fill(tableOfPosition)
-        dataRow = table.NewRow
+        sqlAdapter = New SqlDataAdapter
         sqlAdapter = con.queryForAdapter(strQueryFindPositionByEmpId)
+        sqlAdapter.Fill(tablePositionOfEmployee)
+        rowData = table.NewRow
         For Each row In tableOfPosition.Rows
-            Dim positionName = row("position_name")
-            table.Columns.Add(positionName, GetType(Boolean))
+            Dim positionOld = row("position_name")
+            table.Columns.Add(positionOld, GetType(Boolean))
+            rowData(positionOld) = False
+            For Each rowOut In tablePositionOfEmployee.Rows()
+                If positionOld.Equals(rowOut("position_name")) Then
+                    rowData(positionOld) = True
+                End If
+            Next
         Next
-        table.Rows.Add(dataRow)
+        table.Rows.Add(rowData)
         dgvPosition.DataSource = table
+
     End Sub
 
     Private Function getQueryPositionName() As String
-        Dim strQuery = "SELECT PO.id,PO.position_name "
-        strQuery &= "FROM bciPosition PO "
-        strQuery &= "JOIN Position_of_employee POE "
-        strQuery &= "ON PO.id  = POE.position_id "
-        strQuery &= "JOIN Employee EMP "
-        strQuery &= "ON EMP.emp_id = POE.emp_id "
-        strQuery &= "WHERE EMP.id = " & Me.id
-        Return strQuery
+        Return "SELECT position_name FROM bciPosition"
     End Function
-
 
     Private Function getQueryFindPositionByEmpId() As String
         Dim strQuery = "SELECT POE.*,PO.* "
@@ -416,8 +410,10 @@ Public Class EditUser
         strQuery &= "ON EMP.emp_id = POE.emp_id "
         strQuery &= "JOIN bciPosition PO "
         strQuery &= "ON POE.position_id = Po.id "
-        strQuery &= "WHERE EMP.emp_id = " & Me.id
+        strQuery &= "WHERE EMP.emp_id = " & Me.empId
         Return strQuery
     End Function
+
+   
 
 End Class
