@@ -215,17 +215,27 @@ Public Class EditProduct
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         QualityControl = IIf(chbQC.Checked, 1, 0)
     End Sub
-
+    Private Function isCreateSerialkey() As Boolean
+        Dim strQuery = "SELECT per_create FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
+        Dim sqlread As SqlDataReader = con.query(strQuery)
+        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal("per_create")) = 1 Then
+            Return True
+        End If
+        Return False
+    End Function
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        Dim frm As New CreateSerial
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isCreateSerialkey() Then
+                            Dim frm As New CreateSerial
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        End If
                     Case "ndFindSerialkey"
                         Dim frm As New SearchSerial
                         frm.Show()
