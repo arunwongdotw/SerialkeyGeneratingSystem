@@ -600,18 +600,24 @@ Public Class CreateSerial
         strsql &= "'" & Trim(getEMP_ID()) & "'," 'emp_id ******
         strsql &= "'" & Trim(toSqlDate2(DateTime.Now)) & "')"
         Dim sqlread As SqlDataReader = con.query(strsql)
-        If sqlread Is Nothing Then
-            MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
-            con.close()
+        If "".Equals("per_create") Then
+            If sqlread Is Nothing Then
+                MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
+                con.close()
+            Else
+                con.close()
+                Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
+                sql &= " values ('" & txtSerialKey.Text & "'"
+                sql &= " , '" & checkcaesar & "')"
+                Dim sqlread2 As SqlDataReader = con.query(sql)
+                MsgBox("สร้างซีเรียลคีย์สำเร็จ")
+                con.close()
+            End If
         Else
-            con.close()
-            Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
-            sql &= " values ('" & txtSerialKey.Text & "'"
-            sql &= " , '" & checkcaesar & "')"
-            Dim sqlread2 As SqlDataReader = con.query(sql)
-            MsgBox("สร้างซีเรียลคีย์สำเร็จ")
-            con.close()
+            MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+            btnCreate.Enabled = False
         End If
+       
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click

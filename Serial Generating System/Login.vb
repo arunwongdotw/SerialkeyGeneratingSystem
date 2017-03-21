@@ -6,6 +6,7 @@ Public Class Login
     Public Shared pass As String = ""
     Private username = ""
     Private password = ""
+
     Private con As New ConnectDB
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -98,9 +99,16 @@ Public Class Login
                 frm.Show()
                 Me.Hide()
             ElseIf type.Equals("user") Then
-                Dim frm As New CreateSerial
-                frm.Show()
-                Me.Hide()
+                If sqlread.GetValue(sqlread.GetOrdinal("per_create")) = 1 Then
+                    Dim frm As New CreateSerial
+                    frm.Show()
+                    Me.Hide()
+                Else
+                    Dim frm As New SearchSerial
+                    frm.Show()
+                    Me.Hide()
+                End If
+                
             End If
         End If
         con.close()
