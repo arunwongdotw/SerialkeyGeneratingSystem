@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class Addsoftware
+Public Class AddProduct
     Private con As New ConnectDB
 
     Private Sub AddProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -106,7 +106,7 @@ Public Class Addsoftware
         pbAttachProductImage.Image = Nothing
     End Sub
 
-    
+
 
     'Private Sub add()
     '    Dim strSQL As String
