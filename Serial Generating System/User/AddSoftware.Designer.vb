@@ -149,7 +149,7 @@ Partial Class Addsoftware
         Me.btnAdd.FlatAppearance.BorderSize = 0
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(1022, 619)
+        Me.btnAdd.Location = New System.Drawing.Point(1022, 514)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
         Me.btnAdd.TabIndex = 15
@@ -162,7 +162,7 @@ Partial Class Addsoftware
         Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(1157, 619)
+        Me.btnClear.Location = New System.Drawing.Point(1157, 514)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
         Me.btnClear.TabIndex = 16
@@ -295,7 +295,7 @@ Partial Class Addsoftware
         Me.Panel2.Controls.Add(Me.lblLanguage)
         Me.Panel2.Location = New System.Drawing.Point(404, 92)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(882, 521)
+        Me.Panel2.Size = New System.Drawing.Size(882, 407)
         Me.Panel2.TabIndex = 98
         '
         'Label6
@@ -303,7 +303,7 @@ Partial Class Addsoftware
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(823, 394)
+        Me.Label6.Location = New System.Drawing.Point(823, 299)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(15, 24)
         Me.Label6.TabIndex = 132
@@ -311,14 +311,18 @@ Partial Class Addsoftware
         '
         'dgvLanguage
         '
+        Me.dgvLanguage.AllowUserToAddRows = False
+        Me.dgvLanguage.AllowUserToDeleteRows = False
         Me.dgvLanguage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLanguage.Location = New System.Drawing.Point(150, 384)
+        Me.dgvLanguage.Location = New System.Drawing.Point(150, 299)
         Me.dgvLanguage.Name = "dgvLanguage"
-        Me.dgvLanguage.Size = New System.Drawing.Size(667, 64)
+        Me.dgvLanguage.Size = New System.Drawing.Size(667, 65)
         Me.dgvLanguage.TabIndex = 131
         '
         'dgvOption
         '
+        Me.dgvOption.AllowUserToAddRows = False
+        Me.dgvOption.AllowUserToDeleteRows = False
         Me.dgvOption.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
@@ -330,7 +334,7 @@ Partial Class Addsoftware
         Me.dgvOption.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvOption.Location = New System.Drawing.Point(150, 195)
         Me.dgvOption.Name = "dgvOption"
-        Me.dgvOption.Size = New System.Drawing.Size(667, 167)
+        Me.dgvOption.Size = New System.Drawing.Size(667, 98)
         Me.dgvOption.TabIndex = 130
         '
         'Label2
@@ -414,7 +418,7 @@ Partial Class Addsoftware
         'lblLanguage
         '
         Me.lblLanguage.AutoSize = True
-        Me.lblLanguage.Location = New System.Drawing.Point(88, 394)
+        Me.lblLanguage.Location = New System.Drawing.Point(88, 309)
         Me.lblLanguage.Name = "lblLanguage"
         Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 83

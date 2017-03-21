@@ -14,7 +14,8 @@ Public Class Addsoftware
         txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
         fillcmbBrand()
-        filldgvOption()
+        loadOption()
+        loadLanguage()
     End Sub
 
     Private Sub fillcmbBrand()
@@ -47,36 +48,48 @@ Public Class Addsoftware
 
     End Sub
 
-    Private Sub filldgvOption()
-
+    Private Sub loadOption()
         Try
+            Dim datatablePosition, datatablePositionName As New DataTable
+            Dim strQuery As String
 
-            Dim sql As String
-            sql = " SELECT option_name FROM [Option]"
+            strQuery = "select [option_name] from [option]"
 
-            Dim dt As New DataTable
-            Dim da As SqlDataAdapter = con.queryForAdapter(sql)
-            con.close()
-            dt.Clear()
+            Dim sqlDataAdapter As SqlDataAdapter = con.queryForAdapter(strQuery)
+            sqlDataAdapter.Fill(datatablePosition)
+            For Each row In datatablePosition.Rows
+                Dim OptionName = row("option_name")
+                datatablePositionName.Columns.Add(OptionName, GetType(Boolean))
+            Next
+            datatablePositionName.Rows.Add(datatablePositionName.NewRow)
+            dgvOption.DataSource = datatablePositionName
 
-            da.Fill(dt)
-            If dt.Rows.Count > 0 Then
-                With dgvOption
-                    .DataSource = dt
-                    .RowHeadersVisible = False
-                    .ColumnHeadersVisible = False
-
-                    '.ValueMember = "option_s_name"
-                    '.DisplayMember = "option_name"
-                End With
-            End If
+            'MsgBox(dgvPosition.Columns(0).HeaderText)
         Catch ex As Exception
-            'Dim StackTrace As String = Replace(ex.StackTrace, "'", "")
-            'Dim mess As String = Replace(ex.Message, "'", "")
-            'SaveERRLog(Me.Name, Me.Text, ACTION_log, log_type, Trim(TxtPcode.Text), mess, StackTrace)
-            'MessageBox.Show(Message.ERR_EX + " : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
         End Try
+    End Sub
 
+    Private Sub loadLanguage()
+        Try
+            Dim datatableLanguage, datatableLanguageName As New DataTable
+            Dim strQuery As String
+
+            strQuery = "select [language_name] from [language]"
+
+            Dim sqlDataAdapter As SqlDataAdapter = con.queryForAdapter(strQuery)
+            sqlDataAdapter.Fill(datatableLanguage)
+            For Each row In datatableLanguage.Rows
+                Dim LanguageName = row("language_name")
+                datatableLanguageName.Columns.Add(LanguageName, GetType(Boolean))
+            Next
+            datatableLanguageName.Rows.Add(datatableLanguageName.NewRow)
+            dgvLanguage.DataSource = datatableLanguageName
+
+            'MsgBox(dgvPosition.Columns(0).HeaderText)
+        Catch ex As Exception
+            MsgBox("การเชื่อมต่อฟอร์มผิดพลาด")
+        End Try
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -93,83 +106,7 @@ Public Class Addsoftware
         pbAttachProductImage.Image = Nothing
     End Sub
 
-    Private Sub GenerateColumn()
-        Try
-
-            '***********************OPTION**************************
-
-            Me.dgvOption.Columns.Clear()
-            Me.dgvOption.AutoGenerateColumns = False
-            Me.dgvOption.RowTemplate.MinimumHeight = 30
-
-            Dim Col As New DataGridViewCheckBoxColumn
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "Warehouse Management"
-            Col.Width = 70
-            'Col.Visible = False
-            Col.ReadOnly = True
-            Col.DataPropertyName = "Warehouse Management"
-            Col.Name = "Warehouse Management"
-            Me.dgvOption.Columns.Add(Col)
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "Quality Control"
-            Col.Width = 150
-            Col.ReadOnly = True
-            'Col.Visible = False
-            Col.DataPropertyName = "Quality Control"
-            Col.Name = "Quality Control"
-            Me.dgvOption.Columns.Add(Col)
-
-            '***********************LANGUAGE**************************
-
-            Me.dgvLanguage.Columns.Clear()
-            Me.dgvLanguage.AutoGenerateColumns = False
-            Me.dgvLanguage.RowTemplate.MinimumHeight = 30
-
-            'Dim Col2 As New DataGridViewTextBoxColumn
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "Thai"
-            Col.Width = 70
-            'Col.Visible = False
-            Col.ReadOnly = True
-            Col.DataPropertyName = "Thai"
-            Col.Name = "Thai"
-            Me.dgvLanguage.Columns.Add(Col)
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "English"
-            Col.Width = 150
-            Col.ReadOnly = True
-            'Col.Visible = False
-            Col.DataPropertyName = "English"
-            Col.Name = "English"
-            Me.dgvLanguage.Columns.Add(Col)
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "japanese"
-            Col.Width = 150
-            Col.ReadOnly = True
-            'Col.Visible = False
-            Col.DataPropertyName = "japanese"
-            Col.Name = "japanese"
-            Me.dgvLanguage.Columns.Add(Col)
-
-            Col = New DataGridViewCheckBoxColumn
-            Col.HeaderText = "Chinese"
-            Col.Width = 150
-            Col.ReadOnly = True
-            'Col.Visible = False
-            Col.DataPropertyName = "Chinese"
-            Col.Name = "Chinese"
-            Me.dgvLanguage.Columns.Add(Col)
-
-        Catch ex As Exception
-            MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
-        End Try
-    End Sub
+    
 
     'Private Sub add()
     '    Dim strSQL As String
@@ -396,5 +333,19 @@ Public Class Addsoftware
             pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
             pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
+    End Sub
+
+    Private Sub dgvOption_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvOption.CellContentClick
+
+    End Sub
+
+    Private Sub dgvOption_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvOption.CellMouseClick
+        Try
+            If e.RowIndex <> -1 Then
+
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
