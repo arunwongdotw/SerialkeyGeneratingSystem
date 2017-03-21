@@ -1,10 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 Public Class EditUser
-    Private empId As String
+    Private id As String
     Private con As New ConnectDB
     Private sqlReader As SqlDataReader
-
     Private perCreate As Integer
     Private perEdit As Integer
     Private perdelete As Integer
@@ -16,9 +15,9 @@ Public Class EditUser
         InitializeComponent()
     End Sub
 
-    Public Sub New(ByVal empId As String)
+    Public Sub New(ByVal id As String)
         InitializeComponent()
-        Me.empId = empId
+        Me.id = id
     End Sub
 
     Private Sub EditUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -34,9 +33,11 @@ Public Class EditUser
         lblMsgEmail.Visible = False
         tvAdminMenu.ExpandAll()
         pbEmail.Visible = False
-        loadDataEmployee()
-        loadDataPosition()     
-
+        loadData()
+        If sqlReader.Read Then
+            initialData()
+        End If
+        convertData()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -74,7 +75,7 @@ Public Class EditUser
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
-        ElseIf txtCellphone.Text = "" And txtPhoneNumber.Text = "" Then
+        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
             MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
             valid = False
         End If
@@ -99,7 +100,7 @@ Public Class EditUser
 
     Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
         Dim isDup As Boolean = False
-        Dim strSelect As String = "select " & field & " from Employee where " & field & " ='" & text.Trim & "' and emp_id not in (" & empId & ")"
+        Dim strSelect As String = "select " & field & " from SGS.dbo.Employee where " & field & " ='" & text.Trim & "' and id not in (" & id & ")"
         isDup = con.query(strSelect).Read
         con.close()
         Return isDup
@@ -130,19 +131,20 @@ Public Class EditUser
     End Sub
 
     Private Sub saveData()
-        Dim strquery = "update employee set "
+        Dim strquery = "update sgs.dbo.employee set "
         strquery &= " emp_id = '" & txtEmpID.Text.Trim & "' , "
         strquery &= " password = '" & txtPassword.Text.Trim & "' , "
         strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
         strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
         strquery &= " position = '" & position & "' , "
+        strquery &= " mobilenumber = '" & txtMobileNumber.Text.Trim & "' , "
         strquery &= " phonenumber = '" & txtPhoneNumber.Text.Trim & "' , "
         strquery &= " email = '" & txtEmail.Text.Trim & "' , "
         strquery &= " user_type = '" & userType & "' , "
         strquery &= " per_create = '" & perCreate & "' , "
         strquery &= " per_edit = '" & perEdit & "' , "
         strquery &= " per_delete = '" & perdelete & "' "
-        strquery &= " where emp_id = " & empId
+        strquery &= " where id = " & id
         If con.save(strquery) Then
             MsgBox("แก้ไขบัญชีผู้ใช้สำเร็จ")
         Else : MsgBox("แก้ไขบัญชีผู้ใช้ไม่สำเร็จ")
@@ -152,33 +154,38 @@ Public Class EditUser
         formSearchUser.Show()
     End Sub
 
-    
+    Private Sub convertData()
+        If position.Equals("IT") Then
+            rdbIT.Checked = True
+        Else : rdbAccountant.Checked = True
+        End If
+        chbPerCreate.Checked = perCreate = 1
+        chbPerDelete.Checked = perdelete = 1
+        chbPerEdit.Checked = perEdit = 1
+        cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
+    End Sub
 
-    Private Sub loadDataEmployee()
+    Private Sub loadData()
         Dim strQuery = "select id,"
         strQuery &= "emp_id,"
         strQuery &= "username,"
         strQuery &= "password,"
         strQuery &= "firstname,"
         strQuery &= "lastname,"
-        strQuery &= "cellphone,"
+        strQuery &= "position,"
+        strQuery &= "mobilenumber,"
         strQuery &= "phonenumber,"
         strQuery &= "email,"
         strQuery &= "user_type,"
         strQuery &= "per_create,"
         strQuery &= "per_edit,"
-        strQuery &= "per_delete,"
-        strQuery &= "per_print "
-        strQuery &= " from Employee "
-        strQuery &= " where emp_id = " & Me.empId
+        strQuery &= "per_delete"
+        strQuery &= " from SGS.dbo.Employee "
+        strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
-        If sqlReader.Read Then
-            initialDataEmployee()
-        End If
-
     End Sub
 
-    Private Sub initialDataEmployee()
+    Private Sub initialData()
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         oldData.Add("email", txtEmail.Text)
         txtEmpID.Text = sqlReader.GetValue(sqlReader.GetOrdinal("emp_id"))
@@ -186,8 +193,9 @@ Public Class EditUser
         txtFirstName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("firstname"))
         txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
-        txtCellphone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cellphone")).ToString
+        txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
         txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
+        position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
         perdelete = sqlReader.GetValue(sqlReader.GetOrdinal("per_delete"))
@@ -206,7 +214,7 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtMobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCellphone.KeyPress
+    Private Sub txtMobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57, 8, 13
             Case Else
@@ -329,7 +337,7 @@ Public Class EditUser
         txtFirstName.Clear()
         txtLastName.Clear()
         txtEmail.Clear()
-        txtCellphone.Clear()
+        txtMobileNumber.Clear()
         txtPhoneNumber.Clear()
         cmbUserType.SelectedItem = Nothing
         chbPerCreate.Checked = False
@@ -370,50 +378,4 @@ Public Class EditUser
         frm.Show()
         Me.Hide()
     End Sub
-
-    Private Sub loadDataPosition()
-        Dim sqlAdapter As New SqlDataAdapter
-        Dim table, tableOfPosition, tablePositionOfEmployee As New DataTable
-        Dim i As Integer = 0
-        Dim strQueryPositionName = getQueryPositionName()
-        Dim strQueryFindPositionByEmpId = getQueryFindPositionByEmpId()
-        Dim rowData As DataRow
-        sqlAdapter = con.queryForAdapter(strQueryPositionName)
-        sqlAdapter.Fill(tableOfPosition)
-        sqlAdapter = New SqlDataAdapter
-        sqlAdapter = con.queryForAdapter(strQueryFindPositionByEmpId)
-        sqlAdapter.Fill(tablePositionOfEmployee)
-        rowData = table.NewRow
-        For Each row In tableOfPosition.Rows
-            Dim positionOld = row("position_name")
-            table.Columns.Add(positionOld, GetType(Boolean))
-            rowData(positionOld) = False
-            For Each rowOut In tablePositionOfEmployee.Rows()
-                If positionOld.Equals(rowOut("position_name")) Then
-                    rowData(positionOld) = True
-                End If
-            Next
-        Next
-        table.Rows.Add(rowData)
-        dgvPosition.DataSource = table
-
-    End Sub
-
-    Private Function getQueryPositionName() As String
-        Return "SELECT position_name FROM bciPosition"
-    End Function
-
-    Private Function getQueryFindPositionByEmpId() As String
-        Dim strQuery = "SELECT POE.*,PO.* "
-        strQuery &= "FROM Employee EMP  "
-        strQuery &= "JOIN Position_of_employee POE "
-        strQuery &= "ON EMP.emp_id = POE.emp_id "
-        strQuery &= "JOIN bciPosition PO "
-        strQuery &= "ON POE.position_id = Po.id "
-        strQuery &= "WHERE EMP.emp_id = " & Me.empId
-        Return strQuery
-    End Function
-
-   
-
 End Class

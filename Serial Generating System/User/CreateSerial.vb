@@ -43,7 +43,7 @@ Public Class CreateSerial
                         Me.clearAll()
                         Me.Hide()
                     Case "ndAddProduct"
-                        Dim frm As New Addsoftware
+                        Dim frm As New AddProduct
                         frm.Show()
                         Me.clearAll()
                         Me.Hide()
@@ -227,7 +227,7 @@ Public Class CreateSerial
     End Sub
 
     Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
-        Dim frm As New Addsoftware
+        Dim frm As New AddProduct
         frm.Show()
         Me.Hide()
     End Sub

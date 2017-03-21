@@ -91,7 +91,7 @@ Public Class SearchUser
             End If
         End If
         If e.ColumnIndex = dgvSearchUser.Columns("btnEdit").Index Then
-            Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("emp_id").Value)
+            Dim formEditUser As New EditUser(dgvSearchUser.Rows(e.RowIndex).Cells("id").Value)
             formEditUser.Show()
             Me.Hide()
         End If
@@ -114,12 +114,6 @@ Public Class SearchUser
             ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
                 dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
             End If
-            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_print").Value) OrElse dgvSearchUser.Rows(i).Cells("per_print").Value = 0 Then
-                dgvSearchUser.Rows(i).Cells("chbPrint").Value = False
-            ElseIf dgvSearchUser.Rows(i).Cells("per_print").Value = 1 Then
-                dgvSearchUser.Rows(i).Cells("chbPrint").Value = True
-            End If
-
         Next
     End Sub
 
@@ -189,7 +183,6 @@ Public Class SearchUser
         With dgvSearchUser
             .RowHeadersVisible = False
             .Columns("id").Visible = False
-            .Columns("per_print").Visible = False
             .Columns("per_create").Visible = False
             .Columns("per_edit").Visible = False
             .Columns("per_delete").Visible = False
@@ -197,15 +190,17 @@ Public Class SearchUser
             .Columns("fullname").HeaderCell.Value = "ชื่อ - สกุล"
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
             .Columns("password").HeaderCell.Value = "รหัสผ่าน"
-            .Columns("phonenumber").HeaderCell.Value = "โทรศัพท์"
-            .Columns("cellphone").HeaderCell.Value = "โทรศัพท์มือถือ"
             .Columns("position").HeaderCell.Value = "ตำแหน่ง"
+            .Columns("mobilenumber").HeaderCell.Value = "โทรศัพท์มือถือ"
+            .Columns("phonenumber").HeaderCell.Value = "โทรศัพท์"
             .Columns("email").HeaderCell.Value = "อีเมล"
             .Columns("user_type").HeaderCell.Value = "ประเภทผู้ใช้"
             .Columns("emp_id").ReadOnly = True
             .Columns("fullname").ReadOnly = True
             .Columns("username").ReadOnly = True
             .Columns("password").ReadOnly = True
+            .Columns("position").ReadOnly = True
+            .Columns("mobilenumber").ReadOnly = True
             .Columns("phonenumber").ReadOnly = True
             .Columns("email").ReadOnly = True
             .Columns("user_type").ReadOnly = True
@@ -214,19 +209,20 @@ Public Class SearchUser
             .Columns("username").Width = 120
             .Columns("password").Width = 120
             .Columns("fullname").Width = 200
+            .Columns("mobilenumber").Width = 150
             .Columns("phonenumber").Width = 150
-            .Columns("cellphone").Width = 150
             .Columns("email").Width = 200
             .Columns("user_type").Width = 120
+            .Columns("position").Width = 120
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("fullname").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("username").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("password").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("position").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("phonenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("cellphone").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("mobilenumber").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("email").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("user_type").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -258,13 +254,6 @@ Public Class SearchUser
         checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
-        Dim checkboxPrint As New DataGridViewCheckBoxColumn
-        checkboxPrint.Name = "chbPrint"
-        checkboxPrint.HeaderText = "สิทธิ์การออกรายงาน"
-        checkboxPrint.FlatStyle = FlatStyle.Flat
-        checkboxPrint.DefaultCellStyle.ForeColor = Color.Black
-        checkboxPrint.ReadOnly = True
-        dgvSearchUser.Columns.Add(checkboxPrint)
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
@@ -283,69 +272,33 @@ Public Class SearchUser
         dgvSearchUser.Columns("btnDelete").DisplayIndex = 1
     End Sub
 
-
     Private Function getQuery() As String
-        Dim strQuery As New System.Text.StringBuilder
-        strQuery.Append(" SELECT ")
-        strQuery.Append(" EMP.id, ")
-        strQuery.Append(" EMP.emp_id, ")
-        strQuery.Append(" EMP.username, ")
-        strQuery.Append(" EMP.password, ")
-        strQuery.Append(" EMP.firstname+' '+EMP.lastname as fullname, ")
-        strQuery.Append(" EMP.cellphone, ")
-        strQuery.Append(" EMP.phonenumber, ")
-        strQuery.Append(" EMP.email, ")
-        strQuery.Append(" STUFF((SELECT ', ' + PO.position_name ")
-        strQuery.Append(" FROM Position_of_employee POE ")
-        strQuery.Append(" join bciPosition PO ")
-        strQuery.Append(" on POE.position_id = PO.id ")
-        strQuery.Append(" WHERE POE.emp_id = EMP.emp_id ")
-        strQuery.Append(" ORDER BY PO.position_name ")
-        strQuery.Append(" FOR XML PATH('')), 1, 1, '') AS position , ")
-        strQuery.Append(" EMP.user_type, ")
-        strQuery.Append(" EMP.per_create, ")
-        strQuery.Append(" EMP.per_edit, ")
-        strQuery.Append(" EMP.per_delete, ")
-        strQuery.Append(" EMP.per_print ")
-        strQuery.Append(" FROM Employee EMP ")
-        strQuery.Append(" WHERE EMP.emp_id is not null ")
+        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,mobilenumber,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
-            strQuery.Append(" and username like '%" & txtUsername.Text & "%' ")
+            strQuery &= " and username like '%" & txtUsername.Text & "%'"
         End If
         If Not txtEmployeeId.Text = String.Empty Then
-            strQuery.Append(" and emp_id like '%" & txtEmployeeId.Text & "%' ")
+            strQuery &= " and emp_id like '%" & txtEmployeeId.Text & "%'"
         End If
         If Not txtFirstname.Text = String.Empty Then
-            strQuery.Append(" and firstname like '%" & txtFirstname.Text & "%' ")
+            strQuery &= " and firstname like '%" & txtFirstname.Text & "%'"
         End If
         If Not txtLastname.Text = String.Empty Then
-            strQuery.Append(" and lastname like '%" & txtLastname.Text & "%' ")
+            strQuery &= " and lastname like '%" & txtLastname.Text & "%'"
         End If
-        If Not txtPhone.Text = String.Empty Then
-            strQuery.Append(" and phonenumber like '%" & txtPhone.Text & "%' ")
+        If Not txtPosition.Text = String.Empty Then
+            strQuery &= " and position like '%" & txtPosition.Text & "%'"
         End If
         If Not txtMobilePhone.Text = String.Empty Then
-            strQuery.Append(" and cellphone like '%" & txtMobilePhone.Text & "%' ")
+            strQuery &= " and mobilenumber like '%" & txtMobilePhone.Text & "%'"
+        End If
+        If Not txtPhone.Text = String.Empty Then
+            strQuery &= " and phonenumber like '%" & txtPhone.Text & "%'"
         End If
         If Not txtEmail.Text = String.Empty Then
-            strQuery.Append(" and email like '%" & txtEmail.Text & "%' ")
+            strQuery &= " and email like '%" & txtEmail.Text & "%'"
         End If
-        strQuery.Append(" GROUP BY  EMP.id , ")
-        strQuery.Append(" EMP.emp_id , ")
-        strQuery.Append(" EMP.username, ")
-        strQuery.Append(" EMP.password, ")
-        strQuery.Append(" EMP.firstname, ")
-        strQuery.Append(" EMP.lastname, ")
-        strQuery.Append(" EMP.cellphone, ")
-        strQuery.Append(" EMP.phonenumber, ")
-        strQuery.Append(" EMP.email, ")
-        strQuery.Append(" EMP.user_type, ")
-        strQuery.Append(" EMP.per_create, ")
-        strQuery.Append(" EMP.per_edit, ")
-        strQuery.Append(" EMP.per_delete, ")
-        strQuery.Append(" EMP.per_print ")
-        strQuery.Append(" ORDER BY  EMP.emp_id ")
-        Return strQuery.ToString
+        Return strQuery
     End Function
 
     Private Sub genRowNumber()

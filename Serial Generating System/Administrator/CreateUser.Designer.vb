@@ -29,7 +29,6 @@ Partial Class CreateUser
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("การตรวจสอบ", New System.Windows.Forms.TreeNode() {TreeNode4})
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateUser))
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -49,9 +48,13 @@ Partial Class CreateUser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.dgvPosition = New System.Windows.Forms.DataGridView()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.rdbIT = New System.Windows.Forms.RadioButton()
+        Me.rdbAccountant = New System.Windows.Forms.RadioButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -73,7 +76,6 @@ Partial Class CreateUser
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.chbPerPrint = New System.Windows.Forms.CheckBox()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
@@ -82,7 +84,8 @@ Partial Class CreateUser
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.dgvPosition, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -329,9 +332,11 @@ Partial Class CreateUser
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.dgvPosition)
-        Me.Panel3.Controls.Add(Me.Label15)
+        Me.Panel3.Controls.Add(Me.Panel5)
+        Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.txtPhoneNumber)
+        Me.Panel3.Controls.Add(Me.Label22)
+        Me.Panel3.Controls.Add(Me.Label21)
         Me.Panel3.Controls.Add(Me.Label20)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label17)
@@ -358,44 +363,83 @@ Partial Class CreateUser
         Me.Panel3.Size = New System.Drawing.Size(1001, 290)
         Me.Panel3.TabIndex = 97
         '
-        'dgvPosition
+        'Panel5
         '
-        Me.dgvPosition.AllowUserToAddRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPosition.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvPosition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPosition.Location = New System.Drawing.Point(703, 144)
-        Me.dgvPosition.Name = "dgvPosition"
-        Me.dgvPosition.RowHeadersVisible = False
-        Me.dgvPosition.Size = New System.Drawing.Size(250, 62)
-        Me.dgvPosition.TabIndex = 100
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.rdbIT)
+        Me.Panel5.Controls.Add(Me.rdbAccountant)
+        Me.Panel5.Location = New System.Drawing.Point(703, 144)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(249, 36)
+        Me.Panel5.TabIndex = 97
         '
-        'Label15
+        'rdbIT
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(397, 190)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
-        Me.Label15.TabIndex = 98
-        Me.Label15.Text = "*"
+        Me.rdbIT.AutoSize = True
+        Me.rdbIT.Checked = True
+        Me.rdbIT.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbIT.Location = New System.Drawing.Point(8, 1)
+        Me.rdbIT.Name = "rdbIT"
+        Me.rdbIT.Size = New System.Drawing.Size(53, 30)
+        Me.rdbIT.TabIndex = 10
+        Me.rdbIT.Text = "ไอที"
+        Me.rdbIT.UseVisualStyleBackColor = True
+        Me.rdbIT.TabStop = False
+        '
+        'rdbAccountant
+        '
+        Me.rdbAccountant.AutoSize = True
+        Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbAccountant.Location = New System.Drawing.Point(99, 1)
+        Me.rdbAccountant.Name = "rdbAccountant"
+        Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
+        Me.rdbAccountant.TabIndex = 11
+        Me.rdbAccountant.Text = "บัญชี"
+        Me.rdbAccountant.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
+        Me.PictureBox2.Location = New System.Drawing.Point(391, 200)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 94
+        Me.PictureBox2.TabStop = False
         '
         'txtPhoneNumber
         '
         Me.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPhoneNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(141, 230)
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(141, 188)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(250, 36)
         Me.txtPhoneNumber.TabIndex = 7
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Red
+        Me.Label22.Location = New System.Drawing.Point(411, 200)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(162, 24)
+        Me.Label22.TabIndex = 93
+        Me.Label22.Text = "* กรุณากรอกเบอร์โทรศัพท์"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(423, 220)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(109, 24)
+        Me.Label21.TabIndex = 95
+        Me.Label21.Text = "อย่างน้อย 1 เบอร์"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label20
         '
@@ -435,7 +479,7 @@ Partial Class CreateUser
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(64, 232)
+        Me.Label18.Location = New System.Drawing.Point(65, 190)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
@@ -565,7 +609,7 @@ Partial Class CreateUser
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(27, 190)
+        Me.Label9.Location = New System.Drawing.Point(27, 232)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
@@ -587,7 +631,7 @@ Partial Class CreateUser
         Me.txtMobileNumber.BackColor = System.Drawing.SystemColors.Window
         Me.txtMobileNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMobileNumber.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMobileNumber.Location = New System.Drawing.Point(141, 188)
+        Me.txtMobileNumber.Location = New System.Drawing.Point(141, 230)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.Size = New System.Drawing.Size(250, 36)
         Me.txtMobileNumber.TabIndex = 8
@@ -617,28 +661,13 @@ Partial Class CreateUser
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.chbPerPrint)
         Me.Panel4.Controls.Add(Me.chbPerCreate)
         Me.Panel4.Controls.Add(Me.chbPerEdit)
         Me.Panel4.Controls.Add(Me.chbPerDelete)
         Me.Panel4.Location = New System.Drawing.Point(703, 102)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(250, 36)
+        Me.Panel4.Size = New System.Drawing.Size(249, 36)
         Me.Panel4.TabIndex = 96
-        '
-        'chbPerPrint
-        '
-        Me.chbPerPrint.AutoSize = True
-        Me.chbPerPrint.BackColor = System.Drawing.Color.Transparent
-        Me.chbPerPrint.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerPrint.Location = New System.Drawing.Point(179, 2)
-        Me.chbPerPrint.Margin = New System.Windows.Forms.Padding(1)
-        Me.chbPerPrint.Name = "chbPerPrint"
-        Me.chbPerPrint.Size = New System.Drawing.Size(64, 30)
-        Me.chbPerPrint.TabIndex = 15
-        Me.chbPerPrint.TabStop = False
-        Me.chbPerPrint.Text = "พิมพ์"
-        Me.chbPerPrint.UseVisualStyleBackColor = False
         '
         'chbPerCreate
         '
@@ -659,7 +688,7 @@ Partial Class CreateUser
         Me.chbPerEdit.AutoSize = True
         Me.chbPerEdit.BackColor = System.Drawing.Color.Transparent
         Me.chbPerEdit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerEdit.Location = New System.Drawing.Point(71, 2)
+        Me.chbPerEdit.Location = New System.Drawing.Point(99, 2)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
@@ -673,7 +702,7 @@ Partial Class CreateUser
         Me.chbPerDelete.AutoSize = True
         Me.chbPerDelete.BackColor = System.Drawing.Color.Transparent
         Me.chbPerDelete.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerDelete.Location = New System.Drawing.Point(130, 2)
+        Me.chbPerDelete.Location = New System.Drawing.Point(186, 2)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
@@ -703,7 +732,9 @@ Partial Class CreateUser
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.dgvPosition, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
@@ -739,13 +770,19 @@ Partial Class CreateUser
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents pbAttachUserImage As System.Windows.Forms.PictureBox
+    Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
+    Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
     Friend WithEvents btnAttachUserImage As System.Windows.Forms.Button
     Friend WithEvents lbWelcome As System.Windows.Forms.Label
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents chbPerCreate As System.Windows.Forms.CheckBox
     Friend WithEvents chbPerEdit As System.Windows.Forms.CheckBox
@@ -753,7 +790,4 @@ Partial Class CreateUser
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents chbPerPrint As System.Windows.Forms.CheckBox
-    Friend WithEvents dgvPosition As System.Windows.Forms.DataGridView
 End Class

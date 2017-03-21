@@ -109,7 +109,7 @@ Public Class ChangePasswordUser
                         Me.clear()
                         Me.Hide()
                     Case "ndAddProduct"
-                        Dim frm As New Addsoftware
+                        Dim frm As New AddProduct
                         frm.Show()
                         Me.clear()
                         Me.Hide()

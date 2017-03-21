@@ -328,7 +328,7 @@ Public Class searchProduct
                         Me.clearTextBox()
                         Me.Hide()
                     Case "ndAddProduct"
-                        Dim frm As New Addsoftware
+                        Dim frm As New AddProduct
                         frm.Show()
                         Me.clearTextBox()
                         Me.Hide()
