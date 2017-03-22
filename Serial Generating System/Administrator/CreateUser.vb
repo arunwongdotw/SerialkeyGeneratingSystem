@@ -71,6 +71,7 @@ Public Class CreateUser
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         tvAdminMenu.ExpandAll()
+        txtUsername.Select()
     End Sub
 
     Private Function ValidateDataInput() As Boolean

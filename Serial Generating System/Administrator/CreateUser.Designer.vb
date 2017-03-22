@@ -48,6 +48,7 @@ Partial Class CreateUser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
@@ -77,7 +78,6 @@ Partial Class CreateUser
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -217,7 +217,7 @@ Partial Class CreateUser
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 12
+        Me.btnLogOut.TabIndex = 17
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
@@ -230,7 +230,7 @@ Partial Class CreateUser
         Me.btnClear.Location = New System.Drawing.Point(1157, 540)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 11
+        Me.btnClear.TabIndex = 16
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -243,7 +243,7 @@ Partial Class CreateUser
         Me.btnAdd.Location = New System.Drawing.Point(1022, 540)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.TabIndex = 15
         Me.btnAdd.Text = "สร้าง"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
@@ -358,6 +358,17 @@ Partial Class CreateUser
         Me.Panel3.Size = New System.Drawing.Size(1001, 290)
         Me.Panel3.TabIndex = 97
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(397, 190)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.TabIndex = 98
+        Me.Label15.Text = "*"
+        '
         'Panel5
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -365,7 +376,7 @@ Partial Class CreateUser
         Me.Panel5.Controls.Add(Me.rdbAccountant)
         Me.Panel5.Location = New System.Drawing.Point(703, 144)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(249, 36)
+        Me.Panel5.Size = New System.Drawing.Size(250, 36)
         Me.Panel5.TabIndex = 97
         '
         'rdbIT
@@ -376,7 +387,8 @@ Partial Class CreateUser
         Me.rdbIT.Location = New System.Drawing.Point(8, 1)
         Me.rdbIT.Name = "rdbIT"
         Me.rdbIT.Size = New System.Drawing.Size(53, 30)
-        Me.rdbIT.TabIndex = 10
+        Me.rdbIT.TabIndex = 13
+        Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
         Me.rdbIT.UseVisualStyleBackColor = True
         '
@@ -387,7 +399,8 @@ Partial Class CreateUser
         Me.rdbAccountant.Location = New System.Drawing.Point(99, 1)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
-        Me.rdbAccountant.TabIndex = 11
+        Me.rdbAccountant.TabIndex = 14
+        Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
@@ -399,7 +412,7 @@ Partial Class CreateUser
         Me.txtPhoneNumber.Location = New System.Drawing.Point(141, 230)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(250, 36)
-        Me.txtPhoneNumber.TabIndex = 7
+        Me.txtPhoneNumber.TabIndex = 8
         '
         'Label20
         '
@@ -594,7 +607,7 @@ Partial Class CreateUser
         Me.txtMobileNumber.Location = New System.Drawing.Point(141, 188)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.Size = New System.Drawing.Size(250, 36)
-        Me.txtMobileNumber.TabIndex = 8
+        Me.txtMobileNumber.TabIndex = 7
         '
         'Label14
         '
@@ -626,7 +639,7 @@ Partial Class CreateUser
         Me.Panel4.Controls.Add(Me.chbPerDelete)
         Me.Panel4.Location = New System.Drawing.Point(703, 102)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(249, 36)
+        Me.Panel4.Size = New System.Drawing.Size(250, 36)
         Me.Panel4.TabIndex = 96
         '
         'chbPerCreate
@@ -639,7 +652,6 @@ Partial Class CreateUser
         Me.chbPerCreate.Name = "chbPerCreate"
         Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
         Me.chbPerCreate.TabIndex = 10
-        Me.chbPerCreate.TabStop = False
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
         '
@@ -653,7 +665,6 @@ Partial Class CreateUser
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
         Me.chbPerEdit.TabIndex = 11
-        Me.chbPerEdit.TabStop = False
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
         '
@@ -666,25 +677,13 @@ Partial Class CreateUser
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
-        Me.chbPerDelete.TabIndex = 14
-        Me.chbPerDelete.TabStop = False
+        Me.chbPerDelete.TabIndex = 12
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
         '
         'ofdAttachUserImage
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(397, 190)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
-        Me.Label15.TabIndex = 98
-        Me.Label15.Text = "*"
         '
         'CreateUser
         '
