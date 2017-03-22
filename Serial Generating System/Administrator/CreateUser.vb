@@ -336,4 +336,19 @@ Public Class CreateUser
             pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
         End If
     End Sub
+
+    Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
+        If cmbUserType.Text = "ผู้ดูแลระบบ" Then
+            chbPerCreate.Enabled = False
+            chbPerDelete.Enabled = False
+            chbPerEdit.Enabled = False
+            chbPerCreate.Checked = False
+            chbPerEdit.Checked = False
+            chbPerDelete.Checked = False
+        Else
+            chbPerCreate.Enabled = True
+            chbPerDelete.Enabled = True
+            chbPerEdit.Enabled = True
+        End If
+    End Sub
 End Class
