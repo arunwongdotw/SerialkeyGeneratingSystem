@@ -227,6 +227,7 @@ Partial Class SearchSerial
         Me.dgvSerialKey.Name = "dgvSerialKey"
         Me.dgvSerialKey.ReadOnly = True
         Me.dgvSerialKey.RowHeadersVisible = False
+        Me.dgvSerialKey.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvSerialKey.Size = New System.Drawing.Size(1000, 212)
         Me.dgvSerialKey.TabIndex = 69
         '
