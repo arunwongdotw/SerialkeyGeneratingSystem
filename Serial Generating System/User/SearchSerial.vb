@@ -104,14 +104,7 @@ Public Class SearchSerial
             Me.dgvSerialKey.AutoGenerateColumns = False
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
 
-            Dim btnEdit As New DataGridViewButtonColumn()
-            btnEdit.HeaderText = ""
-            btnEdit.Text = "แก้ไข"
-            btnEdit.Name = "btnEdit"
-            btnEdit.Width = 50
-            btnEdit.UseColumnTextForButtonValue = True
-            Me.dgvSerialKey.Columns.Add(btnEdit)
-
+           
             Dim btnDelete As New DataGridViewButtonColumn()
             btnDelete.HeaderText = ""
             btnDelete.Text = "ลบ"
