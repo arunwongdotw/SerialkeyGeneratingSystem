@@ -11,7 +11,7 @@ Public Class SearchSerial
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialkey"
-                        If isCreateSerialkey() Then
+                        If isPermission("per_create") Then
                             Dim frm As New CreateSerial
                             frm.Show()
                             Me.clear()
@@ -65,6 +65,8 @@ Public Class SearchSerial
         'dtpExpireDate.MinDate = DateTime.Now
         Me.GenerateColumn()
         Me.LoadData()
+
+
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -546,12 +548,32 @@ Public Class SearchSerial
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         Me.LoadData()
     End Sub
-    Private Function isCreateSerialkey() As Boolean
-        Dim strQuery = "SELECT per_create FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
+    Private Function isPermission(ByVal perName As String) As Boolean
+        Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
-        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal("per_create")) = 1 Then
+        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal(perName)) = 1 Then
             Return True
         End If
         Return False
     End Function
+    Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSerialKey.CellContentClick
+        Dim strQuery As String
+        Dim isDelete As Boolean
+        If isPermission("per_delete") Then
+            If e.ColumnIndex = dgvSerialKey.Columns("btnDelete").Index Then
+                If MsgBox("ยืนยันการลบซีเรียลคีย์?", MsgBoxStyle.YesNo) = vbYes Then
+                    strQuery = "delete from sgs.dbo.Serialkey where serialKey_r = '" & dgvSerialKey.Rows(e.RowIndex).Cells("serialKey_r").Value & "'"
+                    isDelete = con.save(strQuery)
+                    If isDelete Then
+                        MsgBox("ลบซีเรียลคีย์สำเร็จ")
+                        Me.LoadData()
+                    Else
+                        MsgBox("ลบซีเรียลคีย์ล้มเหลว")
+                    End If
+                End If
+            End If
+        Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
+        End If
+       
+    End Sub
 End Class

@@ -600,33 +600,40 @@ Public Class CreateSerial
         strsql &= "'" & Trim(getEMP_ID()) & "'," 'emp_id ******
         strsql &= "'" & Trim(toSqlDate2(DateTime.Now)) & "')"
         Dim sqlread As SqlDataReader = con.query(strsql)
-        If "".Equals("per_create") Then
-            If sqlread Is Nothing Then
-                MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
-                con.close()
-            Else
-                con.close()
-                Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
-                sql &= " values ('" & txtSerialKey.Text & "'"
-                sql &= " , '" & checkcaesar & "')"
-                Dim sqlread2 As SqlDataReader = con.query(sql)
-                MsgBox("สร้างซีเรียลคีย์สำเร็จ")
-                con.close()
-            End If
+        If sqlread Is Nothing Then
+            MsgBox("สร้างซีเรียลคีย์ล้มเหลว")
+            con.close()
         Else
-            MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
-            btnCreate.Enabled = False
+            con.close()
+            Dim sql As String = "insert into check_decript_ceasar (serailkey_easy,check_serailkey_easy)"
+            sql &= " values ('" & txtSerialKey.Text & "'"
+            sql &= " , '" & checkcaesar & "')"
+            Dim sqlread2 As SqlDataReader = con.query(sql)
+            MsgBox("สร้างซีเรียลคีย์สำเร็จ")
+            con.close()
+        End If
+
+
+    End Sub
+    Private Function isCreateSerialkey() As Boolean
+        Dim strQuery = "SELECT per_create FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
+        Dim sqlread As SqlDataReader = con.query(strQuery)
+        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal("per_create")) = 1 Then
+            Return True
+        End If
+        Return False
+    End Function
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+        If isCreateSerialkey() Then
+            Dim check As Boolean = False
+            check = ValidateDataInput()
+            If check = True Then
+                GenSerial()
+                addSerial()
+            End If
+        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
         End If
        
-    End Sub
-
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
-        Dim check As Boolean = False
-        check = ValidateDataInput()
-        If check = True Then
-            GenSerial()
-            addSerial()
-        End If
     End Sub
 
     Private Sub chbUnlimit_CheckedChanged(sender As Object, e As EventArgs) Handles chbUnlimit.CheckedChanged
