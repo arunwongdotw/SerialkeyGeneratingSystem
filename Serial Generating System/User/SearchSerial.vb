@@ -550,10 +550,16 @@ Public Class SearchSerial
         Return False
     End Function
     Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSerialKey.CellContentClick
+       
+
+    End Sub
+
+    Private Sub dgvSerialKey_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSerialKey.CellMouseClick
         Dim strQuery As String
         Dim isDelete As Boolean
-        If isPermission("per_delete") Then
-            If e.ColumnIndex = dgvSerialKey.Columns("btnDelete").Index Then
+        'If isPermission("per_delete") Then
+        If e.ColumnIndex = dgvSerialKey.Columns("btnDelete").Index Then
+            If isPermission("per_delete") Then
                 If MsgBox("ยืนยันการลบซีเรียลคีย์?", MsgBoxStyle.YesNo) = vbYes Then
                     strQuery = "delete from sgs.dbo.Serialkey where serialKey_r = '" & dgvSerialKey.Rows(e.RowIndex).Cells("serialKey_r").Value & "'"
                     isDelete = con.save(strQuery)
@@ -564,9 +570,9 @@ Public Class SearchSerial
                         MsgBox("ลบซีเรียลคีย์ล้มเหลว")
                     End If
                 End If
-            End If
-        Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
-        End If
 
+            Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
+            End If
+        End If
     End Sub
 End Class
