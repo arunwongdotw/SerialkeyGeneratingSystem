@@ -104,7 +104,7 @@ Public Class SearchSerial
             Me.dgvSerialKey.AutoGenerateColumns = False
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
 
-           
+
             Dim btnDelete As New DataGridViewButtonColumn()
             btnDelete.HeaderText = ""
             btnDelete.Text = "ลบ"
@@ -567,6 +567,6 @@ Public Class SearchSerial
             End If
         Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
         End If
-       
+
     End Sub
 End Class
