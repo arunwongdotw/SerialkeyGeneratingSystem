@@ -38,6 +38,7 @@ Public Class EditUser
             initialData()
         End If
         convertData()
+        txtPassword.Select()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnSave.Click

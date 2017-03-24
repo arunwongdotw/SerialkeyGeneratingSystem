@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
+Imports System.IO
 
 Public Class CreateSerial
     Private con As New ConnectDB
@@ -446,6 +447,26 @@ Public Class CreateSerial
 
         Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
         MsgBox("ซีเรียลคีย์ที่ผ่านการเข้ารหัส MD5 ที่ได้คือ " & serialMD5 & " ความยาวจำนวน = " & serialMD5.Length)
+
+        'If Not System.IO.File.Exists("C:\Users\Arunwong.W\Desktop\test.txt") = True Then
+        '    Dim file As System.IO.FileStream
+        '    file = System.IO.File.Create("C:\Users\Arunwong.W\Desktop\test.txt")
+        '    file.Close()
+        'End If
+
+        'Dim myStream As Stream
+        'Dim saveFileDialog1 As New SaveFileDialog()
+        'saveFileDialog1.Filter = "dll files (*.dll)|*.dll|All files (*.*)|*.*"
+        'saveFileDialog1.FilterIndex = 2
+        'saveFileDialog1.RestoreDirectory = True
+
+        'If saveFileDialog1.ShowDialog() = DialogResult.OK Then
+        '    myStream = saveFileDialog1.OpenFile()
+        '    If (myStream IsNot Nothing) Then
+        '        myStream.Close()
+        '    End If
+        'End If
+
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -633,7 +654,7 @@ Public Class CreateSerial
             End If
         Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
         End If
-       
+
     End Sub
 
     Private Sub chbUnlimit_CheckedChanged(sender As Object, e As EventArgs) Handles chbUnlimit.CheckedChanged
