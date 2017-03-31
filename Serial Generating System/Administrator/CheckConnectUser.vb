@@ -1,4 +1,8 @@
-﻿Public Class CheckConnectUser
+﻿Imports System.Data.SqlClient
+
+Public Class CheckConnectUser
+
+    Private con As New ConnectDB
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -44,4 +48,15 @@
         frm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub BtnCheck_Click(sender As Object, e As EventArgs) Handles btnCheck.Click
+        Dim strQuery As String = "SELECT net_address, DB_NAME(dbid) as DBName,  COUNT(dbid) as NumberOfConnections, loginame as LoginName FROM sys.sysprocesses WHERE  dbid > 0 and DB_NAME(dbid) = 'SGS' GROUP BY dbid, loginame,net_address "
+        Dim sqlread As SqlDataReader = con.query(strQuery)
+        If sqlread.Read Then
+            Dim dt = New DataTable()
+            dt.Load(sqlread)
+            txtConnection.Text = dt.Rows.Count
+        End If
+    End Sub
+
 End Class

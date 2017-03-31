@@ -39,7 +39,7 @@ Partial Class CheckConnectUser
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtConnection = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,6 +51,7 @@ Partial Class CheckConnectUser
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.btnCheck = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +60,7 @@ Partial Class CheckConnectUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnCheck)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -66,7 +68,7 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.btnLogOut)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.txtConnection)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -163,16 +165,16 @@ Partial Class CheckConnectUser
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtConnection
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(1090, 647)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(92, 29)
-        Me.TextBox2.TabIndex = 15
-        Me.TextBox2.TabStop = False
+        Me.txtConnection.BackColor = System.Drawing.Color.White
+        Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConnection.Location = New System.Drawing.Point(1090, 647)
+        Me.txtConnection.Name = "txtConnection"
+        Me.txtConnection.Size = New System.Drawing.Size(92, 29)
+        Me.txtConnection.TabIndex = 15
+        Me.txtConnection.TabStop = False
         '
         'TextBox1
         '
@@ -292,6 +294,15 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
+        'btnCheck
+        '
+        Me.btnCheck.Location = New System.Drawing.Point(845, 619)
+        Me.btnCheck.Name = "btnCheck"
+        Me.btnCheck.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheck.TabIndex = 102
+        Me.btnCheck.Text = "Check"
+        Me.btnCheck.UseVisualStyleBackColor = True
+        '
         'CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -315,7 +326,7 @@ Partial Class CheckConnectUser
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtConnection As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
@@ -330,4 +341,5 @@ Partial Class CheckConnectUser
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents btnCheck As System.Windows.Forms.Button
 End Class
