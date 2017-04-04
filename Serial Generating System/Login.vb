@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Net.NetworkInformation
 
 Public Class Login
     Public Shared user As String = ""
@@ -93,6 +94,7 @@ Public Class Login
         ElseIf Not sqlread.Read Then
             MsgBox("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
         Else
+            insertConnection(sqlread.GetValue(sqlread.GetOrdinal("emp_id")))
             Dim type As String = sqlread.GetValue(sqlread.GetOrdinal("user_type"))
             If type.Equals("admin") Then
                 Dim frm As New CreateUser
@@ -108,7 +110,7 @@ Public Class Login
                     frm.Show()
                     Me.Hide()
                 End If
-                
+
             End If
         End If
         con.close()
@@ -121,4 +123,19 @@ Public Class Login
     Private Sub bntClose_Click(sender As Object, e As EventArgs) Handles bntClose.Click
         Application.Exit()
     End Sub
+
+    Private Sub insertConnection(ByVal id As String)
+        Dim ComputerName = System.Net.Dns.GetHostName
+
+
+        Dim nics() As NetworkInterface = NetworkInterface.GetAllNetworkInterfaces
+        Dim physicalAddress = nics(3).GetPhysicalAddress.ToString
+        Dim computerHostname = System.Net.Dns.GetHostName
+
+
+        Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" + id + "','" + computerHostname + "','" + physicalAddress + "',1 , '" & DateTime.Now.ToString & "')"
+        con.save(Sql)
+
+    End Sub
+
 End Class
