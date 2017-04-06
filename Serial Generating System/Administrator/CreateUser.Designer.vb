@@ -78,6 +78,7 @@ Partial Class CreateUser
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
+        Me.chbPerPrint = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -396,7 +397,7 @@ Partial Class CreateUser
         '
         Me.rdbAccountant.AutoSize = True
         Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbAccountant.Location = New System.Drawing.Point(99, 1)
+        Me.rdbAccountant.Location = New System.Drawing.Point(67, 1)
         Me.rdbAccountant.Name = "rdbAccountant"
         Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
         Me.rdbAccountant.TabIndex = 14
@@ -634,6 +635,7 @@ Partial Class CreateUser
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.chbPerPrint)
         Me.Panel4.Controls.Add(Me.chbPerCreate)
         Me.Panel4.Controls.Add(Me.chbPerEdit)
         Me.Panel4.Controls.Add(Me.chbPerDelete)
@@ -660,7 +662,7 @@ Partial Class CreateUser
         Me.chbPerEdit.AutoSize = True
         Me.chbPerEdit.BackColor = System.Drawing.Color.Transparent
         Me.chbPerEdit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerEdit.Location = New System.Drawing.Point(99, 2)
+        Me.chbPerEdit.Location = New System.Drawing.Point(73, 2)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
         Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
@@ -673,7 +675,7 @@ Partial Class CreateUser
         Me.chbPerDelete.AutoSize = True
         Me.chbPerDelete.BackColor = System.Drawing.Color.Transparent
         Me.chbPerDelete.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerDelete.Location = New System.Drawing.Point(186, 2)
+        Me.chbPerDelete.Location = New System.Drawing.Point(134, 2)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
         Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
@@ -684,6 +686,19 @@ Partial Class CreateUser
         'ofdAttachUserImage
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
+        '
+        'chbPerPrint
+        '
+        Me.chbPerPrint.AutoSize = True
+        Me.chbPerPrint.BackColor = System.Drawing.Color.Transparent
+        Me.chbPerPrint.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbPerPrint.Location = New System.Drawing.Point(185, 2)
+        Me.chbPerPrint.Margin = New System.Windows.Forms.Padding(1)
+        Me.chbPerPrint.Name = "chbPerPrint"
+        Me.chbPerPrint.Size = New System.Drawing.Size(64, 30)
+        Me.chbPerPrint.TabIndex = 13
+        Me.chbPerPrint.Text = "พิมพ์"
+        Me.chbPerPrint.UseVisualStyleBackColor = False
         '
         'CreateUser
         '
@@ -757,4 +772,5 @@ Partial Class CreateUser
     Friend WithEvents ofdAttachUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents chbPerPrint As System.Windows.Forms.CheckBox
 End Class

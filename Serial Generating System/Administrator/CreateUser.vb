@@ -10,6 +10,7 @@ Public Class CreateUser
         Dim perCreate As String
         Dim perDelete As String
         Dim perEdit As String
+        Dim perPrint As String
         Dim position As String = ""
         If cmbUserType.Text = "ผู้ใช้งานทั่วไป" Then
             userType = "user"
@@ -31,13 +32,18 @@ Public Class CreateUser
         Else
             perEdit = 0
         End If
+        If chbPerPrint.Checked = True Then
+            perPrint = 1
+        Else
+            perPrint = 0
+        End If
         If rdbIT.Checked = True Then
             position = "IT"
         ElseIf rdbAccountant.Checked = True Then
             position = "Accountant"
         End If
         Dim strSQL As String
-        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete, employee_image) "
+        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete, per_print, employee_image) "
         strSQL &= "values ('" & txtEmpID.Text & "',"
         strSQL &= "'" & txtUsername.Text & "',"
         strSQL &= "'" & txtPassword.Text & "',"
@@ -51,6 +57,7 @@ Public Class CreateUser
         strSQL &= "'" & perCreate & "',"
         strSQL &= "'" & perEdit & "',"
         strSQL &= "'" & perDelete & "',"
+        strSQL &= "'" & perPrint & "',"
         strSQL &= "'" & pbAttachUserImage.ImageLocation & "')"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
@@ -145,6 +152,7 @@ Public Class CreateUser
         chbPerCreate.Checked = False
         chbPerDelete.Checked = False
         chbPerEdit.Checked = False
+        chbPerPrint.Checked = False
         pbAttachUserImage.Image = Nothing
     End Sub
 
@@ -343,13 +351,17 @@ Public Class CreateUser
             chbPerCreate.Enabled = False
             chbPerDelete.Enabled = False
             chbPerEdit.Enabled = False
+            chbPerPrint.Enabled = False
+
             chbPerCreate.Checked = False
             chbPerEdit.Checked = False
             chbPerDelete.Checked = False
+            chbPerPrint.Checked = False
         Else
             chbPerCreate.Enabled = True
             chbPerDelete.Enabled = True
             chbPerEdit.Enabled = True
+            chbPerPrint.Enabled = True
         End If
     End Sub
 End Class
