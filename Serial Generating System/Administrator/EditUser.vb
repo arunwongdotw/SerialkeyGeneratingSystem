@@ -118,6 +118,22 @@ Public Class EditUser
 
     Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedValueChanged
         userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
+        If cmbUserType.Text = "ผู้ดูแลระบบ" Then
+            chbPerCreate.Enabled = False
+            chbPerDelete.Enabled = False
+            chbPerEdit.Enabled = False
+            chb_print.Enabled = False
+
+            chbPerCreate.Checked = False
+            chbPerEdit.Checked = False
+            chbPerDelete.Checked = False
+            chb_print.Checked = False
+        Else
+            chbPerCreate.Enabled = True
+            chbPerDelete.Enabled = True
+            chbPerEdit.Enabled = True
+            chb_print.Enabled = True
+        End If
     End Sub
 
     Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
@@ -388,4 +404,5 @@ Public Class EditUser
         frm.Show()
         Me.Hide()
     End Sub
+   
 End Class
