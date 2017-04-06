@@ -179,10 +179,12 @@ Public Class AddSoftware
                 MsgBox("ราคาต้องเป็นตัวเลข")
         End Select
     End Sub
-    Private Function isCreateSerialkey() As Boolean
-        Dim strQuery = "SELECT per_create FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
+  
+
+    Private Function isPermission(ByVal perName As String) As Boolean
+        Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
-        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal("per_create")) = 1 Then
+        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal(perName)) = 1 Then
             Return True
         End If
         Return False
@@ -193,7 +195,7 @@ Public Class AddSoftware
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
                     Case "ndCreateSerialKey"
-                        If isCreateSerialkey() Then
+                        If isPermission("per_create") Then
                             Dim frm As New CreateSerial
                             frm.Show()
                             Me.clear()
@@ -226,20 +228,29 @@ Public Class AddSoftware
                         Me.clear()
                         Me.Hide()
                     Case "ndSerialKeyReport"
-                        Dim frm As New ReportSerial
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportSerial
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                     Case "ndCustomerReport"
-                        Dim frm As New ReportCustomer
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportCustomer
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                     Case "ndSoftwareReport"
-                        Dim frm As New ReportSoftware
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportSoftware
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                 End Select
             End If
         Catch ex As Exception
