@@ -208,7 +208,7 @@ Partial Class ReportSerial
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(1317, 65)
         Me.Button3.TabIndex = 70
-        Me.Button3.Text = "ค้นหาซีเรียลคีย์"
+        Me.Button3.Text = "รายงานข้อมูลซีเรียลคีย์"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -725,7 +725,7 @@ Partial Class ReportSerial
         Me.MaximizeBox = False
         Me.Name = "ReportSerial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ค้นหาซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
+        Me.Text = "รายงานข้อมูลซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).EndInit()

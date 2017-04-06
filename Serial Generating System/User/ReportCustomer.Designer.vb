@@ -533,7 +533,7 @@ Partial Class ReportCustomer
         Me.btnHeader.Size = New System.Drawing.Size(1316, 65)
         Me.btnHeader.TabIndex = 59
         Me.btnHeader.TabStop = False
-        Me.btnHeader.Text = "ค้นหาข้อมูลลูกค้า"
+        Me.btnHeader.Text = "รายงานข้อมูลลูกค้า"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
@@ -696,7 +696,7 @@ Partial Class ReportCustomer
         Me.MaximizeBox = False
         Me.Name = "ReportCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ค้นหาข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
+        Me.Text = "รายงานข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
