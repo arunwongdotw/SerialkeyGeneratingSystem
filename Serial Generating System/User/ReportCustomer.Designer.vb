@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SearchCustomer
+Partial Class ReportCustomer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -38,7 +38,7 @@ Partial Class SearchCustomer
         Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode14})
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchCustomer))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportCustomer))
         Me.txtPostalCode = New System.Windows.Forms.TextBox()
         Me.lblPostalCode = New System.Windows.Forms.Label()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
@@ -360,7 +360,7 @@ Partial Class SearchCustomer
         TreeNode3.Text = "จัดการซีเรียลคีย์"
         TreeNode4.Name = "ndAddCustomer"
         TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode5.Name = "ndSearchCustomer"
+        TreeNode5.Name = "ndFindCustomer"
         TreeNode5.Text = "ค้นหาข้อมูลลูกค้า"
         TreeNode6.Name = "ndCustomerManagement"
         TreeNode6.Text = "จัดการข้อมูลลูกค้า"
@@ -686,7 +686,7 @@ Partial Class SearchCustomer
         Me.Panel2.Size = New System.Drawing.Size(1000, 146)
         Me.Panel2.TabIndex = 122
         '
-        'SearchCustomer
+        'ReportCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -694,7 +694,7 @@ Partial Class SearchCustomer
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "SearchCustomer"
+        Me.Name = "ReportCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ค้นหาข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class AddProduct
+Public Class AddSoftware
     Private con As New ConnectDB
 
     Private Sub AddProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -192,7 +192,7 @@ Public Class AddProduct
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
-                    Case "ndCreateSerialkey"
+                    Case "ndCreateSerialKey"
                         If isCreateSerialkey() Then
                             Dim frm As New CreateSerial
                             frm.Show()
@@ -200,7 +200,7 @@ Public Class AddProduct
                             Me.Hide()
                         Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
                         End If
-                    Case "ndFindSerialkey"
+                    Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
                         frm.Show()
                         Me.clear()
@@ -210,18 +210,33 @@ Public Class AddProduct
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndFindCustomer"
+                    Case "ndSearchCustomer"
                         Dim frm As New SearchCustomer
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndSearchProduct"
-                        Dim frm As New searchProduct
+                    Case "ndSearchSoftware"
+                        Dim frm As New SearchSoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()
                     Case "ndUserResetPassword"
                         Dim frm As New ChangePasswordUser
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndSerialKeyReport"
+                        Dim frm As New ReportSerial
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndCustomerReport"
+                        Dim frm As New ReportCustomer
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndSoftwareReport"
+                        Dim frm As New ReportSoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()

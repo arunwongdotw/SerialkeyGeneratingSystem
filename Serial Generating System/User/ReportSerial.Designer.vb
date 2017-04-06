@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SearchSerial
+Partial Class ReportSerial
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -38,7 +38,7 @@ Partial Class SearchSerial
         Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการรายงาน", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12})
         Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode14})
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchSerial))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportSerial))
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.chbJapan = New System.Windows.Forms.CheckBox()
         Me.chbChinese = New System.Windows.Forms.CheckBox()
@@ -379,9 +379,9 @@ Partial Class SearchSerial
         TreeNode5.Text = "ค้นหาข้อมูลลูกค้า"
         TreeNode6.Name = "ndCustomerManagement"
         TreeNode6.Text = "จัดการข้อมูลลูกค้า"
-        TreeNode7.Name = "ndAddSoftware"
+        TreeNode7.Name = "ndAddProduct"
         TreeNode7.Text = "เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป"
-        TreeNode8.Name = "ndSearchSoftware"
+        TreeNode8.Name = "ndSearchProduct"
         TreeNode8.Text = "ค้นหาข้อมูลซอฟต์แวร์สำเร็จรูป"
         TreeNode9.Name = "ndSoftwareManagement"
         TreeNode9.Text = "จัดการข้อมูลซอฟต์แวร์สำเร็จรูป"
@@ -715,7 +715,7 @@ Partial Class SearchSerial
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
         '
-        'SearchSerial
+        'ReportSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -723,7 +723,7 @@ Partial Class SearchSerial
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "SearchSerial"
+        Me.Name = "ReportSerial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ค้นหาซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)

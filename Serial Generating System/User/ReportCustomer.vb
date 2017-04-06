@@ -1,15 +1,15 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class SearchCustomer
+Public Class ReportCustomer
     Private con As New ConnectDB
 
-    Private Sub SearchCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ReportCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
 
     'Protected objCmd As New SqlCommand
-    Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ReportCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
@@ -323,6 +323,7 @@ Public Class SearchCustomer
         clear()
         LoadData()
     End Sub
+
     Private Function isCreateSerialkey() As Boolean
         Dim strQuery = "SELECT per_create FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
@@ -331,6 +332,7 @@ Public Class SearchCustomer
         End If
         Return False
     End Function
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -376,11 +378,6 @@ Public Class SearchCustomer
                         Me.Hide()
                     Case "ndSerialKeyReport"
                         Dim frm As New ReportSerial
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
-                    Case "ndCustomerReport"
-                        Dim frm As New ReportCustomer
                         frm.Show()
                         Me.clear()
                         Me.Hide()
@@ -471,7 +468,7 @@ Public Class SearchCustomer
                 isDelete = con.save(strQuery)
                 If isDelete Then
                     MsgBox("ลบข้อมูลลูกค้าสำเร็จ")
-                    Search_Cus_Load(Nothing, Nothing)
+                    ReportCustomer_Load(Nothing, Nothing)
                 Else
                     MsgBox("ลบข้อมูลลูกค้าล้มเหลว")
                 End If

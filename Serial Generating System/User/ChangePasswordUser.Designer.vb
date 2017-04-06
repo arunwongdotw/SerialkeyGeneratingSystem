@@ -26,13 +26,17 @@ Partial Class ChangePasswordUser
         Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซีเรียลคีย์")
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซีเรียลคีย์", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลลูกค้า")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาลูกค้า")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาซอฟต์แวร์สำเร็จรูป")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode10})
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาข้อมูลลูกค้า")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการข้อมูลลูกค้า", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ค้นหาข้อมูลซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการข้อมูลซอฟต์แวร์สำเร็จรูป", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานข้อมูลซีเรียลคีย์")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานข้อมูลลูกค้า")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานข้อมูลซอฟต์แวร์สำเร็จรูป")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการรายงาน", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12})
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode14})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePasswordUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
@@ -108,7 +112,7 @@ Partial Class ChangePasswordUser
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(930, 257)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 27)
+        Me.Label5.Size = New System.Drawing.Size(18, 26)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -119,7 +123,7 @@ Partial Class ChangePasswordUser
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(930, 215)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 27)
+        Me.Label4.Size = New System.Drawing.Size(18, 26)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -130,7 +134,7 @@ Partial Class ChangePasswordUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(930, 173)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
         '
@@ -161,7 +165,7 @@ Partial Class ChangePasswordUser
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.Location = New System.Drawing.Point(536, 257)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(134, 27)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(132, 26)
         Me.lblConfirmPassword.TabIndex = 15
         Me.lblConfirmPassword.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -202,7 +206,7 @@ Partial Class ChangePasswordUser
         Me.lblNewPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNewPassword.Location = New System.Drawing.Point(572, 215)
         Me.lblNewPassword.Name = "lblNewPassword"
-        Me.lblNewPassword.Size = New System.Drawing.Size(98, 27)
+        Me.lblNewPassword.Size = New System.Drawing.Size(96, 26)
         Me.lblNewPassword.TabIndex = 11
         Me.lblNewPassword.Text = "รหัสผ่านใหม่ :"
         '
@@ -212,7 +216,7 @@ Partial Class ChangePasswordUser
         Me.lblOldPassword.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOldPassword.Location = New System.Drawing.Point(574, 173)
         Me.lblOldPassword.Name = "lblOldPassword"
-        Me.lblOldPassword.Size = New System.Drawing.Size(96, 27)
+        Me.lblOldPassword.Size = New System.Drawing.Size(95, 26)
         Me.lblOldPassword.TabIndex = 10
         Me.lblOldPassword.Text = "รหัสผ่านเก่า :"
         '
@@ -241,31 +245,39 @@ Partial Class ChangePasswordUser
         Me.tvUserMenu.ItemHeight = 44
         Me.tvUserMenu.Location = New System.Drawing.Point(0, 65)
         Me.tvUserMenu.Name = "tvUserMenu"
-        TreeNode1.Name = "ndCreateSerialkey"
+        TreeNode1.Name = "ndCreateSerialKey"
         TreeNode1.Text = "สร้างซีเรียลคีย์"
-        TreeNode2.Name = "ndFindSerialkey"
+        TreeNode2.Name = "ndSearchSerialKey"
         TreeNode2.Text = "ค้นหาซีเรียลคีย์"
-        TreeNode3.Name = "ndSerialkeyManagement"
+        TreeNode3.Name = "ndSerialKeyManagement"
         TreeNode3.Text = "จัดการซีเรียลคีย์"
         TreeNode4.Name = "ndAddCustomer"
         TreeNode4.Text = "เพิ่มข้อมูลลูกค้า"
-        TreeNode5.Name = "ndFindCustomer"
-        TreeNode5.Text = "ค้นหาลูกค้า"
-        TreeNode6.Name = "ndCustomerManage"
-        TreeNode6.Text = "จัดการลูกค้า"
-        TreeNode7.Name = "ndAddProduct"
-        TreeNode7.Text = "เพิ่มซอฟต์แวร์สำเร็จรูป"
-        TreeNode8.Name = "ndSearchProduct"
-        TreeNode8.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป"
-        TreeNode9.Name = "ndProductManagement"
-        TreeNode9.Text = "จัดการซอฟต์แวร์สำเร็จรูป"
-        TreeNode10.Name = "ndUserResetPassword"
-        TreeNode10.Text = "เปลี่ยนรหัสผ่าน"
-        TreeNode11.Name = "ndUserInfo"
-        TreeNode11.Text = "ข้อมูลส่วนตัว"
-        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode11})
+        TreeNode5.Name = "ndSearchCustomer"
+        TreeNode5.Text = "ค้นหาข้อมูลลูกค้า"
+        TreeNode6.Name = "ndCustomerManagement"
+        TreeNode6.Text = "จัดการข้อมูลลูกค้า"
+        TreeNode7.Name = "ndAddSoftware"
+        TreeNode7.Text = "เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป"
+        TreeNode8.Name = "ndSearchSoftware"
+        TreeNode8.Text = "ค้นหาข้อมูลซอฟต์แวร์สำเร็จรูป"
+        TreeNode9.Name = "ndSoftwareManagement"
+        TreeNode9.Text = "จัดการข้อมูลซอฟต์แวร์สำเร็จรูป"
+        TreeNode10.Name = "ndSerialKeyReport"
+        TreeNode10.Text = "รายงานข้อมูลซีเรียลคีย์"
+        TreeNode11.Name = "ndCustomerReport"
+        TreeNode11.Text = "รายงานข้อมูลลูกค้า"
+        TreeNode12.Name = "ndSoftwareReport"
+        TreeNode12.Text = "รายงานข้อมูลซอฟต์แวร์สำเร็จรูป"
+        TreeNode13.Name = "ndReportManagement"
+        TreeNode13.Text = "จัดการรายงาน"
+        TreeNode14.Name = "ndUserResetPassword"
+        TreeNode14.Text = "เปลี่ยนรหัสผ่าน"
+        TreeNode15.Name = "ndUserInfo"
+        TreeNode15.Text = "ข้อมูลส่วนตัว"
+        Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvUserMenu.Size = New System.Drawing.Size(266, 636)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '

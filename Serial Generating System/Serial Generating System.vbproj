@@ -150,10 +150,10 @@
     <Compile Include="User\EditProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\AddProduct.Designer.vb">
-      <DependentUpon>AddProduct.vb</DependentUpon>
+    <Compile Include="User\AddSoftware.Designer.vb">
+      <DependentUpon>AddSoftware.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\AddProduct.vb">
+    <Compile Include="User\AddSoftware.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\EditCustomer.Designer.vb">
@@ -162,10 +162,28 @@
     <Compile Include="User\EditCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\SearchProduct.Designer.vb">
-      <DependentUpon>SearchProduct.vb</DependentUpon>
+    <Compile Include="User\ReportCustomer.Designer.vb">
+      <DependentUpon>ReportCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\SearchProduct.vb">
+    <Compile Include="User\ReportCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ReportSoftware.Designer.vb">
+      <DependentUpon>ReportSoftware.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ReportSoftware.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\SearchSoftware.Designer.vb">
+      <DependentUpon>SearchSoftware.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\SearchSoftware.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ReportSerial.Designer.vb">
+      <DependentUpon>ReportSerial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\ReportSerial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -263,14 +281,23 @@
     <EmbeddedResource Include="User\EditProduct.resx">
       <DependentUpon>EditProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\AddProduct.resx">
-      <DependentUpon>AddProduct.vb</DependentUpon>
+    <EmbeddedResource Include="User\AddSoftware.resx">
+      <DependentUpon>AddSoftware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\EditCustomer.resx">
       <DependentUpon>EditCustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\SearchProduct.resx">
-      <DependentUpon>SearchProduct.vb</DependentUpon>
+    <EmbeddedResource Include="User\ReportCustomer.resx">
+      <DependentUpon>ReportCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ReportSoftware.resx">
+      <DependentUpon>ReportSoftware.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\SearchSoftware.resx">
+      <DependentUpon>SearchSoftware.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ReportSerial.resx">
+      <DependentUpon>ReportSerial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

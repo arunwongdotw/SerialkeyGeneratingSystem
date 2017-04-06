@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class SearchSerial
+Public Class ReportSerial
     Private con As New ConnectDB
     Public row_search As DataRow
 
@@ -70,11 +70,11 @@ Public Class SearchSerial
         End Try
     End Sub
 
-    Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ReportSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
 
-    Private Sub searchSerialLoad() Handles MyBase.Load
+    Private Sub ReportSerial_Load() Handles MyBase.Load
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
@@ -84,8 +84,6 @@ Public Class SearchSerial
         'dtpExpireDate.MinDate = DateTime.Now
         Me.GenerateColumn()
         Me.LoadData()
-
-
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -122,7 +120,6 @@ Public Class SearchSerial
             Me.dgvSerialKey.Columns.Clear()
             Me.dgvSerialKey.AutoGenerateColumns = False
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
-
 
             Dim btnDelete As New DataGridViewButtonColumn()
             btnDelete.HeaderText = ""
@@ -332,7 +329,6 @@ Public Class SearchSerial
             'btnEdit.UseColumnTextForButtonValue = True
             'Me.dgvSearchCus.Columns.Add(btnEdit)
 
-
             'Dim btnDelete As New DataGridViewButtonColumn()
             'btnDelete.HeaderText = ""
             'btnDelete.Text = "ลบ"
@@ -340,7 +336,6 @@ Public Class SearchSerial
             'btnDelete.Width = 70
             'btnDelete.UseColumnTextForButtonValue = True
             'Me.dgvSearchCus.Columns.Add(btnDelete)
-
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
@@ -568,10 +563,6 @@ Public Class SearchSerial
         End If
         Return False
     End Function
-    Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSerialKey.CellContentClick
-       
-
-    End Sub
 
     Private Sub dgvSerialKey_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSerialKey.CellMouseClick
         Dim strQuery As String
@@ -589,7 +580,6 @@ Public Class SearchSerial
                         MsgBox("ลบซีเรียลคีย์ล้มเหลว")
                     End If
                 End If
-
             Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
             End If
         End If

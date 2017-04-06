@@ -306,7 +306,7 @@ Public Class EditCustomer
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
-                    Case "ndCreateSerialkey"
+                    Case "ndCreateSerialKey"
                         If isCreateSerialkey() Then
                             Dim frm As New CreateSerial
                             frm.Show()
@@ -314,12 +314,12 @@ Public Class EditCustomer
                             Me.Hide()
                         Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
                         End If
-                    Case "ndFindSerialkey"
+                    Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndFindCustomer"
+                    Case "ndSearchCustomer"
                         Dim frm As New SearchCustomer
                         frm.Show()
                         Me.clear()
@@ -329,13 +329,28 @@ Public Class EditCustomer
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndAddProduct"
-                        Dim frm As New AddProduct
+                    Case "ndAddSoftware"
+                        Dim frm As New AddSoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndSearchProduct"
-                        Dim frm As New searchProduct
+                    Case "ndSearchSoftware"
+                        Dim frm As New SearchSoftware
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndSerialKeyReport"
+                        Dim frm As New ReportSerial
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndCustomerReport"
+                        Dim frm As New ReportCustomer
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndSoftwareReport"
+                        Dim frm As New ReportSoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()

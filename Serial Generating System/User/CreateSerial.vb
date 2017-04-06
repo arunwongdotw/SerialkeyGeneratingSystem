@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports System.IO
+Imports System.Text
+Imports System
 
 Public Class CreateSerial
     Private con As New ConnectDB
@@ -23,7 +25,7 @@ Public Class CreateSerial
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
             If Not (tvUserMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
-                    Case "ndFindSerialkey"
+                    Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
                         frm.Show()
                         Me.clearAll()
@@ -33,7 +35,7 @@ Public Class CreateSerial
                         frm.Show()
                         Me.clearAll()
                         Me.Hide()
-                    Case "ndFindCustomer"
+                    Case "ndSearchCustomer"
                         Dim frm As New SearchCustomer
                         frm.Show()
                         Me.clearAll()
@@ -43,13 +45,28 @@ Public Class CreateSerial
                         frm.Show()
                         Me.clearAll()
                         Me.Hide()
-                    Case "ndAddProduct"
-                        Dim frm As New AddProduct
+                    Case "ndAddSoftware"
+                        Dim frm As New AddSoftware
                         frm.Show()
                         Me.clearAll()
                         Me.Hide()
-                    Case "ndSearchProduct"
-                        Dim frm As New searchProduct
+                    Case "ndSearchSoftware"
+                        Dim frm As New SearchSoftware
+                        frm.Show()
+                        Me.clearAll()
+                        Me.Hide()
+                    Case "ndSerialKeyReport"
+                        Dim frm As New ReportSerial
+                        frm.Show()
+                        Me.clearAll()
+                        Me.Hide()
+                    Case "ndCustomerReport"
+                        Dim frm As New ReportCustomer
+                        frm.Show()
+                        Me.clearAll()
+                        Me.Hide()
+                    Case "ndSoftwareReport"
+                        Dim frm As New ReportSoftware
                         frm.Show()
                         Me.clearAll()
                         Me.Hide()
@@ -228,7 +245,7 @@ Public Class CreateSerial
     End Sub
 
     Private Sub btnAddSoftware_Click(sender As Object, e As EventArgs) Handles btnAddSoftware.Click
-        Dim frm As New AddProduct
+        Dim frm As New AddSoftware
         frm.Show()
         Me.Hide()
     End Sub
@@ -454,19 +471,19 @@ Public Class CreateSerial
         '    file.Close()
         'End If
 
-        'Dim myStream As Stream
-        'Dim saveFileDialog1 As New SaveFileDialog()
-        'saveFileDialog1.Filter = "dll files (*.dll)|*.dll|All files (*.*)|*.*"
-        'saveFileDialog1.FilterIndex = 2
-        'saveFileDialog1.RestoreDirectory = True
+        Dim myStream As Stream
+        Dim saveFileDialog1 As New SaveFileDialog()
+        saveFileDialog1.Filter = "dll files (*.dll)|*.dll|All files (*.*)|*.*"
+        saveFileDialog1.FilterIndex = 2
+        saveFileDialog1.RestoreDirectory = True
 
-        'If saveFileDialog1.ShowDialog() = DialogResult.OK Then
-        '    myStream = saveFileDialog1.OpenFile()
-        '    If (myStream IsNot Nothing) Then
-        '        myStream.Close()
-        '    End If
-        'End If
-
+        If saveFileDialog1.ShowDialog() = DialogResult.OK Then
+            myStream = saveFileDialog1.OpenFile()
+            If (myStream IsNot Nothing) Then
+                ' Code to write the stream goes here.
+                myStream.Close()
+            End If
+        End If
     End Sub
 
     Private Function ValidateDataInput() As Boolean
@@ -654,7 +671,6 @@ Public Class CreateSerial
             End If
         Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
         End If
-
     End Sub
 
     Private Sub chbUnlimit_CheckedChanged(sender As Object, e As EventArgs) Handles chbUnlimit.CheckedChanged
