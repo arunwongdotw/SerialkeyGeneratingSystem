@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassLibrary1">
+      <HintPath>bin\ClassLibrary1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -144,6 +147,12 @@
     <Compile Include="SearchOther\SearchProductOther.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="test\testSaveDLL.Designer.vb">
+      <DependentUpon>testSaveDLL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\testSaveDLL.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\EditProduct.Designer.vb">
       <DependentUpon>EditProduct.vb</DependentUpon>
     </Compile>
@@ -184,6 +193,12 @@
       <DependentUpon>ReportSerial.vb</DependentUpon>
     </Compile>
     <Compile Include="User\ReportSerial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\testDLL.Designer.vb">
+      <DependentUpon>testDLL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\testDLL.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -278,6 +293,9 @@
     <EmbeddedResource Include="SearchOther\SearchProductOther.resx">
       <DependentUpon>SearchProductOther.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="test\testSaveDLL.resx">
+      <DependentUpon>testSaveDLL.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\EditProduct.resx">
       <DependentUpon>EditProduct.vb</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\ReportSerial.resx">
       <DependentUpon>ReportSerial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\testDLL.resx">
+      <DependentUpon>testDLL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

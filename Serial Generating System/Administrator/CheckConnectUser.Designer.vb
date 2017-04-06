@@ -32,6 +32,7 @@ Partial Class CheckConnectUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheckConnectUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCheck = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -43,7 +44,7 @@ Partial Class CheckConnectUser
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvConnection = New System.Windows.Forms.DataGridView()
         Me.seq = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,10 +52,9 @@ Partial Class CheckConnectUser
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
-        Me.btnCheck = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -72,12 +72,21 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.dgvConnection)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'btnCheck
+        '
+        Me.btnCheck.Location = New System.Drawing.Point(845, 619)
+        Me.btnCheck.Name = "btnCheck"
+        Me.btnCheck.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheck.TabIndex = 102
+        Me.btnCheck.Text = "Check"
+        Me.btnCheck.UseVisualStyleBackColor = True
         '
         'pbAccountInfo
         '
@@ -209,7 +218,7 @@ Partial Class CheckConnectUser
         Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'DataGridView1
+        'dgvConnection
         '
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -218,14 +227,14 @@ Partial Class CheckConnectUser
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id, Me.del})
-        Me.DataGridView1.Location = New System.Drawing.Point(370, 127)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(848, 483)
-        Me.DataGridView1.TabIndex = 11
-        Me.DataGridView1.TabStop = False
+        Me.dgvConnection.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvConnection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvConnection.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id, Me.del})
+        Me.dgvConnection.Location = New System.Drawing.Point(370, 127)
+        Me.dgvConnection.Name = "dgvConnection"
+        Me.dgvConnection.Size = New System.Drawing.Size(848, 483)
+        Me.dgvConnection.TabIndex = 11
+        Me.dgvConnection.TabStop = False
         '
         'seq
         '
@@ -294,15 +303,6 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
-        'btnCheck
-        '
-        Me.btnCheck.Location = New System.Drawing.Point(845, 619)
-        Me.btnCheck.Name = "btnCheck"
-        Me.btnCheck.Size = New System.Drawing.Size(75, 23)
-        Me.btnCheck.TabIndex = 102
-        Me.btnCheck.Text = "Check"
-        Me.btnCheck.UseVisualStyleBackColor = True
-        '
         'CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -317,13 +317,13 @@ Partial Class CheckConnectUser
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvConnection As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtConnection As System.Windows.Forms.TextBox
