@@ -49,12 +49,12 @@ Public Class CheckConnectUser
         Me.Hide()
     End Sub
     Private Sub genRowNumber()
-            For i = 0 To dgvConnection.Rows.Count - 1
-                dgvConnection.Rows(i).Cells("ลำดับ").Value = i + 1
-            Next
+        For i = 0 To dgvConnection.Rows.Count - 1
+            dgvConnection.Rows(i).Cells("ลำดับ").Value = i + 1
+        Next
 
 
-       
+
     End Sub
     Private Sub BtnCheck_Click(sender As Object, e As EventArgs) Handles btnCheck.Click
         Dim strQuery As String = "SELECT net_address, DB_NAME(dbid) as DBName,  COUNT(dbid) as NumberOfConnections, loginame as LoginName FROM sys.sysprocesses WHERE  DB_NAME(dbid) = 'SGS' GROUP BY dbid, loginame,net_address "
@@ -90,12 +90,12 @@ Public Class CheckConnectUser
             .Columns("emp_id").ReadOnly = True
             .Columns("computer_name").ReadOnly = True
             .Columns("mac_address").ReadOnly = True
-            
+
             .Columns("ลำดับ").Width = 60
             .Columns("emp_id").Width = 120
             .Columns("computer_name").Width = 120
             .Columns("mac_address").Width = 120
-           
+
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("computer_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter

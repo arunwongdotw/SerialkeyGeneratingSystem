@@ -114,6 +114,11 @@ Public Class SearchUser
             ElseIf dgvSearchUser.Rows(i).Cells("per_delete").Value = 1 Then
                 dgvSearchUser.Rows(i).Cells("chbDelete").Value = True
             End If
+            If IsDBNull(dgvSearchUser.Rows(i).Cells("per_print").Value) OrElse dgvSearchUser.Rows(i).Cells("per_print").Value = 0 Then
+                dgvSearchUser.Rows(i).Cells("chbPrint").Value = False
+            ElseIf dgvSearchUser.Rows(i).Cells("per_print").Value = 1 Then
+                dgvSearchUser.Rows(i).Cells("chbPrint").Value = True
+            End If
         Next
     End Sub
 
@@ -186,6 +191,7 @@ Public Class SearchUser
             .Columns("per_create").Visible = False
             .Columns("per_edit").Visible = False
             .Columns("per_delete").Visible = False
+            .Columns("per_print").Visible = False
             .Columns("emp_id").HeaderCell.Value = "รหัสพนักงาน"
             .Columns("fullname").HeaderCell.Value = "ชื่อ - สกุล"
             .Columns("username").HeaderCell.Value = "ชื่อผู้ใช้"
@@ -228,6 +234,7 @@ Public Class SearchUser
             .Columns("chbCreate").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbEdit").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("chbDelete").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("chbPrint").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         End With
     End Sub
 
@@ -254,6 +261,13 @@ Public Class SearchUser
         checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
+        Dim checkboxPrint As New DataGridViewCheckBoxColumn
+        checkboxPrint.Name = "chbPrint"
+        checkboxPrint.HeaderText = "สิทธิ์การออกรายงาน"
+        checkboxPrint.FlatStyle = FlatStyle.Flat
+        checkboxPrint.DefaultCellStyle.ForeColor = Color.Black
+        checkboxPrint.ReadOnly = True
+        dgvSearchUser.Columns.Add(checkboxPrint)
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
@@ -273,7 +287,7 @@ Public Class SearchUser
     End Sub
 
     Private Function getQuery() As String
-        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,mobilenumber,phonenumber,email,user_type,per_create,per_edit,per_delete from SGS.dbo.Employee where emp_id IS NOT NULL"
+        Dim strQuery = "select id,emp_id,username,password,(firstname+' '+lastname) as fullname,position,mobilenumber,phonenumber,email,user_type,per_create,per_edit,per_delete,per_print from SGS.dbo.Employee where emp_id IS NOT NULL"
         If Not txtUsername.Text = String.Empty Then
             strQuery &= " and username like '%" & txtUsername.Text & "%'"
         End If
