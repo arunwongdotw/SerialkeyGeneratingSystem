@@ -49,20 +49,26 @@ Public Class SearchSerial
                         Me.clear()
                         Me.Hide()
                     Case "ndSerialKeyReport"
-                        Dim frm As New ReportSerial
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportSerial
+                            frm.Show()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                     Case "ndCustomerReport"
-                        Dim frm As New ReportCustomer
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportCustomer
+                            frm.Show()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                     Case "ndSoftwareReport"
-                        Dim frm As New ReportSoftware
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportSoftware
+                            frm.Show()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        End If
                 End Select
             End If
         Catch ex As Exception

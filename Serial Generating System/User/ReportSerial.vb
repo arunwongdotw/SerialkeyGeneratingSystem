@@ -607,7 +607,7 @@ Public Class ReportSerial
             Next
         Next
 
-        MsgBox(dgvSerialKey(1,2).Value.ToString)
+        MsgBox(dgvSerialKey(1, 2).Value.ToString)
 
         'save the WorkBook to a file and exit Excel
         xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)

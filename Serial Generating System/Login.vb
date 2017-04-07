@@ -90,7 +90,7 @@ Public Class Login
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & txtUsername.Text & " ' and password = '" & txtPassword.Text & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
         If sqlread Is Nothing Then
-            MsgBox("query ผิด")
+            MsgBox("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
         ElseIf Not sqlread.Read Then
             MsgBox("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณากรอกข้อมูลเพื่อทำการเข้าสู่ระบบอีกครั้ง")
         Else

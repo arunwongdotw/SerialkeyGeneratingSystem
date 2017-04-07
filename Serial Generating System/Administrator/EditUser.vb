@@ -7,6 +7,7 @@ Public Class EditUser
     Private perCreate As Integer
     Private perEdit As Integer
     Private perdelete As Integer
+    Private perPrint As Integer
     Private userType As String
     Private oldData As New Hashtable
     Private position As String
@@ -117,6 +118,22 @@ Public Class EditUser
 
     Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedValueChanged
         userType = IIf("ผู้ดูแลระบบ".Equals(cmbUserType.SelectedItem), "admin", "user")
+        If cmbUserType.Text = "ผู้ดูแลระบบ" Then
+            chbPerCreate.Enabled = False
+            chbPerDelete.Enabled = False
+            chbPerEdit.Enabled = False
+            chb_print.Enabled = False
+
+            chbPerCreate.Checked = False
+            chbPerEdit.Checked = False
+            chbPerDelete.Checked = False
+            chb_print.Checked = False
+        Else
+            chbPerCreate.Enabled = True
+            chbPerDelete.Enabled = True
+            chbPerEdit.Enabled = True
+            chb_print.Enabled = True
+        End If
     End Sub
 
     Private Sub chbPerCreate_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerCreate.CheckedChanged
@@ -125,6 +142,10 @@ Public Class EditUser
 
     Private Sub chbPerDelete_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerDelete.CheckedChanged
         perdelete = IIf(chbPerDelete.Checked, 1, 0)
+    End Sub
+
+    Private Sub chbPerPrint_CheckedChanged(sender As Object, e As EventArgs) Handles chb_print.CheckedChanged
+        perPrint = IIf(chb_print.Checked, 1, 0)
     End Sub
 
     Private Sub chbPerEdit_CheckedChanged(sender As Object, e As EventArgs) Handles chbPerEdit.CheckedChanged
@@ -144,11 +165,12 @@ Public Class EditUser
         strquery &= " user_type = '" & userType & "' , "
         strquery &= " per_create = '" & perCreate & "' , "
         strquery &= " per_edit = '" & perEdit & "' , "
-        strquery &= " per_delete = '" & perdelete & "' "
+        strquery &= " per_delete = '" & perdelete & "', "
+        strquery &= " per_print = '" & perPrint & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
             MsgBox("แก้ไขบัญชีผู้ใช้สำเร็จ")
-        Else : MsgBox("แก้ไขบัญชีผู้ใช้ไม่สำเร็จ")
+        Else : MsgBox("แก้ไขบัญชีผู้ใช้ล้มเหลว")
         End If
         Me.Hide()
         Dim formSearchUser As New SearchUser
@@ -163,6 +185,7 @@ Public Class EditUser
         chbPerCreate.Checked = perCreate = 1
         chbPerDelete.Checked = perdelete = 1
         chbPerEdit.Checked = perEdit = 1
+        chb_print.Checked = perPrint = 1
         cmbUserType.SelectedItem = IIf("admin".Equals(userType), "ผู้ดูแลระบบ", "ผู้ใช้งานทั่วไป")
     End Sub
 
@@ -180,7 +203,8 @@ Public Class EditUser
         strQuery &= "user_type,"
         strQuery &= "per_create,"
         strQuery &= "per_edit,"
-        strQuery &= "per_delete"
+        strQuery &= "per_delete,"
+        strQuery &= "per_print"
         strQuery &= " from SGS.dbo.Employee "
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
@@ -200,6 +224,7 @@ Public Class EditUser
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
         perdelete = sqlReader.GetValue(sqlReader.GetOrdinal("per_delete"))
+        perPrint = IIf(IsDBNull(sqlReader.GetValue(sqlReader.GetOrdinal("per_print"))), 0, 1)
         perEdit = sqlReader.GetValue(sqlReader.GetOrdinal("per_edit"))
         userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
         txtUsername.Enabled = False
@@ -379,4 +404,5 @@ Public Class EditUser
         frm.Show()
         Me.Hide()
     End Sub
+   
 End Class
