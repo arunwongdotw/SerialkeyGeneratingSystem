@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 
-Public Class EditProduct
+Public Class EditSoftware
     Private id As String
     Private QualityControl As Integer
     Private WarehouseManagement As Integer
@@ -234,7 +234,7 @@ Public Class EditProduct
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -248,6 +248,11 @@ Public Class EditProduct
                         Me.Hide()
                     Case "ndSearchCustomer"
                         Dim frm As New SearchCustomer
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
+                    Case "ndAddSoftware"
+                        Dim frm As New AddSoftware
                         frm.Show()
                         Me.clear()
                         Me.Hide()
@@ -267,7 +272,7 @@ Public Class EditProduct
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndCustomerReport"
                         If isPermission("per_print") Then
@@ -275,7 +280,7 @@ Public Class EditProduct
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndSoftwareReport"
                         If isPermission("per_print") Then
@@ -283,7 +288,7 @@ Public Class EditProduct
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If

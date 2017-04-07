@@ -66,6 +66,7 @@ Public Class CreateSerial
                         If isPermission("per_print") Then
                             Dim frm As New ReportSerial
                             frm.Show()
+                            Me.clearAll()
                             Me.Hide()
                         Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
@@ -73,6 +74,7 @@ Public Class CreateSerial
                         If isPermission("per_print") Then
                             Dim frm As New ReportCustomer
                             frm.Show()
+                            Me.clearAll()
                             Me.Hide()
                         Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
@@ -80,6 +82,7 @@ Public Class CreateSerial
                         If isPermission("per_print") Then
                             Dim frm As New ReportSoftware
                             frm.Show()
+                            Me.clearAll()
                             Me.Hide()
                         Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If

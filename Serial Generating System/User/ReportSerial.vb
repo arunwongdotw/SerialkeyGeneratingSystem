@@ -10,6 +10,15 @@ Public Class ReportSerial
     'Dim APP As New Excel.Application
     'Dim excelLocation As String = "C:\Users\Arunwong.W\Desktop\test.xlsx"
 
+    Private Function isPermission(ByVal perName As String) As Boolean
+        Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
+        Dim sqlread As SqlDataReader = con.query(strQuery)
+        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal(perName)) = 1 Then
+            Return True
+        End If
+        Return False
+    End Function
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -21,7 +30,7 @@ Public Class ReportSerial
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -53,21 +62,22 @@ Public Class ReportSerial
                         frm.Show()
                         Me.clear()
                         Me.Hide()
-                    Case "ndSerialKeyReport"
-                        Dim frm As New ReportSerial
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
                     Case "ndCustomerReport"
-                        Dim frm As New ReportCustomer
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportCustomer
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+                        End If
                     Case "ndSoftwareReport"
-                        Dim frm As New ReportSoftware
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
+                        If isPermission("per_print") Then
+                            Dim frm As New ReportSoftware
+                            frm.Show()
+                            Me.clear()
+                            Me.Hide()
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+                        End If
                 End Select
             End If
         Catch ex As Exception

@@ -221,7 +221,7 @@ Public Class ReportSoftware
             End If
         End If
         If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
-            Dim formEditProduct As New EditProduct(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
+            Dim formEditProduct As New EditSoftware(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
             formEditProduct.Show()
             Me.Hide()
         End If
@@ -296,6 +296,7 @@ Public Class ReportSoftware
         clearTextBox()
         loadDataTable()
     End Sub
+
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
@@ -304,6 +305,7 @@ Public Class ReportSoftware
         End If
         Return False
     End Function
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -314,7 +316,7 @@ Public Class ReportSoftware
                             Dim frm As New CreateSerial
                             frm.Show()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -341,26 +343,26 @@ Public Class ReportSoftware
                         frm.Show()
                         Me.clearTextBox()
                         Me.Hide()
+                    Case "ndSearchSoftware"
+                        Dim frm As New SearchSoftware
+                        frm.Show()
+                        Me.clearTextBox()
+                        Me.Hide()
                     Case "ndSerialKeyReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportSerial
                             frm.Show()
+                            Me.clearTextBox()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndCustomerReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportCustomer
                             frm.Show()
+                            Me.clearTextBox()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
-                        End If
-                    Case "ndSoftwareReport"
-                        If isPermission("per_print") Then
-                            Dim frm As New ReportSoftware
-                            frm.Show()
-                            Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If

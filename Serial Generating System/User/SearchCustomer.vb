@@ -341,7 +341,7 @@ Public Class SearchCustomer
                             Dim frm As New CreateSerial
                             frm.Show()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -350,11 +350,6 @@ Public Class SearchCustomer
                         Me.Hide()
                     Case "ndAddCustomer"
                         Dim frm As New CreateCustomer
-                        frm.Show()
-                        Me.clear()
-                        Me.Hide()
-                    Case "ndSearchCustomer"
-                        Dim frm As New SearchCustomer
                         frm.Show()
                         Me.clear()
                         Me.Hide()
@@ -377,22 +372,25 @@ Public Class SearchCustomer
                         If isPermission("per_print") Then
                             Dim frm As New ReportSerial
                             frm.Show()
+                            Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndCustomerReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportCustomer
                             frm.Show()
+                            Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndSoftwareReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportSoftware
                             frm.Show()
+                            Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If

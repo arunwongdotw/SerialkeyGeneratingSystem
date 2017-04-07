@@ -200,7 +200,7 @@ Public Class AddSoftware
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -233,7 +233,7 @@ Public Class AddSoftware
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndCustomerReport"
                         If isPermission("per_print") Then
@@ -241,7 +241,7 @@ Public Class AddSoftware
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndSoftwareReport"
                         If isPermission("per_print") Then
@@ -249,7 +249,7 @@ Public Class AddSoftware
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If

@@ -344,7 +344,7 @@ Public Class ReportCustomer
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิในการสร้างซีเรียลคีย์")
+                        Else : MsgBox("คุณไม่มีสิทธิ์ในการสร้างซีเรียลคีย์")
                         End If
                     Case "ndSearchSerialKey"
                         Dim frm As New SearchSerial
@@ -371,21 +371,18 @@ Public Class ReportCustomer
                         frm.Show()
                         Me.clear()
                         Me.Hide()
+                    Case "ndSearchSoftware"
+                        Dim frm As New SearchSoftware
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
                     Case "ndSerialKeyReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportSerial
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
-                        End If
-                    Case "ndCustomerReport"
-                        If isPermission("per_print") Then
-                            Dim frm As New ReportCustomer
-                            frm.Show()
-                            Me.clear()
-                            Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndSoftwareReport"
                         If isPermission("per_print") Then
@@ -393,7 +390,7 @@ Public Class ReportCustomer
                             frm.Show()
                             Me.clear()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If

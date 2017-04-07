@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EditProduct
+Partial Class EditSoftware
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -37,7 +37,7 @@ Partial Class EditProduct
         Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("จัดการรายงาน", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12})
         Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เปลี่ยนรหัสผ่าน")
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode14})
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProduct))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditSoftware))
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.txtProduct_s_name = New System.Windows.Forms.TextBox()

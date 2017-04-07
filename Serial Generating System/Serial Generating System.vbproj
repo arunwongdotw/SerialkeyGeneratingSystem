@@ -153,10 +153,10 @@
     <Compile Include="test\testSaveDLL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\EditProduct.Designer.vb">
-      <DependentUpon>EditProduct.vb</DependentUpon>
+    <Compile Include="User\EditSoftware.Designer.vb">
+      <DependentUpon>EditSoftware.vb</DependentUpon>
     </Compile>
-    <Compile Include="User\EditProduct.vb">
+    <Compile Include="User\EditSoftware.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\AddSoftware.Designer.vb">
@@ -296,8 +296,8 @@
     <EmbeddedResource Include="test\testSaveDLL.resx">
       <DependentUpon>testSaveDLL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\EditProduct.resx">
-      <DependentUpon>EditProduct.vb</DependentUpon>
+    <EmbeddedResource Include="User\EditSoftware.resx">
+      <DependentUpon>EditSoftware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\AddSoftware.resx">
       <DependentUpon>AddSoftware.vb</DependentUpon>
