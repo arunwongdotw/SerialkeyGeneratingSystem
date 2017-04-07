@@ -67,21 +67,21 @@ Public Class CreateSerial
                             Dim frm As New ReportSerial
                             frm.Show()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndCustomerReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportCustomer
                             frm.Show()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                     Case "ndSoftwareReport"
                         If isPermission("per_print") Then
                             Dim frm As New ReportSoftware
                             frm.Show()
                             Me.Hide()
-                        Else : MsgBox("คุณไม่มีสิทธิจัดการรายงาน")
+                        Else : MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
                         End If
                 End Select
             End If
