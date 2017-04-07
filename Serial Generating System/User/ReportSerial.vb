@@ -1,9 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
+Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class ReportSerial
     Private con As New ConnectDB
     Public row_search As DataRow
+    'Dim worksheet As Excel.Worksheet
+    'Dim workbook As Excel.Workbook
+    'Dim APP As New Excel.Application
+    'Dim excelLocation As String = "C:\Users\Arunwong.W\Desktop\test.xlsx"
 
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
@@ -84,6 +89,8 @@ Public Class ReportSerial
         'dtpExpireDate.MinDate = DateTime.Now
         Me.GenerateColumn()
         Me.LoadData()
+        'workbook = APP.Workbooks.Open(excelLocation)
+        'worksheet = workbook.Worksheets("Sheet1")
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -120,14 +127,6 @@ Public Class ReportSerial
             Me.dgvSerialKey.Columns.Clear()
             Me.dgvSerialKey.AutoGenerateColumns = False
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
-
-            Dim btnDelete As New DataGridViewButtonColumn()
-            btnDelete.HeaderText = ""
-            btnDelete.Text = "ลบ"
-            btnDelete.Name = "btnDelete"
-            btnDelete.Width = 50
-            btnDelete.UseColumnTextForButtonValue = True
-            Me.dgvSerialKey.Columns.Add(btnDelete)
 
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
@@ -555,6 +554,7 @@ Public Class ReportSerial
     Private Sub chbQC_CheckedChanged(sender As Object, e As EventArgs) Handles chbQC.CheckedChanged
         Me.LoadData()
     End Sub
+
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
@@ -583,5 +583,35 @@ Public Class ReportSerial
             Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
             End If
         End If
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Title = "Save Excel File"
+        SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+        SaveFileDialog1.ShowDialog()
+        If SaveFileDialog1.FileName = "" Then
+            Exit Sub
+        End If
+
+        'create an Excel WorkBook
+        Dim xls As New Excel.Application
+        Dim sheet As Excel.Worksheet
+        Dim i, j As Integer
+        xls.Workbooks.Add()
+        sheet = xls.ActiveWorkbook.ActiveSheet
+
+        For i = 1 To dgvSerialKey.RowCount
+            For j = 1 To dgvSerialKey.ColumnCount - 1
+                sheet.Cells(i + 1, j) = dgvSerialKey.Columns(j).HeaderText
+            Next
+        Next
+
+        MsgBox(dgvSerialKey(1,2).Value.ToString)
+
+        'save the WorkBook to a file and exit Excel
+        xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+        xls.Workbooks.Close()
+        xls.Quit()
     End Sub
 End Class
