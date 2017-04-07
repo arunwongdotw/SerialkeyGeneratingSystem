@@ -611,13 +611,18 @@ Public Class ReportSerial
         xls.Workbooks.Add()
         sheet = xls.ActiveWorkbook.ActiveSheet
 
+
+        For j = 1 To dgvSerialKey.ColumnCount - 1
+            sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
+        Next
+
         For i = 1 To dgvSerialKey.RowCount
             For j = 1 To dgvSerialKey.ColumnCount - 1
-                sheet.Cells(i + 1, j) = dgvSerialKey.Columns(j).HeaderText
+                sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
             Next
         Next
 
-        MsgBox(dgvSerialKey(1, 2).Value.ToString)
+        ' MsgBox(dgvSerialKey(1, 2).Value.ToString)
 
         'save the WorkBook to a file and exit Excel
         xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
