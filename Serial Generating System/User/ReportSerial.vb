@@ -10,15 +10,6 @@ Public Class ReportSerial
     'Dim APP As New Excel.Application
     'Dim excelLocation As String = "C:\Users\Arunwong.W\Desktop\test.xlsx"
 
-    Private Function isPermission(ByVal perName As String) As Boolean
-        Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
-        Dim sqlread As SqlDataReader = con.query(strQuery)
-        If sqlread.Read AndAlso sqlread.GetValue(sqlread.GetOrdinal(perName)) = 1 Then
-            Return True
-        End If
-        Return False
-    End Function
-
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
