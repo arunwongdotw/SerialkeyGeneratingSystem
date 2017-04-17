@@ -52,14 +52,17 @@ Partial Class CheckConnectUser
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.btnCheck)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
@@ -67,7 +70,6 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.txtConnection)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -119,7 +121,7 @@ Partial Class CheckConnectUser
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label5.Location = New System.Drawing.Point(365, 86)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(259, 27)
+        Me.Label5.Size = New System.Drawing.Size(250, 26)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "ผู้ใช้งานระบบที่กำลังเชื่อมต่อในขณะนี้"
         '
@@ -146,7 +148,7 @@ Partial Class CheckConnectUser
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(1188, 647)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 27)
+        Me.Label4.Size = New System.Drawing.Size(31, 26)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "คน"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -157,22 +159,23 @@ Partial Class CheckConnectUser
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(1188, 613)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 27)
+        Me.Label3.Size = New System.Drawing.Size(31, 26)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(63, 29)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 1
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'txtConnection
         '
@@ -202,7 +205,7 @@ Partial Class CheckConnectUser
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(934, 647)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(140, 27)
+        Me.Label2.Size = New System.Drawing.Size(140, 26)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -213,7 +216,7 @@ Partial Class CheckConnectUser
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(926, 613)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(148, 27)
+        Me.Label1.Size = New System.Drawing.Size(147, 26)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -299,9 +302,18 @@ Partial Class CheckConnectUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 537)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel2.Controls.Add(Me.btnLogOut)
+        Me.Panel2.Location = New System.Drawing.Point(0, 602)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(256, 100)
+        Me.Panel2.TabIndex = 103
         '
         'CheckConnectUser
         '
@@ -318,6 +330,7 @@ Partial Class CheckConnectUser
         Me.Panel1.PerformLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -342,4 +355,5 @@ Partial Class CheckConnectUser
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnCheck As System.Windows.Forms.Button
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

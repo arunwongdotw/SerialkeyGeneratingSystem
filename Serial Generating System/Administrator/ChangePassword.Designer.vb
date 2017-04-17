@@ -31,12 +31,13 @@ Partial Class ChangePassword
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePassword))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.txtNewPasswordConfirm = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnChangePassword = New System.Windows.Forms.Button()
@@ -47,18 +48,19 @@ Partial Class ChangePassword
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.txtNewPasswordConfirm)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.btnChangePassword)
@@ -72,6 +74,28 @@ Partial Class ChangePassword
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel2.Controls.Add(Me.btnLogOut)
+        Me.Panel2.Location = New System.Drawing.Point(0, 602)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(256, 100)
+        Me.Panel2.TabIndex = 102
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(63, 29)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 6
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'pbAccountInfo
         '
@@ -104,7 +128,7 @@ Partial Class ChangePassword
         Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Location = New System.Drawing.Point(930, 173)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 27)
+        Me.Label5.Size = New System.Drawing.Size(18, 26)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "*"
         '
@@ -115,7 +139,7 @@ Partial Class ChangePassword
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(930, 215)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 27)
+        Me.Label4.Size = New System.Drawing.Size(18, 26)
         Me.Label4.TabIndex = 72
         Me.Label4.Text = "*"
         '
@@ -126,21 +150,9 @@ Partial Class ChangePassword
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(930, 257)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 71
         Me.Label15.Text = "*"
-        '
-        'btnLogOut
-        '
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 6
-        Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'txtNewPasswordConfirm
         '
@@ -158,7 +170,7 @@ Partial Class ChangePassword
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(537, 257)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(134, 27)
+        Me.Label3.Size = New System.Drawing.Size(132, 26)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "ยืนยันรหัสผ่านใหม่ :"
         '
@@ -201,7 +213,7 @@ Partial Class ChangePassword
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(573, 215)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 27)
+        Me.Label2.Size = New System.Drawing.Size(96, 26)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "รหัสผ่านใหม่ :"
         '
@@ -211,7 +223,7 @@ Partial Class ChangePassword
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(575, 173)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 27)
+        Me.Label1.Size = New System.Drawing.Size(95, 26)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "รหัสผ่านเก่า :"
         '
@@ -256,7 +268,7 @@ Partial Class ChangePassword
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 537)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
@@ -273,6 +285,7 @@ Partial Class ChangePassword
         Me.Text = "เปลี่ยนรหัสผ่าน - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -293,4 +306,5 @@ Partial Class ChangePassword
     Friend WithEvents btnChangePassword As System.Windows.Forms.Button
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

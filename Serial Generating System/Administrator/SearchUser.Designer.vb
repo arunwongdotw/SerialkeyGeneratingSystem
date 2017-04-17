@@ -55,20 +55,22 @@ Partial Class SearchUser
         Me.lblPosition = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.txtFirstname)
         Me.Panel1.Controls.Add(Me.lblFirstname)
         Me.Panel1.Controls.Add(Me.txtEmployeeId)
@@ -139,15 +141,16 @@ Partial Class SearchUser
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(63, 29)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 10
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'txtFirstname
         '
@@ -253,7 +256,7 @@ Partial Class SearchUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 537)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
@@ -385,6 +388,15 @@ Partial Class SearchUser
         Me.lblEmail.Text = "อีเมล :"
         Me.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel3.Controls.Add(Me.btnLogOut)
+        Me.Panel3.Location = New System.Drawing.Point(0, 602)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(256, 100)
+        Me.Panel3.TabIndex = 103
+        '
         'SearchUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -402,6 +414,7 @@ Partial Class SearchUser
         CType(Me.dgvSearchUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -430,4 +443,5 @@ Partial Class SearchUser
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
 End Class
