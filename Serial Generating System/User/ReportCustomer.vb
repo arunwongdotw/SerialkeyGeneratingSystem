@@ -26,22 +26,6 @@ Public Class ReportCustomer
             Me.dgvSearchCus.AutoGenerateColumns = False
             Me.dgvSearchCus.RowTemplate.MinimumHeight = 30
 
-            Dim btnEdit As New DataGridViewButtonColumn()
-            btnEdit.HeaderText = ""
-            btnEdit.Text = "แก้ไข"
-            btnEdit.Name = "btnEdit"
-            btnEdit.Width = 70
-            btnEdit.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnEdit)
-
-            Dim btnDelete As New DataGridViewButtonColumn()
-            btnDelete.HeaderText = ""
-            btnDelete.Text = "ลบ"
-            btnDelete.Name = "btnDelete"
-            btnDelete.Width = 70
-            btnDelete.UseColumnTextForButtonValue = True
-            Me.dgvSearchCus.Columns.Add(btnDelete)
-
             Dim Col As New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
             Col.Width = 60
@@ -164,24 +148,6 @@ Public Class ReportCustomer
             Col.DataPropertyName = "cellphone"
             Col.Name = "cellphone"
             Me.dgvSearchCus.Columns.Add(Col)
-
-            'Dim btnEdit As New DataGridViewButtonColumn()
-            'btnEdit.HeaderText = ""
-            'btnEdit.Text = "แก้ไข"
-            'btnEdit.Name = "btnEdit"
-            'btnEdit.Width = 70
-            'btnEdit.UseColumnTextForButtonValue = True
-            'Me.dgvSearchCus.Columns.Add(btnEdit)
-
-
-            'Dim btnDelete As New DataGridViewButtonColumn()
-            'btnDelete.HeaderText = ""
-            'btnDelete.Text = "ลบ"
-            'btnDelete.Name = "btnDelete"
-            'btnDelete.Width = 70
-            'btnDelete.UseColumnTextForButtonValue = True
-            'Me.dgvSearchCus.Columns.Add(btnDelete)
-
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
@@ -467,27 +433,5 @@ Public Class ReportCustomer
 
     Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged
         LoadData()
-    End Sub
-
-    Private Sub dgvSearchUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchCus.CellContentClick
-        Dim strQuery As String
-        Dim isDelete As Boolean
-        If e.ColumnIndex = dgvSearchCus.Columns("btnDelete").Index Then
-            If MsgBox("ยืนยันการลบข้อมูลลูกค้า?", MsgBoxStyle.YesNo) = vbYes Then ' or  = 6 
-                strQuery = "delete from sgs.dbo.Customer where id = " & dgvSearchCus.Rows(e.RowIndex).Cells("id").Value
-                isDelete = con.save(strQuery)
-                If isDelete Then
-                    MsgBox("ลบข้อมูลลูกค้าสำเร็จ")
-                    ReportCustomer_Load(Nothing, Nothing)
-                Else
-                    MsgBox("ลบข้อมูลลูกค้าล้มเหลว")
-                End If
-            End If
-        End If
-        If e.ColumnIndex = dgvSearchCus.Columns("btnEdit").Index Then
-            Dim formEditCustomer As New EditCustomer(dgvSearchCus.Rows(e.RowIndex).Cells("id").Value)
-            formEditCustomer.Show()
-            Me.Hide()
-        End If
     End Sub
 End Class

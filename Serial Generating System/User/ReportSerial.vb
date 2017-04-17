@@ -324,22 +324,6 @@ Public Class ReportSerial
             Col.DataPropertyName = "emp_id"
             Col.Name = "emp_id"
             Me.dgvSerialKey.Columns.Add(Col)
-
-            'Dim btnEdit As New DataGridViewButtonColumn()
-            'btnEdit.HeaderText = ""
-            'btnEdit.Text = "แก้ไข"
-            'btnEdit.Name = "btnEdit"
-            'btnEdit.Width = 70
-            'btnEdit.UseColumnTextForButtonValue = True
-            'Me.dgvSearchCus.Columns.Add(btnEdit)
-
-            'Dim btnDelete As New DataGridViewButtonColumn()
-            'btnDelete.HeaderText = ""
-            'btnDelete.Text = "ลบ"
-            'btnDelete.Name = "btnDelete"
-            'btnDelete.Width = 70
-            'btnDelete.UseColumnTextForButtonValue = True
-            'Me.dgvSearchCus.Columns.Add(btnDelete)
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
@@ -569,7 +553,7 @@ Public Class ReportSerial
         Return False
     End Function
 
-    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+    Private Sub btnExport_Click(sender As Object, e As EventArgs)
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Title = "Save Excel File"
         SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"

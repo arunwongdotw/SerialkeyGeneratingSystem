@@ -345,7 +345,7 @@ Public Class ReportSoftware
         Me.Hide()
     End Sub
 
-    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+    Private Sub btnExport_Click(sender As Object, e As EventArgs)
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Title = "Save Excel File"
         SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
