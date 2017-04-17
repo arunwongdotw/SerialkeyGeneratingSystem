@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
+Imports Excel = Microsoft.Office.Interop.Excel
+
 Public Class ReportSoftware
     Private con As New ConnectDB
 
@@ -152,22 +154,6 @@ Public Class ReportSoftware
         checkboxJapanese.Name = "chbJapanese"
         checkboxJapanese.ReadOnly = True
         dgvSearchProduct.Columns.Add(checkboxJapanese)
-        Dim btnEdit As New DataGridViewButtonColumn()
-        btnEdit.HeaderText = ""
-        btnEdit.Text = "แก้ไข"
-        btnEdit.Name = "btnEdit"
-        btnEdit.Width = 50
-        btnEdit.UseColumnTextForButtonValue = True
-        dgvSearchProduct.Columns.Add(btnEdit)
-        dgvSearchProduct.Columns("btnEdit").DisplayIndex = 0
-        Dim btnDelete As New DataGridViewButtonColumn()
-        btnDelete.HeaderText = ""
-        btnDelete.Text = "ลบ"
-        btnDelete.Name = "btnDelete"
-        btnDelete.Width = 50
-        btnDelete.UseColumnTextForButtonValue = True
-        dgvSearchProduct.Columns.Add(btnDelete)
-        dgvSearchProduct.Columns("btnDelete").DisplayIndex = 1
     End Sub
 
     Private Sub setCheckBox()
@@ -203,28 +189,6 @@ Public Class ReportSoftware
                 dgvSearchProduct.Rows(i).Cells("chbWarehouseManagement").Value = True
             End If
         Next
-    End Sub
-
-    Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchProduct.CellContentClick
-        Dim strQuery As String
-        Dim isDelete As Boolean
-        If e.ColumnIndex = dgvSearchProduct.Columns("btnDelete").Index Then
-            If MsgBox("ยืนยันการลบข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
-                strQuery = "delete from sgs.dbo.product where id = " & dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value
-                isDelete = con.save(strQuery)
-                If isDelete Then
-                    MsgBox("ลบข้อมูลซอฟต์แวร์สำเร็จรูปสำเร็จ")
-                    loadDataTable()
-                Else
-                    MsgBox("ลบข้อมูลซอฟต์แวร์สำเร็จรูปล้มเหลว")
-                End If
-            End If
-        End If
-        If e.ColumnIndex = dgvSearchProduct.Columns("btnEdit").Index Then
-            Dim formEditProduct As New EditSoftware(dgvSearchProduct.Rows(e.RowIndex).Cells("id").Value)
-            formEditProduct.Show()
-            Me.Hide()
-        End If
     End Sub
 
     Private Sub clearTextBox()
@@ -375,5 +339,34 @@ Public Class ReportSoftware
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Title = "Save Excel File"
+        SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+        SaveFileDialog1.ShowDialog()
+        If SaveFileDialog1.FileName = "" Then
+            Exit Sub
+        End If
+        'create an Excel WorkBook
+        Dim xls As New Excel.Application
+        Dim sheet As Excel.Worksheet
+        Dim i, j As Integer
+        xls.Workbooks.Add()
+        sheet = xls.ActiveWorkbook.ActiveSheet
+        For j = 1 To dgvSearchProduct.ColumnCount - 1
+            sheet.Cells(1, j) = dgvSearchProduct.Columns(j).HeaderText
+        Next
+
+        For i = 1 To dgvSearchProduct.RowCount
+            For j = 1 To dgvSearchProduct.ColumnCount - 1
+                sheet.Cells(i + 1, j) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
+            Next
+        Next
+        'save the WorkBook to a file and exit Excel
+        xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+        xls.Workbooks.Close()
+        xls.Quit()
     End Sub
 End Class

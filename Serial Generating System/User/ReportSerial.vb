@@ -565,27 +565,6 @@ Public Class ReportSerial
         Return False
     End Function
 
-    Private Sub dgvSerialKey_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSerialKey.CellMouseClick
-        Dim strQuery As String
-        Dim isDelete As Boolean
-        'If isPermission("per_delete") Then
-        If e.ColumnIndex = dgvSerialKey.Columns("btnDelete").Index Then
-            If isPermission("per_delete") Then
-                If MsgBox("ยืนยันการลบซีเรียลคีย์?", MsgBoxStyle.YesNo) = vbYes Then
-                    strQuery = "delete from sgs.dbo.Serialkey where serialKey_r = '" & dgvSerialKey.Rows(e.RowIndex).Cells("serialKey_r").Value & "'"
-                    isDelete = con.save(strQuery)
-                    If isDelete Then
-                        MsgBox("ลบซีเรียลคีย์สำเร็จ")
-                        Me.LoadData()
-                    Else
-                        MsgBox("ลบซีเรียลคีย์ล้มเหลว")
-                    End If
-                End If
-            Else : MsgBox("คุณไม่มีสิทธิในการลบซีเรียลคีย์")
-            End If
-        End If
-    End Sub
-
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Title = "Save Excel File"
@@ -594,27 +573,28 @@ Public Class ReportSerial
         If SaveFileDialog1.FileName = "" Then
             Exit Sub
         End If
-
         'create an Excel WorkBook
         Dim xls As New Excel.Application
         Dim sheet As Excel.Worksheet
         Dim i, j As Integer
         xls.Workbooks.Add()
         sheet = xls.ActiveWorkbook.ActiveSheet
-
-
         For j = 1 To dgvSerialKey.ColumnCount - 1
-            sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
+            If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                sheet.Cells(1, j) = "ออปชันควบคุมคุณภาพ"
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                sheet.Cells(1, j) = "ออปชันการจัดการโรงงาน"
+            Else
+                sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
+            End If
+            sheet.Cells(1, j).HorizontalAlignment = 3
         Next
-
         For i = 1 To dgvSerialKey.RowCount
             For j = 1 To dgvSerialKey.ColumnCount - 1
                 sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
+                sheet.Cells(i + 1, j).HorizontalAlignment = 3
             Next
         Next
-
-        ' MsgBox(dgvSerialKey(1, 2).Value.ToString)
-
         'save the WorkBook to a file and exit Excel
         xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
         xls.Workbooks.Close()

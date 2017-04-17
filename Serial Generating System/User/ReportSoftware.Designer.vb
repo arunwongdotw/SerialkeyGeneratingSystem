@@ -65,6 +65,7 @@ Partial Class ReportSoftware
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
+        Me.btnExport = New System.Windows.Forms.Button()
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +107,7 @@ Partial Class ReportSoftware
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnExport)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnClear)
@@ -402,6 +404,15 @@ Partial Class ReportSoftware
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(1064, 391)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 124
+        Me.btnExport.Text = "Button1"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
         'ReportSoftware
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -452,4 +463,5 @@ Partial Class ReportSoftware
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents btnExport As System.Windows.Forms.Button
 End Class

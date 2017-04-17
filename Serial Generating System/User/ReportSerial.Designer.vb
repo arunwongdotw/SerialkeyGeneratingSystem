@@ -45,24 +45,11 @@ Partial Class ReportSerial
         Me.chbEnglish = New System.Windows.Forms.CheckBox()
         Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.dgvSerialKey = New System.Windows.Forms.DataGridView()
-        Me.Column13 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
@@ -95,7 +82,20 @@ Partial Class ReportSerial
         Me.lblOrderฆales = New System.Windows.Forms.Label()
         Me.txtSEQ = New System.Windows.Forms.TextBox()
         Me.chbUnlimit = New System.Windows.Forms.CheckBox()
-        Me.btnExport = New System.Windows.Forms.Button()
+        Me.Column12 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +175,15 @@ Partial Class ReportSerial
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(1076, 424)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 138
+        Me.btnExport.Text = "Export"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
         'pbAccountInfo
         '
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -236,104 +245,6 @@ Partial Class ReportSerial
         Me.dgvSerialKey.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvSerialKey.Size = New System.Drawing.Size(1000, 212)
         Me.dgvSerialKey.TabIndex = 69
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "แก้ไข"
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Width = 30
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "ลบ"
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
-        Me.Column14.Width = 30
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ลำดับที่"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 50
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ซีเรียลคีย์"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 200
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "แบรนด์"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 75
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "จำนวนผู้ใช้งาน"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 75
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "ลำดับที่ขาย"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 50
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "ชื่อซอฟต์แวร์"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 175
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "วันหมดอายุ"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 75
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "เวอร์ชัน"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 60
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "ภาษาไทย"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Width = 50
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "ภาษาอังกฤษ"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Width = 50
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "ภาษาจีน"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Width = 50
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "ภาษาญี่ปุ่น"
-        Me.Column12.Name = "Column12"
-        Me.Column12.ReadOnly = True
-        Me.Column12.Width = 50
         '
         'btnLogout
         '
@@ -717,14 +628,103 @@ Partial Class ReportSerial
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
         '
-        'btnExport
+        'Column12
         '
-        Me.btnExport.Location = New System.Drawing.Point(1076, 424)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(75, 23)
-        Me.btnExport.TabIndex = 138
-        Me.btnExport.Text = "Export"
-        Me.btnExport.UseVisualStyleBackColor = True
+        Me.Column12.HeaderText = "ภาษาญี่ปุ่น"
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        Me.Column12.Width = 50
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "ภาษาจีน"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Width = 50
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "ภาษาอังกฤษ"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Width = 50
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "ภาษาไทย"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Width = 50
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "เวอร์ชัน"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 60
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "วันหมดอายุ"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 75
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "ชื่อซอฟต์แวร์"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 175
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "ลำดับที่ขาย"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 50
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "จำนวนผู้ใช้งาน"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 75
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "แบรนด์"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 75
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ซีเรียลคีย์"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 200
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ลำดับที่"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 50
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "ลบ"
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        Me.Column14.Width = 30
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "แก้ไข"
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Width = 30
         '
         'ReportSerial
         '
@@ -784,6 +784,14 @@ Partial Class ReportSerial
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtSoftWareName As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -798,12 +806,4 @@ Partial Class ReportSerial
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Column11 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
-    Friend WithEvents btnExport As System.Windows.Forms.Button
 End Class
