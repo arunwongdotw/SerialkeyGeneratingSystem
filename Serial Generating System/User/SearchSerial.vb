@@ -93,6 +93,8 @@ Public Class SearchSerial
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
         Dim frm As New Login
         frm.Show()
         Me.Hide()

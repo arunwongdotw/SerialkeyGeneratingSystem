@@ -16,7 +16,11 @@ Public Class EditCustomer
     End Sub
 
     Private Sub EditCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Application.Exit()
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Edit_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
