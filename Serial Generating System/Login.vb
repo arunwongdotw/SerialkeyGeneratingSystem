@@ -3,6 +3,7 @@ Imports System.Data
 Imports System.Net.NetworkInformation
 
 Public Class Login
+    Public Shared idConnection As String = ""
     Public Shared user As String = ""
     Public Shared pass As String = ""
     Private username = ""
@@ -133,8 +134,15 @@ Public Class Login
         Dim computerHostname = System.Net.Dns.GetHostName
 
 
-        Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" + id + "','" + computerHostname + "','" + physicalAddress + "',1 , '" & DateTime.Now.ToString & "')"
-        con.save(Sql)
+        Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" + id + "','" + computerHostname + "','" + physicalAddress + "',1 , '" & DateTime.Now.ToString & "');select scope_identity()"
+        Dim sqlread As SqlDataReader = con.query(sql)
+        If sqlread.Read Then
+            idConnection = sqlread.GetValue(0)
+        End If
+
+
+
+
 
     End Sub
 
