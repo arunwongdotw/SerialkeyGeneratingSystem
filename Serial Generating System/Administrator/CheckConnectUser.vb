@@ -1,8 +1,11 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class CheckConnectUser
 
     Private con As New ConnectDB
+    Public Sub sqlCloseConnection()
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
+    End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConnection.CellContentClick
 
@@ -33,6 +36,8 @@ Public Class CheckConnectUser
     End Sub
 
     Private Sub CheckConnectUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim close As New CheckConnectUser
+        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 
@@ -44,10 +49,13 @@ Public Class CheckConnectUser
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
         Dim frm As New Login
         frm.Show()
         Me.Hide()
     End Sub
+
     Private Sub genRowNumber()
         For i = 0 To dgvConnection.Rows.Count - 1
             dgvConnection.Rows(i).Cells("ลำดับ").Value = i + 1

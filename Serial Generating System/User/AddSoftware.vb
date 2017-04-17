@@ -5,6 +5,8 @@ Public Class AddSoftware
     Private con As New ConnectDB
 
     Private Sub AddProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim close As New CheckConnectUser
+        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 
@@ -16,6 +18,8 @@ Public Class AddSoftware
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
         Dim frm As New Login
         frm.Show()
         Me.Hide()
