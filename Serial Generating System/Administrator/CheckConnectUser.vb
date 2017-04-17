@@ -2,15 +2,11 @@
 Public Class CheckConnectUser
 
     Private con As New ConnectDB
-    Private Sub sqlCloseConnection()
+    Public Sub sqlCloseConnection()
         Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
         con.save(sql)
     End Sub
 
-    Public Sub closeconnection() Handles Me.FormClosed
-        Dim close As New CheckConnectUser
-        close.sqlCloseConnection()
-    End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConnection.CellContentClick
 
     End Sub
@@ -40,6 +36,8 @@ Public Class CheckConnectUser
     End Sub
 
     Private Sub CheckConnectUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim close As New CheckConnectUser
+        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 

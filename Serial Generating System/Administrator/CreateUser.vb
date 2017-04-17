@@ -70,6 +70,8 @@ Public Class CreateUser
     End Sub
 
     Private Sub CreateUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim close As New CheckConnectUser
+        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 
