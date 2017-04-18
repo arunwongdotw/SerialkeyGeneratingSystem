@@ -101,29 +101,33 @@ Partial Class CreateSerial
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 22
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.lbWelcome)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Panel5)
@@ -131,7 +135,6 @@ Partial Class CreateSerial
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Controls.Add(Me.btnCreate)
         Me.Panel1.Controls.Add(Me.btnClear)
@@ -180,9 +183,9 @@ Partial Class CreateSerial
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Controls.Add(Me.Label3)
         Me.Panel5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(271, 82)
+        Me.Panel5.Location = New System.Drawing.Point(290, 82)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1040, 98)
+        Me.Panel5.Size = New System.Drawing.Size(1021, 98)
         Me.Panel5.TabIndex = 119
         Me.Panel5.Visible = False
         '
@@ -193,7 +196,7 @@ Partial Class CreateSerial
         Me.btnDecrypt.FlatAppearance.BorderSize = 0
         Me.btnDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDecrypt.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDecrypt.Location = New System.Drawing.Point(978, 12)
+        Me.btnDecrypt.Location = New System.Drawing.Point(956, 12)
         Me.btnDecrypt.Name = "btnDecrypt"
         Me.btnDecrypt.Size = New System.Drawing.Size(54, 75)
         Me.btnDecrypt.TabIndex = 123
@@ -207,7 +210,7 @@ Partial Class CreateSerial
         Me.btnCopySerial.FlatAppearance.BorderSize = 0
         Me.btnCopySerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCopySerial.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopySerial.Location = New System.Drawing.Point(843, 12)
+        Me.btnCopySerial.Location = New System.Drawing.Point(821, 12)
         Me.btnCopySerial.Name = "btnCopySerial"
         Me.btnCopySerial.Size = New System.Drawing.Size(129, 32)
         Me.btnCopySerial.TabIndex = 122
@@ -222,7 +225,7 @@ Partial Class CreateSerial
         Me.btnCopyInfo.FlatAppearance.BorderSize = 0
         Me.btnCopyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCopyInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopyInfo.Location = New System.Drawing.Point(843, 54)
+        Me.btnCopyInfo.Location = New System.Drawing.Point(821, 54)
         Me.btnCopyInfo.Name = "btnCopyInfo"
         Me.btnCopyInfo.Size = New System.Drawing.Size(129, 33)
         Me.btnCopyInfo.TabIndex = 78
@@ -238,7 +241,7 @@ Partial Class CreateSerial
         Me.txtSerialKey.Location = New System.Drawing.Point(192, 54)
         Me.txtSerialKey.Name = "txtSerialKey"
         Me.txtSerialKey.ReadOnly = True
-        Me.txtSerialKey.Size = New System.Drawing.Size(645, 33)
+        Me.txtSerialKey.Size = New System.Drawing.Size(623, 33)
         Me.txtSerialKey.TabIndex = 121
         Me.txtSerialKey.TabStop = False
         Me.txtSerialKey.Visible = False
@@ -251,7 +254,7 @@ Partial Class CreateSerial
         Me.txtInfo.Location = New System.Drawing.Point(192, 12)
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ReadOnly = True
-        Me.txtInfo.Size = New System.Drawing.Size(645, 33)
+        Me.txtInfo.Size = New System.Drawing.Size(623, 33)
         Me.txtInfo.TabIndex = 120
         Me.txtInfo.TabStop = False
         Me.txtInfo.Visible = False
@@ -295,9 +298,9 @@ Partial Class CreateSerial
         Me.Panel4.Controls.Add(Me.lblBrandSoftware)
         Me.Panel4.Controls.Add(Me.lblSoftwareName)
         Me.Panel4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(271, 300)
+        Me.Panel4.Location = New System.Drawing.Point(290, 300)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1040, 144)
+        Me.Panel4.Size = New System.Drawing.Size(1021, 144)
         Me.Panel4.TabIndex = 74
         '
         'txtSoftware_s_name
@@ -459,9 +462,9 @@ Partial Class CreateSerial
         Me.Panel2.Controls.Add(Me.lblCorpName)
         Me.Panel2.Controls.Add(Me.lblCorpSubName)
         Me.Panel2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(271, 186)
+        Me.Panel2.Location = New System.Drawing.Point(290, 186)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1040, 108)
+        Me.Panel2.Size = New System.Drawing.Size(1021, 108)
         Me.Panel2.TabIndex = 73
         '
         'lblInfoCustomer
@@ -595,9 +598,9 @@ Partial Class CreateSerial
         Me.Panel3.Controls.Add(Me.lblLanguage)
         Me.Panel3.Controls.Add(Me.lblExpireDate)
         Me.Panel3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(271, 450)
+        Me.Panel3.Location = New System.Drawing.Point(290, 450)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1040, 189)
+        Me.Panel3.Size = New System.Drawing.Size(1021, 189)
         Me.Panel3.TabIndex = 71
         '
         'chbForever
@@ -848,7 +851,7 @@ Partial Class CreateSerial
         TreeNode15.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(266, 636)
+        Me.tvUserMenu.Size = New System.Drawing.Size(270, 537)
         Me.tvUserMenu.TabIndex = 0
         '
         'btnCreate
@@ -877,6 +880,15 @@ Partial Class CreateSerial
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.Orange
+        Me.Panel6.Controls.Add(Me.btnLogOut)
+        Me.Panel6.Location = New System.Drawing.Point(0, 602)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(270, 100)
+        Me.Panel6.TabIndex = 129
+        '
         'CreateSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -899,6 +911,7 @@ Partial Class CreateSerial
         Me.Panel3.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -965,4 +978,5 @@ Partial Class CreateSerial
     Friend WithEvents btnDecrypt As System.Windows.Forms.Button
     Friend WithEvents lbWelcome As System.Windows.Forms.Label
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
 End Class

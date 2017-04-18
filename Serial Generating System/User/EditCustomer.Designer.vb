@@ -99,6 +99,7 @@ Partial Class EditCustomer
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.txtCorp_s_Name = New System.Windows.Forms.TextBox()
         Me.ofdAttachNewCustomerImage = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachNewCustomerImage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +107,7 @@ Partial Class EditCustomer
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -120,14 +122,15 @@ Partial Class EditCustomer
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 22
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'tvUserMenu
         '
@@ -169,13 +172,14 @@ Partial Class EditCustomer
         TreeNode15.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvUserMenu.Size = New System.Drawing.Size(270, 537)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnAttachNewCustomerImage)
@@ -185,7 +189,6 @@ Partial Class EditCustomer
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -781,6 +784,15 @@ Partial Class EditCustomer
         '
         Me.ofdAttachNewCustomerImage.FileName = "AttachNewCustomerImage"
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Orange
+        Me.Panel5.Controls.Add(Me.btnLogOut)
+        Me.Panel5.Location = New System.Drawing.Point(0, 602)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(270, 100)
+        Me.Panel5.TabIndex = 129
+        '
         'EditCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -802,6 +814,7 @@ Partial Class EditCustomer
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -866,4 +879,5 @@ Partial Class EditCustomer
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
 End Class
