@@ -6,12 +6,6 @@ Public Class ReportSerial
     Private con As New ConnectDB
     Public row_search As DataRow
 
-    Private Property Panel4 As Panel
-    'Dim worksheet As Excel.Worksheet
-    'Dim workbook As Excel.Workbook
-    'Dim APP As New Excel.Application
-    'Dim excelLocation As String = "C:\Users\Arunwong.W\Desktop\test.xlsx"
-
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -563,15 +557,12 @@ Public Class ReportSerial
         If SaveFileDialog1.FileName = "" Then
             Exit Sub
         End If
-
         'create an Excel WorkBook
         Dim xls As New Excel.Application
         Dim sheet As Excel.Worksheet
         Dim i, j As Integer
         xls.Workbooks.Add()
         sheet = xls.ActiveWorkbook.ActiveSheet
-
-
         For j = 1 To dgvSerialKey.ColumnCount - 1
             If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
                 sheet.Cells(1, j) = "ออปชันควบคุมคุณภาพ"
@@ -582,7 +573,6 @@ Public Class ReportSerial
             End If
             sheet.Cells(1, j).HorizontalAlignment = 3
         Next
-
         For i = 1 To dgvSerialKey.RowCount
             For j = 1 To dgvSerialKey.ColumnCount - 1
                 If (dgvSerialKey.Rows(i - 1).Cells(j).Value Is Nothing) Then
@@ -601,9 +591,6 @@ Public Class ReportSerial
                 sheet.Cells(i + 1, j).HorizontalAlignment = 3
             Next
         Next
-
-        ' MsgBox(dgvSerialKey(1, 2).Value.ToString)
-
         'save the WorkBook to a file and exit Excel
         xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
         xls.Workbooks.Close()

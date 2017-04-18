@@ -66,6 +66,7 @@ Partial Class ReportCustomer
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -94,13 +95,14 @@ Partial Class ReportCustomer
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnExport = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtPostalCode
@@ -385,13 +387,14 @@ Partial Class ReportCustomer
         TreeNode15.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvUserMenu.Size = New System.Drawing.Size(270, 537)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.btnExport)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
@@ -399,7 +402,6 @@ Partial Class ReportCustomer
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.dgvSearchCus)
-        Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
@@ -408,6 +410,19 @@ Partial Class ReportCustomer
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 3
+        '
+        'btnExport
+        '
+        Me.btnExport.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnExport.FlatAppearance.BorderSize = 0
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.Location = New System.Drawing.Point(1157, 349)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(129, 41)
+        Me.btnExport.TabIndex = 127
+        Me.btnExport.Text = "นำออก"
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'pbAccountInfo
         '
@@ -656,15 +671,16 @@ Partial Class ReportCustomer
         '
         'btnLogout
         '
+        Me.btnLogout.BackColor = System.Drawing.Color.White
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(129, 41)
         Me.btnLogout.TabIndex = 17
         Me.btnLogout.Text = "ออกจากระบบ"
-        Me.btnLogout.UseVisualStyleBackColor = True
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -688,18 +704,14 @@ Partial Class ReportCustomer
         Me.Panel2.Size = New System.Drawing.Size(1000, 146)
         Me.Panel2.TabIndex = 122
         '
-        'btnExport
+        'Panel5
         '
-        Me.btnExport.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnExport.FlatAppearance.BorderSize = 0
-        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExport.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExport.Location = New System.Drawing.Point(1157, 349)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(129, 41)
-        Me.btnExport.TabIndex = 127
-        Me.btnExport.Text = "นำออก"
-        Me.btnExport.UseVisualStyleBackColor = False
+        Me.Panel5.BackColor = System.Drawing.Color.Orange
+        Me.Panel5.Controls.Add(Me.btnLogout)
+        Me.Panel5.Location = New System.Drawing.Point(0, 602)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(270, 100)
+        Me.Panel5.TabIndex = 128
         '
         'ReportCustomer
         '
@@ -721,6 +733,7 @@ Partial Class ReportCustomer
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -780,4 +793,5 @@ Partial Class ReportCustomer
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnExport As System.Windows.Forms.Button
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
 End Class
