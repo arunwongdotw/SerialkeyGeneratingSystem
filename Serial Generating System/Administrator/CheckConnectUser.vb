@@ -11,6 +11,7 @@ Public Class CheckConnectUser
         Dim close As New CheckConnectUser
         close.sqlCloseConnection()
     End Sub
+
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConnection.CellContentClick
 
     End Sub

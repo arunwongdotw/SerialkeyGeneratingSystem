@@ -139,11 +139,6 @@ Public Class Login
         If sqlread.Read Then
             idConnection = sqlread.GetValue(0)
         End If
-
-
-
-
-
     End Sub
 
 End Class
