@@ -5,6 +5,8 @@ Imports Excel = Microsoft.Office.Interop.Excel
 Public Class ReportSerial
     Private con As New ConnectDB
     Public row_search As DataRow
+
+    Private Property Panel4 As Panel
     'Dim worksheet As Excel.Worksheet
     'Dim workbook As Excel.Workbook
     'Dim APP As New Excel.Application
