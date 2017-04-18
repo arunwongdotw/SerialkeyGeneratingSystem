@@ -68,6 +68,7 @@ Partial Class EditUser
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.chb_print = New System.Windows.Forms.CheckBox()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
@@ -82,7 +83,7 @@ Partial Class EditUser
         Me.pbAttachNewUserImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.ofdAttachNewUserImage = New System.Windows.Forms.OpenFileDialog()
-        Me.chb_print = New System.Windows.Forms.CheckBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -92,21 +93,23 @@ Partial Class EditUser
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.pbAttachNewUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 16
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
@@ -161,13 +164,14 @@ Partial Class EditUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(270, 537)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Panel3)
@@ -175,7 +179,6 @@ Partial Class EditUser
         Me.Panel1.Controls.Add(Me.btnAttachNewUserImage)
         Me.Panel1.Controls.Add(Me.pbAttachNewUserImage)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
@@ -264,7 +267,7 @@ Partial Class EditUser
         Me.rdbIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbIT.Location = New System.Drawing.Point(8, 1)
         Me.rdbIT.Name = "rdbIT"
-        Me.rdbIT.Size = New System.Drawing.Size(53, 31)
+        Me.rdbIT.Size = New System.Drawing.Size(53, 30)
         Me.rdbIT.TabIndex = 12
         Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
@@ -277,7 +280,7 @@ Partial Class EditUser
         Me.rdbAccountant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.rdbAccountant.Location = New System.Drawing.Point(99, 0)
         Me.rdbAccountant.Name = "rdbAccountant"
-        Me.rdbAccountant.Size = New System.Drawing.Size(62, 31)
+        Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
         Me.rdbAccountant.TabIndex = 13
         Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
@@ -290,7 +293,7 @@ Partial Class EditUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(397, 190)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
+        Me.Label15.Size = New System.Drawing.Size(18, 26)
         Me.Label15.TabIndex = 125
         Me.Label15.Text = "*"
         '
@@ -301,7 +304,7 @@ Partial Class EditUser
         Me.lblMsgEmail.ForeColor = System.Drawing.Color.Green
         Me.lblMsgEmail.Location = New System.Drawing.Point(455, 150)
         Me.lblMsgEmail.Name = "lblMsgEmail"
-        Me.lblMsgEmail.Size = New System.Drawing.Size(115, 24)
+        Me.lblMsgEmail.Size = New System.Drawing.Size(114, 24)
         Me.lblMsgEmail.TabIndex = 124
         Me.lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
         '
@@ -312,7 +315,7 @@ Partial Class EditUser
         Me.lblMsgEmpId.ForeColor = System.Drawing.Color.Green
         Me.lblMsgEmpId.Location = New System.Drawing.Point(308, 25)
         Me.lblMsgEmpId.Name = "lblMsgEmpId"
-        Me.lblMsgEmpId.Size = New System.Drawing.Size(159, 24)
+        Me.lblMsgEmpId.Size = New System.Drawing.Size(158, 24)
         Me.lblMsgEmpId.TabIndex = 122
         Me.lblMsgEmpId.Text = "สามารถใช้รหัสพนักงานนี้ได้"
         '
@@ -342,7 +345,7 @@ Partial Class EditUser
         Me.Label20.ForeColor = System.Drawing.Color.Red
         Me.Label20.Location = New System.Drawing.Point(397, 148)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 27)
+        Me.Label20.Size = New System.Drawing.Size(18, 26)
         Me.Label20.TabIndex = 90
         Me.Label20.Text = "*"
         '
@@ -354,7 +357,7 @@ Partial Class EditUser
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(34, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 27)
+        Me.Label3.Size = New System.Drawing.Size(102, 26)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "รหัสพนักงาน :"
         '
@@ -374,7 +377,7 @@ Partial Class EditUser
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(978, 64)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 27)
+        Me.Label17.Size = New System.Drawing.Size(18, 26)
         Me.Label17.TabIndex = 77
         Me.Label17.Text = "*"
         '
@@ -387,7 +390,7 @@ Partial Class EditUser
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
         Me.cmbUserType.Location = New System.Drawing.Point(703, 62)
         Me.cmbUserType.Name = "cmbUserType"
-        Me.cmbUserType.Size = New System.Drawing.Size(269, 35)
+        Me.cmbUserType.Size = New System.Drawing.Size(269, 34)
         Me.cmbUserType.TabIndex = 8
         '
         'Label11
@@ -398,7 +401,7 @@ Partial Class EditUser
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label11.Location = New System.Drawing.Point(579, 64)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(119, 27)
+        Me.Label11.Size = New System.Drawing.Size(118, 26)
         Me.Label11.TabIndex = 71
         Me.Label11.Text = "ประเภทบัญชีผู้ใช้ :"
         '
@@ -410,7 +413,7 @@ Partial Class EditUser
         Me.Label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label18.Location = New System.Drawing.Point(65, 232)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(71, 27)
+        Me.Label18.Size = New System.Drawing.Size(72, 26)
         Me.Label18.TabIndex = 88
         Me.Label18.Text = "โทรศัพท์ :"
         '
@@ -433,7 +436,7 @@ Partial Class EditUser
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label4.Location = New System.Drawing.Point(96, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 27)
+        Me.Label4.Size = New System.Drawing.Size(39, 26)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "ชื่อ :"
         '
@@ -455,7 +458,7 @@ Partial Class EditUser
         Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label5.Location = New System.Drawing.Point(61, 107)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 27)
+        Me.Label5.Size = New System.Drawing.Size(74, 26)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "นามสกุล :"
         '
@@ -467,7 +470,7 @@ Partial Class EditUser
         Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Location = New System.Drawing.Point(525, 106)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(172, 27)
+        Me.Label12.Size = New System.Drawing.Size(172, 26)
         Me.Label12.TabIndex = 67
         Me.Label12.Text = "สิทธิ์การจัดการซีรเียลคีย์ :"
         '
@@ -489,7 +492,7 @@ Partial Class EditUser
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.Location = New System.Drawing.Point(83, 148)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(53, 27)
+        Me.Label10.Size = New System.Drawing.Size(52, 26)
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "อีเมล :"
         '
@@ -511,7 +514,7 @@ Partial Class EditUser
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label6.Location = New System.Drawing.Point(625, 148)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 27)
+        Me.Label6.Size = New System.Drawing.Size(72, 26)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "ตำแหน่ง :"
         '
@@ -523,7 +526,7 @@ Partial Class EditUser
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label9.Location = New System.Drawing.Point(27, 190)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(109, 27)
+        Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "โทรศัพท์มือถือ :"
         '
@@ -534,7 +537,7 @@ Partial Class EditUser
         Me.Label16.ForeColor = System.Drawing.Color.Red
         Me.Label16.Location = New System.Drawing.Point(397, 106)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(18, 27)
+        Me.Label16.Size = New System.Drawing.Size(18, 26)
         Me.Label16.TabIndex = 80
         Me.Label16.Text = "*"
         '
@@ -555,7 +558,7 @@ Partial Class EditUser
         Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Location = New System.Drawing.Point(397, 65)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(18, 27)
+        Me.Label14.Size = New System.Drawing.Size(18, 26)
         Me.Label14.TabIndex = 78
         Me.Label14.Text = "*"
         '
@@ -566,7 +569,7 @@ Partial Class EditUser
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(246, 22)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 27)
+        Me.Label13.Size = New System.Drawing.Size(18, 26)
         Me.Label13.TabIndex = 73
         Me.Label13.Text = "*"
         '
@@ -582,6 +585,20 @@ Partial Class EditUser
         Me.Panel4.Size = New System.Drawing.Size(269, 36)
         Me.Panel4.TabIndex = 96
         '
+        'chb_print
+        '
+        Me.chb_print.AutoSize = True
+        Me.chb_print.BackColor = System.Drawing.Color.Transparent
+        Me.chb_print.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb_print.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.chb_print.Location = New System.Drawing.Point(196, 2)
+        Me.chb_print.Margin = New System.Windows.Forms.Padding(1)
+        Me.chb_print.Name = "chb_print"
+        Me.chb_print.Size = New System.Drawing.Size(64, 30)
+        Me.chb_print.TabIndex = 12
+        Me.chb_print.Text = "พิมพ์"
+        Me.chb_print.UseVisualStyleBackColor = False
+        '
         'chbPerCreate
         '
         Me.chbPerCreate.AutoSize = True
@@ -591,7 +608,7 @@ Partial Class EditUser
         Me.chbPerCreate.Location = New System.Drawing.Point(7, 2)
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
-        Me.chbPerCreate.Size = New System.Drawing.Size(64, 31)
+        Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
         Me.chbPerCreate.TabIndex = 9
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
@@ -605,7 +622,7 @@ Partial Class EditUser
         Me.chbPerEdit.Location = New System.Drawing.Point(73, 2)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
-        Me.chbPerEdit.Size = New System.Drawing.Size(60, 31)
+        Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
         Me.chbPerEdit.TabIndex = 10
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
@@ -619,7 +636,7 @@ Partial Class EditUser
         Me.chbPerDelete.Location = New System.Drawing.Point(143, 2)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
-        Me.chbPerDelete.Size = New System.Drawing.Size(49, 31)
+        Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
         Me.chbPerDelete.TabIndex = 11
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
@@ -656,7 +673,7 @@ Partial Class EditUser
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Location = New System.Drawing.Point(466, 41)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 27)
+        Me.Label2.Size = New System.Drawing.Size(75, 26)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "รหัสผ่าน :"
         '
@@ -667,7 +684,7 @@ Partial Class EditUser
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(543, 77)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(310, 24)
+        Me.Label7.Size = New System.Drawing.Size(306, 24)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
@@ -691,7 +708,7 @@ Partial Class EditUser
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(74, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 27)
+        Me.Label1.Size = New System.Drawing.Size(61, 26)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
@@ -702,7 +719,7 @@ Partial Class EditUser
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(137, 77)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(310, 24)
+        Me.Label8.Size = New System.Drawing.Size(306, 24)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
@@ -753,19 +770,14 @@ Partial Class EditUser
         '
         Me.ofdAttachNewUserImage.FileName = "AttachNewUserImage"
         '
-        'chb_print
+        'Panel6
         '
-        Me.chb_print.AutoSize = True
-        Me.chb_print.BackColor = System.Drawing.Color.Transparent
-        Me.chb_print.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chb_print.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.chb_print.Location = New System.Drawing.Point(196, 2)
-        Me.chb_print.Margin = New System.Windows.Forms.Padding(1)
-        Me.chb_print.Name = "chb_print"
-        Me.chb_print.Size = New System.Drawing.Size(64, 31)
-        Me.chb_print.TabIndex = 12
-        Me.chb_print.Text = "พิมพ์"
-        Me.chb_print.UseVisualStyleBackColor = False
+        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel6.Controls.Add(Me.btnLogOut)
+        Me.Panel6.Location = New System.Drawing.Point(0, 602)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(270, 100)
+        Me.Panel6.TabIndex = 134
         '
         'EditUser
         '
@@ -791,6 +803,7 @@ Partial Class EditUser
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.pbAttachNewUserImage, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -847,4 +860,5 @@ Partial Class EditUser
     Friend WithEvents ofdAttachNewUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents chb_print As System.Windows.Forms.CheckBox
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
 End Class

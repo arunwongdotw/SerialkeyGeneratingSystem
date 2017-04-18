@@ -74,17 +74,19 @@ Partial Class CreateUser
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.chbPerPrint = New System.Windows.Forms.CheckBox()
         Me.chbPerCreate = New System.Windows.Forms.CheckBox()
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
-        Me.chbPerPrint = New System.Windows.Forms.CheckBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'tvAdminMenu
@@ -113,19 +115,19 @@ Partial Class CreateUser
         TreeNode7.Text = "ข้อมูลส่วนตัว"
         Me.tvAdminMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5, TreeNode7})
         Me.tvAdminMenu.ShowLines = False
-        Me.tvAdminMenu.Size = New System.Drawing.Size(256, 636)
+        Me.tvAdminMenu.Size = New System.Drawing.Size(270, 537)
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.lbWelcome)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.btnAttachUserImage)
         Me.Panel1.Controls.Add(Me.pbAttachUserImage)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
@@ -211,16 +213,17 @@ Partial Class CreateUser
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 17
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnClear
         '
@@ -644,6 +647,19 @@ Partial Class CreateUser
         Me.Panel4.Size = New System.Drawing.Size(250, 36)
         Me.Panel4.TabIndex = 96
         '
+        'chbPerPrint
+        '
+        Me.chbPerPrint.AutoSize = True
+        Me.chbPerPrint.BackColor = System.Drawing.Color.Transparent
+        Me.chbPerPrint.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbPerPrint.Location = New System.Drawing.Point(185, 2)
+        Me.chbPerPrint.Margin = New System.Windows.Forms.Padding(1)
+        Me.chbPerPrint.Name = "chbPerPrint"
+        Me.chbPerPrint.Size = New System.Drawing.Size(64, 30)
+        Me.chbPerPrint.TabIndex = 13
+        Me.chbPerPrint.Text = "พิมพ์"
+        Me.chbPerPrint.UseVisualStyleBackColor = False
+        '
         'chbPerCreate
         '
         Me.chbPerCreate.AutoSize = True
@@ -687,18 +703,14 @@ Partial Class CreateUser
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
         '
-        'chbPerPrint
+        'Panel6
         '
-        Me.chbPerPrint.AutoSize = True
-        Me.chbPerPrint.BackColor = System.Drawing.Color.Transparent
-        Me.chbPerPrint.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbPerPrint.Location = New System.Drawing.Point(185, 2)
-        Me.chbPerPrint.Margin = New System.Windows.Forms.Padding(1)
-        Me.chbPerPrint.Name = "chbPerPrint"
-        Me.chbPerPrint.Size = New System.Drawing.Size(64, 30)
-        Me.chbPerPrint.TabIndex = 13
-        Me.chbPerPrint.Text = "พิมพ์"
-        Me.chbPerPrint.UseVisualStyleBackColor = False
+        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel6.Controls.Add(Me.btnLogOut)
+        Me.Panel6.Location = New System.Drawing.Point(0, 602)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(270, 100)
+        Me.Panel6.TabIndex = 127
         '
         'CreateUser
         '
@@ -721,6 +733,7 @@ Partial Class CreateUser
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -773,4 +786,5 @@ Partial Class CreateUser
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents chbPerPrint As System.Windows.Forms.CheckBox
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
 End Class
