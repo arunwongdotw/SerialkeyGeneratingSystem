@@ -95,14 +95,12 @@ Partial Class SearchSerial
         Me.lblOrderฆales = New System.Windows.Forms.Label()
         Me.txtSEQ = New System.Windows.Forms.TextBox()
         Me.chbUnlimit = New System.Windows.Forms.CheckBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblVersion
@@ -162,11 +160,11 @@ Partial Class SearchSerial
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.dgvSerialKey)
+        Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -337,16 +335,15 @@ Partial Class SearchSerial
         '
         'btnLogout
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.White
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogout.Location = New System.Drawing.Point(59, 610)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(129, 41)
         Me.btnLogout.TabIndex = 22
         Me.btnLogout.Text = "ออกจากระบบ"
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnClear
         '
@@ -402,7 +399,7 @@ Partial Class SearchSerial
         TreeNode15.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(270, 537)
+        Me.tvUserMenu.Size = New System.Drawing.Size(256, 636)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
@@ -718,15 +715,6 @@ Partial Class SearchSerial
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Orange
-        Me.Panel4.Controls.Add(Me.btnLogout)
-        Me.Panel4.Location = New System.Drawing.Point(0, 602)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(270, 100)
-        Me.Panel4.TabIndex = 138
-        '
         'SearchSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -747,7 +735,6 @@ Partial Class SearchSerial
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -807,5 +794,4 @@ Partial Class SearchSerial
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
 End Class

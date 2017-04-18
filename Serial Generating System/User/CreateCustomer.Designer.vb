@@ -98,7 +98,6 @@ Partial Class CreateCustomer
         Me.btnClear = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.ofdAttachCustomerImage = New System.Windows.Forms.OpenFileDialog()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -106,13 +105,11 @@ Partial Class CreateCustomer
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAttachCustomerImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -121,6 +118,7 @@ Partial Class CreateCustomer
         Me.Panel1.Controls.Add(Me.btnAttachCustomerImage)
         Me.Panel1.Controls.Add(Me.pbAttachCustomerImage)
         Me.Panel1.Controls.Add(Me.btnHeader)
+        Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.tvUserMenu)
@@ -688,15 +686,14 @@ Partial Class CreateCustomer
         '
         'btnLogOut
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.White
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogOut.Location = New System.Drawing.Point(59, 610)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
         Me.btnLogOut.TabIndex = 22
         Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = False
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
@@ -764,22 +761,13 @@ Partial Class CreateCustomer
         TreeNode15.Text = "ข้อมูลส่วนตัว"
         Me.tvUserMenu.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode6, TreeNode9, TreeNode13, TreeNode15})
         Me.tvUserMenu.ShowLines = False
-        Me.tvUserMenu.Size = New System.Drawing.Size(270, 537)
+        Me.tvUserMenu.Size = New System.Drawing.Size(266, 636)
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
         'ofdAttachCustomerImage
         '
         Me.ofdAttachCustomerImage.FileName = "AttachCustomerImage"
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Orange
-        Me.Panel5.Controls.Add(Me.btnLogOut)
-        Me.Panel5.Location = New System.Drawing.Point(0, 602)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(270, 100)
-        Me.Panel5.TabIndex = 122
         '
         'CreateCustomer
         '
@@ -802,7 +790,6 @@ Partial Class CreateCustomer
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.pbAttachCustomerImage, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -866,5 +853,4 @@ Partial Class CreateCustomer
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents lblPhone As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
 End Class

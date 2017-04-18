@@ -241,8 +241,6 @@ Public Class SearchSoftware
     End Sub
 
     Private Sub searchProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Dim close As New CheckConnectUser
-        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 

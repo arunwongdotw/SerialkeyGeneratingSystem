@@ -104,6 +104,7 @@ Partial Class ReportSerial
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblVersion
@@ -163,7 +164,6 @@ Partial Class ReportSerial
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.btnExport)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
@@ -763,6 +763,7 @@ Partial Class ReportSerial
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -801,13 +802,6 @@ Partial Class ReportSerial
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtSoftWareName As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
-    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Column14 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -822,6 +816,12 @@ Partial Class ReportSerial
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Column11 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
+    Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
 End Class

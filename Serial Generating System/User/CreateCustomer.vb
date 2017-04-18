@@ -122,8 +122,6 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub Create_Customer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Dim close As New CheckConnectUser
-        close.sqlCloseConnection()
         Application.Exit()
     End Sub
 
