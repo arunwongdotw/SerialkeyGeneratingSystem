@@ -345,7 +345,7 @@ Public Class ReportSoftware
         Me.Hide()
     End Sub
 
-    Private Sub btnExport_Click(sender As Object, e As EventArgs)
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Title = "Save Excel File"
         SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
@@ -359,13 +359,34 @@ Public Class ReportSoftware
         Dim i, j As Integer
         xls.Workbooks.Add()
         sheet = xls.ActiveWorkbook.ActiveSheet
-        For j = 1 To dgvSearchProduct.ColumnCount - 1
-            sheet.Cells(1, j) = dgvSearchProduct.Columns(j).HeaderText
+        For j = 7 To dgvSearchProduct.ColumnCount - 1
+            If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                sheet.Cells(1, j - 6) = "ออปชันควบคุมคุณภาพ"
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                sheet.Cells(1, j - 6) = "ออปชันการจัดการโรงงาน"
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("thai")) Then
+                sheet.Cells(1, j - 6) = "ภาษาไทย"
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("eng")) Then
+                sheet.Cells(1, j - 6) = "ภาษาอังกฤษ"
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("china")) Then
+                sheet.Cells(1, j - 6) = "ภาษาจีน"
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("japan")) Then
+                sheet.Cells(1, j - 6) = "ภาษาญี่ปุ่น"
+            Else
+                sheet.Cells(1, j - 6) = dgvSearchProduct.Columns(j).HeaderText
+            End If
+            sheet.Cells(1, j - 6).HorizontalAlignment = 3
         Next
-
         For i = 1 To dgvSearchProduct.RowCount
-            For j = 1 To dgvSearchProduct.ColumnCount - 1
-                sheet.Cells(i + 1, j) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
+            For j = 7 To dgvSearchProduct.ColumnCount - 1
+                If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
+                    sheet.Cells(i + 1, j - 6) = "มี"
+                ElseIf (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
+                    sheet.Cells(i + 1, j - 6) = "ไม่มี"
+                Else
+                    sheet.Cells(i + 1, j - 6) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
+                End If
+                sheet.Cells(i + 1, j - 6).HorizontalAlignment = 3
             Next
         Next
         'save the WorkBook to a file and exit Excel

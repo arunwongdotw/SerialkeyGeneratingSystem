@@ -553,7 +553,7 @@ Public Class ReportSerial
         Return False
     End Function
 
-    Private Sub btnExport_Click(sender As Object, e As EventArgs)
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
         Dim SaveFileDialog1 As New SaveFileDialog
         SaveFileDialog1.Title = "Save Excel File"
         SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
@@ -579,7 +579,19 @@ Public Class ReportSerial
         Next
         For i = 1 To dgvSerialKey.RowCount
             For j = 1 To dgvSerialKey.ColumnCount - 1
-                sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
+                If (dgvSerialKey.Rows(i - 1).Cells(j).Value Is Nothing) Then
+                    sheet.Cells(i + 1, j) = ""
+                Else
+                    If (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("xxxx")) Then
+                        sheet.Cells(i + 1, j) = "ไม่จำกัด"
+                    ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
+                        sheet.Cells(i + 1, j) = "มี"
+                    ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
+                        sheet.Cells(i + 1, j) = "ไม่มี"
+                    Else
+                        sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
+                    End If
+                End If
                 sheet.Cells(i + 1, j).HorizontalAlignment = 3
             Next
         Next

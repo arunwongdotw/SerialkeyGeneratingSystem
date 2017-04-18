@@ -45,6 +45,8 @@ Partial Class ReportSerial
         Me.chbEnglish = New System.Windows.Forms.CheckBox()
         Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
@@ -64,7 +66,6 @@ Partial Class ReportSerial
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -96,14 +97,13 @@ Partial Class ReportSerial
         Me.lblOrderฆales = New System.Windows.Forms.Label()
         Me.txtSEQ = New System.Windows.Forms.TextBox()
         Me.chbUnlimit = New System.Windows.Forms.CheckBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblVersion
@@ -176,6 +176,28 @@ Partial Class ReportSerial
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Orange
+        Me.Panel4.Controls.Add(Me.btnLogout)
+        Me.Panel4.Location = New System.Drawing.Point(0, 602)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(270, 100)
+        Me.Panel4.TabIndex = 139
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.White
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogout.TabIndex = 22
+        Me.btnLogout.Text = "ออกจากระบบ"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'btnExport
         '
@@ -349,19 +371,6 @@ Partial Class ReportSerial
         Me.Column12.Name = "Column12"
         Me.Column12.ReadOnly = True
         Me.Column12.Width = 50
-        '
-        'btnLogout
-        '
-        Me.btnLogout.BackColor = System.Drawing.Color.White
-        Me.btnLogout.FlatAppearance.BorderSize = 0
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogout.TabIndex = 22
-        Me.btnLogout.Text = "ออกจากระบบ"
-        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'btnClear
         '
@@ -733,15 +742,6 @@ Partial Class ReportSerial
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Orange
-        Me.Panel4.Controls.Add(Me.btnLogout)
-        Me.Panel4.Location = New System.Drawing.Point(0, 602)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(270, 100)
-        Me.Panel4.TabIndex = 139
-        '
         'ReportSerial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -754,6 +754,7 @@ Partial Class ReportSerial
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "รายงานข้อมูลซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSerialKey, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -762,7 +763,6 @@ Partial Class ReportSerial
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

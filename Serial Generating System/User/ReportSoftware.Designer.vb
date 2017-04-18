@@ -41,10 +41,11 @@ Partial Class ReportSoftware
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.chbWarehouseManagement = New System.Windows.Forms.CheckBox()
@@ -65,14 +66,14 @@ Partial Class ReportSoftware
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnHeader
@@ -108,6 +109,7 @@ Partial Class ReportSoftware
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnExport)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
@@ -121,6 +123,28 @@ Partial Class ReportSoftware
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Orange
+        Me.Panel4.Controls.Add(Me.btnLogout)
+        Me.Panel4.Location = New System.Drawing.Point(0, 602)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(270, 100)
+        Me.Panel4.TabIndex = 125
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.White
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogout.TabIndex = 12
+        Me.btnLogout.Text = "ออกจากระบบ"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'pbAccountInfo
         '
@@ -158,19 +182,6 @@ Partial Class ReportSoftware
         Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'btnLogout
-        '
-        Me.btnLogout.BackColor = System.Drawing.Color.White
-        Me.btnLogout.FlatAppearance.BorderSize = 0
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogout.TabIndex = 12
-        Me.btnLogout.Text = "ออกจากระบบ"
-        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -405,14 +416,18 @@ Partial Class ReportSoftware
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
-        'Panel4
+        'btnExport
         '
-        Me.Panel4.BackColor = System.Drawing.Color.Orange
-        Me.Panel4.Controls.Add(Me.btnLogout)
-        Me.Panel4.Location = New System.Drawing.Point(0, 602)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(270, 100)
-        Me.Panel4.TabIndex = 125
+        Me.btnExport.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnExport.FlatAppearance.BorderSize = 0
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.Location = New System.Drawing.Point(1022, 382)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(129, 41)
+        Me.btnExport.TabIndex = 126
+        Me.btnExport.Text = "นำออก"
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'ReportSoftware
         '
@@ -427,6 +442,7 @@ Partial Class ReportSoftware
         Me.Text = "รายงานข้อมูลซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -434,7 +450,6 @@ Partial Class ReportSoftware
         Me.Panel3.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -466,4 +481,5 @@ Partial Class ReportSoftware
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents btnExport As System.Windows.Forms.Button
 End Class
