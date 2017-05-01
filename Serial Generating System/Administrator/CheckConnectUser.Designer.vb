@@ -32,31 +32,28 @@ Partial Class CheckConnectUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheckConnectUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnCheck = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.txtConnection = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvConnection = New System.Windows.Forms.DataGridView()
+        Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.seq = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.del = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.tvAdminMenu = New System.Windows.Forms.TreeView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -68,12 +65,10 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.btnHeader)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtConnection)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.dgvConnection)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -81,13 +76,35 @@ Partial Class CheckConnectUser
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel4.Controls.Add(Me.btnLogOut)
+        Me.Panel4.Location = New System.Drawing.Point(0, 602)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(270, 100)
+        Me.Panel4.TabIndex = 127
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 1
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = False
+        '
         'btnCheck
         '
-        Me.btnCheck.Location = New System.Drawing.Point(845, 619)
+        Me.btnCheck.Location = New System.Drawing.Point(899, 641)
         Me.btnCheck.Name = "btnCheck"
         Me.btnCheck.Size = New System.Drawing.Size(75, 23)
         Me.btnCheck.TabIndex = 102
-        Me.btnCheck.Text = "Check"
+        Me.btnCheck.Text = "ตรวจสอบ"
         Me.btnCheck.UseVisualStyleBackColor = True
         '
         'pbAccountInfo
@@ -121,7 +138,7 @@ Partial Class CheckConnectUser
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label5.Location = New System.Drawing.Point(365, 86)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(250, 26)
+        Me.Label5.Size = New System.Drawing.Size(259, 27)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "ผู้ใช้งานระบบที่กำลังเชื่อมต่อในขณะนี้"
         '
@@ -142,40 +159,16 @@ Partial Class CheckConnectUser
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1188, 647)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 26)
-        Me.Label4.TabIndex = 23
-        Me.Label4.Text = "คน"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1188, 613)
+        Me.Label3.Location = New System.Drawing.Point(1258, 632)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 26)
+        Me.Label3.Size = New System.Drawing.Size(30, 27)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnLogOut
-        '
-        Me.btnLogOut.BackColor = System.Drawing.Color.White
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 1
-        Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'txtConnection
         '
@@ -203,23 +196,12 @@ Partial Class CheckConnectUser
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(934, 647)
+        Me.Label2.Location = New System.Drawing.Point(988, 636)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(140, 26)
+        Me.Label2.Size = New System.Drawing.Size(140, 27)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "จำนวนผู้ใช้งานขณะนี้"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(926, 613)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 26)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "จำนวนผู้ใช้งานทั้งหมด"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'dgvConnection
         '
@@ -232,50 +214,12 @@ Partial Class CheckConnectUser
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvConnection.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvConnection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConnection.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id, Me.del})
-        Me.dgvConnection.Location = New System.Drawing.Point(370, 127)
+        Me.dgvConnection.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id})
+        Me.dgvConnection.Location = New System.Drawing.Point(287, 127)
         Me.dgvConnection.Name = "dgvConnection"
-        Me.dgvConnection.Size = New System.Drawing.Size(848, 483)
+        Me.dgvConnection.Size = New System.Drawing.Size(1012, 483)
         Me.dgvConnection.TabIndex = 11
         Me.dgvConnection.TabStop = False
-        '
-        'seq
-        '
-        Me.seq.HeaderText = "ลำดับที่"
-        Me.seq.Name = "seq"
-        Me.seq.Width = 50
-        '
-        'username
-        '
-        Me.username.HeaderText = "ชื่ออุปกรณ์"
-        Me.username.Name = "username"
-        Me.username.Width = 125
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ชื่อผู้ใช้"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 200
-        '
-        'password
-        '
-        Me.password.HeaderText = "ไอพีแอดแดรส"
-        Me.password.Name = "password"
-        Me.password.Width = 200
-        '
-        'Emp_id
-        '
-        Me.Emp_id.HeaderText = "แมคแอดแดรส"
-        Me.Emp_id.Name = "Emp_id"
-        Me.Emp_id.Width = 200
-        '
-        'del
-        '
-        Me.del.HeaderText = "ลบ"
-        Me.del.Name = "del"
-        Me.del.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.del.Width = 30
         '
         'tvAdminMenu
         '
@@ -306,14 +250,35 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
-        'Panel4
+        'seq
         '
-        Me.Panel4.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Panel4.Controls.Add(Me.btnLogOut)
-        Me.Panel4.Location = New System.Drawing.Point(0, 602)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(270, 100)
-        Me.Panel4.TabIndex = 127
+        Me.seq.HeaderText = "ลำดับที่"
+        Me.seq.Name = "seq"
+        Me.seq.Width = 80
+        '
+        'username
+        '
+        Me.username.HeaderText = "ชื่ออุปกรณ์"
+        Me.username.Name = "username"
+        Me.username.Width = 200
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ชื่อผู้ใช้"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 200
+        '
+        'password
+        '
+        Me.password.HeaderText = "ไอพีแอดแดรส"
+        Me.password.Name = "password"
+        Me.password.Width = 200
+        '
+        'Emp_id
+        '
+        Me.Emp_id.HeaderText = "แมคแอดแดรส"
+        Me.Emp_id.Name = "Emp_id"
+        Me.Emp_id.Width = 200
         '
         'CheckConnectUser
         '
@@ -328,9 +293,9 @@ Partial Class CheckConnectUser
         Me.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvConnection, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -338,22 +303,19 @@ Partial Class CheckConnectUser
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents dgvConnection As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtConnection As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents seq As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents username As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents password As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Emp_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents del As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnCheck As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents seq As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents username As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents password As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Emp_id As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
