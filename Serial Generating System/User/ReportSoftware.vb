@@ -346,65 +346,71 @@ Public Class ReportSoftware
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Dim SaveFileDialog1 As New SaveFileDialog
-        SaveFileDialog1.Title = "Save Excel File"
-        SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
-        SaveFileDialog1.ShowDialog()
-        If SaveFileDialog1.FileName = "" Then
-            Exit Sub
-        End If
-        'create an Excel WorkBook
-        Dim xls As New Excel.Application
-        Dim sheet As Excel.Worksheet
-        Dim i, j As Integer
-        xls.Workbooks.Add()
-        sheet = xls.ActiveWorkbook.ActiveSheet
-        For j = 7 To dgvSearchProduct.ColumnCount - 1
-            If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
-                sheet.Cells(1, j - 6) = "ออปชันควบคุมคุณภาพ"
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
-                sheet.Cells(1, j - 6) = "ออปชันการจัดการโรงงาน"
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("thai")) Then
-                sheet.Cells(1, j - 6) = "ภาษาไทย"
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("eng")) Then
-                sheet.Cells(1, j - 6) = "ภาษาอังกฤษ"
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("china")) Then
-                sheet.Cells(1, j - 6) = "ภาษาจีน"
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("japan")) Then
-                sheet.Cells(1, j - 6) = "ภาษาญี่ปุ่น"
-            Else
-                sheet.Cells(1, j - 6) = dgvSearchProduct.Columns(j).HeaderText
+        If isPermission("per_print") Then
+            Dim SaveFileDialog1 As New SaveFileDialog
+            SaveFileDialog1.Title = "Save Excel File"
+            SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+            SaveFileDialog1.ShowDialog()
+            If SaveFileDialog1.FileName = "" Then
+                Exit Sub
             End If
-            sheet.Cells(1, j - 6).HorizontalAlignment = 3
-            If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
-                sheet.Cells(1, j - 6).ColumnWidth = 20
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
-                sheet.Cells(1, j - 6).ColumnWidth = 20
-            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ชื่อผลิตภัณฑ์")) Then
-                sheet.Cells(1, j - 6).ColumnWidth = 40
-            Else
-                sheet.Cells(1, j - 6).ColumnWidth = 15
-            End If
-        Next
-        For i = 1 To dgvSearchProduct.RowCount
+            'create an Excel WorkBook
+            Dim xls As New Excel.Application
+            Dim sheet As Excel.Worksheet
+            Dim i, j As Integer
+            xls.Workbooks.Add()
+            sheet = xls.ActiveWorkbook.ActiveSheet
             For j = 7 To dgvSearchProduct.ColumnCount - 1
-                If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
-                    If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่ขายได้")) Then
-                        sheet.Cells(i + 1, j - 6) = "1"
-                    Else
-                        sheet.Cells(i + 1, j - 6) = "มี"
-                    End If
-                ElseIf (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
-                    sheet.Cells(i + 1, j - 6) = "ไม่มี"
+                If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                    sheet.Cells(1, j - 6) = "ออปชันควบคุมคุณภาพ"
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                    sheet.Cells(1, j - 6) = "ออปชันการจัดการโรงงาน"
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("thai")) Then
+                    sheet.Cells(1, j - 6) = "ภาษาไทย"
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("eng")) Then
+                    sheet.Cells(1, j - 6) = "ภาษาอังกฤษ"
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("china")) Then
+                    sheet.Cells(1, j - 6) = "ภาษาจีน"
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("japan")) Then
+                    sheet.Cells(1, j - 6) = "ภาษาญี่ปุ่น"
                 Else
-                    sheet.Cells(i + 1, j - 6) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
+                    sheet.Cells(1, j - 6) = dgvSearchProduct.Columns(j).HeaderText
                 End If
-                sheet.Cells(i + 1, j - 6).HorizontalAlignment = 3
+                sheet.Cells(1, j - 6).HorizontalAlignment = 3
+                If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                    sheet.Cells(1, j - 6).ColumnWidth = 20
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                    sheet.Cells(1, j - 6).ColumnWidth = 20
+                ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ชื่อผลิตภัณฑ์")) Then
+                    sheet.Cells(1, j - 6).ColumnWidth = 40
+                Else
+                    sheet.Cells(1, j - 6).ColumnWidth = 15
+                End If
             Next
-        Next
-        'save the WorkBook to a file and exit Excel
-        xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
-        xls.Workbooks.Close()
-        xls.Quit()
+            For i = 1 To dgvSearchProduct.RowCount
+                For j = 7 To dgvSearchProduct.ColumnCount - 1
+                    If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
+                        If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่ขายได้")) Then
+                            sheet.Cells(i + 1, j - 6) = "1"
+                        Else
+                            sheet.Cells(i + 1, j - 6) = "มี"
+                        End If
+                    ElseIf (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
+                        sheet.Cells(i + 1, j - 6) = "ไม่มี"
+                    Else
+                        sheet.Cells(i + 1, j - 6) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
+                    End If
+                    sheet.Cells(i + 1, j - 6).HorizontalAlignment = 3
+                Next
+            Next
+            'save the WorkBook to a file and exit Excel
+            xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+            xls.Workbooks.Close()
+            xls.Quit()
+        Else
+            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+        End If
+
+
     End Sub
 End Class

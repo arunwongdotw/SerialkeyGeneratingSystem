@@ -435,33 +435,38 @@ Public Class ReportCustomer
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Dim SaveFileDialog1 As New SaveFileDialog
-        SaveFileDialog1.Title = "Save Excel File"
-        SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
-        SaveFileDialog1.ShowDialog()
-        If SaveFileDialog1.FileName = "" Then
-            Exit Sub
-        End If
-        'create an Excel WorkBook
-        Dim xls As New Excel.Application
-        Dim sheet As Excel.Worksheet
-        Dim i, j As Integer
-        xls.Workbooks.Add()
-        sheet = xls.ActiveWorkbook.ActiveSheet
-        For j = 1 To dgvSearchCus.ColumnCount - 1
-            sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
-            sheet.Cells(1, j).HorizontalAlignment = 3
-            sheet.Cells(1, j).ColumnWidth = 15
-        Next
-        For i = 1 To dgvSearchCus.RowCount
+        If isPermission("per_print") Then
+            Dim SaveFileDialog1 As New SaveFileDialog
+            SaveFileDialog1.Title = "Save Excel File"
+            SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+            SaveFileDialog1.ShowDialog()
+            If SaveFileDialog1.FileName = "" Then
+                Exit Sub
+            End If
+            'create an Excel WorkBook
+            Dim xls As New Excel.Application
+            Dim sheet As Excel.Worksheet
+            Dim i, j As Integer
+            xls.Workbooks.Add()
+            sheet = xls.ActiveWorkbook.ActiveSheet
             For j = 1 To dgvSearchCus.ColumnCount - 1
-                sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
-                sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
+                sheet.Cells(1, j).HorizontalAlignment = 3
+                sheet.Cells(1, j).ColumnWidth = 15
             Next
-        Next
-        'save the WorkBook to a file and exit Excel
-        xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
-        xls.Workbooks.Close()
-        xls.Quit()
+            For i = 1 To dgvSearchCus.RowCount
+                For j = 1 To dgvSearchCus.ColumnCount - 1
+                    sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
+                    sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                Next
+            Next
+            'save the WorkBook to a file and exit Excel
+            xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+            xls.Workbooks.Close()
+            xls.Quit()
+        Else
+            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+        End If
+
     End Sub
 End Class

@@ -94,6 +94,7 @@ Public Class CheckConnectUser
             .Columns("emp_id").HeaderCell.Value = "รหัสพนักงาน"
             .Columns("computer_name").HeaderCell.Value = "ชื่อเครื่อง"
             .Columns("mac_address").HeaderCell.Value = "รหัสเครื่อง"
+            .Columns("create_date").HeaderCell.Value = "วันที่ใช้งาน"
 
             .Columns("emp_id").ReadOnly = True
             .Columns("computer_name").ReadOnly = True
@@ -101,8 +102,9 @@ Public Class CheckConnectUser
 
             .Columns("ลำดับ").Width = 60
             .Columns("emp_id").Width = 120
-            .Columns("computer_name").Width = 120
-            .Columns("mac_address").Width = 120
+            .Columns("computer_name").Width = 200
+            .Columns("mac_address").Width = 200
+            .Columns("create_date").Width = 200
 
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter

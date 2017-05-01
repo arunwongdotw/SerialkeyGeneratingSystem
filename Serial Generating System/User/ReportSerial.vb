@@ -550,66 +550,71 @@ Public Class ReportSerial
     End Function
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Dim SaveFileDialog1 As New SaveFileDialog
-        SaveFileDialog1.Title = "Save Excel File"
-        SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
-        SaveFileDialog1.ShowDialog()
-        If SaveFileDialog1.FileName = "" Then
-            Exit Sub
-        End If
-        'create an Excel WorkBook
-        Dim xls As New Excel.Application
-        Dim sheet As Excel.Worksheet
-        Dim i, j As Integer
-        xls.Workbooks.Add()
-        sheet = xls.ActiveWorkbook.ActiveSheet
-        For j = 1 To dgvSerialKey.ColumnCount - 1
-            If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
-                sheet.Cells(1, j) = "ออปชันควบคุมคุณภาพ"
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
-                sheet.Cells(1, j) = "ออปชันการจัดการโรงงาน"
-            Else
-                sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
+        If isPermission("per_print") Then
+            Dim SaveFileDialog1 As New SaveFileDialog
+            SaveFileDialog1.Title = "Save Excel File"
+            SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+            SaveFileDialog1.ShowDialog()
+            If SaveFileDialog1.FileName = "" Then
+                Exit Sub
             End If
-            sheet.Cells(1, j).HorizontalAlignment = 3
-            If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์")) Then
-                sheet.Cells(1, j).ColumnWidth = 60
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ข้อมูลซีเรียลคีย์")) Then
-                sheet.Cells(1, j).ColumnWidth = 60
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์ที่ผ่านการเข้ารหัส")) Then
-                sheet.Cells(1, j).ColumnWidth = 80
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ชื่อซอฟต์แวร์")) Then
-                sheet.Cells(1, j).ColumnWidth = 40
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
-                sheet.Cells(1, j).ColumnWidth = 20
-            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
-                sheet.Cells(1, j).ColumnWidth = 20
-            Else
-                sheet.Cells(1, j).ColumnWidth = 15
-            End If
-
-        Next
-        For i = 1 To dgvSerialKey.RowCount
+            'create an Excel WorkBook
+            Dim xls As New Excel.Application
+            Dim sheet As Excel.Worksheet
+            Dim i, j As Integer
+            xls.Workbooks.Add()
+            sheet = xls.ActiveWorkbook.ActiveSheet
             For j = 1 To dgvSerialKey.ColumnCount - 1
-                If (dgvSerialKey.Rows(i - 1).Cells(j).Value Is Nothing) Then
-                    sheet.Cells(i + 1, j) = ""
+                If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                    sheet.Cells(1, j) = "ออปชันควบคุมคุณภาพ"
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                    sheet.Cells(1, j) = "ออปชันการจัดการโรงงาน"
                 Else
-                    If (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("xxxx")) Then
-                        sheet.Cells(i + 1, j) = "ไม่จำกัด"
-                    ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
-                        sheet.Cells(i + 1, j) = "มี"
-                    ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
-                        sheet.Cells(i + 1, j) = "ไม่มี"
-                    Else
-                        sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
-                    End If
+                    sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
                 End If
-                sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                sheet.Cells(1, j).HorizontalAlignment = 3
+                If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์")) Then
+                    sheet.Cells(1, j).ColumnWidth = 60
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ข้อมูลซีเรียลคีย์")) Then
+                    sheet.Cells(1, j).ColumnWidth = 60
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์ที่ผ่านการเข้ารหัส")) Then
+                    sheet.Cells(1, j).ColumnWidth = 80
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ชื่อซอฟต์แวร์")) Then
+                    sheet.Cells(1, j).ColumnWidth = 40
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                    sheet.Cells(1, j).ColumnWidth = 20
+                ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                    sheet.Cells(1, j).ColumnWidth = 20
+                Else
+                    sheet.Cells(1, j).ColumnWidth = 15
+                End If
+
             Next
-        Next
-        'save the WorkBook to a file and exit Excel
-        xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
-        xls.Workbooks.Close()
-        xls.Quit()
+            For i = 1 To dgvSerialKey.RowCount
+                For j = 1 To dgvSerialKey.ColumnCount - 1
+                    If (dgvSerialKey.Rows(i - 1).Cells(j).Value Is Nothing) Then
+                        sheet.Cells(i + 1, j) = ""
+                    Else
+                        If (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("xxxx")) Then
+                            sheet.Cells(i + 1, j) = "ไม่จำกัด"
+                        ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
+                            sheet.Cells(i + 1, j) = "มี"
+                        ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
+                            sheet.Cells(i + 1, j) = "ไม่มี"
+                        Else
+                            sheet.Cells(i + 1, j) = dgvSerialKey.Rows(i - 1).Cells(j).Value
+                        End If
+                    End If
+                    sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                Next
+            Next
+            'save the WorkBook to a file and exit Excel
+            xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+            xls.Workbooks.Close()
+            xls.Quit()
+        Else
+            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+        End If
+
     End Sub
 End Class
