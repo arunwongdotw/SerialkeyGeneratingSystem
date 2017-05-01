@@ -170,7 +170,7 @@ Partial Class CheckConnectUser
         Me.txtConnection.BackColor = System.Drawing.Color.White
         Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConnection.Location = New System.Drawing.Point(1090, 647)
+        Me.txtConnection.Location = New System.Drawing.Point(1149, 635)
         Me.txtConnection.Name = "txtConnection"
         Me.txtConnection.Size = New System.Drawing.Size(92, 29)
         Me.txtConnection.TabIndex = 15
