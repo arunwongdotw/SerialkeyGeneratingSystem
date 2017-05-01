@@ -17,10 +17,10 @@ Public Class ReportSoftware
             dgvSearchProduct.DataSource = Table
             addCustomColumns()
             setHeaderColumns()
-            Table.Columns.Add("ลำดับ")
-            dgvSearchProduct.Columns("ลำดับ").DisplayIndex = 3
-            dgvSearchProduct.Columns("ลำดับ").ReadOnly = True
-            dgvSearchProduct.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            Table.Columns.Add("ลำดับที่ขายได้")
+            dgvSearchProduct.Columns("ลำดับที่ขายได้").DisplayIndex = 3
+            dgvSearchProduct.Columns("ลำดับที่ขายได้").ReadOnly = True
+            dgvSearchProduct.Columns("ลำดับที่ขายได้").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
             randerColorRow()
             setCheckBox()
@@ -111,7 +111,7 @@ Public Class ReportSoftware
 
     Private Sub genRowNumber()
         For i = 0 To dgvSearchProduct.Rows.Count - 1
-            dgvSearchProduct.Rows(i).Cells("ลำดับ").Value = i + 1
+            dgvSearchProduct.Rows(i).Cells("ลำดับที่ขายได้").Value = i + 1
         Next
     End Sub
 
@@ -376,11 +376,24 @@ Public Class ReportSoftware
                 sheet.Cells(1, j - 6) = dgvSearchProduct.Columns(j).HeaderText
             End If
             sheet.Cells(1, j - 6).HorizontalAlignment = 3
+            If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                sheet.Cells(1, j - 6).ColumnWidth = 20
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                sheet.Cells(1, j - 6).ColumnWidth = 20
+            ElseIf (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ชื่อผลิตภัณฑ์")) Then
+                sheet.Cells(1, j - 6).ColumnWidth = 40
+            Else
+                sheet.Cells(1, j - 6).ColumnWidth = 15
+            End If
         Next
         For i = 1 To dgvSearchProduct.RowCount
             For j = 7 To dgvSearchProduct.ColumnCount - 1
                 If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
-                    sheet.Cells(i + 1, j - 6) = "มี"
+                    If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่ขายได้")) Then
+                        sheet.Cells(i + 1, j - 6) = "1"
+                    Else
+                        sheet.Cells(i + 1, j - 6) = "มี"
+                    End If
                 ElseIf (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
                     sheet.Cells(i + 1, j - 6) = "ไม่มี"
                 Else

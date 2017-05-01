@@ -451,6 +451,7 @@ Public Class ReportCustomer
         For j = 1 To dgvSearchCus.ColumnCount - 1
             sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
             sheet.Cells(1, j).HorizontalAlignment = 3
+            sheet.Cells(1, j).ColumnWidth = 15
         Next
         For i = 1 To dgvSearchCus.RowCount
             For j = 1 To dgvSearchCus.ColumnCount - 1

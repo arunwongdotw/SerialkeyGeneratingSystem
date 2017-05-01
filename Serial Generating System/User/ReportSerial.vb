@@ -572,6 +572,22 @@ Public Class ReportSerial
                 sheet.Cells(1, j) = dgvSerialKey.Columns(j).HeaderText
             End If
             sheet.Cells(1, j).HorizontalAlignment = 3
+            If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์")) Then
+                sheet.Cells(1, j).ColumnWidth = 60
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ข้อมูลซีเรียลคีย์")) Then
+                sheet.Cells(1, j).ColumnWidth = 60
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ซีเรียลคีย์ที่ผ่านการเข้ารหัส")) Then
+                sheet.Cells(1, j).ColumnWidth = 80
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ชื่อซอฟต์แวร์")) Then
+                sheet.Cells(1, j).ColumnWidth = 40
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("QualityControl")) Then
+                sheet.Cells(1, j).ColumnWidth = 20
+            ElseIf (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("WarehouseManagement")) Then
+                sheet.Cells(1, j).ColumnWidth = 20
+            Else
+                sheet.Cells(1, j).ColumnWidth = 15
+            End If
+
         Next
         For i = 1 To dgvSerialKey.RowCount
             For j = 1 To dgvSerialKey.ColumnCount - 1
