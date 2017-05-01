@@ -16,48 +16,16 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Visible = False
-        Dim s = New WelcomeScreen
-        s.Show()
-        System.Threading.Thread.Sleep(1000)
-        s.Close()
-        Me.Visible = True
-        Me.txtUsername.TextAlign = HorizontalAlignment.Center
-        'txtUsername.ForeColor = Color.Gray
-        txtUsername.ForeColor = Color.Black
-        txtUsername.Text = username
-        Me.txtPassword.TextAlign = HorizontalAlignment.Center
-        'txtPassword.ForeColor = Color.Gray
-        txtPassword.ForeColor = Color.Black
-        txtPassword.Text = password
-        txtUsername.Select()
+        
     End Sub
 
-    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            Me.LoadData()
-        End If
-    End Sub
+  
 
-    Private Sub txtUsername_empty(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
-        If Not txtUsername.ForeColor = Color.Black Or txtUsername.Text = String.Empty Then
-            txtUsername.ForeColor = Color.Gray
-            txtUsername.Text = username
-        End If
-    End Sub
+   
 
-    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            Me.LoadData()
-        End If
-    End Sub
+   
 
-    Private Sub txtPassword_empty(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
-        If Not txtPassword.ForeColor = Color.Black Or txtPassword.Text = String.Empty Then
-            txtPassword.ForeColor = Color.Gray
-            txtPassword.Text = password
-        End If
-    End Sub
+   
 
     Private Sub txtUsername_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
         If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
@@ -73,18 +41,7 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub txtUser_tab(sender As Object, e As EventArgs) Handles txtUsername.KeyUp
-        If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
-            txtUsername.Clear()
-            txtUsername.ForeColor = Color.Black
-        End If
-    End Sub
-    Private Sub txtPass_tab(sender As Object, e As EventArgs) Handles txtPassword.KeyUp
-        If txtPassword.Text = password And txtPassword.ForeColor = Color.Gray Then
-            txtPassword.Clear()
-            txtPassword.ForeColor = Color.Black
-        End If
-    End Sub
+   
     Private Sub LoadData()
         user = txtUsername.Text
         pass = txtPassword.Text
@@ -134,7 +91,7 @@ Public Class Login
         Dim computerHostname = System.Net.Dns.GetHostName
 
 
-        Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" + id + "','" + computerHostname + "','" + physicalAddress + "',1 , '" & DateTime.Now.ToString & "');select scope_identity()"
+        Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" & id & "','" & computerHostname + "','" & physicalAddress & "',1 , '" & DateTime.Now.ToString & "');select scope_identity()"
         Dim sqlread As SqlDataReader = con.query(sql)
         If sqlread.Read Then
             idConnection = sqlread.GetValue(0)
