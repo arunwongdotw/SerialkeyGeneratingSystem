@@ -29,8 +29,6 @@ Partial Class Login
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLoginUsername = New System.Windows.Forms.Button()
         Me.btnLoginPassword = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -42,7 +40,7 @@ Partial Class Login
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(61, 295)
+        Me.btnLogin.Location = New System.Drawing.Point(50, 418)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(167, 35)
@@ -59,7 +57,7 @@ Partial Class Login
         Me.bntClose.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bntClose.ForeColor = System.Drawing.Color.White
         Me.bntClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bntClose.Location = New System.Drawing.Point(239, 295)
+        Me.bntClose.Location = New System.Drawing.Point(225, 418)
         Me.bntClose.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.bntClose.Name = "bntClose"
         Me.bntClose.Size = New System.Drawing.Size(167, 35)
@@ -72,10 +70,10 @@ Partial Class Login
         Me.txtUsername.BackColor = System.Drawing.Color.White
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsername.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(149, 202)
+        Me.txtUsername.Location = New System.Drawing.Point(126, 301)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(257, 33)
+        Me.txtUsername.Size = New System.Drawing.Size(280, 33)
         Me.txtUsername.TabIndex = 1
         Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -84,11 +82,11 @@ Partial Class Login
         Me.txtPassword.BackColor = System.Drawing.Color.White
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Thai Sans Lite", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(149, 236)
+        Me.txtPassword.Location = New System.Drawing.Point(126, 361)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(257, 33)
+        Me.txtPassword.Size = New System.Drawing.Size(280, 33)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -99,7 +97,7 @@ Partial Class Login
         Me.btnLoginUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLoginUsername.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLoginUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnLoginUsername.Location = New System.Drawing.Point(61, 202)
+        Me.btnLoginUsername.Location = New System.Drawing.Point(38, 301)
         Me.btnLoginUsername.Name = "btnLoginUsername"
         Me.btnLoginUsername.Size = New System.Drawing.Size(93, 33)
         Me.btnLoginUsername.TabIndex = 5
@@ -115,7 +113,7 @@ Partial Class Login
         Me.btnLoginPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLoginPassword.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLoginPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnLoginPassword.Location = New System.Drawing.Point(61, 236)
+        Me.btnLoginPassword.Location = New System.Drawing.Point(38, 361)
         Me.btnLoginPassword.Name = "btnLoginPassword"
         Me.btnLoginPassword.Size = New System.Drawing.Size(93, 33)
         Me.btnLoginPassword.TabIndex = 6
@@ -124,26 +122,14 @@ Partial Class Login
         Me.btnLoginPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLoginPassword.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.LogoSKGS
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(137, 54)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(211, 117)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
-        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgBlurColor
+        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLoginVersion2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(468, 428)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(442, 549)
         Me.Controls.Add(Me.btnLoginPassword)
         Me.Controls.Add(Me.btnLoginUsername)
         Me.Controls.Add(Me.txtPassword)
@@ -158,7 +144,6 @@ Partial Class Login
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เข้าสู่ระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -169,6 +154,5 @@ Partial Class Login
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents btnLoginUsername As System.Windows.Forms.Button
     Friend WithEvents btnLoginPassword As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
