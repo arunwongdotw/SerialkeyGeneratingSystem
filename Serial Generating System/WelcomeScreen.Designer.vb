@@ -22,16 +22,26 @@ Partial Class WelcomeScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.SuspendLayout()
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(158, 361)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(423, 28)
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.ProgressBar1.TabIndex = 0
         '
         'WelcomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgBlurBlueNewNoLogo
+        Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgBlurBlueNewNoLogoVersion2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(742, 411)
+        Me.ClientSize = New System.Drawing.Size(744, 484)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ProgressBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -41,5 +51,6 @@ Partial Class WelcomeScreen
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
 
 End Class

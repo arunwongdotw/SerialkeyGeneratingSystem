@@ -130,8 +130,8 @@
   <data name="UserIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SKGSIconHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SKGSIconHeader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="incorrect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\incorrect1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SoftwareBoxIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SoftwareBoxIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +148,14 @@
   <data name="bgBlueCover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlueCover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="incorrect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\incorrect1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OfficerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OfficerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgBlurBlueNewNoLogoVersion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgBlurBlueNewNoLogoVersion21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,10 +163,13 @@
   <data name="bgBlurColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlurColor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SKGSIconHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SKGSIconHeader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bgGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgGrey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bgLoginVersion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgLoginVersion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

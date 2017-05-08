@@ -45,11 +45,6 @@ Partial Class CheckConnectUser
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvConnection = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
-        Me.seq = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Emp_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,7 +170,7 @@ Partial Class CheckConnectUser
         Me.txtConnection.BackColor = System.Drawing.Color.White
         Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConnection.Location = New System.Drawing.Point(1090, 647)
+        Me.txtConnection.Location = New System.Drawing.Point(1149, 635)
         Me.txtConnection.Name = "txtConnection"
         Me.txtConnection.Size = New System.Drawing.Size(92, 29)
         Me.txtConnection.TabIndex = 15
@@ -214,7 +209,6 @@ Partial Class CheckConnectUser
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvConnection.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvConnection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConnection.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.username, Me.Column1, Me.password, Me.Emp_id})
         Me.dgvConnection.Location = New System.Drawing.Point(287, 127)
         Me.dgvConnection.Name = "dgvConnection"
         Me.dgvConnection.Size = New System.Drawing.Size(1012, 483)
@@ -250,36 +244,6 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
-        'seq
-        '
-        Me.seq.HeaderText = "ลำดับที่"
-        Me.seq.Name = "seq"
-        Me.seq.Width = 80
-        '
-        'username
-        '
-        Me.username.HeaderText = "ชื่ออุปกรณ์"
-        Me.username.Name = "username"
-        Me.username.Width = 200
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ชื่อผู้ใช้"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 200
-        '
-        'password
-        '
-        Me.password.HeaderText = "ไอพีแอดแดรส"
-        Me.password.Name = "password"
-        Me.password.Width = 200
-        '
-        'Emp_id
-        '
-        Me.Emp_id.HeaderText = "แมคแอดแดรส"
-        Me.Emp_id.Name = "Emp_id"
-        Me.Emp_id.Width = 200
-        '
         'CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -313,9 +277,4 @@ Partial Class CheckConnectUser
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnCheck As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents seq As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents username As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents password As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Emp_id As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
