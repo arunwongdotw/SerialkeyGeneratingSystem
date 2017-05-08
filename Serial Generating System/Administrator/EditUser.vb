@@ -219,7 +219,7 @@ Public Class EditUser
         txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
         txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
-        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
+        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber")).ToString
         position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))

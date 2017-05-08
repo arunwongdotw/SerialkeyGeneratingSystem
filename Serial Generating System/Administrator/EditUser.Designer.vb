@@ -35,6 +35,7 @@ Partial Class EditUser
         Me.btnSave = New System.Windows.Forms.Button()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -83,8 +84,8 @@ Partial Class EditUser
         Me.pbAttachNewUserImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.ofdAttachNewUserImage = New System.Windows.Forms.OpenFileDialog()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -93,7 +94,6 @@ Partial Class EditUser
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.pbAttachNewUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogOut
@@ -188,6 +188,15 @@ Partial Class EditUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel6.Controls.Add(Me.btnLogOut)
+        Me.Panel6.Location = New System.Drawing.Point(0, 602)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(270, 100)
+        Me.Panel6.TabIndex = 134
         '
         'pbAccountInfo
         '
@@ -770,15 +779,6 @@ Partial Class EditUser
         '
         Me.ofdAttachNewUserImage.FileName = "AttachNewUserImage"
         '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Panel6.Controls.Add(Me.btnLogOut)
-        Me.Panel6.Location = New System.Drawing.Point(0, 602)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(270, 100)
-        Me.Panel6.TabIndex = 134
-        '
         'EditUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -791,6 +791,7 @@ Partial Class EditUser
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "แก้ไขบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -803,7 +804,6 @@ Partial Class EditUser
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.pbAttachNewUserImage, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
