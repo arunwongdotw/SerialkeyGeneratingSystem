@@ -377,6 +377,11 @@ Public Class EditUser
             Dim tn As TreeNode = Me.tvAdminMenu.SelectedNode
             If Not (tvAdminMenu.SelectedNode Is Nothing) Then
                 Select Case tn.Name
+                    Case "ndCreateUserAccount"
+                        Dim frm As New CreateUser()
+                        frm.Show()
+                        Me.clear()
+                        Me.Hide()
                     Case "ndFindUserAccount"
                         Dim frm As New SearchUser()
                         frm.Show()
