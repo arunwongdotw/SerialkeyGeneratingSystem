@@ -166,7 +166,8 @@ Public Class EditUser
         strquery &= " per_create = '" & perCreate & "' , "
         strquery &= " per_edit = '" & perEdit & "' , "
         strquery &= " per_delete = '" & perdelete & "', "
-        strquery &= " per_print = '" & perPrint & "' "
+        strquery &= " per_print = '" & perPrint & "', "
+        strquery &= " image_path = '" & pbAttachNewUserImage.ImageLocation & "' "
         strquery &= " where id = " & id
         If con.save(strquery) Then
             MsgBox("แก้ไขบัญชีผู้ใช้สำเร็จ")
@@ -204,7 +205,8 @@ Public Class EditUser
         strQuery &= "per_create,"
         strQuery &= "per_edit,"
         strQuery &= "per_delete,"
-        strQuery &= "per_print"
+        strQuery &= "per_print,"
+        strQuery &= "image_path"
         strQuery &= " from SGS.dbo.Employee "
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
@@ -219,7 +221,7 @@ Public Class EditUser
         txtLastName.Text = sqlReader.GetValue(sqlReader.GetOrdinal("lastname"))
         txtPassword.Text = sqlReader.GetValue(sqlReader.GetOrdinal("password"))
         txtMobileNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("mobilenumber"))
-        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber")).ToString
+        txtPhoneNumber.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phonenumber"))
         position = sqlReader.GetValue(sqlReader.GetOrdinal("position"))
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
@@ -227,6 +229,11 @@ Public Class EditUser
         perPrint = IIf(IsDBNull(sqlReader.GetValue(sqlReader.GetOrdinal("per_print"))), 0, 1)
         perEdit = sqlReader.GetValue(sqlReader.GetOrdinal("per_edit"))
         userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
+        pbAttachNewUserImage.ImageLocation = sqlReader.GetValue(sqlReader.GetOrdinal("image_path"))
+        If pbAttachNewUserImage.ImageLocation Is "" Then
+            pbAttachNewUserImage.Image = My.Resources.UserIcon
+        End If
+        pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
         txtUsername.Enabled = False
         con.close()
     End Sub
@@ -348,12 +355,24 @@ Public Class EditUser
     End Sub
 
     Private Sub btnAttachNewUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewUserImage.Click
+        Dim ImageName As String = txtFirstName.Text + "_" + txtLastName.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachNewUserImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachNewUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachNewUserImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachNewUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachNewUserImage.ImageLocation = ofdAttachNewUserImage.FileName
-            pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachNewUserImage.ImageLocation, ImagePath)
+                pbAttachNewUserImage.ImageLocation = ImagePath
+                pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachNewUserImage.ImageLocation, ImagePath)
+                pbAttachNewUserImage.ImageLocation = ImagePath
+                pbAttachNewUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachNewUserImage.ImageLocation = ImagePath
     End Sub
 
     Private Sub clear()

@@ -26,7 +26,7 @@ Public Class CreateCustomer
     Private Sub add()
         Dim strSQL As String
         strSQL = "insert into customer (corpname,corp_s_name,corpgroup,firstname,lastname,house_no,road,lane,subdistrict,district,province"
-        strSQL &= ",postalcode,email,phone,cellphone,corp_image) "
+        strSQL &= ",postalcode,email,phone,cellphone,corp_image_path) "
         strSQL &= "values ('" & Trim(txtCorpName.Text) & "',"
         strSQL &= "'" & Trim(txtCorp_s_Name.Text) & "',"
         strSQL &= "'" & Trim(txtCorpGroup.Text) & "',"
@@ -42,7 +42,7 @@ Public Class CreateCustomer
         strSQL &= "'" & Trim(txtEmail.Text) & "',"
         strSQL &= "'" & Trim(txtPhone.Text) & "',"
         strSQL &= "'" & Trim(txtcellphone.Text) & "',"
-        strSQL &= "'" & pbAttachCustomerImage.ImageLocation & "')"
+        strSQL &= "'" & Trim(pbAttachCustomerImage.ImageLocation) & "')"
         Dim sqlread As SqlDataReader = con.query(strSQL)
         If sqlread Is Nothing Then
             MsgBox("เพิ่มข้อมูลลูกค้าล้มเหลว")
@@ -467,11 +467,23 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
+        Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachCustomerImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachCustomerImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachCustomerImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachCustomerImage.ImageLocation = ofdAttachCustomerImage.FileName
-            pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
+                pbAttachCustomerImage.ImageLocation = ImagePath
+                pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
+                pbAttachCustomerImage.ImageLocation = ImagePath
+                pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachCustomerImage.ImageLocation = ImagePath
     End Sub
 End Class
