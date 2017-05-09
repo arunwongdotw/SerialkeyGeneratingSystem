@@ -12,12 +12,21 @@ Public Class searchCusOther
 
     End Sub
 
+    Private Sub randerColorRow()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            If i Mod 2 = 0 Then
+                dgvSearchCus.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
+    End Sub
+
     'Protected objCmd As New SqlCommand
 
 
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.GenerateColumn()
         Me.LoadData()
+        randerColorRow()
         'tvUserMenu.ExpandAll()
 
     End Sub
@@ -243,6 +252,17 @@ Public Class searchCusOther
             dgvSearchCus.Columns.Clear()
             GenerateColumn()
             dgvSearchCus.DataSource = dt
+            Dim col As New DataGridViewTextBoxColumn
+            col.HeaderText = "ลำดับ"
+            col.Name = "ลำดับ"
+            dgvSearchCus.Columns.Add(col)
+            dgvSearchCus.Columns("ลำดับ").DisplayIndex = 1
+            dgvSearchCus.Columns("ลำดับ").ReadOnly = True
+            dgvSearchCus.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ''End If
+            dgvSearchCus.Columns("id").Visible = False
+
+            genRowNumber()
             'End If
 
 
@@ -260,7 +280,11 @@ Public Class searchCusOther
         End Try
 
     End Sub
-
+    Private Sub genRowNumber()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            dgvSearchCus.Rows(i).Cells("ลำดับ").Value = i + 1
+        Next
+    End Sub
 
     
 
