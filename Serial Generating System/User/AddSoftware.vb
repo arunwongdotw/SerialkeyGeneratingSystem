@@ -300,21 +300,27 @@ Public Class AddSoftware
     Private Sub btnAttachProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachProductImage.Click
         Dim ImageName As String = txtProductName.Text + "_" + txtBrandName.Text
         Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
-        ofdAttachProductImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachProductImage.Filter = "Image Files(*.JPG)|*.JPG"
-        If ofdAttachProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
-            If System.IO.File.Exists(ImagePath) Then
-                System.IO.File.Delete(ImagePath)
-                System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
-                pbAttachProductImage.ImageLocation = ImagePath
-                pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
-            Else
-                System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
-                pbAttachProductImage.ImageLocation = ImagePath
-                pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+
+        If txtProductName.Text = "" Or txtBrandName.Text = "" Then
+            MsgBox("กรุณากรอกชื่อซอฟต์แวร์ และชื่อแบรนด์ให้เสร็จสิ้นก่อนเลือกรูปภาพ")
+            txtProductName.Select()
+        Else
+            ofdAttachProductImage.Title = "เลือกไฟล์รูปภาพ"
+            ofdAttachProductImage.Filter = "Image Files(*.JPG)|*.JPG"
+            If ofdAttachProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
+                If System.IO.File.Exists(ImagePath) Then
+                    System.IO.File.Delete(ImagePath)
+                    System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
+                    pbAttachProductImage.ImageLocation = ImagePath
+                    pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+                Else
+                    System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
+                    pbAttachProductImage.ImageLocation = ImagePath
+                    pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+                End If
             End If
+            pbAttachProductImage.ImageLocation = ImagePath
         End If
-        pbAttachProductImage.ImageLocation = ImagePath
     End Sub
 End Class

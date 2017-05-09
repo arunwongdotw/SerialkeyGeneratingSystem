@@ -340,24 +340,29 @@ Public Class CreateUser
     End Function
 
     Private Sub btnAttachUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachUserImage.Click
-        Dim ImageName As String = txtFirstName.Text + "_" + txtLastName.Text
+        Dim ImageName As String = txtUsername.Text + "_" + txtEmpID.Text
         Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
-        ofdAttachUserImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachUserImage.Filter = "Image Files(*.JPG)|*.JPG"
-        If ofdAttachUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            pbAttachUserImage.ImageLocation = ofdAttachUserImage.FileName
-            If System.IO.File.Exists(ImagePath) Then
-                System.IO.File.Delete(ImagePath)
-                System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
-                pbAttachUserImage.ImageLocation = ImagePath
-                pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
-            Else
-                System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
-                pbAttachUserImage.ImageLocation = ImagePath
-                pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+        If txtUsername.Text = "" Or txtEmpID.Text = "" Then
+            MsgBox("กรุณากรอกชื่อผู้ใช้ รหัสผ่าน และรหัสพนักงานให้เสร็จสิ้นก่อนเลือกรูปภาพ")
+            txtUsername.Select()
+        Else
+            ofdAttachUserImage.Title = "เลือกไฟล์รูปภาพ"
+            ofdAttachUserImage.Filter = "Image Files(*.JPG)|*.JPG"
+            If ofdAttachUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                pbAttachUserImage.ImageLocation = ofdAttachUserImage.FileName
+                If System.IO.File.Exists(ImagePath) Then
+                    System.IO.File.Delete(ImagePath)
+                    System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
+                    pbAttachUserImage.ImageLocation = ImagePath
+                    pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+                Else
+                    System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
+                    pbAttachUserImage.ImageLocation = ImagePath
+                    pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+                End If
             End If
+            pbAttachUserImage.ImageLocation = ImagePath
         End If
-        pbAttachUserImage.ImageLocation = ImagePath
     End Sub
 
     Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged

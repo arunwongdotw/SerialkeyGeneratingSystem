@@ -469,21 +469,27 @@ Public Class CreateCustomer
     Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
         Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
         Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
-        ofdAttachCustomerImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachCustomerImage.Filter = "Image Files(*.JPG)|*.JPG"
-        If ofdAttachCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            pbAttachCustomerImage.ImageLocation = ofdAttachCustomerImage.FileName
-            If System.IO.File.Exists(ImagePath) Then
-                System.IO.File.Delete(ImagePath)
-                System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
-                pbAttachCustomerImage.ImageLocation = ImagePath
-                pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
-            Else
-                System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
-                pbAttachCustomerImage.ImageLocation = ImagePath
-                pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+        If txtCorp_s_Name.Text = "" Or txtCorpGroup.Text = "" Then
+            MsgBox("กรุณากรอกชื่อย่อบริษัท และกลุ่มบริษัทให้เสร็จสิ้นก่อนการเลือกรูปภาพ")
+            txtCorpName.Select()
+        Else
+            ofdAttachCustomerImage.Title = "เลือกไฟล์รูปภาพ"
+            ofdAttachCustomerImage.Filter = "Image Files(*.JPG)|*.JPG"
+            If ofdAttachCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                pbAttachCustomerImage.ImageLocation = ofdAttachCustomerImage.FileName
+                If System.IO.File.Exists(ImagePath) Then
+                    System.IO.File.Delete(ImagePath)
+                    System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
+                    pbAttachCustomerImage.ImageLocation = ImagePath
+                    pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+                Else
+                    System.IO.File.Copy(pbAttachCustomerImage.ImageLocation, ImagePath)
+                    pbAttachCustomerImage.ImageLocation = ImagePath
+                    pbAttachCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+                End If
             End If
+            pbAttachCustomerImage.ImageLocation = ImagePath
         End If
-        pbAttachCustomerImage.ImageLocation = ImagePath
+
     End Sub
 End Class
