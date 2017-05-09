@@ -77,10 +77,10 @@ Public Class AddSoftware
         Else
             japan = 1
         End If
-        strSQL = "insert into product (product_name,product_image,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
+        strSQL = "insert into product (product_name,product_image_path,product_s_name,brand_name,brand_s_name,QualityControl,WarehouseManagement"
         strSQL &= ",thai,eng,china,japan,cost) "
         strSQL &= "values ('" & Trim(txtProductName.Text) & "',"
-        strSQL &= "'" & pbAttachProductImage.ImageLocation & "',"
+        strSQL &= "'" & Trim(pbAttachProductImage.ImageLocation) & "',"
         strSQL &= "'" & Trim(txtProduct_s_name.Text) & "',"
         strSQL &= "'" & Trim(txtBrandName.Text) & "',"
         strSQL &= "'" & Trim(txtBrand_s_name.Text) & "',"
@@ -298,11 +298,23 @@ Public Class AddSoftware
     'End Sub
 
     Private Sub btnAttachProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachProductImage.Click
+        Dim ImageName As String = txtProductName.Text + "_" + txtBrandName.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachProductImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachProductImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachProductImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachProductImage.ImageLocation = ofdAttachProductImage.FileName
-            pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
+                pbAttachProductImage.ImageLocation = ImagePath
+                pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachProductImage.ImageLocation, ImagePath)
+                pbAttachProductImage.ImageLocation = ImagePath
+                pbAttachProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachProductImage.ImageLocation = ImagePath
     End Sub
 End Class

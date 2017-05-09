@@ -27,7 +27,7 @@ Public Class EditSoftware
     End Sub
 
     Private Sub loadData()
-        Dim strQuery = "select id, product_name, product_s_name, brand_name, brand_s_name, QualityControl, "
+        Dim strQuery = "select id, product_name, product_s_name, brand_name, brand_s_name, QualityControl,product_image_path, "
         strQuery &= "WarehouseManagement, thai, eng, china, japan, cost"
         strQuery &= " from SGS.dbo.Product"
         strQuery &= " where id = " & id
@@ -46,6 +46,11 @@ Public Class EditSoftware
         eng = sqlReader.GetValue(sqlReader.GetOrdinal("eng"))
         china = sqlReader.GetValue(sqlReader.GetOrdinal("china"))
         japan = sqlReader.GetValue(sqlReader.GetOrdinal("japan"))
+        pbAttachNewProductImage.ImageLocation = sqlReader.GetValue(sqlReader.GetOrdinal("product_image_path"))
+        If pbAttachNewProductImage.ImageLocation Is "" Then
+            pbAttachNewProductImage.Image = My.Resources.SoftwareBoxIcon
+        End If
+        pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         con.close()
     End Sub
 
@@ -69,7 +74,8 @@ Public Class EditSoftware
         strQuery &= "thai = '" & thai & "', "
         strQuery &= "eng = '" & eng & "', "
         strQuery &= "china = '" & china & "', "
-        strQuery &= "japan = '" & japan & "' "
+        strQuery &= "japan = '" & japan & "', "
+        strQuery &= "product_image_path = '" & pbAttachNewProductImage.ImageLocation & "' "
         If Not txtCost.Text.Trim Is String.Empty Then
             strQuery &= " , cost = '" & Convert.ToDouble(txtCost.Text.Trim) & "' "
         End If
@@ -302,11 +308,23 @@ Public Class EditSoftware
     End Sub
 
     Private Sub btnAttachNewProductImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewProductImage.Click
+        Dim ImageName As String = txtProductName.Text + "_" + txtBrandName.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachNewProductImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachNewProductImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachNewProductImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachNewProductImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachNewProductImage.ImageLocation = ofdAttachNewProductImage.FileName
-            pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachNewProductImage.ImageLocation, ImagePath)
+                pbAttachNewProductImage.ImageLocation = ImagePath
+                pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachNewProductImage.ImageLocation, ImagePath)
+                pbAttachNewProductImage.ImageLocation = ImagePath
+                pbAttachNewProductImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachNewProductImage.ImageLocation = ImagePath
     End Sub
 End Class

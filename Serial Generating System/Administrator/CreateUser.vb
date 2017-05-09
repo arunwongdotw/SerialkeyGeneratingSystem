@@ -43,7 +43,7 @@ Public Class CreateUser
             position = "Accountant"
         End If
         Dim strSQL As String
-        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete, per_print, employee_image) "
+        strSQL = "insert into employee (emp_id, username, password, firstname, lastname, position, mobilenumber, phonenumber, email, user_type, per_create, per_edit, per_delete, per_print, image_path) "
         strSQL &= "values ('" & txtEmpID.Text & "',"
         strSQL &= "'" & txtUsername.Text & "',"
         strSQL &= "'" & txtPassword.Text & "',"
@@ -340,12 +340,24 @@ Public Class CreateUser
     End Function
 
     Private Sub btnAttachUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachUserImage.Click
+        Dim ImageName As String = txtFirstName.Text + "_" + txtLastName.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachUserImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachUserImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachUserImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachUserImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachUserImage.ImageLocation = ofdAttachUserImage.FileName
-            pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
+                pbAttachUserImage.ImageLocation = ImagePath
+                pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachUserImage.ImageLocation, ImagePath)
+                pbAttachUserImage.ImageLocation = ImagePath
+                pbAttachUserImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachUserImage.ImageLocation = ImagePath
     End Sub
 
     Private Sub cmbUserType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUserType.SelectedIndexChanged
