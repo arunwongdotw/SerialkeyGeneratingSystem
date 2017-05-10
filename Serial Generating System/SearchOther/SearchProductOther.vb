@@ -19,6 +19,7 @@ Public Class SearchProductOther
     Private Sub Search_Cus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.GenerateColumn()
         Me.LoadData()
+        randerColorRow()
         'tvUserMenu.ExpandAll()
 
     End Sub
@@ -225,7 +226,17 @@ Public Class SearchProductOther
             GenerateColumn()
             dgvSearchProduct.DataSource = dt
             'End If
+            Dim col As New DataGridViewTextBoxColumn
+            col.HeaderText = "ลำดับ"
+            col.Name = "ลำดับ"
+            dgvSearchProduct.Columns.Add(col)
+            dgvSearchProduct.Columns("ลำดับ").DisplayIndex = 1
+            dgvSearchProduct.Columns("ลำดับ").ReadOnly = True
+            dgvSearchProduct.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ''End If
+            dgvSearchProduct.Columns("id").Visible = False
 
+            genRowNumber()
 
 
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
@@ -241,7 +252,18 @@ Public Class SearchProductOther
         End Try
 
     End Sub
-
+    Private Sub randerColorRow()
+        For i = 0 To dgvSearchProduct.Rows.Count - 1
+            If i Mod 2 = 0 Then
+                dgvSearchProduct.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
+    End Sub
+    Private Sub genRowNumber()
+        For i = 0 To dgvSearchProduct.Rows.Count - 1
+            dgvSearchProduct.Rows(i).Cells("ลำดับ").Value = i + 1
+        Next
+    End Sub
     Private Sub setPermissionCheckBox()
         For i As Integer = 0 To dgvSearchProduct.Rows.Count - 2
             If IsDBNull(dgvSearchProduct.Rows(i).Cells("QualityControl").Value) OrElse dgvSearchProduct.Rows(i).Cells("QualityControl").Value = 0 Then

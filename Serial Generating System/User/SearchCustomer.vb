@@ -48,6 +48,8 @@ Public Class SearchCustomer
             Col.ReadOnly = True
             Me.dgvSearchCus.Columns.Add(Col)
 
+          
+
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
             Col.Width = 70
@@ -277,11 +279,22 @@ Public Class SearchCustomer
             dt.Clear()
 
             da.Fill(dt)
+            
             'If dt.Rows.Count > 0 Then
             dgvSearchCus.Columns.Clear()
             GenerateColumn()
             dgvSearchCus.DataSource = dt
-            'End If
+            Dim col As New DataGridViewTextBoxColumn
+            col.HeaderText = "ลำดับ"
+            col.Name = "ลำดับ"
+            dgvSearchCus.Columns.Add(col)
+            dgvSearchCus.Columns("ลำดับ").DisplayIndex = 2
+            dgvSearchCus.Columns("ลำดับ").ReadOnly = True
+            dgvSearchCus.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ''End If
+            dgvSearchCus.Columns("id").Visible = False
+            randerColorRow()
+            genRowNumber()
 
 
 
@@ -295,6 +308,18 @@ Public Class SearchCustomer
         Catch ex As Exception
             ' MsgBox("ไม่พบข้อมูล")
         End Try
+    End Sub
+    Private Sub genRowNumber()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            dgvSearchCus.Rows(i).Cells("ลำดับ").Value = i + 1
+        Next
+    End Sub
+    Private Sub randerColorRow()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            If i Mod 2 = 0 Then
+                dgvSearchCus.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
     End Sub
 
     Private Sub clear()

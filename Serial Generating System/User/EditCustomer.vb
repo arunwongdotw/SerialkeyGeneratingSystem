@@ -50,7 +50,8 @@ Public Class EditCustomer
         strQuery &= "postalcode,"
         strQuery &= "cellphone,"
         strQuery &= "email,"
-        strQuery &= "phone "
+        strQuery &= "phone,"
+        strQuery &= "corp_image_path "
         strQuery &= " from SGS.dbo.Customer "
         strQuery &= "where id = " & id
         sqlReader = con.query(strQuery)
@@ -72,6 +73,11 @@ Public Class EditCustomer
         txtEmail.Text = sqlReader.GetValue(sqlReader.GetOrdinal("email"))
         txtPhone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("phone"))
         txtcellphone.Text = sqlReader.GetValue(sqlReader.GetOrdinal("cellphone"))
+        pbAttachNewCustomerImage.ImageLocation = sqlReader.GetValue(sqlReader.GetOrdinal("corp_image_path"))
+        If pbAttachNewCustomerImage.ImageLocation Is "" Then
+            pbAttachNewCustomerImage.Image = My.Resources.OfficerIcon
+        End If
+        pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -252,7 +258,8 @@ Public Class EditCustomer
         strquery &= " postalcode = '" & txtPostalCode.Text.Trim & "' , "
         strquery &= " email = '" & txtEmail.Text.Trim & "' , "
         strquery &= " phone = '" & txtPhone.Text.Trim & "' , "
-        strquery &= " cellphone = '" & txtcellphone.Text.Trim & "' "
+        strquery &= " cellphone = '" & txtcellphone.Text.Trim & "' , "
+        strquery &= " corp_image_path = '" & pbAttachNewCustomerImage.ImageLocation.Trim & "' "
         strquery &= " where id = " & id
         Return con.save(strquery)
     End Function
@@ -290,12 +297,24 @@ Public Class EditCustomer
     End Sub
 
     Private Sub btnAttachNewCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewCustomerImage.Click
+        Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
+        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         ofdAttachNewCustomerImage.Title = "เลือกไฟล์รูปภาพ"
-        ofdAttachNewCustomerImage.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        ofdAttachNewCustomerImage.Filter = "Image Files(*.JPG)|*.JPG"
         If ofdAttachNewCustomerImage.ShowDialog() = Windows.Forms.DialogResult.OK Then
             pbAttachNewCustomerImage.ImageLocation = ofdAttachNewCustomerImage.FileName
-            pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            If System.IO.File.Exists(ImagePath) Then
+                System.IO.File.Delete(ImagePath)
+                System.IO.File.Copy(pbAttachNewCustomerImage.ImageLocation, ImagePath)
+                pbAttachNewCustomerImage.ImageLocation = ImagePath
+                pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                System.IO.File.Copy(pbAttachNewCustomerImage.ImageLocation, ImagePath)
+                pbAttachNewCustomerImage.ImageLocation = ImagePath
+                pbAttachNewCustomerImage.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
         End If
+        pbAttachNewCustomerImage.ImageLocation = ImagePath
     End Sub
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
