@@ -295,6 +295,8 @@ Public Class SearchCustomer
             dgvSearchCus.Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             ''End If
             dgvSearchCus.Columns("id").Visible = False
+            dgvSearchCus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            dgvSearchCus.ColumnHeadersHeight = 40
             randerColorRow()
             genRowNumber()
 
