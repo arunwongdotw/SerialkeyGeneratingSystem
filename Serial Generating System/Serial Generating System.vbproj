@@ -55,6 +55,9 @@
     <Reference Include="ClassLibrary1">
       <HintPath>bin\ClassLibrary1.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -383,6 +386,17 @@
     <None Include="Resources\bgWelcomePage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Fonts\arial.ttf" />
+    <None Include="Resources\Fonts\arialbd.ttf" />
+    <None Include="Resources\Fonts\arialbi.ttf" />
+    <None Include="Resources\Fonts\ariali.ttf" />
+    <None Include="Resources\Fonts\ARIALN.TTF" />
+    <None Include="Resources\Fonts\ARIALNB.TTF" />
+    <None Include="Resources\Fonts\ARIALNBI.TTF" />
+    <None Include="Resources\Fonts\ARIALNI.TTF" />
+    <None Include="Resources\Fonts\ariblk.ttf" />
+    <None Include="Resources\Fonts\tahoma.ttf" />
+    <None Include="Resources\Fonts\tahomabd.ttf" />
     <None Include="Resources\SKGSIconHeader.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -15,18 +15,6 @@ Public Class Login
         Application.Exit()
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
-    End Sub
-
-  
-
-   
-
-   
-
-   
-
     Private Sub txtUsername_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
         If txtUsername.Text = username And txtUsername.ForeColor = Color.Gray Then
             txtUsername.Clear()
@@ -41,7 +29,6 @@ Public Class Login
         End If
     End Sub
 
-   
     Private Sub LoadData()
         user = txtUsername.Text
         pass = txtPassword.Text
@@ -84,18 +71,13 @@ Public Class Login
 
     Private Sub insertConnection(ByVal id As String)
         Dim ComputerName = System.Net.Dns.GetHostName
-
-
         Dim nics() As NetworkInterface = NetworkInterface.GetAllNetworkInterfaces
         Dim physicalAddress = nics(3).GetPhysicalAddress.ToString
         Dim computerHostname = System.Net.Dns.GetHostName
-
-
         Dim sql = " insert into connection (emp_id, computer_name,mac_address,active_flag,create_date) values ('" & id & "','" & computerHostname + "','" & physicalAddress & "',1 , '" & DateTime.Now.ToString & "');select scope_identity()"
         Dim sqlread As SqlDataReader = con.query(sql)
         If sqlread.Read Then
             idConnection = sqlread.GetValue(0)
         End If
     End Sub
-
 End Class

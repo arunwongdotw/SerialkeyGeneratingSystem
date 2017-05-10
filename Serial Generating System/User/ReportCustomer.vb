@@ -1,6 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports Excel = Microsoft.Office.Interop.Excel
+Imports System.IO
+Imports System.Reflection
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.Text
 
 Public Class ReportCustomer
     Private con As New ConnectDB
@@ -437,36 +442,74 @@ Public Class ReportCustomer
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
         If isPermission("per_print") Then
             Dim SaveFileDialog1 As New SaveFileDialog
-            SaveFileDialog1.Title = "Save Excel File"
-            SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+            SaveFileDialog1.Title = "Save File"
+            SaveFileDialog1.Filter = "Excel File (*.xlsx)|*.xlsx|PDF File (*.pdf)|*.pdf"
             SaveFileDialog1.ShowDialog()
             If SaveFileDialog1.FileName = "" Then
                 Exit Sub
             End If
-            'create an Excel WorkBook
-            Dim xls As New Excel.Application
-            Dim sheet As Excel.Worksheet
-            Dim i, j As Integer
-            xls.Workbooks.Add()
-            sheet = xls.ActiveWorkbook.ActiveSheet
-            For j = 1 To dgvSearchCus.ColumnCount - 1
-                sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
-                sheet.Cells(1, j).HorizontalAlignment = 3
-                sheet.Cells(1, j).ColumnWidth = 15
-            Next
-            For i = 1 To dgvSearchCus.RowCount
+            If SaveFileDialog1.FilterIndex = 1 Then
+                'create an Excel WorkBook
+                Dim xls As New Excel.Application
+                Dim sheet As Excel.Worksheet
+                Dim i, j As Integer
+                xls.Workbooks.Add()
+                sheet = xls.ActiveWorkbook.ActiveSheet
                 For j = 1 To dgvSearchCus.ColumnCount - 1
-                    sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
-                    sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                    sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
+                    sheet.Cells(1, j).HorizontalAlignment = 3
+                    sheet.Cells(1, j).ColumnWidth = 15
                 Next
-            Next
-            'save the WorkBook to a file and exit Excel
-            xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
-            xls.Workbooks.Close()
-            xls.Quit()
+                For i = 1 To dgvSearchCus.RowCount
+                    For j = 1 To dgvSearchCus.ColumnCount - 1
+                        sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
+                        sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                    Next
+                Next
+                'save the WorkBook to a file and exit Excel
+                xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
+                xls.Workbooks.Close()
+                xls.Quit()
+            Else
+                'Creating iTextSharp Table from the DataTable data
+                Dim pdfTable As New PdfPTable(dgvSearchCus.ColumnCount)
+                pdfTable.DefaultCell.Padding = 10
+                pdfTable.WidthPercentage = 100
+                pdfTable.HorizontalAlignment = Element.ALIGN_LEFT
+                pdfTable.DefaultCell.BorderWidth = 1
+                Dim yourFont As BaseFont = BaseFont.CreateFont("C:\Users\Arunwong.W\Desktop\Backup\Serial Generating System\Resources\Fonts\tahoma.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED)
+                Dim mainFont As New Font(yourFont)
+
+                'Adding Header row
+                For Each column As DataGridViewColumn In dgvSearchCus.Columns
+                    Dim cell As New PdfPCell(New Phrase(column.HeaderText, mainFont))
+                    cell.BackgroundColor = New iTextSharp.text.BaseColor(240, 240, 240)
+                    pdfTable.AddCell(cell)
+                Next
+
+                'Adding DataRow
+                For Each row As DataGridViewRow In dgvSearchCus.Rows
+                    For Each cell As DataGridViewCell In row.Cells
+                        pdfTable.AddCell(New Phrase(cell.Value.ToString, mainFont))
+                    Next
+                Next
+
+                'Exporting to PDF
+                Dim folderPath As String = Path.GetFullPath(System.IO.Path.GetDirectoryName(SaveFileDialog1.FileName))
+                If Not Directory.Exists(folderPath) Then
+                    Directory.CreateDirectory(folderPath)
+                End If
+                Using stream As New FileStream(folderPath & "\" & Path.GetFileName(SaveFileDialog1.FileName), FileMode.Create)
+                    Dim pdfDoc As New Document(PageSize.A2, 10.0F, 10.0F, 10.0F, 0.0F)
+                    PdfWriter.GetInstance(pdfDoc, stream)
+                    pdfDoc.Open()
+                    pdfDoc.Add(pdfTable)
+                    pdfDoc.Close()
+                    stream.Close()
+                End Using
+            End If
         Else
             MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
-
     End Sub
 End Class
