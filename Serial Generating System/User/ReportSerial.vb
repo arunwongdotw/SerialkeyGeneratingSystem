@@ -138,6 +138,13 @@ Public Class ReportSerial
             Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "ลำดับที่"
+            Col.Width = 100
+            Col.Name = "ลำดับที่"
+            Col.ReadOnly = True
+            Me.dgvSerialKey.Columns.Add(Col)
+
+            Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "หมายเลขสัญญา"
             Col.Width = 100
             'Col.Visible = False
@@ -445,6 +452,13 @@ Public Class ReportSerial
             dgvSerialKey.Columns.Clear()
             GenerateColumn()
             dgvSerialKey.DataSource = dt
+
+
+            dgvSerialKey.Columns("seq").Visible = False
+
+            dgvSerialKey.Columns("ลำดับที่").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            genRowNumber()
+            randerColorRow()
             'End If
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
             'con.close()
@@ -456,6 +470,20 @@ Public Class ReportSerial
         Catch ex As Exception
             'MsgBox("ไม่พบข้อมูล")
         End Try
+    End Sub
+
+    Private Sub genRowNumber()
+        For i = 0 To dgvSerialKey.Rows.Count - 1
+            dgvSerialKey.Rows(i).Cells("ลำดับที่").Value = i + 1
+        Next
+    End Sub
+
+    Private Sub randerColorRow()
+        For i = 0 To dgvSerialKey.Rows.Count - 1
+            If i Mod 2 = 0 Then
+                dgvSerialKey.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

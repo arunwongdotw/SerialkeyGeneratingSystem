@@ -39,8 +39,15 @@ Public Class ReportCustomer
             Me.dgvSearchCus.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "ลำดับที่"
+            Col.Width = 100
+            Col.Name = "ลำดับที่"
+            Col.ReadOnly = True
+            Me.dgvSearchCus.Columns.Add(Col)
+
+            Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
-            Col.Width = 70
+            Col.Width = 150
             'Col.Visible = False
             Col.ReadOnly = True
             Col.DataPropertyName = "corp_s_name"
@@ -75,7 +82,7 @@ Public Class ReportCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "เลขที่"
-            Col.Width = 50
+            Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "house_no"
             Col.Name = "house_no"
@@ -123,7 +130,7 @@ Public Class ReportCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "รหัสไปรษณีย์"
-            Col.Width = 100
+            Col.Width = 120
             Col.ReadOnly = True
             Col.DataPropertyName = "postalCode"
             Col.Name = "postalCode"
@@ -139,7 +146,7 @@ Public Class ReportCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "โทรศัพท์"
-            Col.Width = 100
+            Col.Width = 150
             Col.ReadOnly = True
             Col.DataPropertyName = "phone"
             Col.Name = "phone"
@@ -147,7 +154,7 @@ Public Class ReportCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "โทรศัพท์มือถือ"
-            Col.Width = 100
+            Col.Width = 150
             Col.ReadOnly = True
             Col.DataPropertyName = "cellphone"
             Col.Name = "cellphone"
@@ -256,6 +263,12 @@ Public Class ReportCustomer
             'End If
 
 
+            dgvSearchCus.Columns("id").Visible = False
+            
+            dgvSearchCus.Columns("ลำดับที่").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            genRowNumber()
+            randerColorRow()
+
 
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
             'con.close()
@@ -267,6 +280,19 @@ Public Class ReportCustomer
         Catch ex As Exception
             ' MsgBox("ไม่พบข้อมูล")
         End Try
+    End Sub
+    Private Sub genRowNumber()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            dgvSearchCus.Rows(i).Cells("ลำดับที่").Value = i + 1
+        Next
+    End Sub
+
+    Private Sub randerColorRow()
+        For i = 0 To dgvSearchCus.Rows.Count - 1
+            If i Mod 2 = 0 Then
+                dgvSearchCus.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
+            End If
+        Next
     End Sub
 
     Private Sub clear()

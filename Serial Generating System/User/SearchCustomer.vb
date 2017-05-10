@@ -24,6 +24,8 @@ Public Class SearchCustomer
             Me.dgvSearchCus.AutoGenerateColumns = False
             Me.dgvSearchCus.RowTemplate.MinimumHeight = 30
 
+
+
             Dim btnEdit As New DataGridViewButtonColumn()
             btnEdit.HeaderText = ""
             btnEdit.Text = "แก้ไข"
@@ -52,7 +54,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
-            Col.Width = 70
+            Col.Width = 150
             'Col.Visible = False
             Col.ReadOnly = True
             Col.DataPropertyName = "corp_s_name"
@@ -87,7 +89,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "เลขที่"
-            Col.Width = 50
+            Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "house_no"
             Col.Name = "house_no"
@@ -135,7 +137,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "รหัสไปรษณีย์"
-            Col.Width = 100
+            Col.Width = 120
             Col.ReadOnly = True
             Col.DataPropertyName = "postalCode"
             Col.Name = "postalCode"
@@ -151,7 +153,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "โทรศัพท์"
-            Col.Width = 100
+            Col.Width = 150
             Col.ReadOnly = True
             Col.DataPropertyName = "phone"
             Col.Name = "phone"
@@ -159,7 +161,7 @@ Public Class SearchCustomer
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "โทรศัพท์มือถือ"
-            Col.Width = 100
+            Col.Width = 150
             Col.ReadOnly = True
             Col.DataPropertyName = "cellphone"
             Col.Name = "cellphone"

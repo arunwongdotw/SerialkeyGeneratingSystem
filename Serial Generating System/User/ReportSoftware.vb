@@ -18,7 +18,7 @@ Public Class ReportSoftware
             addCustomColumns()
             setHeaderColumns()
             Table.Columns.Add("ลำดับที่ขายได้")
-            dgvSearchProduct.Columns("ลำดับที่ขายได้").DisplayIndex = 3
+            dgvSearchProduct.Columns("ลำดับที่ขายได้").DisplayIndex = 1
             dgvSearchProduct.Columns("ลำดับที่ขายได้").ReadOnly = True
             dgvSearchProduct.Columns("ลำดับที่ขายได้").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
