@@ -65,12 +65,10 @@ Public Class CheckConnectUser
 
     End Sub
     Private Sub BtnCheck_Click(sender As Object, e As EventArgs) Handles btnCheck.Click
-        Dim strQuery As String = "SELECT net_address, DB_NAME(dbid) as DBName,  COUNT(dbid) as NumberOfConnections, loginame as LoginName FROM sys.sysprocesses WHERE  DB_NAME(dbid) = 'SGS' GROUP BY dbid, loginame,net_address "
+        Dim strQuery As String = "SELECT COUNT(id) FROM dbo.connection WHERE active_flag = 1"
         Dim sqlread As SqlDataReader = con.query(strQuery)
         If sqlread.Read Then
-            Dim dt = New DataTable()
-            dt.Load(sqlread)
-            txtConnection.Text = dt.Rows.Count
+            txtConnection.Text = sqlread.GetValue(0)
         End If
 
         Dim table As New DataTable
@@ -107,7 +105,7 @@ Public Class CheckConnectUser
             .Columns("create_date").Width = 200
 
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .Columns("emp_id").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("computer_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("mac_address").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
 

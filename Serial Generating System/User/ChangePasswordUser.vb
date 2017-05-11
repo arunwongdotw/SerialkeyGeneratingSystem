@@ -21,6 +21,7 @@ Public Class ChangePasswordUser
     End Sub
 
     Private Sub ChangePasswordUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 
