@@ -75,6 +75,7 @@ Public Class SearchSerial
     End Sub
 
     Private Sub SearchSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 

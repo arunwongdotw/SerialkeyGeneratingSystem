@@ -8,6 +8,7 @@ Public Class CreateSerial
     Private con As New ConnectDB
 
     Private Sub CreateSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 

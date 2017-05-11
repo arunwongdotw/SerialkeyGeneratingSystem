@@ -73,8 +73,7 @@ Public Class ReportSerial
     End Sub
 
     Private Sub ReportSerial_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        Dim close As New CheckConnectUser
-        close.sqlCloseConnection()
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 
