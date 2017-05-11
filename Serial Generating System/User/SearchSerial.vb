@@ -83,12 +83,33 @@ Public Class SearchSerial
         Dim username As String = Login.user
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
+        displayAccountImage(username)
         tvUserMenu.ExpandAll()
         txtContractNo.Select()
         cmbVersion.SelectedIndex = -1
         'dtpExpireDate.MinDate = DateTime.Now
         Me.GenerateColumn()
         Me.LoadData()
+    End Sub
+
+    Private Sub displayAccountImage(ByVal username As String)
+        Dim AccountImagePath As String
+        Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & username & "'"
+        Dim sqlread As SqlDataReader = con.query(strQuery)
+        If sqlread Is Nothing Then
+            pbAccountInfo.Image = My.Resources.UserIcon
+        ElseIf Not sqlread.Read Then
+            pbAccountInfo.Image = My.Resources.UserIcon
+        Else
+            AccountImagePath = sqlread.GetValue(sqlread.GetOrdinal("image_path"))
+            If AccountImagePath = "" Then
+                pbAccountInfo.Image = My.Resources.UserIcon
+            Else
+                pbAccountInfo.ImageLocation = AccountImagePath
+                pbAccountInfo.SizeMode = PictureBoxSizeMode.StretchImage
+            End If
+        End If
+        con.close()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
