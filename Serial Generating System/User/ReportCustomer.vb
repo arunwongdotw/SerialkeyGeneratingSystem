@@ -11,6 +11,7 @@ Public Class ReportCustomer
     Private con As New ConnectDB
 
     Private Sub ReportCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 
