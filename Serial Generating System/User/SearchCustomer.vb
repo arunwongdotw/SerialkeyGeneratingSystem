@@ -24,13 +24,11 @@ Public Class SearchCustomer
             Me.dgvSearchCus.AutoGenerateColumns = False
             Me.dgvSearchCus.RowTemplate.MinimumHeight = 30
 
-
-
             Dim btnEdit As New DataGridViewButtonColumn()
             btnEdit.HeaderText = ""
             btnEdit.Text = "แก้ไข"
             btnEdit.Name = "btnEdit"
-            btnEdit.Width = 70
+            btnEdit.Width = 50
             btnEdit.UseColumnTextForButtonValue = True
             Me.dgvSearchCus.Columns.Add(btnEdit)
 
@@ -38,7 +36,7 @@ Public Class SearchCustomer
             btnDelete.HeaderText = ""
             btnDelete.Text = "ลบ"
             btnDelete.Name = "btnDelete"
-            btnDelete.Width = 70
+            btnDelete.Width = 50
             btnDelete.UseColumnTextForButtonValue = True
             Me.dgvSearchCus.Columns.Add(btnDelete)
 
@@ -296,11 +294,9 @@ Public Class SearchCustomer
             ''End If
             dgvSearchCus.Columns("id").Visible = False
             dgvSearchCus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            dgvSearchCus.ColumnHeadersHeight = 40
+            dgvSearchCus.ColumnHeadersHeight = 35
             randerColorRow()
             genRowNumber()
-
-
 
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
             'con.close()

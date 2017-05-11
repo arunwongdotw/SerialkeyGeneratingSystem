@@ -146,7 +146,7 @@ Public Class ReportSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "หมายเลขสัญญา"
-            Col.Width = 100
+            Col.Width = 130
             'Col.Visible = False
             Col.ReadOnly = True
             Col.DataPropertyName = "contractbook_id"
@@ -190,7 +190,7 @@ Public Class ReportSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
-            Col.Width = 70
+            Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "corp_s_name"
             Col.Name = "corp_s_name"
@@ -230,7 +230,7 @@ Public Class ReportSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อซอฟต์แวร์"
-            Col.Width = 100
+            Col.Width = 130
             Col.ReadOnly = True
             Col.DataPropertyName = "product_s_Name"
             Col.Name = "product_s_Name"
@@ -261,8 +261,8 @@ Public Class ReportSerial
             Me.dgvSerialKey.Columns.Add(Col)
 
             Dim chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "QualityControl"
-            chk.Width = 110
+            chk.HeaderText = "ออปชันควบคุมคุณภาพ"
+            chk.Width = 170
             chk.ReadOnly = True
             chk.DataPropertyName = "quality_control"
             chk.Name = "quality_control"
@@ -271,8 +271,8 @@ Public Class ReportSerial
             Me.dgvSerialKey.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "WarehouseManagement"
-            chk.Width = 130
+            chk.HeaderText = "ออปชันจัดการโรงงาน"
+            chk.Width = 170
             chk.ReadOnly = True
             chk.DataPropertyName = "wharehouse_management"
             chk.Name = "wharehouse_management"
@@ -282,7 +282,7 @@ Public Class ReportSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาไทย"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "thai"
             chk.Name = "thai"
@@ -292,7 +292,7 @@ Public Class ReportSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาอังกฤษ"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "eng"
             chk.Name = "eng"
@@ -302,7 +302,7 @@ Public Class ReportSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาจีน"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "china"
             chk.Name = "china"
@@ -312,7 +312,7 @@ Public Class ReportSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาญี่ปุ่น"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "japan"
             chk.Name = "japan"
@@ -370,6 +370,9 @@ Public Class ReportSerial
     Private Sub LoadData()
         Try
             dgvSerialKey.Columns.Clear()
+            dgvSerialKey.RowTemplate.MinimumHeight = 30
+            dgvSerialKey.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            dgvSerialKey.ColumnHeadersHeight = 35
 
             Dim sql As String
             Dim ContractNo As String, corpname As String, corp_s_name As String, brandname As String, brand_s_name As String, seq As String

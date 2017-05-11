@@ -17,10 +17,10 @@ Public Class ReportSoftware
             dgvSearchProduct.DataSource = Table
             addCustomColumns()
             setHeaderColumns()
-            Table.Columns.Add("ลำดับที่ขายได้")
-            dgvSearchProduct.Columns("ลำดับที่ขายได้").DisplayIndex = 1
-            dgvSearchProduct.Columns("ลำดับที่ขายได้").ReadOnly = True
-            dgvSearchProduct.Columns("ลำดับที่ขายได้").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            Table.Columns.Add("ลำดับที่")
+            dgvSearchProduct.Columns("ลำดับที่").DisplayIndex = 1
+            dgvSearchProduct.Columns("ลำดับที่").ReadOnly = True
+            dgvSearchProduct.Columns("ลำดับที่").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
             randerColorRow()
             setCheckBox()
@@ -111,7 +111,7 @@ Public Class ReportSoftware
 
     Private Sub genRowNumber()
         For i = 0 To dgvSearchProduct.Rows.Count - 1
-            dgvSearchProduct.Rows(i).Cells("ลำดับที่ขายได้").Value = i + 1
+            dgvSearchProduct.Rows(i).Cells("ลำดับที่").Value = i + 1
         Next
     End Sub
 
@@ -390,7 +390,7 @@ Public Class ReportSoftware
             For i = 1 To dgvSearchProduct.RowCount
                 For j = 7 To dgvSearchProduct.ColumnCount - 1
                     If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
-                        If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่ขายได้")) Then
+                        If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่")) Then
                             sheet.Cells(i + 1, j - 6) = "1"
                         Else
                             sheet.Cells(i + 1, j - 6) = "มี"
@@ -410,7 +410,5 @@ Public Class ReportSoftware
         Else
             MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
-
-
     End Sub
 End Class

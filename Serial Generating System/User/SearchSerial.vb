@@ -88,8 +88,6 @@ Public Class SearchSerial
         'dtpExpireDate.MinDate = DateTime.Now
         Me.GenerateColumn()
         Me.LoadData()
-
-
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -125,14 +123,11 @@ Public Class SearchSerial
 
     Private Sub GenerateColumn()
         Try
-
             Me.dgvSerialKey.Columns.Clear()
             Me.dgvSerialKey.AutoGenerateColumns = False
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
-
-
-
             Dim btnDelete As New DataGridViewButtonColumn()
+
             btnDelete.HeaderText = ""
             btnDelete.Text = "ลบ"
             btnDelete.Name = "btnDelete"
@@ -157,7 +152,7 @@ Public Class SearchSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "หมายเลขสัญญา"
-            Col.Width = 100
+            Col.Width = 130
             'Col.Visible = False
             Col.ReadOnly = True
             Col.DataPropertyName = "contractbook_id"
@@ -201,7 +196,7 @@ Public Class SearchSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อบริษัท"
-            Col.Width = 70
+            Col.Width = 100
             Col.ReadOnly = True
             Col.DataPropertyName = "corp_s_name"
             Col.Name = "corp_s_name"
@@ -241,7 +236,7 @@ Public Class SearchSerial
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ชื่อย่อซอฟต์แวร์"
-            Col.Width = 100
+            Col.Width = 130
             Col.ReadOnly = True
             Col.DataPropertyName = "product_s_Name"
             Col.Name = "product_s_Name"
@@ -272,8 +267,8 @@ Public Class SearchSerial
             Me.dgvSerialKey.Columns.Add(Col)
 
             Dim chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "QualityControl"
-            chk.Width = 110
+            chk.HeaderText = "ออปชันควบคุมคุณภาพ"
+            chk.Width = 170
             chk.ReadOnly = True
             chk.DataPropertyName = "quality_control"
             chk.Name = "quality_control"
@@ -282,8 +277,8 @@ Public Class SearchSerial
             Me.dgvSerialKey.Columns.Add(chk)
 
             chk = New DataGridViewCheckBoxColumn
-            chk.HeaderText = "WarehouseManagement"
-            chk.Width = 130
+            chk.HeaderText = "ออปชันจัดการโรงงาน"
+            chk.Width = 170
             chk.ReadOnly = True
             chk.DataPropertyName = "wharehouse_management"
             chk.Name = "wharehouse_management"
@@ -293,7 +288,7 @@ Public Class SearchSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาไทย"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "thai"
             chk.Name = "thai"
@@ -303,7 +298,7 @@ Public Class SearchSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาอังกฤษ"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "eng"
             chk.Name = "eng"
@@ -313,7 +308,7 @@ Public Class SearchSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาจีน"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "china"
             chk.Name = "china"
@@ -323,7 +318,7 @@ Public Class SearchSerial
 
             chk = New DataGridViewCheckBoxColumn
             chk.HeaderText = "ภาษาญี่ปุ่น"
-            chk.Width = 50
+            chk.Width = 100
             chk.ReadOnly = True
             chk.DataPropertyName = "japan"
             chk.Name = "japan"
@@ -347,7 +342,6 @@ Public Class SearchSerial
             'btnEdit.UseColumnTextForButtonValue = True
             'Me.dgvSearchCus.Columns.Add(btnEdit)
 
-
             'Dim btnDelete As New DataGridViewButtonColumn()
             'btnDelete.HeaderText = ""
             'btnDelete.Text = "ลบ"
@@ -355,7 +349,6 @@ Public Class SearchSerial
             'btnDelete.Width = 70
             'btnDelete.UseColumnTextForButtonValue = True
             'Me.dgvSearchCus.Columns.Add(btnDelete)
-
         Catch ex As Exception
             MessageBox.Show("error : " + ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
         End Try
@@ -399,6 +392,9 @@ Public Class SearchSerial
     Private Sub LoadData()
         Try
             dgvSerialKey.Columns.Clear()
+            dgvSerialKey.RowTemplate.MinimumHeight = 30
+            dgvSerialKey.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            dgvSerialKey.ColumnHeadersHeight = 35
 
             Dim sql As String
             Dim ContractNo As String, corpname As String, corp_s_name As String, brandname As String, brand_s_name As String, seq As String
@@ -486,8 +482,6 @@ Public Class SearchSerial
             randerColorRow()
             genRowNumber()
 
-
-
             'End If
             'Dim adapter As SqlDataAdapter = con.queryForAdapter(sql)
             'con.close()
@@ -495,7 +489,6 @@ Public Class SearchSerial
             'adapter.Fill(table)
             'dgvSearchCus.Columns.Clear()
             'dgvSearchCus.DataSource = table
-
         Catch ex As Exception
             'MsgBox("ไม่พบข้อมูล")
         End Try
@@ -603,7 +596,7 @@ Public Class SearchSerial
         Return False
     End Function
     Private Sub dgvSearchProduct_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSerialKey.CellContentClick
-       
+
 
     End Sub
 

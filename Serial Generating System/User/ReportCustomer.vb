@@ -261,10 +261,9 @@ Public Class ReportCustomer
             GenerateColumn()
             dgvSearchCus.DataSource = dt
             'End If
-
-
             dgvSearchCus.Columns("id").Visible = False
-            
+            dgvSearchCus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            dgvSearchCus.ColumnHeadersHeight = 35
             dgvSearchCus.Columns("ลำดับที่").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
             randerColorRow()
@@ -526,7 +525,7 @@ Public Class ReportCustomer
                     Directory.CreateDirectory(folderPath)
                 End If
                 Using stream As New FileStream(folderPath & "\" & Path.GetFileName(SaveFileDialog1.FileName), FileMode.Create)
-                    Dim pdfDoc As New Document(PageSize.A2, 10.0F, 10.0F, 10.0F, 0.0F)
+                    Dim pdfDoc As New Document(PageSize.A4, 10.0F, 10.0F, 10.0F, 0.0F)
                     PdfWriter.GetInstance(pdfDoc, stream)
                     pdfDoc.Open()
                     pdfDoc.Add(pdfTable)

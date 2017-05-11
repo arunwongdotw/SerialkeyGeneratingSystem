@@ -226,7 +226,7 @@ Public Class EditUser
         txtUsername.Text = sqlReader.GetValue(sqlReader.GetOrdinal("username"))
         perCreate = sqlReader.GetValue(sqlReader.GetOrdinal("per_create"))
         perdelete = sqlReader.GetValue(sqlReader.GetOrdinal("per_delete"))
-        perPrint = IIf(IsDBNull(sqlReader.GetValue(sqlReader.GetOrdinal("per_print"))), 0, 1)
+        perPrint = sqlReader.GetValue(sqlReader.GetOrdinal("per_print"))
         perEdit = sqlReader.GetValue(sqlReader.GetOrdinal("per_edit"))
         userType = sqlReader.GetValue(sqlReader.GetOrdinal("user_type"))
         pbAttachNewUserImage.ImageLocation = sqlReader.GetValue(sqlReader.GetOrdinal("image_path"))
