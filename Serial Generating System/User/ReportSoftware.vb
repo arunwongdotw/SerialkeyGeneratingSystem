@@ -5,6 +5,8 @@ Imports Excel = Microsoft.Office.Interop.Excel
 Public Class ReportSoftware
     Private con As New ConnectDB
 
+
+
     Private Sub loadDataTable()
         Try
             Dim Table As New DataTable
@@ -216,6 +218,7 @@ Public Class ReportSoftware
         displayAccountImage(username)
         loadDataTable()
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

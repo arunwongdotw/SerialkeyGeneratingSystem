@@ -47,7 +47,7 @@ Partial Class ReportSerial
         Me.chbThai = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
@@ -114,7 +114,7 @@ Partial Class ReportSerial
         Me.lblVersion.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVersion.Location = New System.Drawing.Point(326, 183)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(68, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(69, 27)
         Me.lblVersion.TabIndex = 65
         Me.lblVersion.Text = "เวอร์ชัน :"
         '
@@ -124,7 +124,7 @@ Partial Class ReportSerial
         Me.chbJapan.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbJapan.Location = New System.Drawing.Point(186, 4)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
         Me.chbJapan.TabIndex = 64
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -135,7 +135,7 @@ Partial Class ReportSerial
         Me.chbChinese.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbChinese.Location = New System.Drawing.Point(136, 4)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 63
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -146,7 +146,7 @@ Partial Class ReportSerial
         Me.chbEnglish.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbEnglish.Location = New System.Drawing.Point(3, 4)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 62
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -157,7 +157,7 @@ Partial Class ReportSerial
         Me.chbThai.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chbThai.Location = New System.Drawing.Point(81, 4)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 61
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -182,24 +182,24 @@ Partial Class ReportSerial
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Orange
-        Me.Panel4.Controls.Add(Me.Button1)
+        Me.Panel4.Controls.Add(Me.btnCancel)
         Me.Panel4.Location = New System.Drawing.Point(0, 602)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(270, 100)
         Me.Panel4.TabIndex = 139
         '
-        'Button1
+        'btnCancel
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(70, 29)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 41)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "ออกจากระบบ"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCancel.BackColor = System.Drawing.Color.White
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(70, 29)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(129, 41)
+        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.Text = "ออกจากระบบ"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnExport
         '
@@ -416,9 +416,9 @@ Partial Class ReportSerial
         TreeNode5.Text = "ค้นหาข้อมูลลูกค้า"
         TreeNode6.Name = "ndCustomerManagement"
         TreeNode6.Text = "จัดการข้อมูลลูกค้า"
-        TreeNode7.Name = "ndAddProduct"
+        TreeNode7.Name = "ndAddSoftware"
         TreeNode7.Text = "เพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป"
-        TreeNode8.Name = "ndSearchProduct"
+        TreeNode8.Name = "ndSearchSoftware"
         TreeNode8.Text = "ค้นหาข้อมูลซอฟต์แวร์สำเร็จรูป"
         TreeNode9.Name = "ndSoftwareManagement"
         TreeNode9.Text = "จัดการข้อมูลซอฟต์แวร์สำเร็จรูป"
@@ -513,7 +513,7 @@ Partial Class ReportSerial
         Me.chbWM.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbWM.Location = New System.Drawing.Point(3, 1)
         Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(201, 30)
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
         Me.chbWM.TabIndex = 122
         Me.chbWM.Text = "Warehouse Management"
         Me.chbWM.UseVisualStyleBackColor = False
@@ -524,7 +524,7 @@ Partial Class ReportSerial
         Me.chbQC.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbQC.Location = New System.Drawing.Point(243, 1)
         Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 30)
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
         Me.chbQC.TabIndex = 121
         Me.chbQC.Text = "Quality Control"
         Me.chbQC.UseVisualStyleBackColor = True
@@ -535,7 +535,7 @@ Partial Class ReportSerial
         Me.lblBrandSoftware.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBrandSoftware.Location = New System.Drawing.Point(689, 100)
         Me.lblBrandSoftware.Name = "lblBrandSoftware"
-        Me.lblBrandSoftware.Size = New System.Drawing.Size(165, 26)
+        Me.lblBrandSoftware.Size = New System.Drawing.Size(167, 27)
         Me.lblBrandSoftware.TabIndex = 27
         Me.lblBrandSoftware.Text = "ชื่อย่อแบรนด์ซอฟต์แวร์ :"
         '
@@ -563,7 +563,7 @@ Partial Class ReportSerial
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(711, 185)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 26)
+        Me.Label1.Size = New System.Drawing.Size(145, 27)
         Me.Label1.TabIndex = 133
         Me.Label1.Text = "รหัสพนักงานที่สร้าง :"
         '
@@ -573,7 +573,7 @@ Partial Class ReportSerial
         Me.lblSoftwareName.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSoftwareName.Location = New System.Drawing.Point(732, 142)
         Me.lblSoftwareName.Name = "lblSoftwareName"
-        Me.lblSoftwareName.Size = New System.Drawing.Size(123, 26)
+        Me.lblSoftwareName.Size = New System.Drawing.Size(124, 27)
         Me.lblSoftwareName.TabIndex = 31
         Me.lblSoftwareName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -583,7 +583,7 @@ Partial Class ReportSerial
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.Label6.Location = New System.Drawing.Point(107, 270)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(71, 26)
+        Me.Label6.Size = New System.Drawing.Size(72, 27)
         Me.Label6.TabIndex = 120
         Me.Label6.Text = "ออฟชัน :"
         '
@@ -602,7 +602,7 @@ Partial Class ReportSerial
         Me.lblLanguage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguage.Location = New System.Drawing.Point(122, 228)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 42
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -621,7 +621,7 @@ Partial Class ReportSerial
         Me.Label7.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(74, 142)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(104, 26)
+        Me.Label7.Size = New System.Drawing.Size(105, 27)
         Me.Label7.TabIndex = 131
         Me.Label7.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -640,7 +640,7 @@ Partial Class ReportSerial
         Me.lblAmountUser.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAmountUser.Location = New System.Drawing.Point(0, 183)
         Me.lblAmountUser.Name = "lblAmountUser"
-        Me.lblAmountUser.Size = New System.Drawing.Size(177, 26)
+        Me.lblAmountUser.Size = New System.Drawing.Size(179, 27)
         Me.lblAmountUser.TabIndex = 46
         Me.lblAmountUser.Text = "จำนวนผู้ใช้งานซอฟต์แวร์ :"
         '
@@ -650,7 +650,7 @@ Partial Class ReportSerial
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(31, 100)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(146, 26)
+        Me.Label5.Size = New System.Drawing.Size(148, 27)
         Me.Label5.TabIndex = 129
         Me.Label5.Text = "ชื่อแบรนด์ซอฟต์แวร์ :"
         '
@@ -678,7 +678,7 @@ Partial Class ReportSerial
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(761, 58)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 26)
+        Me.Label4.Size = New System.Drawing.Size(95, 27)
         Me.Label4.TabIndex = 127
         Me.Label4.Text = "ชื่อย่อบริษัท :"
         '
@@ -697,7 +697,7 @@ Partial Class ReportSerial
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(103, 58)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 26)
+        Me.Label3.Size = New System.Drawing.Size(76, 27)
         Me.Label3.TabIndex = 125
         Me.Label3.Text = "ชื่อบริษัท :"
         '
@@ -707,7 +707,7 @@ Partial Class ReportSerial
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(55, 16)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 26)
+        Me.Label2.Size = New System.Drawing.Size(124, 27)
         Me.Label2.TabIndex = 123
         Me.Label2.Text = "หมายเลขสัญญา :"
         '
@@ -718,7 +718,7 @@ Partial Class ReportSerial
         Me.cmbVersion.Items.AddRange(New Object() {"Demo", "Real", "Test"})
         Me.cmbVersion.Location = New System.Drawing.Point(401, 182)
         Me.cmbVersion.Name = "cmbVersion"
-        Me.cmbVersion.Size = New System.Drawing.Size(125, 34)
+        Me.cmbVersion.Size = New System.Drawing.Size(125, 35)
         Me.cmbVersion.TabIndex = 66
         Me.cmbVersion.Text = "Demo"
         '
@@ -728,7 +728,7 @@ Partial Class ReportSerial
         Me.lblOrderฆales.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOrderฆales.Location = New System.Drawing.Point(752, 16)
         Me.lblOrderฆales.Name = "lblOrderฆales"
-        Me.lblOrderฆales.Size = New System.Drawing.Size(103, 26)
+        Me.lblOrderฆales.Size = New System.Drawing.Size(104, 27)
         Me.lblOrderฆales.TabIndex = 67
         Me.lblOrderฆales.Text = "ลำดับที่ขายได้ :"
         '
@@ -747,7 +747,7 @@ Partial Class ReportSerial
         Me.chbUnlimit.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
         Me.chbUnlimit.Location = New System.Drawing.Point(532, 182)
         Me.chbUnlimit.Name = "chbUnlimit"
-        Me.chbUnlimit.Size = New System.Drawing.Size(79, 30)
+        Me.chbUnlimit.Size = New System.Drawing.Size(79, 31)
         Me.chbUnlimit.TabIndex = 102
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
@@ -847,5 +847,5 @@ Partial Class ReportSerial
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
 End Class

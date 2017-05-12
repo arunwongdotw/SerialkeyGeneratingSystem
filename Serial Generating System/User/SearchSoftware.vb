@@ -252,6 +252,7 @@ Public Class SearchSoftware
         displayAccountImage(username)
         loadDataTable()
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

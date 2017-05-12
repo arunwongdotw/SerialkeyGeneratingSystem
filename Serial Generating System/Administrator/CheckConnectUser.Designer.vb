@@ -40,11 +40,10 @@ Partial Class CheckConnectUser
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtConnection = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvConnection = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
+        Me.txtConnection = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,11 +61,10 @@ Partial Class CheckConnectUser
         Me.Panel1.Controls.Add(Me.btnHeader)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtConnection)
-        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.dgvConnection)
         Me.Panel1.Controls.Add(Me.tvAdminMenu)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
@@ -95,11 +93,11 @@ Partial Class CheckConnectUser
         '
         'btnCheck
         '
-        Me.btnCheck.Location = New System.Drawing.Point(899, 641)
+        Me.btnCheck.Location = New System.Drawing.Point(980, 580)
         Me.btnCheck.Name = "btnCheck"
         Me.btnCheck.Size = New System.Drawing.Size(75, 23)
         Me.btnCheck.TabIndex = 102
-        Me.btnCheck.Text = "ตรวจสอบ"
+        Me.btnCheck.Text = "Refresh"
         Me.btnCheck.UseVisualStyleBackColor = True
         '
         'pbAccountInfo
@@ -131,7 +129,7 @@ Partial Class CheckConnectUser
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(365, 86)
+        Me.Label5.Location = New System.Drawing.Point(353, 96)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(259, 27)
         Me.Label5.TabIndex = 25
@@ -158,40 +156,18 @@ Partial Class CheckConnectUser
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1258, 632)
+        Me.Label3.Location = New System.Drawing.Point(1211, 535)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(30, 27)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtConnection
-        '
-        Me.txtConnection.BackColor = System.Drawing.Color.White
-        Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConnection.Location = New System.Drawing.Point(1149, 635)
-        Me.txtConnection.Name = "txtConnection"
-        Me.txtConnection.Size = New System.Drawing.Size(92, 29)
-        Me.txtConnection.TabIndex = 15
-        Me.txtConnection.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1090, 613)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(92, 29)
-        Me.TextBox1.TabIndex = 14
-        Me.TextBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(988, 636)
+        Me.Label2.Location = New System.Drawing.Point(976, 535)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 27)
         Me.Label2.TabIndex = 13
@@ -200,6 +176,7 @@ Partial Class CheckConnectUser
         '
         'dgvConnection
         '
+        Me.dgvConnection.AllowUserToAddRows = False
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -209,9 +186,9 @@ Partial Class CheckConnectUser
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvConnection.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvConnection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConnection.Location = New System.Drawing.Point(287, 127)
+        Me.dgvConnection.Location = New System.Drawing.Point(352, 154)
         Me.dgvConnection.Name = "dgvConnection"
-        Me.dgvConnection.Size = New System.Drawing.Size(1012, 483)
+        Me.dgvConnection.Size = New System.Drawing.Size(889, 360)
         Me.dgvConnection.TabIndex = 11
         Me.dgvConnection.TabStop = False
         '
@@ -244,6 +221,18 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
+        'txtConnection
+        '
+        Me.txtConnection.BackColor = System.Drawing.Color.White
+        Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConnection.Location = New System.Drawing.Point(1117, 533)
+        Me.txtConnection.Name = "txtConnection"
+        Me.txtConnection.Size = New System.Drawing.Size(92, 29)
+        Me.txtConnection.TabIndex = 15
+        Me.txtConnection.TabStop = False
+        Me.txtConnection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -267,8 +256,6 @@ Partial Class CheckConnectUser
     Friend WithEvents tvAdminMenu As System.Windows.Forms.TreeView
     Friend WithEvents dgvConnection As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtConnection As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnHeader As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -277,4 +264,5 @@ Partial Class CheckConnectUser
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents btnCheck As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents txtConnection As System.Windows.Forms.TextBox
 End Class

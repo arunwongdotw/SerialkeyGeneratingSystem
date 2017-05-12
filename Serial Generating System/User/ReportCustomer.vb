@@ -24,6 +24,7 @@ Public Class ReportCustomer
         Me.GenerateColumn()
         Me.LoadData()
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

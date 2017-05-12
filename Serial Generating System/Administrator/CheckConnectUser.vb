@@ -47,6 +47,8 @@ Public Class CheckConnectUser
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvAdminMenu.ExpandAll()
+        Dim sender As Object, e As EventArgs
+        BtnCheck_Click(sender, e)
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)
@@ -119,16 +121,17 @@ Public Class CheckConnectUser
             .Columns("computer_name").ReadOnly = True
             .Columns("mac_address").ReadOnly = True
 
-            .Columns("ลำดับ").Width = 60
-            .Columns("emp_id").Width = 120
-            .Columns("computer_name").Width = 200
-            .Columns("mac_address").Width = 200
-            .Columns("create_date").Width = 200
+            .Columns("ลำดับ").Width = 80
+            .Columns("emp_id").Width = 150
+            .Columns("computer_name").Width = 220
+            .Columns("mac_address").Width = 220
+            .Columns("create_date").Width = 220
 
             .Columns("ลำดับ").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("emp_id").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("computer_name").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             .Columns("mac_address").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("create_date").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
         End With

@@ -88,6 +88,7 @@ Public Class ReportSerial
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
         txtContractNo.Select()
         cmbVersion.SelectedIndex = -1
         'dtpExpireDate.MinDate = DateTime.Now
@@ -720,7 +721,16 @@ Public Class ReportSerial
             '    End Using
             'End If
         Else
-        MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
+    End Sub
+
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
