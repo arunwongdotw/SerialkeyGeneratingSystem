@@ -5,6 +5,8 @@ Imports Excel = Microsoft.Office.Interop.Excel
 Public Class ReportSoftware
     Private con As New ConnectDB
 
+
+
     Private Sub loadDataTable()
         Try
             Dim Table As New DataTable
