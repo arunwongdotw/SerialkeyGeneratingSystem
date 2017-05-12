@@ -20,6 +20,7 @@ Public Class CreateSerial
         cmbVersion.SelectedIndex = 0
         dtpExpireDate.MinDate = DateTime.Now
     End Sub
+
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
