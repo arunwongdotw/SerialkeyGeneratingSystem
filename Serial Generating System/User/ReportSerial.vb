@@ -1,6 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports Excel = Microsoft.Office.Interop.Excel
+Imports System.IO
+Imports System.Reflection
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.Text
 
 Public Class ReportSerial
     Private con As New ConnectDB
@@ -129,12 +134,12 @@ Public Class ReportSerial
             Me.dgvSerialKey.RowTemplate.MinimumHeight = 30
 
             Dim Col As New DataGridViewTextBoxColumn
-            Col.HeaderText = "ลำดับที่"
-            Col.Width = 60
-            Col.DataPropertyName = "seq"
-            Col.Name = "seq"
-            Col.ReadOnly = True
-            Me.dgvSerialKey.Columns.Add(Col)
+            'Col.HeaderText = "ลำดับที่"
+            'Col.Width = 60
+            'Col.DataPropertyName = "seq"
+            'Col.Name = "seq"
+            'Col.ReadOnly = True
+            'Me.dgvSerialKey.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ลำดับที่"
@@ -454,10 +459,7 @@ Public Class ReportSerial
             dgvSerialKey.Columns.Clear()
             GenerateColumn()
             dgvSerialKey.DataSource = dt
-
-
-            dgvSerialKey.Columns("seq").Visible = False
-
+            'dgvSerialKey.Columns("seq").Visible = False
             dgvSerialKey.Columns("ลำดับที่").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
             genRowNumber()
             randerColorRow()
@@ -583,11 +585,13 @@ Public Class ReportSerial
         If isPermission("per_print") Then
             Dim SaveFileDialog1 As New SaveFileDialog
             SaveFileDialog1.Title = "Save Excel File"
-            SaveFileDialog1.Filter = "Excel Files (*.xlsx)|*.xlsx"
+            SaveFileDialog1.Filter = "Excel File (*.xlsx)|*.xlsx"
+            'SaveFileDialog1.Filter = "Excel File (*.xlsx)|*.xlsx|PDF File (*.pdf)|*.pdf"
             SaveFileDialog1.ShowDialog()
             If SaveFileDialog1.FileName = "" Then
                 Exit Sub
             End If
+            'If SaveFileDialog1.FilterIndex = 1 Then
             'create an Excel WorkBook
             Dim xls As New Excel.Application
             Dim sheet As Excel.Worksheet
@@ -618,7 +622,6 @@ Public Class ReportSerial
                 Else
                     sheet.Cells(1, j).ColumnWidth = 15
                 End If
-
             Next
             For i = 1 To dgvSerialKey.RowCount
                 For j = 1 To dgvSerialKey.ColumnCount - 1
@@ -628,7 +631,11 @@ Public Class ReportSerial
                         If (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("xxxx")) Then
                             sheet.Cells(i + 1, j) = "ไม่จำกัด"
                         ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
-                            sheet.Cells(i + 1, j) = "มี"
+                            If (dgvSerialKey.Columns(j).HeaderText.ToString.Equals("ลำดับที่")) Then
+                                sheet.Cells(i + 1, j) = "1"
+                            Else
+                                sheet.Cells(i + 1, j) = "มี"
+                            End If
                         ElseIf (dgvSerialKey.Rows(i - 1).Cells(j).Value.ToString.Equals("0")) Then
                             sheet.Cells(i + 1, j) = "ไม่มี"
                         Else
@@ -642,9 +649,57 @@ Public Class ReportSerial
             xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
             xls.Workbooks.Close()
             xls.Quit()
-        Else
-            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
-        End If
+            'Else
+            '    'Creating iTextSharp Table from the DataTable data
+            '    Dim pdfTable As New PdfPTable(dgvSerialKey.ColumnCount)
+            '    pdfTable.DefaultCell.Padding = 10
+            '    pdfTable.WidthPercentage = 100
+            '    pdfTable.HorizontalAlignment = Element.ALIGN_MIDDLE
+            '    pdfTable.DefaultCell.BorderWidth = 1
+            '    Dim yourFont As BaseFont = BaseFont.CreateFont("C:\Users\Arunwong.W\Desktop\Backup\Serial Generating System\Resources\Fonts\tahoma.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED)
+            '    Dim mainFont As New Font(yourFont, 10)
 
+            '    'Adding Header row
+            '    For Each column As DataGridViewColumn In dgvSerialKey.Columns
+            '        Dim cell As New PdfPCell(New Phrase(column.HeaderText.ToString, mainFont))
+            '        cell.BackgroundColor = New iTextSharp.text.BaseColor(240, 240, 240)
+            '        pdfTable.AddCell(cell)
+            '    Next
+
+            '    'Adding DataRow
+            '    For Each row As DataGridViewRow In dgvSerialKey.Rows
+            '        For Each cell As DataGridViewCell In row.Cells
+            '            If (cell.Value Is Nothing) Then
+            '                pdfTable.AddCell(New Phrase("", mainFont))
+            '            Else
+            '                If (cell.Value.ToString.Equals("1")) Then
+            '                    pdfTable.AddCell(New Phrase("มี", mainFont))
+            '                ElseIf (cell.Value.ToString.Equals("0")) Then
+            '                    pdfTable.AddCell(New Phrase("ไม่มี", mainFont))
+            '                Else
+            '                    pdfTable.AddCell(New Phrase(cell.Value.ToString, mainFont))
+            '                End If
+            '            End If
+            '        Next
+            '    Next
+
+            '    'Exporting to PDF
+            '    Dim folderPath As String = Path.GetFullPath(System.IO.Path.GetDirectoryName(SaveFileDialog1.FileName))
+            '    If Not Directory.Exists(folderPath) Then
+            '        Directory.CreateDirectory(folderPath)
+            '    End If
+            '    Using stream As New FileStream(folderPath & "\" & Path.GetFileName(SaveFileDialog1.FileName), FileMode.Create)
+            '        Dim pdfDoc As New Document()
+            '        PdfWriter.GetInstance(pdfDoc, stream)
+            '        pdfDoc.SetPageSize(PageSize.A2.Rotate())
+            '        pdfDoc.Open()
+            '        pdfDoc.Add(pdfTable)
+            '        pdfDoc.Close()
+            '        stream.Close()
+            '    End Using
+            'End If
+        Else
+        MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+        End If
     End Sub
 End Class
