@@ -289,12 +289,13 @@ Public Class SearchUser
         checkboxPrint.FlatStyle = FlatStyle.Flat
         checkboxPrint.DefaultCellStyle.ForeColor = Color.Black
         checkboxPrint.ReadOnly = True
+        checkboxPrint.Width = 150
         dgvSearchUser.Columns.Add(checkboxPrint)
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
         btnEdit.Text = "แก้ไข"
         btnEdit.Name = "btnEdit"
-        btnEdit.Width = 70
+        btnEdit.Width = 50
         btnEdit.UseColumnTextForButtonValue = True
         dgvSearchUser.Columns.Add(btnEdit)
         dgvSearchUser.Columns("btnEdit").DisplayIndex = 0
@@ -302,7 +303,7 @@ Public Class SearchUser
         btnDelete.HeaderText = ""
         btnDelete.Text = "ลบ"
         btnDelete.Name = "btnDelete"
-        btnDelete.Width = 70
+        btnDelete.Width = 50
         btnDelete.UseColumnTextForButtonValue = True
         dgvSearchUser.Columns.Add(btnDelete)
         dgvSearchUser.Columns("btnDelete").DisplayIndex = 1

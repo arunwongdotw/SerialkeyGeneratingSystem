@@ -39,12 +39,12 @@ Partial Class CreateCustomer
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode14})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateCustomer))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtcellphone = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -93,20 +93,17 @@ Partial Class CreateCustomer
         Me.btnAttachCustomerImage = New System.Windows.Forms.Button()
         Me.pbAttachCustomerImage = New System.Windows.Forms.PictureBox()
         Me.btnHeader = New System.Windows.Forms.Button()
-        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
         Me.ofdAttachCustomerImage = New System.Windows.Forms.OpenFileDialog()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAttachCustomerImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -129,6 +126,27 @@ Partial Class CreateCustomer
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 2
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Orange
+        Me.Panel5.Controls.Add(Me.btnLogOut)
+        Me.Panel5.Location = New System.Drawing.Point(0, 602)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(270, 100)
+        Me.Panel5.TabIndex = 129
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 22
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'pbAccountInfo
         '
@@ -159,8 +177,6 @@ Partial Class CreateCustomer
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.txtcellphone)
         Me.Panel2.Controls.Add(Me.Label9)
@@ -188,42 +204,21 @@ Partial Class CreateCustomer
         Me.Label7.TabIndex = 88
         Me.Label7.Text = "ข้อมูลผู้ติดต่อ"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(786, 114)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(115, 25)
-        Me.Label5.TabIndex = 102
-        Me.Label5.Text = "อย่างน้อย 1 เบอร์"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(765, 87)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 101
-        Me.PictureBox2.TabStop = False
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 14.75!)
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(781, 89)
+        Me.Label8.Location = New System.Drawing.Point(771, 81)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(165, 25)
+        Me.Label8.Size = New System.Drawing.Size(17, 25)
         Me.Label8.TabIndex = 100
-        Me.Label8.Text = "*กรุณากรอกเบอร์โทรศัพท์"
+        Me.Label8.Text = "*"
         '
         'txtcellphone
         '
         Me.txtcellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtcellphone.Location = New System.Drawing.Point(515, 118)
+        Me.txtcellphone.Location = New System.Drawing.Point(515, 76)
         Me.txtcellphone.Name = "txtcellphone"
         Me.txtcellphone.Size = New System.Drawing.Size(250, 36)
         Me.txtcellphone.TabIndex = 98
@@ -231,7 +226,7 @@ Partial Class CreateCustomer
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(400, 120)
+        Me.Label9.Location = New System.Drawing.Point(400, 78)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(110, 26)
         Me.Label9.TabIndex = 99
@@ -258,7 +253,7 @@ Partial Class CreateCustomer
         'txtPhone
         '
         Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPhone.Location = New System.Drawing.Point(515, 76)
+        Me.txtPhone.Location = New System.Drawing.Point(515, 118)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(250, 36)
         Me.txtPhone.TabIndex = 94
@@ -275,7 +270,7 @@ Partial Class CreateCustomer
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(438, 78)
+        Me.lblPhone.Location = New System.Drawing.Point(438, 120)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(72, 26)
         Me.lblPhone.TabIndex = 96
@@ -686,18 +681,6 @@ Partial Class CreateCustomer
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
         '
-        'btnLogOut
-        '
-        Me.btnLogOut.BackColor = System.Drawing.Color.White
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 22
-        Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = False
-        '
         'btnAdd
         '
         Me.btnAdd.BackColor = System.Drawing.Color.DarkOrange
@@ -772,15 +755,6 @@ Partial Class CreateCustomer
         '
         Me.ofdAttachCustomerImage.FileName = "AttachCustomerImage"
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Orange
-        Me.Panel5.Controls.Add(Me.btnLogOut)
-        Me.Panel5.Location = New System.Drawing.Point(0, 602)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(270, 100)
-        Me.Panel5.TabIndex = 129
-        '
         'CreateCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -793,16 +767,15 @@ Partial Class CreateCustomer
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เพิ่มข้อมูลลูกค้า - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.pbAttachCustomerImage, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -855,9 +828,6 @@ Partial Class CreateCustomer
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachCustomerImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtcellphone As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
@@ -867,4 +837,5 @@ Partial Class CreateCustomer
     Friend WithEvents lblPhone As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
