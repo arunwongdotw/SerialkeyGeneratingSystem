@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClassLibrary1">
-      <HintPath>bin\ClassLibrary1.dll</HintPath>
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\itextsharp-dll-core\itextsharp.dll</HintPath>

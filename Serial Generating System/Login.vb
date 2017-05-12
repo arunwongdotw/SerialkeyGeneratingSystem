@@ -80,4 +80,18 @@ Public Class Login
             idConnection = sqlread.GetValue(0)
         End If
     End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.LoadData()
+        End If
+    End Sub
+
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
 End Class

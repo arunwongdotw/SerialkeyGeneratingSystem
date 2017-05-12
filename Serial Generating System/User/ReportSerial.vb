@@ -724,4 +724,13 @@ Public Class ReportSerial
             MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
     End Sub
+
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim sql = " update sgs.dbo.connection set active_flag = 0 where id = " & Login.idConnection
+        con.save(sql)
+        Dim frm As New Login
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class
