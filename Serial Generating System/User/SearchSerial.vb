@@ -85,6 +85,7 @@ Public Class SearchSerial
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
         txtContractNo.Select()
         cmbVersion.SelectedIndex = -1
         'dtpExpireDate.MinDate = DateTime.Now

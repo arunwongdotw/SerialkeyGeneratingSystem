@@ -17,6 +17,7 @@ Public Class CreateSerial
         Dim password As String = Login.pass
         txtAccountInfo.Text = username.ToString
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
         cmbVersion.SelectedIndex = 0
         dtpExpireDate.MinDate = DateTime.Now
     End Sub
@@ -29,6 +30,7 @@ Public Class CreateSerial
         End If
         Return False
     End Function
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -485,25 +487,6 @@ Public Class CreateSerial
         Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
         MsgBox("ซีเรียลคีย์ที่ผ่านการเข้ารหัส MD5 ที่ได้คือ " & serialMD5 & " ความยาวจำนวน = " & serialMD5.Length)
 
-        'If Not System.IO.File.Exists("C:\Users\Arunwong.W\Desktop\test.txt") = True Then
-        '    Dim file As System.IO.FileStream
-        '    file = System.IO.File.Create("C:\Users\Arunwong.W\Desktop\test.txt")
-        '    file.Close()
-        'End If
-
-        Dim myStream As Stream
-        Dim saveFileDialog1 As New SaveFileDialog()
-        saveFileDialog1.Filter = "dll files (*.dll)|*.dll|All files (*.*)|*.*"
-        saveFileDialog1.FilterIndex = 2
-        saveFileDialog1.RestoreDirectory = True
-
-        If saveFileDialog1.ShowDialog() = DialogResult.OK Then
-            myStream = saveFileDialog1.OpenFile()
-            If (myStream IsNot Nothing) Then
-                ' Code to write the stream goes here.
-                myStream.Close()
-            End If
-        End If
     End Sub
 
     Private Function ValidateDataInput() As Boolean

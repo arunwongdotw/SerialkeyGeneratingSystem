@@ -88,6 +88,7 @@ Public Class ReportSerial
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
         txtContractNo.Select()
         cmbVersion.SelectedIndex = -1
         'dtpExpireDate.MinDate = DateTime.Now
@@ -720,7 +721,7 @@ Public Class ReportSerial
             '    End Using
             'End If
         Else
-        MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
+            MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
     End Sub
 End Class

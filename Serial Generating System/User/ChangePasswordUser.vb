@@ -31,6 +31,7 @@ Public Class ChangePasswordUser
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

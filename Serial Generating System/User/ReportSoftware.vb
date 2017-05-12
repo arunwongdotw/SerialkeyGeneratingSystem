@@ -216,6 +216,7 @@ Public Class ReportSoftware
         displayAccountImage(username)
         loadDataTable()
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

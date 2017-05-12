@@ -133,6 +133,7 @@ Public Class CreateCustomer
         displayAccountImage(username)
         txtCorpName.Select()
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)

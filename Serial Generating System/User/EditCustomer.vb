@@ -29,6 +29,7 @@ Public Class EditCustomer
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvUserMenu.ExpandAll()
+        tvUserMenu.Nodes(0).EnsureVisible()
         loadData()
         If sqlReader.Read Then
             initialData()
