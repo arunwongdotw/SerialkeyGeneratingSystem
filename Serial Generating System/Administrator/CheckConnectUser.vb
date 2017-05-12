@@ -47,6 +47,8 @@ Public Class CheckConnectUser
         txtAccountInfo.Text = username.ToString
         displayAccountImage(username)
         tvAdminMenu.ExpandAll()
+        Dim sender As Object, e As EventArgs
+        BtnCheck_Click(sender, e)
     End Sub
 
     Private Sub displayAccountImage(ByVal username As String)
