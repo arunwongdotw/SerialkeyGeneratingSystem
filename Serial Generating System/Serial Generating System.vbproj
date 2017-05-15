@@ -457,6 +457,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bgLoginVersion2.png" />
+    <Content Include="bin\Debug\ClassLibrary1.dll" />
+    <Content Include="bin\Debug\ClassLibrary1.pdb" />
+    <Content Include="bin\Debug\ClassLibrary1.xml" />
     <Content Include="bin\Debug\itextsharp.dll" />
     <Content Include="bin\Debug\itextsharp.xml" />
     <Content Include="skgsiconwithnamenohexaversion_128.ico" />
