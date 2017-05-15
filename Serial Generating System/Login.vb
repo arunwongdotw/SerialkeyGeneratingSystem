@@ -87,4 +87,8 @@ Public Class Login
         End If
     End Sub
 
+    Private Sub LoginLoad(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 End Class
