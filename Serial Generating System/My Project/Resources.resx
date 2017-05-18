@@ -157,19 +157,22 @@
   <data name="bgBlurBlueNewNoLogoVersion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlurBlueNewNoLogoVersion21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bgLoginVersion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgLoginVersion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bgLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgBlurColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgBlurColor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SKGSIconHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SKGSIconHeader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bgGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgGrey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bgLoginVersion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bgLoginVersion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SKGSIconHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SKGSIconHeader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgLoginND" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgLoginND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

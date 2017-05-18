@@ -462,6 +462,7 @@
     <Content Include="bin\Debug\ClassLibrary1.xml" />
     <Content Include="bin\Debug\itextsharp.dll" />
     <Content Include="bin\Debug\itextsharp.xml" />
+    <None Include="Resources\bgLoginND.png" />
     <Content Include="skgsiconwithnamenohexaversion_128.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
