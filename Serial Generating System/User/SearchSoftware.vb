@@ -126,31 +126,43 @@ Public Class SearchSoftware
         checkboxQualityControl.HeaderText = "ออปชันควบคุมคุณภาพ"
         checkboxQualityControl.Name = "chbQualityControl"
         checkboxQualityControl.ReadOnly = True
+        checkboxQualityControl.FlatStyle = FlatStyle.Flat
+        checkboxQualityControl.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxQualityControl)
         Dim checkboxWarehouseManagement As New DataGridViewCheckBoxColumn
         checkboxWarehouseManagement.HeaderText = "ออปชันการจัดการโรงงาน"
         checkboxWarehouseManagement.Name = "chbWarehouseManagement"
         checkboxWarehouseManagement.ReadOnly = True
+        checkboxWarehouseManagement.FlatStyle = FlatStyle.Flat
+        checkboxWarehouseManagement.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxWarehouseManagement)
         Dim checkboxThai As New DataGridViewCheckBoxColumn
         checkboxThai.HeaderText = "ภาษาไทย"
         checkboxThai.Name = "chbThai"
         checkboxThai.ReadOnly = True
+        checkboxThai.FlatStyle = FlatStyle.Flat
+        checkboxThai.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxThai)
         Dim checkboxEnglish As New DataGridViewCheckBoxColumn
         checkboxEnglish.HeaderText = "ภาษาอังกฤษ"
         checkboxEnglish.Name = "chbEnglish"
         checkboxEnglish.ReadOnly = True
+        checkboxEnglish.FlatStyle = FlatStyle.Flat
+        checkboxEnglish.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxEnglish)
         Dim checkboxChinese As New DataGridViewCheckBoxColumn
         checkboxChinese.HeaderText = "ภาษาจีน"
         checkboxChinese.Name = "chbChinese"
         checkboxChinese.ReadOnly = True
+        checkboxChinese.FlatStyle = FlatStyle.Flat
+        checkboxChinese.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxChinese)
         Dim checkboxJapanese As New DataGridViewCheckBoxColumn
         checkboxJapanese.HeaderText = "ภาษาญี่ปุ่น"
         checkboxJapanese.Name = "chbJapanese"
         checkboxJapanese.ReadOnly = True
+        checkboxJapanese.FlatStyle = FlatStyle.Flat
+        checkboxJapanese.DefaultCellStyle.ForeColor = Color.Gray
         dgvSearchProduct.Columns.Add(checkboxJapanese)
         Dim btnEdit As New DataGridViewButtonColumn()
         btnEdit.HeaderText = ""
