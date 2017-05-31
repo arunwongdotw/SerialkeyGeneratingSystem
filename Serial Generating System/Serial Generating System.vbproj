@@ -156,12 +156,6 @@
     <Compile Include="SearchOther\SearchProductOther.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test\testSaveDLL.Designer.vb">
-      <DependentUpon>testSaveDLL.vb</DependentUpon>
-    </Compile>
-    <Compile Include="test\testSaveDLL.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="User\EditSoftware.Designer.vb">
       <DependentUpon>EditSoftware.vb</DependentUpon>
     </Compile>
@@ -202,12 +196,6 @@
       <DependentUpon>ReportSerial.vb</DependentUpon>
     </Compile>
     <Compile Include="User\ReportSerial.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test\testDLL.Designer.vb">
-      <DependentUpon>testDLL.vb</DependentUpon>
-    </Compile>
-    <Compile Include="test\testDLL.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -302,9 +290,6 @@
     <EmbeddedResource Include="SearchOther\SearchProductOther.resx">
       <DependentUpon>SearchProductOther.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test\testSaveDLL.resx">
-      <DependentUpon>testSaveDLL.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\EditSoftware.resx">
       <DependentUpon>EditSoftware.vb</DependentUpon>
     </EmbeddedResource>
@@ -325,9 +310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\ReportSerial.resx">
       <DependentUpon>ReportSerial.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test\testDLL.resx">
-      <DependentUpon>testDLL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
