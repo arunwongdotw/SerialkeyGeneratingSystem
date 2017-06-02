@@ -219,7 +219,7 @@ Partial Class CreateSerial
         Me.btnCopySerial.FlatAppearance.BorderSize = 0
         Me.btnCopySerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCopySerial.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopySerial.Location = New System.Drawing.Point(821, 12)
+        Me.btnCopySerial.Location = New System.Drawing.Point(821, 54)
         Me.btnCopySerial.Name = "btnCopySerial"
         Me.btnCopySerial.Size = New System.Drawing.Size(129, 32)
         Me.btnCopySerial.TabIndex = 122
@@ -234,7 +234,7 @@ Partial Class CreateSerial
         Me.btnCopyInfo.FlatAppearance.BorderSize = 0
         Me.btnCopyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCopyInfo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCopyInfo.Location = New System.Drawing.Point(821, 54)
+        Me.btnCopyInfo.Location = New System.Drawing.Point(821, 12)
         Me.btnCopyInfo.Name = "btnCopyInfo"
         Me.btnCopyInfo.Size = New System.Drawing.Size(129, 33)
         Me.btnCopyInfo.TabIndex = 78
@@ -274,7 +274,7 @@ Partial Class CreateSerial
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(82, 57)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 26)
+        Me.Label5.Size = New System.Drawing.Size(111, 27)
         Me.Label5.TabIndex = 116
         Me.Label5.Text = "ซีเรียลคีย์ที่ได้ :"
         '
@@ -284,7 +284,7 @@ Partial Class CreateSerial
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(0, 15)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(185, 26)
+        Me.Label3.Size = New System.Drawing.Size(193, 27)
         Me.Label3.TabIndex = 114
         Me.Label3.Text = "ความหมายของซีเรียลคีย์ :"
         '
@@ -317,7 +317,7 @@ Partial Class CreateSerial
         Me.txtSoftware_s_name.AutoSize = True
         Me.txtSoftware_s_name.Location = New System.Drawing.Point(778, 78)
         Me.txtSoftware_s_name.Name = "txtSoftware_s_name"
-        Me.txtSoftware_s_name.Size = New System.Drawing.Size(36, 26)
+        Me.txtSoftware_s_name.Size = New System.Drawing.Size(36, 27)
         Me.txtSoftware_s_name.TabIndex = 80
         Me.txtSoftware_s_name.Text = "xxx"
         Me.txtSoftware_s_name.Visible = False
@@ -327,7 +327,7 @@ Partial Class CreateSerial
         Me.txtSoftwareName.AutoSize = True
         Me.txtSoftwareName.Location = New System.Drawing.Point(191, 78)
         Me.txtSoftwareName.Name = "txtSoftwareName"
-        Me.txtSoftwareName.Size = New System.Drawing.Size(36, 26)
+        Me.txtSoftwareName.Size = New System.Drawing.Size(36, 27)
         Me.txtSoftwareName.TabIndex = 81
         Me.txtSoftwareName.Text = "xxx"
         Me.txtSoftwareName.Visible = False
@@ -339,7 +339,7 @@ Partial Class CreateSerial
         Me.chbWM.Enabled = False
         Me.chbWM.Location = New System.Drawing.Point(191, 107)
         Me.chbWM.Name = "chbWM"
-        Me.chbWM.Size = New System.Drawing.Size(201, 30)
+        Me.chbWM.Size = New System.Drawing.Size(198, 31)
         Me.chbWM.TabIndex = 113
         Me.chbWM.Text = "Warehouse Management"
         Me.chbWM.UseVisualStyleBackColor = False
@@ -350,7 +350,7 @@ Partial Class CreateSerial
         Me.chbQC.Enabled = False
         Me.chbQC.Location = New System.Drawing.Point(395, 107)
         Me.chbQC.Name = "chbQC"
-        Me.chbQC.Size = New System.Drawing.Size(134, 30)
+        Me.chbQC.Size = New System.Drawing.Size(134, 31)
         Me.chbQC.TabIndex = 112
         Me.chbQC.Text = "Quality Control"
         Me.chbQC.UseVisualStyleBackColor = True
@@ -360,7 +360,7 @@ Partial Class CreateSerial
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(113, 105)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(71, 26)
+        Me.Label6.Size = New System.Drawing.Size(72, 27)
         Me.Label6.TabIndex = 111
         Me.Label6.Text = "ออฟชัน :"
         '
@@ -369,7 +369,7 @@ Partial Class CreateSerial
         Me.txtBrand_s_name.AutoSize = True
         Me.txtBrand_s_name.Location = New System.Drawing.Point(778, 51)
         Me.txtBrand_s_name.Name = "txtBrand_s_name"
-        Me.txtBrand_s_name.Size = New System.Drawing.Size(36, 26)
+        Me.txtBrand_s_name.Size = New System.Drawing.Size(36, 27)
         Me.txtBrand_s_name.TabIndex = 77
         Me.txtBrand_s_name.Text = "xxx"
         Me.txtBrand_s_name.Visible = False
@@ -379,7 +379,7 @@ Partial Class CreateSerial
         Me.txtBrandName.AutoSize = True
         Me.txtBrandName.Location = New System.Drawing.Point(191, 51)
         Me.txtBrandName.Name = "txtBrandName"
-        Me.txtBrandName.Size = New System.Drawing.Size(36, 26)
+        Me.txtBrandName.Size = New System.Drawing.Size(36, 27)
         Me.txtBrandName.TabIndex = 78
         Me.txtBrandName.Text = "xxx"
         Me.txtBrandName.Visible = False
@@ -389,7 +389,7 @@ Partial Class CreateSerial
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(648, 78)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(123, 26)
+        Me.Label4.Size = New System.Drawing.Size(124, 27)
         Me.Label4.TabIndex = 108
         Me.Label4.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -398,7 +398,7 @@ Partial Class CreateSerial
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(670, 52)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 26)
+        Me.Label2.Size = New System.Drawing.Size(102, 27)
         Me.Label2.TabIndex = 105
         Me.Label2.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -435,7 +435,7 @@ Partial Class CreateSerial
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 34)
+        Me.Label1.Size = New System.Drawing.Size(167, 34)
         Me.Label1.TabIndex = 100
         Me.Label1.Text = "ข้อมูลซอฟต์แวร์ "
         '
@@ -444,7 +444,7 @@ Partial Class CreateSerial
         Me.lblBrandSoftware.AutoSize = True
         Me.lblBrandSoftware.Location = New System.Drawing.Point(102, 51)
         Me.lblBrandSoftware.Name = "lblBrandSoftware"
-        Me.lblBrandSoftware.Size = New System.Drawing.Size(81, 26)
+        Me.lblBrandSoftware.Size = New System.Drawing.Size(83, 27)
         Me.lblBrandSoftware.TabIndex = 96
         Me.lblBrandSoftware.Text = "ชื่อแบรนด์ :"
         '
@@ -453,7 +453,7 @@ Partial Class CreateSerial
         Me.lblSoftwareName.AutoSize = True
         Me.lblSoftwareName.Location = New System.Drawing.Point(80, 78)
         Me.lblSoftwareName.Name = "lblSoftwareName"
-        Me.lblSoftwareName.Size = New System.Drawing.Size(104, 26)
+        Me.lblSoftwareName.Size = New System.Drawing.Size(105, 27)
         Me.lblSoftwareName.TabIndex = 98
         Me.lblSoftwareName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -483,7 +483,7 @@ Partial Class CreateSerial
         Me.lblInfoCustomer.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfoCustomer.Location = New System.Drawing.Point(12, 10)
         Me.lblInfoCustomer.Name = "lblInfoCustomer"
-        Me.lblInfoCustomer.Size = New System.Drawing.Size(158, 34)
+        Me.lblInfoCustomer.Size = New System.Drawing.Size(166, 34)
         Me.lblInfoCustomer.TabIndex = 67
         Me.lblInfoCustomer.Text = "ข้อมูลลูกค้า     "
         '
@@ -492,7 +492,7 @@ Partial Class CreateSerial
         Me.txtCorpSubName.AutoSize = True
         Me.txtCorpSubName.Location = New System.Drawing.Point(778, 47)
         Me.txtCorpSubName.Name = "txtCorpSubName"
-        Me.txtCorpSubName.Size = New System.Drawing.Size(36, 26)
+        Me.txtCorpSubName.Size = New System.Drawing.Size(36, 27)
         Me.txtCorpSubName.TabIndex = 75
         Me.txtCorpSubName.Text = "xxx"
         Me.txtCorpSubName.Visible = False
@@ -502,7 +502,7 @@ Partial Class CreateSerial
         Me.txtGroupCorp.AutoSize = True
         Me.txtGroupCorp.Location = New System.Drawing.Point(192, 72)
         Me.txtGroupCorp.Name = "txtGroupCorp"
-        Me.txtGroupCorp.Size = New System.Drawing.Size(36, 26)
+        Me.txtGroupCorp.Size = New System.Drawing.Size(36, 27)
         Me.txtGroupCorp.TabIndex = 74
         Me.txtGroupCorp.Text = "xxx"
         Me.txtGroupCorp.Visible = False
@@ -512,7 +512,7 @@ Partial Class CreateSerial
         Me.txtCorpName.AutoSize = True
         Me.txtCorpName.Location = New System.Drawing.Point(191, 47)
         Me.txtCorpName.Name = "txtCorpName"
-        Me.txtCorpName.Size = New System.Drawing.Size(36, 26)
+        Me.txtCorpName.Size = New System.Drawing.Size(36, 27)
         Me.txtCorpName.TabIndex = 73
         Me.txtCorpName.Text = "xxx"
         Me.txtCorpName.Visible = False
@@ -548,7 +548,7 @@ Partial Class CreateSerial
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(101, 72)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(84, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
         Me.lblGroupCorp.TabIndex = 71
         Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
         '
@@ -557,7 +557,7 @@ Partial Class CreateSerial
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(109, 47)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(75, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
         Me.lblCorpName.TabIndex = 67
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
@@ -566,7 +566,7 @@ Partial Class CreateSerial
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(677, 47)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(94, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
         Me.lblCorpSubName.TabIndex = 68
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
         '
@@ -617,7 +617,7 @@ Partial Class CreateSerial
         Me.chbForever.AutoSize = True
         Me.chbForever.Location = New System.Drawing.Point(887, 50)
         Me.chbForever.Name = "chbForever"
-        Me.chbForever.Size = New System.Drawing.Size(65, 30)
+        Me.chbForever.Size = New System.Drawing.Size(65, 31)
         Me.chbForever.TabIndex = 118
         Me.chbForever.Text = "ถาวร"
         Me.chbForever.UseVisualStyleBackColor = True
@@ -640,7 +640,7 @@ Partial Class CreateSerial
         Me.chbEnglish.AutoSize = True
         Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 87
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -650,7 +650,7 @@ Partial Class CreateSerial
         Me.chbThai.AutoSize = True
         Me.chbThai.Location = New System.Drawing.Point(82, 3)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 86
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -660,7 +660,7 @@ Partial Class CreateSerial
         Me.chbChinese.AutoSize = True
         Me.chbChinese.Location = New System.Drawing.Point(135, 3)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 88
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -670,7 +670,7 @@ Partial Class CreateSerial
         Me.chbJapan.AutoSize = True
         Me.chbJapan.Location = New System.Drawing.Point(186, 3)
         Me.chbJapan.Name = "chbJapan"
-        Me.chbJapan.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapan.Size = New System.Drawing.Size(63, 31)
         Me.chbJapan.TabIndex = 89
         Me.chbJapan.Text = "ญี่ปุ่น"
         Me.chbJapan.UseVisualStyleBackColor = True
@@ -680,7 +680,7 @@ Partial Class CreateSerial
         Me.chbUnlimit.AutoSize = True
         Me.chbUnlimit.Location = New System.Drawing.Point(387, 94)
         Me.chbUnlimit.Name = "chbUnlimit"
-        Me.chbUnlimit.Size = New System.Drawing.Size(79, 30)
+        Me.chbUnlimit.Size = New System.Drawing.Size(79, 31)
         Me.chbUnlimit.TabIndex = 100
         Me.chbUnlimit.Text = "ไม่จำกัด"
         Me.chbUnlimit.UseVisualStyleBackColor = True
@@ -701,7 +701,7 @@ Partial Class CreateSerial
         Me.lblSerialKey.Font = New System.Drawing.Font("Thai Sans Lite", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSerialKey.Location = New System.Drawing.Point(12, 9)
         Me.lblSerialKey.Name = "lblSerialKey"
-        Me.lblSerialKey.Size = New System.Drawing.Size(155, 34)
+        Me.lblSerialKey.Size = New System.Drawing.Size(163, 34)
         Me.lblSerialKey.TabIndex = 95
         Me.lblSerialKey.Text = "ซีเรียลคีย์       "
         '
@@ -713,7 +713,7 @@ Partial Class CreateSerial
         Me.lblOptionLanguage.ForeColor = System.Drawing.Color.Red
         Me.lblOptionLanguage.Location = New System.Drawing.Point(612, 127)
         Me.lblOptionLanguage.Name = "lblOptionLanguage"
-        Me.lblOptionLanguage.Size = New System.Drawing.Size(153, 24)
+        Me.lblOptionLanguage.Size = New System.Drawing.Size(152, 24)
         Me.lblOptionLanguage.TabIndex = 98
         Me.lblOptionLanguage.Text = "* เลือกอย่างน้อย 1 ภาษา"
         '
@@ -734,7 +734,7 @@ Partial Class CreateSerial
         Me.Label18.ForeColor = System.Drawing.Color.Red
         Me.Label18.Location = New System.Drawing.Point(322, 138)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(18, 26)
+        Me.Label18.Size = New System.Drawing.Size(18, 27)
         Me.Label18.TabIndex = 96
         Me.Label18.Text = "*"
         '
@@ -744,7 +744,7 @@ Partial Class CreateSerial
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(863, 52)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 26)
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 94
         Me.Label17.Text = "*"
         '
@@ -761,7 +761,7 @@ Partial Class CreateSerial
         Me.lblContractNumber.AutoSize = True
         Me.lblContractNumber.Location = New System.Drawing.Point(61, 53)
         Me.lblContractNumber.Name = "lblContractNumber"
-        Me.lblContractNumber.Size = New System.Drawing.Size(123, 26)
+        Me.lblContractNumber.Size = New System.Drawing.Size(124, 27)
         Me.lblContractNumber.TabIndex = 92
         Me.lblContractNumber.Text = "หมายเลขสัญญา :"
         '
@@ -771,7 +771,7 @@ Partial Class CreateSerial
         Me.cmbVersion.Items.AddRange(New Object() {"Demo", "Real", "Test"})
         Me.cmbVersion.Location = New System.Drawing.Point(191, 135)
         Me.cmbVersion.Name = "cmbVersion"
-        Me.cmbVersion.Size = New System.Drawing.Size(125, 34)
+        Me.cmbVersion.Size = New System.Drawing.Size(125, 35)
         Me.cmbVersion.TabIndex = 91
         Me.cmbVersion.Text = "Demo"
         '
@@ -780,7 +780,7 @@ Partial Class CreateSerial
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(116, 138)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(68, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(69, 27)
         Me.lblVersion.TabIndex = 90
         Me.lblVersion.Text = "เวอร์ชัน :"
         '
@@ -797,7 +797,7 @@ Partial Class CreateSerial
         Me.lblAmountUser.AutoSize = True
         Me.lblAmountUser.Location = New System.Drawing.Point(6, 95)
         Me.lblAmountUser.Name = "lblAmountUser"
-        Me.lblAmountUser.Size = New System.Drawing.Size(177, 26)
+        Me.lblAmountUser.Size = New System.Drawing.Size(179, 27)
         Me.lblAmountUser.TabIndex = 81
         Me.lblAmountUser.Text = "จำนวนผู้ใช้งานซอฟต์แวร์ :"
         '
@@ -806,7 +806,7 @@ Partial Class CreateSerial
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(552, 95)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 80
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -815,7 +815,7 @@ Partial Class CreateSerial
         Me.lblExpireDate.AutoSize = True
         Me.lblExpireDate.Location = New System.Drawing.Point(515, 51)
         Me.lblExpireDate.Name = "lblExpireDate"
-        Me.lblExpireDate.Size = New System.Drawing.Size(93, 26)
+        Me.lblExpireDate.Size = New System.Drawing.Size(94, 27)
         Me.lblExpireDate.TabIndex = 78
         Me.lblExpireDate.Text = "วันหมดอายุ :"
         '
