@@ -80,7 +80,7 @@ Public Class SearchUser
         txtEmail.Clear()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         clearTxtBox()
         loadDataTable()
     End Sub
@@ -154,6 +154,7 @@ Public Class SearchUser
         checkTextSingle(txtEmployeeId)
         loadDataTable()
     End Sub
+
     Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
         checkTextSingle(txtFirstname)
         loadDataTable()
