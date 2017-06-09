@@ -240,7 +240,7 @@ Public Class EditCustomer
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MsgBox("ไม่สามารถกรอกตัวเลขหรือตัวอักษรพิเศษได้")
+                MsgBox("จังหวัดต้องเป็นภาษอังกฤษหรือภาษาไทย")
         End Select
     End Sub
 
@@ -303,7 +303,7 @@ Public Class EditCustomer
         End If
     End Sub
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -337,6 +337,7 @@ Public Class EditCustomer
         End If
         pbAttachNewCustomerImage.ImageLocation = ImagePath
     End Sub
+
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
         Dim sqlread As SqlDataReader = con.query(strQuery)
@@ -345,6 +346,7 @@ Public Class EditCustomer
         End If
         Return False
     End Function
+
     Private Sub tvUserMenu_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvUserMenu.AfterSelect
         Try
             Dim tn As TreeNode = Me.tvUserMenu.SelectedNode
@@ -444,5 +446,27 @@ Public Class EditCustomer
         Dim frm As New Login
         frm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub txtPostalCode_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtPostalCode.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("รหัสไปรษณีย์ต้องเป็นตัวเลข")
+        End Select
+    End Sub
+
+    Private Sub txtFirstName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("ชื่อต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        End Select
     End Sub
 End Class
