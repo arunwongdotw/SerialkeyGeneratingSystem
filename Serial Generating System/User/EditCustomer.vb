@@ -150,8 +150,8 @@ Public Class EditCustomer
         ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             Return False
-        ElseIf txtPhone.Text Is String.Empty And txtcellphone.Text Is String.Empty Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+        ElseIf txtcellphone.Text Is String.Empty Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
             Return False
         ElseIf txtPostalCode.Text Is String.Empty Then
             MsgBox("กรุณากรอกรหัสไปรษณีย์")
@@ -467,6 +467,28 @@ Public Class EditCustomer
             Case Else
                 e.Handled = True
                 MsgBox("ชื่อต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        End Select
+    End Sub
+
+    Private Sub txtLastName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122, 8, 13, 32, 46, 161 To 240
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("นามสกุลต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        End Select
+    End Sub
+
+    Private Sub txtcellphone_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("เบอร์โทรศัพท์มือถือต้องเป็นตัวเลข")
         End Select
     End Sub
 End Class
