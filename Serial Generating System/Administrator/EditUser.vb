@@ -326,55 +326,11 @@ Public Class EditUser
         End Select
     End Sub
 
-    Private Sub txtEmpID_correct()
-        lblMsgEmpId.Visible = True
-        pbEmpId.Visible = True
-        pbEmpId.Image = Nothing
-        pbEmpId.BackgroundImage = My.Resources.correct
-        lblMsgEmpId.ForeColor = Color.ForestGreen
-        lblMsgEmpId.Text = "สามารถใช้รหัสพนักงานนี้ได้"
-    End Sub
+  
 
-    Private Sub txtEmpID_incorrect()
-        lblMsgEmpId.Visible = True
-        pbEmpId.Visible = True
-        pbEmpId.Image = Nothing
-        pbEmpId.BackgroundImage = My.Resources.incorrect
-        lblMsgEmpId.ForeColor = Color.Red
-        lblMsgEmpId.Text = "รหัสพนักงานซ้ำ"
-    End Sub
+   
 
-    Private Sub txtEmail_incorrect(ByVal msg As String)
-        lblMsgEmail.Visible = True
-        pbEmail.Visible = True
-        pbEmail.Image = Nothing
-        pbEmail.BackgroundImage = My.Resources.incorrect
-        lblMsgEmail.ForeColor = Color.Red
-        lblMsgEmail.Text = msg
-    End Sub
-
-    Private Sub txtEmail_correct()
-        lblMsgEmail.Visible = True
-        pbEmail.Visible = True
-        pbEmail.Image = Nothing
-        pbEmail.BackgroundImage = My.Resources.correct
-        lblMsgEmail.ForeColor = Color.ForestGreen
-        lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
-    End Sub
-
-    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
-        If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
-            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
-            txtEmpID.Focus()
-        End If
-    End Sub
-
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
-        If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
-            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
-            txtEmpID.Focus()
-        End If
-    End Sub
+   
 
     Private Sub btnAttachNewUserImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewUserImage.Click
         Dim ImageName As String = txtFirstName.Text + "_" + txtLastName.Text
