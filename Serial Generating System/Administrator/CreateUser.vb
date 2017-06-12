@@ -305,26 +305,7 @@ Public Class CreateUser
         Return isDup
     End Function
 
-    Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
-        If isEmployeeDuplicate("username", txtUsername.Text.Trim) Then
-            MsgBox("พบชื่อผู้ใช้นี้มีอยู่ในระบบแล้ว")
-            txtUsername.Focus()
-        End If
-    End Sub
-
-    Private Sub txtEmpID_LostFocus(sender As Object, e As EventArgs) Handles txtEmpID.LostFocus
-        If isEmployeeDuplicate("emp_id", txtEmpID.Text.Trim) Then
-            MsgBox("พบรหัสพนักงานนี้มีอยู่ในระบบแล้ว")
-            txtEmpID.Focus()
-        End If
-    End Sub
-
-    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
-        If isEmployeeDuplicate("email", txtEmail.Text.Trim) Then
-            MsgBox("พบอีเมลนี้มีอยู่ในระบบแล้ว")
-            txtEmail.Focus()
-        End If
-    End Sub
+   
 
     Public Function checkDuplicate() As Boolean
         If isEmployeeDuplicate("username", txtUsername.Text) Then

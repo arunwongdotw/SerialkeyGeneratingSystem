@@ -84,7 +84,7 @@ Public Class CreateCustomer
         ElseIf txtCorp_s_Name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท")
         ElseIf txtCorp_s_Name.TextLength < 3 Or txtCorp_s_Name.TextLength > 5 Then
-            MsgBox("ชื่อย่อบริษัทต้องมีความยาว 3-5 ตัว")
+            MsgBox("ชื่อย่อบริษัทต้องมีความยาว 3-5 ตัวอักษร")
         ElseIf txtCorpGroup.Text = "" Then
             MsgBox("กรุณากรอกชื่อกลุ่มบริษัท")
         ElseIf txtHouseNo.Text = "" Then
@@ -375,7 +375,7 @@ Public Class CreateCustomer
         Return isDup
     End Function
 
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -433,7 +433,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -447,7 +447,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -461,7 +461,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -514,6 +514,5 @@ Public Class CreateCustomer
             End If
             pbAttachCustomerImage.ImageLocation = ImagePath
         End If
-
     End Sub
 End Class

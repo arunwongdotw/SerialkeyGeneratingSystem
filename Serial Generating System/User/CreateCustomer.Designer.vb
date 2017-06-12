@@ -228,7 +228,7 @@ Partial Class CreateCustomer
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(400, 78)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(110, 26)
+        Me.Label9.Size = New System.Drawing.Size(109, 27)
         Me.Label9.TabIndex = 99
         Me.Label9.Text = "โทรศัพท์มือถือ :"
         '
@@ -246,7 +246,7 @@ Partial Class CreateCustomer
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(375, 80)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 26)
+        Me.Label13.Size = New System.Drawing.Size(18, 27)
         Me.Label13.TabIndex = 97
         Me.Label13.Text = "*"
         '
@@ -263,7 +263,7 @@ Partial Class CreateCustomer
         Me.lblEmail.AutoSize = True
         Me.lblEmail.Location = New System.Drawing.Point(60, 78)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(52, 26)
+        Me.lblEmail.Size = New System.Drawing.Size(53, 27)
         Me.lblEmail.TabIndex = 95
         Me.lblEmail.Text = "อีเมล :"
         '
@@ -272,7 +272,7 @@ Partial Class CreateCustomer
         Me.lblPhone.AutoSize = True
         Me.lblPhone.Location = New System.Drawing.Point(438, 120)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(72, 26)
+        Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 96
         Me.lblPhone.Text = "โทรศัพท์ :"
         '
@@ -290,7 +290,7 @@ Partial Class CreateCustomer
         Me.lblFirstName.BackColor = System.Drawing.Color.Transparent
         Me.lblFirstName.Location = New System.Drawing.Point(72, 38)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(39, 26)
+        Me.lblFirstName.Size = New System.Drawing.Size(40, 27)
         Me.lblFirstName.TabIndex = 31
         Me.lblFirstName.Text = "ชื่อ :"
         '
@@ -308,7 +308,7 @@ Partial Class CreateCustomer
         Me.lblLastName.BackColor = System.Drawing.Color.Transparent
         Me.lblLastName.Location = New System.Drawing.Point(434, 38)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(74, 26)
+        Me.lblLastName.Size = New System.Drawing.Size(75, 27)
         Me.lblLastName.TabIndex = 35
         Me.lblLastName.Text = "นามสกุล :"
         '
@@ -349,7 +349,7 @@ Partial Class CreateCustomer
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 13.75!)
         Me.Label6.Location = New System.Drawing.Point(3, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(67, 24)
+        Me.Label6.Size = New System.Drawing.Size(66, 24)
         Me.Label6.TabIndex = 87
         Me.Label6.Text = "ที่อยู่บริษัท"
         '
@@ -367,7 +367,7 @@ Partial Class CreateCustomer
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(771, 34)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 26)
+        Me.Label4.Size = New System.Drawing.Size(18, 27)
         Me.Label4.TabIndex = 86
         Me.Label4.Text = "*"
         '
@@ -377,7 +377,7 @@ Partial Class CreateCustomer
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(375, 76)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(18, 26)
+        Me.Label3.Size = New System.Drawing.Size(18, 27)
         Me.Label3.TabIndex = 85
         Me.Label3.Text = "*"
         '
@@ -403,7 +403,7 @@ Partial Class CreateCustomer
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(375, 117)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(18, 26)
+        Me.Label10.Size = New System.Drawing.Size(18, 27)
         Me.Label10.TabIndex = 82
         Me.Label10.Text = "*"
         '
@@ -419,18 +419,18 @@ Partial Class CreateCustomer
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(178, 34)
+        Me.Label11.Location = New System.Drawing.Point(185, 34)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(18, 26)
+        Me.Label11.Size = New System.Drawing.Size(18, 27)
         Me.Label11.TabIndex = 81
         Me.Label11.Text = "*"
         '
         'txtLane
         '
         Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLane.Location = New System.Drawing.Point(244, 31)
+        Me.txtLane.Location = New System.Drawing.Point(264, 31)
         Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(125, 36)
+        Me.txtLane.Size = New System.Drawing.Size(105, 36)
         Me.txtLane.TabIndex = 8
         '
         'txtDistrict
@@ -445,6 +445,7 @@ Partial Class CreateCustomer
         '
         Me.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPostalCode.Location = New System.Drawing.Point(515, 113)
+        Me.txtPostalCode.MaxLength = 5
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
         Me.txtPostalCode.TabIndex = 12
@@ -455,7 +456,7 @@ Partial Class CreateCustomer
         Me.Label12.ForeColor = System.Drawing.Color.Red
         Me.Label12.Location = New System.Drawing.Point(771, 76)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(18, 26)
+        Me.Label12.Size = New System.Drawing.Size(18, 27)
         Me.Label12.TabIndex = 75
         Me.Label12.Text = "*"
         '
@@ -465,7 +466,7 @@ Partial Class CreateCustomer
         Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Location = New System.Drawing.Point(646, 117)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(18, 26)
+        Me.Label2.Size = New System.Drawing.Size(18, 27)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "*"
         '
@@ -475,7 +476,7 @@ Partial Class CreateCustomer
         Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Location = New System.Drawing.Point(740, 34)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(18, 26)
+        Me.Label14.Size = New System.Drawing.Size(18, 27)
         Me.Label14.TabIndex = 71
         Me.Label14.Text = "*"
         '
@@ -484,7 +485,7 @@ Partial Class CreateCustomer
         Me.lblNo.AutoSize = True
         Me.lblNo.Location = New System.Drawing.Point(62, 34)
         Me.lblNo.Name = "lblNo"
-        Me.lblNo.Size = New System.Drawing.Size(50, 26)
+        Me.lblNo.Size = New System.Drawing.Size(51, 27)
         Me.lblNo.TabIndex = 33
         Me.lblNo.Text = "เลขที่ :"
         '
@@ -493,7 +494,7 @@ Partial Class CreateCustomer
         Me.lblSubdistrict.AutoSize = True
         Me.lblSubdistrict.Location = New System.Drawing.Point(18, 75)
         Me.lblSubdistrict.Name = "lblSubdistrict"
-        Me.lblSubdistrict.Size = New System.Drawing.Size(94, 26)
+        Me.lblSubdistrict.Size = New System.Drawing.Size(95, 27)
         Me.lblSubdistrict.TabIndex = 37
         Me.lblSubdistrict.Text = "ตำบล/แขวง :"
         '
@@ -502,7 +503,7 @@ Partial Class CreateCustomer
         Me.lblRoad.AutoSize = True
         Me.lblRoad.Location = New System.Drawing.Point(460, 31)
         Me.lblRoad.Name = "lblRoad"
-        Me.lblRoad.Size = New System.Drawing.Size(48, 26)
+        Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
         Me.lblRoad.Text = "ถนน :"
         '
@@ -511,16 +512,16 @@ Partial Class CreateCustomer
         Me.lblProvince.AutoSize = True
         Me.lblProvince.Location = New System.Drawing.Point(47, 117)
         Me.lblProvince.Name = "lblProvince"
-        Me.lblProvince.Size = New System.Drawing.Size(65, 26)
+        Me.lblProvince.Size = New System.Drawing.Size(66, 27)
         Me.lblProvince.TabIndex = 44
         Me.lblProvince.Text = "จังหวัด :"
         '
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(195, 33)
+        Me.lblLane.Location = New System.Drawing.Point(209, 34)
         Me.lblLane.Name = "lblLane"
-        Me.lblLane.Size = New System.Drawing.Size(48, 26)
+        Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
         Me.lblLane.Text = "ซอย :"
         '
@@ -529,7 +530,7 @@ Partial Class CreateCustomer
         Me.lblPostalCode.AutoSize = True
         Me.lblPostalCode.Location = New System.Drawing.Point(408, 115)
         Me.lblPostalCode.Name = "lblPostalCode"
-        Me.lblPostalCode.Size = New System.Drawing.Size(102, 26)
+        Me.lblPostalCode.Size = New System.Drawing.Size(101, 27)
         Me.lblPostalCode.TabIndex = 52
         Me.lblPostalCode.Text = "รหัสไปรษณีย์ :"
         '
@@ -538,7 +539,7 @@ Partial Class CreateCustomer
         Me.lblDistrict.AutoSize = True
         Me.lblDistrict.Location = New System.Drawing.Point(422, 75)
         Me.lblDistrict.Name = "lblDistrict"
-        Me.lblDistrict.Size = New System.Drawing.Size(87, 26)
+        Me.lblDistrict.Size = New System.Drawing.Size(87, 27)
         Me.lblDistrict.TabIndex = 50
         Me.lblDistrict.Text = "อำเภอ/เขต :"
         '
@@ -565,7 +566,7 @@ Partial Class CreateCustomer
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(66, 12)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(75, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(76, 27)
         Me.lblCorpName.TabIndex = 105
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
@@ -576,7 +577,7 @@ Partial Class CreateCustomer
         Me.lbConditionText.ForeColor = System.Drawing.Color.Red
         Me.lbConditionText.Location = New System.Drawing.Point(216, 56)
         Me.lbConditionText.Name = "lbConditionText"
-        Me.lbConditionText.Size = New System.Drawing.Size(250, 24)
+        Me.lbConditionText.Size = New System.Drawing.Size(249, 24)
         Me.lbConditionText.TabIndex = 112
         Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
         '
@@ -586,7 +587,7 @@ Partial Class CreateCustomer
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(602, 96)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 26)
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 108
         Me.Label17.Text = "*"
         '
@@ -596,7 +597,7 @@ Partial Class CreateCustomer
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Location = New System.Drawing.Point(602, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 26)
+        Me.Label1.Size = New System.Drawing.Size(18, 27)
         Me.Label1.TabIndex = 110
         Me.Label1.Text = "*"
         '
@@ -605,7 +606,7 @@ Partial Class CreateCustomer
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(57, 96)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(84, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(85, 27)
         Me.lblGroupCorp.TabIndex = 107
         Me.lblGroupCorp.Text = "กลุ่มบริษัท :"
         '
@@ -622,7 +623,7 @@ Partial Class CreateCustomer
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(47, 54)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(94, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(95, 27)
         Me.lblCorpSubName.TabIndex = 106
         Me.lblCorpSubName.Text = "ชื่อย่อบริษัท :"
         '
