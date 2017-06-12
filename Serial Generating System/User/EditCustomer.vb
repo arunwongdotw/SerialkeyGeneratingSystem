@@ -200,16 +200,6 @@ Public Class EditCustomer
         End Select
     End Sub
 
-    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ซอยต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
-        End Select
-    End Sub
-
     Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
         Select Case Asc(e.KeyChar)
             Case 58 To 122, 8, 13, 32, 46, 161 To 240
@@ -286,6 +276,7 @@ Public Class EditCustomer
     End Function
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Hide()
         SearchCustomer.Show()
     End Sub
 

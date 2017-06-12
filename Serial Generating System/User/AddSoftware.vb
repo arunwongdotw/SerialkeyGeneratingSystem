@@ -142,13 +142,13 @@ Public Class AddSoftware
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            MsgBox("ชื่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัว")
+            MsgBox("ชื่อย่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัวอักษร")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัว")
+            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัวอักษร")
         Else
             isCorrect = True
         End If
