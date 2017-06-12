@@ -148,7 +148,9 @@ Public Class AddSoftware
         ElseIf txtBrand_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อแบรนด์")
         ElseIf i < 3 Or i > 5 Then
-            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัวอักษร")
+            MsgBox("ชื่อย่อแบรนด์ต้องมีความยาว 3-5 ตัว")
+        ElseIf chbChinese.Checked = False And chbEnglish.Checked = False And chbJapan.Checked = False And chbThai.Checked = False Then
+            MsgBox("กรุณาเลือกภาษาอย่างน้อย 1 ภาษา")
         Else
             isCorrect = True
         End If
@@ -204,7 +206,7 @@ Public Class AddSoftware
                 MsgBox("ราคาต้องเป็นตัวเลข")
         End Select
     End Sub
-  
+
 
     Private Function isPermission(ByVal perName As String) As Boolean
         Dim strQuery = "SELECT " & perName & " FROM SGS.dbo.Employee WHERE username = '" & Login.user & "'"
@@ -293,14 +295,14 @@ Public Class AddSoftware
 
     Private Sub txtProductName_LostFocus(sender As Object, e As EventArgs) Handles txtProductName.LostFocus
         If isProductDuplicate("product_name", txtProductName.Text.Trim) Then
-            MsgBox("พบชื่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
+            MsgBox("ชื่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
             txtProductName.Focus()
         End If
     End Sub
 
     Private Sub txtProduct_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtProduct_s_name.LostFocus
         If isProductDuplicate("product_s_name", txtProduct_s_name.Text.Trim) Then
-            MsgBox("พบชื่อย่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
+            MsgBox("ชื่อย่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
             txtProduct_s_name.Focus()
         End If
     End Sub
@@ -345,5 +347,9 @@ Public Class AddSoftware
             End If
             pbAttachProductImage.ImageLocation = ImagePath
         End If
+    End Sub
+
+    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
+
     End Sub
 End Class

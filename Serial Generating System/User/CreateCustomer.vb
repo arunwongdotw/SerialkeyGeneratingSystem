@@ -491,7 +491,8 @@ Public Class CreateCustomer
 
     Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
         Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
-        Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
+        'Dim ImagePath As String = "C:\Users\SoftwareEngineering\Desktop\SKGS\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
+        Dim ImagePath As String = "\\192.168.75.216\Users\Arunwong.W\Desktop\Backup\Serial Generating System\Resources\Image\" + ImageName + ".jpg"
         If txtCorp_s_Name.Text = "" Or txtCorpGroup.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อบริษัท และกลุ่มบริษัทให้เสร็จสิ้นก่อนการเลือกรูปภาพ")
             txtCorpName.Select()
