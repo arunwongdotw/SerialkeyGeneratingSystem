@@ -50,11 +50,9 @@ Partial Class EditCustomer
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtcellphone = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -105,7 +103,6 @@ Partial Class EditCustomer
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachNewCustomerImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
@@ -263,7 +260,7 @@ Partial Class EditCustomer
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(129, 41)
         Me.btnSave.TabIndex = 103
-        Me.btnSave.Text = "บันทึก"
+        Me.btnSave.Text = "แก้ไข"
         Me.btnSave.UseVisualStyleBackColor = False
         '
         'btnCancel
@@ -283,11 +280,9 @@ Partial Class EditCustomer
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.txtcellphone)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.txtEmail)
@@ -303,6 +298,16 @@ Partial Class EditCustomer
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(999, 165)
         Me.Panel2.TabIndex = 114
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(771, 70)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(18, 27)
+        Me.Label5.TabIndex = 105
+        Me.Label5.Text = "*"
         '
         'Label7
         '
@@ -324,42 +329,10 @@ Partial Class EditCustomer
         Me.Label6.TabIndex = 103
         Me.Label6.Text = "ที่อยู่บริษัท"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(786, 104)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 24)
-        Me.Label5.TabIndex = 102
-        Me.Label5.Text = "อย่างน้อย 1 เบอร์"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Serial_Generating_System.My.Resources.Resources.bear
-        Me.PictureBox2.Location = New System.Drawing.Point(765, 77)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 53)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 101
-        Me.PictureBox2.TabStop = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(781, 79)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(153, 24)
-        Me.Label8.TabIndex = 100
-        Me.Label8.Text = "*กรุณากรอกเบอร์โทรศัพท์"
-        '
         'txtcellphone
         '
         Me.txtcellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtcellphone.Location = New System.Drawing.Point(515, 108)
+        Me.txtcellphone.Location = New System.Drawing.Point(515, 66)
         Me.txtcellphone.Name = "txtcellphone"
         Me.txtcellphone.Size = New System.Drawing.Size(250, 36)
         Me.txtcellphone.TabIndex = 98
@@ -367,7 +340,7 @@ Partial Class EditCustomer
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(400, 110)
+        Me.Label9.Location = New System.Drawing.Point(400, 68)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(109, 27)
         Me.Label9.TabIndex = 99
@@ -394,7 +367,7 @@ Partial Class EditCustomer
         'txtPhone
         '
         Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPhone.Location = New System.Drawing.Point(515, 66)
+        Me.txtPhone.Location = New System.Drawing.Point(515, 108)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(250, 36)
         Me.txtPhone.TabIndex = 94
@@ -411,7 +384,7 @@ Partial Class EditCustomer
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(438, 68)
+        Me.lblPhone.Location = New System.Drawing.Point(438, 110)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(71, 27)
         Me.lblPhone.TabIndex = 96
@@ -420,9 +393,9 @@ Partial Class EditCustomer
         'txtFirstName
         '
         Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFirstName.Location = New System.Drawing.Point(118, 26)
+        Me.txtFirstName.Location = New System.Drawing.Point(119, 26)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(251, 36)
+        Me.txtFirstName.Size = New System.Drawing.Size(250, 36)
         Me.txtFirstName.TabIndex = 4
         '
         'lblFirstName
@@ -560,7 +533,7 @@ Partial Class EditCustomer
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(178, 34)
+        Me.Label11.Location = New System.Drawing.Point(185, 34)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 27)
         Me.Label11.TabIndex = 81
@@ -569,9 +542,9 @@ Partial Class EditCustomer
         'txtLane
         '
         Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLane.Location = New System.Drawing.Point(244, 31)
+        Me.txtLane.Location = New System.Drawing.Point(264, 31)
         Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(125, 36)
+        Me.txtLane.Size = New System.Drawing.Size(105, 36)
         Me.txtLane.TabIndex = 8
         '
         'txtDistrict
@@ -586,6 +559,7 @@ Partial Class EditCustomer
         '
         Me.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPostalCode.Location = New System.Drawing.Point(515, 113)
+        Me.txtPostalCode.MaxLength = 5
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
         Me.txtPostalCode.TabIndex = 12
@@ -649,7 +623,7 @@ Partial Class EditCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(195, 33)
+        Me.lblLane.Location = New System.Drawing.Point(209, 34)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
@@ -810,7 +784,6 @@ Partial Class EditCustomer
         CType(Me.pbAttachNewCustomerImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -866,9 +839,6 @@ Partial Class EditCustomer
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachNewCustomerImage As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtcellphone As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
@@ -880,4 +850,5 @@ Partial Class EditCustomer
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents Label5 As Label
 End Class

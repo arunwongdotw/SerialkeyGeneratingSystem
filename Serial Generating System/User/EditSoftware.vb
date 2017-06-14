@@ -114,7 +114,7 @@ Public Class EditSoftware
         ElseIf txtProduct_s_name.Text = "" Then
             MsgBox("กรุณากรอกชื่อย่อซอฟต์แวร์")
         ElseIf j < 3 Or j > 5 Then
-            MsgBox("ชื่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัว")
+            MsgBox("ชื่อย่อซอฟต์แวร์ต้องมีความยาว 3-5 ตัว")
         ElseIf txtBrandName.Text = "" Then
             MsgBox("กรุณากรอกชื่อแบรนด์")
         ElseIf txtBrand_s_name.Text = "" Then
@@ -349,5 +349,13 @@ Public Class EditSoftware
             End If
         End If
         pbAttachNewProductImage.ImageLocation = ImagePath
+    End Sub
+
+    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
+
+    End Sub
+
+    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
+
     End Sub
 End Class

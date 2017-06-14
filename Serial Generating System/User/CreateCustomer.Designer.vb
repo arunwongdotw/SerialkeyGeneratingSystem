@@ -419,7 +419,7 @@ Partial Class CreateCustomer
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(178, 34)
+        Me.Label11.Location = New System.Drawing.Point(185, 34)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 27)
         Me.Label11.TabIndex = 81
@@ -428,9 +428,9 @@ Partial Class CreateCustomer
         'txtLane
         '
         Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLane.Location = New System.Drawing.Point(244, 31)
+        Me.txtLane.Location = New System.Drawing.Point(264, 31)
         Me.txtLane.Name = "txtLane"
-        Me.txtLane.Size = New System.Drawing.Size(125, 36)
+        Me.txtLane.Size = New System.Drawing.Size(105, 36)
         Me.txtLane.TabIndex = 8
         '
         'txtDistrict
@@ -519,7 +519,7 @@ Partial Class CreateCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(195, 33)
+        Me.lblLane.Location = New System.Drawing.Point(209, 34)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
