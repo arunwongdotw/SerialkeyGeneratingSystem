@@ -125,7 +125,7 @@ Partial Class EditCustomer
         Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 22
+        Me.btnLogOut.TabIndex = 18
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
@@ -236,6 +236,7 @@ Partial Class EditCustomer
         Me.btnAttachNewCustomerImage.Name = "btnAttachNewCustomerImage"
         Me.btnAttachNewCustomerImage.Size = New System.Drawing.Size(113, 35)
         Me.btnAttachNewCustomerImage.TabIndex = 113
+        Me.btnAttachNewCustomerImage.TabStop = False
         Me.btnAttachNewCustomerImage.Text = "เพิ่มโลโก้บริษัท"
         Me.btnAttachNewCustomerImage.UseVisualStyleBackColor = False
         '
@@ -259,7 +260,7 @@ Partial Class EditCustomer
         Me.btnSave.Location = New System.Drawing.Point(1020, 592)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(129, 41)
-        Me.btnSave.TabIndex = 103
+        Me.btnSave.TabIndex = 16
         Me.btnSave.Text = "แก้ไข"
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -272,7 +273,7 @@ Partial Class EditCustomer
         Me.btnCancel.Location = New System.Drawing.Point(1155, 592)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(129, 41)
-        Me.btnCancel.TabIndex = 104
+        Me.btnCancel.TabIndex = 17
         Me.btnCancel.Text = "ยกเลิก"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -297,7 +298,7 @@ Partial Class EditCustomer
         Me.Panel2.Location = New System.Drawing.Point(285, 421)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(999, 165)
-        Me.Panel2.TabIndex = 114
+        Me.Panel2.TabIndex = 102
         '
         'Label5
         '
@@ -335,7 +336,7 @@ Partial Class EditCustomer
         Me.txtcellphone.Location = New System.Drawing.Point(515, 66)
         Me.txtcellphone.Name = "txtcellphone"
         Me.txtcellphone.Size = New System.Drawing.Size(250, 36)
-        Me.txtcellphone.TabIndex = 98
+        Me.txtcellphone.TabIndex = 14
         '
         'Label9
         '
@@ -352,7 +353,7 @@ Partial Class EditCustomer
         Me.txtEmail.Location = New System.Drawing.Point(119, 68)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(250, 36)
-        Me.txtEmail.TabIndex = 93
+        Me.txtEmail.TabIndex = 12
         '
         'Label13
         '
@@ -370,7 +371,7 @@ Partial Class EditCustomer
         Me.txtPhone.Location = New System.Drawing.Point(515, 108)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(250, 36)
-        Me.txtPhone.TabIndex = 94
+        Me.txtPhone.TabIndex = 15
         '
         'lblEmail
         '
@@ -396,7 +397,7 @@ Partial Class EditCustomer
         Me.txtFirstName.Location = New System.Drawing.Point(119, 26)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(250, 36)
-        Me.txtFirstName.TabIndex = 4
+        Me.txtFirstName.TabIndex = 11
         '
         'lblFirstName
         '
@@ -414,7 +415,7 @@ Partial Class EditCustomer
         Me.txtLastName.Location = New System.Drawing.Point(515, 24)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(250, 36)
-        Me.txtLastName.TabIndex = 5
+        Me.txtLastName.TabIndex = 13
         '
         'lblLastName
         '
@@ -455,7 +456,7 @@ Partial Class EditCustomer
         Me.Panel3.Location = New System.Drawing.Point(285, 244)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(999, 171)
-        Me.Panel3.TabIndex = 115
+        Me.Panel3.TabIndex = 101
         '
         'Label15
         '
@@ -473,7 +474,7 @@ Partial Class EditCustomer
         Me.txtRoad.Location = New System.Drawing.Point(515, 29)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(250, 36)
-        Me.txtRoad.TabIndex = 7
+        Me.txtRoad.TabIndex = 8
         '
         'Label4
         '
@@ -501,7 +502,7 @@ Partial Class EditCustomer
         Me.txtHouseNo.Location = New System.Drawing.Point(119, 31)
         Me.txtHouseNo.Name = "txtHouseNo"
         Me.txtHouseNo.Size = New System.Drawing.Size(62, 36)
-        Me.txtHouseNo.TabIndex = 6
+        Me.txtHouseNo.TabIndex = 4
         '
         'txtSubdistrict
         '
@@ -509,7 +510,7 @@ Partial Class EditCustomer
         Me.txtSubdistrict.Location = New System.Drawing.Point(119, 73)
         Me.txtSubdistrict.Name = "txtSubdistrict"
         Me.txtSubdistrict.Size = New System.Drawing.Size(250, 36)
-        Me.txtSubdistrict.TabIndex = 9
+        Me.txtSubdistrict.TabIndex = 6
         '
         'Label10
         '
@@ -527,7 +528,7 @@ Partial Class EditCustomer
         Me.txtProvince.Location = New System.Drawing.Point(119, 115)
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(250, 36)
-        Me.txtProvince.TabIndex = 11
+        Me.txtProvince.TabIndex = 7
         '
         'Label11
         '
@@ -545,7 +546,7 @@ Partial Class EditCustomer
         Me.txtLane.Location = New System.Drawing.Point(264, 31)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(105, 36)
-        Me.txtLane.TabIndex = 8
+        Me.txtLane.TabIndex = 5
         '
         'txtDistrict
         '
@@ -553,7 +554,7 @@ Partial Class EditCustomer
         Me.txtDistrict.Location = New System.Drawing.Point(515, 71)
         Me.txtDistrict.Name = "txtDistrict"
         Me.txtDistrict.Size = New System.Drawing.Size(250, 36)
-        Me.txtDistrict.TabIndex = 10
+        Me.txtDistrict.TabIndex = 9
         '
         'txtPostalCode
         '
@@ -562,7 +563,7 @@ Partial Class EditCustomer
         Me.txtPostalCode.MaxLength = 5
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
-        Me.txtPostalCode.TabIndex = 12
+        Me.txtPostalCode.TabIndex = 10
         '
         'Label12
         '
@@ -658,6 +659,7 @@ Partial Class EditCustomer
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1317, 65)
         Me.btnHeader.TabIndex = 79
+        Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "แก้ไขข้อมูลลูกค้า"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHeader.UseVisualStyleBackColor = True
@@ -678,7 +680,7 @@ Partial Class EditCustomer
         Me.Panel4.Location = New System.Drawing.Point(404, 92)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(880, 146)
-        Me.Panel4.TabIndex = 116
+        Me.Panel4.TabIndex = 100
         '
         'lblCorpName
         '
@@ -735,7 +737,7 @@ Partial Class EditCustomer
         Me.txtCorpGroup.Location = New System.Drawing.Point(148, 94)
         Me.txtCorpGroup.Name = "txtCorpGroup"
         Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpGroup.TabIndex = 102
+        Me.txtCorpGroup.TabIndex = 3
         '
         'lblCorpSubName
         '
@@ -752,7 +754,7 @@ Partial Class EditCustomer
         Me.txtCorpName.Location = New System.Drawing.Point(148, 10)
         Me.txtCorpName.Name = "txtCorpName"
         Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpName.TabIndex = 100
+        Me.txtCorpName.TabIndex = 1
         '
         'txtCorp_s_Name
         '
@@ -761,7 +763,7 @@ Partial Class EditCustomer
         Me.txtCorp_s_Name.MaxLength = 5
         Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
         Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
-        Me.txtCorp_s_Name.TabIndex = 101
+        Me.txtCorp_s_Name.TabIndex = 2
         '
         'ofdAttachNewCustomerImage
         '

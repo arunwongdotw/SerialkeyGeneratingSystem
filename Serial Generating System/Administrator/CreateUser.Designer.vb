@@ -32,12 +32,13 @@ Partial Class CreateUser
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateUser))
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.lbWelcome = New System.Windows.Forms.Label()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.btnAttachUserImage = New System.Windows.Forms.Button()
         Me.pbAttachUserImage = New System.Windows.Forms.PictureBox()
-        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -79,14 +80,13 @@ Partial Class CreateUser
         Me.chbPerEdit = New System.Windows.Forms.CheckBox()
         Me.chbPerDelete = New System.Windows.Forms.CheckBox()
         Me.ofdAttachUserImage = New System.Windows.Forms.OpenFileDialog()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'tvAdminMenu
@@ -137,7 +137,31 @@ Partial Class CreateUser
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
-        Me.Panel1.TabIndex = 3
+        Me.Panel1.TabIndex = 0
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel6.Controls.Add(Me.btnLogOut)
+        Me.Panel6.Location = New System.Drawing.Point(0, 602)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(270, 100)
+        Me.Panel6.TabIndex = 99
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.White
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogOut.TabIndex = 0
+        Me.btnLogOut.TabStop = False
+        Me.btnLogOut.Text = "ออกจากระบบ"
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'lbWelcome
         '
@@ -151,7 +175,7 @@ Partial Class CreateUser
         Me.lbWelcome.Name = "lbWelcome"
         Me.lbWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lbWelcome.Size = New System.Drawing.Size(84, 27)
-        Me.lbWelcome.TabIndex = 86
+        Me.lbWelcome.TabIndex = 5
         Me.lbWelcome.Text = "ยินดีต้อนรับ"
         Me.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -164,7 +188,7 @@ Partial Class CreateUser
         Me.txtAccountInfo.Name = "txtAccountInfo"
         Me.txtAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtAccountInfo.Size = New System.Drawing.Size(201, 42)
-        Me.txtAccountInfo.TabIndex = 98
+        Me.txtAccountInfo.TabIndex = 0
         Me.txtAccountInfo.Text = "(ชื่อผู้ใช้)"
         Me.txtAccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -179,7 +203,7 @@ Partial Class CreateUser
         Me.btnHeader.Location = New System.Drawing.Point(0, 0)
         Me.btnHeader.Name = "btnHeader"
         Me.btnHeader.Size = New System.Drawing.Size(1317, 65)
-        Me.btnHeader.TabIndex = 81
+        Me.btnHeader.TabIndex = 0
         Me.btnHeader.TabStop = False
         Me.btnHeader.Text = "สร้างบัญชีผู้ใช้"
         Me.btnHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -195,7 +219,7 @@ Partial Class CreateUser
         Me.btnAttachUserImage.Location = New System.Drawing.Point(285, 203)
         Me.btnAttachUserImage.Name = "btnAttachUserImage"
         Me.btnAttachUserImage.Size = New System.Drawing.Size(113, 35)
-        Me.btnAttachUserImage.TabIndex = 83
+        Me.btnAttachUserImage.TabIndex = 1
         Me.btnAttachUserImage.TabStop = False
         Me.btnAttachUserImage.Text = "เพิ่มรูปภาพ"
         Me.btnAttachUserImage.UseVisualStyleBackColor = False
@@ -211,20 +235,6 @@ Partial Class CreateUser
         Me.pbAttachUserImage.TabIndex = 82
         Me.pbAttachUserImage.TabStop = False
         '
-        'btnLogOut
-        '
-        Me.btnLogOut.BackColor = System.Drawing.Color.White
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogOut.TabIndex = 17
-        Me.btnLogOut.Text = "ออกจากระบบ"
-        Me.btnLogOut.UseVisualStyleBackColor = False
-        '
         'btnClear
         '
         Me.btnClear.BackColor = System.Drawing.Color.DarkOrange
@@ -234,7 +244,8 @@ Partial Class CreateUser
         Me.btnClear.Location = New System.Drawing.Point(1157, 540)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(129, 41)
-        Me.btnClear.TabIndex = 16
+        Me.btnClear.TabIndex = 3
+        Me.btnClear.TabStop = False
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -247,7 +258,8 @@ Partial Class CreateUser
         Me.btnAdd.Location = New System.Drawing.Point(1022, 540)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(129, 41)
-        Me.btnAdd.TabIndex = 15
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.TabStop = False
         Me.btnAdd.Text = "สร้าง"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
@@ -263,7 +275,7 @@ Partial Class CreateUser
         Me.Panel2.Location = New System.Drawing.Point(404, 92)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(882, 146)
-        Me.Panel2.TabIndex = 96
+        Me.Panel2.TabIndex = 1
         '
         'txtPassword
         '
@@ -282,7 +294,7 @@ Partial Class CreateUser
         Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(466, 41)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 26)
+        Me.Label2.Size = New System.Drawing.Size(76, 27)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "รหัสผ่าน :"
         '
@@ -293,7 +305,7 @@ Partial Class CreateUser
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(543, 77)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(306, 24)
+        Me.Label7.Size = New System.Drawing.Size(310, 24)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
@@ -315,7 +327,7 @@ Partial Class CreateUser
         Me.Label1.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(74, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 26)
+        Me.Label1.Size = New System.Drawing.Size(63, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ชื่อผู้ใช้ :"
         '
@@ -326,7 +338,7 @@ Partial Class CreateUser
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(137, 77)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(306, 24)
+        Me.Label8.Size = New System.Drawing.Size(310, 24)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "* ภาษาอังกฤษหรือตัวเลขความยาวห้ามต่ำกว่า 6 ตัว"
         '
@@ -360,7 +372,7 @@ Partial Class CreateUser
         Me.Panel3.Location = New System.Drawing.Point(285, 244)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1001, 290)
-        Me.Panel3.TabIndex = 97
+        Me.Panel3.TabIndex = 1
         '
         'Label15
         '
@@ -369,7 +381,7 @@ Partial Class CreateUser
         Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Location = New System.Drawing.Point(397, 190)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 26)
+        Me.Label15.Size = New System.Drawing.Size(18, 27)
         Me.Label15.TabIndex = 98
         Me.Label15.Text = "*"
         '
@@ -390,7 +402,7 @@ Partial Class CreateUser
         Me.rdbIT.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdbIT.Location = New System.Drawing.Point(8, 1)
         Me.rdbIT.Name = "rdbIT"
-        Me.rdbIT.Size = New System.Drawing.Size(53, 30)
+        Me.rdbIT.Size = New System.Drawing.Size(53, 31)
         Me.rdbIT.TabIndex = 13
         Me.rdbIT.TabStop = True
         Me.rdbIT.Text = "ไอที"
@@ -402,7 +414,7 @@ Partial Class CreateUser
         Me.rdbAccountant.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdbAccountant.Location = New System.Drawing.Point(67, 1)
         Me.rdbAccountant.Name = "rdbAccountant"
-        Me.rdbAccountant.Size = New System.Drawing.Size(62, 30)
+        Me.rdbAccountant.Size = New System.Drawing.Size(62, 31)
         Me.rdbAccountant.TabIndex = 14
         Me.rdbAccountant.TabStop = True
         Me.rdbAccountant.Text = "บัญชี"
@@ -425,7 +437,7 @@ Partial Class CreateUser
         Me.Label20.ForeColor = System.Drawing.Color.Red
         Me.Label20.Location = New System.Drawing.Point(397, 148)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 26)
+        Me.Label20.Size = New System.Drawing.Size(18, 27)
         Me.Label20.TabIndex = 90
         Me.Label20.Text = "*"
         '
@@ -436,7 +448,7 @@ Partial Class CreateUser
         Me.Label3.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(34, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 26)
+        Me.Label3.Size = New System.Drawing.Size(103, 27)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "รหัสพนักงาน :"
         '
@@ -447,7 +459,7 @@ Partial Class CreateUser
         Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Location = New System.Drawing.Point(959, 64)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 26)
+        Me.Label17.Size = New System.Drawing.Size(18, 27)
         Me.Label17.TabIndex = 77
         Me.Label17.Text = "*"
         '
@@ -458,7 +470,7 @@ Partial Class CreateUser
         Me.Label18.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(63, 232)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(72, 26)
+        Me.Label18.Size = New System.Drawing.Size(71, 27)
         Me.Label18.TabIndex = 88
         Me.Label18.Text = "โทรศัพท์ :"
         '
@@ -471,7 +483,7 @@ Partial Class CreateUser
         Me.cmbUserType.Items.AddRange(New Object() {"ผู้ใช้งานทั่วไป", "ผู้ดูแลระบบ"})
         Me.cmbUserType.Location = New System.Drawing.Point(703, 62)
         Me.cmbUserType.Name = "cmbUserType"
-        Me.cmbUserType.Size = New System.Drawing.Size(250, 34)
+        Me.cmbUserType.Size = New System.Drawing.Size(250, 35)
         Me.cmbUserType.TabIndex = 9
         '
         'Label11
@@ -481,7 +493,7 @@ Partial Class CreateUser
         Me.Label11.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(578, 65)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(118, 26)
+        Me.Label11.Size = New System.Drawing.Size(119, 27)
         Me.Label11.TabIndex = 71
         Me.Label11.Text = "ประเภทบัญชีผู้ใช้ :"
         '
@@ -503,7 +515,7 @@ Partial Class CreateUser
         Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(96, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 26)
+        Me.Label4.Size = New System.Drawing.Size(40, 27)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "ชื่อ :"
         '
@@ -524,7 +536,7 @@ Partial Class CreateUser
         Me.Label5.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(61, 107)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 26)
+        Me.Label5.Size = New System.Drawing.Size(75, 27)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "นามสกุล :"
         '
@@ -535,7 +547,7 @@ Partial Class CreateUser
         Me.Label12.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(525, 106)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(172, 26)
+        Me.Label12.Size = New System.Drawing.Size(172, 27)
         Me.Label12.TabIndex = 67
         Me.Label12.Text = "สิทธิ์การจัดการซีรเียลคีย์ :"
         '
@@ -556,7 +568,7 @@ Partial Class CreateUser
         Me.Label10.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(83, 148)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(52, 26)
+        Me.Label10.Size = New System.Drawing.Size(53, 27)
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "อีเมล :"
         '
@@ -577,7 +589,7 @@ Partial Class CreateUser
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(625, 148)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 26)
+        Me.Label6.Size = New System.Drawing.Size(73, 27)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "ตำแหน่ง :"
         '
@@ -588,7 +600,7 @@ Partial Class CreateUser
         Me.Label9.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(25, 190)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(110, 26)
+        Me.Label9.Size = New System.Drawing.Size(109, 27)
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "โทรศัพท์มือถือ :"
         '
@@ -599,7 +611,7 @@ Partial Class CreateUser
         Me.Label16.ForeColor = System.Drawing.Color.Red
         Me.Label16.Location = New System.Drawing.Point(397, 106)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(18, 26)
+        Me.Label16.Size = New System.Drawing.Size(18, 27)
         Me.Label16.TabIndex = 80
         Me.Label16.Text = "*"
         '
@@ -620,7 +632,7 @@ Partial Class CreateUser
         Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Location = New System.Drawing.Point(397, 65)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(18, 26)
+        Me.Label14.Size = New System.Drawing.Size(18, 27)
         Me.Label14.TabIndex = 78
         Me.Label14.Text = "*"
         '
@@ -631,7 +643,7 @@ Partial Class CreateUser
         Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Location = New System.Drawing.Point(246, 22)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 26)
+        Me.Label13.Size = New System.Drawing.Size(18, 27)
         Me.Label13.TabIndex = 73
         Me.Label13.Text = "*"
         '
@@ -655,7 +667,7 @@ Partial Class CreateUser
         Me.chbPerPrint.Location = New System.Drawing.Point(185, 2)
         Me.chbPerPrint.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerPrint.Name = "chbPerPrint"
-        Me.chbPerPrint.Size = New System.Drawing.Size(64, 30)
+        Me.chbPerPrint.Size = New System.Drawing.Size(64, 31)
         Me.chbPerPrint.TabIndex = 13
         Me.chbPerPrint.Text = "พิมพ์"
         Me.chbPerPrint.UseVisualStyleBackColor = False
@@ -668,7 +680,7 @@ Partial Class CreateUser
         Me.chbPerCreate.Location = New System.Drawing.Point(7, 2)
         Me.chbPerCreate.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerCreate.Name = "chbPerCreate"
-        Me.chbPerCreate.Size = New System.Drawing.Size(64, 30)
+        Me.chbPerCreate.Size = New System.Drawing.Size(64, 31)
         Me.chbPerCreate.TabIndex = 10
         Me.chbPerCreate.Text = "สร้าง"
         Me.chbPerCreate.UseVisualStyleBackColor = False
@@ -681,7 +693,7 @@ Partial Class CreateUser
         Me.chbPerEdit.Location = New System.Drawing.Point(73, 2)
         Me.chbPerEdit.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerEdit.Name = "chbPerEdit"
-        Me.chbPerEdit.Size = New System.Drawing.Size(59, 30)
+        Me.chbPerEdit.Size = New System.Drawing.Size(60, 31)
         Me.chbPerEdit.TabIndex = 11
         Me.chbPerEdit.Text = "แก้ไข"
         Me.chbPerEdit.UseVisualStyleBackColor = False
@@ -694,7 +706,7 @@ Partial Class CreateUser
         Me.chbPerDelete.Location = New System.Drawing.Point(134, 2)
         Me.chbPerDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.chbPerDelete.Name = "chbPerDelete"
-        Me.chbPerDelete.Size = New System.Drawing.Size(49, 30)
+        Me.chbPerDelete.Size = New System.Drawing.Size(49, 31)
         Me.chbPerDelete.TabIndex = 12
         Me.chbPerDelete.Text = "ลบ"
         Me.chbPerDelete.UseVisualStyleBackColor = False
@@ -702,15 +714,6 @@ Partial Class CreateUser
         'ofdAttachUserImage
         '
         Me.ofdAttachUserImage.FileName = "AttachUserImage"
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Panel6.Controls.Add(Me.btnLogOut)
-        Me.Panel6.Location = New System.Drawing.Point(0, 602)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(270, 100)
-        Me.Panel6.TabIndex = 127
         '
         'CreateUser
         '
@@ -724,6 +727,7 @@ Partial Class CreateUser
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "สร้างบัญชีผู้ใช้ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         CType(Me.pbAttachUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -733,7 +737,6 @@ Partial Class CreateUser
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

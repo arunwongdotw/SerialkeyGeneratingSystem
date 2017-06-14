@@ -99,8 +99,8 @@ Public Class CreateCustomer
             MsgBox("กรุณากรอกจังหวัด")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
-        ElseIf txtPhone.Text = "" And txtcellphone.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+        ElseIf txtcellphone.Text Is String.Empty Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
             'ElseIf txtPhone.Text = "" Then
             '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
         ElseIf txtPostalCode.Text = "" Then

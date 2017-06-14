@@ -99,8 +99,8 @@ Public Class EditUser
         ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
             valid = False
-        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+        ElseIf txtMobileNumber.Text Is String.Empty Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
             valid = False
         End If
         Return valid

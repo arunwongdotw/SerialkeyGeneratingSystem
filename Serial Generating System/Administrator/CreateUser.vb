@@ -120,8 +120,8 @@ Public Class CreateUser
             MsgBox("กรุณากรอกอีเมล")
         ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
             MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
-        ElseIf txtMobileNumber.Text = "" And txtPhoneNumber.Text = "" Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์อย่างน้อย 1 เบอร์")
+        ElseIf txtMobileNumber.Text Is String.Empty Then
+            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
             'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
             '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         ElseIf cmbUserType.Text = "" Then
