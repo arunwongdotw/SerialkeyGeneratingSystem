@@ -411,7 +411,13 @@ Public Class SearchSerial
     '        End If
     '    Next
     'End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+      ByVal e As System.EventArgs) Handles dgvSerialKey.Sorted
 
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
     Private Sub LoadData()
         Try
             dgvSerialKey.Columns.Clear()
@@ -493,11 +499,11 @@ Public Class SearchSerial
             Dim dt As New DataTable
             Dim da As SqlDataAdapter = con.queryForAdapter(sql)
             con.close()
-            dt.Clear()
+            'dt.Clear()
 
             da.Fill(dt)
             'If dt.Rows.Count > 0 Then
-            dgvSerialKey.Columns.Clear()
+            'dgvSerialKey.Columns.Clear()
             GenerateColumn()
             dgvSerialKey.DataSource = dt
             dgvSerialKey.Columns("seq").Visible = False
@@ -516,6 +522,7 @@ Public Class SearchSerial
             'MsgBox("ไม่พบข้อมูล")
         End Try
     End Sub
+   
     Private Sub genRowNumber()
         For i = 0 To dgvSerialKey.Rows.Count - 1
             dgvSerialKey.Rows(i).Cells("ลำดับที่").Value = i + 1

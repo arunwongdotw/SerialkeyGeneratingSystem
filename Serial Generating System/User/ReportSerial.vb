@@ -392,7 +392,13 @@ Public Class ReportSerial
     '        End If
     '    Next
     'End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+   ByVal e As System.EventArgs) Handles dgvSerialKey.Sorted
 
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
     Private Sub LoadData()
         Try
             dgvSerialKey.Columns.Clear()

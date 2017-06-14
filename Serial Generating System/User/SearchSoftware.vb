@@ -26,6 +26,13 @@ Public Class SearchSoftware
             MsgBox("โหลดข้อมูลล้มเหลว")
         End Try
     End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+   ByVal e As System.EventArgs) Handles dgvSearchProduct.Sorted
+
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
 
     Private Function getQuery() As String
         Dim strQuery = "select id, product_name, product_s_name, brand_name, brand_s_name, QualityControl, WarehouseManagement, thai, eng, china, japan, cost from SGS.dbo.Product where id IS NOT NULL"

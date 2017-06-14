@@ -210,6 +210,13 @@ Public Class SearchCustomer
         End Try
     End Sub
 
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+    ByVal e As System.EventArgs) Handles dgvSearchCus.Sorted
+
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
     Private Sub LoadData()
         Try
             dgvSearchCus.Columns.Clear()

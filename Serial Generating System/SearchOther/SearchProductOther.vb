@@ -23,7 +23,13 @@ Public Class SearchProductOther
         'tvUserMenu.ExpandAll()
 
     End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+  ByVal e As System.EventArgs) Handles dgvSearchProduct.Sorted
 
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
     Private Sub GenerateColumn()
         Try
             Me.dgvSearchProduct.Columns.Clear()

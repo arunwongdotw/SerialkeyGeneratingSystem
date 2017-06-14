@@ -124,7 +124,13 @@ Public Class ReportSoftware
             End If
         Next
     End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+  ByVal e As System.EventArgs) Handles dgvSearchProduct.Sorted
 
+        genRowNumber()
+        randerColorRow()
+
+    End Sub
     Private Sub addCustomColumns()
         Dim checkboxQualityControl As New DataGridViewCheckBoxColumn
         checkboxQualityControl.HeaderText = "ออปชันควบคุมคุณภาพ"
