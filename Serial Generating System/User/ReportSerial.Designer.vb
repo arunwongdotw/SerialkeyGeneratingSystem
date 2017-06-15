@@ -581,7 +581,7 @@ Partial Class ReportSerial
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!)
-        Me.Label6.Location = New System.Drawing.Point(107, 270)
+        Me.Label6.Location = New System.Drawing.Point(107, 226)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(72, 27)
         Me.Label6.TabIndex = 120
@@ -600,7 +600,7 @@ Partial Class ReportSerial
         '
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguage.Location = New System.Drawing.Point(122, 228)
+        Me.lblLanguage.Location = New System.Drawing.Point(122, 271)
         Me.lblLanguage.Name = "lblLanguage"
         Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 42
