@@ -428,11 +428,21 @@ Public Class SearchSerial
             Dim sql As String
             Dim ContractNo As String, corpname As String, corp_s_name As String, brandname As String, brand_s_name As String, seq As String
             Dim product_name As String, product_s_name As String, version As String, total_user As String
-            Dim E As String, T As String, C As String, J As String, emp_id As String
+            Dim E As String, T As String, C As String, J As String, emp_id As String, WM As String, QC As String
 
             ContractNo = "" : corpname = "" : corp_s_name = "" : brandname = "" : brand_s_name = "" : seq = "" : product_name = ""
-            product_s_name = "" : version = "" : total_user = "" : E = "" : T = "" : C = "" : J = "" : emp_id = ""
+            product_s_name = "" : version = "" : total_user = "" : E = "" : T = "" : C = "" : J = "" : emp_id = "" : WM = "" : QC = ""
 
+            If chbWM.Checked = True Then
+                WM = " and s.wharehouse_management = 1 "
+                'Else
+                '    WM = " and s.wharehouse_management = 0 "
+            End If
+            If chbQC.Checked = True Then
+                QC = " and s.quality_control = 1 "
+                'Else
+                '    WM = " and s.quality_control = 0 "
+            End If
             If txtCorpName.Text <> "" Then
                 corpname = " and c.corpname like  '%" & txtCorpName.Text & "%' "
             End If
@@ -493,7 +503,7 @@ Public Class SearchSerial
             sql &= " from customer c join serialKey s on c.corp_s_name = s.corp_s_name join product p on s.product_s_name = p.product_s_name "
             sql &= " where s.seq <> -1 "
             sql &= corpname & corp_s_name & ContractNo & brandname & brand_s_name & version & seq & product_name & product_s_name & total_user
-            sql &= E & T & C & J '& cellphone
+            sql &= E & T & C & J & WM & QC '& cellphone
             sql &= "order by s.seq"
 
             Dim dt As New DataTable
