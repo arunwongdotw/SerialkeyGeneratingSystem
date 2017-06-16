@@ -48,7 +48,13 @@ Public Class SearchUser
         tvAdminMenu.ExpandAll()
         loadDataTable()
     End Sub
+    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+   ByVal e As System.EventArgs) Handles dgvSearchUser.Sorted
 
+        genRowNumber()
+
+
+    End Sub
     Private Sub displayAccountImage(ByVal username As String)
         Dim AccountImagePath As String
         Dim strQuery As String = "select * from SGS.dbo.Employee where username = '" & username & "'"
