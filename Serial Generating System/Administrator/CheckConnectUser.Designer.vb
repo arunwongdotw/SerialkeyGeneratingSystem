@@ -34,16 +34,16 @@ Partial Class CheckConnectUser
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.btnCheck = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtConnection = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvConnection = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
-        Me.txtConnection = New System.Windows.Forms.TextBox()
+        Me.btnCheck = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,8 +53,8 @@ Partial Class CheckConnectUser
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.btnCheck)
+        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.pbAccountInfo)
         Me.Panel1.Controls.Add(Me.txtAccountInfo)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -90,15 +90,6 @@ Partial Class CheckConnectUser
         Me.btnLogOut.TabIndex = 1
         Me.btnLogOut.Text = "ออกจากระบบ"
         Me.btnLogOut.UseVisualStyleBackColor = False
-        '
-        'btnCheck
-        '
-        Me.btnCheck.Location = New System.Drawing.Point(980, 580)
-        Me.btnCheck.Name = "btnCheck"
-        Me.btnCheck.Size = New System.Drawing.Size(75, 23)
-        Me.btnCheck.TabIndex = 102
-        Me.btnCheck.Text = "Refresh"
-        Me.btnCheck.UseVisualStyleBackColor = True
         '
         'pbAccountInfo
         '
@@ -163,6 +154,18 @@ Partial Class CheckConnectUser
         Me.Label3.Text = "คน"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txtConnection
+        '
+        Me.txtConnection.BackColor = System.Drawing.Color.White
+        Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConnection.Location = New System.Drawing.Point(1117, 533)
+        Me.txtConnection.Name = "txtConnection"
+        Me.txtConnection.Size = New System.Drawing.Size(92, 29)
+        Me.txtConnection.TabIndex = 15
+        Me.txtConnection.TabStop = False
+        Me.txtConnection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -221,17 +224,19 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
-        'txtConnection
+        'btnCheck
         '
-        Me.txtConnection.BackColor = System.Drawing.Color.White
-        Me.txtConnection.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtConnection.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConnection.Location = New System.Drawing.Point(1117, 533)
-        Me.txtConnection.Name = "txtConnection"
-        Me.txtConnection.Size = New System.Drawing.Size(92, 29)
-        Me.txtConnection.TabIndex = 15
-        Me.txtConnection.TabStop = False
-        Me.txtConnection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.btnCheck.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnCheck.FlatAppearance.BorderSize = 0
+        Me.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheck.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheck.Location = New System.Drawing.Point(1112, 591)
+        Me.btnCheck.Name = "btnCheck"
+        Me.btnCheck.Size = New System.Drawing.Size(129, 41)
+        Me.btnCheck.TabIndex = 3
+        Me.btnCheck.TabStop = False
+        Me.btnCheck.Text = "รีเฟรช"
+        Me.btnCheck.UseVisualStyleBackColor = False
         '
         'CheckConnectUser
         '
@@ -262,7 +267,7 @@ Partial Class CheckConnectUser
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
-    Friend WithEvents btnCheck As System.Windows.Forms.Button
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents txtConnection As System.Windows.Forms.TextBox
+    Friend WithEvents btnCheck As Button
 End Class
