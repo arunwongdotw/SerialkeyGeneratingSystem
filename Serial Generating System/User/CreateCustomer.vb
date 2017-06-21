@@ -511,4 +511,28 @@ Public Class CreateCustomer
     Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
 
     End Sub
+
+    Private Sub txtHouseNo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHouseNo.KeyPress
+
+    End Sub
+
+    Private Sub txtHouseNo_TextChanged(sender As Object, e As EventArgs) Handles txtHouseNo.TextChanged
+
+    End Sub
+
+    Private Sub txtcellphone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
+
+    End Sub
+
+    Private Sub txtcellphone_TextChanged(sender As Object, e As EventArgs) Handles txtcellphone.TextChanged
+
+    End Sub
+
+    Private Sub txtPhone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+
+    End Sub
 End Class
