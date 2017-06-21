@@ -221,7 +221,7 @@ Partial Class CreateCustomer
         Me.txtcellphone.Location = New System.Drawing.Point(515, 76)
         Me.txtcellphone.Name = "txtcellphone"
         Me.txtcellphone.Size = New System.Drawing.Size(250, 36)
-        Me.txtcellphone.TabIndex = 98
+        Me.txtcellphone.TabIndex = 14
         '
         'Label9
         '
@@ -238,7 +238,7 @@ Partial Class CreateCustomer
         Me.txtEmail.Location = New System.Drawing.Point(119, 78)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(250, 36)
-        Me.txtEmail.TabIndex = 93
+        Me.txtEmail.TabIndex = 13
         '
         'Label13
         '
@@ -256,7 +256,7 @@ Partial Class CreateCustomer
         Me.txtPhone.Location = New System.Drawing.Point(515, 118)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(250, 36)
-        Me.txtPhone.TabIndex = 94
+        Me.txtPhone.TabIndex = 15
         '
         'lblEmail
         '
@@ -282,7 +282,7 @@ Partial Class CreateCustomer
         Me.txtFirstName.Location = New System.Drawing.Point(118, 36)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(251, 36)
-        Me.txtFirstName.TabIndex = 4
+        Me.txtFirstName.TabIndex = 11
         '
         'lblFirstName
         '
@@ -300,7 +300,7 @@ Partial Class CreateCustomer
         Me.txtLastName.Location = New System.Drawing.Point(515, 34)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(250, 36)
-        Me.txtLastName.TabIndex = 5
+        Me.txtLastName.TabIndex = 12
         '
         'lblLastName
         '
@@ -341,7 +341,7 @@ Partial Class CreateCustomer
         Me.Panel3.Location = New System.Drawing.Point(285, 244)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(999, 181)
-        Me.Panel3.TabIndex = 117
+        Me.Panel3.TabIndex = 118
         '
         'Label6
         '
@@ -359,7 +359,7 @@ Partial Class CreateCustomer
         Me.txtRoad.Location = New System.Drawing.Point(515, 29)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(250, 36)
-        Me.txtRoad.TabIndex = 7
+        Me.txtRoad.TabIndex = 6
         '
         'Label4
         '
@@ -387,7 +387,7 @@ Partial Class CreateCustomer
         Me.txtHouseNo.Location = New System.Drawing.Point(119, 31)
         Me.txtHouseNo.Name = "txtHouseNo"
         Me.txtHouseNo.Size = New System.Drawing.Size(62, 36)
-        Me.txtHouseNo.TabIndex = 6
+        Me.txtHouseNo.TabIndex = 4
         '
         'txtSubdistrict
         '
@@ -395,7 +395,7 @@ Partial Class CreateCustomer
         Me.txtSubdistrict.Location = New System.Drawing.Point(119, 73)
         Me.txtSubdistrict.Name = "txtSubdistrict"
         Me.txtSubdistrict.Size = New System.Drawing.Size(250, 36)
-        Me.txtSubdistrict.TabIndex = 9
+        Me.txtSubdistrict.TabIndex = 7
         '
         'Label10
         '
@@ -413,7 +413,7 @@ Partial Class CreateCustomer
         Me.txtProvince.Location = New System.Drawing.Point(119, 115)
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(250, 36)
-        Me.txtProvince.TabIndex = 11
+        Me.txtProvince.TabIndex = 9
         '
         'Label11
         '
@@ -431,7 +431,7 @@ Partial Class CreateCustomer
         Me.txtLane.Location = New System.Drawing.Point(264, 31)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(105, 36)
-        Me.txtLane.TabIndex = 8
+        Me.txtLane.TabIndex = 5
         '
         'txtDistrict
         '
@@ -439,7 +439,7 @@ Partial Class CreateCustomer
         Me.txtDistrict.Location = New System.Drawing.Point(515, 71)
         Me.txtDistrict.Name = "txtDistrict"
         Me.txtDistrict.Size = New System.Drawing.Size(250, 36)
-        Me.txtDistrict.TabIndex = 10
+        Me.txtDistrict.TabIndex = 8
         '
         'txtPostalCode
         '
@@ -448,7 +448,7 @@ Partial Class CreateCustomer
         Me.txtPostalCode.MaxLength = 5
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
-        Me.txtPostalCode.TabIndex = 12
+        Me.txtPostalCode.TabIndex = 10
         '
         'Label12
         '
@@ -559,7 +559,7 @@ Partial Class CreateCustomer
         Me.Panel4.Location = New System.Drawing.Point(404, 92)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(880, 146)
-        Me.Panel4.TabIndex = 118
+        Me.Panel4.TabIndex = 117
         '
         'lblCorpName
         '
@@ -616,7 +616,7 @@ Partial Class CreateCustomer
         Me.txtCorpGroup.Location = New System.Drawing.Point(148, 94)
         Me.txtCorpGroup.Name = "txtCorpGroup"
         Me.txtCorpGroup.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpGroup.TabIndex = 102
+        Me.txtCorpGroup.TabIndex = 3
         '
         'lblCorpSubName
         '
@@ -633,7 +633,7 @@ Partial Class CreateCustomer
         Me.txtCorpName.Location = New System.Drawing.Point(148, 10)
         Me.txtCorpName.Name = "txtCorpName"
         Me.txtCorpName.Size = New System.Drawing.Size(448, 36)
-        Me.txtCorpName.TabIndex = 100
+        Me.txtCorpName.TabIndex = 1
         '
         'txtCorp_s_Name
         '
@@ -642,7 +642,7 @@ Partial Class CreateCustomer
         Me.txtCorp_s_Name.MaxLength = 5
         Me.txtCorp_s_Name.Name = "txtCorp_s_Name"
         Me.txtCorp_s_Name.Size = New System.Drawing.Size(62, 36)
-        Me.txtCorp_s_Name.TabIndex = 101
+        Me.txtCorp_s_Name.TabIndex = 2
         '
         'btnAttachCustomerImage
         '

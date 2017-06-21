@@ -485,7 +485,7 @@ Public Class CreateSerial
         Panel5.Visible = True
 
         Dim serialMD5 As String = MD5.Encrypt(txtSerialKey.Text, 1)
-        MsgBox("ซีเรียลคีย์ที่ผ่านการเข้ารหัส MD5 ที่ได้คือ " & serialMD5 & " ความยาวจำนวน = " & serialMD5.Length)
+        'MsgBox("ซีเรียลคีย์ที่ผ่านการเข้ารหัส MD5 ที่ได้คือ " & serialMD5 & " ความยาวจำนวน = " & serialMD5.Length)
 
     End Sub
 

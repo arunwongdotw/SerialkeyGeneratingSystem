@@ -272,7 +272,7 @@ Public Class SearchUser
         checkboxCreate.HeaderText = "สิทธิ์การสร้าง"
         checkboxCreate.Name = "chbCreate"
         checkboxCreate.FlatStyle = FlatStyle.Flat
-        checkboxCreate.DefaultCellStyle.ForeColor = Color.Black
+        checkboxCreate.DefaultCellStyle.ForeColor = Color.Gray
         checkboxCreate.ReadOnly = True
         checkboxCreate.Width = 120
         dgvSearchUser.Columns.Add(checkboxCreate)
@@ -280,21 +280,21 @@ Public Class SearchUser
         checkboxEdit.HeaderText = "สิทธิ์การแก้ไข"
         checkboxEdit.Name = "chbEdit"
         checkboxEdit.FlatStyle = FlatStyle.Flat
-        checkboxEdit.DefaultCellStyle.ForeColor = Color.Black
+        checkboxEdit.DefaultCellStyle.ForeColor = Color.Gray
         checkboxEdit.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxEdit)
         Dim checkboxDelete As New DataGridViewCheckBoxColumn
         checkboxDelete.Name = "chbDelete"
         checkboxDelete.HeaderText = "สิทธิ์การลบ"
         checkboxDelete.FlatStyle = FlatStyle.Flat
-        checkboxDelete.DefaultCellStyle.ForeColor = Color.Black
+        checkboxDelete.DefaultCellStyle.ForeColor = Color.Gray
         checkboxDelete.ReadOnly = True
         dgvSearchUser.Columns.Add(checkboxDelete)
         Dim checkboxPrint As New DataGridViewCheckBoxColumn
         checkboxPrint.Name = "chbPrint"
         checkboxPrint.HeaderText = "สิทธิ์การออกรายงาน"
         checkboxPrint.FlatStyle = FlatStyle.Flat
-        checkboxPrint.DefaultCellStyle.ForeColor = Color.Black
+        checkboxPrint.DefaultCellStyle.ForeColor = Color.Gray
         checkboxPrint.ReadOnly = True
         checkboxPrint.Width = 150
         dgvSearchUser.Columns.Add(checkboxPrint)
