@@ -521,7 +521,15 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub txtcellphone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
-
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
+        End Select
     End Sub
 
     Private Sub txtcellphone_TextChanged(sender As Object, e As EventArgs) Handles txtcellphone.TextChanged
@@ -529,10 +537,18 @@ Public Class CreateCustomer
     End Sub
 
     Private Sub txtPhone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
-
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
+        End Select
     End Sub
 
     Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
-
+        
     End Sub
 End Class
