@@ -689,7 +689,7 @@ Public Class CreateSerial
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -701,7 +701,7 @@ Public Class CreateSerial
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -754,5 +754,9 @@ Public Class CreateSerial
     Private Sub btnDecrypt_Click(sender As Object, e As EventArgs) Handles btnDecrypt.Click
         Dim frm As New Decrypt
         frm.Show()
+    End Sub
+
+    Private Sub txtAmountUser_TextChanged(sender As Object, e As EventArgs) Handles txtAmountUser.TextChanged
+
     End Sub
 End Class
