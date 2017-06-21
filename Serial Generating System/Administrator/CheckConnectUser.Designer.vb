@@ -32,6 +32,7 @@ Partial Class CheckConnectUser
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ข้อมูลส่วนตัว", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CheckConnectUser))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCheck = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
@@ -43,7 +44,6 @@ Partial Class CheckConnectUser
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvConnection = New System.Windows.Forms.DataGridView()
         Me.tvAdminMenu = New System.Windows.Forms.TreeView()
-        Me.btnCheck = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +68,20 @@ Partial Class CheckConnectUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'btnCheck
+        '
+        Me.btnCheck.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnCheck.FlatAppearance.BorderSize = 0
+        Me.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheck.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheck.Location = New System.Drawing.Point(1112, 591)
+        Me.btnCheck.Name = "btnCheck"
+        Me.btnCheck.Size = New System.Drawing.Size(129, 41)
+        Me.btnCheck.TabIndex = 3
+        Me.btnCheck.TabStop = False
+        Me.btnCheck.Text = "รีเฟรช"
+        Me.btnCheck.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -224,28 +238,16 @@ Partial Class CheckConnectUser
         Me.tvAdminMenu.TabIndex = 0
         Me.tvAdminMenu.TabStop = False
         '
-        'btnCheck
-        '
-        Me.btnCheck.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnCheck.FlatAppearance.BorderSize = 0
-        Me.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheck.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheck.Location = New System.Drawing.Point(1112, 591)
-        Me.btnCheck.Name = "btnCheck"
-        Me.btnCheck.Size = New System.Drawing.Size(129, 41)
-        Me.btnCheck.TabIndex = 3
-        Me.btnCheck.TabStop = False
-        Me.btnCheck.Text = "รีเฟรช"
-        Me.btnCheck.UseVisualStyleBackColor = False
-        '
         'CheckConnectUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "CheckConnectUser"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ตรวจสอบจำนวนผู้ใช้งานระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"

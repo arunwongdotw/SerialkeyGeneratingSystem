@@ -147,9 +147,11 @@ Partial Class Login
         Me.Controls.Add(Me.btnLogin)
         Me.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เข้าสู่ระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"

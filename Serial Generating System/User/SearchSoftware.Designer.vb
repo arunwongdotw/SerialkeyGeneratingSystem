@@ -41,10 +41,11 @@ Partial Class SearchSoftware
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
         Me.txtAccountInfo = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.chbWarehouseManagement = New System.Windows.Forms.CheckBox()
@@ -65,14 +66,13 @@ Partial Class SearchSoftware
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnHeader
@@ -122,6 +122,28 @@ Partial Class SearchSoftware
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Orange
+        Me.Panel4.Controls.Add(Me.btnLogout)
+        Me.Panel4.Location = New System.Drawing.Point(0, 602)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(270, 100)
+        Me.Panel4.TabIndex = 126
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.White
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
+        Me.btnLogout.TabIndex = 12
+        Me.btnLogout.Text = "ออกจากระบบ"
+        Me.btnLogout.UseVisualStyleBackColor = False
+        '
         'pbAccountInfo
         '
         Me.pbAccountInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -159,19 +181,6 @@ Partial Class SearchSoftware
         Me.btnClear.Text = "เคลียร์"
         Me.btnClear.UseVisualStyleBackColor = False
         '
-        'btnLogout
-        '
-        Me.btnLogout.BackColor = System.Drawing.Color.White
-        Me.btnLogout.FlatAppearance.BorderSize = 0
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(70, 29)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(129, 41)
-        Me.btnLogout.TabIndex = 12
-        Me.btnLogout.Text = "ออกจากระบบ"
-        Me.btnLogout.UseVisualStyleBackColor = False
-        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -207,7 +216,7 @@ Partial Class SearchSoftware
         Me.chbWarehouseManagement.AutoSize = True
         Me.chbWarehouseManagement.Location = New System.Drawing.Point(3, 4)
         Me.chbWarehouseManagement.Name = "chbWarehouseManagement"
-        Me.chbWarehouseManagement.Size = New System.Drawing.Size(201, 30)
+        Me.chbWarehouseManagement.Size = New System.Drawing.Size(198, 31)
         Me.chbWarehouseManagement.TabIndex = 9
         Me.chbWarehouseManagement.Text = "Warehouse Management"
         Me.chbWarehouseManagement.UseVisualStyleBackColor = True
@@ -217,7 +226,7 @@ Partial Class SearchSoftware
         Me.chbQualityControl.AutoSize = True
         Me.chbQualityControl.Location = New System.Drawing.Point(232, 4)
         Me.chbQualityControl.Name = "chbQualityControl"
-        Me.chbQualityControl.Size = New System.Drawing.Size(134, 30)
+        Me.chbQualityControl.Size = New System.Drawing.Size(134, 31)
         Me.chbQualityControl.TabIndex = 10
         Me.chbQualityControl.Text = "Quality Control"
         Me.chbQualityControl.UseVisualStyleBackColor = True
@@ -239,7 +248,7 @@ Partial Class SearchSoftware
         Me.chbEnglish.AutoSize = True
         Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 5
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -249,7 +258,7 @@ Partial Class SearchSoftware
         Me.chbThai.AutoSize = True
         Me.chbThai.Location = New System.Drawing.Point(80, 4)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 6
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -259,7 +268,7 @@ Partial Class SearchSoftware
         Me.chbChinese.AutoSize = True
         Me.chbChinese.Location = New System.Drawing.Point(136, 4)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 7
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -269,7 +278,7 @@ Partial Class SearchSoftware
         Me.chbJapanese.AutoSize = True
         Me.chbJapanese.Location = New System.Drawing.Point(185, 4)
         Me.chbJapanese.Name = "chbJapanese"
-        Me.chbJapanese.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapanese.Size = New System.Drawing.Size(63, 31)
         Me.chbJapanese.TabIndex = 8
         Me.chbJapanese.Text = "ญี่ปุ่น"
         Me.chbJapanese.UseVisualStyleBackColor = True
@@ -279,7 +288,7 @@ Partial Class SearchSoftware
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(214, 109)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
         Me.lblGroupCorp.TabIndex = 120
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -288,7 +297,7 @@ Partial Class SearchSoftware
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(195, 151)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
+        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
         Me.lblFirstName.TabIndex = 119
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -305,7 +314,7 @@ Partial Class SearchSoftware
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(173, 67)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
         Me.lblCorpSubName.TabIndex = 118
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -322,7 +331,7 @@ Partial Class SearchSoftware
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(192, 25)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
         Me.lblCorpName.TabIndex = 117
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -347,7 +356,7 @@ Partial Class SearchSoftware
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(230, 192)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 26)
+        Me.Label4.Size = New System.Drawing.Size(67, 27)
         Me.Label4.TabIndex = 114
         Me.Label4.Text = "ออปชัน :"
         '
@@ -356,7 +365,7 @@ Partial Class SearchSoftware
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(240, 233)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 107
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -405,28 +414,22 @@ Partial Class SearchSoftware
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Orange
-        Me.Panel4.Controls.Add(Me.btnLogout)
-        Me.Panel4.Location = New System.Drawing.Point(0, 602)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(270, 100)
-        Me.Panel4.TabIndex = 126
-        '
         'SearchSoftware
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SearchSoftware"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ค้นหาซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -434,7 +437,6 @@ Partial Class SearchSoftware
         Me.Panel3.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

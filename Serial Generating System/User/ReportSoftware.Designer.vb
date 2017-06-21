@@ -41,6 +41,7 @@ Partial Class ReportSoftware
         Me.btnHeader = New System.Windows.Forms.Button()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.pbAccountInfo = New System.Windows.Forms.PictureBox()
@@ -66,7 +67,6 @@ Partial Class ReportSoftware
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.tvUserMenu = New System.Windows.Forms.TreeView()
-        Me.btnExport = New System.Windows.Forms.Button()
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -123,6 +123,19 @@ Partial Class ReportSoftware
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1317, 702)
         Me.Panel1.TabIndex = 4
+        '
+        'btnExport
+        '
+        Me.btnExport.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnExport.FlatAppearance.BorderSize = 0
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.Location = New System.Drawing.Point(1022, 382)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(129, 41)
+        Me.btnExport.TabIndex = 126
+        Me.btnExport.Text = "นำออก"
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -218,7 +231,7 @@ Partial Class ReportSoftware
         Me.chbWarehouseManagement.AutoSize = True
         Me.chbWarehouseManagement.Location = New System.Drawing.Point(3, 4)
         Me.chbWarehouseManagement.Name = "chbWarehouseManagement"
-        Me.chbWarehouseManagement.Size = New System.Drawing.Size(201, 30)
+        Me.chbWarehouseManagement.Size = New System.Drawing.Size(198, 31)
         Me.chbWarehouseManagement.TabIndex = 9
         Me.chbWarehouseManagement.Text = "Warehouse Management"
         Me.chbWarehouseManagement.UseVisualStyleBackColor = True
@@ -228,7 +241,7 @@ Partial Class ReportSoftware
         Me.chbQualityControl.AutoSize = True
         Me.chbQualityControl.Location = New System.Drawing.Point(232, 4)
         Me.chbQualityControl.Name = "chbQualityControl"
-        Me.chbQualityControl.Size = New System.Drawing.Size(134, 30)
+        Me.chbQualityControl.Size = New System.Drawing.Size(134, 31)
         Me.chbQualityControl.TabIndex = 10
         Me.chbQualityControl.Text = "Quality Control"
         Me.chbQualityControl.UseVisualStyleBackColor = True
@@ -250,7 +263,7 @@ Partial Class ReportSoftware
         Me.chbEnglish.AutoSize = True
         Me.chbEnglish.Location = New System.Drawing.Point(3, 3)
         Me.chbEnglish.Name = "chbEnglish"
-        Me.chbEnglish.Size = New System.Drawing.Size(77, 30)
+        Me.chbEnglish.Size = New System.Drawing.Size(77, 31)
         Me.chbEnglish.TabIndex = 5
         Me.chbEnglish.Text = "อังกฤษ"
         Me.chbEnglish.UseVisualStyleBackColor = True
@@ -260,7 +273,7 @@ Partial Class ReportSoftware
         Me.chbThai.AutoSize = True
         Me.chbThai.Location = New System.Drawing.Point(80, 4)
         Me.chbThai.Name = "chbThai"
-        Me.chbThai.Size = New System.Drawing.Size(53, 30)
+        Me.chbThai.Size = New System.Drawing.Size(53, 31)
         Me.chbThai.TabIndex = 6
         Me.chbThai.Text = "ไทย"
         Me.chbThai.UseVisualStyleBackColor = True
@@ -270,7 +283,7 @@ Partial Class ReportSoftware
         Me.chbChinese.AutoSize = True
         Me.chbChinese.Location = New System.Drawing.Point(136, 4)
         Me.chbChinese.Name = "chbChinese"
-        Me.chbChinese.Size = New System.Drawing.Size(49, 30)
+        Me.chbChinese.Size = New System.Drawing.Size(49, 31)
         Me.chbChinese.TabIndex = 7
         Me.chbChinese.Text = "จีน"
         Me.chbChinese.UseVisualStyleBackColor = True
@@ -280,7 +293,7 @@ Partial Class ReportSoftware
         Me.chbJapanese.AutoSize = True
         Me.chbJapanese.Location = New System.Drawing.Point(185, 4)
         Me.chbJapanese.Name = "chbJapanese"
-        Me.chbJapanese.Size = New System.Drawing.Size(64, 30)
+        Me.chbJapanese.Size = New System.Drawing.Size(63, 31)
         Me.chbJapanese.TabIndex = 8
         Me.chbJapanese.Text = "ญี่ปุ่น"
         Me.chbJapanese.UseVisualStyleBackColor = True
@@ -290,7 +303,7 @@ Partial Class ReportSoftware
         Me.lblGroupCorp.AutoSize = True
         Me.lblGroupCorp.Location = New System.Drawing.Point(214, 109)
         Me.lblGroupCorp.Name = "lblGroupCorp"
-        Me.lblGroupCorp.Size = New System.Drawing.Size(81, 26)
+        Me.lblGroupCorp.Size = New System.Drawing.Size(83, 27)
         Me.lblGroupCorp.TabIndex = 120
         Me.lblGroupCorp.Text = "ชื่อแบรนด์ :"
         '
@@ -299,7 +312,7 @@ Partial Class ReportSoftware
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(195, 151)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(100, 26)
+        Me.lblFirstName.Size = New System.Drawing.Size(102, 27)
         Me.lblFirstName.TabIndex = 119
         Me.lblFirstName.Text = "ชื่อย่อแบรนด์ :"
         '
@@ -316,7 +329,7 @@ Partial Class ReportSoftware
         Me.lblCorpSubName.AutoSize = True
         Me.lblCorpSubName.Location = New System.Drawing.Point(173, 67)
         Me.lblCorpSubName.Name = "lblCorpSubName"
-        Me.lblCorpSubName.Size = New System.Drawing.Size(123, 26)
+        Me.lblCorpSubName.Size = New System.Drawing.Size(124, 27)
         Me.lblCorpSubName.TabIndex = 118
         Me.lblCorpSubName.Text = "ชื่อย่อซอฟต์แวร์ :"
         '
@@ -333,7 +346,7 @@ Partial Class ReportSoftware
         Me.lblCorpName.AutoSize = True
         Me.lblCorpName.Location = New System.Drawing.Point(192, 25)
         Me.lblCorpName.Name = "lblCorpName"
-        Me.lblCorpName.Size = New System.Drawing.Size(104, 26)
+        Me.lblCorpName.Size = New System.Drawing.Size(105, 27)
         Me.lblCorpName.TabIndex = 117
         Me.lblCorpName.Text = "ชื่อซอฟต์แวร์ :"
         '
@@ -358,7 +371,7 @@ Partial Class ReportSoftware
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(230, 192)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 26)
+        Me.Label4.Size = New System.Drawing.Size(67, 27)
         Me.Label4.TabIndex = 114
         Me.Label4.Text = "ออปชัน :"
         '
@@ -367,7 +380,7 @@ Partial Class ReportSoftware
         Me.lblLanguage.AutoSize = True
         Me.lblLanguage.Location = New System.Drawing.Point(240, 233)
         Me.lblLanguage.Name = "lblLanguage"
-        Me.lblLanguage.Size = New System.Drawing.Size(56, 26)
+        Me.lblLanguage.Size = New System.Drawing.Size(57, 27)
         Me.lblLanguage.TabIndex = 107
         Me.lblLanguage.Text = "ภาษา :"
         '
@@ -416,27 +429,16 @@ Partial Class ReportSoftware
         Me.tvUserMenu.TabIndex = 0
         Me.tvUserMenu.TabStop = False
         '
-        'btnExport
-        '
-        Me.btnExport.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnExport.FlatAppearance.BorderSize = 0
-        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExport.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExport.Location = New System.Drawing.Point(1022, 382)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(129, 41)
-        Me.btnExport.TabIndex = 126
-        Me.btnExport.Text = "นำออก"
-        Me.btnExport.UseVisualStyleBackColor = False
-        '
         'ReportSoftware
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1317, 701)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ReportSoftware"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "รายงานข้อมูลซอฟต์แวร์สำเร็จรูป - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"
