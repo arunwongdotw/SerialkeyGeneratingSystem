@@ -475,19 +475,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
-    Private Sub txtCorpName_LostFocus(sender As Object, e As EventArgs) Handles txtCorpName.LostFocus
-        If isCustomerDuplicate("corpname", txtCorpName.Text.Trim) Then
-            MsgBox("พบชื่อบริษัทนี้มีอยู่ในระบบแล้ว")
-            txtCorpName.Focus()
-        End If
-    End Sub
-
-    Private Sub txtCorp_s_Name_LostFocus(sender As Object, e As EventArgs) Handles txtCorp_s_Name.LostFocus
-        If isCustomerDuplicate("corp_s_name", txtCorp_s_Name.Text.Trim) Then
-            MsgBox("พบชื่อย่อบริษัทนี้มีอยู่ในระบบแล้ว")
-            txtCorp_s_Name.Focus()
-        End If
-    End Sub
+ 
 
     Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
         Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
