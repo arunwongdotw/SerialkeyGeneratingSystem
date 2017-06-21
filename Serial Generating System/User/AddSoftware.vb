@@ -160,7 +160,7 @@ Public Class AddSoftware
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim check As Boolean = False
         check = ValidateDataInput()
-        If check = True AndAlso MsgBox("ยืนยันการเพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
+        If check = True AndAlso Not checkDuplicate() AndAlso MsgBox("ยืนยันการเพิ่มข้อมูลซอฟต์แวร์สำเร็จรูป?", MsgBoxStyle.YesNo) = vbYes Then
             add()
         End If
     End Sub
@@ -292,20 +292,17 @@ Public Class AddSoftware
         con.close()
         Return isDup
     End Function
-
-    Private Sub txtProductName_LostFocus(sender As Object, e As EventArgs) Handles txtProductName.LostFocus
+    Public Function checkDuplicate() As Boolean
         If isProductDuplicate("product_name", txtProductName.Text.Trim) Then
             MsgBox("ชื่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
-            txtProductName.Focus()
-        End If
-    End Sub
-
-    Private Sub txtProduct_s_name_LostFocus(sender As Object, e As EventArgs) Handles txtProduct_s_name.LostFocus
-        If isProductDuplicate("product_s_name", txtProduct_s_name.Text.Trim) Then
+            Return True
+        ElseIf isProductDuplicate("product_s_name", txtProduct_s_name.Text.Trim) Then
             MsgBox("ชื่อย่อซอฟต์แวร์นี้มีอยู่ในระบบแล้ว")
-            txtProduct_s_name.Focus()
+            Return True
         End If
-    End Sub
+        Return False
+    End Function
+   
 
 
     'Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
