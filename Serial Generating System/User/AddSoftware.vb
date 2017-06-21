@@ -169,7 +169,7 @@ Public Class AddSoftware
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -181,7 +181,7 @@ Public Class AddSoftware
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -302,7 +302,7 @@ Public Class AddSoftware
         End If
         Return False
     End Function
-   
+
 
 
     'Private Sub txtBrandName_LostFocus(sender As Object, e As EventArgs) Handles txtBrandName.LostFocus
@@ -347,6 +347,14 @@ Public Class AddSoftware
     End Sub
 
     Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
+
+    End Sub
+
+    Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
+
+    End Sub
+
+    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
 
     End Sub
 End Class

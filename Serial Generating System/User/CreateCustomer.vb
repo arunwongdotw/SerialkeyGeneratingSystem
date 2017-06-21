@@ -160,7 +160,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -174,7 +174,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -188,7 +188,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -200,7 +200,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -212,7 +212,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -348,7 +348,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case Else
                 e.Handled = True
@@ -393,7 +393,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58 ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -407,7 +407,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48 มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -421,7 +421,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, 32=space bar ,Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, 32=space bar ,Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -437,7 +437,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -451,7 +451,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -465,7 +465,7 @@ Public Class CreateCustomer
         Select Case Asc(e.KeyChar)
             Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+            Case 8, 13, 32 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
@@ -475,7 +475,7 @@ Public Class CreateCustomer
         End Select
     End Sub
 
- 
+
 
     Private Sub btnAttachCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachCustomerImage.Click
         Dim ImageName As String = txtCorp_s_Name.Text + "_" + txtCorpGroup.Text
@@ -502,5 +502,53 @@ Public Class CreateCustomer
             End If
             pbAttachCustomerImage.ImageLocation = ImagePath
         End If
+    End Sub
+
+    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
+
+    End Sub
+
+    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
+
+    End Sub
+
+    Private Sub txtHouseNo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHouseNo.KeyPress
+
+    End Sub
+
+    Private Sub txtHouseNo_TextChanged(sender As Object, e As EventArgs) Handles txtHouseNo.TextChanged
+
+    End Sub
+
+    Private Sub txtcellphone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
+        End Select
+    End Sub
+
+    Private Sub txtcellphone_TextChanged(sender As Object, e As EventArgs) Handles txtcellphone.TextChanged
+
+    End Sub
+
+    Private Sub txtPhone_KeyPress1(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
+        End Select
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+        
     End Sub
 End Class
