@@ -650,6 +650,10 @@ Public Class ReportSerial
                 Else
                     sheet.Cells(1, j).ColumnWidth = 15
                 End If
+                sheet.Cells(1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             For i = 1 To dgvSerialKey.RowCount
                 For j = 1 To dgvSerialKey.ColumnCount - 1
@@ -674,6 +678,10 @@ Public Class ReportSerial
                     End If
                     sheet.Cells(i + 1, j).HorizontalAlignment = 3
                 Next
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             'save the WorkBook to a file and exit Excel
             xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)

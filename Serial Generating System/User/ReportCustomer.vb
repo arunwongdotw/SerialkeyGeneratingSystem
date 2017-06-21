@@ -511,6 +511,10 @@ Public Class ReportCustomer
                 sheet.Cells(1, j) = dgvSearchCus.Columns(j).HeaderText
                 sheet.Cells(1, j).HorizontalAlignment = 3
                 sheet.Cells(1, j).ColumnWidth = 15
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             For i = 1 To dgvSearchCus.RowCount
                 For j = 1 To dgvSearchCus.ColumnCount - 1
@@ -521,6 +525,10 @@ Public Class ReportCustomer
                     xlRange2.NumberFormat = "@"
                     sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
                     sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
                 Next
             Next
             'save the WorkBook to a file and exit Excel

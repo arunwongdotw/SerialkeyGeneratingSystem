@@ -415,6 +415,10 @@ Public Class ReportSoftware
                 Else
                     sheet.Cells(1, j - 6).ColumnWidth = 15
                 End If
+                sheet.Cells(1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             For i = 1 To dgvSearchProduct.RowCount
                 For j = 7 To dgvSearchProduct.ColumnCount - 1
@@ -433,6 +437,10 @@ Public Class ReportSoftware
                     End If
                     sheet.Cells(i + 1, j - 6).HorizontalAlignment = 3
                 Next
+                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             'save the WorkBook to a file and exit Excel
             xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
