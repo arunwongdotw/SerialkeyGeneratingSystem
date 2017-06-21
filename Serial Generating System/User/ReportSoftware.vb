@@ -124,7 +124,7 @@ Public Class ReportSoftware
             End If
         Next
     End Sub
-    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+    Private Sub dataGridView1_Sorted(ByVal sender As Object,
   ByVal e As System.EventArgs) Handles dgvSearchProduct.Sorted
 
         genRowNumber()
@@ -418,6 +418,8 @@ Public Class ReportSoftware
             Next
             For i = 1 To dgvSearchProduct.RowCount
                 For j = 7 To dgvSearchProduct.ColumnCount - 1
+                    Dim xlRange2 As Excel.Range = sheet.Range("A1:BZ2000")
+                    xlRange2.NumberFormat = "@"
                     If (dgvSearchProduct.Rows(i - 1).Cells(j).Value.ToString.Equals("1")) Then
                         If (dgvSearchProduct.Columns(j).HeaderText.ToString.Equals("ลำดับที่")) Then
                             sheet.Cells(i + 1, j - 6) = "1"

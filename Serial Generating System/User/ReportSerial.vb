@@ -392,7 +392,7 @@ Public Class ReportSerial
     '        End If
     '    Next
     'End Sub
-    Private Sub dataGridView1_Sorted(ByVal sender As Object, _
+    Private Sub dataGridView1_Sorted(ByVal sender As Object,
    ByVal e As System.EventArgs) Handles dgvSerialKey.Sorted
 
         genRowNumber()
@@ -653,6 +653,8 @@ Public Class ReportSerial
             Next
             For i = 1 To dgvSerialKey.RowCount
                 For j = 1 To dgvSerialKey.ColumnCount - 1
+                    Dim xlRange2 As Excel.Range = sheet.Range("A1:BZ2000")
+                    xlRange2.NumberFormat = "@"
                     If (dgvSerialKey.Rows(i - 1).Cells(j).Value Is Nothing) Then
                         sheet.Cells(i + 1, j) = ""
                     Else

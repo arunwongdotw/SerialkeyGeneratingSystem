@@ -502,6 +502,8 @@ Public Class ReportCustomer
             'create an Excel WorkBook
             Dim xls As New Excel.Application
             Dim sheet As Excel.Worksheet
+            'Dim xlRange2 As Excel.Range = sheet.Range("M1:BZ2000")
+            'xlRange2.NumberFormat = "@"
             Dim i, j As Integer
             xls.Workbooks.Add()
             sheet = xls.ActiveWorkbook.ActiveSheet
@@ -512,6 +514,11 @@ Public Class ReportCustomer
             Next
             For i = 1 To dgvSearchCus.RowCount
                 For j = 1 To dgvSearchCus.ColumnCount - 1
+                    'If (dgvSearchCus.Columns(j).HeaderText.ToString.Equals("โทรศัพท์")) Or (dgvSearchCus.Columns(j).HeaderText.ToString.Equals("โทรศัพท์")) Then
+                    '    sheet.Cells(i + 1, j).ra
+                    'End If
+                    Dim xlRange2 As Excel.Range = sheet.Range("A1:BZ2000")
+                    xlRange2.NumberFormat = "@"
                     sheet.Cells(i + 1, j) = dgvSearchCus.Rows(i - 1).Cells(j).Value
                     sheet.Cells(i + 1, j).HorizontalAlignment = 3
                 Next
