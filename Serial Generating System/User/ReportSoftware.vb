@@ -436,11 +436,12 @@ Public Class ReportSoftware
                         sheet.Cells(i + 1, j - 6) = dgvSearchProduct.Rows(i - 1).Cells(j).Value
                     End If
                     sheet.Cells(i + 1, j - 6).HorizontalAlignment = 3
+                    sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
                 Next
-                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j - 6).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+
             Next
             'save the WorkBook to a file and exit Excel
             xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)

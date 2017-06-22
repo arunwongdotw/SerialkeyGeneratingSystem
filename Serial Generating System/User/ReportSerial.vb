@@ -677,11 +677,11 @@ Public Class ReportSerial
                         End If
                     End If
                     sheet.Cells(i + 1, j).HorizontalAlignment = 3
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
+                    sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
                 Next
-                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
-                sheet.Cells(i + 1, j).Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.XlDataBarBorderType.xlDataBarBorderSolid
             Next
             'save the WorkBook to a file and exit Excel
             xls.ActiveWorkbook.SaveAs(SaveFileDialog1.FileName)
