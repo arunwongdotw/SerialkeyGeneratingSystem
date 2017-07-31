@@ -50,13 +50,11 @@ Partial Class EditCustomer
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtcellphone = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
@@ -65,20 +63,19 @@ Partial Class EditCustomer
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtMoo = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtRoad = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtHouseNo = New System.Windows.Forms.TextBox()
         Me.txtSubdistrict = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtProvince = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtLane = New System.Windows.Forms.TextBox()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.txtPostalCode = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.lblNo = New System.Windows.Forms.Label()
         Me.lblSubdistrict = New System.Windows.Forms.Label()
         Me.lblRoad = New System.Windows.Forms.Label()
@@ -90,7 +87,6 @@ Partial Class EditCustomer
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblCorpName = New System.Windows.Forms.Label()
         Me.lbConditionText = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblGroupCorp = New System.Windows.Forms.Label()
         Me.txtCorpGroup = New System.Windows.Forms.TextBox()
@@ -281,13 +277,11 @@ Partial Class EditCustomer
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.txtcellphone)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.txtEmail)
-        Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.txtPhone)
         Me.Panel2.Controls.Add(Me.lblEmail)
         Me.Panel2.Controls.Add(Me.lblPhone)
@@ -299,16 +293,6 @@ Partial Class EditCustomer
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(999, 165)
         Me.Panel2.TabIndex = 102
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(771, 70)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 27)
-        Me.Label5.TabIndex = 105
-        Me.Label5.Text = "*"
         '
         'Label7
         '
@@ -354,16 +338,6 @@ Partial Class EditCustomer
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(250, 36)
         Me.txtEmail.TabIndex = 12
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(375, 70)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 27)
-        Me.Label13.TabIndex = 97
-        Me.Label13.Text = "*"
         '
         'txtPhone
         '
@@ -431,21 +405,20 @@ Partial Class EditCustomer
         '
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.txtMoo)
+        Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.txtRoad)
-        Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.txtHouseNo)
         Me.Panel3.Controls.Add(Me.txtSubdistrict)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.txtProvince)
-        Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.txtLane)
         Me.Panel3.Controls.Add(Me.txtDistrict)
         Me.Panel3.Controls.Add(Me.txtPostalCode)
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Controls.Add(Me.lblNo)
         Me.Panel3.Controls.Add(Me.lblSubdistrict)
         Me.Panel3.Controls.Add(Me.lblRoad)
@@ -457,6 +430,25 @@ Partial Class EditCustomer
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(999, 171)
         Me.Panel3.TabIndex = 101
+        '
+        'txtMoo
+        '
+        Me.txtMoo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtMoo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMoo.Location = New System.Drawing.Point(241, 31)
+        Me.txtMoo.Name = "txtMoo"
+        Me.txtMoo.Size = New System.Drawing.Size(62, 36)
+        Me.txtMoo.TabIndex = 120
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(195, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 27)
+        Me.Label4.TabIndex = 121
+        Me.Label4.Text = "หมู่ :"
         '
         'Label15
         '
@@ -471,20 +463,10 @@ Partial Class EditCustomer
         'txtRoad
         '
         Me.txtRoad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtRoad.Location = New System.Drawing.Point(515, 29)
+        Me.txtRoad.Location = New System.Drawing.Point(686, 29)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(250, 36)
         Me.txtRoad.TabIndex = 8
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(771, 34)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 27)
-        Me.Label4.TabIndex = 86
-        Me.Label4.Text = "*"
         '
         'Label3
         '
@@ -530,20 +512,10 @@ Partial Class EditCustomer
         Me.txtProvince.Size = New System.Drawing.Size(250, 36)
         Me.txtProvince.TabIndex = 7
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(185, 34)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(18, 27)
-        Me.Label11.TabIndex = 81
-        Me.Label11.Text = "*"
-        '
         'txtLane
         '
         Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLane.Location = New System.Drawing.Point(264, 31)
+        Me.txtLane.Location = New System.Drawing.Point(515, 29)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(105, 36)
         Me.txtLane.TabIndex = 5
@@ -575,16 +547,6 @@ Partial Class EditCustomer
         Me.Label12.TabIndex = 75
         Me.Label12.Text = "*"
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(740, 34)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(18, 27)
-        Me.Label14.TabIndex = 71
-        Me.Label14.Text = "*"
-        '
         'lblNo
         '
         Me.lblNo.AutoSize = True
@@ -606,7 +568,7 @@ Partial Class EditCustomer
         'lblRoad
         '
         Me.lblRoad.AutoSize = True
-        Me.lblRoad.Location = New System.Drawing.Point(460, 34)
+        Me.lblRoad.Location = New System.Drawing.Point(631, 34)
         Me.lblRoad.Name = "lblRoad"
         Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
@@ -624,7 +586,7 @@ Partial Class EditCustomer
         'lblLane
         '
         Me.lblLane.AutoSize = True
-        Me.lblLane.Location = New System.Drawing.Point(209, 34)
+        Me.lblLane.Location = New System.Drawing.Point(460, 34)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
@@ -670,7 +632,6 @@ Partial Class EditCustomer
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.lblCorpName)
         Me.Panel4.Controls.Add(Me.lbConditionText)
-        Me.Panel4.Controls.Add(Me.Label17)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.lblGroupCorp)
         Me.Panel4.Controls.Add(Me.txtCorpGroup)
@@ -698,19 +659,9 @@ Partial Class EditCustomer
         Me.lbConditionText.ForeColor = System.Drawing.Color.Red
         Me.lbConditionText.Location = New System.Drawing.Point(216, 56)
         Me.lbConditionText.Name = "lbConditionText"
-        Me.lbConditionText.Size = New System.Drawing.Size(249, 24)
+        Me.lbConditionText.Size = New System.Drawing.Size(118, 24)
         Me.lbConditionText.TabIndex = 112
-        Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(602, 96)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(18, 27)
-        Me.Label17.TabIndex = 108
-        Me.Label17.Text = "*"
+        Me.lbConditionText.Text = "* 3 ถึง 5 ตัวอักษร"
         '
         'Label1
         '
@@ -804,7 +755,6 @@ Partial Class EditCustomer
     Friend WithEvents lbConditionText As System.Windows.Forms.Label
     Friend WithEvents pbAttachNewCustomerImage As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents txtCorpGroup As System.Windows.Forms.TextBox
     Friend WithEvents lblGroupCorp As System.Windows.Forms.Label
     Friend WithEvents btnSave As System.Windows.Forms.Button
@@ -820,18 +770,15 @@ Partial Class EditCustomer
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents txtRoad As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtHouseNo As System.Windows.Forms.TextBox
     Friend WithEvents txtSubdistrict As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtProvince As System.Windows.Forms.TextBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents txtLane As System.Windows.Forms.TextBox
     Friend WithEvents txtDistrict As System.Windows.Forms.TextBox
     Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents lblNo As System.Windows.Forms.Label
     Friend WithEvents lblSubdistrict As System.Windows.Forms.Label
     Friend WithEvents lblRoad As System.Windows.Forms.Label
@@ -846,7 +793,6 @@ Partial Class EditCustomer
     Friend WithEvents txtcellphone As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents txtPhone As System.Windows.Forms.TextBox
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents lblPhone As System.Windows.Forms.Label
@@ -854,5 +800,6 @@ Partial Class EditCustomer
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents txtMoo As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

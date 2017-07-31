@@ -445,9 +445,9 @@ Partial Class EditSoftware
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(427, 70)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(249, 24)
+        Me.Label10.Size = New System.Drawing.Size(118, 24)
         Me.Label10.TabIndex = 81
-        Me.Label10.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        Me.Label10.Text = "* 3 ถึง 5 ตัวอักษร"
         '
         'txtCost
         '
@@ -464,9 +464,9 @@ Partial Class EditSoftware
         Me.Label11.ForeColor = System.Drawing.Color.Red
         Me.Label11.Location = New System.Drawing.Point(427, 153)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(249, 24)
+        Me.Label11.Size = New System.Drawing.Size(118, 24)
         Me.Label11.TabIndex = 82
-        Me.Label11.Text = "* 3 ถึง 5 ตัวอักษรภาษาอังกฤษหรือตัวเลข"
+        Me.Label11.Text = "* 3 ถึง 5 ตัวอักษร"
         '
         'Label12
         '

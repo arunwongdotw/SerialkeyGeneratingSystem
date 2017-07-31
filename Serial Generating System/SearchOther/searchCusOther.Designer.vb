@@ -68,6 +68,8 @@ Partial Class searchCusOther
         Me.txtCorpName = New System.Windows.Forms.TextBox()
         Me.lblCorp_s_name = New System.Windows.Forms.Label()
         Me.lblCorpName = New System.Windows.Forms.Label()
+        Me.txtMoo = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.dgvSearchCus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -464,12 +466,33 @@ Partial Class searchCusOther
         Me.lblCorpName.TabIndex = 59
         Me.lblCorpName.Text = "ชื่อบริษัท :"
         '
+        'txtMoo
+        '
+        Me.txtMoo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtMoo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMoo.Location = New System.Drawing.Point(796, 33)
+        Me.txtMoo.Name = "txtMoo"
+        Me.txtMoo.Size = New System.Drawing.Size(62, 36)
+        Me.txtMoo.TabIndex = 90
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(750, 35)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 27)
+        Me.Label4.TabIndex = 91
+        Me.Label4.Text = "หมู่ :"
+        '
         'searchCusOther
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1056, 701)
+        Me.Controls.Add(Me.txtMoo)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dgvSearchCus)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.lblhone)
@@ -554,4 +577,6 @@ Partial Class searchCusOther
     Friend WithEvents txtCorpName As System.Windows.Forms.TextBox
     Friend WithEvents lblCorp_s_name As System.Windows.Forms.Label
     Friend WithEvents lblCorpName As System.Windows.Forms.Label
+    Friend WithEvents txtMoo As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

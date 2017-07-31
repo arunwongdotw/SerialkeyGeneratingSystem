@@ -92,15 +92,15 @@ Public Class CreateUser
         Dim EmailRegexCheck As New Regex(EmailRegex)
         'Dim MobileNumberRegexCheck As New Regex(MobileNumberRegex)
         Dim NotMatchNumberRegexCheck As New Regex(NotMatchNumberRegex)
-        If Not MatchCharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
-            MsgBox("ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
-        ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
-            MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
-        ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtFirstName.Text) Then
-            MsgBox("รูปแบบชื่อไม่ถูกต้อง")
-        ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtLastName.Text) Then
-            MsgBox("รูปแบบนามสกุลไม่ถูกต้อง")
-        ElseIf txtUsername.Text = "" Then
+        'If Not MatchCharAndNumberRegexCheck.IsMatch(txtUsername.Text) Then
+        '    MsgBox("ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
+        'ElseIf Not MatchCharAndNumberRegexCheck.IsMatch(txtPassword.Text) Then
+        '    MsgBox("รหัสผ่านต้องเป็นภาษาอังกฤษหรือตัวเลขเท่านั้น")
+        'ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtFirstName.Text) Then
+        '    MsgBox("รูปแบบชื่อไม่ถูกต้อง")
+        'ElseIf Not NotMatchNumberRegexCheck.IsMatch(txtLastName.Text) Then
+        '    MsgBox("รูปแบบนามสกุลไม่ถูกต้อง")
+        If txtUsername.Text = "" Then
             MsgBox("กรุณากรอกชื่อผู้ใช้")
         ElseIf txtUsername.TextLength < 6 Then
             MsgBox("ชื่อผู้ใช้ต้องมีความยาว 6 ตัวขึ้นไป")
@@ -110,18 +110,18 @@ Public Class CreateUser
             MsgBox("รหัสผ่านต้องมีความยาว 6 ตัวขึ้นไป")
         ElseIf txtEmpID.Text = "" Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
-        ElseIf txtEmpID.TextLength <> 5 Then
-            MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
+            'ElseIf txtEmpID.TextLength <> 5 Then
+            '    MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
         ElseIf txtFirstName.Text = "" Then
             MsgBox("กรุณากรอกชื่อ")
         ElseIf txtLastName.Text = "" Then
             MsgBox("กรุณากรอกนามสกุล")
-        ElseIf txtEmail.Text = "" Then
-            MsgBox("กรุณากรอกอีเมล")
-        ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
-        ElseIf txtMobileNumber.Text Is String.Empty Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
+            'ElseIf txtEmail.Text = "" Then
+            '    MsgBox("กรุณากรอกอีเมล")
+            'ElseIf Not EmailRegexCheck.IsMatch(txtEmail.Text) Then
+            '    MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            'ElseIf txtMobileNumber.Text Is String.Empty Then
+            '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
             'ElseIf Not MobileNumberRegexCheck.IsMatch(txtMobileNumber.Text) Then
             '    MsgBox("รูปแบบเบอร์โทรศัพท์ไม่ถูกต้อง")
         ElseIf cmbUserType.Text = "" Then
@@ -210,15 +210,15 @@ Public Class CreateUser
     End Sub
 
     Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
+        'End Select
     End Sub
 
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
@@ -234,67 +234,67 @@ Public Class CreateUser
     End Sub
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 65 To 90, 97 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ชื่อต้องเป็นภาษาอังกฤษและภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 65 To 90, 97 To 122 ' โค๊ดภาษาอังกฤษตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ชื่อต้องเป็นภาษาอังกฤษและภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 65 To 90, 97 To 122
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("นามสกุลต้องเป็นภาษาอังกฤษและภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 65 To 90, 97 To 122
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("นามสกุลต้องเป็นภาษาอังกฤษและภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("เบอร์โทรศัพท์ต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtMobileNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("เบอร์โทรศัพท์มือถือต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("เบอร์โทรศัพท์มือถือต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Public Function isEmployeeDuplicate(ByVal field As String, ByVal text As String) As Boolean
@@ -367,6 +367,30 @@ Public Class CreateUser
     End Sub
 
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
+    End Sub
+
+    Private Sub txtEmpID_TextChanged(sender As Object, e As EventArgs) Handles txtEmpID.TextChanged
+
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
+
+    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged
+
+    End Sub
+
+    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs) Handles txtLastName.TextChanged
+
+    End Sub
+
+    Private Sub txtMobileNumber_TextChanged(sender As Object, e As EventArgs) Handles txtMobileNumber.TextChanged
+
+    End Sub
+
+    Private Sub txtPhoneNumber_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNumber.TextChanged
 
     End Sub
 End Class

@@ -418,7 +418,7 @@ Public Class ReportSerial
                 corpname = " and c.corpname like  '%" & txtCorpName.Text & "%' "
             End If
             If txtCorp_s_name.Text <> "" Then
-                corp_s_name = " and s.corpname_s_name like  '%" & txtCorp_s_name.Text & "%' "
+                corp_s_name = " and s.corp_s_name like  '%" & txtCorp_s_name.Text & "%' "
             End If
             If txtContractNo.Text <> "" Then
                 ContractNo = " and s.contractbook_id like  '%" & txtContractNo.Text & "%' "

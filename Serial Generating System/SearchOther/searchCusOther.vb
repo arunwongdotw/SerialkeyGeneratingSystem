@@ -93,6 +93,14 @@ Public Class searchCusOther
             Me.dgvSearchCus.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "หมู่"
+            Col.Width = 50
+            Col.ReadOnly = True
+            Col.DataPropertyName = "moo"
+            Col.Name = "moo"
+            Me.dgvSearchCus.Columns.Add(Col)
+
+            Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ถนน"
             Col.Width = 100
             Col.ReadOnly = True
@@ -169,18 +177,18 @@ Public Class searchCusOther
         Try
 
             Dim sql As String
-            Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String
+            Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String, moo As String
             Dim road As String, lane As String, subdistrict As String, district As String, province As String, postalcode As String
             Dim email As String, phone As String
 
-            corpname = "" : corp_s_name = "" : corpgroup = "" : firstname = "" : lastname = "" : house_no = "" : road = ""
+            corpname = "" : corp_s_name = "" : corpgroup = "" : firstname = "" : lastname = "" : house_no = "" : moo = "" : road = ""
             lane = "" : subdistrict = "" : district = "" : province = "" : postalcode = "" : email = "" : phone = ""
 
             If txtCorpName.Text <> "" Then
                 corpname = " and corpname like  '%" & txtCorpName.Text & "%' "
             End If
             If txtCorp_s_name.Text <> "" Then
-                corp_s_name = " and corpname_s_name like  '%" & txtCorp_s_name.Text & "%' "
+                corp_s_name = " and corp_s_name like  '%" & txtCorp_s_name.Text & "%' "
             End If
             If txtCorpGroup.Text <> "" Then
                 corpgroup = " and corpgroup like  '%" & txtCorpGroup.Text & "%' "
@@ -193,6 +201,9 @@ Public Class searchCusOther
             End If
             If txtHouseNo.Text <> "" Then
                 house_no = " and house_no like  '%" & txtHouseNo.Text & "%' "
+            End If
+            If txtMoo.Text <> "" Then
+                moo = " and house_no like  '%" & txtMoo.Text & "%' "
             End If
             If txtRoad.Text <> "" Then
                 road = " and road like  '%" & txtRoad.Text & "%' "
@@ -418,5 +429,13 @@ Public Class searchCusOther
         Me.row_search = Cur.Current.row
         Me.DialogResult = Windows.Forms.DialogResult.OK
         Me.Dispose()
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub txtMoo_TextChanged(sender As Object, e As EventArgs) Handles txtMoo.TextChanged
+        Me.LoadData()
     End Sub
 End Class

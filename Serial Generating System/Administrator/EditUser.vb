@@ -33,9 +33,9 @@ Public Class EditUser
         displayAccountImage(username)
         lblMsgEmpId.Visible = False
         pbEmpId.Visible = False
-        lblMsgEmail.Visible = False
+        'lblMsgEmail.Visible = False
         tvAdminMenu.ExpandAll()
-        pbEmail.Visible = False
+        'pbEmail.Visible = False
         loadData()
         If sqlReader.Read Then
             initialData()
@@ -84,24 +84,24 @@ Public Class EditUser
         ElseIf txtEmpID.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกรหัสพนักงาน")
             valid = False
-        ElseIf txtEmpID.TextLength <> 5 Then
-            MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
-            valid = False
+            'ElseIf txtEmpID.TextLength <> 5 Then
+            '    MsgBox("รหัสพนักงานต้องมีความยาว 5 หลัก")
+            '    valid = False
         ElseIf txtFirstName.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกชื่อ")
             valid = False
         ElseIf txtLastName.Text.Trim = String.Empty Then
             MsgBox("กรุณากรอกนามสกุล")
             valid = False
-        ElseIf txtEmail.Text.Trim = String.Empty Then
-            MsgBox("กรุณากรอกอีเมล")
-            valid = False
-        ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
-            valid = False
-        ElseIf txtMobileNumber.Text Is String.Empty Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
-            valid = False
+            'ElseIf txtEmail.Text.Trim = String.Empty Then
+            '    MsgBox("กรุณากรอกอีเมล")
+            '    valid = False
+            'ElseIf Not New Regex(EmailRegex).IsMatch(txtEmail.Text.Trim) Then
+            '    MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            '    valid = False
+            'ElseIf txtMobileNumber.Text Is String.Empty Then
+            '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
+            '    valid = False
         End If
         Return valid
     End Function
@@ -261,39 +261,39 @@ Public Class EditUser
     End Sub
 
     Private Sub txtPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhoneNumber.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13
-            Case Else
-                e.Handled = True
-                MsgBox("เบอร์โทรศัทพ์ต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57, 8, 13
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("เบอร์โทรศัทพ์ต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtMobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMobileNumber.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13
-            Case Else
-                e.Handled = True
-                MsgBox("เบอร์โทรศัทพ์มือถือต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57, 8, 13
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("เบอร์โทรศัทพ์มือถือต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtLastName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 65 To 90, 97 To 122, 8, 13, 161 To 240
-            Case Else
-                e.Handled = True
-                MsgBox("นามสกุลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 65 To 90, 97 To 122, 8, 13, 161 To 240
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("นามสกุลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtFirstName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 65 To 90, 97 To 122, 8, 13, 161 To 240
-            Case Else
-                e.Handled = True
-                MsgBox("ชื่อต้องเป็นภาษาอังกฤษหรือภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 65 To 90, 97 To 122, 8, 13, 161 To 240
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ชื่อต้องเป็นภาษาอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
@@ -306,24 +306,24 @@ Public Class EditUser
     End Sub
 
     Private Sub txtEmpID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpID.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57, 8, 13
-            Case Else
-                e.Handled = True
-                MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57, 8, 13
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("รหัสพนักงานต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
+        'End Select
     End Sub
 
   
@@ -409,4 +409,27 @@ Public Class EditUser
         Me.Hide()
     End Sub
    
+    Private Sub txtEmpID_TextChanged(sender As Object, e As EventArgs) Handles txtEmpID.TextChanged
+
+    End Sub
+
+    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged
+
+    End Sub
+
+    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs) Handles txtLastName.TextChanged
+
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
+
+    Private Sub txtMobileNumber_TextChanged(sender As Object, e As EventArgs) Handles txtMobileNumber.TextChanged
+
+    End Sub
+
+    Private Sub txtPhoneNumber_TextChanged(sender As Object, e As EventArgs) Handles txtPhoneNumber.TextChanged
+
+    End Sub
 End Class

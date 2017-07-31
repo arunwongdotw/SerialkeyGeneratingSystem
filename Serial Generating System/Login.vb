@@ -12,6 +12,7 @@ Public Class Login
     Private con As New ConnectDB
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        CheckConnectUser.sqlCloseConnection()
         Application.Exit()
     End Sub
 
@@ -66,6 +67,8 @@ Public Class Login
     End Sub
 
     Private Sub bntClose_Click(sender As Object, e As EventArgs) Handles bntClose.Click
+        CheckConnectUser.sqlCloseConnection()
+        Me.Close()
         Application.Exit()
     End Sub
 

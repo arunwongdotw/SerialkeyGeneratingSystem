@@ -42,12 +42,8 @@ Partial Class EditUser
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.rdbIT = New System.Windows.Forms.RadioButton()
         Me.rdbAccountant = New System.Windows.Forms.RadioButton()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.lblMsgEmail = New System.Windows.Forms.Label()
         Me.lblMsgEmpId = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.pbEmail = New System.Windows.Forms.PictureBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pbEmpId = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -89,7 +85,6 @@ Partial Class EditUser
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -226,12 +221,8 @@ Partial Class EditUser
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Controls.Add(Me.Label15)
-        Me.Panel3.Controls.Add(Me.lblMsgEmail)
         Me.Panel3.Controls.Add(Me.lblMsgEmpId)
         Me.Panel3.Controls.Add(Me.txtPhoneNumber)
-        Me.Panel3.Controls.Add(Me.pbEmail)
-        Me.Panel3.Controls.Add(Me.Label20)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.pbEmpId)
         Me.Panel3.Controls.Add(Me.Label17)
@@ -295,28 +286,6 @@ Partial Class EditUser
         Me.rdbAccountant.Text = "บัญชี"
         Me.rdbAccountant.UseVisualStyleBackColor = True
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(397, 190)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(18, 27)
-        Me.Label15.TabIndex = 125
-        Me.Label15.Text = "*"
-        '
-        'lblMsgEmail
-        '
-        Me.lblMsgEmail.AutoSize = True
-        Me.lblMsgEmail.Font = New System.Drawing.Font("Thai Sans Lite", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMsgEmail.ForeColor = System.Drawing.Color.Green
-        Me.lblMsgEmail.Location = New System.Drawing.Point(455, 150)
-        Me.lblMsgEmail.Name = "lblMsgEmail"
-        Me.lblMsgEmail.Size = New System.Drawing.Size(115, 24)
-        Me.lblMsgEmail.TabIndex = 124
-        Me.lblMsgEmail.Text = "สามารถใช้อีเมลนี้ได้"
-        '
         'lblMsgEmpId
         '
         Me.lblMsgEmpId.AutoSize = True
@@ -337,26 +306,6 @@ Partial Class EditUser
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(250, 36)
         Me.txtPhoneNumber.TabIndex = 7
-        '
-        'pbEmail
-        '
-        Me.pbEmail.Image = Global.Serial_Generating_System.My.Resources.Resources.correct
-        Me.pbEmail.Location = New System.Drawing.Point(421, 144)
-        Me.pbEmail.Name = "pbEmail"
-        Me.pbEmail.Size = New System.Drawing.Size(32, 32)
-        Me.pbEmail.TabIndex = 123
-        Me.pbEmail.TabStop = False
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(397, 148)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(18, 27)
-        Me.Label20.TabIndex = 90
-        Me.Label20.Text = "*"
         '
         'Label3
         '
@@ -432,7 +381,7 @@ Partial Class EditUser
         Me.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmpID.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmpID.Location = New System.Drawing.Point(141, 20)
-        Me.txtEmpID.MaxLength = 5
+        Me.txtEmpID.MaxLength = 49
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(99, 36)
         Me.txtEmpID.TabIndex = 2
@@ -799,7 +748,6 @@ Partial Class EditUser
         Me.Panel3.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbEmpId, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -818,8 +766,6 @@ Partial Class EditUser
     Friend WithEvents pbAccountInfo As System.Windows.Forms.PictureBox
     Friend WithEvents pbEmpId As System.Windows.Forms.PictureBox
     Friend WithEvents lblMsgEmpId As System.Windows.Forms.Label
-    Friend WithEvents lblMsgEmail As System.Windows.Forms.Label
-    Friend WithEvents pbEmail As System.Windows.Forms.PictureBox
     Friend WithEvents btnAttachNewUserImage As System.Windows.Forms.Button
     Friend WithEvents pbAttachNewUserImage As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
@@ -834,7 +780,6 @@ Partial Class EditUser
     Friend WithEvents rdbIT As System.Windows.Forms.RadioButton
     Friend WithEvents rdbAccountant As System.Windows.Forms.RadioButton
     Friend WithEvents txtPhoneNumber As System.Windows.Forms.TextBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -860,7 +805,6 @@ Partial Class EditUser
     Friend WithEvents chbPerDelete As System.Windows.Forms.CheckBox
     Friend WithEvents txtAccountInfo As System.Windows.Forms.Label
     Friend WithEvents ofdAttachNewUserImage As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents chb_print As System.Windows.Forms.CheckBox
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
 End Class

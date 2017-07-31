@@ -114,6 +114,14 @@ Public Class ReportCustomer
             Me.dgvSearchCus.Columns.Add(Col)
 
             Col = New DataGridViewTextBoxColumn
+            Col.HeaderText = "หมู่"
+            Col.Width = 100
+            Col.ReadOnly = True
+            Col.DataPropertyName = "moo"
+            Col.Name = "moo"
+            Me.dgvSearchCus.Columns.Add(Col)
+
+            Col = New DataGridViewTextBoxColumn
             Col.HeaderText = "ซอย"
             Col.Width = 100
             Col.ReadOnly = True
@@ -194,18 +202,18 @@ Public Class ReportCustomer
             dgvSearchCus.Columns.Clear()
 
             Dim sql As String
-            Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String
+            Dim corpname As String, corp_s_name As String, corpgroup As String, firstname As String, lastname As String, house_no As String, moo As String
             Dim road As String, lane As String, subdistrict As String, district As String, province As String, postalcode As String
             Dim email As String, phone As String, cellphone As String
 
-            corpname = "" : corp_s_name = "" : corpgroup = "" : firstname = "" : lastname = "" : house_no = "" : road = ""
+            corpname = "" : corp_s_name = "" : corpgroup = "" : firstname = "" : lastname = "" : house_no = "" : moo = "" : road = ""
             lane = "" : subdistrict = "" : district = "" : province = "" : postalcode = "" : email = "" : phone = "" : cellphone = ""
 
             If txtCorpName.Text <> "" Then
                 corpname = " and corpname like  '%" & txtCorpName.Text & "%' "
             End If
             If txtCorp_s_name.Text <> "" Then
-                corp_s_name = " and corpname_s_name like  '%" & txtCorp_s_name.Text & "%' "
+                corp_s_name = " and corp_s_name like  '%" & txtCorp_s_name.Text & "%' "
             End If
             If txtCorpGroup.Text <> "" Then
                 corpgroup = " and corpgroup like  '%" & txtCorpGroup.Text & "%' "
@@ -218,6 +226,9 @@ Public Class ReportCustomer
             End If
             If txtHouseNo.Text <> "" Then
                 house_no = " and house_no like  '%" & txtHouseNo.Text & "%' "
+            End If
+            If txtmoo.Text <> "" Then
+                moo = " and moo like  '%" & txtmoo.Text & "%' "
             End If
             If txtRoad.Text <> "" Then
                 road = " and road like  '%" & txtRoad.Text & "%' "
@@ -251,9 +262,9 @@ Public Class ReportCustomer
             'sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
             'sql &= province & postalcode & email & phone
 
-            sql = "select id,corpname,corp_s_name,corpgroup,(firstname+' '+lastname) as fullname,house_no,road,lane,subdistrict "
+            sql = "select id,corpname,corp_s_name,corpgroup,(firstname+' '+lastname) as fullname,house_no,moo,road,lane,subdistrict "
             sql &= ",district , province, postalcode, email, phone, cellphone from customer where id <> -1 "
-            sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & road & lane & subdistrict & district
+            sql &= corpname & corp_s_name & corpgroup & firstname & lastname & house_no & moo & road & lane & subdistrict & district
             sql &= province & postalcode & email & phone & cellphone
 
             '  ,[id]()
@@ -577,5 +588,13 @@ Public Class ReportCustomer
         Else
         MsgBox("คุณไม่มีสิทธิ์จัดการรายงาน")
         End If
+    End Sub
+
+    Private Sub lblLane_Click(sender As Object, e As EventArgs) Handles lblLane.Click
+
+    End Sub
+
+    Private Sub dgvSearchCus_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchCus.CellContentClick
+
     End Sub
 End Class

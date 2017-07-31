@@ -95,6 +95,8 @@ Partial Class SearchCustomer
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtMoo = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.pbAccountInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,7 +148,7 @@ Partial Class SearchCustomer
         '
         Me.txtLane.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLane.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLane.Location = New System.Drawing.Point(262, 13)
+        Me.txtLane.Location = New System.Drawing.Point(519, 15)
         Me.txtLane.Name = "txtLane"
         Me.txtLane.Size = New System.Drawing.Size(125, 36)
         Me.txtLane.TabIndex = 7
@@ -155,7 +157,7 @@ Partial Class SearchCustomer
         '
         Me.lblLane.AutoSize = True
         Me.lblLane.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLane.Location = New System.Drawing.Point(207, 15)
+        Me.lblLane.Location = New System.Drawing.Point(464, 17)
         Me.lblLane.Name = "lblLane"
         Me.lblLane.Size = New System.Drawing.Size(49, 27)
         Me.lblLane.TabIndex = 48
@@ -203,7 +205,7 @@ Partial Class SearchCustomer
         '
         Me.txtRoad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRoad.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRoad.Location = New System.Drawing.Point(519, 15)
+        Me.txtRoad.Location = New System.Drawing.Point(712, 15)
         Me.txtRoad.Name = "txtRoad"
         Me.txtRoad.Size = New System.Drawing.Size(250, 36)
         Me.txtRoad.TabIndex = 8
@@ -212,7 +214,7 @@ Partial Class SearchCustomer
         '
         Me.lblRoad.AutoSize = True
         Me.lblRoad.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRoad.Location = New System.Drawing.Point(464, 17)
+        Me.lblRoad.Location = New System.Drawing.Point(657, 17)
         Me.lblRoad.Name = "lblRoad"
         Me.lblRoad.Size = New System.Drawing.Size(49, 27)
         Me.lblRoad.TabIndex = 42
@@ -679,6 +681,8 @@ Partial Class SearchCustomer
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.txtMoo)
+        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.txtHouseNo)
         Me.Panel2.Controls.Add(Me.lblHouseNo)
         Me.Panel2.Controls.Add(Me.txtLane)
@@ -697,6 +701,25 @@ Partial Class SearchCustomer
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1000, 146)
         Me.Panel2.TabIndex = 122
+        '
+        'txtMoo
+        '
+        Me.txtMoo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtMoo.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMoo.Location = New System.Drawing.Point(271, 13)
+        Me.txtMoo.Name = "txtMoo"
+        Me.txtMoo.Size = New System.Drawing.Size(62, 36)
+        Me.txtMoo.TabIndex = 53
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Thai Sans Lite", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(225, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 27)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "หมู่ :"
         '
         'SearchCustomer
         '
@@ -780,4 +803,6 @@ Partial Class SearchCustomer
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents txtMoo As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

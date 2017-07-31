@@ -17,8 +17,8 @@ Public Class EditCustomer
     End Sub
 
     Private Sub EditCustomer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-         CheckConnectUser.sqlCloseConnection()
-    
+        CheckConnectUser.sqlCloseConnection()
+        Application.Exit()
     End Sub
 
     Private Sub Edit_Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -123,18 +123,18 @@ Public Class EditCustomer
         ElseIf txtCorp_s_Name.TextLength < 3 Or txtCorp_s_Name.TextLength > 5 Then
             MsgBox("ชื่อย่อบริษัทต้องมีความยาว 3-5 ตัว")
             Return False
-        ElseIf txtCorpGroup.Text.Trim Is String.Empty Then
-            MsgBox("กรุณากรอกกลุ่มบริษัท")
-            Return False
-        ElseIf txtHouseNo.Text.Trim Is String.Empty Then
-            MsgBox("กรุณากรอกเลขที่")
-            Return False
-        ElseIf Not New Regex("^[1-9]{1}").IsMatch(txtHouseNo.Text) Then
-            MsgBox("รูปแบบเลขที่ไม่ถูกต้อง")
-            Return False
-        ElseIf txtRoad.Text.Trim Is String.Empty Then
-            MsgBox("กรุณากรอกถนน")
-            Return False
+            'ElseIf txtCorpGroup.Text.Trim Is String.Empty Then
+            '    MsgBox("กรุณากรอกกลุ่มบริษัท")
+            '    Return False
+            'ElseIf txtHouseNo.Text.Trim Is String.Empty Then
+            '    MsgBox("กรุณากรอกเลขที่")
+            '    Return False
+            'ElseIf Not New Regex("^[1-9]{1}").IsMatch(txtHouseNo.Text) Then
+            '    MsgBox("รูปแบบเลขที่ไม่ถูกต้อง")
+            '    Return False
+            'ElseIf txtRoad.Text.Trim Is String.Empty Then
+            '    MsgBox("กรุณากรอกถนน")
+            '    Return False
         ElseIf txtSubdistrict.Text Is String.Empty Then
             MsgBox("กรุณากรอกตำบล/แขวง")
             Return False
@@ -144,15 +144,15 @@ Public Class EditCustomer
         ElseIf txtProvince.Text Is String.Empty Then
             MsgBox("กรุณากรอกจังหวัด")
             Return False
-        ElseIf txtEmail.Text Is String.Empty Then
-            MsgBox("กรุณากรอกอีเมล")
-            Return False
-        ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text) Then
-            MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
-            Return False
-        ElseIf txtcellphone.Text Is String.Empty Then
-            MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
-            Return False
+            'ElseIf txtEmail.Text Is String.Empty Then
+            '    MsgBox("กรุณากรอกอีเมล")
+            '    Return False
+            'ElseIf Not New Regex("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$").IsMatch(txtEmail.Text) Then
+            '    MsgBox("รูปแบบอีเมลไม่ถูกต้อง ตัวอย่าง example@example.example")
+            '    Return False
+            'ElseIf txtcellphone.Text Is String.Empty Then
+            '    MsgBox("กรุณากรอกเบอร์โทรศัพท์มือถือ")
+            '    Return False
         ElseIf txtPostalCode.Text Is String.Empty Then
             MsgBox("กรุณากรอกรหัสไปรษณีย์")
             Return False
@@ -171,67 +171,67 @@ Public Class EditCustomer
     'End Sub
 
     Private Sub txtCorp_s_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorp_s_Name.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ชื่อย่อบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 122, 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ชื่อย่อบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtCorpGroup_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpGroup.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("กลุ่มบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122, 8, 13, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("กลุ่มบริษัทต้องเป็นภาษาอังกฤษหรือตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtRoad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRoad.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ถนนต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 122, 8, 13, 32, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ถนนต้องเป็นภาษาอังกฤษ ภาษาไทยหรือตัวเลข")
+        'End Select
     End Sub
 
     Private Sub txtDistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistrict.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("อำเภอต้องเป็นภาษาอังกฤษหรือภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122, 8, 13, 32, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("อำเภอต้องเป็นภาษาอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtSubdistrict_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSubdistrict.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
-                e.Handled = False
-            Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ตำบลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+        '        e.Handled = False
+        '    Case 8, 13, 32, 46 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ตำบลต้องเป็นภาษาอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
     Private Sub txtProvince_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProvince.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("จังหวัดต้องเป็นภาษอังกฤษหรือภาษาไทย")
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122, 8, 13, 32, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("จังหวัดต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
     Private Function idDuplicate() As Boolean
@@ -261,6 +261,7 @@ Public Class EditCustomer
         strquery &= " firstname = '" & txtFirstName.Text.Trim & "' , "
         strquery &= " lastname = '" & txtLastName.Text.Trim & "' , "
         strquery &= " house_no = '" & txtHouseNo.Text.Trim & "' , "
+        strquery &= " moo = '" & txtMoo.Text.Trim & "' , "
         strquery &= " road = '" & txtRoad.Text.Trim & "' , "
         strquery &= " lane = '" & txtLane.Text.Trim & "' , "
         strquery &= " subdistrict = '" & txtSubdistrict.Text.Trim & "' , "
@@ -295,17 +296,17 @@ Public Class EditCustomer
     End Sub
 
     Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
-                e.Handled = True
-                MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
-            Case Else
-                e.Handled = False
-        End Select
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case 32, 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+        '        e.Handled = True
+        '        MsgBox("อีเมลต้องเป็นภาษาอังกฤษ")
+        '    Case Else
+        '        e.Handled = False
+        'End Select
     End Sub
 
     Private Sub btnAttachNewCustomerImage_Click(sender As Object, e As EventArgs) Handles btnAttachNewCustomerImage.Click
@@ -419,6 +420,7 @@ Public Class EditCustomer
         txtFirstName.Clear()
         txtLastName.Clear()
         txtHouseNo.Clear()
+        txtMoo.Clear()
         txtRoad.Clear()
         txtLane.Clear()
         txtSubdistrict.Clear()
@@ -439,39 +441,39 @@ Public Class EditCustomer
         Me.Hide()
     End Sub
 
-    Private Sub txtPostalCode_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtPostalCode.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("รหัสไปรษณีย์ต้องเป็นตัวเลข")
-        End Select
+    Private Sub txtPostalCode_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtPostalCode.KeyPress, txtPostalCode.TextChanged
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13 ' Backspace = 8, Enter = 13, Delete = 46
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("รหัสไปรษณีย์ต้องเป็นตัวเลข")
+        'End Select
     End Sub
 
-    Private Sub txtFirstName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("ชื่อต้องเป็นภาษอังกฤษหรือภาษาไทย")
-        End Select
+    Private Sub txtFirstName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtFirstName.KeyPress, txtFirstName.TextChanged
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122, 8, 13, 32, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("ชื่อต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
-    Private Sub txtLastName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 58 To 122, 8, 13, 32, 46, 161 To 240
-                e.Handled = False
-            Case Else
-                e.Handled = True
-                MsgBox("นามสกุลต้องเป็นภาษอังกฤษหรือภาษาไทย")
-        End Select
+    Private Sub txtLastName_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtLastName.KeyPress, txtLastName.TextChanged
+        'Select Case Asc(e.KeyChar)
+        '    Case 58 To 122, 8, 13, 32, 46, 161 To 240
+        '        e.Handled = False
+        '    Case Else
+        '        e.Handled = True
+        '        MsgBox("นามสกุลต้องเป็นภาษอังกฤษหรือภาษาไทย")
+        'End Select
     End Sub
 
-    Private Sub txtcellphone_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress
+    Private Sub txtcellphone_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtcellphone.KeyPress, txtcellphone.TextChanged
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
@@ -481,5 +483,81 @@ Public Class EditCustomer
                 e.Handled = True
                 MsgBox("เบอร์โทรศัพท์มือถือต้องเป็นตัวเลข")
         End Select
+    End Sub
+
+    Private Sub txtCorpName_TextChanged(sender As Object, e As EventArgs) Handles txtCorpName.TextChanged
+
+    End Sub
+
+    Private Sub txtCorp_s_Name_TextChanged(sender As Object, e As EventArgs) Handles txtCorp_s_Name.TextChanged
+
+    End Sub
+
+    Private Sub txtCorpGroup_TextChanged(sender As Object, e As EventArgs) Handles txtCorpGroup.TextChanged
+
+    End Sub
+
+    Private Sub txtHouseNo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHouseNo.KeyPress
+
+    End Sub
+
+    Private Sub txtHouseNo_TextChanged(sender As Object, e As EventArgs) Handles txtHouseNo.TextChanged
+
+    End Sub
+
+    Private Sub txtMoo_TextChanged(sender As Object, e As EventArgs) Handles txtMoo.TextChanged
+
+    End Sub
+
+    Private Sub txtLane_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLane.KeyPress
+
+    End Sub
+
+    Private Sub txtLane_TextChanged(sender As Object, e As EventArgs) Handles txtLane.TextChanged
+
+    End Sub
+
+    Private Sub txtRoad_TextChanged(sender As Object, e As EventArgs) Handles txtRoad.TextChanged
+
+    End Sub
+
+    Private Sub txtSubdistrict_TextChanged(sender As Object, e As EventArgs) Handles txtSubdistrict.TextChanged
+
+    End Sub
+
+    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtDistrict.TextChanged
+
+    End Sub
+
+    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs) Handles txtProvince.TextChanged
+
+    End Sub
+
+    Private Sub txtPostalCode_TextChanged(sender As Object, e As EventArgs) Handles txtPostalCode.TextChanged, txtPostalCode.KeyPress
+
+    End Sub
+
+    Private Sub txtFirstName_TextChanged(sender As Object, e As EventArgs) Handles txtFirstName.TextChanged, txtFirstName.KeyPress
+
+    End Sub
+
+    Private Sub txtLastName_TextChanged(sender As Object, e As EventArgs) Handles txtLastName.TextChanged, txtLastName.KeyPress
+
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
+
+    Private Sub txtcellphone_TextChanged(sender As Object, e As EventArgs) Handles txtcellphone.TextChanged, txtcellphone.KeyPress
+
+    End Sub
+
+    Private Sub txtPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPhone.KeyPress
+
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+
     End Sub
 End Class
