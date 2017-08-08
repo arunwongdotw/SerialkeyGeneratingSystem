@@ -225,10 +225,16 @@ Public Class CreateSerial
                         txtBrandName.Visible = True
                         txtBrand_s_name.Visible = True
                         If IIf(IsDBNull(dt.Rows.Item(0)("QualityControl")), "", dt.Rows.Item(0)("QualityControl")) = 1 Then
-                            chbQC.Checked = True
+                            'chbQC.Checked = True
+                            chbQC.Enabled = True
+                        Else
+                            chbQC.Enabled = False
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("WarehouseManagement")), "", dt.Rows.Item(0)("WarehouseManagement")) = 1 Then
-                            chbWM.Checked = True
+                            'chbWM.Checked = True
+                            chbWM.Enabled = True
+                        Else
+                            chbWM.Enabled = False
                         End If
                         If IIf(IsDBNull(dt.Rows.Item(0)("thai")), "", dt.Rows.Item(0)("thai")) = 0 Then
                             'chbThia.Checked = True
@@ -761,6 +767,10 @@ Public Class CreateSerial
     End Sub
 
     Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
+
+    End Sub
+
+    Private Sub chbWM_CheckedChanged(sender As Object, e As EventArgs) Handles chbWM.CheckedChanged
 
     End Sub
 End Class

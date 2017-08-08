@@ -336,7 +336,6 @@ Partial Class CreateSerial
         '
         Me.chbWM.AutoSize = True
         Me.chbWM.BackColor = System.Drawing.Color.Transparent
-        Me.chbWM.Enabled = False
         Me.chbWM.Location = New System.Drawing.Point(191, 107)
         Me.chbWM.Name = "chbWM"
         Me.chbWM.Size = New System.Drawing.Size(198, 31)
@@ -347,7 +346,6 @@ Partial Class CreateSerial
         'chbQC
         '
         Me.chbQC.AutoSize = True
-        Me.chbQC.Enabled = False
         Me.chbQC.Location = New System.Drawing.Point(395, 107)
         Me.chbQC.Name = "chbQC"
         Me.chbQC.Size = New System.Drawing.Size(134, 31)
@@ -897,8 +895,6 @@ Partial Class CreateSerial
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "CreateSerial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "สร้างซีเรียลคีย์ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"

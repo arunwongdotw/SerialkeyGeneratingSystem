@@ -69,20 +69,20 @@ Partial Class Login
         '
         Me.txtUsername.BackColor = System.Drawing.Color.White
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsername.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(86, Byte), Integer))
         Me.txtUsername.Location = New System.Drawing.Point(157, 256)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtUsername.Size = New System.Drawing.Size(173, 23)
+        Me.txtUsername.Size = New System.Drawing.Size(173, 22)
         Me.txtUsername.TabIndex = 1
         '
         'txtPassword
         '
         Me.txtPassword.BackColor = System.Drawing.Color.White
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(86, Byte), Integer))
         Me.txtPassword.Location = New System.Drawing.Point(157, 304)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
@@ -90,7 +90,7 @@ Partial Class Login
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtPassword.Size = New System.Drawing.Size(173, 23)
+        Me.txtPassword.Size = New System.Drawing.Size(173, 22)
         Me.txtPassword.TabIndex = 2
         '
         'btnLoginUsername
@@ -133,7 +133,7 @@ Partial Class Login
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.BackgroundImage = Global.Serial_Generating_System.My.Resources.Resources.bgLoginND
@@ -145,13 +145,12 @@ Partial Class Login
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.bntClose)
         Me.Controls.Add(Me.btnLogin)
-        Me.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "เข้าสู่ระบบ - ระบบสร้างซีเรียลคีย์ (สำหรับบริษัท บีซีไอ)"

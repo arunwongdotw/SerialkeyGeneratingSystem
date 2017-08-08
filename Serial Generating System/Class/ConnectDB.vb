@@ -2,7 +2,8 @@
 Public Class ConnectDB
 
     'Private strCon As String = "Server=tcp:DESKTOP-466N09N,49172\SQLEXPRESS;UID=sa;PASSWORD=12345;Database=SGS;Max Pool Size=400;Connect Timeout=600;"
-    Private strCon As String = "Server=.\SQLEXPRESS;UID=sa;PASSWORD=12345;Database=SGS;Max Pool Size=400;Connect Timeout=600;"
+    'Private strCon As String = "Server=.\SQLEXPRESS;UID=sa;PASSWORD=12345;Database=SGS;Max Pool Size=400;Connect Timeout=600;"
+    Private strCon As String = "Server=.\SQLEXPRESS;UID=qsoft;PASSWORD=12345;Database=SGS;Max Pool Size=400;Connect Timeout=600;"
     Protected objConn As New SqlConnection
     Protected objCmd As New SqlCommand
     Public Sub New()
