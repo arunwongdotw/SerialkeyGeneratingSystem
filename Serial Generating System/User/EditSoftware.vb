@@ -127,41 +127,41 @@ Public Class EditSoftware
         Return isCorrect
     End Function
 
-    Private Sub txtProduct_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProduct_s_name.KeyPress
-        'Select Case Asc(e.KeyChar)
-        '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-        '        e.Handled = False
-        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-        '        e.Handled = False
-        '    Case Else
-        '        e.Handled = True
-        '        MsgBox("ชื่อย่อซอฟต์แวร์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
-        'End Select
-    End Sub
+    'Private Sub txtProduct_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProduct_s_name.KeyPress
+    '    'Select Case Asc(e.KeyChar)
+    '    '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+    '    '        e.Handled = False
+    '    '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '    '        e.Handled = False
+    '    '    Case Else
+    '    '        e.Handled = True
+    '    '        MsgBox("ชื่อย่อซอฟต์แวร์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
+    '    'End Select
+    'End Sub
 
-    Private Sub txtBrand_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrand_s_name.KeyPress
-        'Select Case Asc(e.KeyChar)
-        '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-        '        e.Handled = False
-        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-        '        e.Handled = False
-        '    Case Else
-        '        e.Handled = True
-        '        MsgBox("ชื่อย่อแบรนด์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
-        'End Select
-    End Sub
+    'Private Sub txtBrand_s_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBrand_s_name.KeyPress
+    '    'Select Case Asc(e.KeyChar)
+    '    '    Case 48 To 122 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+    '    '        e.Handled = False
+    '    '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '    '        e.Handled = False
+    '    '    Case Else
+    '    '        e.Handled = True
+    '    '        MsgBox("ชื่อย่อแบรนด์ต้องเป็นภาษาอังกฤษหรือตัวเลข")
+    '    'End Select
+    'End Sub
 
-    Private Sub txtCost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCost.KeyPress
-        'Select Case Asc(e.KeyChar)
-        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-        '        e.Handled = False
-        '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
-        '        e.Handled = False
-        '    Case Else
-        '        e.Handled = True
-        '        MsgBox("ราคาต้องเป็นตัวเลข")
-        'End Select
-    End Sub
+    'Private Sub txtCost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCost.KeyPress
+    '    'Select Case Asc(e.KeyChar)
+    '    '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+    '    '        e.Handled = False
+    '    '    Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '    '        e.Handled = False
+    '    '    Case Else
+    '    '        e.Handled = True
+    '    '        MsgBox("ราคาต้องเป็นตัวเลข")
+    '    'End Select
+    'End Sub
 
     Private Sub EditProduct_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         CheckConnectUser.sqlCloseConnection()
@@ -353,23 +353,5 @@ Public Class EditSoftware
         pbAttachNewProductImage.ImageLocation = ImagePath
     End Sub
 
-    Private Sub txtProduct_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtProduct_s_name.TextChanged
-
-    End Sub
-
-    Private Sub txtCost_TextChanged(sender As Object, e As EventArgs) Handles txtCost.TextChanged
-
-    End Sub
-
-    Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
-
-    End Sub
-
-    Private Sub txtBrandName_TextChanged(sender As Object, e As EventArgs) Handles txtBrandName.TextChanged
-
-    End Sub
-
-    Private Sub txtBrand_s_name_TextChanged(sender As Object, e As EventArgs) Handles txtBrand_s_name.TextChanged
-
-    End Sub
+    
 End Class

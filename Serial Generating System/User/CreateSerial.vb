@@ -691,29 +691,29 @@ Public Class CreateSerial
         End If
     End Sub
 
-    Private Sub txtAmountUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmountUser.KeyPress
-        'Select Case Asc(e.KeyChar)
-        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-        '        e.Handled = False
-        '    Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
-        '        e.Handled = False
-        '    Case Else
-        '        e.Handled = True
-        '        MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์ต้องเป็นตัวเลข")
-        'End Select
-    End Sub
+    'Private Sub txtAmountUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmountUser.KeyPress
+    '    'Select Case Asc(e.KeyChar)
+    '    '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+    '    '        e.Handled = False
+    '    '    Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '    '        e.Handled = False
+    '    '    Case Else
+    '    '        e.Handled = True
+    '    '        MsgBox("จำนวนผู้ใช้งานซอฟต์แวร์ต้องเป็นตัวเลข")
+    '    'End Select
+    'End Sub
 
-    Private Sub txtContractNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContractNumber.KeyPress
-        'Select Case Asc(e.KeyChar)
-        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-        '        e.Handled = False
-        '    Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
-        '        e.Handled = False
-        '    Case Else
-        '        e.Handled = True
-        '        MsgBox("หมายเลขสัญญาต้องเป็นตัวเลข")
-        'End Select
-    End Sub
+    'Private Sub txtContractNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContractNumber.KeyPress
+    '    'Select Case Asc(e.KeyChar)
+    '    '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+    '    '        e.Handled = False
+    '    '    Case 8, 13 ', 46 ' Backspace = 8, Enter = 13, Delete = 46
+    '    '        e.Handled = False
+    '    '    Case Else
+    '    '        e.Handled = True
+    '    '        MsgBox("หมายเลขสัญญาต้องเป็นตัวเลข")
+    '    'End Select
+    'End Sub
 
     Private Sub chbForever_CheckedChanged(sender As Object, e As EventArgs) Handles chbForever.CheckedChanged
         If chbForever.Checked = True Then
@@ -762,15 +762,5 @@ Public Class CreateSerial
         frm.Show()
     End Sub
 
-    Private Sub txtAmountUser_TextChanged(sender As Object, e As EventArgs) Handles txtAmountUser.TextChanged
-
-    End Sub
-
-    Private Sub txtContractNumber_TextChanged(sender As Object, e As EventArgs) Handles txtContractNumber.TextChanged
-
-    End Sub
-
-    Private Sub chbWM_CheckedChanged(sender As Object, e As EventArgs) Handles chbWM.CheckedChanged
-
-    End Sub
+    
 End Class

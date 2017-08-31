@@ -302,7 +302,7 @@ Public Class searchCusOther
         Next
     End Sub
 
-    
+
 
     Private Sub clear()
 

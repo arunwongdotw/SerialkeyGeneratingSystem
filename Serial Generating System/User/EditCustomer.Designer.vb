@@ -532,7 +532,6 @@ Partial Class EditCustomer
         '
         Me.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPostalCode.Location = New System.Drawing.Point(515, 113)
-        Me.txtPostalCode.MaxLength = 5
         Me.txtPostalCode.Name = "txtPostalCode"
         Me.txtPostalCode.Size = New System.Drawing.Size(125, 36)
         Me.txtPostalCode.TabIndex = 10
